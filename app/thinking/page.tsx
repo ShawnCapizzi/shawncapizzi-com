@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LiteYouTube } from "@/components/LiteYouTube";
 
 export const metadata: Metadata = {
   title: "Thinking",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 const CAL_URL = "https://cal.com/capizzi/15min";
 
-// Published essays — real, externally hosted, link out
+// Published — externally hosted, links out
 const PUBLISHED = [
   {
     title: "Beyond User Flows: AI Is Rewriting UX Fundamentals",
@@ -21,7 +22,7 @@ const PUBLISHED = [
   },
 ];
 
-// Essays in progress — placeholder treatment
+// Essays still in progress — keeping the two strongest as placeholders
 const UPCOMING = [
   {
     title: "Stop Buying AI. Start Fixing the Boring Stuff First.",
@@ -29,20 +30,6 @@ const UPCOMING = [
     readTime: "9 min read",
     description:
       "Most companies aren't ready for AI. Not because the technology is hard, but because the foundational work hasn't been done yet.",
-  },
-  {
-    title: "AI Adoption Is an Experience Architecture Problem",
-    date: "April 2026",
-    readTime: "6 min read",
-    description:
-      "Why most enterprise AI initiatives stall after pilot — and what changes when you treat the experience layer as the work, not the wrapper.",
-  },
-  {
-    title: "What the September 2025 FDA Updates Mean for Pharma UX",
-    date: "September 2025",
-    readTime: "8 min read",
-    description:
-      "The biggest regulatory shift in pharmaceutical marketing in decades. What changes for digital teams, and why this is good news for design.",
   },
   {
     title: "The Capizzi Process — Strategic Experience Design Methodology",
@@ -67,7 +54,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* PUBLISHED — leads, real links */}
+      {/* PUBLISHED */}
       {PUBLISHED.length > 0 && (
         <section className="pb-12 md:pb-16">
           <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
@@ -107,7 +94,48 @@ export default function Page() {
         </section>
       )}
 
-      {/* UPCOMING — placeholders */}
+      {/* RECENTLY SHARED — LinkedIn + YouTube */}
+      <section className="pb-12 md:pb-16">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <p className="eyebrow mb-6">Recently shared</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
+            {/* LinkedIn embed card */}
+            <div>
+              <p className="metadata-label mb-4">From LinkedIn</p>
+              <div
+                className="rounded-xl overflow-hidden"
+                style={{ maxWidth: "504px" }}
+              >
+                <iframe
+                  src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7395158706776072192?collapsed=1"
+                  height="619"
+                  width="100%"
+                  frameBorder="0"
+                  allowFullScreen
+                  title="LinkedIn post — recent thinking"
+                  loading="lazy"
+                  style={{ display: "block", borderRadius: "12px" }}
+                />
+              </div>
+            </div>
+
+            {/* YouTube embed card */}
+            <div>
+              <p className="metadata-label mb-4">Recent talk</p>
+              <LiteYouTube
+                videoId="iUvwk-KoA7s"
+                title="Recent talk on experience design and AI"
+                aspect="16:9"
+              />
+              <p className="mt-4 text-sm text-text-tertiary italic">
+                Hear me think through the work — voice rather than text.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* IN PROGRESS — reduced to 2 */}
       <section className="pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-6">In progress</p>
