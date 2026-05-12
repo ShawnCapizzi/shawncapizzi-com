@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 /* ============================================================
    FONTS
@@ -99,10 +101,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="bg-bg-primary text-text-primary antialiased">
-        {children}
-      </body>
-    </html>
-  );
-}
+  <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <body className="bg-bg-primary text-text-primary antialiased">
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </body>
+  </html>
+);
