@@ -109,6 +109,17 @@
   }
 }
 
+@keyframes gleam {
+  0%,
+  30% {
+    background-position: 200% 0;
+  }
+  60%,
+  100% {
+    background-position: -100% 0;
+  }
+}
+
 /* ============================================================
    BASE STYLES
    ============================================================ */
@@ -287,6 +298,42 @@ body::before {
 
 .logo-mono:hover {
   opacity: 1;
+}
+
+/* ============================================================
+   HEADLINE GLEAM
+   Subtle light sweep across hero headline text.
+   ~1s sweep, ~6s pause, on infinite loop. Base color is off-white;
+   gleam peak has barely-perceptible periwinkle tint.
+   Per design system v1.1 amendment: text-level gleam permitted
+   on hero display headlines only. Other text remains static.
+   ============================================================ */
+
+.headline-gleam {
+  background-image: linear-gradient(
+    100deg,
+    #f5f5f4 0%,
+    #f5f5f4 42%,
+    #ffffff 48%,
+    #dcd8ff 50%,
+    #ffffff 52%,
+    #f5f5f4 58%,
+    #f5f5f4 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: gleam 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .headline-gleam {
+    animation: none;
+    background-image: linear-gradient(180deg, #ffffff 0%, #f5f5f4 100%);
+    background-size: 100% 100%;
+  }
 }
 
 /* ============================================================
