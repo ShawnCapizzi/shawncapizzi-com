@@ -2,7 +2,7 @@ const CAL_URL = "https://cal.com/capizzi/15min";
 
 export function FinalCTA() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="cta-purple-block py-24 md:py-32">
       <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">

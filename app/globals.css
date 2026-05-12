@@ -324,6 +324,37 @@ body::before {
 }
 
 /* ============================================================
+   GLOBAL H3 — nested subheadings get Nunito Sans semibold across
+   the site. Pairs with h2 (.subhead-editorial, Nunito Sans 400)
+   to create a typographic family. Components can still override
+   color via Tailwind classes (text-text-primary etc.).
+   ============================================================ */
+
+h3 {
+  font-family: var(--font-nunito-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* ============================================================
+   CTA PURPLE BLOCK
+   Subtle purple wash for closing-moment sections (final CTA).
+   Reads as a deliberate "warm send-off" — flat 3% tint + soft
+   radial accent + thin top border for definition. Not a loud
+   purple section, just a tonal shift.
+   ============================================================ */
+
+.cta-purple-block {
+  background-color: rgba(107, 92, 255, 0.03);
+  background-image: radial-gradient(
+    ellipse 1100px 500px at 50% 70%,
+    rgba(107, 92, 255, 0.045) 0%,
+    transparent 70%
+  );
+  border-top: 1px solid rgba(107, 92, 255, 0.14);
+}
+
+/* ============================================================
    UTILITY: brand gradient backdrop
    Used behind the hero portrait. The atmospheric glow.
    Section §2 of design system.
