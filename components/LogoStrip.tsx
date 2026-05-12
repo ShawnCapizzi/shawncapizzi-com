@@ -33,9 +33,9 @@ const LOGOS = [
 
 export function LogoStrip() {
   return (
-    <section className="py-14 md:py-16 border-y border-border-subtle">
+    <section className="py-8 md:py-10 border-y border-border-subtle">
       <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
-        <p className="eyebrow mb-8 md:mb-10">Trusted by leaders across:</p>
+        <p className="eyebrow mb-5 md:mb-6">Trusted by leaders across:</p>
       </div>
 
       <div className="marquee-mask overflow-hidden">
@@ -47,7 +47,7 @@ export function LogoStrip() {
                 alt={logo.alt}
                 width={logo.width}
                 height={40}
-                className="h-8 md:h-9 w-auto object-contain"
+                className="h-7 md:h-8 w-auto object-contain"
               />
             </li>
           ))}
@@ -58,7 +58,7 @@ export function LogoStrip() {
                 alt=""
                 width={logo.width}
                 height={40}
-                className="h-8 md:h-9 w-auto object-contain"
+                className="h-7 md:h-8 w-auto object-contain"
               />
             </li>
           ))}
