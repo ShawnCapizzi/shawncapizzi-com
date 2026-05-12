@@ -5,15 +5,16 @@ import { useEffect, useRef } from "react";
 /**
  * ParticleField — atmospheric particle network ("constellation").
  *
- * Tuning per v1.2: 25% reduction in particle count, color mix of
- * white and moon-cream, max opacity capped at 85% so particles
- * read as luminous but defused — not stark.
+ * v1.3 tuning:
+ *   - Brightness reduced 50% (MAX_OPACITY 0.85 → 0.42)
+ *   - Line brightness reduced 50% (0.18 → 0.09)
+ *   - Scroll parallax: particles shift opposite to scroll direction
+ *     at 35% of scroll distance, creating depth illusion
+ *   - Edge behavior: wrap around viewport (not bounce) so particles
+ *     don't pile up when user scrolls fast
  *
- * Particles connected by thin periwinkle lines when within
- * proximity threshold. Bounce off viewport edges.
- *
- * Respects prefers-reduced-motion by rendering the network
- * statically.
+ * Respects prefers-reduced-motion by skipping both drift and
+ * scroll-parallax updates.
  */
 
 type Hue = "white" | "moon";
@@ -27,13 +28,14 @@ interface Particle {
   hue: Hue;
 }
 
-const PARTICLE_COUNT = 41; // reduced from 55 (25% defuse)
+const PARTICLE_COUNT = 41;
 const MAX_LINK_DISTANCE = 150;
-const MAX_OPACITY = 0.85;
+const MAX_OPACITY = 0.42; // 50% defuse from previous 0.85
+const SCROLL_PARALLAX = 0.35; // fraction of scroll applied opposite to direction
 
 const HUE_COLORS: Record<Hue, string> = {
-  white: "245, 245, 244", // text-primary white
-  moon: "248, 243, 232", // moon-cream — warm off-white
+  white: "245, 245, 244",
+  moon: "248, 243, 232",
 };
 
 function pickHue(): Hue {
@@ -58,6 +60,8 @@ export function ParticleField() {
     let animationFrame = 0;
     let width = 0;
     let height = 0;
+    let lastScrollY = window.scrollY;
+    let pendingScrollDelta = 0;
 
     function resize() {
       if (!canvas || !ctx) return;
@@ -82,29 +86,37 @@ export function ParticleField() {
       }));
     }
 
+    function onScroll() {
+      const currentY = window.scrollY;
+      pendingScrollDelta += currentY - lastScrollY;
+      lastScrollY = currentY;
+    }
+
     function draw() {
       if (!canvas || !ctx) return;
       ctx.clearRect(0, 0, width, height);
+
+      // Scroll-induced offset (opposite direction to scroll)
+      // Clamp to prevent teleport-feel on very fast scroll
+      const rawOffset = -pendingScrollDelta * SCROLL_PARALLAX;
+      const scrollOffset = Math.max(-40, Math.min(40, rawOffset));
+      pendingScrollDelta = 0;
 
       // Update positions
       if (!prefersReduced) {
         for (const p of particles) {
           p.x += p.vx;
-          p.y += p.vy;
+          p.y += p.vy + scrollOffset;
 
-          // Bounce off viewport edges
-          if (p.x <= 0 || p.x >= width) {
-            p.vx *= -1;
-            p.x = Math.max(0, Math.min(width, p.x));
-          }
-          if (p.y <= 0 || p.y >= height) {
-            p.vy *= -1;
-            p.y = Math.max(0, Math.min(height, p.y));
-          }
+          // Wrap around viewport edges (not bounce)
+          if (p.x < -10) p.x = width + 10;
+          if (p.x > width + 10) p.x = -10;
+          if (p.y < -10) p.y = height + 10;
+          if (p.y > height + 10) p.y = -10;
         }
       }
 
-      // Draw connecting lines first
+      // Draw connecting lines first (so particles sit on top)
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const a = particles[i];
@@ -115,7 +127,7 @@ export function ParticleField() {
 
           if (distSquared < MAX_LINK_DISTANCE * MAX_LINK_DISTANCE) {
             const dist = Math.sqrt(distSquared);
-            const opacity = (1 - dist / MAX_LINK_DISTANCE) * 0.18;
+            const opacity = (1 - dist / MAX_LINK_DISTANCE) * 0.09; // halved from 0.18
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
@@ -126,7 +138,7 @@ export function ParticleField() {
         }
       }
 
-      // Draw particles on top
+      // Draw particles
       for (const p of particles) {
         const color = HUE_COLORS[p.hue];
 
@@ -136,7 +148,7 @@ export function ParticleField() {
         ctx.fillStyle = `rgba(${color}, ${MAX_OPACITY * 0.09})`;
         ctx.fill();
 
-        // Bright core — capped at MAX_OPACITY
+        // Bright core (capped at MAX_OPACITY)
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${color}, ${MAX_OPACITY})`;
@@ -166,11 +178,13 @@ export function ParticleField() {
     draw();
 
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", onScroll, { passive: true });
     document.addEventListener("visibilitychange", handleVisibility);
 
     return () => {
       if (animationFrame) cancelAnimationFrame(animationFrame);
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", onScroll);
       document.removeEventListener("visibilitychange", handleVisibility);
     };
   }, []);
