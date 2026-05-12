@@ -32,7 +32,7 @@
   --color-brand-orange: #FF5722;
 
   /* ---- SEMANTIC ---- */
-  --color-link: #FF5722;
+  --color-link: #A798FF;
   --color-link-hover: #FFFFFF;
   --color-focus-ring: #6B5CFF;
   --color-success: #10B981;
@@ -299,7 +299,29 @@ body::before {
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-text-tertiary);
+  color: #A798FF;
+}
+
+/* ============================================================
+   EDITORIAL TYPOGRAPHY
+   Nunito Sans italic for h2 subheads and lead-in moments.
+   Lead text uses Geist at weight 300 with slightly muted cream.
+   Together they add visual register without going full serif.
+   ============================================================ */
+
+.subhead-editorial {
+  font-family: var(--font-nunito-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #DAD8C9;
+}
+
+.lead-text {
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  color: rgba(218, 216, 201, 0.82);
 }
 
 /* ============================================================
@@ -404,13 +426,13 @@ body::before {
 .headline-gleam {
   background-image: linear-gradient(
     100deg,
-    #f5f5f4 0%,
-    #f5f5f4 42%,
-    #ffffff 48%,
-    #dcd8ff 50%,
-    #ffffff 52%,
-    #f5f5f4 58%,
-    #f5f5f4 100%
+    #dad8c9 0%,
+    #dad8c9 42%,
+    #ebe9db 48%,
+    #ffffff 50%,
+    #ebe9db 52%,
+    #dad8c9 58%,
+    #dad8c9 100%
   );
   background-size: 200% 100%;
   background-clip: text;
@@ -423,7 +445,7 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   .headline-gleam {
     animation: none;
-    background-image: linear-gradient(180deg, #ffffff 0%, #f5f5f4 100%);
+    background-image: linear-gradient(180deg, #dad8c9 0%, #c9c7b8 100%);
     background-size: 100% 100%;
   }
 }

@@ -74,10 +74,10 @@ export default function Page() {
                     <span aria-hidden="true">·</span>
                     <span className="text-link">{essay.source}</span>
                   </div>
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-text-primary group-hover:text-link transition-colors leading-tight mb-4">
+                  <h2 className="subhead-editorial text-xl md:text-2xl lg:text-3xl group-hover:text-link transition-colors leading-tight mb-4">
                     {essay.title}
                   </h2>
-                  <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-6">
+                  <p className="lead-text text-base md:text-lg leading-relaxed mb-6">
                     {essay.description}
                   </p>
                   <p className="text-link group-hover:text-link-hover transition-colors text-base font-medium">
@@ -149,10 +149,10 @@ export default function Page() {
                   <span aria-hidden="true">·</span>
                   <span>{essay.readTime}</span>
                 </div>
-                <h2 className="text-xl md:text-2xl font-semibold tracking-tight text-text-primary leading-tight mb-4">
+                <h2 className="subhead-editorial text-xl md:text-2xl leading-tight mb-4">
                   {essay.title}
                 </h2>
-                <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-6">
+                <p className="lead-text text-base md:text-lg leading-relaxed mb-6">
                   {essay.description}
                 </p>
                 <p className="text-sm text-text-tertiary italic">

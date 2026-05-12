@@ -134,10 +134,10 @@ export default function Page() {
       <section id="embedded" className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagement type 01</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+          <h2 className="subhead-editorial text-3xl md:text-4xl lg:text-5xl mb-8 md:mb-10 max-w-3xl">
             Embedded UX & Experience Design Lead
           </h2>
-          <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl mb-12 md:mb-14">
+          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
             For agencies and in-house pharma, healthcare, and enterprise teams
             that need senior UX, actionable engagement strategy, IA, and content
             strategy leadership inside active work. I work directly with creative
@@ -212,10 +212,10 @@ export default function Page() {
       <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagement type 02</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+          <h2 className="subhead-editorial text-3xl md:text-4xl lg:text-5xl mb-8 md:mb-10 max-w-3xl">
             Strategic Advisory
           </h2>
-          <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl mb-14 md:mb-16">
+          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-14 md:mb-16">
             For VPs, Directors, and senior leaders inside pharma, healthcare,
             financial services, and enterprise teams who need senior strategic,
             design, and systems counsel without a full-time hire.

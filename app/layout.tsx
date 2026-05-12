@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -10,7 +10,10 @@ import { NavigationProgress } from "@/components/NavigationProgress";
 
 /* ============================================================
    FONTS
-   Geist Sans + Geist Mono per design system §3.
+   Geist Sans + Geist Mono — primary body and mono.
+   Nunito Sans — humanist sans used for italic subheads, lead-ins,
+   and editorial moments. Adds typographic register without going
+   full serif.
    ============================================================ */
 
 const geistSans = Geist({
@@ -22,6 +25,14 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const nunitoSans = Nunito_Sans({
+  variable: "--font-nunito-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "600"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -100,7 +111,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${nunitoSans.variable}`}>
       <body className="bg-bg-primary text-text-primary antialiased">
         <ParticleField />
         <ScrollFadeController />
