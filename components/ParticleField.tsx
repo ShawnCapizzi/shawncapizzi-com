@@ -3,35 +3,46 @@
 import { useEffect, useRef } from "react";
 
 /**
- * ParticleField — slow-drifting particle background.
+ * ParticleField — slow-drifting glowing particles.
  *
- * Per design system v1.1 amendment: ambient animated atmosphere
- * across the page background, behind all content. Particles drift
- * slowly upward with subtle horizontal sway. Reads as starfield /
- * dust motes, not as a busy effect.
+ * Per design system v1.1 amendment: ambient atmospheric animation.
+ * Particles render as soft glowing dots ("fireflies") with subtle
+ * color variation drawn from the brand color family. Each particle
+ * is a two-circle stack: a translucent halo for glow + a bright
+ * inner core. Slow drift, gentle twinkle.
  *
- * Fixed position covering viewport, z-index 0 (behind content which
- * sits at default z-index in the document flow).
- *
- * Performance: ~60 particles. Canvas-based, single rAF loop, no
- * library dependency. Pauses when tab is not visible.
- *
- * Respects prefers-reduced-motion: renders particles statically with
- * no animation, so atmosphere is preserved without motion.
+ * Performance: 35 particles, single rAF loop, pauses when tab hidden.
+ * Respects prefers-reduced-motion (renders particles statically).
  */
+
+type Hue = "white" | "purple" | "blue";
 
 interface Particle {
   x: number;
   y: number;
   radius: number;
-  vy: number; // vertical velocity (negative = upward drift)
-  vx: number; // horizontal drift
-  opacity: number;
+  vy: number;
+  vx: number;
+  baseOpacity: number;
   twinkleSpeed: number;
   twinklePhase: number;
+  hue: Hue;
 }
 
-const PARTICLE_COUNT = 60;
+const PARTICLE_COUNT = 35;
+
+const HUE_COLORS: Record<Hue, string> = {
+  white: "245, 245, 244",
+  purple: "167, 152, 255", // tinted periwinkle, brand-purple family
+  blue: "150, 140, 220", // softer blue tint
+};
+
+function pickHue(): Hue {
+  const r = Math.random();
+  if (r < 0.65) return "white";
+  if (r < 0.85) return "purple";
+  return "blue";
+}
 
 export function ParticleField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -58,6 +69,7 @@ export function ParticleField() {
       canvas.height = h * dpr;
       canvas.style.width = `${w}px`;
       canvas.style.height = `${h}px`;
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // reset before scaling
       ctx.scale(dpr, dpr);
     }
 
@@ -67,12 +79,13 @@ export function ParticleField() {
       particles = Array.from({ length: PARTICLE_COUNT }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
-        radius: Math.random() * 1.2 + 0.3,
-        vy: -(Math.random() * 0.15 + 0.05),
-        vx: (Math.random() - 0.5) * 0.05,
-        opacity: Math.random() * 0.5 + 0.2,
-        twinkleSpeed: Math.random() * 0.015 + 0.005,
+        radius: Math.random() * 2.5 + 1.5, // 1.5 to 4.0 px
+        vy: -(Math.random() * 0.08 + 0.03), // very slow upward drift
+        vx: (Math.random() - 0.5) * 0.04, // gentle horizontal sway
+        baseOpacity: Math.random() * 0.4 + 0.35, // 0.35 to 0.75
+        twinkleSpeed: Math.random() * 0.008 + 0.003,
         twinklePhase: Math.random() * Math.PI * 2,
+        hue: pickHue(),
       }));
     }
 
@@ -88,19 +101,37 @@ export function ParticleField() {
           p.x += p.vx;
           p.twinklePhase += p.twinkleSpeed;
 
-          // Wrap around viewport
-          if (p.y < -10) p.y = h + 10;
+          // Wrap around viewport so particles reappear from the bottom
+          if (p.y < -10) {
+            p.y = h + 10;
+            p.x = Math.random() * w;
+          }
           if (p.x < -10) p.x = w + 10;
           if (p.x > w + 10) p.x = -10;
         }
 
-        const twinkle = prefersReduced
-          ? p.opacity
-          : p.opacity * (0.6 + 0.4 * Math.sin(p.twinklePhase));
+        const twinkleFactor = prefersReduced
+          ? 1
+          : 0.75 + 0.25 * Math.sin(p.twinklePhase);
+        const opacity = p.baseOpacity * twinkleFactor;
+        const color = HUE_COLORS[p.hue];
 
+        // Outer glow halo — large + very translucent
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius * 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${color}, ${opacity * 0.12})`;
+        ctx.fill();
+
+        // Mid halo — adds smoother falloff
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius * 1.8, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${color}, ${opacity * 0.3})`;
+        ctx.fill();
+
+        // Bright inner core
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(245, 245, 244, ${twinkle})`;
+        ctx.fillStyle = `rgba(${color}, ${opacity})`;
         ctx.fill();
       }
 
@@ -117,18 +148,21 @@ export function ParticleField() {
       }
     }
 
+    function handleResize() {
+      resize();
+      initParticles();
+    }
+
     resize();
     initParticles();
     draw();
 
-    window.addEventListener("resize", () => {
-      resize();
-      initParticles();
-    });
+    window.addEventListener("resize", handleResize);
     document.addEventListener("visibilitychange", handleVisibility);
 
     return () => {
       if (animationFrame) cancelAnimationFrame(animationFrame);
+      window.removeEventListener("resize", handleResize);
       document.removeEventListener("visibilitychange", handleVisibility);
     };
   }, []);
