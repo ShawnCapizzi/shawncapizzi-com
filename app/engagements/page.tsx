@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -106,6 +107,26 @@ export default function Page() {
               Book a Strategy Call
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* FRAMEWORK SKETCH — how I think before any pixel gets pushed */}
+      <section className="pb-8 md:pb-12">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <figure className="max-w-3xl mx-auto">
+            <div className="relative aspect-video rounded-2xl overflow-hidden border border-border-default">
+              <Image
+                src="/images/engagements/needs-framework-sketch.jpg"
+                alt="Hand-drawn framework: user need and want flowing down through company to users, business, and resources"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 720px"
+              />
+            </div>
+            <figcaption className="mt-5 text-sm md:text-base text-text-tertiary text-center italic">
+              Where every engagement begins.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
