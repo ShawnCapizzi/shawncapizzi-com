@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { ParticleField } from "@/components/ParticleField";
 import { BackToTop } from "@/components/BackToTop";
 import { ScrollFadeController } from "@/components/ScrollFadeController";
+import { NavigationProgress } from "@/components/NavigationProgress";
 
 /* ============================================================
    FONTS
@@ -109,6 +110,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <BackToTop />
+        <NavigationProgress />
       </body>
     </html>
   );

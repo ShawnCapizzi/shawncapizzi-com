@@ -47,7 +47,7 @@ export function LogoStrip() {
                 alt={logo.alt}
                 width={logo.width}
                 height={40}
-                className="h-8 md:h-9 w-auto object-contain logo-mono"
+                className="h-8 md:h-9 w-auto object-contain"
               />
             </li>
           ))}
@@ -58,7 +58,7 @@ export function LogoStrip() {
                 alt=""
                 width={logo.width}
                 height={40}
-                className="h-8 md:h-9 w-auto object-contain logo-mono"
+                className="h-8 md:h-9 w-auto object-contain"
               />
             </li>
           ))}

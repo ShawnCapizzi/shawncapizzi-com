@@ -455,3 +455,92 @@ body::before {
       rgba(0, 0, 0, 0.18) 100%
     );
 }
+
+/* ============================================================
+   NAVIGATION SHIMMER
+   Short gradient line (80px) that sweeps under the nav three
+   times on every page load. Each pass dimmer than the last:
+   95% → 55% → 25%. Cubic-bezier ease, 1s per pass, 3s total.
+   The line is invisible before its delay (transform: translateX(0)
+   keeps it at left: -80px, off-screen left) and invisible after
+   its animation (animation-fill-mode: forwards leaves it at
+   translateX(calc(100vw + 80px)), off-screen right).
+   Animation restart on route change is handled in the React
+   component (key=pathname remount).
+   ============================================================ */
+
+.nav-shimmer {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 100;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .nav-shimmer {
+    top: 72px;
+  }
+}
+
+.nav-shimmer-inner {
+  position: absolute;
+  inset: 0;
+}
+
+.nav-shimmer-pass {
+  position: absolute;
+  top: 0;
+  left: -80px;
+  width: 80px;
+  height: 100%;
+  transform: translateX(0);
+  animation: nav-shimmer-sweep 1000ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes nav-shimmer-sweep {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(100vw + 80px)); }
+}
+
+.nav-shimmer-pass-1 {
+  background: linear-gradient(
+    90deg,
+    rgba(79, 70, 229, 0) 0%,
+    rgba(79, 70, 229, 0.95) 50%,
+    rgba(79, 70, 229, 0) 100%
+  );
+  box-shadow: 0 0 6px rgba(79, 70, 229, 0.38);
+  animation-delay: 0ms;
+}
+
+.nav-shimmer-pass-2 {
+  background: linear-gradient(
+    90deg,
+    rgba(79, 70, 229, 0) 0%,
+    rgba(79, 70, 229, 0.55) 50%,
+    rgba(79, 70, 229, 0) 100%
+  );
+  box-shadow: 0 0 6px rgba(79, 70, 229, 0.22);
+  animation-delay: 1000ms;
+}
+
+.nav-shimmer-pass-3 {
+  background: linear-gradient(
+    90deg,
+    rgba(79, 70, 229, 0) 0%,
+    rgba(79, 70, 229, 0.25) 50%,
+    rgba(79, 70, 229, 0) 100%
+  );
+  box-shadow: 0 0 6px rgba(79, 70, 229, 0.1);
+  animation-delay: 2000ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-shimmer-pass {
+    animation: none;
+  }
+}
