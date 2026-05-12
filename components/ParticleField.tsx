@@ -5,16 +5,24 @@ import { useEffect, useRef } from "react";
 /**
  * ParticleField — atmospheric particle network ("constellation").
  *
- * v1.3 tuning:
- *   - Brightness reduced 50% (MAX_OPACITY 0.85 → 0.42)
- *   - Line brightness reduced 50% (0.18 → 0.09)
- *   - Scroll parallax: particles shift opposite to scroll direction
- *     at 35% of scroll distance, creating depth illusion
- *   - Edge behavior: wrap around viewport (not bounce) so particles
- *     don't pile up when user scrolls fast
+ * v1.4 tuning — mobile-aware, dimmed:
  *
- * Respects prefers-reduced-motion by skipping both drift and
- * scroll-parallax updates.
+ *   Desktop (≥768px):
+ *     - 41 particles
+ *     - MAX_OPACITY 0.27 (was 0.42, knocked down another 35%)
+ *     - SCROLL_PARALLAX 0.35
+ *
+ *   Mobile (<768px):
+ *     - 18 particles (less real estate, less density needed)
+ *     - MAX_OPACITY 0.25 (OLED phone screens render white very vividly
+ *       against pure black — need further dimming)
+ *     - SCROLL_PARALLAX 0 (iOS momentum scrolling already provides motion;
+ *       adding parallax on top creates a double-motion sensation)
+ *
+ * Configuration recalculates on viewport resize, so a phone rotating
+ * landscape <-> portrait gets the right config for its current width.
+ *
+ * Respects prefers-reduced-motion by skipping all motion updates.
  */
 
 type Hue = "white" | "moon";
@@ -28,10 +36,8 @@ interface Particle {
   hue: Hue;
 }
 
-const PARTICLE_COUNT = 41;
 const MAX_LINK_DISTANCE = 150;
-const MAX_OPACITY = 0.42; // 50% defuse from previous 0.85
-const SCROLL_PARALLAX = 0.35; // fraction of scroll applied opposite to direction
+const MOBILE_QUERY = "(max-width: 768px)";
 
 const HUE_COLORS: Record<Hue, string> = {
   white: "245, 245, 244",
@@ -40,6 +46,19 @@ const HUE_COLORS: Record<Hue, string> = {
 
 function pickHue(): Hue {
   return Math.random() < 0.5 ? "white" : "moon";
+}
+
+interface ViewportConfig {
+  particleCount: number;
+  maxOpacity: number;
+  scrollParallax: number;
+}
+
+function readConfig(): ViewportConfig {
+  const isMobile = window.matchMedia(MOBILE_QUERY).matches;
+  return isMobile
+    ? { particleCount: 18, maxOpacity: 0.25, scrollParallax: 0 }
+    : { particleCount: 41, maxOpacity: 0.27, scrollParallax: 0.35 };
 }
 
 export function ParticleField() {
@@ -56,6 +75,7 @@ export function ParticleField() {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
+    let config = readConfig();
     let particles: Particle[] = [];
     let animationFrame = 0;
     let width = 0;
@@ -76,7 +96,7 @@ export function ParticleField() {
     }
 
     function initParticles() {
-      particles = Array.from({ length: PARTICLE_COUNT }, () => ({
+      particles = Array.from({ length: config.particleCount }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
         vx: (Math.random() - 0.5) * 0.3,
@@ -96,9 +116,8 @@ export function ParticleField() {
       if (!canvas || !ctx) return;
       ctx.clearRect(0, 0, width, height);
 
-      // Scroll-induced offset (opposite direction to scroll)
-      // Clamp to prevent teleport-feel on very fast scroll
-      const rawOffset = -pendingScrollDelta * SCROLL_PARALLAX;
+      // Scroll-induced offset (opposite direction; clamped)
+      const rawOffset = -pendingScrollDelta * config.scrollParallax;
       const scrollOffset = Math.max(-40, Math.min(40, rawOffset));
       pendingScrollDelta = 0;
 
@@ -108,7 +127,7 @@ export function ParticleField() {
           p.x += p.vx;
           p.y += p.vy + scrollOffset;
 
-          // Wrap around viewport edges (not bounce)
+          // Wrap around viewport edges
           if (p.x < -10) p.x = width + 10;
           if (p.x > width + 10) p.x = -10;
           if (p.y < -10) p.y = height + 10;
@@ -116,7 +135,7 @@ export function ParticleField() {
         }
       }
 
-      // Draw connecting lines first (so particles sit on top)
+      // Connecting lines (linework opacity scales with brightness)
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const a = particles[i];
@@ -127,7 +146,9 @@ export function ParticleField() {
 
           if (distSquared < MAX_LINK_DISTANCE * MAX_LINK_DISTANCE) {
             const dist = Math.sqrt(distSquared);
-            const opacity = (1 - dist / MAX_LINK_DISTANCE) * 0.09; // halved from 0.18
+            // Line opacity tracks particle opacity at ~22%
+            const opacity =
+              (1 - dist / MAX_LINK_DISTANCE) * (config.maxOpacity * 0.22);
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
@@ -138,20 +159,20 @@ export function ParticleField() {
         }
       }
 
-      // Draw particles
+      // Particles
       for (const p of particles) {
         const color = HUE_COLORS[p.hue];
 
         // Soft halo
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius * 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${color}, ${MAX_OPACITY * 0.09})`;
+        ctx.fillStyle = `rgba(${color}, ${config.maxOpacity * 0.09})`;
         ctx.fill();
 
-        // Bright core (capped at MAX_OPACITY)
+        // Bright core
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${color}, ${MAX_OPACITY})`;
+        ctx.fillStyle = `rgba(${color}, ${config.maxOpacity})`;
         ctx.fill();
       }
 
@@ -169,8 +190,15 @@ export function ParticleField() {
     }
 
     function handleResize() {
+      // Re-read config in case viewport crossed the mobile breakpoint
+      const newConfig = readConfig();
+      const configChanged =
+        newConfig.particleCount !== config.particleCount ||
+        newConfig.maxOpacity !== config.maxOpacity ||
+        newConfig.scrollParallax !== config.scrollParallax;
+      config = newConfig;
       resize();
-      initParticles();
+      if (configChanged) initParticles();
     }
 
     resize();

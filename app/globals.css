@@ -344,12 +344,34 @@ body::before {
 }
 
 .marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   width: max-content;
+  gap: 4rem;
   animation: marquee 38s linear infinite;
+  will-change: transform;
+}
+
+@media (min-width: 768px) {
+  .marquee-track {
+    gap: 5rem;
+  }
+}
+
+.marquee-track > li {
+  flex-shrink: 0;
+  list-style: none;
 }
 
 .marquee-track:hover {
   animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
 
 /* ============================================================
