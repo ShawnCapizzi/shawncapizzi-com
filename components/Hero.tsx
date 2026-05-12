@@ -20,7 +20,7 @@ export function Hero() {
               className="w-full max-w-xl lg:max-w-2xl h-auto"
             />
 
-            <h1 className="mt-8 md:mt-10 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] max-w-2xl">
+            <h1 className="mt-8 md:mt-10 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] max-w-[90%]">
               For agency and pharma teams that need senior depth across stakeholders, deadlines, and decisions.
             </h1>
 
@@ -48,7 +48,7 @@ export function Hero() {
 
           {/* Right: Portrait with radial gradient backdrop */}
           <div className="relative lg:col-span-5 order-1 lg:order-2">
-            <div className="relative aspect-[4/5] max-w-md mx-auto lg:max-w-none">
+            <div className="relative aspect-[4/5] max-w-[80%] mx-auto">
               <HeroBackdrop />
               <div className="relative z-10 h-full">
                 <Image
@@ -56,7 +56,7 @@ export function Hero() {
                   alt="Shawn Capizzi"
                   fill
                   priority
-                  sizes="(max-width: 1024px) 80vw, 40vw"
+                  sizes="(max-width: 1024px) 65vw, 32vw"
                   className="object-cover object-center rounded-2xl"
                 />
               </div>
