@@ -262,16 +262,17 @@ export default function Page() {
               Competitive BBQ enthusiast in the off-season.
             </p>
             <p>
-              My best friend, now Poet Laureate of Connecticut, and I
-              co-founded a creative arts and music collective at Rider
-              University 25+ years ago. We still get together annually for live
-              performances — I create live visual art alongside his poetry and
-              music. In 2022 I started generating those visuals with Midjourney
-              and Runway in real time, tied to lyrics and music, projected
-              through two or three projectors. Live performance is an
-              unforgiving classroom for AI tooling. Everything I now know about
-              how AI fits into design work started there. Another AI-assisted
-              performance is planned for August 2026.
+              Taylor Keer, a friend and now Poet Laureate of Connecticut, and
+              I co-founded a creative arts and music collective at Rider
+              University 10+ years ago. We still get together annually for
+              live performances — I create live visual art alongside his
+              poetry and music. In 2022 I started generating those visuals
+              with Midjourney and Runway in real time, tied to lyrics and
+              music, projected through two or three projectors. Live
+              performance is an unforgiving classroom for AI tooling.
+              Everything I now know about how AI fits into design work
+              started there. Another AI-assisted performance is planned for
+              August 2026.
             </p>
             <p>
               The fine-art and documentary work informs the consulting practice
@@ -282,16 +283,30 @@ export default function Page() {
             </p>
           </div>
 
-          {/* Long-form video — voice & personality */}
+          {/* LinkedIn post — live performance / creative practice */}
           <div className="mt-14 md:mt-16 max-w-3xl">
-            <LiteYouTube
-              videoId="9jOHx23Jeuc"
-              title="Talking through experience design, AI, and regulated industries"
-              aspect="16:9"
-            />
-            <p className="mt-4 text-sm text-text-tertiary italic">
-              If you&apos;d rather hear me think through this work in my own
-              voice before booking a call.
+            <p className="metadata-label mb-4">From LinkedIn</p>
+            <div
+              className="rounded-xl overflow-hidden"
+              style={{ maxWidth: "504px", margin: "0 auto" }}
+            >
+              <iframe
+                src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7091549601580621824?collapsed=1"
+                height="550"
+                width="100%"
+                frameBorder="0"
+                allowFullScreen
+                title="LinkedIn post — live performance with AI-generated visuals"
+                loading="lazy"
+                style={{ display: "block", borderRadius: "12px" }}
+              />
+            </div>
+            <p
+              className="mt-4 text-sm text-text-tertiary italic text-center"
+              style={{ maxWidth: "504px", margin: "1rem auto 0" }}
+            >
+              A look at the live performance work — visuals generated in real
+              time alongside poetry and music.
             </p>
           </div>
         </div>
