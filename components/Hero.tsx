@@ -21,7 +21,7 @@ export function Hero() {
             />
 
             <h1 className="headline-gleam mt-8 md:mt-10 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] max-w-[90%]">
-              For agency and pharma teams that need senior depth across stakeholders, deadlines, and decisions.
+              For agency and pharma teams: senior depth across stakeholders, deadlines, decisions.
             </h1>
 
             <p className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary leading-relaxed max-w-xl">

@@ -49,7 +49,7 @@ export function SelectedWork() {
             Selected work
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            Engagements where the structure of the experience changed the structure of the business outcome.
+            Engagements where experience structure changed the business outcome.
           </p>
         </div>
 
