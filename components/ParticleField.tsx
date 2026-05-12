@@ -5,19 +5,18 @@ import { useEffect, useRef } from "react";
 /**
  * ParticleField — atmospheric particle network ("constellation").
  *
- * Slow-drifting particles connected by thin lines when they're
- * close enough to each other. Line opacity is proportional to
- * proximity — closer = brighter. The combined effect reads as
- * a live data network or starfield with connecting paths.
+ * Tuning per v1.2: 25% reduction in particle count, color mix of
+ * white and moon-cream, max opacity capped at 85% so particles
+ * read as luminous but defused — not stark.
  *
- * Particles bounce off viewport edges and drift continuously.
- * Performance: 50 particles, O(n²) = 2,500 distance checks per
- * frame which is trivial on modern hardware.
+ * Particles connected by thin periwinkle lines when within
+ * proximity threshold. Bounce off viewport edges.
  *
- * Per design system v1.1 amendment: ambient page-background
- * animation behind all content. Respects prefers-reduced-motion
- * by rendering the network statically.
+ * Respects prefers-reduced-motion by rendering the network
+ * statically.
  */
+
+type Hue = "white" | "moon";
 
 interface Particle {
   x: number;
@@ -25,10 +24,21 @@ interface Particle {
   vx: number;
   vy: number;
   radius: number;
+  hue: Hue;
 }
 
-const PARTICLE_COUNT = 55;
+const PARTICLE_COUNT = 41; // reduced from 55 (25% defuse)
 const MAX_LINK_DISTANCE = 150;
+const MAX_OPACITY = 0.85;
+
+const HUE_COLORS: Record<Hue, string> = {
+  white: "245, 245, 244", // text-primary white
+  moon: "248, 243, 232", // moon-cream — warm off-white
+};
+
+function pickHue(): Hue {
+  return Math.random() < 0.5 ? "white" : "moon";
+}
 
 export function ParticleField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -68,6 +78,7 @@ export function ParticleField() {
         vx: (Math.random() - 0.5) * 0.3,
         vy: (Math.random() - 0.5) * 0.3,
         radius: Math.random() * 1.2 + 0.8,
+        hue: pickHue(),
       }));
     }
 
@@ -93,7 +104,7 @@ export function ParticleField() {
         }
       }
 
-      // Draw connecting lines FIRST (so particles sit on top of lines)
+      // Draw connecting lines first
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const a = particles[i];
@@ -104,7 +115,7 @@ export function ParticleField() {
 
           if (distSquared < MAX_LINK_DISTANCE * MAX_LINK_DISTANCE) {
             const dist = Math.sqrt(distSquared);
-            const opacity = (1 - dist / MAX_LINK_DISTANCE) * 0.22;
+            const opacity = (1 - dist / MAX_LINK_DISTANCE) * 0.18;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
@@ -117,16 +128,18 @@ export function ParticleField() {
 
       // Draw particles on top
       for (const p of particles) {
+        const color = HUE_COLORS[p.hue];
+
         // Soft halo
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius * 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(245, 245, 244, 0.08)";
+        ctx.fillStyle = `rgba(${color}, ${MAX_OPACITY * 0.09})`;
         ctx.fill();
 
-        // Bright core
+        // Bright core — capped at MAX_OPACITY
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(245, 245, 244, 0.75)";
+        ctx.fillStyle = `rgba(${color}, ${MAX_OPACITY})`;
         ctx.fill();
       }
 

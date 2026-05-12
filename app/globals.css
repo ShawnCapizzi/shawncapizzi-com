@@ -138,10 +138,6 @@ body {
   font-size: var(--text-base);
   line-height: 1.65;
   background-color: var(--color-bg-primary);
-  background-image:
-    radial-gradient(ellipse 1400px 900px at 85% -10%, rgba(79, 70, 229, 0.07) 0%, transparent 55%),
-    radial-gradient(ellipse 1100px 700px at 10% 40%, rgba(107, 92, 255, 0.04) 0%, transparent 60%);
-  background-attachment: fixed;
   color: var(--color-text-primary);
   min-height: 100vh;
 }
@@ -170,57 +166,57 @@ html::before {
   z-index: 1;
   background: linear-gradient(
     180deg,
-    rgba(107, 92, 255, 0.18) 0%,
-    rgba(107, 92, 255, 0.08) 35%,
-    rgba(107, 92, 255, 0.02) 70%,
+    rgba(79, 70, 229, 0.26) 0%,
+    rgba(79, 70, 229, 0.12) 35%,
+    rgba(79, 70, 229, 0.04) 70%,
     transparent 100%
   );
 }
 
 /* ============================================================
-   LEFT EDGE RULER TEXTURE
-   Fixed-position vertical strip on the far-left edge with
-   ruler-tick marks at two scales. Periwinkle at low opacity.
-   Major ticks every 120px (longer, slightly stronger).
-   Minor ticks every 24px (shorter, fainter).
-   Doesn't move with scroll — sits there like a measuring rule.
+   LEFT EDGE CHRONOGRAPH MARKERS
+   Thin hairline tick marks on the far-left edge.
+   Unlike the previous ruler, these scroll WITH the page —
+   not fixed. Reads like the minute markers on a chronograph
+   watch face. Major ticks every 100px (slightly stronger),
+   minor ticks every 20px (very subtle, hairline).
+   Implemented via a fixed-width column inside the body's
+   normal flow background — repeats vertically as content grows.
    ============================================================ */
 
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 32px;
-  pointer-events: none;
-  z-index: 0;
+body {
   background-image:
-    /* Major ticks — 28px wide tile, line every 120px */
+    /* Major ticks — 14px wide tile, hairline every 100px */
     linear-gradient(
       0deg,
-      transparent 23px,
-      rgba(107, 92, 255, 0.2) 23px,
-      rgba(107, 92, 255, 0.2) 24px
+      transparent calc(100% - 1px),
+      rgba(167, 152, 255, 0.32) calc(100% - 1px),
+      rgba(167, 152, 255, 0.32) 100%
     ),
-    /* Minor ticks — 12px wide tile, line every 24px */
+    /* Minor ticks — 7px wide tile, hairline every 20px */
     linear-gradient(
       0deg,
-      transparent 23px,
-      rgba(107, 92, 255, 0.1) 23px,
-      rgba(107, 92, 255, 0.1) 24px
-    );
-  background-size: 28px 120px, 12px 24px;
-  background-position: 0 0, 0 0;
-  background-repeat: repeat-y, repeat-y;
+      transparent calc(100% - 1px),
+      rgba(167, 152, 255, 0.16) calc(100% - 1px),
+      rgba(167, 152, 255, 0.16) 100%
+    ),
+    /* Existing body radial gradients (preserved) */
+    radial-gradient(ellipse 1400px 900px at 85% -10%, rgba(79, 70, 229, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 1100px 700px at 10% 40%, rgba(107, 92, 255, 0.04) 0%, transparent 60%);
+  background-size: 14px 100px, 7px 20px, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  background-repeat: repeat-y, repeat-y, no-repeat, no-repeat;
+  background-attachment: scroll, scroll, fixed, fixed;
 }
 
 @media (max-width: 768px) {
-  body::after {
-    width: 20px;
-    background-size: 18px 120px, 8px 24px;
+  body {
+    background-size: 10px 100px, 5px 20px, 100% 100%, 100% 100%;
   }
 }
+
+/* The old fixed-position ruler is no longer used — chronograph
+   markers above replace it. body::after now reserved for future use. */
 
 /* ============================================================
    FILM GRAIN OVERLAY
