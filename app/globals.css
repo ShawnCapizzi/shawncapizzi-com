@@ -291,19 +291,28 @@ body::before {
 
 /* ============================================================
    CARD SURFACE
-   Elevated card surface with subtle top-down light gradient.
+   Elevated card surface with subtle gradient + brand-color glow.
    Per design direction: "subtle but modern."
+   Three layered effects:
+     - solid dark base
+     - top-down white sheen for elevation lift
+     - top-right radial brand-purple glow for atmosphere
    Use this class on actual cards (not surfaces like mobile menu).
-   v1.1 update: brightened base + stronger gradient to ensure
-   cards read distinctly from the page background.
    ============================================================ */
 
 .card-surface {
   background-color: #1A1A1A;
-  background-image: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.005) 60%,
-    rgba(0, 0, 0, 0.15) 100%
-  );
+  background-image:
+    radial-gradient(
+      ellipse 100% 80% at 100% 0%,
+      rgba(107, 92, 255, 0.14) 0%,
+      rgba(107, 92, 255, 0.04) 35%,
+      transparent 70%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(0, 0, 0, 0.18) 100%
+    );
 }
