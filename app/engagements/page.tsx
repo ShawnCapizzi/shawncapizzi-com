@@ -134,7 +134,7 @@ export default function Page() {
       <section id="embedded" className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagement type 01</p>
-          <h2 className="subhead-editorial text-3xl md:text-4xl lg:text-5xl mb-8 md:mb-10 max-w-3xl">
+          <h2 className="subhead-editorial text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-10 max-w-3xl">
             Embedded UX & Experience Design Lead
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
@@ -212,7 +212,7 @@ export default function Page() {
       <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagement type 02</p>
-          <h2 className="subhead-editorial text-3xl md:text-4xl lg:text-5xl mb-8 md:mb-10 max-w-3xl">
+          <h2 className="subhead-editorial text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-10 max-w-3xl">
             Strategic Advisory
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-14 md:mb-16">

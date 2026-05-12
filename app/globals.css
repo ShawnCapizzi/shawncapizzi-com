@@ -311,7 +311,6 @@ body::before {
 
 .subhead-editorial {
   font-family: var(--font-nunito-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  font-style: italic;
   font-weight: 400;
   letter-spacing: -0.01em;
   color: #DAD8C9;
