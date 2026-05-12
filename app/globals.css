@@ -290,17 +290,20 @@ body::before {
 }
 
 /* ============================================================
-   CARD SURFACE GRADIENT
-   Subtle top-down light gradient applied to every elevated card.
-   Adds skeuomorphic "light from above" lift without obvious gradient.
-   ~2.5% white overlay at top, fading to transparent.
+   CARD SURFACE
+   Elevated card surface with subtle top-down light gradient.
    Per design direction: "subtle but modern."
+   Use this class on actual cards (not surfaces like mobile menu).
+   v1.1 update: brightened base + stronger gradient to ensure
+   cards read distinctly from the page background.
    ============================================================ */
 
-.bg-bg-elevated {
+.card-surface {
+  background-color: #1A1A1A;
   background-image: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.028) 0%,
-    rgba(255, 255, 255, 0) 50%
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.005) 60%,
+    rgba(0, 0, 0, 0.15) 100%
   );
 }

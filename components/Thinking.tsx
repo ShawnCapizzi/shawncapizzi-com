@@ -46,7 +46,7 @@ export function Thinking() {
             <Link
               key={article.slug}
               href={`/thinking/${article.slug}`}
-              className="group relative block p-7 md:p-8 rounded-2xl bg-bg-elevated border border-border-subtle hover:border-border-default transition-colors"
+              className="group relative block p-7 md:p-8 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors"
             >
               <div className="flex items-center gap-3 mb-5">
                 <span className="font-mono text-xs tracking-widest uppercase text-text-tertiary">

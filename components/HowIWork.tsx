@@ -50,7 +50,7 @@ export function HowIWork() {
         {/* Two paths */}
         <div className="mt-16 md:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
           {/* Path 1 — Embedded */}
-          <article className="relative p-8 md:p-10 rounded-2xl bg-bg-elevated border border-border-subtle hover:border-border-default transition-colors">
+          <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors">
             <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
               Path 01
             </p>
@@ -81,7 +81,7 @@ export function HowIWork() {
           </article>
 
           {/* Path 2 — Advisory */}
-          <article className="relative p-8 md:p-10 rounded-2xl bg-bg-elevated border border-border-subtle hover:border-border-default transition-colors">
+          <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors">
             <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
               Path 02
             </p>

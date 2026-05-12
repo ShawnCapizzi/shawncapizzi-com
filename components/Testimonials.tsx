@@ -41,7 +41,7 @@ export function Testimonials() {
           {TESTIMONIALS.map((t, i) => (
             <figure
               key={t.name}
-              className={`relative p-7 md:p-8 rounded-2xl bg-bg-elevated border border-border-subtle ${
+              className={`relative p-7 md:p-8 rounded-2xl card-surface border border-border-default ${
                 i === 0 ? "lg:col-span-2 lg:row-span-1" : ""
               }`}
             >
