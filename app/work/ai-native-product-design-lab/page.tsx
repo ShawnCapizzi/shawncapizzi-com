@@ -307,15 +307,16 @@ export default function Page() {
         </div>
       </section>
 
-      {/* HERO IMAGE */}
+      {/* HERO IMAGE — animated working prototype demo */}
       <section className="pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="relative aspect-video rounded-2xl overflow-hidden border border-border-default">
             <Image
-              src="/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-patient-support-disease-first.png"
-              alt="AI Patient Support — disease-first patient navigation hero"
+              src="/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-patient-support-demo.gif"
+              alt="AI Patient Support working prototype — Treatment Journey Map, oncology workflow, and provider lookup demo"
               fill
               priority
+              unoptimized
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 960px"
             />

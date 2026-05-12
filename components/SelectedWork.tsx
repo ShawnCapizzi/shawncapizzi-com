@@ -35,7 +35,7 @@ const CASE_STUDIES = [
     eyebrow: "AI integration · Healthcare prototyping · Vendor-agnostic",
     headline: "How I use AI to accelerate research, design, prototype, and delivery",
     outcome: "Built on years of bringing teams together. Working prototypes, deployed Custom GPTs, and a contrarian thesis: AI is the boring work most companies haven't done yet.",
-    image: "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-patient-support-disease-first.png",
+    image: "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-patient-support-demo.gif",
   },
 ];
 
