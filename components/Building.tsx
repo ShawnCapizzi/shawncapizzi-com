@@ -1,9 +1,13 @@
+"use client";
+
 /**
  * Building — "What I'm building" section.
  * Per design system §5: periwinkle full-bleed color block.
  * Background: --color-brand-purple (#6B5CFF)
  * Text: --color-text-inverse (#0A0A0A)
  * Used at most twice per site — this is one of those moments.
+ *
+ * Client Component because of the form onSubmit handlers.
  */
 
 const BUILDING = [
