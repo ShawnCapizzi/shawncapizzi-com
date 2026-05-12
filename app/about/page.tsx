@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { LiteYouTube } from "@/components/LiteYouTube";
 
 export const metadata: Metadata = {
   title: "About",
@@ -129,6 +130,23 @@ export default function Page() {
               Adobe InDesign. My BFA is from Pratt Institute in Communications
               Design and Advertising/Marketing.
             </p>
+          </div>
+
+          {/* AI tool demo — the UXR AI tool I built in Dec 2024 */}
+          <div className="mt-14 md:mt-16 max-w-3xl">
+            <p className="metadata-label mb-4">A working demo</p>
+            <h3 className="text-xl md:text-2xl font-semibold text-text-primary mb-3">
+              UXR AI tool built in ChatGPT, Dec 2024
+            </h3>
+            <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-6">
+              The clearest way to explain how I think about AI integration is
+              to show one of the tools I&apos;ve built.
+            </p>
+            <LiteYouTube
+              videoId="bRmymrOs_iA"
+              title="UXR AI tool demo — December 2024"
+              aspect="9:16"
+            />
           </div>
         </div>
       </section>
@@ -261,6 +279,19 @@ export default function Page() {
               there before deciding what it should be. Both require knowing
               when to stop. Both require trust in the work to do its job after
               you walk away.
+            </p>
+          </div>
+
+          {/* Long-form video — voice & personality */}
+          <div className="mt-14 md:mt-16 max-w-3xl">
+            <LiteYouTube
+              videoId="9jOHx23Jeuc"
+              title="Talking through experience design, AI, and regulated industries"
+              aspect="16:9"
+            />
+            <p className="mt-4 text-sm text-text-tertiary italic">
+              If you&apos;d rather hear me think through this work in my own
+              voice before booking a call.
             </p>
           </div>
         </div>

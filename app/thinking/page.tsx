@@ -8,7 +8,21 @@ export const metadata: Metadata = {
 
 const CAL_URL = "https://cal.com/capizzi/15min";
 
-const ESSAYS = [
+// Published essays — real, externally hosted, link out
+const PUBLISHED = [
+  {
+    title: "Beyond User Flows: AI Is Rewriting UX Fundamentals",
+    date: "2024",
+    readTime: "8 min read",
+    description:
+      "How the rise of non-deterministic interfaces changes what UX design even means. Why workflow logic, content readiness, and trust signals matter more than interface novelty.",
+    url: "https://medium.com/p/e335c1789bc7",
+    source: "Medium",
+  },
+];
+
+// Essays in progress — placeholder treatment
+const UPCOMING = [
   {
     title: "Stop Buying AI. Start Fixing the Boring Stuff First.",
     date: "May 2026",
@@ -53,11 +67,52 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ESSAYS */}
-      <section className="py-12 md:py-16">
+      {/* PUBLISHED — leads, real links */}
+      {PUBLISHED.length > 0 && (
+        <section className="pb-12 md:pb-16">
+          <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+            <p className="eyebrow mb-6">Published</p>
+            <div className="grid grid-cols-1 gap-6 md:gap-8 max-w-3xl">
+              {PUBLISHED.map((essay) => (
+                <a
+                  key={essay.title}
+                  href={essay.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative block p-7 md:p-9 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors"
+                >
+                  <div className="flex items-center gap-3 mb-5 text-sm text-text-tertiary">
+                    <span className="metadata-label">{essay.date}</span>
+                    <span aria-hidden="true">·</span>
+                    <span>{essay.readTime}</span>
+                    <span aria-hidden="true">·</span>
+                    <span className="text-link">{essay.source}</span>
+                  </div>
+                  <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-text-primary group-hover:text-link transition-colors leading-tight mb-4">
+                    {essay.title}
+                  </h2>
+                  <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-6">
+                    {essay.description}
+                  </p>
+                  <p className="text-link group-hover:text-link-hover transition-colors text-base font-medium">
+                    Read on {essay.source}{" "}
+                    <span aria-hidden="true" className="ml-1">
+                      →
+                    </span>
+                  </p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* UPCOMING — placeholders */}
+      <section className="pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <p className="eyebrow mb-6">In progress</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {ESSAYS.map((essay) => (
+            {UPCOMING.map((essay) => (
               <article
                 key={essay.title}
                 className="relative p-7 md:p-9 rounded-2xl card-surface border border-border-default"
