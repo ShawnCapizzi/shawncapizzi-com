@@ -4,9 +4,9 @@ import Link from "next/link";
 type Size = "small" | "medium" | "large";
 
 const dimensions: Record<Size, { width: number; height: number }> = {
-  small: { width: 140, height: 44 },
-  medium: { width: 280, height: 88 },
-  large: { width: 560, height: 176 },
+  small: { width: 96, height: 33 },
+  medium: { width: 220, height: 76 },
+  large: { width: 520, height: 180 },
 };
 
 interface WordmarkProps {
@@ -26,8 +26,8 @@ export function Wordmark({
 
   const image = (
     <Image
-      src="/images/brand/signature-logo.svg"
-      alt="Shawn Capizzi"
+      src="/images/brand/wordmark.svg"
+      alt="Capizzi"
       width={width}
       height={height}
       priority={priority || size === "large"}
