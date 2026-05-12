@@ -48,8 +48,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-6">Thinking</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] max-w-4xl">
-            Essays on AI adoption, regulatory design, and experience strategy
-            in regulated industries.
+            Essays on AI adoption, regulatory design, experience strategy.
           </h1>
         </div>
       </section>
