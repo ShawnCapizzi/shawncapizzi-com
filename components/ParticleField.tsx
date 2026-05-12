@@ -3,46 +3,32 @@
 import { useEffect, useRef } from "react";
 
 /**
- * ParticleField — slow-drifting glowing particles.
+ * ParticleField — atmospheric particle network ("constellation").
  *
- * Per design system v1.1 amendment: ambient atmospheric animation.
- * Particles render as soft glowing dots ("fireflies") with subtle
- * color variation drawn from the brand color family. Each particle
- * is a two-circle stack: a translucent halo for glow + a bright
- * inner core. Slow drift, gentle twinkle.
+ * Slow-drifting particles connected by thin lines when they're
+ * close enough to each other. Line opacity is proportional to
+ * proximity — closer = brighter. The combined effect reads as
+ * a live data network or starfield with connecting paths.
  *
- * Performance: 35 particles, single rAF loop, pauses when tab hidden.
- * Respects prefers-reduced-motion (renders particles statically).
+ * Particles bounce off viewport edges and drift continuously.
+ * Performance: 50 particles, O(n²) = 2,500 distance checks per
+ * frame which is trivial on modern hardware.
+ *
+ * Per design system v1.1 amendment: ambient page-background
+ * animation behind all content. Respects prefers-reduced-motion
+ * by rendering the network statically.
  */
-
-type Hue = "white" | "purple" | "blue";
 
 interface Particle {
   x: number;
   y: number;
-  radius: number;
-  vy: number;
   vx: number;
-  baseOpacity: number;
-  twinkleSpeed: number;
-  twinklePhase: number;
-  hue: Hue;
+  vy: number;
+  radius: number;
 }
 
-const PARTICLE_COUNT = 35;
-
-const HUE_COLORS: Record<Hue, string> = {
-  white: "245, 245, 244",
-  purple: "167, 152, 255", // tinted periwinkle, brand-purple family
-  blue: "150, 140, 220", // softer blue tint
-};
-
-function pickHue(): Hue {
-  const r = Math.random();
-  if (r < 0.65) return "white";
-  if (r < 0.85) return "purple";
-  return "blue";
-}
+const PARTICLE_COUNT = 55;
+const MAX_LINK_DISTANCE = 150;
 
 export function ParticleField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -60,78 +46,87 @@ export function ParticleField() {
 
     let particles: Particle[] = [];
     let animationFrame = 0;
+    let width = 0;
+    let height = 0;
 
     function resize() {
       if (!canvas || !ctx) return;
-      const w = window.innerWidth;
-      const h = window.innerHeight;
-      canvas.width = w * dpr;
-      canvas.height = h * dpr;
-      canvas.style.width = `${w}px`;
-      canvas.style.height = `${h}px`;
-      ctx.setTransform(1, 0, 0, 1, 0, 0); // reset before scaling
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
     }
 
     function initParticles() {
-      const w = window.innerWidth;
-      const h = window.innerHeight;
       particles = Array.from({ length: PARTICLE_COUNT }, () => ({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        radius: Math.random() * 2.5 + 1.5, // 1.5 to 4.0 px
-        vy: -(Math.random() * 0.08 + 0.03), // very slow upward drift
-        vx: (Math.random() - 0.5) * 0.04, // gentle horizontal sway
-        baseOpacity: Math.random() * 0.4 + 0.35, // 0.35 to 0.75
-        twinkleSpeed: Math.random() * 0.008 + 0.003,
-        twinklePhase: Math.random() * Math.PI * 2,
-        hue: pickHue(),
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        radius: Math.random() * 1.2 + 0.8,
       }));
     }
 
     function draw() {
       if (!canvas || !ctx) return;
-      const w = window.innerWidth;
-      const h = window.innerHeight;
-      ctx.clearRect(0, 0, w, h);
+      ctx.clearRect(0, 0, width, height);
 
-      for (const p of particles) {
-        if (!prefersReduced) {
-          p.y += p.vy;
+      // Update positions
+      if (!prefersReduced) {
+        for (const p of particles) {
           p.x += p.vx;
-          p.twinklePhase += p.twinkleSpeed;
+          p.y += p.vy;
 
-          // Wrap around viewport so particles reappear from the bottom
-          if (p.y < -10) {
-            p.y = h + 10;
-            p.x = Math.random() * w;
+          // Bounce off viewport edges
+          if (p.x <= 0 || p.x >= width) {
+            p.vx *= -1;
+            p.x = Math.max(0, Math.min(width, p.x));
           }
-          if (p.x < -10) p.x = w + 10;
-          if (p.x > w + 10) p.x = -10;
+          if (p.y <= 0 || p.y >= height) {
+            p.vy *= -1;
+            p.y = Math.max(0, Math.min(height, p.y));
+          }
         }
+      }
 
-        const twinkleFactor = prefersReduced
-          ? 1
-          : 0.75 + 0.25 * Math.sin(p.twinklePhase);
-        const opacity = p.baseOpacity * twinkleFactor;
-        const color = HUE_COLORS[p.hue];
+      // Draw connecting lines FIRST (so particles sit on top of lines)
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const a = particles[i];
+          const b = particles[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
+          const distSquared = dx * dx + dy * dy;
 
-        // Outer glow halo — large + very translucent
+          if (distSquared < MAX_LINK_DISTANCE * MAX_LINK_DISTANCE) {
+            const dist = Math.sqrt(distSquared);
+            const opacity = (1 - dist / MAX_LINK_DISTANCE) * 0.22;
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.strokeStyle = `rgba(167, 152, 255, ${opacity})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Draw particles on top
+      for (const p of particles) {
+        // Soft halo
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius * 3.5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${color}, ${opacity * 0.12})`;
+        ctx.arc(p.x, p.y, p.radius * 2.5, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(245, 245, 244, 0.08)";
         ctx.fill();
 
-        // Mid halo — adds smoother falloff
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius * 1.8, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${color}, ${opacity * 0.3})`;
-        ctx.fill();
-
-        // Bright inner core
+        // Bright core
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${color}, ${opacity})`;
+        ctx.fillStyle = "rgba(245, 245, 244, 0.75)";
         ctx.fill();
       }
 
