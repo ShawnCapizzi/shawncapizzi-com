@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Wordmark } from "./Wordmark";
 
 /**
  * Hero — homepage hero.
@@ -12,6 +13,9 @@ import Image from "next/image";
  * No backdrop / gradient frame around the image — the rounded photo
  * floats clean on the dark page. Top padding generous on mobile so
  * the image has breathing room from the transparent header bar.
+ *
+ * The wordmark plays a 36° diagonal clip-path reveal with fade-in
+ * on first mount of the session (handled inside the Wordmark component).
  */
 
 export function Hero() {
@@ -25,11 +29,10 @@ export function Hero() {
               For agency and pharma teams: senior depth across stakeholders, deadlines, decisions.
             </h1>
 
-            <Image
-              src="/images/brand/wordmark.svg"
-              alt="Capizzi"
-              width={690}
-              height={240}
+            <Wordmark
+              size="large"
+              animate
+              href={null}
               priority
               className="mt-6 md:mt-8 w-full max-w-sm lg:max-w-lg h-auto"
             />
