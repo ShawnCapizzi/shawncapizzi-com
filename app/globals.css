@@ -324,11 +324,20 @@ body::before {
 }
 
 /* ============================================================
-   GLOBAL H3 — nested subheadings get Nunito Sans semibold across
-   the site. Pairs with h2 (.subhead-editorial, Nunito Sans 400)
-   to create a typographic family. Components can still override
-   color via Tailwind classes (text-text-primary etc.).
+   GLOBAL HEADINGS — Nunito Sans across h1, h2, h3 creates a
+   unified heading family. Geist Sans handles body and UI.
+   - h1: bold (700) — page heroes, anchor moments
+   - h2: regular (400, via .subhead-editorial) — section subheads
+   - h3: semibold (600) — nested subheadings
+   Letter-spacing tightens proportionally as size increases.
+   Components can still override color via Tailwind classes.
    ============================================================ */
+
+h1 {
+  font-family: var(--font-nunito-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
 
 h3 {
   font-family: var(--font-nunito-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;

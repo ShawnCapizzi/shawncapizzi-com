@@ -31,7 +31,7 @@ const geistMono = Geist_Mono({
 const nunitoSans = Nunito_Sans({
   variable: "--font-nunito-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "600"],
+  weight: ["300", "400", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });

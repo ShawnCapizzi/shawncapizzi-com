@@ -46,7 +46,7 @@ export function Building() {
           >
             In the studio
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05]">
             What I&apos;m building
           </h2>
           <p

@@ -27,7 +27,7 @@ export default function Page() {
           >
             The Clarity Advantage
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] max-w-4xl text-white">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-4xl text-white">
             Honest design and strategy for the way we work now.
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-white/80 leading-relaxed max-w-3xl">

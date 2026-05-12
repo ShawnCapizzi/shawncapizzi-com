@@ -65,7 +65,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           </Link>
 
           <p className="eyebrow mb-6">{props.eyebrow}</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05] max-w-4xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-4xl">
             {props.title}
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">

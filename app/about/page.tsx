@@ -20,7 +20,7 @@ export default function Page() {
           <p className="eyebrow mb-6">About</p>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-7 order-2 lg:order-1">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05]">
                 I help leadership teams make clear decisions in complex digital
                 environments.
               </h1>
@@ -228,7 +228,7 @@ export default function Page() {
           >
             Forthcoming
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white leading-tight mb-6">
             Clarity Is the Advantage
           </h2>
           <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl leading-relaxed">

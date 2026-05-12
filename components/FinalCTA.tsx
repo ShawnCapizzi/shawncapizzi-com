@@ -5,7 +5,7 @@ export function FinalCTA() {
     <section className="cta-purple-block py-24 md:py-32">
       <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05]">
             Let&apos;s talk through your challenges.
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
