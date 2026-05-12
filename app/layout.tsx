@@ -3,11 +3,12 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ParticleField } from "@/components/ParticleField";
+import { BackToTop } from "@/components/BackToTop";
 
 /* ============================================================
    FONTS
    Geist Sans + Geist Mono per design system §3.
-   Exposed as CSS variables for use in globals.css @theme block.
    ============================================================ */
 
 const geistSans = Geist({
@@ -24,8 +25,6 @@ const geistMono = Geist_Mono({
 
 /* ============================================================
    METADATA
-   Site-wide defaults. Per-page metadata overrides this.
-   Voice principles enforced: senior, direct, no SaaS-marketing tone.
    ============================================================ */
 
 export const metadata: Metadata = {
@@ -89,10 +88,8 @@ export const metadata: Metadata = {
 
 /* ============================================================
    ROOT LAYOUT
-   Wraps every page. Establishes font variables and base shell.
-   Header and Footer are added in later files; for now the layout
-   is minimal so we can verify the foundation renders before
-   building the chrome.
+   ParticleField sits behind everything (z-index 0); Header,
+   main content, and Footer sit above via document flow.
    ============================================================ */
 
 export default function RootLayout({
@@ -101,12 +98,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-    <body className="bg-bg-primary text-text-primary antialiased">
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </body>
-  </html>
-);
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="bg-bg-primary text-text-primary antialiased">
+        <ParticleField />
+        <div className="relative" style={{ zIndex: 1 }}>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
+        <BackToTop />
+      </body>
+    </html>
+  );
 }

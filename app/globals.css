@@ -152,6 +152,77 @@ body {
 }
 
 /* ============================================================
+   PURPLE TOP-BAR ATMOSPHERE
+   A fixed-position purple-tinted gradient at the very top of
+   the viewport. Sits behind all content (low z-index) and
+   provides a subtle "brand glow" where the wordmark and nav live.
+   Fades to transparent so it doesn't compete with content.
+   ============================================================ */
+
+html::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(107, 92, 255, 0.18) 0%,
+    rgba(107, 92, 255, 0.08) 35%,
+    rgba(107, 92, 255, 0.02) 70%,
+    transparent 100%
+  );
+}
+
+/* ============================================================
+   LEFT EDGE RULER TEXTURE
+   Fixed-position vertical strip on the far-left edge with
+   ruler-tick marks at two scales. Periwinkle at low opacity.
+   Major ticks every 120px (longer, slightly stronger).
+   Minor ticks every 24px (shorter, fainter).
+   Doesn't move with scroll — sits there like a measuring rule.
+   ============================================================ */
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 32px;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    /* Major ticks — 28px wide tile, line every 120px */
+    linear-gradient(
+      0deg,
+      transparent 23px,
+      rgba(107, 92, 255, 0.2) 23px,
+      rgba(107, 92, 255, 0.2) 24px
+    ),
+    /* Minor ticks — 12px wide tile, line every 24px */
+    linear-gradient(
+      0deg,
+      transparent 23px,
+      rgba(107, 92, 255, 0.1) 23px,
+      rgba(107, 92, 255, 0.1) 24px
+    );
+  background-size: 28px 120px, 12px 24px;
+  background-position: 0 0, 0 0;
+  background-repeat: repeat-y, repeat-y;
+}
+
+@media (max-width: 768px) {
+  body::after {
+    width: 20px;
+    background-size: 18px 120px, 8px 24px;
+  }
+}
+
+/* ============================================================
    FILM GRAIN OVERLAY
    Subtle SVG noise across the whole viewport at ~4% opacity.
    Sits on top of all content (high z-index) but is non-interactive
