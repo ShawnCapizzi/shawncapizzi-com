@@ -1,12 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-/**
- * Wordmark — the handwritten "Capizzi" signature.
- * Per design system §5: always renders in --color-text-primary, never colored.
- * Three sizes: small (header/footer), medium (mid-page), large (hero).
- */
-
 type Size = "small" | "medium" | "large";
 
 const dimensions: Record<Size, { width: number; height: number }> = {
