@@ -14,7 +14,7 @@ const CASE_STUDIES = [
     eyebrow: "Biogen · Veeva + Salesforce · Multi-therapeutic",
     headline: "A modular sales tool system that supports a multi-brand product portfolio",
     outcome: "12 sales tools consolidated into 33 reusable components. Adoption from 65% to 92%.",
-    image: "/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-lead-brand-wireframe-to-product.png",
+    image: "/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-sales-rep-presentations.gif",
   },
   {
     slug: "enterprise-financial-services-crm",
@@ -38,6 +38,10 @@ const CASE_STUDIES = [
     image: "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-patient-support-disease-first.png",
   },
 ];
+
+function isAnimated(src: string): boolean {
+  return src.endsWith(".gif");
+}
 
 export function SelectedWork() {
   return (
@@ -67,6 +71,7 @@ export function SelectedWork() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                  unoptimized={isAnimated(cs.image)}
                 />
               </div>
               <div className="p-7 md:p-8">

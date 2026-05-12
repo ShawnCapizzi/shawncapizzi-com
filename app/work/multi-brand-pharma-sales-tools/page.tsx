@@ -13,8 +13,8 @@ export default function Page() {
       eyebrow="(Case Study)"
       title="Multi-Brand Pharma Sales Tools System"
       subtitle="A modular sales tools framework consolidating 12 fragmented tools across a multi-brand neurological portfolio."
-      heroImage="/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-lead-brand-wireframe-to-product.png"
-      heroImageAlt="Lead MS brand homepage wireframe alongside the finished product"
+      heroImage="/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-sales-rep-presentations.gif"
+      heroImageAlt="Sales Rep Presentations tool — therapeutic-area navigation across Multiple Sclerosis, Spinal Muscular Atrophy, and additional indications"
       metadata={[
         { label: "ENGAGEMENT", value: "Lead Product Designer, multi-brand sales tools" },
         { label: "YEAR", value: "2020–2021" },

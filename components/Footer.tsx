@@ -7,6 +7,7 @@ const NAV = [
   { href: "/engagements", label: "Engagements" },
   { href: "/thinking", label: "Thinking" },
   { href: "/about", label: "About" },
+  { href: "/faq", label: "FAQ" },
   { href: "/clarity-advantage", label: "Clarity Advantage" },
 ];
 

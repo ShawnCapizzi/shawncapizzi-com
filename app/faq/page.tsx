@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 
 const CAL_URL = "https://cal.com/capizzi/15min";
 
+// Manuscript v2.2 hard cap: 8 questions. The 4 operational/conversion questions
+// (How engagements start, agency partners, FT availability, travel) live on
+// /engagements as the Conversion FAQ. This page is the discovery-level surface,
+// wrapped in FAQPage JSON-LD for AI search citation.
 const FAQS = [
   {
     q: "What is AI UX, and how is it different from traditional UX design?",
@@ -38,23 +41,21 @@ const FAQS = [
     q: "What kind of outcomes have your clients seen?",
     a: "$270M+ in tracked revenue impact across pharma, fintech, and enterprise engagements. Specific wins include a D&AD Pencil-recognized equity-focused cancer care platform, multi-brand digital transformation across 15+ therapeutic brands ($3.5M+ documented investment), and $1.5M+ in annual ROI from an enterprise financial services CRM transformation. Outcomes vary by engagement scope — the case studies on this site walk through specifics.",
   },
-  {
-    q: "How do engagements typically start?",
-    a: "Every engagement starts with a free 30-minute Strategy Call. Virtual. We talk through what's stuck and what success looks like. No pitch. If there's not a fit, I'll tell you and try to point you to possible solutions or partners. If the strategy call goes well, a longer scoping conversation with the relevant stakeholders to understand scope, timing, and constraints — and then a Statement of Work. Most engagements move from first call to signed SOW in 2–3 weeks.",
-  },
-  {
-    q: "Do you work with agency partners or only direct clients?",
-    a: "Both. I work directly with brands and embed as senior experience leadership inside agency engagements when the client is regulated, enterprise, or AI-heavy and the agency team needs a senior voice in the room. The structure depends on the work — what matters is the right level of accountability for the outcome.",
-  },
-  {
-    q: "Are you available for full-time roles, or only consulting engagements?",
-    a: "Currently leading UX strategy at Razorfish (Publicis) on Pfizer brands. Open to senior Director, VP, or Head of Design roles for the right mandate, and to selected embedded and advisory engagements in parallel. The 30-minute Strategy Call is also the right starting point if you're trying to figure out which structure makes sense for your team.",
-  },
-  {
-    q: "Do you travel for workshops or onsite work?",
-    a: "Yes. Virtual delivery is included in all engagements. Onsite delivery bills travel at cost. Workshops, executive presentations, and stakeholder alignment sessions often benefit from being in the room — I'm available for that when it's the right call.",
-  },
 ];
+
+// FAQPage JSON-LD per schema.org — written to be lifted by AI search engines.
+const FAQ_JSONLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
 
 export default function Page() {
   const [allOpen, setAllOpen] = useState(false);
@@ -68,7 +69,7 @@ export default function Page() {
     });
   };
 
-  // Sync state if user toggles individual items so the global button stays accurate
+  // Sync the global toggle if user clicks individual items.
   useEffect(() => {
     const checkAllOpen = () => {
       const allAreOpen = detailsRefs.current.every((el) => el?.open);
@@ -89,6 +90,14 @@ export default function Page() {
 
   return (
     <article>
+      {/* FAQPage JSON-LD — AI-search citation surface */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(FAQ_JSONLD),
+        }}
+      />
+
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">

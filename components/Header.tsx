@@ -13,6 +13,7 @@ const NAV_LINKS = [
 
 const SECONDARY_LINKS = [
   { href: "/clarity-advantage", label: "Clarity Advantage" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ] as const;
 
