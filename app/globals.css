@@ -176,34 +176,37 @@ html::before {
 /* ============================================================
    LEFT EDGE CHRONOGRAPH MARKERS
    Thin hairline tick marks on the far-left edge.
-   Unlike the previous ruler, these scroll WITH the page —
-   not fixed. Reads like the minute markers on a chronograph
-   watch face. Major ticks every 100px (slightly stronger),
-   minor ticks every 20px (very subtle, hairline).
-   Implemented via a fixed-width column inside the body's
-   normal flow background — repeats vertically as content grows.
+   Scrolls WITH the page. Color opacity controlled by
+   --chrono-fade CSS variable (set by ScrollFadeController).
+   Major ticks every 100px (longer/stronger), minor ticks
+   every 20px (very subtle hairline).
+   v1.3 tuning: 15% longer ticks (14→16, 7→8 desktop).
    ============================================================ */
+
+:root {
+  --chrono-fade: 1;
+}
 
 body {
   background-image:
-    /* Major ticks — 14px wide tile, hairline every 100px */
+    /* Major ticks — 16px wide tile (was 14, +15%), hairline every 100px */
     linear-gradient(
       0deg,
       transparent calc(100% - 1px),
-      rgba(167, 152, 255, 0.32) calc(100% - 1px),
-      rgba(167, 152, 255, 0.32) 100%
+      rgba(167, 152, 255, calc(0.32 * var(--chrono-fade, 1))) calc(100% - 1px),
+      rgba(167, 152, 255, calc(0.32 * var(--chrono-fade, 1))) 100%
     ),
-    /* Minor ticks — 7px wide tile, hairline every 20px */
+    /* Minor ticks — 8px wide tile (was 7, +15%), hairline every 20px */
     linear-gradient(
       0deg,
       transparent calc(100% - 1px),
-      rgba(167, 152, 255, 0.16) calc(100% - 1px),
-      rgba(167, 152, 255, 0.16) 100%
+      rgba(167, 152, 255, calc(0.16 * var(--chrono-fade, 1))) calc(100% - 1px),
+      rgba(167, 152, 255, calc(0.16 * var(--chrono-fade, 1))) 100%
     ),
     /* Existing body radial gradients (preserved) */
     radial-gradient(ellipse 1400px 900px at 85% -10%, rgba(79, 70, 229, 0.07) 0%, transparent 55%),
     radial-gradient(ellipse 1100px 700px at 10% 40%, rgba(107, 92, 255, 0.04) 0%, transparent 60%);
-  background-size: 14px 100px, 7px 20px, 100% 100%, 100% 100%;
+  background-size: 16px 100px, 8px 20px, 100% 100%, 100% 100%;
   background-position: 0 0, 0 0, 0 0, 0 0;
   background-repeat: repeat-y, repeat-y, no-repeat, no-repeat;
   background-attachment: scroll, scroll, fixed, fixed;
@@ -211,7 +214,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    background-size: 10px 100px, 5px 20px, 100% 100%, 100% 100%;
+    background-size: 12px 100px, 6px 20px, 100% 100%, 100% 100%;
   }
 }
 
