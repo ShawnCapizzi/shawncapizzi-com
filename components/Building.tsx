@@ -33,7 +33,10 @@ export function Building() {
   return (
     <section
       className="relative py-24 md:py-32 mt-24 md:mt-32"
-      style={{ backgroundColor: "#6B5CFF" }}
+      style={{
+        background:
+          "radial-gradient(ellipse 1400px 900px at 75% 10%, #7867FF 0%, #6B5CFF 35%, #5A4DE8 100%)",
+      }}
     >
       <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12 text-text-inverse">
         <div className="max-w-3xl">

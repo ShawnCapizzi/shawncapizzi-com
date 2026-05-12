@@ -100,6 +100,15 @@
   }
 }
 
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 /* ============================================================
    BASE STYLES
    ============================================================ */
@@ -118,6 +127,10 @@ body {
   font-size: var(--text-base);
   line-height: 1.65;
   background-color: var(--color-bg-primary);
+  background-image:
+    radial-gradient(ellipse 1400px 900px at 85% -10%, rgba(79, 70, 229, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 1100px 700px at 10% 40%, rgba(107, 92, 255, 0.04) 0%, transparent 60%);
+  background-attachment: fixed;
   color: var(--color-text-primary);
   min-height: 100vh;
 }
@@ -125,6 +138,27 @@ body {
 ::selection {
   background-color: var(--color-brand-purple);
   color: var(--color-text-inverse);
+}
+
+/* ============================================================
+   FILM GRAIN OVERLAY
+   Subtle SVG noise across the whole viewport at ~4% opacity.
+   Sits on top of all content (high z-index) but is non-interactive
+   (pointer-events: none).
+   Per design system §5: tactile texture, used sparingly. This is
+   the global atmospheric layer. Section-specific texture moments
+   can be added separately when they earn their place.
+   ============================================================ */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch' seed='5'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.05;
+  mix-blend-mode: overlay;
 }
 
 /* ============================================================
@@ -200,5 +234,73 @@ body {
     rgba(107, 92, 255, 0.20) 30%,
     rgba(232, 121, 249, 0.10) 60%,
     transparent 100%
+  );
+}
+
+/* ============================================================
+   MARQUEE
+   Continuous horizontal scroll for the trusted-by logo strip.
+   Per design system §5 + manuscript line 45.
+   Two copies of the logo list inside, animated 50% so seamless loop.
+   ============================================================ */
+
+.marquee-mask {
+  /* Subtle fade at left and right edges so logos don't clip abruptly */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
+  );
+}
+
+.marquee-track {
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ============================================================
+   LOGO MONOCHROME TREATMENT
+   Per design system §6: logos appear as monochrome, never in their
+   original brand colors. Implementation note: source .avif files have
+   varying backgrounds; this is the best approximation until proper
+   white SVGs are produced.
+   ============================================================ */
+
+.logo-mono {
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 200ms ease-out;
+}
+
+.logo-mono:hover {
+  opacity: 1;
+}
+
+/* ============================================================
+   CARD SURFACE GRADIENT
+   Subtle top-down light gradient applied to every elevated card.
+   Adds skeuomorphic "light from above" lift without obvious gradient.
+   ~2.5% white overlay at top, fading to transparent.
+   Per design direction: "subtle but modern."
+   ============================================================ */
+
+.bg-bg-elevated {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.028) 0%,
+    rgba(255, 255, 255, 0) 50%
   );
 }
