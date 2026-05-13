@@ -98,7 +98,7 @@ export default function Page() {
       related={[
         {
           slug: "pharma-design-systems",
-          eyebrow: "Pfizer · Multi-Brand · Regulated Industry",
+          eyebrow: "Multi-Brand · 3x Design Systems · Governance",
           title: "Building digital governance across 15+ therapeutic brands",
           description:
             "$3.5M+ in digital transformation. Industry-first mobile wallet integration for patient medication information.",

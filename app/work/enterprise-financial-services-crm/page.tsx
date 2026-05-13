@@ -88,7 +88,7 @@ export default function Page() {
       related={[
         {
           slug: "multi-brand-pharma-sales-tools",
-          eyebrow: "Biogen · Veeva + Salesforce",
+          eyebrow: "Multi-Brand Design System · Veeva + Salesforce",
           title: "A modular sales design system that supports a multi-brand product portfolio",
           description:
             "12 sales tools consolidated into 33 reusable components. Adoption from 65% to 92%.",

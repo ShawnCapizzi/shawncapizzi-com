@@ -35,10 +35,6 @@ export default function Page() {
       pullQuote="This is one of the few times where the metrics actually could convert to lives saved. Before this, the support was email and Excel documents distributed by hand. After, there was a live dashboard, real tracking, refinement based on coach usage data. It's not many times in your life you get to work with such a brilliant team on such an important topic."
       midImages={[
         {
-          src: "/images/case-studies/04-cancer-equality-app/05-bc-navi-app-coaching-flow.gif",
-          alt: "BC Navi app — Personal Coach screen pairing patients with trained Chrysalis Coaches, with breast cancer education modules below",
-        },
-        {
           src: "/images/case-studies/04-cancer-equality-app/02-app-marketing-site-laptop.jpeg",
           alt: "App marketing site rendered on laptop",
         },
@@ -97,7 +93,7 @@ export default function Page() {
       related={[
         {
           slug: "pharma-design-systems",
-          eyebrow: "Pfizer · Multi-Brand · Regulated Industry",
+          eyebrow: "Multi-Brand · 3x Design Systems · Governance",
           title: "Building digital governance across 15+ therapeutic brands",
           description:
             "$3.5M+ in digital transformation. Industry-first mobile wallet integration for patient medication information.",

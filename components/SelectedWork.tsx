@@ -4,7 +4,7 @@ import Link from "next/link";
 const CASE_STUDIES = [
   {
     slug: "pharma-design-systems",
-    eyebrow: "Pfizer · Multi-brand · Regulated Industry",
+    eyebrow: "Multi-Brand · 3x Design Systems · Governance",
     headline: "Building digital governance across 15+ therapeutic brands",
     outcome: "$3.5M+ in digital transformation. Industry-first mobile wallet integration for patient medication information.",
     image: "/images/hero/consumer-care-hub-hero-balanced.gif",
@@ -25,7 +25,7 @@ const CASE_STUDIES = [
   },
   {
     slug: "multi-brand-pharma-sales-tools",
-    eyebrow: "Biogen · Veeva + Salesforce · Multi-therapeutic",
+    eyebrow: "Multi-Brand Design System · Veeva + Salesforce",
     headline: "A modular sales design system that supports a multi-brand product portfolio",
     outcome: "12 sales tools consolidated into 33 reusable components. Adoption from 65% to 92%.",
     image: "/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-lead-brand-wireframe-to-product.png",
