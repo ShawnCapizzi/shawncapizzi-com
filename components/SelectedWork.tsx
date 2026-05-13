@@ -10,13 +10,6 @@ const CASE_STUDIES = [
     image: "/images/hero/consumer-care-hub-hero-balanced.gif",
   },
   {
-    slug: "multi-brand-pharma-sales-tools",
-    eyebrow: "Biogen · Veeva + Salesforce · Multi-therapeutic",
-    headline: "A modular sales tool system that supports a multi-brand product portfolio",
-    outcome: "12 sales tools consolidated into 33 reusable components. Adoption from 65% to 92%.",
-    image: "/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-sales-rep-presentations.gif",
-  },
-  {
     slug: "enterprise-financial-services-crm",
     eyebrow: "Bloomberg · Financial services · Enterprise CRM",
     headline: "Redesigning rep workflows in a terminal-driven CRM environment",
@@ -31,17 +24,20 @@ const CASE_STUDIES = [
     image: "/images/case-studies/04-cancer-equality-app/01-hero-erase-the-line-campaign-poster.jpeg",
   },
   {
+    slug: "multi-brand-pharma-sales-tools",
+    eyebrow: "Biogen · Veeva + Salesforce · Multi-therapeutic",
+    headline: "A modular sales tool system that supports a multi-brand product portfolio",
+    outcome: "12 sales tools consolidated into 33 reusable components. Adoption from 65% to 92%.",
+    image: "/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-lead-brand-wireframe-to-product.png",
+  },
+  {
     slug: "ai-native-product-design-lab",
     eyebrow: "AI integration · Healthcare prototyping · Vendor-agnostic",
     headline: "How I use AI to accelerate research, design, prototype, and delivery",
     outcome: "Built on years of bringing teams together. Working prototypes, deployed Custom GPTs, and a contrarian thesis: AI is the boring work most companies haven't done yet.",
-    image: "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-patient-support-demo.gif",
+    image: "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-patient-support-disease-first.png",
   },
 ];
-
-function isAnimated(src: string): boolean {
-  return src.endsWith(".gif");
-}
 
 export function SelectedWork() {
   return (
@@ -71,7 +67,6 @@ export function SelectedWork() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
-                  unoptimized={isAnimated(cs.image)}
                 />
               </div>
               <div className="p-7 md:p-8">
