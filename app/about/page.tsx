@@ -14,6 +14,49 @@ const CAL_URL = "https://cal.com/capizzi/15min";
 export default function Page() {
   return (
     <article>
+      {/* Rim-shimmer CSS — scoped to .capizzi-rim-card class.
+          Color matches nav shimmer (brand-blue #4F46E5). Opacity dims
+          across three passes (0.95 → 0.55 → 0.25 → 0) mirroring the
+          nav shimmer's three-pass falloff. */}
+      <style>{`
+        @keyframes capizzi-rim-shimmer {
+          0%   { transform: rotate(0deg);    opacity: 0.95; }
+          33%  { transform: rotate(360deg);  opacity: 0.55; }
+          66%  { transform: rotate(720deg);  opacity: 0.25; }
+          95%  { transform: rotate(1080deg); opacity: 0.08; }
+          100% { transform: rotate(1080deg); opacity: 0; }
+        }
+        .capizzi-rim-card { position: relative; }
+        .capizzi-rim-card::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border-radius: inherit;
+          padding: 2px;
+          background: conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            transparent 270deg,
+            rgba(79, 70, 229, 0.55) 300deg,
+            rgba(79, 70, 229, 1) 335deg,
+            rgba(79, 70, 229, 0.55) 355deg,
+            transparent 360deg
+          );
+          -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+                  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          -webkit-mask-composite: xor;
+                  mask-composite: exclude;
+          animation: capizzi-rim-shimmer 9s linear 1 forwards;
+          pointer-events: none;
+          z-index: 2;
+        }
+        .capizzi-rim-card.delay-1::before { animation-delay: 0.5s; }
+        .capizzi-rim-card.delay-2::before { animation-delay: 1.0s; }
+        @media (prefers-reduced-motion: reduce) {
+          .capizzi-rim-card::before { animation: none; opacity: 0; }
+        }
+      `}</style>
+
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-20">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
@@ -41,50 +84,54 @@ export default function Page() {
               </p>
             </div>
 
-            {/* Fanned photo stack */}
+            {/* Fanned photo stack — left-anchored, fanning right */}
             <div className="lg:col-span-5 order-1 lg:order-2">
               <div
-                className="group relative mx-auto w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] aspect-[4/5]"
+                className="relative mx-auto"
+                style={{ width: "min(100%, 280px)", aspectRatio: "1 / 1.15" }}
                 aria-label="Photos of Shawn Capizzi"
               >
-                {/* Left card — Manny Awards with colleagues */}
-                <div className="absolute inset-0 transition-transform duration-500 ease-out -rotate-[7deg] -translate-x-[10%] translate-y-[3%] group-hover:-rotate-[12deg] group-hover:-translate-x-[16%] group-hover:translate-y-[5%]">
-                  <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised">
-                    <Image
-                      src="/images/about/manny-awards.jpg"
-                      alt="At the Manny Awards with industry colleagues"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 80vw, 400px"
-                    />
-                  </div>
+                {/* Back card — Manny Awards (rotated most, z-10) */}
+                <div
+                  className="absolute w-[70%] aspect-[4/5] rounded-2xl overflow-hidden border border-border-default shadow-lg bg-bg-raised capizzi-rim-card delay-2"
+                  style={{ left: "24%", top: "14%", transform: "rotate(14deg)", zIndex: 10 }}
+                >
+                  <Image
+                    src="/images/about/manny-awards.jpg"
+                    alt="At the Manny Awards with industry colleagues"
+                    fill
+                    className="object-cover"
+                    sizes="200px"
+                  />
                 </div>
 
-                {/* Right card — Ethyca industry event */}
-                <div className="absolute inset-0 transition-transform duration-500 ease-out rotate-[7deg] translate-x-[10%] translate-y-[3%] group-hover:rotate-[12deg] group-hover:translate-x-[16%] group-hover:translate-y-[5%]">
-                  <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised">
-                    <Image
-                      src="/images/about/ethyca-event.jpg"
-                      alt="At an industry event"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 80vw, 400px"
-                    />
-                  </div>
+                {/* Middle card — Ethyca event (slight rotation, z-20) */}
+                <div
+                  className="absolute w-[70%] aspect-[4/5] rounded-2xl overflow-hidden border border-border-default shadow-lg bg-bg-raised capizzi-rim-card delay-1"
+                  style={{ left: "12%", top: "7%", transform: "rotate(7deg)", zIndex: 20 }}
+                >
+                  <Image
+                    src="/images/about/ethyca-event.jpg"
+                    alt="At an industry event"
+                    fill
+                    className="object-cover"
+                    sizes="200px"
+                  />
                 </div>
 
-                {/* Center card — primary headshot (top of stack) */}
-                <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:-translate-y-[2%]">
-                  <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border-default shadow-2xl bg-bg-raised">
-                    <Image
-                      src="/images/brand/headshot-2026.png"
-                      alt="Shawn Capizzi"
-                      fill
-                      priority
-                      className="object-cover object-center"
-                      sizes="(max-width: 1024px) 80vw, 400px"
-                    />
-                  </div>
+                {/* Front card — primary headshot (no rotation, z-30) */}
+                <div
+                  className="absolute w-[70%] aspect-[4/5] rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card"
+                  style={{ left: "0%", top: "0%", zIndex: 30 }}
+                >
+                  <Image
+                    src="/images/brand/headshot-2026.png"
+                    alt="Shawn Capizzi"
+                    fill
+                    priority
+                    className="object-cover object-center"
+                    sizes="200px"
+                  />
                 </div>
               </div>
             </div>
@@ -259,10 +306,7 @@ export default function Page() {
         }}
       >
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p
-            className="eyebrow mb-4"
-            style={{ color: "rgba(255, 255, 255, 0.7)" }}
-          >
+          <p className="eyebrow mb-4" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
             Forthcoming
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white leading-tight mb-6">
