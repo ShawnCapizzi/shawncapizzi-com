@@ -2,19 +2,19 @@ import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Multi-Brand Pharma Sales Tools System",
+  title: "Multi-Brand Sales Tool Design System",
   description:
-    "A modular sales tools framework consolidating 12 fragmented tools across a multi-brand neurological portfolio. 33 reusable components. Adoption from 65% to 92%.",
+    "A modular sales tool design system consolidating 12 fragmented tools across a multi-brand neurological portfolio. 33 reusable components. Adoption from 65% to 92%.",
 };
 
 export default function Page() {
   return (
     <CaseStudyLayout
       eyebrow="(Case Study)"
-      title="Multi-Brand Pharma Sales Tools System"
-      subtitle="A modular sales tools framework consolidating 12 fragmented tools across a multi-brand neurological portfolio."
-      heroImage="/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-sales-rep-presentations.gif"
-      heroImageAlt="Sales Rep Presentations tool — therapeutic-area navigation across Multiple Sclerosis, Spinal Muscular Atrophy, and additional indications"
+      title="Multi-Brand Sales Tool Design System"
+      subtitle="A modular sales tool design system consolidating 12 fragmented tools across a multi-brand neurological portfolio."
+      heroImage="/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-lead-brand-wireframe-to-product.png"
+      heroImageAlt="Lead MS brand homepage wireframe alongside the finished product"
       metadata={[
         { label: "ENGAGEMENT", value: "Lead Product Designer, multi-brand sales tools" },
         { label: "YEAR", value: "2020–2021" },
@@ -28,8 +28,8 @@ export default function Page() {
       ]}
       approach={[
         "I came onto the engagement at the pitch stage — helping define the opportunity, prototype the proposed system, and ultimately win the business. Once the work was won, I partnered with brand managers internally to map components to each brand's particular content needs, and with development teams to ensure templates and design system rules would scale across the current portfolio and through future product indication expansion.",
-        "The result was a modular enterprise framework. Thirty-three reusable components. Unified navigation structure. Standardized taxonomy. Flexible content architecture that supported both 45-second elevator pitches and six-minute deeper conversations. Salesforce-integrated interaction tracking. Embedded resource-sharing pathways for PDFs, video, and rep-to-HCP follow-ups. Built-in field notes for pre-call planning and post-call follow-up.",
-        "Brand teams could still express campaign identity. But inside a governed system. The result wasn't uniformity. It was structured flexibility.",
+        "The result was a modular enterprise design system. Thirty-three reusable components. Unified navigation structure. Standardized taxonomy. Flexible content architecture that supported both 45-second elevator pitches and six-minute deeper conversations. Salesforce-integrated interaction tracking. Embedded resource-sharing pathways for PDFs, video, and rep-to-HCP follow-ups. Built-in field notes for pre-call planning and post-call follow-up.",
+        "Brand teams could still express campaign identity. But inside a governed design system. The result wasn't uniformity. It was structured flexibility.",
         "The harder work was organizational. Brand managers had to give up some autonomy to gain shared infrastructure. Regulatory teams had to trust pre-approved components. Development teams had to commit to the framework instead of building bespoke solutions on every brief. None of that happens because the system is well-designed. It happens because the governance is.",
       ]}
       pullQuote="Designing for an audience that might have 45 seconds versus six minutes versus sit down for a cup of coffee, 12 minutes — you really have to be agile. The consistency made their job easier. The field notes feature let them pick up where they left off and know what to send to the office post-call."
@@ -92,7 +92,7 @@ export default function Page() {
       ]}
       closer={[
         "Most enterprise system failures aren't design failures. They're governance failures. The components were never the hard part. The hard part was getting brand teams, regulatory teams, and development teams to agree on the cost of fragmentation and the value of doing the work together.",
-        "The system was built once. It serves many. That's the difference between design that scales and design that fragments.",
+        "The design system was built once. It serves many. That's the difference between design that scales and design that fragments.",
       ]}
       ctaHeadline="Working through similar fragmentation?"
       related={[
