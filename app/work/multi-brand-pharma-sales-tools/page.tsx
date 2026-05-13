@@ -2,21 +2,21 @@ import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Multi-Brand Sales Tool Design System",
+  title: "Multi-Brand Sales Design System",
   description:
-    "A modular sales tool design system consolidating 12 fragmented tools across a multi-brand neurological portfolio. 33 reusable components. Adoption from 65% to 92%.",
+    "A modular sales design system consolidating 12 fragmented tools across a multi-brand neurological portfolio. 33 reusable components. Adoption from 65% to 92%.",
 };
 
 export default function Page() {
   return (
     <CaseStudyLayout
       eyebrow="(Case Study)"
-      title="Multi-Brand Sales Tool Design System"
-      subtitle="A modular sales tool design system consolidating 12 fragmented tools across a multi-brand neurological portfolio."
+      title="Multi-Brand Sales Design System"
+      subtitle="A modular sales design system consolidating 12 fragmented tools across a multi-brand neurological portfolio."
       heroImage="/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-lead-brand-wireframe-to-product.png"
       heroImageAlt="Lead MS brand homepage wireframe alongside the finished product"
       metadata={[
-        { label: "ENGAGEMENT", value: "Lead Product Designer, multi-brand sales tools" },
+        { label: "ENGAGEMENT", value: "Lead Product Designer, multi-brand sales design system" },
         { label: "YEAR", value: "2020–2021" },
         { label: "TIMELINE", value: "18 months" },
         { label: "PLATFORM", value: "Veeva + Salesforce" },

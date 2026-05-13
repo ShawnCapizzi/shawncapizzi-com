@@ -41,7 +41,7 @@ const CASE_STUDIES = [
     slug: "multi-brand-pharma-sales-tools",
     eyebrow: "Biogen · Veeva + Salesforce · Multi-Therapeutic",
     title:
-      "A modular sales tool system that supports a multi-brand product portfolio",
+      "A modular sales design system that supports a multi-brand product portfolio",
     description:
       "12 sales tools consolidated into 33 reusable components. Adoption from 65% to 92%. 40% reduction in search time during HCP conversations.",
     image:

@@ -40,10 +40,6 @@ export default function Page() {
           alt: "Typographic scale documentation for the design system",
         },
         {
-          src: "/images/case-studies/01-pharma-design-systems/03-pfizer-eczema-brand-deployment.gif",
-          alt: "Brand deployment built on the design system — patient-facing eczema treatment site with branded eligibility CTA and regulatory disclosure footer",
-        },
-        {
           src: "/images/case-studies/01-pharma-design-systems/04-modular-step-component.png",
           alt: "Modular step component module documentation",
         },
@@ -100,7 +96,7 @@ export default function Page() {
           slug: "multi-brand-pharma-sales-tools",
           eyebrow: "Biogen · Veeva + Salesforce",
           title:
-            "A modular sales tool system that supports a multi-brand product portfolio",
+            "A modular sales design system that supports a multi-brand product portfolio",
           description:
             "12 sales tools consolidated into 33 reusable components. Adoption from 65% to 92%.",
           image:
