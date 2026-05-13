@@ -18,7 +18,8 @@ export default function Page() {
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-20">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-6">About</p>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Text column */}
             <div className="lg:col-span-7 order-2 lg:order-1">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05]">
                 I help leadership teams make clear decisions in complex digital
@@ -39,16 +40,52 @@ export default function Page() {
                 deadlines, and decisions.
               </p>
             </div>
+
+            {/* Fanned photo stack */}
             <div className="lg:col-span-5 order-1 lg:order-2">
-              <div className="relative aspect-[4/5] max-w-[80%] mx-auto rounded-2xl overflow-hidden border border-border-default">
-                <Image
-                  src="/images/brand/headshot-2026.png"
-                  alt="Shawn Capizzi"
-                  fill
-                  priority
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 65vw, 32vw"
-                />
+              <div
+                className="group relative mx-auto w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] aspect-[4/5]"
+                aria-label="Photos of Shawn Capizzi"
+              >
+                {/* Left card — Manny Awards with colleagues */}
+                <div className="absolute inset-0 transition-transform duration-500 ease-out -rotate-[7deg] -translate-x-[10%] translate-y-[3%] group-hover:-rotate-[12deg] group-hover:-translate-x-[16%] group-hover:translate-y-[5%]">
+                  <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised">
+                    <Image
+                      src="/images/about/manny-awards.jpg"
+                      alt="At the Manny Awards with industry colleagues"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 80vw, 400px"
+                    />
+                  </div>
+                </div>
+
+                {/* Right card — Ethyca industry event */}
+                <div className="absolute inset-0 transition-transform duration-500 ease-out rotate-[7deg] translate-x-[10%] translate-y-[3%] group-hover:rotate-[12deg] group-hover:translate-x-[16%] group-hover:translate-y-[5%]">
+                  <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised">
+                    <Image
+                      src="/images/about/ethyca-event.jpg"
+                      alt="At an industry event"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 80vw, 400px"
+                    />
+                  </div>
+                </div>
+
+                {/* Center card — primary headshot (top of stack) */}
+                <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:-translate-y-[2%]">
+                  <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border-default shadow-2xl bg-bg-raised">
+                    <Image
+                      src="/images/brand/headshot-2026.png"
+                      alt="Shawn Capizzi"
+                      fill
+                      priority
+                      className="object-cover object-center"
+                      sizes="(max-width: 1024px) 80vw, 400px"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -163,7 +200,7 @@ export default function Page() {
                 D&amp;AD Pencil 2022 — Future Impact Initiative
               </p>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-                Cancer Equality App · The Chrysalis Initiative.{" "}
+                For the Cancer Equality App with The Chrysalis Initiative.{" "}
                 <a
                   href="https://www.dandad.org/annual/2022/entry/professional/235946"
                   target="_blank"
