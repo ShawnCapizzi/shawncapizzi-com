@@ -20,7 +20,7 @@ import { Wordmark } from "./Wordmark";
 
 export function Hero() {
   return (
-    <section className="relative pt-24 md:pt-28 lg:pt-32 pb-8 md:pb-10 overflow-hidden">
+    <section className="relative pt-24 md:pt-28 lg:pt-32 pb-4 md:pb-10 overflow-hidden">
       <div className="relative max-w-wide mx-auto px-6 md:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left: Headline + wordmark (signature) */}
@@ -34,7 +34,7 @@ export function Hero() {
               animate
               href={null}
               priority
-              className="mt-6 md:mt-8 w-full max-w-sm lg:max-w-lg h-auto"
+              className="mt-12 md:mt-8 w-full max-w-sm lg:max-w-lg h-auto"
             />
           </div>
 
