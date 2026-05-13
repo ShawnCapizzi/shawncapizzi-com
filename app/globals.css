@@ -9,9 +9,9 @@
 
 @theme {
   /* ---- BACKGROUNDS ---- */
-  --color-bg-primary: #001933;
-  --color-bg-elevated: #04243F;
-  --color-bg-raised: #0A2E4F;
+  --color-bg-primary: #000F1F;
+  --color-bg-elevated: #021626;
+  --color-bg-raised: #061C2F;
   --color-bg-inverse: #F5F5F4;
 
   /* ---- TEXT ---- */
@@ -501,7 +501,7 @@ h3 {
    ============================================================ */
 
 .card-surface {
-  background-color: #062A48;
+  background-color: #04192B;
   background-image:
     radial-gradient(
       ellipse 100% 80% at 100% 0%,
