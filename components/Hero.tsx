@@ -26,7 +26,7 @@ export function Hero() {
           {/* Left: Headline + wordmark (signature) */}
           <div className="relative z-10 lg:col-span-7 order-2 lg:order-1">
             <h1 className="headline-gleam text-2xl md:text-3xl lg:text-3xl font-bold tracking-tight leading-[1.15] max-w-[90%]">
-              For agency and pharma teams: senior depth across stakeholders, deadlines, decisions.
+              Product design and AI strategy shouldn&apos;t be a coin flip. Senior depth across stakeholders, deadlines, decisions for pharma and agency teams.
             </h1>
 
             <Wordmark

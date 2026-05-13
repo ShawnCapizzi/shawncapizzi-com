@@ -19,8 +19,7 @@ export function HeroBottom() {
       <div className="relative max-w-wide mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-2xl">
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-            I help cross-functional teams turn diverse opinions into top-tier,
-            user-first, shippable work.
+            I help cross-functional teams turn diverse opinions into clear design decisions, strong systems, and shippable work.
           </p>
 
           <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
