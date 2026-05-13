@@ -35,6 +35,10 @@ export default function Page() {
       pullQuote="This is one of the few times where the metrics actually could convert to lives saved. Before this, the support was email and Excel documents distributed by hand. After, there was a live dashboard, real tracking, refinement based on coach usage data. It's not many times in your life you get to work with such a brilliant team on such an important topic."
       midImages={[
         {
+          src: "/images/case-studies/04-cancer-equality-app/05-bc-navi-app-coaching-flow.gif",
+          alt: "BC Navi app — Personal Coach screen pairing patients with trained Chrysalis Coaches, with breast cancer education modules below",
+        },
+        {
           src: "/images/case-studies/04-cancer-equality-app/02-app-marketing-site-laptop.jpeg",
           alt: "App marketing site rendered on laptop",
         },
@@ -101,12 +105,12 @@ export default function Page() {
         },
         {
           slug: "ai-native-product-design-lab",
-          eyebrow: "AI integration · Healthcare prototyping · Vendor-agnostic",
-          title: "How I use AI to accelerate research, design, prototype, and delivery",
+          eyebrow: "Solo · AI Native Design Lab",
+          title: "Building an AI-native product design lab",
           description:
-            "Working prototypes, deployed Custom GPTs, and a vendor-agnostic AI advisory practice.",
+            "A working AI-native product design practice — UXR tools, prototype agents, healthcare-first applications.",
           image:
-            "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-patient-support-demo.gif",
+            "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-native-design-lab.png",
         },
       ]}
     />
