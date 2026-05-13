@@ -148,11 +148,14 @@ body {
 }
 
 /* ============================================================
-   PURPLE TOP-BAR ATMOSPHERE
-   A fixed-position purple-tinted gradient at the very top of
-   the viewport. Sits behind all content (low z-index) and
-   provides a subtle "brand glow" where the wordmark and nav live.
-   Fades to transparent so it doesn't compete with content.
+   TOP-BAR ATMOSPHERE
+   Three soft radial gradient "clouds" stacked across the top of
+   the viewport: purple (left), indigo (center), cool gray-blue
+   (right). Each ellipse is positioned slightly above the viewport
+   so only its diffused bottom edge is visible, blending into the
+   neighbors where they overlap.
+   Filter blur softens edges further for a dreamy atmospheric feel.
+   Sits behind content (z-index 1, pointer-events none).
    ============================================================ */
 
 html::before {
@@ -161,16 +164,32 @@ html::before {
   top: 0;
   left: 0;
   right: 0;
-  height: 200px;
+  height: 260px;
   pointer-events: none;
   z-index: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(79, 70, 229, 0.26) 0%,
-    rgba(79, 70, 229, 0.12) 35%,
-    rgba(79, 70, 229, 0.04) 70%,
-    transparent 100%
-  );
+  background:
+    /* Left — soft brand purple */
+    radial-gradient(
+      ellipse 800px 360px at 18% -15%,
+      rgba(107, 92, 255, 0.32) 0%,
+      rgba(107, 92, 255, 0.12) 45%,
+      transparent 80%
+    ),
+    /* Center — indigo */
+    radial-gradient(
+      ellipse 900px 400px at 50% -25%,
+      rgba(79, 70, 229, 0.28) 0%,
+      rgba(79, 70, 229, 0.10) 50%,
+      transparent 80%
+    ),
+    /* Right — cool neutral gray-blue */
+    radial-gradient(
+      ellipse 700px 340px at 88% -20%,
+      rgba(170, 170, 200, 0.20) 0%,
+      rgba(170, 170, 200, 0.08) 45%,
+      transparent 80%
+    );
+  filter: blur(20px);
 }
 
 /* ============================================================
