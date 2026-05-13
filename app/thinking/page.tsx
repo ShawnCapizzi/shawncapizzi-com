@@ -131,6 +131,49 @@ export default function Page() {
               </p>
             </div>
           </div>
+
+          {/* Second row — two more LinkedIn posts in compact format */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 mt-10 md:mt-12">
+            {/* LinkedIn compact embed — newer */}
+            <div>
+              <p className="metadata-label mb-4">From LinkedIn</p>
+              <div
+                className="rounded-xl overflow-hidden"
+                style={{ maxWidth: "504px" }}
+              >
+                <iframe
+                  src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7308172568761421824?compact=1"
+                  height="399"
+                  width="100%"
+                  frameBorder="0"
+                  allowFullScreen
+                  title="LinkedIn post"
+                  loading="lazy"
+                  style={{ display: "block", borderRadius: "12px" }}
+                />
+              </div>
+            </div>
+
+            {/* LinkedIn compact embed — older */}
+            <div>
+              <p className="metadata-label mb-4">From LinkedIn</p>
+              <div
+                className="rounded-xl overflow-hidden"
+                style={{ maxWidth: "504px" }}
+              >
+                <iframe
+                  src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7156977534964760576?compact=1"
+                  height="399"
+                  width="100%"
+                  frameBorder="0"
+                  allowFullScreen
+                  title="LinkedIn post"
+                  loading="lazy"
+                  style={{ display: "block", borderRadius: "12px" }}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
