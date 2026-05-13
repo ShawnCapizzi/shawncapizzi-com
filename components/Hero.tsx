@@ -34,7 +34,7 @@ export function Hero() {
               animate
               href={null}
               priority
-              className="mt-12 md:mt-8 w-full max-w-sm lg:max-w-lg h-auto"
+              className="mt-12 md:mt-8 w-full max-w-[326px] lg:max-w-[435px] h-auto"
             />
           </div>
 
