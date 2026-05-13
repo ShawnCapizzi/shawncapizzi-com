@@ -40,6 +40,10 @@ export default function Page() {
           alt: "Typographic scale documentation for the design system",
         },
         {
+          src: "/images/case-studies/01-pharma-design-systems/03-pfizer-eczema-brand-deployment.gif",
+          alt: "Brand deployment built on the design system — patient-facing eczema treatment site with branded eligibility CTA and regulatory disclosure footer",
+        },
+        {
           src: "/images/case-studies/01-pharma-design-systems/04-modular-step-component.png",
           alt: "Modular step component module documentation",
         },
@@ -100,16 +104,16 @@ export default function Page() {
           description:
             "12 sales tools consolidated into 33 reusable components. Adoption from 65% to 92%.",
           image:
-            "/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-sales-rep-presentations.gif",
+            "/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-lead-brand-wireframe-to-product.png",
         },
         {
           slug: "ai-native-product-design-lab",
-          eyebrow: "AI integration · Healthcare prototyping · Vendor-agnostic",
-          title: "How I use AI to accelerate research, design, prototype, and delivery",
+          eyebrow: "Solo · AI Native Design Lab",
+          title: "Building an AI-native product design lab",
           description:
-            "Working prototypes, deployed Custom GPTs, and a vendor-agnostic AI advisory practice.",
+            "A working AI-native product design practice — UXR tools, prototype agents, healthcare-first applications.",
           image:
-            "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-patient-support-demo.gif",
+            "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-native-design-lab.png",
         },
       ]}
     />
