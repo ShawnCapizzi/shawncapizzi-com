@@ -52,8 +52,10 @@ export function Header() {
   return (
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${headerClasses}`}>
-        <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12 h-16 md:h-[72px] flex items-center justify-between">
-          <Wordmark size="small" />
+        <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12 h-20 md:h-[88px] flex items-center justify-between">
+          <div className="origin-left scale-[0.8]">
+            <Wordmark size="small" />
+          </div>
 
           <nav className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
@@ -89,7 +91,7 @@ export function Header() {
       </header>
 
       {mobileOpen ? (
-        <div className="fixed inset-0 z-40 bg-bg-elevated md:hidden pt-16 overflow-y-auto">
+        <div className="fixed inset-0 z-40 bg-bg-elevated md:hidden pt-20 overflow-y-auto">
           <nav className="px-6 py-12 flex flex-col gap-6">
             {NAV_LINKS.map((link) => (
               <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="text-3xl font-semibold tracking-tight text-text-primary">

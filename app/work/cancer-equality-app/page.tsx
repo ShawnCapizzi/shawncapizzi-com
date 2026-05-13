@@ -101,12 +101,12 @@ export default function Page() {
         },
         {
           slug: "ai-native-product-design-lab",
-          eyebrow: "Solo · AI Native Design Lab",
-          title: "Building an AI-native product design lab",
+          eyebrow: "AI integration · Healthcare prototyping · Vendor-agnostic",
+          title: "How I use AI to accelerate research, design, prototype, and delivery",
           description:
-            "A working AI-native product design practice — UXR tools, prototype agents, healthcare-first applications.",
+            "Working prototypes, deployed Custom GPTs, and a vendor-agnostic AI advisory practice.",
           image:
-            "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-native-design-lab.png",
+            "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-patient-support-demo.gif",
         },
       ]}
     />
