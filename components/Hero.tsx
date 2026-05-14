@@ -41,16 +41,16 @@ export function Hero() {
             />
           </div>
 
-          {/* Right: Headshot — clean rounded square, no backdrop */}
+          {/* Right: Headshot — edge-bleed, full column width, no rounded corners */}
           <div className="relative lg:col-span-5 order-1 lg:order-2">
-            <div className="relative aspect-square max-w-[55%] md:max-w-[65%] mx-auto">
+            <div className="relative aspect-square max-w-[90%] md:max-w-full">
               <Image
                 src="/images/brand/headshot-2026-v2.jpg"
                 alt="Shawn Capizzi"
                 fill
                 priority
-                sizes="(max-width: 1024px) 55vw, 28vw"
-                className="object-cover object-center rounded-2xl"
+                sizes="(max-width: 1024px) 90vw, 42vw"
+                className="object-cover object-center"
               />
             </div>
           </div>
