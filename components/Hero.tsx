@@ -58,7 +58,7 @@ export function Hero() {
                 fill
                 priority
                 sizes="(max-width: 640px) 70vw, (max-width: 1024px) 60vw, 36vw"
-                className="object-cover object-center"
+                className="object-cover object-center rounded-3xl"
               />
             </div>
           </div>
