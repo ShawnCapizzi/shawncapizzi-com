@@ -41,24 +41,24 @@ export function Hero() {
             />
           </div>
 
-          {/* Right: Headshot — rounded corners + subtle edge dissolve into navy */}
+          {/* Right: Headshot — knockout subject on navy + brand glow, soft edge dissolve */}
           <div className="relative lg:col-span-5 order-1 lg:order-2">
             <div
               className="relative aspect-square max-w-[70%] sm:max-w-[60%] md:max-w-[80%] lg:max-w-[85%] mx-auto"
               style={{
                 maskImage:
-                  "radial-gradient(ellipse 85% 85% at 50% 50%, #000 78%, rgba(0,0,0,0.6) 92%, transparent 100%)",
+                  "radial-gradient(ellipse 95% 95% at 50% 45%, #000 82%, rgba(0,0,0,0.5) 95%, transparent 100%)",
                 WebkitMaskImage:
-                  "radial-gradient(ellipse 85% 85% at 50% 50%, #000 78%, rgba(0,0,0,0.6) 92%, transparent 100%)",
+                  "radial-gradient(ellipse 95% 95% at 50% 45%, #000 82%, rgba(0,0,0,0.5) 95%, transparent 100%)",
               }}
             >
               <Image
-                src="/images/brand/headshot-2026-v2.jpg"
+                src="/images/brand/headshot-2026-knockout.jpg"
                 alt="Shawn Capizzi"
                 fill
                 priority
                 sizes="(max-width: 640px) 70vw, (max-width: 1024px) 60vw, 36vw"
-                className="object-cover object-center rounded-3xl"
+                className="object-cover object-center"
               />
             </div>
           </div>
