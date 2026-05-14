@@ -45,7 +45,7 @@ export function Hero() {
           <div className="relative lg:col-span-5 order-1 lg:order-2">
             <div className="relative aspect-square max-w-[55%] md:max-w-[65%] mx-auto">
               <Image
-                src="/images/brand/headshot-2026.png"
+                src="/images/brand/headshot-2026-v2.jpg"
                 alt="Shawn Capizzi"
                 fill
                 priority
