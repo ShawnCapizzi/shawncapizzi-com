@@ -41,15 +41,15 @@ export function Hero() {
             />
           </div>
 
-          {/* Right: Headshot — tightened width, rounded corners, edge dissolves into navy */}
+          {/* Right: Headshot — rounded corners + subtle edge dissolve into navy */}
           <div className="relative lg:col-span-5 order-1 lg:order-2">
             <div
-              className="relative aspect-square max-w-[80%] md:max-w-[85%] mx-auto"
+              className="relative aspect-square max-w-[70%] sm:max-w-[60%] md:max-w-[80%] lg:max-w-[85%] mx-auto"
               style={{
                 maskImage:
-                  "radial-gradient(ellipse 70% 70% at 50% 50%, #000 55%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.15) 92%, transparent 100%)",
+                  "radial-gradient(ellipse 85% 85% at 50% 50%, #000 78%, rgba(0,0,0,0.6) 92%, transparent 100%)",
                 WebkitMaskImage:
-                  "radial-gradient(ellipse 70% 70% at 50% 50%, #000 55%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.15) 92%, transparent 100%)",
+                  "radial-gradient(ellipse 85% 85% at 50% 50%, #000 78%, rgba(0,0,0,0.6) 92%, transparent 100%)",
               }}
             >
               <Image
@@ -57,7 +57,7 @@ export function Hero() {
                 alt="Shawn Capizzi"
                 fill
                 priority
-                sizes="(max-width: 1024px) 80vw, 36vw"
+                sizes="(max-width: 640px) 70vw, (max-width: 1024px) 60vw, 36vw"
                 className="object-cover object-center rounded-3xl"
               />
             </div>
