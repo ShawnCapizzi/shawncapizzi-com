@@ -60,7 +60,7 @@ export function SelectedWork() {
               href={`/work/${cs.slug}`}
               className="group relative block rounded-2xl card-surface border border-border-default hover:border-border-strong overflow-hidden transition-colors"
             >
-              <div className="relative aspect-[16/10] bg-bg-raised overflow-hidden">
+              <div className="relative aspect-[4/3] bg-bg-raised overflow-hidden">
                 <Image
                   src={cs.image}
                   alt=""
