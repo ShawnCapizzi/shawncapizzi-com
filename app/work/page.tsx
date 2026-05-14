@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const CASE_STUDIES = [
   {
     slug: "pharma-design-systems",
-    eyebrow: "Multi-Brand · 3x Design Systems · Governance",
+    eyebrow: "Pfizer · Multi-Brand · Regulated Industry",
     title: "Building digital governance across 15+ therapeutic brands",
     description:
       "$3.5M+ in digital transformation. Three enterprise design systems. Industry-first mobile wallet integration for patient medication information.",
@@ -39,7 +39,7 @@ const CASE_STUDIES = [
   },
   {
     slug: "multi-brand-pharma-sales-tools",
-    eyebrow: "Multi-Brand Design System · Veeva + Salesforce",
+    eyebrow: "Biogen · Veeva + Salesforce · Multi-Therapeutic",
     title:
       "A modular sales design system that supports a multi-brand product portfolio",
     description:
@@ -134,7 +134,7 @@ export default function Page() {
             href="https://cal.com/capizzi/15min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
+            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
           >
             Book a Strategy Call
           </a>

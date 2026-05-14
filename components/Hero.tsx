@@ -26,7 +26,7 @@ export function Hero() {
           {/* Left: Headline + wordmark (signature) */}
           <div className="relative z-10 lg:col-span-7 order-2 lg:order-1">
             <h1 className="headline-gleam text-2xl md:text-3xl lg:text-3xl font-bold tracking-tight leading-[1.15] max-w-[90%]">
-              Strategic depth in product design &amp; AI
+              Product design &amp; AI strategy that delivers clarity
               <span className="block mt-3 md:mt-4 text-lg md:text-xl lg:text-2xl font-normal text-text-secondary tracking-tight">
                 Pharma. Fintech. Agency.
               </span>

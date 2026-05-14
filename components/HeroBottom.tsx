@@ -19,15 +19,24 @@ export function HeroBottom() {
       <div className="relative max-w-wide mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-2xl">
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-            I help cross-functional teams turn diverse opinions into clear design decisions, strong systems, and shippable work.
+            Deep experience delivering results in regulated industries. Available embedded, fractional, or as senior counsel.
           </p>
+
+          <a
+            href="https://www.dandad.org/annual/2022/entry/professional/235946"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-block text-sm italic font-light text-text-tertiary hover:text-text-secondary transition-colors"
+          >
+            D&amp;AD Pencil 2022
+          </a>
 
           <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
             <a
               href={CAL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
             >
               Book a Strategy Call
             </a>

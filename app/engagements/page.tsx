@@ -81,39 +81,6 @@ const PILLARS = [
   },
 ];
 
-// Conversion FAQ — operational questions that come up after the first call.
-// Lives here per manuscript v2.2; discovery-level FAQ lives at /faq with JSON-LD.
-const CONVERSION_FAQ = [
-  {
-    q: "How do you structure engagements?",
-    a: "Engagements are scoped as retainers, fixed-scope sprints, or outcome-based bounties. Hourly is reserved for short advisory check-ins with existing clients. Most engagements start with a 30-minute fit call to determine the right model.",
-  },
-  {
-    q: "Can engagements scale up or down?",
-    a: "Yes. Retainers flex monthly with notice. Sprints and snapshots are fixed scope.",
-  },
-  {
-    q: "Do you work with agency partners?",
-    a: "Yes. I work directly with brands and embed as senior experience leadership inside agency engagements when the client is regulated, enterprise, or AI-heavy and the agency team needs a senior voice in the room.",
-  },
-  {
-    q: "How is this different from hiring a full-time VP of Design?",
-    a: "A full-time VP runs the team day-to-day and owns the org. I work alongside leadership on the specific decisions and systems where senior input changes the outcome — strategy, AI integration, regulated launches, design system inflection points. Different jobs, different rhythms, often complementary.",
-  },
-  {
-    q: "Are you available for full-time roles?",
-    a: "Currently leading UX strategy at Razorfish (Publicis) on Pfizer brands. Open to senior Director, VP, or Head of Design roles for the right mandate, and to selected embedded and advisory engagements in parallel.",
-  },
-  {
-    q: "Do you travel for workshops or onsite work?",
-    a: "Yes. Virtual delivery is included; onsite delivery bills travel at cost.",
-  },
-  {
-    q: "How do I know if we're a fit?",
-    a: "The first 30-minute call is free and structured to answer exactly that. If the work is not a fit, I'll say so and point you to someone better suited. If it is, you'll leave the call with a clear sense of scope, timeline, and what the next step looks like.",
-  },
-];
-
 export default function Page() {
   return (
     <article>
@@ -135,7 +102,7 @@ export default function Page() {
               href={CAL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
             >
               Book a Strategy Call
             </a>
@@ -371,52 +338,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CONVERSION FAQ — operational questions after the first call */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="max-w-3xl mb-12 md:mb-14">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight mb-6">
-              Frequently asked
-            </h2>
-            <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-              Operational questions that come up most often after the first
-              call. For the discovery-level questions about AI UX, the Capizzi
-              Process, and how strategic design partners differ from agencies,{" "}
-              <Link href="/faq" className="text-link hover:text-link-hover transition-colors">
-                see the FAQ
-              </Link>
-              .
-            </p>
-          </div>
-
-          <div className="max-w-3xl space-y-3 md:space-y-4">
-            {CONVERSION_FAQ.map((item, i) => (
-              <details
-                key={i}
-                className="group rounded-xl card-surface border border-border-default overflow-hidden"
-              >
-                <summary className="cursor-pointer list-none p-5 md:p-6 flex items-start justify-between gap-6 hover:bg-white/[0.02] transition-colors">
-                  <h3 className="text-base md:text-lg font-semibold text-text-primary leading-tight">
-                    {item.q}
-                  </h3>
-                  <span
-                    aria-hidden="true"
-                    className="flex-shrink-0 text-text-tertiary text-xl leading-none mt-0.5 transition-transform duration-200 group-open:rotate-45"
-                  >
-                    +
-                  </span>
-                </summary>
-                <div className="px-5 md:px-6 pb-5 md:pb-6 -mt-1">
-                  <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-                    {item.a}
-                  </p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FINAL CTA */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
@@ -430,7 +351,7 @@ export default function Page() {
             href={CAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
+            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
           >
             Book a Strategy Call
           </a>
