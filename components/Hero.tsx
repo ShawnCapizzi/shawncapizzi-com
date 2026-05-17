@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Wordmark } from "./Wordmark";
+import { PortraitHero } from "./PortraitHero";
 
 /**
  * Hero — homepage hero.
@@ -16,6 +16,11 @@ import { Wordmark } from "./Wordmark";
  *
  * The wordmark plays a 36° diagonal clip-path reveal with fade-in
  * on first mount of the session (handled inside the Wordmark component).
+ *
+ * The right-column portrait is now an interactive composition (PortraitHero):
+ * radial navy bg + lavender halo + slow-rotating orbital sphere + alpha
+ * knockout portrait. The existing radial mask still wraps it, dissolving
+ * the sphere edges into the page bg so the "floats clean" language holds.
  */
 
 export function Hero() {
@@ -41,7 +46,7 @@ export function Hero() {
             />
           </div>
 
-          {/* Right: Headshot — knockout subject on navy + brand glow, soft edge dissolve */}
+          {/* Right: Headshot — interactive composition with edge dissolve */}
           <div className="relative lg:col-span-5 order-1 lg:order-2">
             <div
               className="relative aspect-square max-w-[70%] sm:max-w-[60%] md:max-w-[80%] lg:max-w-[85%] mx-auto"
@@ -52,14 +57,7 @@ export function Hero() {
                   "radial-gradient(ellipse 95% 95% at 50% 45%, #000 82%, rgba(0,0,0,0.5) 95%, transparent 100%)",
               }}
             >
-              <Image
-                src="/images/brand/headshot-2026-knockout.jpg"
-                alt="Shawn Capizzi"
-                fill
-                priority
-                sizes="(max-width: 640px) 70vw, (max-width: 1024px) 60vw, 36vw"
-                className="object-cover object-center rounded-3xl"
-              />
+              <PortraitHero />
             </div>
           </div>
         </div>
