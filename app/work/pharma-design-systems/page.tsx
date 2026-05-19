@@ -121,59 +121,100 @@ export default function Page() {
               body:
                 "A QR-based, FDA-compliant mobile wallet card for iOS and Android, delivering co-pay and patient support information directly to patients' phones. Industry-first in pharma. The pattern wasn't possible until the system was built to support new components instead of resisting them. A system that scales is a system that can evolve.",
               media: (
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "flex-start",
-                    paddingTop: "1rem",
-                    paddingBottom: "5rem",
-                  }}
-                >
-                  {/* Desktop browser: square-on, base layer */}
-                  <BrowserFrame
-                    src="/videos/carousel-04-wallet-desktop.mp4"
-                    poster="/videos/carousel-04-wallet-desktop-poster.jpg"
-                    url="elrexfio.com/support-and-savings/mobile-wallet-card"
-                    width={460}
-                    tiltDegrees={0}
-                  />
-
-                  {/* Soft brand-purple atmospheric cloud behind the phone for separation from desktop */}
+                <div className="w-full">
+                  {/* Desktop ≥ lg: overlap composition (desktop + cloud + phone) */}
                   <div
-                    aria-hidden="true"
+                    className="hidden lg:flex"
                     style={{
-                      position: "absolute",
-                      right: "calc(50% - 320px)",
-                      bottom: "-40px",
-                      width: "300px",
-                      height: "460px",
-                      zIndex: 1,
-                      pointerEvents: "none",
-                      background:
-                        "radial-gradient(ellipse at center, rgba(107, 92, 255, 0.45) 0%, rgba(79, 70, 229, 0.25) 35%, rgba(232, 121, 249, 0.10) 65%, transparent 100%)",
-                      filter: "blur(28px)",
-                    }}
-                  />
-
-                  {/* Phone: absolutely positioned bottom-right of desktop, ~30% peeking out below */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      right: "calc(50% - 260px)",
-                      bottom: "0",
-                      zIndex: 2,
-                      pointerEvents: "none",
+                      position: "relative",
+                      width: "100%",
+                      justifyContent: "center",
+                      alignItems: "flex-start",
+                      paddingTop: "1rem",
+                      paddingBottom: "5rem",
                     }}
                   >
-                    <TiltedPhoneFrame
-                      src="/videos/carousel-04-wallet-mobile.mp4"
-                      poster="/videos/carousel-04-wallet-mobile-poster.jpg"
-                      width={198}
-                      tiltDegrees={8}
+                    {/* Desktop browser: square-on, base layer */}
+                    <BrowserFrame
+                      src="/videos/carousel-04-wallet-desktop.mp4"
+                      poster="/videos/carousel-04-wallet-desktop-poster.jpg"
+                      url="elrexfio.com/support-and-savings/mobile-wallet-card"
+                      width={460}
+                      tiltDegrees={0}
                     />
+
+                    {/* Soft brand-purple atmospheric cloud behind the phone */}
+                    <div
+                      aria-hidden="true"
+                      style={{
+                        position: "absolute",
+                        right: "calc(50% - 320px)",
+                        bottom: "-40px",
+                        width: "300px",
+                        height: "460px",
+                        zIndex: 1,
+                        pointerEvents: "none",
+                        background:
+                          "radial-gradient(ellipse at center, rgba(107, 92, 255, 0.45) 0%, rgba(79, 70, 229, 0.25) 35%, rgba(232, 121, 249, 0.10) 65%, transparent 100%)",
+                        filter: "blur(28px)",
+                      }}
+                    />
+
+                    {/* Phone: absolutely positioned bottom-right of desktop */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        right: "calc(50% - 260px)",
+                        bottom: "0",
+                        zIndex: 2,
+                        pointerEvents: "none",
+                      }}
+                    >
+                      <TiltedPhoneFrame
+                        src="/videos/carousel-04-wallet-mobile.mp4"
+                        poster="/videos/carousel-04-wallet-mobile-poster.jpg"
+                        width={198}
+                        tiltDegrees={8}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Mobile < lg: stacked, both centered */}
+                  <div className="flex lg:hidden flex-col items-center gap-6">
+                    <div className="w-full max-w-md">
+                      <BrowserFrame
+                        src="/videos/carousel-04-wallet-desktop.mp4"
+                        poster="/videos/carousel-04-wallet-desktop-poster.jpg"
+                        url="elrexfio.com/support-and-savings/mobile-wallet-card"
+                        width={400}
+                        tiltDegrees={0}
+                      />
+                    </div>
+
+                    {/* Cloud behind the centered phone for atmospheric continuity */}
+                    <div className="relative flex justify-center items-center">
+                      <div
+                        aria-hidden="true"
+                        style={{
+                          position: "absolute",
+                          width: "280px",
+                          height: "420px",
+                          zIndex: 1,
+                          pointerEvents: "none",
+                          background:
+                            "radial-gradient(ellipse at center, rgba(107, 92, 255, 0.40) 0%, rgba(79, 70, 229, 0.22) 35%, rgba(232, 121, 249, 0.10) 65%, transparent 100%)",
+                          filter: "blur(24px)",
+                        }}
+                      />
+                      <div style={{ position: "relative", zIndex: 2 }}>
+                        <TiltedPhoneFrame
+                          src="/videos/carousel-04-wallet-mobile.mp4"
+                          poster="/videos/carousel-04-wallet-mobile-poster.jpg"
+                          width={180}
+                          tiltDegrees={8}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               ),
