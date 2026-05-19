@@ -141,6 +141,23 @@ export default function Page() {
                     tiltDegrees={0}
                   />
 
+                  {/* Soft brand-purple atmospheric cloud behind the phone for separation from desktop */}
+                  <div
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      right: "calc(50% - 320px)",
+                      bottom: "-40px",
+                      width: "300px",
+                      height: "460px",
+                      zIndex: 1,
+                      pointerEvents: "none",
+                      background:
+                        "radial-gradient(ellipse at center, rgba(107, 92, 255, 0.45) 0%, rgba(79, 70, 229, 0.25) 35%, rgba(232, 121, 249, 0.10) 65%, transparent 100%)",
+                      filter: "blur(28px)",
+                    }}
+                  />
+
                   {/* Phone: absolutely positioned bottom-right of desktop, ~30% peeking out below */}
                   <div
                     style={{
