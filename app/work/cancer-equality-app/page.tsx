@@ -67,18 +67,26 @@ export default function Page() {
           </div>
 
           <div className="flex justify-center">
-            <BrowserFrame
-              src="/videos/bc-navi-coach-dashboard.mp4"
-              poster="/videos/bc-navi-coach-dashboard-poster.jpg"
-              url="bcnavi.chrysalisinitiative.org"
-              width={600}
-              fallbackAspect={1848 / 1530}
-              tiltDegrees={0}
-              theme="dark"
-              ariaLabel="BC Navi platform walkthrough: marketing site, coach pairing, patient dashboard, and education modules"
-              loop
-              autoPlay
-            />
+            <div
+              className="w-full"
+              style={{
+                maxWidth: "560px",
+                aspectRatio: "1848 / 1530",
+              }}
+            >
+              <BrowserFrame
+                src="/videos/bc-navi-coach-dashboard.mp4"
+                poster="/videos/bc-navi-coach-dashboard-poster.jpg"
+                url="Prototype, used to validate user flows"
+                width={560}
+                fallbackAspect={1848 / 1530}
+                tiltDegrees={0}
+                theme="dark"
+                ariaLabel="BC Navi platform walkthrough: marketing site, coach pairing, patient dashboard, and education modules"
+                loop
+                autoPlay
+              />
+            </div>
           </div>
         </section>
       }
