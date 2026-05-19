@@ -289,9 +289,8 @@ export default function Page() {
           alt: "Color palette and WCAG accessibility documentation",
         },
         {
-          src: "/videos/bottom-multi-brand-output.mp4",
-          poster: "/videos/bottom-multi-brand-output-poster.jpg",
-          alt: "Three branded mobile screens showing patient stories, treatment calendar, and patient-facing content — distinct brand identity expressed within the shared design system",
+          src: "/images/case-studies/01-pharma-design-systems/bottom-multi-brand-output.jpg",
+          alt: "Three branded mobile screens showing patient education video, treatment trial results content, and a companion medication tracking app — distinct brand identity expressed within the shared design system",
         },
       ]}
       closer={[
