@@ -12,6 +12,8 @@ interface MetadataItem {
 interface CaseStudyImage {
   src: string;
   alt: string;
+  /** Optional poster image, used only when src is a video (.mp4/.webm). */
+  poster?: string;
 }
 
 interface Outcome {
@@ -49,6 +51,10 @@ interface CaseStudyLayoutProps {
 
 function isAnimated(src: string): boolean {
   return src.endsWith(".gif");
+}
+
+function isVideo(src: string): boolean {
+  return src.endsWith(".mp4") || src.endsWith(".webm");
 }
 
 export function CaseStudyLayout(props: CaseStudyLayoutProps) {
@@ -179,14 +185,28 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                   key={img.src}
                   className="relative aspect-[4/3] rounded-xl overflow-hidden border border-border-default"
                 >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover"
-                    unoptimized={isAnimated(img.src)}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+                  {isVideo(img.src) ? (
+                    <video
+                      src={img.src}
+                      poster={img.poster}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="metadata"
+                      aria-label={img.alt}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  ) : (
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover"
+                      unoptimized={isAnimated(img.src)}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  )}
                 </div>
               ))}
             </div>
