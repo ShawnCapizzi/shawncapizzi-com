@@ -129,7 +129,7 @@ export function BrowserFrame({
         >
           <video
             ref={videoRef}
-            className="w-full h-full object-cover block"
+            className="w-full h-full object-contain block"
             src={src}
             poster={poster}
             autoPlay={autoPlay}

@@ -2,13 +2,12 @@ import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { CaseStudyCarousel } from "@/components/CaseStudyCarousel";
 import { BrowserFrame } from "@/components/BrowserFrame";
 import { TiltedPhoneFrame } from "@/components/TiltedPhoneFrame";
-import { FragmentationGrid } from "@/components/FragmentationGrid";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Pharma Design Systems & Multi-Brand Architecture",
   description:
-    "Building digital governance across 15+ therapeutic brands. $3.5M+ in digital transformation, three enterprise design systems, and an industry-first mobile wallet integration.",
+    "Governing 73 product brands with 3 design systems. $3.5M+ in digital transformation, three enterprise design systems serving HCP, DTC, and patient audiences, and an industry-first mobile wallet integration.",
 };
 
 export default function Page() {
@@ -16,24 +15,24 @@ export default function Page() {
     <CaseStudyLayout
       eyebrow="(Case Study)"
       title="Pharma Design Systems & Multi-Brand Architecture"
-      subtitle="Building digital governance across 15+ therapeutic brands."
+      subtitle="Governing 73 product brands with 3 design systems."
       heroImage="/images/hero/consumer-care-hub-hero-balanced.gif"
       heroImageAlt="Consumer care hub homepage — A new offer to help Americans save"
       metadata={[
         { label: "ENGAGEMENT", value: "Enterprise design system leadership" },
         { label: "YEAR", value: "2024–present" },
         { label: "SCALE", value: "$3.5M+ digital transformation" },
-        { label: "SCOPE", value: "15+ brands · DTC · HCP · patient" },
+        { label: "SCOPE", value: "73 brands · 3 systems · HCP · DTC · patient" },
       ]}
       challenge={[
-        "A major pharma organization's digital ecosystem had grown organically across more than 15 therapeutic brands. Each team had its own design language, its own information architecture, its own approach to regulatory review. The result wasn't a system. It was 15 systems pretending to be one.",
+        "A major pharma organization's digital ecosystem had grown organically across 73 product brands — branded HCP sites, branded patient sites, and unbranded therapy education resources. Each team had its own design language, its own information architecture, its own approach to regulatory review. The result wasn't a system. It was 73 systems pretending to be one.",
         "The cost was real. Operational inefficiency. Inconsistent patient and HCP experiences. Compliance risk that varied brand by brand. A speed-to-market problem in therapeutic spaces where launch timing matters in millions of dollars. Resource waste across 60+ team members running concurrent projects without shared infrastructure.",
         "The leadership team needed digital governance that could support a multi-billion dollar therapeutic portfolio without slowing the brand teams down.",
       ]}
       approach={[
         "I led the architecture and governance of three enterprise design systems, each serving a different audience and use case across the portfolio.",
         "The work happened in three layers. The first was strategic — direct partnership with CTOs and senior business strategists on multi-million dollar digital initiative planning, including ROI documentation that could be reported to the board.",
-        "The second was architectural — defining the modular component logic, taxonomy, and content frameworks that would govern brand work across the portfolio. Each brand operates inside its own sandbox, working out particular content needs and creative expression within the governance framework. The system is intentionally restrained. Working with copywriters, medical strategists, and regulatory partners, I helped brand teams build information architecture that served both the system and the scientific story.",
+        "The second was architectural — defining the modular component logic, taxonomy, and content frameworks that would govern brand work across all 73 brands. Each brand operates inside its own sandbox, working out particular content needs and creative expression within the governance framework. The system is intentionally restrained. Working with copywriters, medical strategists, and regulatory partners, I helped brand teams build information architecture that served both the system and the scientific story.",
         "The third was operational — a governance training program shared with copy, design, and media partners. The training teaches the correct way to leverage the system, the tolerance to which it can be modified, and best practices for initial setup. The goal isn't compliance enforcement. It's knowledge sharing.",
         "A specific innovation worth naming: I led the development of distribution channels for the Patient Design System, including a QR-based mobile wallet card for iOS and Android that gives patients fast access to co-pay information and medication support. It was an industry-first in pharma — only possible when the design system is built to support new patterns instead of resisting them.",
       ]}
@@ -66,35 +65,17 @@ export default function Page() {
             // ─── Slide 1 ────────────────────────────────────────────────
             {
               tag: "CONTEXT",
-              title: "15 systems pretending to be one",
+              title: "73 brands, governed by 3 design systems",
               body:
-                "A multi-billion dollar therapeutic portfolio. More than 15 brands, each grown organically with its own design language, information architecture, and approach to regulatory review. The cost wasn't visible at the executive level, but it was real — speed-to-market in spaces where weeks matter in millions, 60+ team members duplicating effort, compliance risk that varied brand by brand.",
-              media: (
-                <FragmentationGrid
-                  brandTiles={[
-                    {
-                      src: "/images/case-studies/01-pharma-design-systems/carousel-01-fragmentation-grid-brand-a.png",
-                      alt: "Neurology brand portfolio site — distinct visual language",
-                      label: "Neuroscience · Brand A",
-                    },
-                    {
-                      src: "/images/case-studies/01-pharma-design-systems/carousel-01-fragmentation-grid-brand-b.png",
-                      alt: "Neurology brand portfolio site — different visual system",
-                      label: "Neuroscience · Brand B",
-                    },
-                    {
-                      src: "/images/case-studies/01-pharma-design-systems/carousel-01-fragmentation-grid-sales-tool.png",
-                      alt: "Sales tool showing fragmented brand integration across portfolio",
-                      label: "Sales tool · Multi-brand",
-                    },
-                  ]}
-                  abstractStripLabel="+ 12 more brands · each with its own design language"
-                />
-              ),
+                "A multi-billion dollar therapeutic portfolio. 73 product brands — each with branded HCP sites, branded patient sites, and unbranded therapy education resources. Before the work: each brand grown organically with its own design language, information architecture, and approach to regulatory review. 60+ team members duplicating effort, speed-to-market measured in months when it should have been weeks, compliance risk varying brand by brand. The architectural answer: three design systems serving three audiences, with shared foundations, distinct audience logic.",
+              image:
+                "/images/case-studies/01-pharma-design-systems/carousel-01-pfizer-brand-index.png",
+              imageAlt:
+                "Pfizer brand index — the full A–Z portfolio showing 73 product brands, each with HCP, patient, and prescribing information surfaces",
               signal:
                 "I can name and frame a real enterprise problem at the right altitude for leadership.",
               anticipate:
-                '"How did you quantify the problem to leadership?" → ROI documentation reported at the board level. Speed-to-market deltas. 60+ team members duplicating effort across concurrent projects.',
+                '"How did you quantify the problem to leadership?" → ROI documentation reported at the board level. Speed-to-market deltas. 60+ team members duplicating effort across concurrent projects. The scope itself — 73 brands across three site types — was the case.',
             },
 
             // ─── Slide 2 ────────────────────────────────────────────────
@@ -108,7 +89,7 @@ export default function Page() {
                   src="/videos/carousel-02-patient-site-tour.mp4"
                   poster="/videos/carousel-02-patient-site-tour-poster.jpg"
                   url="elrexfio.com"
-                  width={620}
+                  width={560}
                   tiltDegrees={0}
                 />
               ),

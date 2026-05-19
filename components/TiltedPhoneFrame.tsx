@@ -145,7 +145,7 @@ export function TiltedPhoneFrame({
         .tpf-video {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
           display: block;
           /* Faint screen sheen — left edge slightly brighter, like glass */
           background: linear-gradient(
