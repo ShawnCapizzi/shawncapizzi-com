@@ -117,10 +117,18 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       </section>
 
       {/* ============================================================
-          THE APPROACH + optional pull quote + mid images
+          THE APPROACH + optional pull quote (section epigraph)
           ============================================================ */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          {props.pullQuote && (
+            <blockquote className="mb-12 md:mb-16 max-w-3xl border-l-2 border-brand-purple pl-6 md:pl-10 py-2">
+              <p className="text-xl md:text-2xl text-text-primary leading-relaxed italic">
+                &ldquo;{props.pullQuote}&rdquo;
+              </p>
+            </blockquote>
+          )}
+
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8 md:mb-10">
             The approach
           </h2>
@@ -129,34 +137,6 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
               <p key={i}>{para}</p>
             ))}
           </div>
-
-          {props.pullQuote && (
-            <blockquote className="mt-14 md:mt-20 max-w-3xl border-l-2 border-brand-purple pl-6 md:pl-10 py-2">
-              <p className="text-xl md:text-2xl text-text-primary leading-relaxed italic">
-                &ldquo;{props.pullQuote}&rdquo;
-              </p>
-            </blockquote>
-          )}
-
-          {props.midImages && props.midImages.length > 0 && (
-            <div className="mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {props.midImages.map((img) => (
-                <div
-                  key={img.src}
-                  className="relative aspect-[4/3] rounded-xl overflow-hidden border border-border-default"
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover"
-                    unoptimized={isAnimated(img.src)}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </section>
 
