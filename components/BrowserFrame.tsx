@@ -55,7 +55,7 @@ export function BrowserFrame({
   const chromeHeight = 38;
   const viewportHeight = width / aspect;
 
-  // Theme-aware colors — dark default tuned to Shawn's design tokens
+  // Theme-aware colors: dark default tuned to Shawn's design tokens
   const isDark = theme === "dark";
   const chromeBg = isDark ? "#061C2F" : "#F4F2EC"; // matches bg-raised / light
   const chromeBorder = isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)";

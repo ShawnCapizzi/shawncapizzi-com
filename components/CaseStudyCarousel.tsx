@@ -86,7 +86,7 @@ export function CaseStudyCarousel({
       aria-label="Process walk-through"
     >
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-        {/* ── Section header — matches other sections in CaseStudyLayout ── */}
+        {/* ── Section header: matches other sections in CaseStudyLayout ── */}
         <div className="flex items-start justify-between gap-8 flex-wrap mb-10 md:mb-14">
           <div>
             <p className="eyebrow mb-4">{eyebrow}</p>
@@ -227,7 +227,7 @@ export function CaseStudyCarousel({
                   aria-hidden="true"
                   className="w-1.5 h-1.5 rounded-full bg-brand-orange animate-pulse"
                 />
-                Private speaker notes — not for screenshare
+                Private speaker notes, not for screenshare
               </span>
               <button
                 onClick={() => setSpeakerMode(false)}
@@ -291,7 +291,7 @@ export function CaseStudyCarousel({
             {(slide.signal || slide.anticipate) && (
               <>
                 <p className="font-mono text-xs uppercase tracking-widest text-link mb-4">
-                  Current slide — talking points
+                  Current slide: talking points
                 </p>
                 <div className="card-surface border border-border-default rounded-xl p-6">
                   <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary mb-2">

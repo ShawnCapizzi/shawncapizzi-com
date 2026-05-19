@@ -17,7 +17,7 @@ export default function Page() {
       title="Pharma Design Systems & Multi-Brand Architecture"
       subtitle="Governing 73 product brands with 3 design systems."
       heroImage="/images/hero/consumer-care-hub-hero-balanced.gif"
-      heroImageAlt="Consumer care hub homepage — A new offer to help Americans save"
+      heroImageAlt="Consumer care hub homepage. A new offer to help Americans save."
       metadata={[
         { label: "ENGAGEMENT", value: "Enterprise design system leadership" },
         { label: "YEAR", value: "2024–present" },
@@ -25,18 +25,18 @@ export default function Page() {
         { label: "SCOPE", value: "73 brands · 3 systems · HCP · DTC · patient" },
       ]}
       challenge={[
-        "A major pharma organization's digital ecosystem had grown organically across 73 product brands — branded HCP sites, branded patient sites, and unbranded therapy education resources. Each team had its own design language, its own information architecture, its own approach to regulatory review. The result wasn't a system. It was 73 systems pretending to be one.",
+        "A major pharma organization's digital ecosystem had grown organically across 73 product brands spanning branded HCP sites, branded patient sites, and unbranded therapy education resources. Each team had its own design language, its own information architecture, its own approach to regulatory review. The result wasn't a system. It was 73 systems pretending to be one.",
         "The cost was real. Operational inefficiency. Inconsistent patient and HCP experiences. Compliance risk that varied brand by brand. A speed-to-market problem in therapeutic spaces where launch timing matters in millions of dollars. Resource waste across 60+ team members running concurrent projects without shared infrastructure.",
         "The leadership team needed digital governance that could support a multi-billion dollar therapeutic portfolio without slowing the brand teams down.",
       ]}
       approach={[
         "I led the architecture and governance of three enterprise design systems, each serving a different audience and use case across the portfolio.",
-        "The work happened in three layers. The first was strategic — direct partnership with CTOs and senior business strategists on multi-million dollar digital initiative planning, including ROI documentation that could be reported to the board.",
-        "The second was architectural — defining the modular component logic, taxonomy, and content frameworks that would govern brand work across all 73 brands. Each brand operates inside its own sandbox, working out particular content needs and creative expression within the governance framework. The system is intentionally restrained. Working with copywriters, medical strategists, and regulatory partners, I helped brand teams build information architecture that served both the system and the scientific story.",
-        "The third was operational — a governance training program shared with copy, design, and media partners. The training teaches the correct way to leverage the system, the tolerance to which it can be modified, and best practices for initial setup. The goal isn't compliance enforcement. It's knowledge sharing.",
-        "A specific innovation worth naming: I led the development of distribution channels for the Patient Design System, including a QR-based mobile wallet card for iOS and Android that gives patients fast access to co-pay information and medication support. It was an industry-first in pharma — only possible when the design system is built to support new patterns instead of resisting them.",
+        "The work happened in three layers. The first was strategic: direct partnership with CTOs and senior business strategists on multi-million dollar digital initiative planning, including ROI documentation that could be reported to the board.",
+        "The second was architectural: defining the modular component logic, taxonomy, and content frameworks that would govern brand work across all 73 brands. Each brand operates inside its own sandbox, working out particular content needs and creative expression within the governance framework. The system is intentionally restrained. Working with copywriters, medical strategists, and regulatory partners, I helped brand teams build information architecture that served both the system and the scientific story.",
+        "The third was operational: a governance training program shared with copy, design, and media partners. The training teaches the correct way to leverage the system, the tolerance to which it can be modified, and best practices for initial setup. The goal isn't compliance enforcement. It's knowledge sharing.",
+        "A specific innovation worth naming: I led the development of distribution channels for the Patient Design System, including a QR-based mobile wallet card for iOS and Android that gives patients fast access to co-pay information and medication support. It was an industry-first in pharma, made possible only because the design system was built to support new patterns instead of resisting them.",
       ]}
-      pullQuote="Knowledge sharing, and helping people alleviate their fears about a new design system — instead of seeing it as a constraint, but as an opportunity to get to market faster and be creative within regulated design constraints."
+      pullQuote="Knowledge sharing, and helping people alleviate their fears about a new design system. Not as a constraint, but as an opportunity to get to market faster and be creative within regulated design constraints."
       midImages={[
         {
           src: "/images/case-studies/01-pharma-design-systems/02-typographic-scale-documentation.png",
@@ -53,7 +53,7 @@ export default function Page() {
           eyebrow="(Process & Journey)"
           heading="From context to outcome"
           openingFrame={`"This is a story about three things: a real enterprise design system problem; the strategic architecture I built to solve it; and the governance and training that let the system scale without my team being in the room for every decision."`}
-          closingBridge={`"Lilly's portfolio has the same shape — multi-brand, regulated, high-stakes, audience-segmented. I've already done this work. I've already built the muscle for teaching it. I'm ready to come do it inside Lilly's system."`}
+          closingBridge={`"Lilly's portfolio has the same shape: multi-brand, regulated, high-stakes, audience-segmented. I've already done this work. I've already built the muscle for teaching it. I'm ready to come do it inside Lilly's system."`}
           keyPhrases={[
             "Scale without central team involvement for every decision",
             "Grow a team that does great work without me in the room",
@@ -67,15 +67,15 @@ export default function Page() {
               tag: "CONTEXT",
               title: "73 brands, governed by 3 design systems",
               body:
-                "A multi-billion dollar therapeutic portfolio. 73 product brands — each with branded HCP sites, branded patient sites, and unbranded therapy education resources. Before the work: each brand grown organically with its own design language, information architecture, and approach to regulatory review. 60+ team members duplicating effort, speed-to-market measured in months when it should have been weeks, compliance risk varying brand by brand. The architectural answer: three design systems serving three audiences, with shared foundations, distinct audience logic.",
+                "A multi-billion dollar therapeutic portfolio. 73 product brands, each with branded HCP sites, branded patient sites, and unbranded therapy education resources. Before the work: each brand grown organically with its own design language, information architecture, and approach to regulatory review. 60+ team members duplicating effort, speed-to-market measured in months when it should have been weeks, compliance risk varying brand by brand. The architectural answer: three design systems serving three audiences, with shared foundations and distinct audience logic.",
               image:
                 "/images/case-studies/01-pharma-design-systems/carousel-01-pfizer-brand-index.png",
               imageAlt:
-                "Pfizer brand index — the full A–Z portfolio showing 73 product brands, each with HCP, patient, and prescribing information surfaces",
+                "Pfizer brand index showing the full A–Z portfolio of 73 product brands, each with HCP, patient, and prescribing information surfaces",
               signal:
                 "I can name and frame a real enterprise problem at the right altitude for leadership.",
               anticipate:
-                '"How did you quantify the problem to leadership?" → ROI documentation reported at the board level. Speed-to-market deltas. 60+ team members duplicating effort across concurrent projects. The scope itself — 73 brands across three site types — was the case.',
+                '"How did you quantify the problem to leadership?" → ROI documentation reported at the board level. Speed-to-market deltas. 60+ team members duplicating effort across concurrent projects. The scope itself, 73 brands across three site types, was the case.',
             },
 
             // ─── Slide 2 ────────────────────────────────────────────────
@@ -83,7 +83,7 @@ export default function Page() {
               tag: "STRATEGY & LEADERSHIP",
               title: "Three systems, three audiences",
               body:
-                "I architected three enterprise design systems — DTC/unbranded, HCP-facing, patient support — each with shared foundations and distinct audience logic. The work happened in three layers: strategic partnership with CTOs and senior strategists on multi-million dollar planning with board-level ROI; architectural design of modular components, taxonomy, and content frameworks; and operational design of a governance training program.",
+                "I led the governance and evolution of three enterprise design systems, serving DTC, HCP-facing, and CRM patient support audiences. Each one shared UX patterns, design principles, and UI foundations, but applied distinct audience logic. The work happened in three layers: strategic partnership with brand managers, CTOs, and senior strategists on multi-million dollar planning with board-level ROI; architectural design of modular components, taxonomy, and content frameworks; and operational design of a governance training program.",
               media: (
                 <BrowserFrame
                   src="/videos/carousel-02-patient-site-tour.mp4"
@@ -103,7 +103,7 @@ export default function Page() {
               tag: "PRACTICE & CRAFT",
               title: "Foundations designed for restraint",
               body:
-                "A comprehensive color system with primary, secondary, neutral, accent, utility, background, and tinted variants — disciplined enough to govern 15+ brands, expressive enough to let each one keep its identity. The system is restrained on purpose. Restraint is what makes it scale.",
+                "A comprehensive color system with primary, secondary, neutral, accent, utility, background, and tinted variants. Disciplined enough to govern 73 brands, expressive enough to let each one keep its identity. The system is restrained on purpose. Restraint is what makes it scale.",
               image:
                 "/images/case-studies/01-pharma-design-systems/carousel-03-color-system.png",
               imageAlt:
@@ -119,7 +119,7 @@ export default function Page() {
               tag: "SYSTEMS THAT EVOLVE",
               title: "An industry-first, made possible by the system",
               body:
-                "A QR-based, FDA-compliant mobile wallet card for iOS and Android — co-pay and patient support information in a wallet card. Industry-first in pharma. The pattern wasn't possible until the system was built to support new components instead of resisting them. A system that scales is a system that can evolve.",
+                "A QR-based, FDA-compliant mobile wallet card for iOS and Android, delivering co-pay and patient support information directly to patients' phones. Industry-first in pharma. The pattern wasn't possible until the system was built to support new components instead of resisting them. A system that scales is a system that can evolve.",
               media: (
                 <div
                   style={{
@@ -132,7 +132,7 @@ export default function Page() {
                     paddingBottom: "5rem",
                   }}
                 >
-                  {/* Desktop browser — square-on, base layer */}
+                  {/* Desktop browser: square-on, base layer */}
                   <BrowserFrame
                     src="/videos/carousel-04-wallet-desktop.mp4"
                     poster="/videos/carousel-04-wallet-desktop-poster.jpg"
@@ -141,7 +141,7 @@ export default function Page() {
                     tiltDegrees={0}
                   />
 
-                  {/* Phone — absolutely positioned bottom-right of desktop, ~30% peeking out below */}
+                  {/* Phone: absolutely positioned bottom-right of desktop, ~30% peeking out below */}
                   <div
                     style={{
                       position: "absolute",
@@ -171,11 +171,11 @@ export default function Page() {
               tag: "TRAINING & ENABLEMENT",
               title: "Governance through teaching, not enforcement",
               body:
-                "A 150-page design system handbook shared with copy, design, and media partners. It teaches correct usage, the tolerance to which the system can be modified, and best practices for initial setup. The goal isn't compliance enforcement — it's knowledge sharing. The system has to scale without my team being in the room for every decision. $3.5M+ in documented digital transformation. The program continues to expand under new leadership.",
+                "A 150-page design system handbook shared with copy, design, and media partners. It teaches correct usage, the tolerance to which the system can be modified, and best practices for initial setup. The goal isn't compliance enforcement. It's knowledge sharing. The system has to scale without my team being in the room for every decision. $3.5M+ in documented digital transformation. The program continues to expand under new leadership.",
               image:
                 "/images/case-studies/01-pharma-design-systems/carousel-05-handbook.png",
               imageAlt:
-                "Design System handbook — 150 pages teaching contributors how to use and leverage components across brand stories",
+                "Design System handbook with 150 pages teaching contributors how to use and leverage components across brand stories",
               signal:
                 'This slide lands the JD\'s headline ask. Echo the phrasing: "scale without the central team being in the room for every decision."',
               anticipate:
@@ -188,7 +188,7 @@ export default function Page() {
         {
           headline: "$3.5M+ in digital transformation investment",
           description:
-            "Documented at the executive level across the portfolio — and the program continues to expand under new leadership.",
+            "Documented at the executive level across the portfolio. The program continues to expand under new leadership.",
         },
         {
           headline: "Three design systems serving three audiences",
@@ -227,7 +227,7 @@ export default function Page() {
         },
       ]}
       closer={[
-        "A design system isn't a Figma library. It's organizational infrastructure. The version that survives — the version brand teams actually use five years later — is the one whose governance is as carefully designed as its components.",
+        "A design system isn't a Figma library. It's organizational infrastructure. The version that survives, the version brand teams actually use five years later, is the one whose governance is as carefully designed as its components.",
         "This engagement is that work. Less visible than a single product launch. More valuable.",
       ]}
       ctaHeadline="Working through something similar?"
@@ -247,7 +247,7 @@ export default function Page() {
           eyebrow: "Solo · AI Native Design Lab",
           title: "Building an AI-native product design lab",
           description:
-            "A working AI-native product design practice — UXR tools, prototype agents, healthcare-first applications.",
+            "A working AI-native product design practice. UXR tools, prototype agents, healthcare-first applications.",
           image:
             "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-native-design-lab.png",
         },

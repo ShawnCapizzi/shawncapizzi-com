@@ -22,7 +22,7 @@ export interface FragmentationGridProps {
 // ---------------------------------------------------------------------------
 //
 // Three real brand UIs (anchors) sit above a strip of 12 muted color tiles
-// + a growing indicator. Visualizes "15+ systems pretending to be one" —
+// + a growing indicator. Visualizes "15+ systems pretending to be one":
 // the 3 anchors show what brand fragmentation looks like (different visual
 // languages, palettes, navigation), the strip signals enterprise scope.
 
@@ -90,7 +90,7 @@ export function FragmentationGrid({
             style={{ background: swatch.color }}
             title={swatch.name}
           >
-            {/* Faint inner highlight line — implies "this is a UI" */}
+            {/* Faint inner highlight line: implies "this is a UI" */}
             <span
               aria-hidden="true"
               className="absolute top-[12%] left-[12%] right-[12%] h-[2px] rounded-sm"

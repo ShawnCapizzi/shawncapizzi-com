@@ -9,7 +9,7 @@ import { useRef, useEffect, useState } from "react";
 export interface TiltedPhoneFrameProps {
   /** Path to video file (.mp4/.webm preferred). Place in /public/videos/... */
   src: string;
-  /** Optional poster image shown before video loads — path in /public/... */
+  /** Optional poster image shown before video loads: path in /public/... */
   poster?: string;
   /** Tilt angle in degrees. Default -8 (counter-clockwise, like Remotion).
    *  Use a positive number for clockwise tilt. */
@@ -21,7 +21,7 @@ export interface TiltedPhoneFrameProps {
   bezelWidth?: number;
   /** Outer corner radius. Default 38. */
   cornerRadius?: number;
-  /** Background fill of the "device body" — defaults to near-black. */
+  /** Background fill of the "device body": defaults to near-black. */
   bodyColor?: string;
   /** Accent rim color (subtle inner stroke). Defaults to a warm grey. */
   rimColor?: string;
@@ -70,9 +70,9 @@ export function TiltedPhoneFrame({
     return () => v.removeEventListener("loadedmetadata", onMeta);
   }, [src]);
 
-  // Frame dimensions — outer width is fixed, height comes from aspect
+  // Frame dimensions: outer width is fixed, height comes from aspect
   const frameHeight = width / aspect;
-  // Inner screen dimensions — frame minus bezels
+  // Inner screen dimensions: frame minus bezels
   const screenWidth = width - bezelWidth * 2;
   const screenHeight = frameHeight - bezelWidth * 2;
   // Inner screen corner radius scales with the outer
@@ -115,7 +115,7 @@ export function TiltedPhoneFrame({
             /* Deepest ground shadow */
             32px 60px 110px -28px rgba(0, 0, 0, 0.45);
 
-          /* The angled tilt — slight Y-axis rotation gives perspective depth,
+          /* The angled tilt: slight Y-axis rotation gives perspective depth,
              Z-axis rotation gives the editorial lean */
           transform:
             rotateY(-6deg) rotateX(2deg) rotateZ(${tiltDegrees}deg);
@@ -128,7 +128,7 @@ export function TiltedPhoneFrame({
             rotateY(-3deg) rotateX(1deg) rotateZ(${tiltDegrees * 0.5}deg);
         }
 
-        /* Inner screen — flush with bezel, holds the video */
+        /* Inner screen: flush with bezel, holds the video */
         .tpf-screen {
           position: absolute;
           top: ${bezelWidth}px;
@@ -147,7 +147,7 @@ export function TiltedPhoneFrame({
           height: 100%;
           object-fit: contain;
           display: block;
-          /* Faint screen sheen — left edge slightly brighter, like glass */
+          /* Faint screen sheen: left edge slightly brighter, like glass */
           background: linear-gradient(
             135deg,
             rgba(255, 255, 255, 0.03) 0%,
@@ -155,7 +155,7 @@ export function TiltedPhoneFrame({
           );
         }
 
-        /* Optional ambient floor reflection — extremely subtle */
+        /* Optional ambient floor reflection: extremely subtle */
         .tpf-frame::after {
           content: "";
           position: absolute;
@@ -174,7 +174,7 @@ export function TiltedPhoneFrame({
           pointer-events: none;
         }
 
-        /* Reduced motion — kill the hover transform */
+        /* Reduced motion: kill the hover transform */
         @media (prefers-reduced-motion: reduce) {
           .tpf-frame,
           .tpf-frame:hover {
@@ -182,7 +182,7 @@ export function TiltedPhoneFrame({
           }
         }
 
-        /* Mobile — tone down the lean so it doesn't overflow narrow viewports */
+        /* Mobile: tone down the lean so it doesn't overflow narrow viewports */
         @media (max-width: 640px) {
           .tpf-frame {
             transform:
