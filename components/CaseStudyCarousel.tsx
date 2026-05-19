@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
@@ -52,6 +52,28 @@ export function CaseStudyCarousel({
     [total]
   );
   const prev = useCallback(() => setSlideIndex((i) => Math.max(i - 1, 0)), []);
+
+  // Touch tracking for swipe-to-navigate on mobile
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    const deltaY = e.changedTouches[0].clientY - touchStartY.current;
+    touchStartX.current = null;
+    touchStartY.current = null;
+    // Only treat as swipe if horizontal motion dominates and is significant
+    if (Math.abs(deltaX) < 50) return;
+    if (Math.abs(deltaY) > Math.abs(deltaX)) return;
+    if (deltaX < 0) next();
+    else prev();
+  };
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -111,7 +133,12 @@ export function CaseStudyCarousel({
         </div>
 
         {/* ── Slide ── */}
-        <div key={slideIndex} className="animate-fade-in">
+        <div
+          key={slideIndex}
+          className="animate-fade-in"
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
           {/* Slide meta row */}
           <div className="flex items-center gap-4 mb-5">
             <span className="metadata-label">
@@ -195,7 +222,7 @@ export function CaseStudyCarousel({
               disabled={slideIndex === 0}
               type="button"
               aria-label="Previous slide"
-              className="inline-flex items-center gap-2 px-3.5 py-2 border border-border-default text-text-primary font-mono text-xs uppercase tracking-widest rounded hover:bg-text-primary hover:text-text-inverse hover:border-text-primary disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-text-primary disabled:hover:border-border-default transition-colors"
+              className="inline-flex items-center gap-2 px-4 md:px-3.5 py-3 md:py-2 border border-border-default text-text-primary font-mono text-sm md:text-xs uppercase tracking-widest rounded hover:bg-text-primary hover:text-text-inverse hover:border-text-primary disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-text-primary disabled:hover:border-border-default transition-colors"
             >
               <ChevronLeft size={14} aria-hidden="true" />
               Prev
@@ -205,7 +232,7 @@ export function CaseStudyCarousel({
               disabled={slideIndex === total - 1}
               type="button"
               aria-label="Next slide"
-              className="inline-flex items-center gap-2 px-3.5 py-2 border border-border-default text-text-primary font-mono text-xs uppercase tracking-widest rounded hover:bg-text-primary hover:text-text-inverse hover:border-text-primary disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-text-primary disabled:hover:border-border-default transition-colors"
+              className="inline-flex items-center gap-2 px-4 md:px-3.5 py-3 md:py-2 border border-border-default text-text-primary font-mono text-sm md:text-xs uppercase tracking-widest rounded hover:bg-text-primary hover:text-text-inverse hover:border-text-primary disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-text-primary disabled:hover:border-border-default transition-colors"
             >
               Next
               <ChevronRight size={14} aria-hidden="true" />
@@ -214,7 +241,8 @@ export function CaseStudyCarousel({
         </div>
 
         <p className="mt-3 text-right font-mono text-xs uppercase tracking-widest text-text-tertiary">
-          Use ← → keys to navigate
+          <span className="md:hidden">Swipe or tap arrows to navigate</span>
+          <span className="hidden md:inline">Use ← → keys to navigate</span>
         </p>
 
         {/* ── Speaker mode panel ── */}
