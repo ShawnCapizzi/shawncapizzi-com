@@ -255,12 +255,12 @@ export default function Page() {
         {
           headline: "$3.5M+ in digital transformation investment",
           description:
-            "Documented at the executive level across the portfolio. The program continues to expand under new leadership.",
+            "Documented at the executive level across all brands and sites. The 2.0 program continues to expand with elegance, enabled by a flexible system and intentional UX thinking.",
         },
         {
           headline: "Three design systems serving three audiences",
           description:
-            "One focused on DTC and unbranded work, one on HCP-facing unified content and resource repositories, and one focused specifically on patient support onboarding.",
+            "One focused on DTC sites, one on HCP-facing unified content and resource repositories, and one focused specifically on unbranded and disease education.",
         },
         {
           headline: "Industry-first mobile wallet integration",
@@ -294,8 +294,8 @@ export default function Page() {
         },
       ]}
       closer={[
-        "A design system isn't a Figma library. It's organizational infrastructure. The version that survives, the version brand teams actually use five years later, is the one whose governance is as carefully designed as its components.",
-        "This engagement is that work. Less visible than a single product launch. More valuable.",
+        "A design system isn't just a few Figma asset libraries. It's organizational design infrastructure. The version that survives, the version brand teams actually use five years later, the one that surfaces insights with every quarterly report, is the one whose governance is as carefully designed as its components.",
+        "This engagement is that work. Less visible than a single product launch. But far more valuable as an enterprise cost-savings lever and GTM accelerator.",
       ]}
       ctaHeadline="Working through something similar?"
       related={[
