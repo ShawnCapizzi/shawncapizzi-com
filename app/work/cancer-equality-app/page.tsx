@@ -1,4 +1,5 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
+import { BrowserFrame } from "@/components/BrowserFrame";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,47 +8,85 @@ export const metadata: Metadata = {
     "Built with The Chrysalis Initiative. Recognized with a D&AD Pencil for Future Impact, 2022. A two-sided platform connecting patients with trained coaches and peer navigators.",
 };
 
+const ASSET_BASE = "/images/case-studies/04-cancer-equality-app";
+
 export default function Page() {
   return (
     <CaseStudyLayout
       eyebrow="(Case Study)"
       title="A Patient Navigation Platform for Women Facing Bias in Cancer Care"
       subtitle="Built with The Chrysalis Initiative. Recognized with a D&AD Pencil for Future Impact, 2022."
-      heroImage="/images/case-studies/04-cancer-equality-app/01-hero-erase-the-line-campaign-poster.jpeg"
-      heroImageAlt="Erase The Line campaign poster — patient navigation platform"
+      heroImage={`${ASSET_BASE}/01-hero-erase-the-line-campaign-poster.jpeg`}
+      heroImageAlt="Erase The Line campaign poster, patient navigation platform"
       metadata={[
         { label: "ENGAGEMENT", value: "Lead Product Designer" },
         { label: "YEAR", value: "2021–2022" },
         { label: "PARTNER", value: "The Chrysalis Initiative" },
-        { label: "RECOGNITION", value: "D&AD Pencil — Future Impact 2022" },
+        { label: "RECOGNITION", value: "D&AD Pencil, Future Impact 2022" },
       ]}
       challenge={[
         "Women of color in the United States face a documented healthcare gap. They receive inconsistent standard of care across regions and providers. They are profiled based on assumed insurance coverage. They are assumed, often incorrectly, to lack health literacy. These assumptions affect what tests are ordered, what conversations are had, what referrals are made, and ultimately what outcomes follow.",
         "Late diagnoses follow bias. Worse outcomes follow late diagnoses. Many patients avoid the system altogether because they know what's waiting for them inside it.",
-        "The Chrysalis Initiative — founded by Jamila — built the Cancer Equality App as the product response to that gap. The Erase The Line campaign was the wrapper that brought the platform to a national audience. The app itself was the actual work: a navigation platform that connected patients with trained coaches and peer navigators, putting tools, documentation, advocacy language, and verified provider data directly in the hands of patients managing breast cancer care.",
+        "The Chrysalis Initiative, founded by Jamila, built the Cancer Equality App as the product response to that gap. The Erase The Line campaign was the wrapper that brought the platform to a national audience. The app itself was the actual work: a navigation platform that connected patients with trained coaches and peer navigators, putting tools, documentation, advocacy language, and verified provider data directly in the hands of patients managing breast cancer care.",
       ]}
       approach={[
         "The platform was designed as a two-sided product. The coach-facing experience supported onboarding of coaches and content storage about the patients in their care. The patient-facing dashboard gave users visibility into their engagements, notes from sessions with their coach, and direct communication with the coaching team. Both sides had to work for very different users, in very different emotional states, while supporting the same underlying mission.",
         "I led product design across both sides of the platform, working directly with the initiative owner, account team, creative team, SharePoint developers, and a Salesforce CMS specialist.",
-        "The product included coach and peer navigation — the heart of the platform, matching patients with trained coaches who had often been through breast cancer themselves, alongside a peer community of others on similar journeys. Education modules helped users recognize racism and bias in healthcare interactions — not abstractly, but in the specific patterns that show up in oncology care. Documentation tools designed to record symptoms, concerns, and provider responses before, during, and after appointments — simple enough to use under stress, detailed enough to create a record that mattered. Advocacy guides giving step-by-step language for addressing concerns and requesting appropriate care. Community support connecting users to others with similar experiences. A healthcare provider directory with ratings and reviews focused on culturally competent care.",
+        "The product included coach and peer navigation, the heart of the platform, matching patients with trained coaches who had often been through breast cancer themselves, alongside a peer community of others on similar journeys. Education modules helped users recognize racism and bias in healthcare interactions, not abstractly, but in the specific patterns that show up in oncology care. Documentation tools designed to record symptoms, concerns, and provider responses before, during, and after appointments, simple enough to use under stress, detailed enough to create a record that mattered. Advocacy guides giving step-by-step language for addressing concerns and requesting appropriate care. Community support connecting users to others with similar experiences. A healthcare provider directory with ratings and reviews focused on culturally competent care.",
         "The hard part wasn't deciding what to build. It was the language. Every screen had to be empowering without being patronizing. Every feature had to respect that the user might be in crisis. The design had to feel like a tool that trusts the user, not one that's trying to fix her.",
       ]}
       pullQuote="This is one of the few times where the metrics actually could convert to lives saved. Before this, the support was email and Excel documents distributed by hand. After, there was a live dashboard, real tracking, refinement based on coach usage data. It's not many times in your life you get to work with such a brilliant team on such an important topic."
       midImages={[
         {
-          src: "/images/case-studies/04-cancer-equality-app/02-app-marketing-site-laptop.jpeg",
+          src: `${ASSET_BASE}/02-app-marketing-site-laptop.jpeg`,
           alt: "App marketing site rendered on laptop",
         },
         {
-          src: "/images/case-studies/04-cancer-equality-app/03-sign-up-and-logged-in-view-wireframes.jpeg",
+          src: `${ASSET_BASE}/03-sign-up-and-logged-in-view-wireframes.jpeg`,
           alt: "Sign up page and logged-in view wireframes",
         },
       ]}
+      processCarousel={
+        <section
+          aria-labelledby="bc-navi-platform-walkthrough"
+          className="mx-auto max-w-content px-6 py-14 md:py-20"
+        >
+          <div className="mb-8 md:mb-10 max-w-2xl mx-auto text-center">
+            <p className="eyebrow">(The platform in motion)</p>
+            <h2
+              id="bc-navi-platform-walkthrough"
+              className="subhead-editorial mt-3"
+            >
+              What replaced the email and Excel
+            </h2>
+            <p className="mt-4 text-text-secondary text-base leading-relaxed">
+              A 44-second walkthrough of the live platform: the public marketing
+              site, the personal coach pairing, the patient-facing dashboard, and
+              the breast cancer education modules.
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <BrowserFrame
+              src="/videos/bc-navi-coach-dashboard.mp4"
+              poster="/videos/bc-navi-coach-dashboard-poster.jpg"
+              url="bcnavi.chrysalisinitiative.org"
+              width={600}
+              fallbackAspect="1848 / 1530"
+              tiltDegrees={0}
+              theme="dark"
+              ariaLabel="BC Navi platform walkthrough: marketing site, coach pairing, patient dashboard, and education modules"
+              loop
+              autoPlay
+            />
+          </div>
+        </section>
+      }
       outcomes={[
         {
           headline: "Recognized with a D&AD Pencil",
           description:
-            "Future Impact Initiative, 2022. Top 1% of design awards globally — peer-recognized signal that the work mattered.",
+            "Future Impact Initiative, 2022. Top 1% of design awards globally, peer-recognized signal that the work mattered.",
         },
         {
           headline: "50% rise in clinical trial enrollment among program users",
@@ -77,11 +116,19 @@ export default function Page() {
       ]}
       bottomImages={[
         {
-          src: "/images/case-studies/04-cancer-equality-app/04-patient-connection-wireframe-detail.jpeg",
+          src: `${ASSET_BASE}/operational-platform-marketing.jpg`,
+          alt: "BC Navi platform marketing moment: documentary still, App Store listing, and the iPad-rendered member experience",
+        },
+        {
+          src: `${ASSET_BASE}/operational-platform-screens.jpg`,
+          alt: "BC Navi platform screens: sign-up page intake and member logged-in dashboard view",
+        },
+        {
+          src: `${ASSET_BASE}/04-patient-connection-wireframe-detail.jpeg`,
           alt: "Patient connection wireframe detail",
         },
         {
-          src: "/images/case-studies/04-cancer-equality-app/06-dand-pencil-future-impact-2022.jpeg",
+          src: `${ASSET_BASE}/06-dand-pencil-future-impact-2022.jpeg`,
           alt: "D&AD Pencil Future Impact Initiative 2022",
         },
       ]}
@@ -94,7 +141,7 @@ export default function Page() {
         {
           slug: "pharma-design-systems",
           eyebrow: "Multi-Brand · 3x Design Systems · Governance",
-          title: "Building digital governance across 15+ therapeutic brands",
+          title: "Building digital governance across 70+ therapeutic brands",
           description:
             "$3.5M+ in digital transformation. Industry-first mobile wallet integration for patient medication information.",
           image: "/images/hero/consumer-care-hub-hero-balanced.gif",
@@ -104,7 +151,7 @@ export default function Page() {
           eyebrow: "Solo · AI Native Design Lab",
           title: "Building an AI-native product design lab",
           description:
-            "A working AI-native product design practice — UXR tools, prototype agents, healthcare-first applications.",
+            "A working AI-native product design practice, UXR tools, prototype agents, healthcare-first applications.",
           image:
             "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-native-design-lab.png",
         },
