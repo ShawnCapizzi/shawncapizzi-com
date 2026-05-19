@@ -1,4 +1,8 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
+import { CaseStudyCarousel } from "@/components/CaseStudyCarousel";
+import { BrowserFrame } from "@/components/BrowserFrame";
+import { TiltedPhoneFrame } from "@/components/TiltedPhoneFrame";
+import { FragmentationGrid } from "@/components/FragmentationGrid";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -44,6 +48,147 @@ export default function Page() {
           alt: "Modular step component module documentation",
         },
       ]}
+      // ─── Walk-through carousel ─────────────────────────────────────────
+      processCarousel={
+        <CaseStudyCarousel
+          eyebrow="(Process & Journey)"
+          heading="From context to outcome"
+          openingFrame={`"This is a story about three things: a real enterprise design system problem; the strategic architecture I built to solve it; and the governance and training that let the system scale without my team being in the room for every decision."`}
+          closingBridge={`"Lilly's portfolio has the same shape — multi-brand, regulated, high-stakes, audience-segmented. I've already done this work. I've already built the muscle for teaching it. I'm ready to come do it inside Lilly's system."`}
+          keyPhrases={[
+            "Scale without central team involvement for every decision",
+            "Grow a team that does great work without me in the room",
+            "Design system as strategic asset, not just a component library",
+            "Governance through teaching, not enforcement",
+            "Structured flexibility, not uniformity",
+          ]}
+          slides={[
+            // ─── Slide 1 ────────────────────────────────────────────────
+            {
+              tag: "CONTEXT",
+              title: "15 systems pretending to be one",
+              body:
+                "A multi-billion dollar therapeutic portfolio. More than 15 brands, each grown organically with its own design language, information architecture, and approach to regulatory review. The cost wasn't visible at the executive level, but it was real — speed-to-market in spaces where weeks matter in millions, 60+ team members duplicating effort, compliance risk that varied brand by brand.",
+              media: (
+                <FragmentationGrid
+                  brandTiles={[
+                    {
+                      src: "/images/case-studies/01-pharma-design-systems/carousel-01-fragmentation-grid-brand-a.png",
+                      alt: "Neurology brand portfolio site — distinct visual language",
+                      label: "Neuroscience · Brand A",
+                    },
+                    {
+                      src: "/images/case-studies/01-pharma-design-systems/carousel-01-fragmentation-grid-brand-b.png",
+                      alt: "Neurology brand portfolio site — different visual system",
+                      label: "Neuroscience · Brand B",
+                    },
+                    {
+                      src: "/images/case-studies/01-pharma-design-systems/carousel-01-fragmentation-grid-sales-tool.png",
+                      alt: "Sales tool showing fragmented brand integration across portfolio",
+                      label: "Sales tool · Multi-brand",
+                    },
+                  ]}
+                  abstractStripLabel="+ 12 more brands · each with its own design language"
+                />
+              ),
+              signal:
+                "I can name and frame a real enterprise problem at the right altitude for leadership.",
+              anticipate:
+                '"How did you quantify the problem to leadership?" → ROI documentation reported at the board level. Speed-to-market deltas. 60+ team members duplicating effort across concurrent projects.',
+            },
+
+            // ─── Slide 2 ────────────────────────────────────────────────
+            {
+              tag: "STRATEGY & LEADERSHIP",
+              title: "Three systems, three audiences",
+              body:
+                "I architected three enterprise design systems — DTC/unbranded, HCP-facing, patient support — each with shared foundations and distinct audience logic. The work happened in three layers: strategic partnership with CTOs and senior strategists on multi-million dollar planning with board-level ROI; architectural design of modular components, taxonomy, and content frameworks; and operational design of a governance training program.",
+              media: (
+                <BrowserFrame
+                  src="/videos/carousel-02-patient-site-tour.mp4"
+                  poster="/videos/carousel-02-patient-site-tour-poster.jpg"
+                  url="elrexfio.com"
+                  width={620}
+                  tiltDegrees={0}
+                />
+              ),
+              signal: "I think in layers and audiences, not in components.",
+              anticipate:
+                '"Why three systems instead of one?" → Each audience has different governance, different regulatory pathway, different content rhythm. One system would have collapsed under the weight. Shared foundations, distinct audience logic.',
+            },
+
+            // ─── Slide 3 ────────────────────────────────────────────────
+            {
+              tag: "PRACTICE & CRAFT",
+              title: "Foundations designed for restraint",
+              body:
+                "A comprehensive color system with primary, secondary, neutral, accent, utility, background, and tinted variants — disciplined enough to govern 15+ brands, expressive enough to let each one keep its identity. The system is restrained on purpose. Restraint is what makes it scale.",
+              image:
+                "/images/case-studies/01-pharma-design-systems/carousel-03-color-system.png",
+              imageAlt:
+                "Color system documentation showing primary, secondary, neutral, accent, utility, background, and tinted color tokens",
+              signal:
+                "I am a craft person. I own the foundations and make nuanced decisions with rationale.",
+              anticipate:
+                '"Walk me through your token decisions." → Color hierarchy (primary → utility → tints), neutral scale logic, accessibility tradeoffs across the 7-tier system. Restraint is a design decision, not a missing one.',
+            },
+
+            // ─── Slide 4 ────────────────────────────────────────────────
+            {
+              tag: "SYSTEMS THAT EVOLVE",
+              title: "An industry-first, made possible by the system",
+              body:
+                "A QR-based, FDA-compliant mobile wallet card for iOS and Android — co-pay and patient support information in a wallet card. Industry-first in pharma. The pattern wasn't possible until the system was built to support new components instead of resisting them. A system that scales is a system that can evolve.",
+              media: (
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "clamp(1rem, 3vw, 2.5rem)",
+                    flexWrap: "wrap",
+                    width: "100%",
+                  }}
+                >
+                  <BrowserFrame
+                    src="/videos/carousel-04-wallet-desktop.mp4"
+                    poster="/videos/carousel-04-wallet-desktop-poster.jpg"
+                    url="elrexfio.com/support-and-savings/mobile-wallet-card"
+                    width={460}
+                    tiltDegrees={-2}
+                  />
+                  <TiltedPhoneFrame
+                    src="/videos/carousel-04-wallet-mobile.mp4"
+                    poster="/videos/carousel-04-wallet-mobile-poster.jpg"
+                    width={200}
+                    tiltDegrees={-8}
+                  />
+                </div>
+              ),
+              signal:
+                "I think about future-state from the start. New patterns are a feature of the system, not a failure of it.",
+              anticipate:
+                '"What was hardest about getting the wallet card approved?" → Regulatory partnership early, not late. Co-designing with medical and legal from sprint one.',
+            },
+
+            // ─── Slide 5 ────────────────────────────────────────────────
+            {
+              tag: "TRAINING & ENABLEMENT",
+              title: "Governance through teaching, not enforcement",
+              body:
+                "A 150-page design system handbook shared with copy, design, and media partners. It teaches correct usage, the tolerance to which the system can be modified, and best practices for initial setup. The goal isn't compliance enforcement — it's knowledge sharing. The system has to scale without my team being in the room for every decision. $3.5M+ in documented digital transformation. The program continues to expand under new leadership.",
+              image:
+                "/images/case-studies/01-pharma-design-systems/carousel-05-handbook.png",
+              imageAlt:
+                "Design System handbook — 150 pages teaching contributors how to use and leverage components across brand stories",
+              signal:
+                'This slide lands the JD\'s headline ask. Echo the phrasing: "scale without the central team being in the room for every decision."',
+              anticipate:
+                '"How do you measure system literacy?" → Reduction in central team intervention requests over time. New brand onboarding speed. Variance in component application across teams.',
+            },
+          ]}
+        />
+      }
       outcomes={[
         {
           headline: "$3.5M+ in digital transformation investment",

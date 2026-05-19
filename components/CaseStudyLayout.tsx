@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 const CAL_URL = "https://cal.com/capizzi/15min";
 
@@ -37,6 +38,8 @@ interface CaseStudyLayoutProps {
   approach: string[];
   pullQuote?: string;
   midImages?: CaseStudyImage[];
+  /** Optional carousel slot rendered between the approach section and outcomes. */
+  processCarousel?: ReactNode;
   outcomes: Outcome[];
   bottomImages?: CaseStudyImage[];
   closer: string[];
@@ -156,6 +159,14 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           )}
         </div>
       </section>
+
+      {/* ============================================================
+          PROCESS CAROUSEL (optional)
+          Renders here between the approach block and outcomes.
+          The component supplies its own borders, padding, and section
+          wrapper, so we simply slot it in.
+          ============================================================ */}
+      {props.processCarousel}
 
       {/* ============================================================
           SELECTED OUTCOMES + optional bottom images
