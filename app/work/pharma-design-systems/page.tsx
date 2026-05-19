@@ -289,8 +289,9 @@ export default function Page() {
           alt: "Color palette and WCAG accessibility documentation",
         },
         {
-          src: "/images/case-studies/01-pharma-design-systems/05-vaccine-content-audit-scientific-story.gif",
-          alt: "Vaccine content audit and scientific story strategy",
+          src: "/videos/bottom-multi-brand-output.mp4",
+          poster: "/videos/bottom-multi-brand-output-poster.jpg",
+          alt: "Three branded mobile screens showing patient stories, treatment calendar, and patient-facing content — distinct brand identity expressed within the shared design system",
         },
       ]}
       closer={[
