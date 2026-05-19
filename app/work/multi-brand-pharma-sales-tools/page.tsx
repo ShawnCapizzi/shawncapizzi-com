@@ -1,5 +1,6 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { CaseStudyCarousel } from "@/components/CaseStudyCarousel";
+import { RotatingProductShowcase } from "@/components/RotatingProductShowcase";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -207,208 +208,26 @@ export default function Page() {
               body:
                 "The same wireframe structure rendered as Brand A, as Brand B, as the integrated sales rep CRM. Each brand kept its visual identity. Each rep could move between brands without losing orientation. Sales reps gained navigation memory; brand managers gained speed-to-market; the organization gained a system that would keep working long after the initial rollout.",
               media: (
-                <div className="w-full">
-                  {/* Desktop ≥lg: fanned composition with tilts and atmospheric cloud */}
-                  <div
-                    className="hidden lg:flex"
-                    style={{
-                      position: "relative",
-                      width: "100%",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      paddingTop: "2.5rem",
-                      paddingBottom: "3rem",
-                      minHeight: "340px",
-                    }}
-                  >
-                    <div
-                      aria-hidden="true"
-                      style={{
-                        position: "absolute",
-                        left: "50%",
-                        top: "50%",
-                        transform: "translate(-50%, -50%)",
-                        width: "640px",
-                        height: "360px",
-                        zIndex: 0,
-                        pointerEvents: "none",
-                        background:
-                          "radial-gradient(ellipse at center, rgba(107, 92, 255, 0.40) 0%, rgba(79, 70, 229, 0.22) 35%, rgba(232, 121, 249, 0.10) 65%, transparent 100%)",
-                        filter: "blur(36px)",
-                      }}
-                    />
-
-                    {/* Brand A, left, tilted left */}
-                    <div
-                      style={{
-                        width: "300px",
-                        transform: "rotateZ(-6deg) translateY(8px)",
-                        marginRight: "-48px",
-                        borderRadius: "8px",
-                        overflow: "hidden",
-                        border: "1px solid rgba(255,255,255,0.10)",
-                        boxShadow:
-                          "0 12px 28px -8px rgba(0,0,0,0.45), 0 24px 48px -12px rgba(0,0,0,0.5)",
-                        zIndex: 1,
-                        position: "relative",
-                      }}
-                    >
-                      <Image
-                        src={`${ASSET_BASE}/carousel-04-product-brand-a.png`}
-                        alt="Polished product: brand A landing experience with brand menu and topic tiles"
-                        width={1000}
-                        height={760}
-                        style={{ width: "100%", height: "auto", display: "block" }}
-                      />
-                    </div>
-
-                    {/* Brand B, center, focal point, on top */}
-                    <div
-                      style={{
-                        width: "340px",
-                        transform: "rotateZ(0deg)",
-                        borderRadius: "8px",
-                        overflow: "hidden",
-                        border: "1px solid rgba(255,255,255,0.12)",
-                        boxShadow:
-                          "0 14px 32px -8px rgba(0,0,0,0.5), 0 28px 56px -14px rgba(0,0,0,0.55)",
-                        zIndex: 3,
-                        position: "relative",
-                      }}
-                    >
-                      <Image
-                        src={`${ASSET_BASE}/carousel-04-product-brand-b.png`}
-                        alt="Polished product: brand B home with brand hero imagery and topic tile navigation"
-                        width={1000}
-                        height={760}
-                        style={{ width: "100%", height: "auto", display: "block" }}
-                      />
-                    </div>
-
-                    {/* Sales rep CRM, right, tilted right */}
-                    <div
-                      style={{
-                        width: "300px",
-                        transform: "rotateZ(6deg) translateY(8px)",
-                        marginLeft: "-48px",
-                        borderRadius: "8px",
-                        overflow: "hidden",
-                        border: "1px solid rgba(255,255,255,0.10)",
-                        boxShadow:
-                          "0 12px 28px -8px rgba(0,0,0,0.45), 0 24px 48px -12px rgba(0,0,0,0.5)",
-                        zIndex: 2,
-                        position: "relative",
-                      }}
-                    >
-                      <Image
-                        src={`${ASSET_BASE}/carousel-04-product-sales-rep-crm.png`}
-                        alt="Polished product: integrated sales rep CRM showing HCP profile, recently shown brand tiles, recommended next-best content, call notes"
-                        width={1000}
-                        height={760}
-                        style={{ width: "100%", height: "auto", display: "block" }}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Mobile <lg: scaled-down version of same fanned composition */}
-                  <div
-                    className="flex lg:hidden"
-                    style={{
-                      position: "relative",
-                      width: "100%",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      paddingTop: "1.5rem",
-                      paddingBottom: "2rem",
-                      minHeight: "210px",
-                    }}
-                  >
-                    <div
-                      aria-hidden="true"
-                      style={{
-                        position: "absolute",
-                        left: "50%",
-                        top: "50%",
-                        transform: "translate(-50%, -50%)",
-                        width: "380px",
-                        height: "220px",
-                        zIndex: 0,
-                        pointerEvents: "none",
-                        background:
-                          "radial-gradient(ellipse at center, rgba(107, 92, 255, 0.40) 0%, rgba(79, 70, 229, 0.22) 35%, rgba(232, 121, 249, 0.10) 65%, transparent 100%)",
-                        filter: "blur(24px)",
-                      }}
-                    />
-
-                    <div
-                      style={{
-                        width: "186px",
-                        transform: "rotateZ(-6deg) translateY(5px)",
-                        marginRight: "-30px",
-                        borderRadius: "6px",
-                        overflow: "hidden",
-                        border: "1px solid rgba(255,255,255,0.10)",
-                        boxShadow:
-                          "0 8px 18px -6px rgba(0,0,0,0.45), 0 16px 30px -8px rgba(0,0,0,0.5)",
-                        zIndex: 1,
-                        position: "relative",
-                      }}
-                    >
-                      <Image
-                        src={`${ASSET_BASE}/carousel-04-product-brand-a.png`}
-                        alt="Brand A polished product"
-                        width={1000}
-                        height={760}
-                        style={{ width: "100%", height: "auto", display: "block" }}
-                      />
-                    </div>
-
-                    <div
-                      style={{
-                        width: "210px",
-                        transform: "rotateZ(0deg)",
-                        borderRadius: "6px",
-                        overflow: "hidden",
-                        border: "1px solid rgba(255,255,255,0.12)",
-                        boxShadow:
-                          "0 10px 22px -6px rgba(0,0,0,0.5), 0 18px 36px -10px rgba(0,0,0,0.55)",
-                        zIndex: 3,
-                        position: "relative",
-                      }}
-                    >
-                      <Image
-                        src={`${ASSET_BASE}/carousel-04-product-brand-b.png`}
-                        alt="Brand B polished product"
-                        width={1000}
-                        height={760}
-                        style={{ width: "100%", height: "auto", display: "block" }}
-                      />
-                    </div>
-
-                    <div
-                      style={{
-                        width: "186px",
-                        transform: "rotateZ(6deg) translateY(5px)",
-                        marginLeft: "-30px",
-                        borderRadius: "6px",
-                        overflow: "hidden",
-                        border: "1px solid rgba(255,255,255,0.10)",
-                        boxShadow:
-                          "0 8px 18px -6px rgba(0,0,0,0.45), 0 16px 30px -8px rgba(0,0,0,0.5)",
-                        zIndex: 2,
-                        position: "relative",
-                      }}
-                    >
-                      <Image
-                        src={`${ASSET_BASE}/carousel-04-product-sales-rep-crm.png`}
-                        alt="Integrated sales rep CRM polished product"
-                        width={1000}
-                        height={760}
-                        style={{ width: "100%", height: "auto", display: "block" }}
-                      />
-                    </div>
-                  </div>
-                </div>
+                <RotatingProductShowcase
+                  intervalMs={4500}
+                  items={[
+                    {
+                      src: `${ASSET_BASE}/carousel-04-product-brand-a.png`,
+                      alt: "Polished product: brand A landing experience with brand menu and topic tiles",
+                      label: "Brand A · Patient-facing experience",
+                    },
+                    {
+                      src: `${ASSET_BASE}/carousel-04-product-brand-b.png`,
+                      alt: "Polished product: brand B home with brand hero imagery and topic tile navigation",
+                      label: "Brand B · Patient-facing experience",
+                    },
+                    {
+                      src: `${ASSET_BASE}/carousel-04-product-sales-rep-crm.png`,
+                      alt: "Polished product: integrated sales rep CRM showing HCP profile, recently shown brand tiles, recommended next-best content, call notes",
+                      label: "Sales rep CRM · HCP intelligence layer",
+                    },
+                  ]}
+                />
               ),
               signal:
                 "I balance brand sovereignty with system governance. The system serves the brand; the brand doesn't fight the system.",
