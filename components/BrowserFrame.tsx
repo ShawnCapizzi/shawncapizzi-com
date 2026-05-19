@@ -53,7 +53,6 @@ export function BrowserFrame({
   }, [src]);
 
   const chromeHeight = 38;
-  const viewportHeight = width / aspect;
 
   // Theme-aware colors: dark default tuned to Shawn's design tokens
   const isDark = theme === "dark";
@@ -124,7 +123,7 @@ export function BrowserFrame({
           className="relative bg-black"
           style={{
             width: "100%",
-            height: `${viewportHeight}px`,
+            aspectRatio: `${aspect}`,
           }}
         >
           <video
