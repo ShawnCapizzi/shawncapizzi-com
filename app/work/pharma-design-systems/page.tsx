@@ -142,27 +142,41 @@ export default function Page() {
               media: (
                 <div
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "clamp(1rem, 3vw, 2.5rem)",
-                    flexWrap: "wrap",
+                    position: "relative",
                     width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "flex-start",
+                    paddingTop: "1rem",
+                    paddingBottom: "5rem",
                   }}
                 >
+                  {/* Desktop browser — square-on, base layer */}
                   <BrowserFrame
                     src="/videos/carousel-04-wallet-desktop.mp4"
                     poster="/videos/carousel-04-wallet-desktop-poster.jpg"
                     url="elrexfio.com/support-and-savings/mobile-wallet-card"
                     width={460}
-                    tiltDegrees={-2}
+                    tiltDegrees={0}
                   />
-                  <TiltedPhoneFrame
-                    src="/videos/carousel-04-wallet-mobile.mp4"
-                    poster="/videos/carousel-04-wallet-mobile-poster.jpg"
-                    width={200}
-                    tiltDegrees={-8}
-                  />
+
+                  {/* Phone — absolutely positioned bottom-right of desktop, ~30% peeking out below */}
+                  <div
+                    style={{
+                      position: "absolute",
+                      right: "calc(50% - 260px)",
+                      bottom: "0",
+                      zIndex: 2,
+                      pointerEvents: "none",
+                    }}
+                  >
+                    <TiltedPhoneFrame
+                      src="/videos/carousel-04-wallet-mobile.mp4"
+                      poster="/videos/carousel-04-wallet-mobile-poster.jpg"
+                      width={180}
+                      tiltDegrees={-8}
+                    />
+                  </div>
                 </div>
               ),
               signal:
