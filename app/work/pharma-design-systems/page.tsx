@@ -154,8 +154,8 @@ export default function Page() {
                     <TiltedPhoneFrame
                       src="/videos/carousel-04-wallet-mobile.mp4"
                       poster="/videos/carousel-04-wallet-mobile-poster.jpg"
-                      width={180}
-                      tiltDegrees={-8}
+                      width={198}
+                      tiltDegrees={8}
                     />
                   </div>
                 </div>
