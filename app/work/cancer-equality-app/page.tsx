@@ -72,7 +72,7 @@ export default function Page() {
               poster="/videos/bc-navi-coach-dashboard-poster.jpg"
               url="bcnavi.chrysalisinitiative.org"
               width={600}
-              fallbackAspect="1848 / 1530"
+              fallbackAspect={1848 / 1530}
               tiltDegrees={0}
               theme="dark"
               ariaLabel="BC Navi platform walkthrough: marketing site, coach pairing, patient dashboard, and education modules"
