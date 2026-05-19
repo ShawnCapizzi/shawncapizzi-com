@@ -1,4 +1,6 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
+import { CaseStudyCarousel } from "@/components/CaseStudyCarousel";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,13 +9,16 @@ export const metadata: Metadata = {
     "A modular sales design system consolidating 12 fragmented tools across a multi-brand neurological portfolio. 33 reusable components. Adoption from 65% to 92%.",
 };
 
+const ASSET_BASE =
+  "/images/case-studies/02-multi-brand-pharma-sales-tools";
+
 export default function Page() {
   return (
     <CaseStudyLayout
       eyebrow="(Case Study)"
       title="Multi-Brand Sales Design System"
       subtitle="A modular sales design system consolidating 12 fragmented tools across a multi-brand neurological portfolio."
-      heroImage="/images/case-studies/02-multi-brand-pharma-sales-tools/01-hero-lead-brand-wireframe-to-product.png"
+      heroImage={`${ASSET_BASE}/01-hero-lead-brand-wireframe-to-product.png`}
       heroImageAlt="Lead MS brand homepage wireframe alongside the finished product"
       metadata={[
         { label: "ENGAGEMENT", value: "Lead Product Designer, multi-brand sales design system" },
@@ -24,25 +29,395 @@ export default function Page() {
       challenge={[
         "Pharmaceutical sales reps were juggling 12 different sales tools across a major neurological brand portfolio. Each tool had its own navigation, its own taxonomy, its own visual structure. All of them ran on Veeva with Salesforce integration, but they weren't operating as a system.",
         "Reps had to relearn navigation every time they switched products. Brand managers maintained independent approaches that drifted further apart with each release. Regulatory reviews repeated similar conversations across separate tools. Development resources were duplicated across teams who weren't talking to each other.",
-        "The friction wasn't obvious to executives. But it was costing time, money, and the confidence reps needed in conversations with healthcare providers — conversations that often ran 45 seconds to six minutes to a 12-minute coffee chat, with no way to predict in advance which version it would be.",
+        "The friction wasn't obvious to executives. But it was costing time, money, and the confidence reps needed in conversations with healthcare providers, conversations that often ran 45 seconds to six minutes to a 12-minute coffee chat, with no way to predict in advance which version it would be.",
       ]}
       approach={[
-        "I came onto the engagement at the pitch stage — helping define the opportunity, prototype the proposed system, and ultimately win the business. Once the work was won, I partnered with brand managers internally to map components to each brand's particular content needs, and with development teams to ensure templates and design system rules would scale across the current portfolio and through future product indication expansion.",
+        "I came onto the engagement at the pitch stage, helping define the opportunity, prototype the proposed system, and ultimately win the business. Once the work was won, I partnered with brand managers internally to map components to each brand's particular content needs, and with development teams to ensure templates and design system rules would scale across the current portfolio and through future product indication expansion.",
         "The result was a modular enterprise design system. Thirty-three reusable components. Unified navigation structure. Standardized taxonomy. Flexible content architecture that supported both 45-second elevator pitches and six-minute deeper conversations. Salesforce-integrated interaction tracking. Embedded resource-sharing pathways for PDFs, video, and rep-to-HCP follow-ups. Built-in field notes for pre-call planning and post-call follow-up.",
         "Brand teams could still express campaign identity. But inside a governed design system. The result wasn't uniformity. It was structured flexibility.",
         "The harder work was organizational. Brand managers had to give up some autonomy to gain shared infrastructure. Regulatory teams had to trust pre-approved components. Development teams had to commit to the framework instead of building bespoke solutions on every brief. None of that happens because the system is well-designed. It happens because the governance is.",
       ]}
-      pullQuote="Designing for an audience that might have 45 seconds versus six minutes versus sit down for a cup of coffee, 12 minutes — you really have to be agile. The consistency made their job easier. The field notes feature let them pick up where they left off and know what to send to the office post-call."
-      midImages={[
-        {
-          src: "/images/case-studies/02-multi-brand-pharma-sales-tools/02-rep-tablet-sales-flow-storyboard.png",
-          alt: "Veeva sales flow storyboard, 8-frame walkthrough on rep tablet",
-        },
-        {
-          src: "/images/case-studies/02-multi-brand-pharma-sales-tools/03-franchise-multi-brand-email-content-selector.png",
-          alt: "Neurological franchise multi-brand portfolio with email content selector",
-        },
-      ]}
+      pullQuote="Designing for an audience that might have 45 seconds versus six minutes versus sit down for a cup of coffee, 12 minutes, you really have to be agile. The consistency made their job easier. The field notes feature let them pick up where they left off and know what to send to the office post-call."
+      processCarousel={
+        <CaseStudyCarousel
+          eyebrow="(Process)"
+          heading="The walk-through"
+          openingFrame={`"This is a story in four moves: the foundation we built before pixels (sitemap plus atomic design), the system in spec form (wireframe plus component library), the service design that connected the rep's workflow, and the polished product that shipped across brands."`}
+          closingBridge={`"Lilly's portfolio has the same shape: many brands, many sales surfaces. The design system itself is the easier part. The architectural thinking, the system spec, the service design, the cross-functional partnership, that's the work that determines whether a system survives. I've done this end to end."`}
+          keyPhrases={[
+            "Strategy first, screens second",
+            "Design system as connective tissue across the business workflow",
+            "Structured flexibility, not uniformity",
+            "Governance work determines whether the system survives",
+            "Service design at the workflow level, not just UI",
+            "Pre-approved components reduce regulatory cycles at the system level",
+          ]}
+          slides={[
+            // ─── Slide 1: FOUNDATION ─────────────────────────────────
+            {
+              tag: "ARCHITECTURE",
+              title: "Starting with structure: content map plus atomic foundation",
+              body:
+                "Two architectural maps governed everything that followed. The atomic design framework defined how UI scales from atoms to molecules to organisms to templates to pages. The sitemap defined how content was organized across the brand's therapeutic territory: pivotal trial, comparative efficacy, safety, MRI, newly diagnosed, response. Before any pixel was designed, these two maps determined what the system could become.",
+              media: (
+                <div className="flex flex-col gap-4 lg:gap-5 w-full">
+                  <div
+                    style={{
+                      borderRadius: "8px",
+                      overflow: "hidden",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      background: "#fff",
+                      boxShadow:
+                        "0 8px 20px -6px rgba(0,0,0,0.35), 0 18px 40px -16px rgba(0,0,0,0.5)",
+                      padding: "1.25rem 1rem",
+                    }}
+                  >
+                    <Image
+                      src={`${ASSET_BASE}/carousel-01-atomic-design.png`}
+                      alt="Atomic design hierarchy diagram: Atoms, Molecules, Organisms, Templates, Pages"
+                      width={1500}
+                      height={600}
+                      style={{ width: "100%", height: "auto", display: "block" }}
+                    />
+                  </div>
+
+                  <div
+                    style={{
+                      borderRadius: "8px",
+                      overflow: "hidden",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      background: "#fff",
+                      boxShadow:
+                        "0 8px 20px -6px rgba(0,0,0,0.35), 0 18px 40px -16px rgba(0,0,0,0.5)",
+                    }}
+                  >
+                    <Image
+                      src={`${ASSET_BASE}/carousel-01-sitemap.png`}
+                      alt="Content sitemap showing seven topic columns: Pivotal Trial, Comparative Efficacy, Safety and Tolerability, Experience, MRI, Newly Diagnosed, RESPOND, with sub-topics underneath each"
+                      width={1107}
+                      height={680}
+                      style={{ width: "100%", height: "auto", display: "block" }}
+                    />
+                  </div>
+                </div>
+              ),
+              signal:
+                "I lead with strategy, not screens. The foundational thinking shapes everything downstream.",
+              anticipate:
+                '"How did you decide the right level of abstraction in the sitemap?" → Brand teams already had their content priorities. The sitemap mapped what existed and what was missing. The TEC_CC numbering convention came from the regulatory team\'s existing structure, so they could find everything by topic ID. The system spoke the language of the teams using it, not the other way around.',
+            },
+
+            // ─── Slide 2: SYSTEM IN SPEC FORM ─────────────────────────
+            {
+              tag: "SYSTEM",
+              title: "Modular by spec: one template, 33 reusable parts",
+              body:
+                "The wireframe defined the page-level structure every brand would inherit: home, navigation, tabs, content, important safety information, footer. The component library catalogued the 33 reusable parts: navigation, ISIs, footer, carousels, video, content modules. Each part had behavioral rules. Brand teams composed; they didn't reinvent.",
+              media: (
+                <div className="flex flex-col gap-4 lg:gap-5 w-full">
+                  <div
+                    style={{
+                      borderRadius: "8px",
+                      overflow: "hidden",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      background: "#fff",
+                      boxShadow:
+                        "0 8px 20px -6px rgba(0,0,0,0.35), 0 18px 40px -16px rgba(0,0,0,0.5)",
+                    }}
+                  >
+                    <Image
+                      src={`${ASSET_BASE}/carousel-02-wireframe-template.png`}
+                      alt="Generic sales tool wireframe template: home navigation, tabs, content area with placeholder data visualization, important safety information block, footer"
+                      width={1240}
+                      height={930}
+                      style={{ width: "100%", height: "auto", display: "block" }}
+                    />
+                  </div>
+
+                  <div
+                    style={{
+                      borderRadius: "8px",
+                      overflow: "hidden",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      background: "#fff",
+                      boxShadow:
+                        "0 8px 20px -6px rgba(0,0,0,0.35), 0 18px 40px -16px rgba(0,0,0,0.5)",
+                    }}
+                  >
+                    <Image
+                      src={`${ASSET_BASE}/carousel-02-component-library.png`}
+                      alt="Component library catalog showing six categories: Navigation, ISIs, Footer, Carousels, Video, Content Modules"
+                      width={1497}
+                      height={745}
+                      style={{ width: "100%", height: "auto", display: "block" }}
+                    />
+                  </div>
+                </div>
+              ),
+              signal:
+                "I think in systems. The spec exists before the brand expression.",
+              anticipate:
+                '"How did you handle component versioning?" → Each component had a version pinned to the system release. Updates propagated through review at the system level. Brand teams could opt into new versions or pin to current. No silent breaking changes. That gave brand teams the confidence to commit, knowing the ground under them was stable.',
+            },
+
+            // ─── Slide 3: SERVICE DESIGN ─────────────────────────────
+            {
+              tag: "SERVICE DESIGN",
+              title: "Not just UI: connective tissue for the rep's actual workflow",
+              body:
+                "The design system wasn't a UI library. It was a service. Pre-call: Eva briefed the rep on the day's events and surfaced HCP intelligence through MyInsights. In-call: the rep selected from recommended call flows or customized on the fly. Post-call: Eva captured notes via dictation, and an automated email to the HCP went out with content tied to the conversation. The UI was one leg of a four-legged service.",
+              media: (
+                <div
+                  style={{
+                    borderRadius: "8px",
+                    overflow: "hidden",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                    background: "#fff",
+                    boxShadow:
+                      "0 8px 20px -6px rgba(0,0,0,0.35), 0 18px 40px -16px rgba(0,0,0,0.5)",
+                    padding: "2rem 1rem",
+                  }}
+                  className="w-full"
+                >
+                  <Image
+                    src={`${ASSET_BASE}/carousel-03-rep-journey.png`}
+                    alt="Service design diagram: rep on one side, HCP on the other, data store at center. Four touchpoints: Pre-Call (Eva briefing plus MyInsights), In-Call (rep selects or customizes call flow), Post-Call (Eva dictation captures notes), Post-Call (automated email to HCP with related content)"
+                    width={1200}
+                    height={780}
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      display: "block",
+                      maxWidth: "880px",
+                      margin: "0 auto",
+                    }}
+                  />
+                </div>
+              ),
+              signal:
+                "I think about design systems as connective tissue across an entire business workflow, not just as a UI layer.",
+              anticipate:
+                '"How did Eva and the dictation layer get adopted?" → The voice interaction layer was the riskiest part. We piloted it with two friendly brand teams first. Their feedback shaped the cues, the prompts, and the recovery flows. By the time it rolled out broadly, the rough edges were gone and the early adopters were the loudest advocates.',
+            },
+
+            // ─── Slide 4: OUTCOME ────────────────────────────────────
+            {
+              tag: "OUTCOME",
+              title: "Twelve sales tools. One system. Brands that still feel like themselves.",
+              body:
+                "The same wireframe structure rendered as Brand A, as Brand B, as the integrated sales rep CRM. Each brand kept its visual identity. Each rep could move between brands without losing orientation. Sales reps gained navigation memory; brand managers gained speed-to-market; the organization gained a system that would keep working long after the initial rollout.",
+              media: (
+                <div className="w-full">
+                  {/* Desktop ≥lg: fanned composition with tilts and atmospheric cloud */}
+                  <div
+                    className="hidden lg:flex"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      paddingTop: "2.5rem",
+                      paddingBottom: "3rem",
+                      minHeight: "340px",
+                    }}
+                  >
+                    <div
+                      aria-hidden="true"
+                      style={{
+                        position: "absolute",
+                        left: "50%",
+                        top: "50%",
+                        transform: "translate(-50%, -50%)",
+                        width: "640px",
+                        height: "360px",
+                        zIndex: 0,
+                        pointerEvents: "none",
+                        background:
+                          "radial-gradient(ellipse at center, rgba(107, 92, 255, 0.40) 0%, rgba(79, 70, 229, 0.22) 35%, rgba(232, 121, 249, 0.10) 65%, transparent 100%)",
+                        filter: "blur(36px)",
+                      }}
+                    />
+
+                    {/* Brand A, left, tilted left */}
+                    <div
+                      style={{
+                        width: "300px",
+                        transform: "rotateZ(-6deg) translateY(8px)",
+                        marginRight: "-48px",
+                        borderRadius: "8px",
+                        overflow: "hidden",
+                        border: "1px solid rgba(255,255,255,0.10)",
+                        boxShadow:
+                          "0 12px 28px -8px rgba(0,0,0,0.45), 0 24px 48px -12px rgba(0,0,0,0.5)",
+                        zIndex: 1,
+                        position: "relative",
+                      }}
+                    >
+                      <Image
+                        src={`${ASSET_BASE}/carousel-04-product-brand-a.png`}
+                        alt="Polished product: brand A landing experience with brand menu and topic tiles"
+                        width={1000}
+                        height={760}
+                        style={{ width: "100%", height: "auto", display: "block" }}
+                      />
+                    </div>
+
+                    {/* Brand B, center, focal point, on top */}
+                    <div
+                      style={{
+                        width: "340px",
+                        transform: "rotateZ(0deg)",
+                        borderRadius: "8px",
+                        overflow: "hidden",
+                        border: "1px solid rgba(255,255,255,0.12)",
+                        boxShadow:
+                          "0 14px 32px -8px rgba(0,0,0,0.5), 0 28px 56px -14px rgba(0,0,0,0.55)",
+                        zIndex: 3,
+                        position: "relative",
+                      }}
+                    >
+                      <Image
+                        src={`${ASSET_BASE}/carousel-04-product-brand-b.png`}
+                        alt="Polished product: brand B home with brand hero imagery and topic tile navigation"
+                        width={1000}
+                        height={760}
+                        style={{ width: "100%", height: "auto", display: "block" }}
+                      />
+                    </div>
+
+                    {/* Sales rep CRM, right, tilted right */}
+                    <div
+                      style={{
+                        width: "300px",
+                        transform: "rotateZ(6deg) translateY(8px)",
+                        marginLeft: "-48px",
+                        borderRadius: "8px",
+                        overflow: "hidden",
+                        border: "1px solid rgba(255,255,255,0.10)",
+                        boxShadow:
+                          "0 12px 28px -8px rgba(0,0,0,0.45), 0 24px 48px -12px rgba(0,0,0,0.5)",
+                        zIndex: 2,
+                        position: "relative",
+                      }}
+                    >
+                      <Image
+                        src={`${ASSET_BASE}/carousel-04-product-sales-rep-crm.png`}
+                        alt="Polished product: integrated sales rep CRM showing HCP profile, recently shown brand tiles, recommended next-best content, call notes"
+                        width={1000}
+                        height={760}
+                        style={{ width: "100%", height: "auto", display: "block" }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Mobile <lg: scaled-down version of same fanned composition */}
+                  <div
+                    className="flex lg:hidden"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      paddingTop: "1.5rem",
+                      paddingBottom: "2rem",
+                      minHeight: "210px",
+                    }}
+                  >
+                    <div
+                      aria-hidden="true"
+                      style={{
+                        position: "absolute",
+                        left: "50%",
+                        top: "50%",
+                        transform: "translate(-50%, -50%)",
+                        width: "380px",
+                        height: "220px",
+                        zIndex: 0,
+                        pointerEvents: "none",
+                        background:
+                          "radial-gradient(ellipse at center, rgba(107, 92, 255, 0.40) 0%, rgba(79, 70, 229, 0.22) 35%, rgba(232, 121, 249, 0.10) 65%, transparent 100%)",
+                        filter: "blur(24px)",
+                      }}
+                    />
+
+                    <div
+                      style={{
+                        width: "186px",
+                        transform: "rotateZ(-6deg) translateY(5px)",
+                        marginRight: "-30px",
+                        borderRadius: "6px",
+                        overflow: "hidden",
+                        border: "1px solid rgba(255,255,255,0.10)",
+                        boxShadow:
+                          "0 8px 18px -6px rgba(0,0,0,0.45), 0 16px 30px -8px rgba(0,0,0,0.5)",
+                        zIndex: 1,
+                        position: "relative",
+                      }}
+                    >
+                      <Image
+                        src={`${ASSET_BASE}/carousel-04-product-brand-a.png`}
+                        alt="Brand A polished product"
+                        width={1000}
+                        height={760}
+                        style={{ width: "100%", height: "auto", display: "block" }}
+                      />
+                    </div>
+
+                    <div
+                      style={{
+                        width: "210px",
+                        transform: "rotateZ(0deg)",
+                        borderRadius: "6px",
+                        overflow: "hidden",
+                        border: "1px solid rgba(255,255,255,0.12)",
+                        boxShadow:
+                          "0 10px 22px -6px rgba(0,0,0,0.5), 0 18px 36px -10px rgba(0,0,0,0.55)",
+                        zIndex: 3,
+                        position: "relative",
+                      }}
+                    >
+                      <Image
+                        src={`${ASSET_BASE}/carousel-04-product-brand-b.png`}
+                        alt="Brand B polished product"
+                        width={1000}
+                        height={760}
+                        style={{ width: "100%", height: "auto", display: "block" }}
+                      />
+                    </div>
+
+                    <div
+                      style={{
+                        width: "186px",
+                        transform: "rotateZ(6deg) translateY(5px)",
+                        marginLeft: "-30px",
+                        borderRadius: "6px",
+                        overflow: "hidden",
+                        border: "1px solid rgba(255,255,255,0.10)",
+                        boxShadow:
+                          "0 8px 18px -6px rgba(0,0,0,0.45), 0 16px 30px -8px rgba(0,0,0,0.5)",
+                        zIndex: 2,
+                        position: "relative",
+                      }}
+                    >
+                      <Image
+                        src={`${ASSET_BASE}/carousel-04-product-sales-rep-crm.png`}
+                        alt="Integrated sales rep CRM polished product"
+                        width={1000}
+                        height={760}
+                        style={{ width: "100%", height: "auto", display: "block" }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              ),
+              signal:
+                "I balance brand sovereignty with system governance. The system serves the brand; the brand doesn't fight the system.",
+              anticipate:
+                '"What was the moment brand managers stopped resisting?" → Around month 8, the second wave of brand launches happened. The brand teams that had used the system saw their colleagues\' campaigns ship faster with fewer regulatory cycles. The internal sales pitch from brand to brand was more persuasive than anything I could have made. After that, brand managers were asking when their next launch could move onto the system.',
+            },
+          ]}
+        />
+      }
       outcomes={[
         {
           headline: "12 sales tools consolidated into 33 reusable components",
@@ -82,12 +457,12 @@ export default function Page() {
       ]}
       bottomImages={[
         {
-          src: "/images/case-studies/02-multi-brand-pharma-sales-tools/04-lead-brand-global-experience-340k.png",
-          alt: "Lead brand global experience proof point — over 340K patients treated",
+          src: `${ASSET_BASE}/04-lead-brand-global-experience-340k.png`,
+          alt: "Lead brand global experience proof point, over 340K patients treated",
         },
         {
-          src: "/images/case-studies/02-multi-brand-pharma-sales-tools/05-psoriasis-pasi-pga-assessment-tools.png",
-          alt: "PASI/PGA psoriasis assessment tools — cross-therapeutic system extension",
+          src: `${ASSET_BASE}/05-psoriasis-pasi-pga-assessment-tools.png`,
+          alt: "PASI/PGA psoriasis assessment tools, cross-therapeutic system extension",
         },
       ]}
       closer={[
@@ -99,7 +474,7 @@ export default function Page() {
         {
           slug: "pharma-design-systems",
           eyebrow: "Multi-Brand · 3x Design Systems · Governance",
-          title: "Building digital governance across 15+ therapeutic brands",
+          title: "Building digital governance across 70+ therapeutic brands",
           description:
             "$3.5M+ in digital transformation. Industry-first mobile wallet integration for patient medication information.",
           image: "/images/hero/consumer-care-hub-hero-balanced.gif",
