@@ -9,14 +9,11 @@ import Image from "next/image";
 export interface BrandTile {
   src: string;
   alt: string;
-  /** Small caption shown below the tile, e.g. "Neurology · Brand A" */
   label: string;
 }
 
 export interface FragmentationGridProps {
-  /** Exactly 3 real brand UI screenshots — the "anchors" of the grid. */
   brandTiles: [BrandTile, BrandTile, BrandTile];
-  /** Headline shown above the strip of abstract tiles. Defaults to "+ 12 more brands". */
   abstractStripLabel?: string;
 }
 
@@ -24,14 +21,14 @@ export interface FragmentationGridProps {
 // COMPONENT
 // ---------------------------------------------------------------------------
 //
-// Visual story: three real brand screenshots above a strip of 12 muted color
-// tiles + a "growing" indicator. Demonstrates "15+ systems pretending to be
-// one" — the 3 anchors show what brand fragmentation actually looks like
-// (totally different visual languages, navigation, palettes), and the strip
-// signals that this is the full enterprise scope, not just three examples.
+// Three real brand UIs (anchors) sit above a strip of 12 muted color tiles
+// + a growing indicator. Visualizes "15+ systems pretending to be one" —
+// the 3 anchors show what brand fragmentation looks like (different visual
+// languages, palettes, navigation), the strip signals enterprise scope.
 
-// 12 muted-but-distinct palette swatches — restrained editorial colors that
-// stay tonally cohesive with the site while signaling brand variety.
+// 12 muted, distinct brand-color swatches. Each represents a hypothetical
+// brand's palette. They're tonally cohesive with the dark navy site but
+// distinct enough from one another to communicate "many brands, many systems."
 const ABSTRACT_PALETTE: { color: string; name: string }[] = [
   { color: "#3B5266", name: "deep teal-slate" },
   { color: "#6B5B82", name: "muted plum" },
@@ -52,160 +49,63 @@ export function FragmentationGrid({
   abstractStripLabel = "+ 12 more brands · each with its own design language",
 }: FragmentationGridProps) {
   return (
-    <div className="fg" role="img" aria-label="Visualization of 15+ fragmented pharma brand systems">
-      <style jsx>{`
-        .fg {
-          --fg-bg: var(--bg, #faf8f4);
-          --fg-ink: var(--ink, #111111);
-          --fg-muted: var(--muted, #6b6b6b);
-          --fg-border: var(--border, #e5e1d8);
-          --fg-paper: var(--paper, #ffffff);
-          --fg-mono: var(
-            --font-mono,
-            "JetBrains Mono",
-            ui-monospace,
-            "SFMono-Regular",
-            Menlo,
-            monospace
-          );
-
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          gap: 1.25rem;
-          padding: 1.5rem;
-          background: var(--fg-paper);
-          border: 1px solid var(--fg-border);
-        }
-
-        /* ---------- Anchor row: 3 real brand screenshots ---------- */
-        .fg-anchors {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0.75rem;
-        }
-        @media (max-width: 640px) {
-          .fg-anchors {
-            grid-template-columns: 1fr;
-          }
-        }
-        .fg-anchor {
-          display: flex;
-          flex-direction: column;
-          gap: 0.5rem;
-        }
-        .fg-anchor-image {
-          position: relative;
-          width: 100%;
-          aspect-ratio: 4 / 3;
-          background: #f5f3ee;
-          border: 1px solid var(--fg-border);
-          overflow: hidden;
-        }
-        .fg-anchor-label {
-          font-family: var(--fg-mono);
-          font-size: 10px;
-          letter-spacing: 0.12em;
-          color: var(--fg-muted);
-          text-transform: uppercase;
-        }
-
-        /* ---------- Strip header: "+12 more" ---------- */
-        .fg-strip-header {
-          font-family: var(--fg-mono);
-          font-size: 10px;
-          letter-spacing: 0.14em;
-          color: var(--fg-muted);
-          text-transform: uppercase;
-          padding-top: 0.75rem;
-          border-top: 1px solid var(--fg-border);
-        }
-
-        /* ---------- Abstract strip: 12 muted tiles + 1 "growing" indicator ---------- */
-        .fg-strip {
-          display: grid;
-          grid-template-columns: repeat(13, 1fr);
-          gap: 0.4rem;
-        }
-        @media (max-width: 640px) {
-          .fg-strip {
-            grid-template-columns: repeat(7, 1fr);
-          }
-        }
-        .fg-tile {
-          aspect-ratio: 4 / 5;
-          border-radius: 1px;
-          position: relative;
-          overflow: hidden;
-          /* Subtle gradient + inner shadow for paper-on-paper depth */
-          box-shadow:
-            inset 0 0 0 1px rgba(255, 255, 255, 0.06),
-            inset 0 -8px 12px -8px rgba(0, 0, 0, 0.2),
-            0 1px 2px rgba(0, 0, 0, 0.04);
-        }
-        .fg-tile::after {
-          /* Tiny "UI header" hint at the top of each tile — implies "this is a brand UI" */
-          content: "";
-          position: absolute;
-          top: 12%;
-          left: 12%;
-          right: 12%;
-          height: 2px;
-          background: rgba(255, 255, 255, 0.18);
-          border-radius: 1px;
-        }
-        .fg-tile-growing {
-          background: var(--fg-paper) !important;
-          border: 1px dashed var(--fg-muted);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: none;
-        }
-        .fg-tile-growing::after {
-          display: none;
-        }
-        .fg-tile-growing span {
-          font-family: var(--fg-mono);
-          font-size: 14px;
-          font-weight: 500;
-          color: var(--fg-muted);
-        }
-      `}</style>
-
-      {/* ── Three anchor screenshots ── */}
-      <div className="fg-anchors">
+    <div
+      className="w-full flex flex-col gap-5 p-6 card-surface border border-border-default rounded-xl"
+      role="img"
+      aria-label="Visualization of 15+ fragmented pharma brand systems"
+    >
+      {/* Anchor row: 3 real brand screenshots */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {brandTiles.map((tile, i) => (
-          <div key={i} className="fg-anchor">
-            <div className="fg-anchor-image">
+          <div key={i} className="flex flex-col gap-2">
+            <div className="relative w-full aspect-[4/3] bg-bg-elevated border border-border-default rounded-md overflow-hidden">
               <Image
                 src={tile.src}
                 alt={tile.alt}
                 fill
                 sizes="(min-width: 1024px) 18vw, (min-width: 640px) 30vw, 90vw"
-                style={{ objectFit: "cover", objectPosition: "center" }}
+                className="object-cover object-center"
               />
             </div>
-            <div className="fg-anchor-label">{tile.label}</div>
+            <p className="metadata-label">{tile.label}</p>
           </div>
         ))}
       </div>
 
-      {/* ── Strip label ── */}
-      <div className="fg-strip-header">{abstractStripLabel}</div>
+      {/* Strip header */}
+      <p className="pt-3 border-t border-border-subtle metadata-label">
+        {abstractStripLabel}
+      </p>
 
-      {/* ── 12 abstract tiles + 1 growing indicator ── */}
-      <div className="fg-strip" aria-hidden="true">
+      {/* 12 muted brand-color tiles + 1 "and growing" indicator */}
+      <div
+        className="grid grid-cols-7 sm:grid-cols-13 gap-1.5"
+        aria-hidden="true"
+        style={{ gridTemplateColumns: "repeat(13, minmax(0, 1fr))" }}
+      >
         {ABSTRACT_PALETTE.map((swatch, i) => (
           <div
             key={i}
-            className="fg-tile"
+            className="aspect-[4/5] rounded-sm relative overflow-hidden shadow-sm"
             style={{ background: swatch.color }}
             title={swatch.name}
-          />
+          >
+            {/* Faint inner highlight line — implies "this is a UI" */}
+            <span
+              aria-hidden="true"
+              className="absolute top-[12%] left-[12%] right-[12%] h-[2px] rounded-sm"
+              style={{ background: "rgba(255,255,255,0.18)" }}
+            />
+          </div>
         ))}
-        <div className="fg-tile fg-tile-growing" title="and growing">
-          <span>+</span>
+        {/* "+" growing indicator */}
+        <div
+          className="aspect-[4/5] rounded-sm border border-dashed border-border-strong flex items-center justify-center"
+          title="and growing"
+        >
+          <span className="font-mono text-sm font-medium text-text-tertiary">
+            +
+          </span>
         </div>
       </div>
     </div>
