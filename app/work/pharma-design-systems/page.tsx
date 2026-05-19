@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pharma Design Systems & Multi-Brand Architecture",
   description:
-    "Governing 73 product brands with 3 design systems. $3.5M+ in digital transformation, three enterprise design systems serving HCP, DTC, and patient audiences, and an industry-first mobile wallet integration.",
+    "Governing 70+ product brands with 3 design systems. $3.5M+ in digital transformation, three enterprise design systems serving HCP, DTC, and patient audiences, and an industry-first mobile wallet integration.",
 };
 
 export default function Page() {
@@ -15,24 +15,24 @@ export default function Page() {
     <CaseStudyLayout
       eyebrow="(Case Study)"
       title="Pharma Design Systems & Multi-Brand Architecture"
-      subtitle="Governing 73 product brands with 3 design systems."
+      subtitle="Governing 70+ product brands with 3 design systems."
       heroImage="/images/hero/consumer-care-hub-hero-balanced.gif"
       heroImageAlt="Consumer care hub homepage. A new offer to help Americans save."
       metadata={[
         { label: "ENGAGEMENT", value: "Enterprise design system leadership" },
         { label: "YEAR", value: "2024–present" },
         { label: "SCALE", value: "$3.5M+ digital transformation" },
-        { label: "SCOPE", value: "73 brands · 3 systems · HCP · DTC · patient" },
+        { label: "SCOPE", value: "70+ brands · 3 systems · HCP · DTC · patient" },
       ]}
       challenge={[
-        "A major pharma organization's digital ecosystem had grown organically across 73 product brands spanning branded HCP sites, branded patient sites, and unbranded therapy education resources. Each team had its own design language, its own information architecture, its own approach to regulatory review. The result wasn't a system. It was 73 systems pretending to be one.",
+        "A major pharma organization's digital ecosystem had grown organically across 70+ product brands spanning branded HCP sites, branded patient sites, and unbranded therapy education resources. Each team had its own design language, its own information architecture, its own approach to regulatory review. The result wasn't a system. It was 70+ systems pretending to be one.",
         "The cost was real. Operational inefficiency. Inconsistent patient and HCP experiences. Compliance risk that varied brand by brand. A speed-to-market problem in therapeutic spaces where launch timing matters in millions of dollars. Resource waste across 60+ team members running concurrent projects without shared infrastructure.",
         "The leadership team needed digital governance that could support a multi-billion dollar therapeutic portfolio without slowing the brand teams down.",
       ]}
       approach={[
         "I led the architecture and governance of three enterprise design systems, each serving a different audience and use case across the portfolio.",
         "The work happened in three layers. The first was strategic: direct partnership with CTOs and senior business strategists on multi-million dollar digital initiative planning, including ROI documentation that could be reported to the board.",
-        "The second was architectural: defining the modular component logic, taxonomy, and content frameworks that would govern brand work across all 73 brands. Each brand operates inside its own sandbox, working out particular content needs and creative expression within the governance framework. The system is intentionally restrained. Working with copywriters, medical strategists, and regulatory partners, I helped brand teams build information architecture that served both the system and the scientific story.",
+        "The second was architectural: defining the modular component logic, taxonomy, and content frameworks that would govern brand work across all 70+ brands. Each brand operates inside its own sandbox, working out particular content needs and creative expression within the governance framework. The system is intentionally restrained. Working with copywriters, medical strategists, and regulatory partners, I helped brand teams build information architecture that served both the system and the scientific story.",
         "The third was operational: a governance training program shared with copy, design, and media partners. The training teaches the correct way to leverage the system, the tolerance to which it can be modified, and best practices for initial setup. The goal isn't compliance enforcement. It's knowledge sharing.",
         "A specific innovation worth naming: I led the development of distribution channels for the Patient Design System, including a QR-based mobile wallet card for iOS and Android that gives patients fast access to co-pay information and medication support. It was an industry-first in pharma, made possible only because the design system was built to support new patterns instead of resisting them.",
       ]}
@@ -65,17 +65,17 @@ export default function Page() {
             // ─── Slide 1 ────────────────────────────────────────────────
             {
               tag: "CONTEXT",
-              title: "73 brands, governed by 3 design systems",
+              title: "70+ brands, governed by 3 design systems",
               body:
-                "A multi-billion dollar therapeutic portfolio. 73 product brands, each with branded HCP sites, branded patient sites, and unbranded therapy education resources. Before the work: each brand grown organically with its own design language, information architecture, and approach to regulatory review. 60+ team members duplicating effort, speed-to-market measured in months when it should have been weeks, compliance risk varying brand by brand. The architectural answer: three design systems serving three audiences, with shared foundations and distinct audience logic.",
+                "A multi-billion dollar therapeutic portfolio. 70+ product brands, each with branded HCP sites, branded patient sites, and unbranded therapy education resources. Before the work: each brand grown organically with its own design language, information architecture, and approach to regulatory review. 60+ team members duplicating effort, speed-to-market measured in months when it should have been weeks, compliance risk varying brand by brand. The architectural answer: three design systems serving three audiences, with shared foundations and distinct audience logic.",
               image:
                 "/images/case-studies/01-pharma-design-systems/carousel-01-pfizer-brand-index.png",
               imageAlt:
-                "Pfizer brand index showing the full A–Z portfolio of 73 product brands, each with HCP, patient, and prescribing information surfaces",
+                "Pfizer brand index showing the full A–Z portfolio of 70+ product brands, each with HCP, patient, and prescribing information surfaces",
               signal:
                 "I can name and frame a real enterprise problem at the right altitude for leadership.",
               anticipate:
-                '"How did you quantify the problem to leadership?" → ROI documentation reported at the board level. Speed-to-market deltas. 60+ team members duplicating effort across concurrent projects. The scope itself, 73 brands across three site types, was the case.',
+                '"How did you quantify the problem to leadership?" → ROI documentation reported at the board level. Speed-to-market deltas. 60+ team members duplicating effort across concurrent projects. The scope itself, 70+ brands across three site types, was the case.',
             },
 
             // ─── Slide 2 ────────────────────────────────────────────────
@@ -103,7 +103,7 @@ export default function Page() {
               tag: "PRACTICE & CRAFT",
               title: "Foundations designed for restraint",
               body:
-                "A comprehensive color system with primary, secondary, neutral, accent, utility, background, and tinted variants. Disciplined enough to govern 73 brands, expressive enough to let each one keep its identity. The system is restrained on purpose. Restraint is what makes it scale.",
+                "A comprehensive color system with primary, secondary, neutral, accent, utility, background, and tinted variants. Disciplined enough to govern 70+ brands, expressive enough to let each one keep its identity. The system is restrained on purpose. Restraint is what makes it scale.",
               image:
                 "/images/case-studies/01-pharma-design-systems/carousel-03-color-system.png",
               imageAlt:
@@ -275,7 +275,7 @@ export default function Page() {
         {
           headline: "Optimized vendor management",
           description:
-            "Across offshore and onshore development teams, reducing costs while maintaining brand consistency across 15+ brands.",
+            "Across offshore and onshore development teams, reducing costs while maintaining brand consistency across 70+ brands.",
         },
         {
           headline: "Scalable infrastructure",
