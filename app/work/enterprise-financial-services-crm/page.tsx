@@ -61,7 +61,7 @@ export default function Page() {
             </div>
 
             <RotatingProductShowcase
-              intervalMs={4500}
+              intervalMs={3150}
               aspectRatio="4 / 3"
               items={[
                 {
@@ -103,7 +103,7 @@ export default function Page() {
             </div>
 
             <RotatingProductShowcase
-              intervalMs={5000}
+              intervalMs={3500}
               aspectRatio="16 / 9"
               items={[
                 {

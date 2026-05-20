@@ -209,7 +209,7 @@ export default function Page() {
                 "The same wireframe structure rendered as Brand A, as Brand B, as the integrated sales rep CRM. Each brand kept its visual identity. Each rep could move between brands without losing orientation. Sales reps gained navigation memory; brand managers gained speed-to-market; the organization gained a system that would keep working long after the initial rollout.",
               media: (
                 <RotatingProductShowcase
-                  intervalMs={4500}
+                  intervalMs={3150}
                   items={[
                     {
                       src: `${ASSET_BASE}/carousel-04-product-brand-a.png`,
