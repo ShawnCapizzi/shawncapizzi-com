@@ -55,7 +55,7 @@ export default function Page() {
           ],
           images: [
             {
-              src: `${ASSET_BASE}/02-ai-patient-support-home.png`,
+              src: `${ASSET_BASE}/01-hero-ai-native-design-lab.png`,
               alt: "AI Patient Support home, disease-organized navigation across oncology, diabetes, cardiovascular, immunology, neurology, HIV/AIDS, rare disease, and respiratory",
             },
             {
@@ -115,8 +115,8 @@ export default function Page() {
           ],
           images: [
             {
-              src: `${ASSET_BASE}/06-three-custom-gpts.png`,
-              alt: "Three Custom GPTs deployed publicly in ChatGPT: UX Research Advisor, Product Innovation and Case Study Helper, AEM Design Assistant",
+              src: `${ASSET_BASE}/01-hero-ai-native-design-lab.png`,
+              alt: "Working AI Patient Support platform built using the same Custom GPT-assisted research and prototyping methodology",
             },
           ],
         },
