@@ -288,6 +288,10 @@ export default function Page() {
           alt: "PASI/PGA psoriasis assessment tools, cross-therapeutic system extension",
         },
       ]}
+      closerHero={{
+        src: `${ASSET_BASE}/closer-hero-shipped-product.png`,
+        alt: "Final shipped multi-brand sales tool design",
+      }}
       closer={[
         "Most enterprise system failures aren't design failures. They're governance failures. The components were never the hard part. The hard part was getting brand teams, regulatory teams, and development teams to agree on the cost of fragmentation and the value of doing the work together.",
         "The design system was built once. It serves many. That's the difference between design that scales and design that fragments.",
