@@ -119,7 +119,24 @@ export function ClarityCardDeck() {
     <div className="w-full">
       <style>{shimmerCSS}</style>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
+      {/* Playmat: gives the cards a working surface instead of floating against the page. */}
+      <div
+        className="relative rounded-3xl overflow-hidden p-8 md:p-12 lg:p-14"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(107, 92, 255, 0.10) 0%, rgba(107, 92, 255, 0.04) 35%, transparent 70%), linear-gradient(160deg, #0a1a30 0%, #050d1c 60%, #030814 100%)",
+          boxShadow:
+            "inset 0 0 0 1px rgba(107, 92, 255, 0.14), inset 0 0 60px rgba(0, 0, 0, 0.5), 0 30px 80px -30px rgba(0, 0, 0, 0.7)",
+        }}
+      >
+        {/* Inner felt border ring for depth */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-4 md:inset-5 rounded-2xl pointer-events-none"
+          style={{ border: "1px solid rgba(107, 92, 255, 0.08)" }}
+        />
+
+        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
         {/* DECK SIDE */}
         <div className="flex flex-col items-center md:items-start">
           <p className="eyebrow mb-4 text-text-tertiary">The Deck</p>
@@ -197,6 +214,7 @@ export function ClarityCardDeck() {
               <EmptyDrawSlot />
             )}
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -315,7 +333,7 @@ function EmptyDeckSlot() {
   return (
     <div
       className="h-full w-full rounded-2xl border border-dashed flex items-center justify-center"
-      style={{ borderColor: "rgba(107, 92, 255, 0.20)" }}
+      style={{ borderColor: "rgba(107, 92, 255, 0.12)" }}
     >
       <p className="text-xs text-text-tertiary">Deck empty</p>
     </div>
@@ -326,7 +344,7 @@ function EmptyDrawSlot() {
   return (
     <div
       className="h-full w-full rounded-2xl border border-dashed flex items-center justify-center"
-      style={{ borderColor: "rgba(107, 92, 255, 0.15)" }}
+      style={{ borderColor: "rgba(107, 92, 255, 0.10)" }}
     >
       <p className="text-xs text-text-tertiary px-6 text-center">
         Click <span className="text-text-secondary">Draw a card</span> to begin
