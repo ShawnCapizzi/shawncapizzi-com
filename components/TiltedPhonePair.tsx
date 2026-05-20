@@ -58,7 +58,7 @@ function TiltedPhone({ video, tilt }: { video: PhoneVideo; tilt: number }) {
     <figure className="group flex flex-col items-center" style={style}>
       <div
         className={[
-          "relative w-full max-w-[260px]",
+          "relative w-full max-w-[220px]",
           // Mobile: no tilt, sits upright stacked. Desktop: tilted slab.
           "[transform:rotate(0deg)] sm:[transform:rotate(var(--tilt))]",
           "transition-transform duration-500 ease-out will-change-transform",
@@ -77,16 +77,16 @@ function TiltedPhone({ video, tilt }: { video: PhoneVideo; tilt: number }) {
           ].join(" ")}
         />
 
-        {/* Device bezel. */}
+        {/* Device bezel. Aspect tuned to iPhone Pro screen (9:19.5). */}
         <div
           className={[
-            "relative aspect-[888/1490] w-full",
+            "relative aspect-[9/19.5] w-full",
             "rounded-[2.6rem] sm:rounded-[2.8rem]",
             "bg-zinc-950 p-[6px] sm:p-[7px]",
             "shadow-[0_24px_60px_-18px_rgba(0,0,0,0.45),0_10px_28px_-12px_rgba(0,0,0,0.35),inset_0_0_0_1px_rgba(255,255,255,0.06)]",
           ].join(" ")}
         >
-          {/* Screen. */}
+          {/* Screen. Video uses object-cover so the chat content fills the iPhone-shaped frame; ~14% per side is cropped from the wider source. */}
           <div className="relative h-full w-full overflow-hidden rounded-[2.15rem] sm:rounded-[2.35rem] bg-black">
             <video
               src={video.src}
@@ -97,7 +97,7 @@ function TiltedPhone({ video, tilt }: { video: PhoneVideo; tilt: number }) {
               playsInline
               preload="metadata"
               aria-label={video.alt}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-center"
             />
           </div>
         </div>
