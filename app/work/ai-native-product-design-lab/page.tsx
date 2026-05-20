@@ -62,6 +62,7 @@ export default function Page() {
             {
               src: `${ASSET_BASE}/02-ai-patient-support-drug-detail.png`,
               alt: "AI Patient Support drug detail view, oncology IO lead deep dive with tagged media by length, source, and category",
+              browserFrame: { url: "ai-patient-support.com/oncology" },
             },
           ],
         },
@@ -165,10 +166,6 @@ export default function Page() {
             "The 10 Source Packs framework feeds AI the inputs it needs to produce real strategic work, not generic output.",
         },
       ]}
-      closerHero={{
-        src: `${ASSET_BASE}/07-workshop-facilitation-duotone.gif`,
-        alt: "Workshop facilitation in duotone, the human side of AI work",
-      }}
       closer={[
         "Most teams hiring AI consultants get advice. The teams hiring me get advice plus a demonstration.",
         "AI isn't a strategy. It's a tool. The teams that win with AI long-term aren't the ones with the best models. They're the ones who treated the experience architecture around the model as the actual work.",
