@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ClarityCardDeck } from "@/components/ClarityCardDeck";
 
 export const metadata: Metadata = {
   title: "The Clarity Advantage",
@@ -94,6 +95,24 @@ export default function Page() {
               </p>
             </article>
           </div>
+        </div>
+      </section>
+
+      {/* INTERACTIVE DECK TEASE */}
+      <section className="py-16 md:py-24 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <p className="eyebrow mb-4">Try the deck</p>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight leading-tight text-text-primary">
+              A taste of the Capizzi Clarity Cards.
+            </h2>
+            <p className="mt-4 md:mt-6 text-base md:text-lg text-text-secondary leading-relaxed">
+              Each card is a question for a moment in the work. Draw one when
+              the work is stuck. The full 54-card deck is in production.
+            </p>
+          </div>
+
+          <ClarityCardDeck />
         </div>
       </section>
 
