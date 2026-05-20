@@ -112,11 +112,6 @@ export default function Page() {
                   label: "BI View · information architecture spec",
                 },
                 {
-                  src: `${ASSET_BASE}/wireframe-bi-view-personal-information.png`,
-                  alt: "BI View wireframe refined for Personal Information module: Profile, Survey, Mailing Address, Mailing Preferences, Magazine Subscriptions, Email, Phone",
-                  label: "Personal Information · module wireframe",
-                },
-                {
                   src: `${ASSET_BASE}/06-person-view-with-usage-chart.png`,
                   alt: "Person View module with live usage analytics chart embedded",
                   label: "Person View · usage analytics embedded",
