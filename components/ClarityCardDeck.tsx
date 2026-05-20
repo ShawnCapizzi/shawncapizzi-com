@@ -124,22 +124,22 @@ export function ClarityCardDeck() {
         className="relative rounded-3xl overflow-hidden p-8 md:p-12 lg:p-14"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(107, 92, 255, 0.10) 0%, rgba(107, 92, 255, 0.04) 35%, transparent 70%), linear-gradient(160deg, #0a1a30 0%, #050d1c 60%, #030814 100%)",
+            "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(41, 168, 41, 0.28) 0%, rgba(41, 168, 41, 0.14) 40%, rgba(20, 90, 25, 0.85) 100%), linear-gradient(160deg, #1f7a25 0%, #176019 60%, #0f4612 100%)",
           boxShadow:
-            "inset 0 0 0 1px rgba(107, 92, 255, 0.14), inset 0 0 60px rgba(0, 0, 0, 0.5), 0 30px 80px -30px rgba(0, 0, 0, 0.7)",
+            "inset 0 0 0 1px rgba(255, 255, 255, 0.08), inset 0 0 80px rgba(0, 0, 0, 0.45), 0 30px 80px -30px rgba(0, 0, 0, 0.7)",
         }}
       >
         {/* Inner felt border ring for depth */}
         <div
           aria-hidden="true"
           className="absolute inset-4 md:inset-5 rounded-2xl pointer-events-none"
-          style={{ border: "1px solid rgba(107, 92, 255, 0.08)" }}
+          style={{ border: "1px solid rgba(255, 255, 255, 0.06)" }}
         />
 
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
         {/* DECK SIDE */}
         <div className="flex flex-col items-center md:items-start">
-          <p className="eyebrow mb-4 text-text-tertiary">The Deck</p>
+          <p className="font-mono text-xs tracking-widest uppercase text-white/70 mb-4">The Deck</p>
           <div
             className="relative"
             style={{ width: 220, height: 308 }}
@@ -187,7 +187,7 @@ export function ClarityCardDeck() {
                 Reshuffle
               </button>
             )}
-            <p className="text-xs md:text-sm text-text-tertiary tabular-nums">
+            <p className="text-xs md:text-sm text-white/70 tabular-nums">
               {cardsRemaining} {cardsRemaining === 1 ? "card" : "cards"} left
             </p>
           </div>
@@ -195,7 +195,7 @@ export function ClarityCardDeck() {
 
         {/* DISPLAY SIDE */}
         <div className="flex flex-col items-center md:items-start">
-          <p className="eyebrow mb-4 text-text-tertiary">Drawn</p>
+          <p className="font-mono text-xs tracking-widest uppercase text-white/70 mb-4">Drawn</p>
           <div
             className="relative"
             style={{ width: 280, height: 392 }}
@@ -333,9 +333,9 @@ function EmptyDeckSlot() {
   return (
     <div
       className="h-full w-full rounded-2xl border border-dashed flex items-center justify-center"
-      style={{ borderColor: "rgba(107, 92, 255, 0.12)" }}
+      style={{ borderColor: "rgba(255, 255, 255, 0.18)" }}
     >
-      <p className="text-xs text-text-tertiary">Deck empty</p>
+      <p className="text-xs text-white/70">Deck empty</p>
     </div>
   );
 }
@@ -344,10 +344,10 @@ function EmptyDrawSlot() {
   return (
     <div
       className="h-full w-full rounded-2xl border border-dashed flex items-center justify-center"
-      style={{ borderColor: "rgba(107, 92, 255, 0.10)" }}
+      style={{ borderColor: "rgba(255, 255, 255, 0.15)" }}
     >
-      <p className="text-xs text-text-tertiary px-6 text-center">
-        Click <span className="text-text-secondary">Draw a card</span> to begin
+      <p className="text-xs text-white/70 px-6 text-center">
+        Click <span className="text-white">Draw a card</span> to begin
       </p>
     </div>
   );
