@@ -14,24 +14,13 @@ export default function Page() {
   return (
     <article>
       {/* HERO */}
-      <section
-        className="relative pt-32 md:pt-40 pb-24 md:pb-32"
-        style={{
-          background:
-            "radial-gradient(ellipse 1400px 900px at 75% 10%, #7867FF 0%, #6B5CFF 35%, #5A4DE8 100%)",
-        }}
-      >
+      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p
-            className="eyebrow mb-6"
-            style={{ color: "rgba(255, 255, 255, 0.7)" }}
-          >
-            The Clarity Advantage
-          </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-4xl text-white">
+          <p className="eyebrow mb-6">The Clarity Advantage</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-4xl">
             Honest design and strategy for the way we work now.
           </h1>
-          <p className="mt-6 md:mt-8 text-xl md:text-2xl text-white/80 leading-relaxed max-w-3xl">
+          <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
             The book, the cards, and the newsletter. All in progress. All
             grounded in a decade of work inside regulated and enterprise teams.
           </p>
