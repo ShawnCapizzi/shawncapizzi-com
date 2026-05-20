@@ -42,6 +42,8 @@ interface ProjectShowcase {
   }[];
   /** Optional call-to-action links (e.g. "Try it" buttons for live apps). External links open in new tab. */
   links?: { label: string; href: string }[];
+  /** Optional custom JSX rendered after the images block (e.g. a TiltedPhonePair). */
+  customContent?: ReactNode;
 }
 
 interface CaseStudyLayoutProps {
@@ -265,6 +267,10 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                       )
                     )}
                   </div>
+                )}
+
+                {project.customContent && (
+                  <div className="mt-12 md:mt-16">{project.customContent}</div>
                 )}
               </article>
             ))}

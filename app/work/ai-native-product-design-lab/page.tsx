@@ -1,4 +1,5 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
+import { TiltedPhonePair } from "@/components/TiltedPhonePair";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const ASSET_BASE = "/images/case-studies/05-ai-native-product-design-lab";
+const VIDEO_BASE = "/videos";
 
 export default function Page() {
   return (
@@ -122,6 +124,20 @@ export default function Page() {
               alt: "Working AI Patient Support platform built using the same Custom GPT-assisted research and prototyping methodology",
             },
           ],
+          customContent: (
+            <TiltedPhonePair
+              left={{
+                src: `${VIDEO_BASE}/gpt-ux-research-advisor.mp4`,
+                alt: "UX Research Advisor Custom GPT responding to a research methodology prompt inside ChatGPT mobile",
+                caption: "UX Research Advisor",
+              }}
+              right={{
+                src: `${VIDEO_BASE}/gpt-AEM.mp4`,
+                alt: "AEM Design Assistant Custom GPT responding to a question about Adobe Experience Manager best practices inside ChatGPT mobile",
+                caption: "AEM Design Assistant",
+              }}
+            />
+          ),
         },
         {
           eyebrow: "Personal project · Free at-home learning supplement",
