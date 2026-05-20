@@ -72,7 +72,7 @@ export default function Page() {
                 I&apos;m a strategic experience design leader with 15+ years
                 working at the intersection of UX, CX, product, and regulated
                 digital systems. The work I do best is the work that&apos;s
-                hard to staff full-time but too important to skip — senior
+                hard to staff full-time but too important to skip. Senior
                 input on the moments where the structure of the experience
                 changes the structure of the business outcome.
               </p>
@@ -151,7 +151,7 @@ export default function Page() {
               experience architecture problem. The companies that win with AI in
               regulated industries won&apos;t be the ones with the best models.
               They&apos;ll be the ones who treated the experience layer as the
-              work — the architecture of how AI fits into human workflows, the
+              work. The architecture of how AI fits into human workflows, the
               design of the moments when the AI is wrong, the governance of the
               systems that have to scale across brands, teams, and regulatory
               contexts.
@@ -161,13 +161,13 @@ export default function Page() {
               discipline of making complex things clear, not the discipline of
               making things look good. The visual layer matters, but it&apos;s
               downstream. Upstream is the question of what the experience is{" "}
-              <em>for</em> — what decision it helps the user make, what action
+              <em>for</em>: what decision it helps the user make, what action
               it supports, what trust it has to earn before it asks for
               anything.
             </p>
             <p>
               In regulated environments, this isn&apos;t optional. Pharma,
-              healthcare, financial services — these are industries where bad
+              healthcare, financial services. These are industries where bad
               design has consequences. Patient confusion costs lives. Investor
               confusion costs money. Regulatory confusion costs launches. The
               teams that work with me are the ones who understand that
@@ -190,14 +190,14 @@ export default function Page() {
               I&apos;m currently Director of UX Strategy at Razorfish
               (Publicis), leading experience design on Pfizer brands. The
               day-to-day work is strategic experience design across one of the
-              most complex pharmaceutical portfolios in the industry —
+              most complex pharmaceutical portfolios in the industry:
               multi-brand governance, regulatory-ready content systems, design
               system architecture, and AI integration in HCP and patient
               touchpoints.
             </p>
             <p>
               Before Razorfish, I led senior UX engagements across regulated
-              industries — pharmaceutical, financial services, enterprise
+              industries: pharmaceutical, financial services, enterprise
               technology, and patient experience initiatives spanning oncology,
               cardiovascular, neurological, immunology, and rare disease.
             </p>
@@ -210,7 +210,7 @@ export default function Page() {
               it.
             </p>
             <p>
-              I taught at NYSCPS — design fundamentals, Adobe Photoshop, and
+              I taught at NYSCPS: design fundamentals, Adobe Photoshop, and
               Adobe InDesign. My BFA is from Pratt Institute in Communications
               Design and Advertising/Marketing.
             </p>
@@ -228,7 +228,7 @@ export default function Page() {
             </p>
             <LiteYouTube
               videoId="bRmymrOs_iA"
-              title="UXR AI tool demo — December 2024"
+              title="UXR AI tool demo, December 2024"
               aspect="9:16"
             />
           </div>
@@ -244,7 +244,7 @@ export default function Page() {
           <div className="space-y-8 max-w-3xl">
             <div className="border-l-2 border-border-default pl-6 md:pl-8">
               <p className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight">
-                D&amp;AD Pencil 2022 — Future Impact Initiative
+                D&amp;AD Pencil 2022: Future Impact Initiative
               </p>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed">
                 For the Cancer Equality App with The Chrysalis Initiative.{" "}
@@ -346,7 +346,7 @@ export default function Page() {
               Taylor Keer, a friend and now Poet Laureate of Connecticut, and
               I co-founded a creative arts and music collective at Rider
               University 10+ years ago. We still get together annually for
-              live performances — I create live visual art alongside his
+              live performances. I create live visual art alongside his
               poetry and music. In 2022 I started generating those visuals
               with Midjourney and Runway in real time, tied to lyrics and
               music, projected through two or three projectors. Live
@@ -377,7 +377,7 @@ export default function Page() {
                 width="100%"
                 frameBorder="0"
                 allowFullScreen
-                title="LinkedIn post — live performance with AI-generated visuals"
+                title="LinkedIn post, live performance with AI-generated visuals"
                 loading="lazy"
                 style={{ display: "block", borderRadius: "12px" }}
               />
@@ -386,7 +386,7 @@ export default function Page() {
               className="mt-4 text-sm text-text-tertiary italic text-center"
               style={{ maxWidth: "504px", margin: "1rem auto 0" }}
             >
-              A look at the live performance work — visuals generated in real
+              A look at the live performance work, visuals generated in real
               time alongside poetry and music.
             </p>
           </div>

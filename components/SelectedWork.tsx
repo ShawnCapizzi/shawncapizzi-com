@@ -5,8 +5,8 @@ const CASE_STUDIES = [
   {
     slug: "pharma-design-systems",
     eyebrow: "Multi-Brand · 3x Design Systems · Governance",
-    headline: "Building digital governance across 15+ therapeutic brands",
-    outcome: "$3.5M+ in digital transformation. Industry-first mobile wallet integration for patient medication information.",
+    headline: "Building digital governance across 70+ therapeutic brands",
+    outcome: "$3.5M+ in digital transformation. Three enterprise design systems. Industry-first mobile wallet integration for patient medication information.",
     image: "/images/hero/consumer-care-hub-hero-balanced.gif",
   },
   {

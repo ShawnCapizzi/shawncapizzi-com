@@ -8,23 +8,23 @@ const CAL_URL = "https://cal.com/capizzi/15min";
 const FAQS = [
   {
     q: "What is AI UX, and how is it different from traditional UX design?",
-    a: "AI UX is the design discipline that shapes how people interact with non-deterministic systems — agents, copilots, predictive interfaces — where the output isn't fixed and trust is the core design material. Traditional UX optimizes a known path. AI UX designs for ambiguity, correction, and judgment, which means the work lives in workflow logic, content readiness, and trust signals — not interface novelty.",
+    a: "AI UX is the design discipline that shapes how people interact with non-deterministic systems (agents, copilots, predictive interfaces) where the output isn't fixed and trust is the core design material. Traditional UX optimizes a known path. AI UX designs for ambiguity, correction, and judgment, which means the work lives in workflow logic, content readiness, and trust signals. Not interface novelty.",
   },
   {
     q: "Why do most enterprise AI rollouts stall after the pilot?",
-    a: "AI adoption is not a technology problem — it's an experience architecture problem. The model works, the integration works, the platform works. But if the workflow is unclear, the content is messy, the decision logic is hidden, or users don't trust the output, adoption stalls. That's design work, not engineering work.",
+    a: "AI adoption is not a technology problem. It's an experience architecture problem. The model works, the integration works, the platform works. But if the workflow is unclear, the content is messy, the decision logic is hidden, or users don't trust the output, adoption stalls. That's design work, not engineering work.",
   },
   {
     q: "How do you integrate AI into pharma, healthcare, or other regulated industries without breaking compliance?",
-    a: "You treat compliance as a design constraint, not an afterthought. That means mapping every AI touchpoint to its regulatory surface (FDA, HIPAA, MLR, SOC 2), structuring content for auditability, and building human-in-the-loop checkpoints where model confidence drops. I've done this across 15+ pharmaceutical brands and major enterprise systems.",
+    a: "You treat compliance as a design constraint, not an afterthought. That means mapping every AI touchpoint to its regulatory surface (FDA, HIPAA, MLR, SOC 2), structuring content for auditability, and building human-in-the-loop checkpoints where model confidence drops. I've done this across 70+ pharmaceutical brands and major enterprise systems.",
   },
   {
     q: "Should I hire a full-time Director of UX, a VP of Design, or a fractional design leader?",
-    a: "It depends on what's actually broken. Hire full-time if you're building a multi-year design org or design system. Bring in a fractional leader if you need senior judgment on a 6–12 month transformation, are between full-time hires, or are launching a regulated or AI-heavy product where one wrong assumption costs millions. The two roles solve different problems — and the wrong choice burns 6 months before anyone notices.",
+    a: "It depends on what's actually broken. Hire full-time if you're building a multi-year design org or design system. Bring in a fractional leader if you need senior judgment on a 6–12 month transformation, are between full-time hires, or are launching a regulated or AI-heavy product where one wrong assumption costs millions. The two roles solve different problems. The wrong choice burns 6 months before anyone notices.",
   },
   {
     q: "What does a strategic design partner do that an agency doesn't?",
-    a: "An agency executes against a brief you wrote. A strategic design partner writes the brief with you — challenging the framing, mapping the system, and translating business outcomes into experience decisions. You get accountability for the outcome, not just the deliverable. Agencies are great when you know what you need. Strategic partners are necessary when you're trying to figure out what you need.",
+    a: "An agency executes against a brief you wrote. A strategic design partner writes the brief with you: challenging the framing, mapping the system, and translating business outcomes into experience decisions. You get accountability for the outcome, not just the deliverable. Agencies are great when you know what you need. Strategic partners are necessary when you're trying to figure out what you need.",
   },
   {
     q: "What is the Capizzi Process?",
@@ -32,19 +32,19 @@ const FAQS = [
   },
   {
     q: "What industries and clients have you worked with?",
-    a: "Pharmaceutical and healthcare (oncology, cardiovascular, vaccines, multiple sclerosis, hemophilia, immunology, rare disease, HIV/AIDS, women's health), financial services and enterprise data, and consumer technology — with deep specialization in AI integration for regulated environments. The throughline is high-stakes, compliance-bound work where bad UX has real legal, clinical, or financial consequences.",
+    a: "Pharmaceutical and healthcare (oncology, cardiovascular, vaccines, multiple sclerosis, hemophilia, immunology, rare disease, HIV/AIDS, women's health), financial services and enterprise data, and consumer technology, with deep specialization in AI integration for regulated environments. The throughline is high-stakes, compliance-bound work where bad UX has real legal, clinical, or financial consequences.",
   },
   {
     q: "What kind of outcomes have your clients seen?",
-    a: "$270M+ in tracked revenue impact across pharma, fintech, and enterprise engagements. Specific wins include a D&AD Pencil-recognized equity-focused cancer care platform, multi-brand digital transformation across 15+ therapeutic brands ($3.5M+ documented investment), and $1.5M+ in annual ROI from an enterprise financial services CRM transformation. Outcomes vary by engagement scope — the case studies on this site walk through specifics.",
+    a: "$270M+ in tracked revenue impact across pharma, fintech, and enterprise engagements. Specific wins include a D&AD Pencil-recognized equity-focused cancer care platform, multi-brand digital transformation across 70+ therapeutic brands ($3.5M+ documented investment), and $1.5M+ in annual ROI from an enterprise financial services CRM transformation. Outcomes vary by engagement scope. The case studies on this site walk through specifics.",
   },
   {
     q: "How do engagements typically start?",
-    a: "Every engagement starts with a free 30-minute Strategy Call. Virtual. We talk through what's stuck and what success looks like. No pitch. If there's not a fit, I'll tell you and try to point you to possible solutions or partners. If the strategy call goes well, a longer scoping conversation with the relevant stakeholders to understand scope, timing, and constraints — and then a Statement of Work. Most engagements move from first call to signed SOW in 2–3 weeks.",
+    a: "Every engagement starts with a free 30-minute Strategy Call. Virtual. We talk through what's stuck and what success looks like. No pitch. If there's not a fit, I'll tell you and try to point you to possible solutions or partners. If the strategy call goes well, a longer scoping conversation with the relevant stakeholders to understand scope, timing, and constraints. Then a Statement of Work. Most engagements move from first call to signed SOW in 2–3 weeks.",
   },
   {
     q: "Do you work with agency partners or only direct clients?",
-    a: "Both. I work directly with brands and embed as senior experience leadership inside agency engagements when the client is regulated, enterprise, or AI-heavy and the agency team needs a senior voice in the room. The structure depends on the work — what matters is the right level of accountability for the outcome.",
+    a: "Both. I work directly with brands and embed as senior experience leadership inside agency engagements when the client is regulated, enterprise, or AI-heavy and the agency team needs a senior voice in the room. The structure depends on the work. What matters is the right level of accountability for the outcome.",
   },
   {
     q: "Are you available for full-time roles, or only consulting engagements?",
@@ -52,7 +52,7 @@ const FAQS = [
   },
   {
     q: "Do you travel for workshops or onsite work?",
-    a: "Yes. Virtual delivery is included in all engagements. Onsite delivery bills travel at cost. Workshops, executive presentations, and stakeholder alignment sessions often benefit from being in the room — I'm available for that when it's the right call.",
+    a: "Yes. Virtual delivery is included in all engagements. Onsite delivery bills travel at cost. Workshops, executive presentations, and stakeholder alignment sessions often benefit from being in the room. I'm available for that when it's the right call.",
   },
 ];
 

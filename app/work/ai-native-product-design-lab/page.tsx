@@ -172,14 +172,15 @@ export default function Page() {
             "Built on hands-on tool experience, not vendor partnership commissions. The Automation Opportunity Assessment framework moves teams from intent to prioritized roadmap.",
         },
         {
-          headline: "25+ years of creative practice extended with AI",
+          headline: "Experience Strategy and Creative extended with AI",
           description:
-            "Not replaced by it. Annual live performance work continues, with another AI-assisted performance planned for August 2026.",
+            "Not replaced by it. Get to great quicker via optimized workflows and data-led decision making.",
         },
         {
-          headline: "A repeatable methodology for integrating AI into team workflows",
+          headline:
+            "A repeatable methodology .MD and systems for integrating AI into business workflows",
           description:
-            "The 10 Source Packs framework feeds AI the inputs it needs to produce real strategic work, not generic output.",
+            "Custom frameworks feed AI the inputs it needs to produce real strategic work, tailored to your business, not generic output.",
         },
       ]}
       closer={[
