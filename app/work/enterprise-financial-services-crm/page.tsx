@@ -65,14 +65,14 @@ export default function Page() {
               aspectRatio="4 / 3"
               items={[
                 {
-                  src: `${ASSET_BASE}/field-research-whiteboard-synthesis.png`,
-                  alt: "Two team members synthesizing field research notes on a whiteboard with sticky-note clusters",
-                  label: "Whiteboard synthesis · cross-stakeholder sessions",
-                },
-                {
                   src: `${ASSET_BASE}/card-sort-data-model.png`,
                   alt: "Handwritten card-sort cards laying out the rep data model: Position, Contact Name, Last Login, Cell Number, Type, Days, Competing Products, Tags, Asset Classes, Add to My Contacts, Make Inactive",
                   label: "Card sort · rep data model in field research",
+                },
+                {
+                  src: `${ASSET_BASE}/field-research-whiteboard-synthesis.png`,
+                  alt: "Two team members synthesizing field research notes on a whiteboard with sticky-note clusters",
+                  label: "Whiteboard synthesis · cross-stakeholder sessions",
                 },
                 {
                   src: `${ASSET_BASE}/03-miro-research-synthesis-template.png`,
@@ -164,6 +164,10 @@ export default function Page() {
         },
       ]}
       bottomImages={[]}
+      closerHero={{
+        src: `${ASSET_BASE}/field-research-whiteboard-synthesis.png`,
+        alt: "Two team members synthesizing field research notes on a whiteboard with sticky-note clusters",
+      }}
       closer={[
         "Architectural inquiry isn't a method you can shortcut. The decisions that mattered came from in-person interviews with the actual users, scripted carefully, stimulus prepared, prototypes ready. The research wasn't a survey or a workshop output. It was time spent watching three different rep types do their actual work, then synthesizing what slowed them down.",
         "In enterprise software with deep platform constraints, the senior design work isn't dreaming up new paradigms. It's understanding what the current system makes hard, and proposing the smallest set of changes that have the largest impact on time-in-task.",

@@ -44,6 +44,8 @@ interface CaseStudyLayoutProps {
   processCarousel?: ReactNode;
   outcomes: Outcome[];
   bottomImages?: CaseStudyImage[];
+  /** Optional full-width hero image rendered just before the closer section. */
+  closerHero?: { src: string; alt: string };
   closer: string[];
   ctaHeadline: string;
   related?: RelatedCaseStudy[];
@@ -213,6 +215,27 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           )}
         </div>
       </section>
+
+      {/* ============================================================
+          CLOSER HERO (optional full-width image before "What this means")
+          ============================================================ */}
+      {props.closerHero && (
+        <section className="border-t border-border-subtle py-16 md:py-24">
+          <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
+            <div className="relative w-full overflow-hidden rounded-xl border border-border-subtle bg-bg-elevated shadow-2xl">
+              <Image
+                src={props.closerHero.src}
+                alt={props.closerHero.alt}
+                width={1920}
+                height={1440}
+                sizes="(min-width: 1280px) 1280px, 100vw"
+                className="w-full h-auto block"
+                priority={false}
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ============================================================
           WHAT THIS MEANS (closer)
