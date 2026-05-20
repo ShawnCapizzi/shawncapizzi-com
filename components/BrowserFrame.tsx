@@ -37,20 +37,37 @@ export function BrowserFrame({
   autoPlay = true,
 }: BrowserFrameProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
   const [aspect, setAspect] = useState<number>(fallbackAspect);
 
+  // Detect whether src is an image (gif, png, jpg, webp) or a video (mp4, webm)
+  const isImage = /\.(gif|png|jpe?g|webp|avif)$/i.test(src);
+
   useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    const onMeta = () => {
-      if (v.videoWidth && v.videoHeight) {
-        setAspect(v.videoWidth / v.videoHeight);
-      }
-    };
-    if (v.readyState >= 1) onMeta();
-    else v.addEventListener("loadedmetadata", onMeta);
-    return () => v.removeEventListener("loadedmetadata", onMeta);
-  }, [src]);
+    if (isImage) {
+      const img = imgRef.current;
+      if (!img) return;
+      const onLoad = () => {
+        if (img.naturalWidth && img.naturalHeight) {
+          setAspect(img.naturalWidth / img.naturalHeight);
+        }
+      };
+      if (img.complete && img.naturalWidth) onLoad();
+      else img.addEventListener("load", onLoad);
+      return () => img.removeEventListener("load", onLoad);
+    } else {
+      const v = videoRef.current;
+      if (!v) return;
+      const onMeta = () => {
+        if (v.videoWidth && v.videoHeight) {
+          setAspect(v.videoWidth / v.videoHeight);
+        }
+      };
+      if (v.readyState >= 1) onMeta();
+      else v.addEventListener("loadedmetadata", onMeta);
+      return () => v.removeEventListener("loadedmetadata", onMeta);
+    }
+  }, [src, isImage]);
 
   const chromeHeight = 38;
 
@@ -118,7 +135,7 @@ export function BrowserFrame({
           </div>
         </div>
 
-        {/* Video viewport */}
+        {/* Media viewport, renders img for animated/static images, video for mp4/webm */}
         <div
           className="relative bg-black"
           style={{
@@ -126,18 +143,28 @@ export function BrowserFrame({
             aspectRatio: `${aspect}`,
           }}
         >
-          <video
-            ref={videoRef}
-            className="w-full h-full object-contain block"
-            src={src}
-            poster={poster}
-            autoPlay={autoPlay}
-            loop={loop}
-            muted
-            playsInline
-            preload="metadata"
-            aria-hidden="true"
-          />
+          {isImage ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              ref={imgRef}
+              className="w-full h-full object-contain block"
+              src={src}
+              alt={ariaLabel}
+            />
+          ) : (
+            <video
+              ref={videoRef}
+              className="w-full h-full object-contain block"
+              src={src}
+              poster={poster}
+              autoPlay={autoPlay}
+              loop={loop}
+              muted
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+            />
+          )}
         </div>
       </div>
     </div>

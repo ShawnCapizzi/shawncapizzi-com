@@ -55,8 +55,9 @@ export default function Page() {
           ],
           images: [
             {
-              src: `${ASSET_BASE}/01-hero-ai-native-design-lab.png`,
-              alt: "AI Patient Support home, disease-organized navigation across oncology, diabetes, cardiovascular, immunology, neurology, HIV/AIDS, rare disease, and respiratory",
+              src: `${ASSET_BASE}/01-hero-ai-patient-support-demo.gif`,
+              alt: "AI Patient Support live demo, disease-organized navigation across oncology, diabetes, cardiovascular, immunology, neurology, HIV/AIDS, rare disease, and respiratory",
+              browserFrame: { url: "ai-patient-support.com" },
             },
             {
               src: `${ASSET_BASE}/02-ai-patient-support-drug-detail.png`,
@@ -89,6 +90,7 @@ export default function Page() {
             {
               src: `${ASSET_BASE}/04-healthsync-pro-on-base44.png`,
               alt: "HealthSync Pro on Base44, Garmin device integration with granular consent toggles per metric: heart rate, steps, sleep, workouts, blood pressure, blood oxygen, body temperature, weight",
+              browserFrame: { url: "healthsync-pro.app" },
             },
           ],
         },

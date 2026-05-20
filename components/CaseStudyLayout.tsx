@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { BrowserFrame } from "@/components/BrowserFrame";
 
 const CAL_URL = "https://cal.com/capizzi/15min";
 
@@ -33,7 +34,12 @@ interface ProjectShowcase {
   eyebrow: string;
   title: string;
   description: string[];
-  images?: { src: string; alt: string }[];
+  images?: {
+    src: string;
+    alt: string;
+    /** When set, wraps this image in a BrowserFrame with the given URL bar label. */
+    browserFrame?: { url: string };
+  }[];
   /** Optional call-to-action links (e.g. "Try it" buttons for live apps). External links open in new tab. */
   links?: { label: string; href: string }[];
 }
@@ -231,22 +237,33 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                         : "grid-cols-1"
                     }`}
                   >
-                    {project.images.map((image, ix) => (
-                      <div
-                        key={ix}
-                        className="relative w-full overflow-hidden rounded-xl border border-border-subtle bg-bg-elevated shadow-2xl"
-                      >
-                        <Image
-                          src={image.src}
-                          alt={image.alt}
-                          width={1920}
-                          height={1080}
-                          sizes="(min-width: 1024px) 50vw, 100vw"
-                          unoptimized={isAnimated(image.src)}
-                          className="w-full h-auto block"
-                        />
-                      </div>
-                    ))}
+                    {project.images.map((image, ix) =>
+                      image.browserFrame ? (
+                        <div key={ix} className="w-full">
+                          <BrowserFrame
+                            src={image.src}
+                            url={image.browserFrame.url}
+                            ariaLabel={image.alt}
+                            theme="dark"
+                          />
+                        </div>
+                      ) : (
+                        <div
+                          key={ix}
+                          className="relative w-full overflow-hidden rounded-xl border border-border-subtle bg-bg-elevated shadow-2xl"
+                        >
+                          <Image
+                            src={image.src}
+                            alt={image.alt}
+                            width={1920}
+                            height={1080}
+                            sizes="(min-width: 1024px) 50vw, 100vw"
+                            unoptimized={isAnimated(image.src)}
+                            className="w-full h-auto block"
+                          />
+                        </div>
+                      )
+                    )}
                   </div>
                 )}
               </article>
