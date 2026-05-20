@@ -29,6 +29,15 @@ interface RelatedCaseStudy {
   image: string;
 }
 
+interface ProjectShowcase {
+  eyebrow: string;
+  title: string;
+  description: string[];
+  images?: { src: string; alt: string }[];
+  /** Optional call-to-action links (e.g. "Try it" buttons for live apps). External links open in new tab. */
+  links?: { label: string; href: string }[];
+}
+
 interface CaseStudyLayoutProps {
   eyebrow: string;
   title: string;
@@ -42,6 +51,8 @@ interface CaseStudyLayoutProps {
   midImages?: CaseStudyImage[];
   /** Optional carousel slot rendered between the approach section and outcomes. */
   processCarousel?: ReactNode;
+  /** Optional per-project showcases (eyebrow + title + description + images per project). Rendered after approach. */
+  projectShowcases?: ProjectShowcase[];
   outcomes: Outcome[];
   bottomImages?: CaseStudyImage[];
   /** Optional full-width hero image rendered just before the closer section. */
@@ -167,6 +178,82 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           wrapper, so we simply slot it in.
           ============================================================ */}
       {props.processCarousel}
+
+      {/* ============================================================
+          PROJECT SHOWCASES (optional)
+          Each project: eyebrow, title, description paragraphs, optional images.
+          Rendered after processCarousel, before Selected outcomes.
+          ============================================================ */}
+      {props.projectShowcases && props.projectShowcases.length > 0 && (
+        <section className="border-t border-border-subtle">
+          <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-24 space-y-20 md:space-y-28">
+            {props.projectShowcases.map((project, i) => (
+              <article
+                key={i}
+                className="border-b border-border-subtle last:border-b-0 pb-20 md:pb-28 last:pb-0"
+              >
+                <div className="max-w-3xl">
+                  <p className="eyebrow mb-4">{project.eyebrow}</p>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mb-6 md:mb-8">
+                    {project.title}
+                  </h3>
+                  <div className="space-y-5 text-lg text-text-secondary leading-relaxed">
+                    {project.description.map((para, p) => (
+                      <p key={p}>{para}</p>
+                    ))}
+                  </div>
+
+                  {project.links && project.links.length > 0 && (
+                    <div className="mt-7 md:mt-8 flex flex-wrap gap-3">
+                      {project.links.map((link, li) => (
+                        <a
+                          key={li}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-text-primary text-text-inverse text-sm font-medium tracking-tight hover:scale-[1.02] transition-transform"
+                        >
+                          {link.label}
+                          <span aria-hidden="true" className="ml-2">
+                            →
+                          </span>
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {project.images && project.images.length > 0 && (
+                  <div
+                    className={`mt-10 md:mt-14 grid gap-6 md:gap-8 ${
+                      project.images.length > 1
+                        ? "grid-cols-1 md:grid-cols-2"
+                        : "grid-cols-1"
+                    }`}
+                  >
+                    {project.images.map((image, ix) => (
+                      <div
+                        key={ix}
+                        className="relative w-full overflow-hidden rounded-xl border border-border-subtle bg-bg-elevated shadow-2xl"
+                      >
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          width={1920}
+                          height={1080}
+                          sizes="(min-width: 1024px) 50vw, 100vw"
+                          unoptimized={isAnimated(image.src)}
+                          className="w-full h-auto block"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* ============================================================
           SELECTED OUTCOMES + optional bottom images

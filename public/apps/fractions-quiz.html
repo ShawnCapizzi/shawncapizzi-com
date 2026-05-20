@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fractions Fun! 🍕</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #3B8BEB;
+    --blue-dark: #1a6fd4;
+    --green: #34C759;
+    --green-dark: #28a347;
+    --red: #FF3B30;
+    --red-light: #fff0ef;
+    --green-light: #f0fff4;
+    --yellow: #FFD60A;
+    --orange: #FF9500;
+    --purple: #AF52DE;
+    --bg: #F2F6FF;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --shadow: 0 4px 24px rgba(59,139,235,0.10);
+    --shadow-lg: 0 8px 40px rgba(59,139,235,0.16);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24px 16px 48px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 15% 20%, rgba(59,139,235,0.10) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 85% 80%, rgba(175,82,222,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 50% 50%, rgba(52,199,89,0.06) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #app {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 540px;
+  }
+
+  /* ---- HEADER ---- */
+  .app-header {
+    text-align: center;
+    margin-bottom: 28px;
+    animation: fadeDown 0.5s ease both;
+  }
+  .app-logo {
+    font-size: 42px;
+    margin-bottom: 4px;
+    display: block;
+    animation: bounce 1.2s ease 0.3s both;
+  }
+  .app-title {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--text);
+    letter-spacing: -0.5px;
+  }
+  .app-title span { color: var(--blue); }
+  .app-tagline {
+    font-size: 15px;
+    color: var(--muted);
+    margin-top: 4px;
+    font-weight: 600;
+  }
+
+  /* ---- SCREEN: START ---- */
+  #screen-start {
+    animation: fadeUp 0.4s ease both;
+  }
+  .start-card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 32px 28px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+  }
+  .start-card h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .start-card p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 28px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+  .topics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 28px;
+    text-align: left;
+  }
+  .topic-pill {
+    background: var(--bg);
+    border-radius: 14px;
+    padding: 12px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .topic-pill .icon { font-size: 20px; }
+  .difficulty-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+    justify-content: center;
+  }
+  .diff-btn {
+    flex: 1;
+    padding: 10px 8px;
+    border-radius: 12px;
+    border: 2.5px solid var(--border);
+    background: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.18s;
+  }
+  .diff-btn.active { border-color: var(--blue); color: var(--blue); background: #eef5ff; }
+  .diff-btn.expert-btn.active { border-color: var(--purple); color: var(--purple); background: #f5eeff; }
+  .diff-btn:hover:not(.active) { border-color: #c5d5f0; }
+  .start-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.18s;
+    letter-spacing: 0.2px;
+    box-shadow: 0 4px 16px rgba(59,139,235,0.35);
+  }
+  .start-btn:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(59,139,235,0.4); }
+  .start-btn:active { transform: translateY(0); }
+  .high-score-bar {
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .high-score-bar strong { color: var(--orange); }
+
+  /* ---- PROGRESS BAR ---- */
+  .progress-wrap {
+    margin-bottom: 16px;
+    animation: fadeDown 0.4s ease both;
+  }
+  .progress-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .progress-track {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 99px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    border-radius: 99px;
+    transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .pip-row {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+    justify-content: center;
+  }
+  .pip {
+    width: 22px; height: 8px;
+    border-radius: 99px;
+    background: #e5e7eb;
+    transition: background 0.3s;
+  }
+  .pip.correct { background: var(--green); }
+  .pip.wrong { background: var(--red); }
+  .pip.current { background: var(--blue); }
+
+  /* ---- SCORE STRIP ---- */
+  .score-strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card);
+    border-radius: 16px;
+    padding: 10px 18px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+    animation: fadeDown 0.4s 0.05s ease both;
+  }
+  .score-item { text-align: center; }
+  .score-label { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .score-value { font-size: 22px; font-weight: 900; color: var(--text); }
+  .score-value.blue { color: var(--blue); }
+  .score-value.green { color: var(--green); }
+  .score-value.orange { color: var(--orange); }
+  .score-divider { width: 1px; height: 36px; background: var(--border); }
+
+  /* ---- QUESTION CARD ---- */
+  .question-card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 28px 24px 24px;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 14px;
+    animation: fadeUp 0.35s ease both;
+  }
+  .q-badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--blue);
+    background: #eef5ff;
+    border-radius: 8px;
+    padding: 4px 10px;
+    margin-bottom: 12px;
+  }
+  .q-badge.expert { color: var(--purple); background: #f5eeff; }
+  .q-text {
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.45;
+    margin-bottom: 20px;
+  }
+  .frac {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+    line-height: 1.1;
+    vertical-align: middle;
+    margin: 0 3px;
+  }
+  .frac .n { border-bottom: 2.5px solid currentColor; padding: 0 5px 2px; font-weight: 900; }
+  .frac .d { padding: 2px 5px 0; font-weight: 900; }
+
+  /* Pie charts */
+  .pie-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .pie-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .pie-label { font-size: 18px; font-weight: 900; color: var(--text); }
+
+  /* Fraction strips */
+  .strip-row { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+  .strip-item { display: flex; align-items: center; gap: 10px; }
+  .strip-label { font-size: 16px; font-weight: 800; min-width: 36px; color: var(--muted); }
+  .strip-track { flex: 1; height: 28px; background: #f0f0f0; border-radius: 8px; overflow: hidden; display: flex; }
+  .strip-filled { height: 100%; background: var(--blue); border-radius: 8px; }
+  .strip-b .strip-filled { background: var(--orange); }
+
+  /* Number line */
+  .numberline-wrap { margin-bottom: 20px; padding: 0 8px; }
+  .numberline { position: relative; height: 40px; }
+  .nl-track { position: absolute; top: 18px; left: 0; right: 0; height: 4px; background: #e5e7eb; border-radius: 2px; }
+  .nl-tick { position: absolute; top: 10px; width: 2px; height: 20px; background: #9ca3af; transform: translateX(-50%); }
+  .nl-ticklabel { position: absolute; top: 32px; font-size: 12px; font-weight: 700; color: var(--muted); transform: translateX(-50%); }
+  .nl-dot { position: absolute; top: 10px; width: 20px; height: 20px; background: var(--blue); border-radius: 50%; transform: translateX(-50%); border: 3px solid white; box-shadow: 0 2px 8px rgba(59,139,235,0.4); }
+  .nl-dotlabel { position: absolute; top: -18px; font-size: 14px; font-weight: 900; color: var(--blue); transform: translateX(-50%); }
+
+  /* ---- CHOICES ---- */
+  .choices-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .choice-btn {
+    padding: 14px 8px;
+    background: var(--bg);
+    border: 2.5px solid var(--border);
+    border-radius: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.18s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+  }
+  .choice-btn:hover:not(:disabled) {
+    border-color: var(--blue);
+    background: #eef5ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59,139,235,0.15);
+  }
+  .choice-btn:active:not(:disabled) { transform: translateY(0); }
+  .choice-btn.correct {
+    background: var(--green-light);
+    border-color: var(--green);
+    color: var(--green-dark);
+    animation: popIn 0.3s ease both;
+  }
+  .choice-btn.wrong {
+    background: var(--red-light);
+    border-color: var(--red);
+    color: var(--red);
+    animation: shake 0.4s ease both;
+  }
+  .choice-btn:disabled { cursor: default; }
+
+  /* ---- FEEDBACK CARD ---- */
+  .feedback-card {
+    border-radius: 18px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    animation: fadeUp 0.3s ease both;
+  }
+  .feedback-card.correct { background: var(--green-light); border: 2px solid var(--green); }
+  .feedback-card.wrong { background: var(--red-light); border: 2px solid #ffcbc8; }
+  .feedback-icon { font-size: 26px; flex-shrink: 0; }
+  .feedback-text { font-size: 15px; font-weight: 700; color: var(--text); line-height: 1.5; }
+  .feedback-text .answer-hint { color: var(--blue); }
+
+  /* ---- NEXT BUTTON ---- */
+  .next-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.18s;
+    box-shadow: 0 4px 16px rgba(59,139,235,0.3);
+    animation: fadeUp 0.3s 0.1s ease both;
+  }
+  .next-btn:hover { background: var(--blue-dark); transform: translateY(-1px); }
+  .next-btn:active { transform: translateY(0); }
+
+  /* ---- SCREEN: FINISH ---- */
+  #screen-finish {
+    animation: fadeUp 0.4s ease both;
+  }
+  .finish-card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px 28px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+  }
+  .finish-emoji { font-size: 64px; margin-bottom: 8px; display: block; animation: bounce 0.8s ease both; }
+  .finish-grade { font-size: 56px; font-weight: 900; margin: 12px 0 4px; }
+  .finish-grade.a { color: var(--green); }
+  .finish-grade.b { color: var(--blue); }
+  .finish-grade.c { color: var(--orange); }
+  .finish-label { font-size: 18px; font-weight: 700; color: var(--muted); margin-bottom: 24px; }
+  .finish-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .stat-box {
+    background: var(--bg);
+    border-radius: 14px;
+    padding: 14px 8px;
+  }
+  .stat-num { font-size: 26px; font-weight: 900; color: var(--text); }
+  .stat-lbl { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.3px; }
+  .pip-summary {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .pip-summary .p {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    font-weight: 900;
+    color: white;
+  }
+  .pip-summary .p.c { background: var(--green); }
+  .pip-summary .p.w { background: var(--red); }
+  .finish-actions { display: flex; flex-direction: column; gap: 10px; }
+  .btn-primary {
+    padding: 15px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.18s;
+    box-shadow: 0 4px 16px rgba(59,139,235,0.3);
+  }
+  .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+  .btn-secondary {
+    padding: 13px;
+    background: transparent;
+    color: var(--muted);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.18s;
+  }
+  .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
+  .new-best { display: inline-block; background: var(--yellow); color: #7a5900; border-radius: 10px; padding: 5px 14px; font-size: 13px; font-weight: 900; margin-bottom: 12px; animation: popIn 0.4s 0.3s ease both; }
+
+  /* ---- ANIMATIONS ---- */
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes bounce { 0%,100% { transform: translateY(0); } 40% { transform: translateY(-12px); } 70% { transform: translateY(-5px); } }
+  @keyframes popIn { 0% { transform: scale(0.85); opacity: 0; } 70% { transform: scale(1.06); } 100% { transform: scale(1); opacity: 1; } }
+  @keyframes shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-6px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(4px); } }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 400px) {
+    .q-text { font-size: 16px; }
+    .choice-btn { font-size: 16px; padding: 12px 6px; }
+    .finish-grade { font-size: 44px; }
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <header class="app-header">
+    <span class="app-logo">🍕</span>
+    <h1 class="app-title">Fractions <span>Fun!</span></h1>
+    <p class="app-tagline">A quiz for 3rd graders</p>
+  </header>
+
+  <!-- START SCREEN -->
+  <div id="screen-start">
+    <div class="start-card">
+      <h2>Ready to play?</h2>
+      <p>Answer questions about fractions — pies, strips, and number lines. How many can you get right?</p>
+      <div class="topics-grid">
+        <div class="topic-pill"><span class="icon">🍕</span> Reading fractions</div>
+        <div class="topic-pill"><span class="icon">⚖️</span> Comparing fractions</div>
+        <div class="topic-pill"><span class="icon">➕</span> Adding fractions</div>
+        <div class="topic-pill"><span class="icon">🔢</span> Number lines</div>
+        <div class="topic-pill" id="expert-pill" style="display:none"><span class="icon">🔀</span> Unlike denominators</div>
+        <div class="topic-pill" id="expert-pill2" style="display:none"><span class="icon">🔢</span> Mixed numbers</div>
+      </div>
+      <p style="font-size:14px;font-weight:700;color:var(--muted);margin-bottom:12px;">Choose difficulty:</p>
+      <div class="difficulty-row">
+        <button class="diff-btn active" onclick="setDiff('easy',this)">🌱 Easy</button>
+        <button class="diff-btn" onclick="setDiff('medium',this)">🔥 Medium</button>
+        <button class="diff-btn" onclick="setDiff('hard',this)">⚡ Hard</button>
+        <button class="diff-btn expert-btn" onclick="setDiff('expert',this)">🧠 Expert</button>
+      </div>
+      <button class="start-btn" onclick="startQuiz()">Start Quiz →</button>
+      <div class="high-score-bar" id="hs-bar"></div>
+    </div>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div id="screen-quiz" style="display:none">
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span id="prog-label">Question 1 of 10</span>
+        <span id="prog-pct">0%</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
+      <div class="pip-row" id="pip-row"></div>
+    </div>
+    <div class="score-strip">
+      <div class="score-item"><div class="score-label">Question</div><div class="score-value blue" id="q-num">1</div></div>
+      <div class="score-divider"></div>
+      <div class="score-item"><div class="score-label">Correct</div><div class="score-value green" id="s-correct">0</div></div>
+      <div class="score-divider"></div>
+      <div class="score-item"><div class="score-label">Score</div><div class="score-value orange" id="s-score">0%</div></div>
+    </div>
+    <div id="question-area"></div>
+    <div id="feedback-area"></div>
+    <div id="next-area"></div>
+  </div>
+
+  <!-- FINISH SCREEN -->
+  <div id="screen-finish" style="display:none"></div>
+</div>
+
+<script>
+// ===== DATA =====
+const TOTAL = 10;
+let difficulty = 'easy';
+let questions = [], current = 0, score = 0, results = [];
+let highScores = JSON.parse(localStorage.getItem('fq_hs') || '{"easy":0,"medium":0,"hard":0,"expert":0}');
+if (!highScores.expert) highScores.expert = 0;
+
+function setDiff(d, el) {
+  difficulty = d;
+  document.querySelectorAll('.diff-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  const isExpert = d === 'expert';
+  ['expert-pill','expert-pill2'].forEach(id => {
+    const el2 = document.getElementById(id);
+    if(el2) el2.style.display = isExpert ? '' : 'none';
+  });
+  updateHighScoreBar();
+}
+
+function frac(n, d, cls='') {
+  return `<span class="frac ${cls}"><span class="n">${n}</span><span class="d">${d}</span></span>`;
+}
+
+// ===== PIE CHART =====
+const PIE_COLORS = { filled: '#3B8BEB', empty: '#e9edf5', stroke: '#ffffff' };
+function makePie(numer, denom, size=100, color='#3B8BEB') {
+  const cx = size/2, cy = size/2, r = size/2 - 5;
+  if (denom === 1) {
+    return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+      <circle cx="${cx}" cy="${cy}" r="${r}" fill="${color}"/>
+    </svg>`;
+  }
+  const step = (2*Math.PI)/denom;
+  let slices = '';
+  for (let i = 0; i < denom; i++) {
+    const a1 = -Math.PI/2 + i*step, a2 = a1 + step;
+    const x1=cx+r*Math.cos(a1), y1=cy+r*Math.sin(a1);
+    const x2=cx+r*Math.cos(a2), y2=cy+r*Math.sin(a2);
+    const large = step > Math.PI ? 1 : 0;
+    const fill = i < numer ? color : PIE_COLORS.empty;
+    slices += `<path d="M${cx},${cy} L${+x1.toFixed(2)},${+y1.toFixed(2)} A${r},${r} 0 ${large},1 ${+x2.toFixed(2)},${+y2.toFixed(2)} Z" fill="${fill}" stroke="${PIE_COLORS.stroke}" stroke-width="2.5"/>`;
+  }
+  return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+    <circle cx="${cx}" cy="${cy}" r="${r}" fill="${PIE_COLORS.empty}"/>
+    ${slices}
+    <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+  </svg>`;
+}
+
+// ===== FRACTION STRIP =====
+function makeStrip(numer, denom, color='#3B8BEB') {
+  const pct = (numer/denom*100).toFixed(1);
+  return `<div style="width:180px;height:28px;background:#e9edf5;border-radius:8px;overflow:hidden;border:2px solid #d1d5db">
+    <div style="width:${pct}%;height:100%;background:${color};border-radius:6px;"></div>
+  </div>`;
+}
+
+// ===== NUMBER LINE =====
+function makeNumberLine(value_n, value_d) {
+  const pct = (value_n/value_d*100);
+  return `<div class="numberline-wrap">
+    <div class="numberline" style="height:60px">
+      <div class="nl-track"></div>
+      <div class="nl-tick" style="left:0%"></div>
+      <div class="nl-ticklabel" style="left:0%">0</div>
+      <div class="nl-tick" style="left:25%"></div>
+      <div class="nl-ticklabel" style="left:25%">${frac(1,4)}</div>
+      <div class="nl-tick" style="left:50%"></div>
+      <div class="nl-ticklabel" style="left:50%">${frac(1,2)}</div>
+      <div class="nl-tick" style="left:75%"></div>
+      <div class="nl-ticklabel" style="left:75%">${frac(3,4)}</div>
+      <div class="nl-tick" style="left:100%"></div>
+      <div class="nl-ticklabel" style="left:100%">1</div>
+      <div class="nl-dotlabel" style="left:${pct}%">${frac(value_n,value_d)}</div>
+      <div class="nl-dot" style="left:${pct}%"></div>
+    </div>
+  </div>`;
+}
+
+// ===== QUESTION GENERATORS =====
+function shuffle(arr) {
+  for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}
+  return arr;
+}
+function rand(a,b){return Math.floor(Math.random()*(b-a+1))+a;}
+
+const EASY_PAIRS   = [[1,2],[1,3],[2,3],[1,4],[3,4],[1,6],[2,6],[1,8],[3,8]];
+const MEDIUM_PAIRS = [[1,2],[2,3],[3,4],[1,6],[5,6],[3,8],[5,8],[2,5],[3,5]];
+const HARD_PAIRS   = [[3,7],[4,9],[5,6],[7,8],[2,9],[5,12],[7,10],[4,7],[11,12]];
+const EXPERT_PAIRS = [[5,6],[7,8],[3,7],[4,9],[5,12],[7,10],[11,12],[2,9],[7,12],[5,9]];
+
+function getPairs() {
+  if(difficulty==='easy') return EASY_PAIRS;
+  if(difficulty==='medium') return MEDIUM_PAIRS;
+  if(difficulty==='hard') return HARD_PAIRS;
+  return EXPERT_PAIRS;
+}
+
+function wrongFracs(correct_n, correct_d, count=3) {
+  const wrongs = new Set();
+  while(wrongs.size < count) {
+    const wn = rand(1, correct_d-1);
+    const key = `${wn}/${correct_d}`;
+    if(wn !== correct_n) wrongs.add(key);
+  }
+  return [...wrongs].map(s=>{const[n,d]=s.split('/');return{n:+n,d:+d,label:frac(n,d)};});
+}
+
+function genReadPie() {
+  const pairs = getPairs();
+  const [n,d] = pairs[rand(0,pairs.length-1)];
+  const correct = {n,d,label:frac(n,d)};
+  const wrongs = wrongFracs(n,d);
+  const choices = shuffle([correct,...wrongs]);
+  return {
+    type:'read_pie', badge:'🍕 Reading fractions',
+    text:'What fraction of the circle is shaded blue?',
+    visual: `<div class="pie-row"><div class="pie-wrap">${makePie(n,d,110)}</div></div>`,
+    choices, answer: correct
+  };
+}
+
+function genCompare() {
+  const pairs = shuffle([...getPairs()]);
+  let [n1,d1]=pairs[0],[n2,d2]=pairs[1];
+  while(n1/d1===n2/d2){[n2,d2]=pairs[rand(1,pairs.length-1)];}
+  const bigger = n1/d1>n2/d2 ? {n:n1,d:d1} : {n:n2,d:d2};
+  const smaller = n1/d1<n2/d2 ? {n:n1,d:d1} : {n:n2,d:d2};
+  const choices = shuffle([
+    {n:bigger.n,d:bigger.d,label:frac(bigger.n,bigger.d)},
+    {n:smaller.n,d:smaller.d,label:frac(smaller.n,smaller.d)},
+    {n:0,d:0,label:'They are equal'},
+    {n:-1,d:-1,label:"Can't tell"}
+  ]);
+  return {
+    type:'compare', badge:'⚖️ Comparing fractions',
+    text:'Which fraction is <strong>bigger</strong>?',
+    visual:`<div class="pie-row">
+      <div class="pie-wrap">${makePie(n1,d1,100,'#3B8BEB')}<div class="pie-label">${frac(n1,d1)}</div></div>
+      <div style="font-size:24px;font-weight:900;color:#9ca3af;align-self:center">vs</div>
+      <div class="pie-wrap">${makePie(n2,d2,100,'#FF9500')}<div class="pie-label">${frac(n2,d2)}</div></div>
+    </div>`,
+    choices, answer:{n:bigger.n,d:bigger.d,label:frac(bigger.n,bigger.d)}
+  };
+}
+
+function genAddSame() {
+  const denoms = difficulty==='easy'?[2,3,4]:difficulty==='medium'?[4,5,6,8]:[6,8,10,12];
+  const d = denoms[rand(0,denoms.length-1)];
+  const n1 = rand(1,Math.floor(d/2));
+  const n2 = rand(1,d-n1);
+  const sum = n1+n2;
+  const correct = {n:sum,d,label:frac(sum,d)};
+  const wrongs = wrongFracs(sum,d);
+  const choices = shuffle([correct,...wrongs]);
+  return {
+    type:'add', badge:'➕ Adding fractions',
+    text:`What is ${frac(n1,d)} + ${frac(n2,d)} ?`,
+    visual:`<div class="pie-row">
+      <div class="pie-wrap">${makePie(n1,d,80)}<div class="pie-label" style="font-size:15px">${frac(n1,d)}</div></div>
+      <div style="font-size:26px;font-weight:900;color:#9ca3af;align-self:center">+</div>
+      <div class="pie-wrap">${makePie(n2,d,80)}<div class="pie-label" style="font-size:15px">${frac(n2,d)}</div></div>
+      <div style="font-size:26px;font-weight:900;color:#9ca3af;align-self:center">=</div>
+      <div class="pie-wrap">${makePie(0,d,80,'#e9edf5')}<div class="pie-label" style="font-size:15px;color:#9ca3af">?</div></div>
+    </div>`,
+    choices, answer: correct
+  };
+}
+
+function genStrip() {
+  const pairs = getPairs();
+  const [n,d] = pairs[rand(0,pairs.length-1)];
+  const correct = {n,d,label:frac(n,d)};
+  const wrongs = wrongFracs(n,d);
+  const choices = shuffle([correct,...wrongs]);
+  return {
+    type:'strip', badge:'📏 Fraction strips',
+    text:'What fraction of the strip is filled?',
+    visual:`<div style="display:flex;justify-content:center;margin-bottom:20px">${makeStrip(n,d)}</div>`,
+    choices, answer: correct
+  };
+}
+
+function genNumberLine() {
+  const safe = [[1,4],[1,2],[3,4],[1,3],[2,3]];
+  const [n,d] = safe[rand(0,safe.length-1)];
+  const correct = {n,d,label:frac(n,d)};
+  const wrongs = wrongFracs(n,d);
+  const choices = shuffle([correct,...wrongs]);
+  return {
+    type:'numberline', badge:'🔢 Number line',
+    text:'What fraction does the dot show?',
+    visual: makeNumberLine(n,d),
+    choices, answer: correct
+  };
+}
+
+function genSubtractSame() {
+  const denoms = [4,6,8];
+  const d = denoms[rand(0,denoms.length-1)];
+  const n1 = rand(2,d-1);
+  const n2 = rand(1,n1-1);
+  const diff = n1-n2;
+  const correct = {n:diff,d,label:frac(diff,d)};
+  const wrongs = wrongFracs(diff,d);
+  const choices = shuffle([correct,...wrongs]);
+  return {
+    type:'sub', badge:'➖ Subtracting fractions',
+    text:`What is ${frac(n1,d)} − ${frac(n2,d)} ?`,
+    visual:`<div class="pie-row">
+      <div class="pie-wrap">${makePie(n1,d,80)}<div class="pie-label" style="font-size:15px">${frac(n1,d)}</div></div>
+      <div style="font-size:26px;font-weight:900;color:#9ca3af;align-self:center">−</div>
+      <div class="pie-wrap">${makePie(n2,d,80,'#FF9500')}<div class="pie-label" style="font-size:15px">${frac(n2,d)}</div></div>
+      <div style="font-size:26px;font-weight:900;color:#9ca3af;align-self:center">=</div>
+      <div class="pie-wrap">${makePie(0,d,80,'#e9edf5')}<div class="pie-label" style="font-size:15px;color:#9ca3af">?</div></div>
+    </div>`,
+    choices, answer: correct
+  };
+}
+
+function genEquiv() {
+  const cases = [[1,2,2],[1,3,3],[2,3,2],[1,4,2],[3,4,2]];
+  const [n,d,m] = cases[rand(0,cases.length-1)];
+  const ans = `${n*m}/${d*m}`;
+  const correct = {n:n*m,d:d*m,label:frac(n*m,d*m)};
+  const pool=[];
+  for(let i=1;i<d*m;i++){if(`${i}/${d*m}`!==ans)pool.push({n:i,d:d*m,label:frac(i,d*m)});}
+  const wrongs = shuffle(pool).slice(0,3);
+  const choices = shuffle([correct,...wrongs]);
+  return {
+    type:'equiv', badge:'🔄 Equivalent fractions',
+    text:`Which fraction is the same as ${frac(n,d)}?`,
+    visual:`<div class="pie-row">
+      <div class="pie-wrap">${makePie(n,d,100)}<div class="pie-label">${frac(n,d)}</div></div>
+      <div style="font-size:26px;font-weight:900;color:#9ca3af;align-self:center">=</div>
+      <div class="pie-wrap">${makePie(n*m,d*m,100,'#34C759')}<div class="pie-label" style="color:#28a347">${frac(n*m,d*m)}</div></div>
+    </div>`,
+    choices, answer: correct
+  };
+}
+
+const GENERATORS_EASY   = [genReadPie,genReadPie,genCompare,genStrip,genAddSame,genNumberLine,genReadPie,genCompare,genEquiv,genStrip];
+const GENERATORS_MEDIUM = [genReadPie,genCompare,genAddSame,genStrip,genNumberLine,genEquiv,genSubtractSame,genCompare,genAddSame,genReadPie];
+const GENERATORS_HARD   = [genCompare,genAddSame,genSubtractSame,genEquiv,genReadPie,genSubtractSame,genAddSame,genCompare,genEquiv,genReadPie];
+
+// ===== EXPERT GENERATORS =====
+
+// Helper: find LCM
+function lcm(a,b){return(a*b)/gcd2(a,b);}
+function gcd2(a,b){return b===0?a:gcd2(b,a%b);}
+
+// Unlike-denominator addition
+function genAddUnlike() {
+  const pairs = [[1,2,1,3],[1,3,1,4],[1,4,1,3],[2,3,1,4],[1,2,1,6],[1,3,2,5],[3,4,1,6],[1,2,2,5]];
+  const [n1,d1,n2,d2] = pairs[rand(0,pairs.length-1)];
+  const L = lcm(d1,d2);
+  const sumN = n1*(L/d1) + n2*(L/d2);
+  const g = gcd2(sumN,L);
+  const rn=sumN/g, rd=L/g;
+  const correct = {n:rn,d:rd,label:frac(rn,rd)};
+  // plausible wrong answers
+  const wrongPool = [
+    {n:n1+n2,d:d1+d2,label:frac(n1+n2,d1+d2)},
+    {n:n1+n2,d:L,label:frac(n1+n2,L)},
+    {n:rn+1,d:rd,label:frac(rn+1,rd)},
+    {n:rn,d:rd+1,label:frac(rn,rd+1)},
+    {n:sumN,d:L,label:frac(sumN,L)},
+  ].filter(w=>!(w.n===rn&&w.d===rd));
+  const wrongs = shuffle(wrongPool).slice(0,3);
+  const choices = shuffle([correct,...wrongs]);
+  return {
+    type:'add_unlike', badge:'🔀 Unlike denominators',
+    text:`What is ${frac(n1,d1)} + ${frac(n2,d2)} ?`,
+    visual:`<div style="background:#f8f6ff;border-radius:16px;padding:16px 20px;margin-bottom:18px;font-size:14px;font-weight:700;color:#534AB7;line-height:1.8;">
+      <div>💡 Hint: Find a common denominator first!</div>
+      <div style="margin-top:6px;color:#7a72c4">${frac(n1,d1)} = ${frac(n1*(L/d1),L)} &nbsp;&nbsp; ${frac(n2,d2)} = ${frac(n2*(L/d2),L)}</div>
+    </div>`,
+    choices, answer: correct
+  };
+}
+
+// Unlike-denominator subtraction
+function genSubUnlike() {
+  const pairs = [[3,4,1,3],[2,3,1,4],[5,6,1,3],[3,4,1,6],[2,3,1,6],[5,6,2,5],[3,4,2,5]];
+  const [n1,d1,n2,d2] = pairs[rand(0,pairs.length-1)];
+  const L = lcm(d1,d2);
+  const diffN = n1*(L/d1) - n2*(L/d2);
+  const g = gcd2(diffN,L);
+  const rn=diffN/g, rd=L/g;
+  const correct = {n:rn,d:rd,label:frac(rn,rd)};
+  const wrongPool = [
+    {n:n1-n2,d:d1-d2>0?d1-d2:d1,label:frac(n1-n2,d1-d2>0?d1-d2:d1)},
+    {n:n1-n2,d:L,label:frac(n1-n2,L)},
+    {n:rn+1,d:rd,label:frac(rn+1,rd)},
+    {n:diffN,d:L,label:frac(diffN,L)},
+  ].filter(w=>!(w.n===rn&&w.d===rd)&&w.n>0&&w.d>0);
+  const wrongs = shuffle(wrongPool).slice(0,3);
+  const choices = shuffle([correct,...wrongs]);
+  return {
+    type:'sub_unlike', badge:'🔀 Unlike denominators',
+    text:`What is ${frac(n1,d1)} − ${frac(n2,d2)} ?`,
+    visual:`<div style="background:#f8f6ff;border-radius:16px;padding:16px 20px;margin-bottom:18px;font-size:14px;font-weight:700;color:#534AB7;line-height:1.8;">
+      <div>💡 Hint: Find a common denominator first!</div>
+      <div style="margin-top:6px;color:#7a72c4">${frac(n1,d1)} = ${frac(n1*(L/d1),L)} &nbsp;&nbsp; ${frac(n2,d2)} = ${frac(n2*(L/d2),L)}</div>
+    </div>`,
+    choices, answer: correct
+  };
+}
+
+// Mixed number — read and convert
+function genMixedNumber() {
+  const whole = rand(1,3);
+  const denoms = [2,3,4,5,6,8];
+  const d = denoms[rand(0,denoms.length-1)];
+  const n = rand(1,d-1);
+  // answer as improper fraction
+  const impN = whole*d + n;
+  const correct = {n:impN,d,label:frac(impN,d)};
+  const wrongPool = [
+    {n:whole*d+n+1,d,label:frac(whole*d+n+1,d)},
+    {n:whole*d+n-1,d,label:frac(whole*d+n-1,d)},
+    {n:whole*n,d,label:frac(whole*n,d)},
+    {n:(whole+1)*d+n,d,label:frac((whole+1)*d+n,d)},
+  ].filter(w=>w.n!==impN&&w.n>0);
+  const wrongs = shuffle(wrongPool).slice(0,3);
+  const choices = shuffle([correct,...wrongs]);
+  const wholeCircles = Array.from({length:whole},()=>makePie(d,d,70,'#AF52DE')).join('');
+  const partCircle = makePie(n,d,70,'#AF52DE');
+  return {
+    type:'mixed', badge:'🔢 Mixed numbers',
+    text:`The picture shows a mixed number. Write it as an improper fraction.`,
+    visual:`<div style="margin-bottom:18px;">
+      <div style="font-size:15px;font-weight:700;color:var(--muted);margin-bottom:10px;text-align:center">Each circle = 1 whole</div>
+      <div class="pie-row">${wholeCircles}${partCircle}</div>
+      <div style="text-align:center;font-size:22px;font-weight:900;color:#AF52DE;margin-top:8px">${whole} and ${frac(n,d)}</div>
+    </div>`,
+    choices, answer: correct
+  };
+}
+
+// Order 3 fractions smallest to largest
+function genOrder3() {
+  const allPairs = [[1,2],[1,3],[2,3],[3,4],[1,4],[2,5],[3,5],[1,6],[5,6],[1,8],[3,8],[5,8]];
+  let picked = shuffle([...allPairs]).slice(0,3);
+  // ensure all different values
+  while(new Set(picked.map(([n,d])=>n/d)).size < 3) picked = shuffle([...allPairs]).slice(0,3);
+  const sorted = [...picked].sort((a,b)=>a[0]/a[1]-b[0]/b[1]);
+  const smallest = sorted[0];
+  const correctLabel = frac(smallest[0],smallest[1]);
+  const correct = {n:smallest[0],d:smallest[1],label:correctLabel};
+  const choices = shuffle(picked.map(([n,d])=>({n,d,label:frac(n,d)})));
+  return {
+    type:'order3', badge:'📊 Order fractions',
+    text:`Which of these three fractions is the <strong>smallest</strong>?`,
+    visual:`<div class="pie-row">
+      ${picked.map(([n,d],i)=>`<div class="pie-wrap">${makePie(n,d,80,['#3B8BEB','#FF9500','#AF52DE'][i])}<div class="pie-label" style="color:${['#3B8BEB','#FF9500','#AF52DE'][i]}">${frac(n,d)}</div></div>`).join('')}
+    </div>
+    <div style="background:#fff8e6;border-radius:12px;padding:10px 14px;margin-bottom:16px;font-size:13px;font-weight:700;color:#7a5900">
+      💡 Tip: Convert to the same denominator to compare!
+    </div>`,
+    choices, answer: correct
+  };
+}
+
+// Word problem
+function genWordProblem() {
+  const problems = [
+    {
+      text:`Maya had a pizza cut into 6 slices. She ate 2 slices, and her brother ate 1 slice. What fraction of the pizza did they eat <strong>altogether</strong>?`,
+      n:3,d:6, displayN:1, displayD:2,
+      hint:'2 slices + 1 slice = 3 slices out of 6 total',
+      badge:'📝 Word problem'
+    },
+    {
+      text:`A ribbon is ${frac(7,8)} of a meter long. Sam cuts off ${frac(3,8)} of a meter. How much ribbon is left?`,
+      n:4,d:8, displayN:1, displayD:2,
+      hint:'Subtract the cut piece from the whole ribbon',
+      badge:'📝 Word problem'
+    },
+    {
+      text:`Jake ran ${frac(2,5)} of a mile in the morning and ${frac(1,5)} of a mile in the evening. How far did he run in total?`,
+      n:3,d:5, displayN:3, displayD:5,
+      hint:'Add the two distances together',
+      badge:'📝 Word problem'
+    },
+    {
+      text:`A recipe uses ${frac(3,4)} cup of flour. Emma only has ${frac(1,4)} cup. How much more flour does she need?`,
+      n:2,d:4, displayN:1, displayD:2,
+      hint:'Subtract what she has from what she needs',
+      badge:'📝 Word problem'
+    },
+    {
+      text:`A garden is divided into 8 equal parts. Tomatoes are planted in 3 parts, and peppers in 2 parts. What fraction of the garden has vegetables?`,
+      n:5,d:8, displayN:5, displayD:8,
+      hint:'Add tomato parts + pepper parts out of total parts',
+      badge:'📝 Word problem'
+    },
+    {
+      text:`Leo read ${frac(1,3)} of his book on Monday and ${frac(1,3)} on Tuesday. What fraction has he read so far?`,
+      n:2,d:3, displayN:2, displayD:3,
+      hint:'Add Monday + Tuesday reading',
+      badge:'📝 Word problem'
+    },
+  ];
+  const p = problems[rand(0,problems.length-1)];
+  const correct = {n:p.displayN,d:p.displayD,label:frac(p.displayN,p.displayD)};
+  const wrongPool = [
+    {n:p.displayN+1,d:p.displayD,label:frac(p.displayN+1,p.displayD)},
+    {n:p.displayN-1>0?p.displayN-1:p.displayN+2,d:p.displayD,label:frac(p.displayN-1>0?p.displayN-1:p.displayN+2,p.displayD)},
+    {n:p.n,d:p.d,label:frac(p.n,p.d)},
+    {n:p.displayN,d:p.displayD+1,label:frac(p.displayN,p.displayD+1)},
+  ].filter(w=>!(w.n===p.displayN&&w.d===p.displayD));
+  const wrongs = shuffle(wrongPool).slice(0,3);
+  const choices = shuffle([correct,...wrongs]);
+  return {
+    type:'word', badge: p.badge,
+    text: p.text,
+    visual:`<div style="background:#e8f5e9;border-radius:12px;padding:10px 14px;margin-bottom:16px;font-size:13px;font-weight:700;color:#2e7d32">💡 ${p.hint}</div>`,
+    choices, answer: correct
+  };
+}
+
+const GENERATORS_EXPERT = [
+  genAddUnlike, genSubUnlike, genMixedNumber, genOrder3, genWordProblem,
+  genAddUnlike, genSubUnlike, genMixedNumber, genOrder3, genWordProblem
+];
+
+function buildQuestions() {
+  let gens;
+  if(difficulty==='easy') gens = GENERATORS_EASY;
+  else if(difficulty==='medium') gens = GENERATORS_MEDIUM;
+  else if(difficulty==='hard') gens = GENERATORS_HARD;
+  else gens = GENERATORS_EXPERT;
+  return shuffle([...gens]).slice(0,TOTAL).map(g=>g());
+}
+
+// ===== QUIZ LOGIC =====
+function startQuiz() {
+  questions = buildQuestions();
+  current = 0; score = 0; results = [];
+  document.getElementById('screen-start').style.display='none';
+  document.getElementById('screen-quiz').style.display='block';
+  updateHighScoreBar();
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = questions[current];
+
+  // progress
+  document.getElementById('prog-label').textContent = `Question ${current+1} of ${TOTAL}`;
+  const pct = Math.round((current/TOTAL)*100);
+  document.getElementById('prog-pct').textContent = pct+'%';
+  document.getElementById('prog-fill').style.width = pct+'%';
+  document.getElementById('q-num').textContent = current+1;
+
+  // pips
+  const pipRow = document.getElementById('pip-row');
+  pipRow.innerHTML = Array.from({length:TOTAL},(_,i)=>{
+    let cls='pip';
+    if(i<results.length) cls+=results[i]?' correct':' wrong';
+    else if(i===current) cls+=' current';
+    return `<div class="${cls}"></div>`;
+  }).join('');
+
+  // question card
+  document.getElementById('question-area').innerHTML = `
+    <div class="question-card">
+      <div class="q-badge${difficulty==='expert'?' expert':''}">${q.badge}</div>
+      <div class="q-text">${q.text}</div>
+      ${q.visual}
+      <div class="choices-grid" id="choices">
+        ${q.choices.map((c,i)=>`<button class="choice-btn" id="cb${i}" onclick="choose(${i})">${c.label}</button>`).join('')}
+      </div>
+    </div>`;
+  document.getElementById('feedback-area').innerHTML = '';
+  document.getElementById('next-area').innerHTML = '';
+}
+
+const PRAISES = ['Awesome! 🎉','Great job! ⭐','You got it! 🌟','Correct! 🎊','Way to go! 🚀','Superstar! ✨','Brilliant! 💡','Perfect! 🏆'];
+const TRIES   = ['Not quite — keep trying!','Almost there!','That was tricky!','Good try — you\'ll get it!'];
+
+function choose(idx) {
+  const q = questions[current];
+  const picked = q.choices[idx];
+  const correct = picked.n===q.answer.n && picked.d===q.answer.d;
+  if(correct) score++;
+  results.push(correct);
+
+  // update pips
+  document.getElementById('pip-row').innerHTML = Array.from({length:TOTAL},(_,i)=>{
+    let cls='pip';
+    if(i<results.length) cls+=results[i]?' correct':' wrong';
+    else if(i===current+1 && current+1<TOTAL) cls+=' current';
+    return `<div class="${cls}"></div>`;
+  }).join('');
+
+  // style buttons
+  document.querySelectorAll('.choice-btn').forEach((btn,i)=>{
+    btn.disabled=true;
+    const c=q.choices[i];
+    if(c.n===q.answer.n&&c.d===q.answer.d) btn.classList.add('correct');
+    else if(i===idx&&!correct) btn.classList.add('wrong');
+  });
+
+  // update score
+  document.getElementById('s-correct').textContent = score;
+  document.getElementById('s-score').textContent = Math.round((score/results.length)*100)+'%';
+
+  // feedback
+  const msg = correct ? PRAISES[rand(0,PRAISES.length-1)] : TRIES[rand(0,TRIES.length-1)];
+  document.getElementById('feedback-area').innerHTML = `
+    <div class="feedback-card ${correct?'correct':'wrong'}">
+      <span class="feedback-icon">${correct?'✅':'❌'}</span>
+      <div class="feedback-text">${msg}${!correct?` The answer was <span class="answer-hint">${q.answer.label}</span>.`:''}</div>
+    </div>`;
+
+  // next button
+  const isLast = current >= TOTAL-1;
+  document.getElementById('next-area').innerHTML = `
+    <button class="next-btn" onclick="${isLast?'showResults()':'nextQuestion()'}">${isLast?'See my results! 🏆':'Next question →'}</button>`;
+}
+
+function nextQuestion() {
+  current++;
+  renderQuestion();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function showResults() {
+  document.getElementById('screen-quiz').style.display='none';
+  document.getElementById('screen-finish').style.display='block';
+
+  const pct = Math.round((score/TOTAL)*100);
+  const isNew = score > highScores[difficulty];
+  if(isNew) { highScores[difficulty]=score; localStorage.setItem('fq_hs',JSON.stringify(highScores)); }
+
+  let emoji, grade, gradeClass, label;
+  if(pct>=90){emoji='🏆';grade='A+';gradeClass='a';label=difficulty==='expert'?'Fraction genius!':'Outstanding!';}
+  else if(pct>=80){emoji='🌟';grade='A';gradeClass='a';label='Excellent work!';}
+  else if(pct>=70){emoji='😊';grade='B';gradeClass='b';label='Great job!';}
+  else if(pct>=60){emoji='👍';grade='C';gradeClass='c';label='Nice try!';}
+  else{emoji='💪';grade='Keep going';gradeClass='c';label=difficulty==='expert'?'Expert level is tough — keep at it!':'Practice makes perfect!';}
+
+  const pips = results.map((r,i)=>`<div class="p ${r?'c':'w'}">${r?'✓':'✗'}</div>`).join('');
+
+  document.getElementById('screen-finish').innerHTML = `
+    <div class="finish-card">
+      ${isNew?'<div class="new-best">🎉 New high score!</div>':''}
+      <span class="finish-emoji">${emoji}</span>
+      <div class="finish-grade ${gradeClass}">${grade}</div>
+      <div class="finish-label">${label}</div>
+      <div class="finish-stats">
+        <div class="stat-box"><div class="stat-num" style="color:var(--green)">${score}</div><div class="stat-lbl">Correct</div></div>
+        <div class="stat-box"><div class="stat-num" style="color:var(--red)">${TOTAL-score}</div><div class="stat-lbl">Missed</div></div>
+        <div class="stat-box"><div class="stat-num" style="color:var(--blue)">${pct}%</div><div class="stat-lbl">Score</div></div>
+      </div>
+      <div class="pip-summary">${pips}</div>
+      <div class="finish-actions">
+        <button class="btn-primary" onclick="startQuiz()">Play again 🔄</button>
+        <button class="btn-secondary" onclick="goHome()">Change difficulty</button>
+      </div>
+    </div>`;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function goHome() {
+  document.getElementById('screen-finish').style.display='none';
+  document.getElementById('screen-start').style.display='block';
+  updateHighScoreBar();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function updateHighScoreBar() {
+  const hs = highScores[difficulty];
+  const el = document.getElementById('hs-bar');
+  if(el) el.innerHTML = hs>0?`Best score on ${difficulty}: <strong>${hs}/${TOTAL}</strong>`:'';
+}
+
+updateHighScoreBar();
+</script>
+</body>
+</html>
