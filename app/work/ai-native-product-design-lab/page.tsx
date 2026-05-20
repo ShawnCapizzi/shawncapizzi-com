@@ -36,7 +36,8 @@ export default function Page() {
         "Now any idea you can conceive, you can create stimulus to test.",
         "AI has become the everyman's opportunity to design and create, and the people who'll win are those with subtle nuance, who can tell good from better from great.",
       ]}
-      midImages={[
+      midImages={[]}
+      bottomImages={[
         {
           src: "/images/case-studies/05-ai-native-product-design-lab/02-ai-patient-support-drug-detail.png",
           alt: "AI Patient Support, oncology IO lead deep dive",
@@ -44,6 +45,14 @@ export default function Page() {
         {
           src: "/images/case-studies/05-ai-native-product-design-lab/03-channel-optimizer-in-v0-environment.gif",
           alt: "Channel Optimizer media-mix dashboard built in v0",
+        },
+        {
+          src: "/images/case-studies/05-ai-native-product-design-lab/04-healthsync-pro-on-base44.png",
+          alt: "HealthSync Pro health-data integration prototype on Base44",
+        },
+        {
+          src: "/images/case-studies/05-ai-native-product-design-lab/05-apple-vision-pro-ar-concept.png",
+          alt: "Apple Vision Pro spatial computing concept for in-office HCP education",
         },
       ]}
       outcomes={[
@@ -71,16 +80,6 @@ export default function Page() {
           headline: "A repeatable methodology for integrating AI into team workflows",
           description:
             "The 10 Source Packs framework feeds AI the inputs it needs to produce real strategic work, not generic output.",
-        },
-      ]}
-      bottomImages={[
-        {
-          src: "/images/case-studies/05-ai-native-product-design-lab/04-healthsync-pro-on-base44.png",
-          alt: "HealthSync Pro health-data integration prototype on Base44",
-        },
-        {
-          src: "/images/case-studies/05-ai-native-product-design-lab/05-apple-vision-pro-ar-concept.png",
-          alt: "Apple Vision Pro spatial computing concept for in-office HCP education",
         },
       ]}
       closer={[
