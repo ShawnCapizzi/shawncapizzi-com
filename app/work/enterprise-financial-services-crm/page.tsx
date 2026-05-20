@@ -36,7 +36,10 @@ export default function Page() {
         "The CRM facelift and design system refinement that followed enabled cleaner scanability, quicker decisions, and faster task completion across the rep experience. UI refinements were prioritized based on the cost of friction in actual rep workflows, not on aesthetic preference.",
         "The technical constraint that shaped everything: this is a command-line-driven terminal system. The entire company runs on it. Every interface decision had to work within those constraints. There was no option to redesign the underlying paradigm. The work was about making the existing system clearer, faster, and more aligned to how three different rep types actually do their jobs.",
       ]}
-      pullQuote="What's distinct about this work is the platform itself. The whole company runs off this terminal, from the most junior role to senior leadership. Some of the biggest financial decisions made daily run through it."
+      pullQuote={[
+        "What's distinct about this work is the platform itself. The whole company runs off this terminal, from the most junior role to senior leadership.",
+        "Some of the biggest financial decisions made daily run through it.",
+      ]}
       midImages={[]}
       processCarousel={
         <>

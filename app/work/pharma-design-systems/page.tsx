@@ -36,7 +36,10 @@ export default function Page() {
         "The third was operational: a governance training program shared with copy, design, and media partners. The training teaches the correct way to leverage the system, the tolerance to which it can be modified, and best practices for initial setup. The goal isn't compliance enforcement. It's knowledge sharing.",
         "A specific innovation worth naming: I led the development of distribution channels for the Patient Design System, including a QR-based mobile wallet card for iOS and Android that gives patients fast access to co-pay information and medication support. It was an industry-first in pharma, made possible only because the design system was built to support new patterns instead of resisting them.",
       ]}
-      pullQuote="Knowledge sharing, and helping people alleviate their fears about a new design system. Not as a constraint, but as an opportunity to get to market faster and be creative within regulated design constraints."
+      pullQuote={[
+        "Knowledge sharing, and helping people alleviate their fears about a new design system.",
+        "Not as a constraint, but as an opportunity to get to market faster and be creative within regulated design constraints.",
+      ]}
       midImages={[
         {
           src: "/images/case-studies/01-pharma-design-systems/02-typographic-scale-documentation.png",

@@ -35,7 +35,12 @@ export default function Page() {
         "The product included coach and peer navigation, the heart of the platform, matching patients with trained coaches who had often been through breast cancer themselves, alongside a peer community of others on similar journeys. Education modules helped users recognize racism and bias in healthcare interactions, not abstractly, but in the specific patterns that show up in oncology care. Documentation tools designed to record symptoms, concerns, and provider responses before, during, and after appointments, simple enough to use under stress, detailed enough to create a record that mattered. Advocacy guides giving step-by-step language for addressing concerns and requesting appropriate care. Community support connecting users to others with similar experiences. A healthcare provider directory with ratings and reviews focused on culturally competent care.",
         "The hard part wasn't deciding what to build. It was the language. Every screen had to be empowering without being patronizing. Every feature had to respect that the user might be in crisis. The design had to feel like a tool that trusts the user, not one that's trying to fix her.",
       ]}
-      pullQuote="This is one of the few times where the metrics actually could convert to lives saved. Before this, the support was email and Excel documents distributed by hand. After, there was a live dashboard, real tracking, refinement based on coach usage data. It's not many times in your life you get to work with such a brilliant team on such an important topic."
+      pullQuote={[
+        "This is one of the few times where the metrics actually could convert to lives saved.",
+        "Before this, the support was email and Excel documents distributed by hand.",
+        "After, there was a live dashboard, real tracking, refinement based on coach usage data.",
+        "It's not many times in your life you get to work with such a brilliant team on such an important topic.",
+      ]}
       midImages={[
         {
           src: `${ASSET_BASE}/02-app-marketing-site-laptop.jpeg`,

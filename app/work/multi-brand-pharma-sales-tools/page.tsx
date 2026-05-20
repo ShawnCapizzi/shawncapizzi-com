@@ -38,7 +38,11 @@ export default function Page() {
         "Brand teams could still express campaign identity. But inside a governed design system. The result wasn't uniformity. It was structured flexibility.",
         "The harder work was organizational. Brand managers had to give up some autonomy to gain shared infrastructure. Regulatory teams had to trust pre-approved components. Development teams had to commit to the framework instead of building bespoke solutions on every brief. None of that happens because the system is well-designed. It happens because the governance is.",
       ]}
-      pullQuote="Designing for an audience that might have 45 seconds versus six minutes versus sit down for a cup of coffee, 12 minutes, you really have to be agile. The consistency made their job easier. The field notes feature let them pick up where they left off and know what to send to the office post-call."
+      pullQuote={[
+        "Designing for an audience that might have 45 seconds versus six minutes versus sit down for a cup of coffee, 12 minutes, you really have to be agile.",
+        "The consistency made their job easier.",
+        "The field notes feature let them pick up where they left off and know what to send to the office post-call.",
+      ]}
       processCarousel={
         <CaseStudyCarousel
           eyebrow="(Process)"

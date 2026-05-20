@@ -38,7 +38,7 @@ interface CaseStudyLayoutProps {
   metadata: MetadataItem[];
   challenge: string[];
   approach: string[];
-  pullQuote?: string;
+  pullQuote?: string | string[];
   midImages?: CaseStudyImage[];
   /** Optional carousel slot rendered between the approach section and outcomes. */
   processCarousel?: ReactNode;
@@ -131,9 +131,21 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           {props.pullQuote && (
             <blockquote className="mb-12 md:mb-16 max-w-3xl border-l-2 border-brand-purple pl-6 md:pl-10 py-2">
-              <p className="text-xl md:text-2xl text-text-primary leading-relaxed italic">
-                &ldquo;{props.pullQuote}&rdquo;
-              </p>
+              {(Array.isArray(props.pullQuote)
+                ? props.pullQuote
+                : [props.pullQuote]
+              ).map((line, i, arr) => (
+                <p
+                  key={i}
+                  className={`text-xl md:text-2xl text-text-primary leading-relaxed italic${
+                    i > 0 ? " mt-4 md:mt-5" : ""
+                  }`}
+                >
+                  {i === 0 && "\u201C"}
+                  {line}
+                  {i === arr.length - 1 && "\u201D"}
+                </p>
+              ))}
             </blockquote>
           )}
 
