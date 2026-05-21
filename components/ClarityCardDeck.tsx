@@ -5,20 +5,19 @@ import { useCallback, useMemo, useRef, useState } from "react";
 /**
  * ClarityCardDeck
  *
- * A face-down stack of Capizzi Clarity Cards. Click "Draw a card" to deal the
- * top card into the display slot. The card flips in mid-flight with a diagonal
- * shimmer sweep across the face. After all cards are drawn, the deck offers a
- * Reshuffle. Subtle ambient bob on the deck at rest.
+ * A single stacked deck of Capizzi Clarity Cards sitting on a green felt
+ * playmat. Click "Draw" and the top card lifts a little, tilts to roughly 8
+ * degrees, and flips face-up on top of the stack so its content is readable.
+ * Click again and the next card flips on top of that one. Pile grows.
  *
- * Cards are CSS-rendered from the data array below, so text stays sharp at any
- * size and adding a card means appending to the array.
+ * Cards are CSS-rendered from the data array below.
  */
 
 type ClarityCard = {
-  rank: string; // playing-card index: A, 2-10, J, Q, K
-  eyebrow: string; // small purple uppercase label
-  question: string; // main headline
-  note: string; // italic body copy
+  rank: string;
+  eyebrow: string;
+  question: string;
+  note: string;
 };
 
 const CARDS: ClarityCard[] = [
@@ -68,29 +67,38 @@ const CARDS: ClarityCard[] = [
 
 const SPADE = "\u2660";
 
+// Card dimensions used by the stack. Single source of truth.
+const CARD_W = 260;
+const CARD_H = 364;
+
+// Per-draw tilt and offset so each face-up card lands in a slightly different
+// spot, like a real fanned pile of drawn cards. Deterministic by draw index
+// so re-renders don't reshuffle the visible layout.
+function tiltFor(seed: number) {
+  const sequence = [-8, 6, -5, 9, -7, 4, -10, 7, -6, 8];
+  return sequence[seed % sequence.length];
+}
+function offsetFor(seed: number) {
+  const xs = [0, 8, -10, 6, -4, 11, -8, 3, -12, 9];
+  const ys = [0, -3, 4, -6, 2, -5, 6, -4, 3, -7];
+  return { x: xs[seed % xs.length], y: ys[seed % ys.length] };
+}
+
 export function ClarityCardDeck() {
-  // Indices remaining in the deck, top of stack at end of array.
   const [deckIndices, setDeckIndices] = useState<number[]>(() =>
     CARDS.map((_, i) => i).reverse()
   );
-  // Index of the currently displayed (drawn) card, null = empty slot.
-  const [drawnIndex, setDrawnIndex] = useState<number | null>(null);
-  // Animation key, increments on each draw to retrigger flip + shimmer.
-  const [flipKey, setFlipKey] = useState(0);
-  // Lock to prevent rapid double-clicks mid-animation.
+  const [drawn, setDrawn] = useState<number[]>([]);
   const animatingRef = useRef(false);
 
   const drawNext = useCallback(() => {
-    if (animatingRef.current) return;
-    if (deckIndices.length === 0) return;
+    if (animatingRef.current || deckIndices.length === 0) return;
     animatingRef.current = true;
 
     const next = deckIndices[deckIndices.length - 1];
     setDeckIndices((prev) => prev.slice(0, -1));
-    setDrawnIndex(next);
-    setFlipKey((k) => k + 1);
+    setDrawn((prev) => [...prev, next]);
 
-    // Animation runs 900ms; release lock slightly after.
     window.setTimeout(() => {
       animatingRef.current = false;
     }, 950);
@@ -98,8 +106,7 @@ export function ClarityCardDeck() {
 
   const reshuffle = useCallback(() => {
     if (animatingRef.current) return;
-    setDrawnIndex(null);
-    // Reset to a freshly shuffled order so the next session feels new.
+    setDrawn([]);
     const fresh = CARDS.map((_, i) => i);
     for (let i = fresh.length - 1; i > 0; i -= 1) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -108,20 +115,16 @@ export function ClarityCardDeck() {
     setDeckIndices(fresh);
   }, []);
 
-  const drawnCard = drawnIndex !== null ? CARDS[drawnIndex] : null;
-  const deckEmpty = deckIndices.length === 0;
+  const noDrawsLeft = deckIndices.length === 0;
   const cardsRemaining = deckIndices.length;
-
-  // Render the top three cards as a stacked stack for depth; the visual cap.
-  const visibleStack = useMemo(() => deckIndices.slice(-3), [deckIndices]);
+  const visibleDeck = useMemo(() => deckIndices.slice(-3), [deckIndices]);
 
   return (
     <div className="w-full">
-      <style>{shimmerCSS}</style>
+      <style>{deckCSS}</style>
 
-      {/* Playmat: gives the cards a working surface instead of floating against the page. */}
       <div
-        className="relative rounded-3xl overflow-hidden p-8 md:p-12 lg:p-14"
+        className="relative rounded-3xl overflow-hidden p-8 md:p-12 lg:p-16"
         style={{
           background:
             "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(41, 168, 41, 0.28) 0%, rgba(41, 168, 41, 0.14) 40%, rgba(20, 90, 25, 0.85) 100%), linear-gradient(160deg, #1f7a25 0%, #176019 60%, #0f4612 100%)",
@@ -129,60 +132,90 @@ export function ClarityCardDeck() {
             "inset 0 0 0 1px rgba(255, 255, 255, 0.08), inset 0 0 80px rgba(0, 0, 0, 0.45), 0 30px 80px -30px rgba(0, 0, 0, 0.7)",
         }}
       >
-        {/* Inner felt border ring for depth */}
         <div
           aria-hidden="true"
           className="absolute inset-4 md:inset-5 rounded-2xl pointer-events-none"
           style={{ border: "1px solid rgba(255, 255, 255, 0.06)" }}
         />
 
-        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
-        {/* DECK SIDE */}
-        <div className="flex flex-col items-center md:items-start">
-          <p className="font-mono text-xs tracking-widest uppercase text-white/70 mb-4">The Deck</p>
+        <div className="relative flex flex-col items-center">
           <div
             className="relative"
-            style={{ width: 220, height: 308 }}
-            aria-hidden="true"
+            style={{
+              width: CARD_W + 60,
+              height: CARD_H + 40,
+            }}
+            aria-live="polite"
           >
-            {visibleStack.length === 0 ? (
-              <EmptyDeckSlot />
-            ) : (
-              visibleStack.map((cardIdx, stackPos) => {
-                const isTop = stackPos === visibleStack.length - 1;
-                // Offset each stacked card slightly for depth.
-                const offset = (visibleStack.length - 1 - stackPos) * 3;
+            {/* Face-down deck, three visible for depth */}
+            {!noDrawsLeft &&
+              visibleDeck.map((cardIdx, stackPos) => {
+                const isTopOfDeck = stackPos === visibleDeck.length - 1;
+                const depth = (visibleDeck.length - 1 - stackPos) * 3;
                 return (
                   <div
-                    key={`stack-${cardIdx}`}
-                    className={`absolute inset-0 ${isTop ? "deck-bob" : ""}`}
+                    key={`deck-${cardIdx}`}
+                    className={`absolute ${isTopOfDeck ? "deck-bob" : ""}`}
                     style={{
-                      transform: `translate(${offset}px, ${offset}px)`,
+                      left: "50%",
+                      top: 20,
+                      width: CARD_W,
+                      height: CARD_H,
+                      transform: `translateX(-50%) translate(${depth}px, ${depth}px)`,
                       zIndex: stackPos,
                     }}
+                    aria-hidden="true"
                   >
                     <CardBack />
                   </div>
                 );
-              })
-            )}
+              })}
+
+            {/* Face-up pile, drawn order, newest on top */}
+            {drawn.map((cardIdx, i) => {
+              const isNewest = i === drawn.length - 1;
+              const tilt = tiltFor(i);
+              const { x, y } = offsetFor(i);
+              return (
+                <div
+                  key={`drawn-${cardIdx}-${i}`}
+                  className={isNewest ? "card-flip-on-pile" : ""}
+                  style={{
+                    position: "absolute",
+                    left: "50%",
+                    top: 20,
+                    width: CARD_W,
+                    height: CARD_H,
+                    transform: `translateX(-50%) translate(${x}px, ${y}px) rotate(${tilt}deg)`,
+                    transformOrigin: "center center",
+                    zIndex: 100 + i,
+                    ["--final-tilt" as string]: `${tilt}deg`,
+                    ["--final-x" as string]: `${x}px`,
+                    ["--final-y" as string]: `${y}px`,
+                  }}
+                >
+                  <CardFront card={CARDS[cardIdx]} />
+                  {isNewest && <span className="card-shimmer" aria-hidden="true" />}
+                </div>
+              );
+            })}
           </div>
 
-          {/* CONTROLS */}
-          <div className="mt-7 flex items-center gap-3">
-            {!deckEmpty ? (
+          {/* CONTROLS directly below the stack */}
+          <div className="mt-8 flex items-center gap-4">
+            {!noDrawsLeft ? (
               <button
                 type="button"
                 onClick={drawNext}
-                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-sm md:text-base font-medium tracking-tight transition-all hover:scale-[1.02]"
+                className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-sm md:text-base font-medium tracking-tight transition-all hover:scale-[1.02]"
               >
-                {drawnIndex === null ? "Draw a card" : "Draw next"}
+                {drawn.length === 0 ? "Draw a card" : "Draw next"}
               </button>
             ) : (
               <button
                 type="button"
                 onClick={reshuffle}
-                className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-border-strong text-text-primary hover:bg-white/[0.04] text-sm md:text-base font-medium tracking-tight transition-all"
+                className="inline-flex items-center justify-center px-7 py-3 rounded-full border border-white/30 text-white hover:bg-white/[0.08] text-sm md:text-base font-medium tracking-tight transition-all"
               >
                 Reshuffle
               </button>
@@ -191,30 +224,6 @@ export function ClarityCardDeck() {
               {cardsRemaining} {cardsRemaining === 1 ? "card" : "cards"} left
             </p>
           </div>
-        </div>
-
-        {/* DISPLAY SIDE */}
-        <div className="flex flex-col items-center md:items-start">
-          <p className="font-mono text-xs tracking-widest uppercase text-white/70 mb-4">Drawn</p>
-          <div
-            className="relative"
-            style={{ width: 280, height: 392 }}
-            aria-live="polite"
-          >
-            {drawnCard ? (
-              <div
-                key={flipKey}
-                className="absolute inset-0 card-flip-in"
-                style={{ transformStyle: "preserve-3d" }}
-              >
-                <CardFront card={drawnCard} />
-                <span className="card-shimmer" aria-hidden="true" />
-              </div>
-            ) : (
-              <EmptyDrawSlot />
-            )}
-          </div>
-        </div>
         </div>
       </div>
     </div>
@@ -235,7 +244,6 @@ function CardFront({ card }: { card: ClarityCard }) {
           "0 30px 60px -20px rgba(0,0,0,0.6), 0 12px 24px -10px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(107,92,255,0.08)",
       }}
     >
-      {/* Top-left index */}
       <div
         className="absolute top-3 left-3 flex flex-col items-center leading-none"
         style={{ color: "#6B5CFF" }}
@@ -246,7 +254,6 @@ function CardFront({ card }: { card: ClarityCard }) {
         {SPADE}
       </div>
 
-      {/* Top-right index */}
       <div
         className="absolute top-3 right-3 flex flex-col items-center leading-none"
         style={{ color: "#ffffff" }}
@@ -254,7 +261,6 @@ function CardFront({ card }: { card: ClarityCard }) {
         <span className="text-2xl font-bold tabular-nums">{card.rank}</span>
       </div>
 
-      {/* Bottom-left rotated index */}
       <div
         className="absolute bottom-3 left-3 leading-none"
         style={{ color: "#ffffff", transform: "rotate(180deg)" }}
@@ -262,7 +268,6 @@ function CardFront({ card }: { card: ClarityCard }) {
         <span className="text-2xl font-bold tabular-nums">{card.rank}</span>
       </div>
 
-      {/* Bottom-right rotated spade */}
       <div
         className="absolute bottom-3 right-3 text-[#6B5CFF] text-lg leading-none"
         style={{ transform: "rotate(180deg)" }}
@@ -270,15 +275,14 @@ function CardFront({ card }: { card: ClarityCard }) {
         {SPADE}
       </div>
 
-      {/* Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center">
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-7 text-center">
         <p
           className="font-mono text-[10px] tracking-[0.18em] uppercase mb-4"
           style={{ color: "#6B5CFF" }}
         >
           {card.eyebrow}
         </p>
-        <h3 className="text-xl md:text-[22px] font-bold text-white leading-[1.2] tracking-tight mb-5 text-balance">
+        <h3 className="text-lg md:text-xl font-bold text-white leading-[1.2] tracking-tight mb-4 text-balance">
           {card.question}
         </h3>
         <p className="text-xs md:text-sm italic text-white/60 leading-relaxed text-balance">
@@ -301,7 +305,6 @@ function CardBack() {
           "0 18px 40px -16px rgba(0,0,0,0.55), 0 6px 14px -6px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(107,92,255,0.10)",
       }}
     >
-      {/* Decorative back pattern: large center spade + corner ornaments */}
       <div
         className="absolute inset-0 flex items-center justify-center text-7xl"
         style={{ color: "rgba(107, 92, 255, 0.20)" }}
@@ -320,7 +323,6 @@ function CardBack() {
       >
         {SPADE}
       </div>
-      {/* Faint border ring */}
       <div
         className="absolute inset-3 rounded-xl pointer-events-none"
         style={{ border: "1px solid rgba(107, 92, 255, 0.15)" }}
@@ -329,49 +331,47 @@ function CardBack() {
   );
 }
 
-function EmptyDeckSlot() {
-  return (
-    <div
-      className="h-full w-full rounded-2xl border border-dashed flex items-center justify-center"
-      style={{ borderColor: "rgba(255, 255, 255, 0.18)" }}
-    >
-      <p className="text-xs text-white/70">Deck empty</p>
-    </div>
-  );
-}
-
-function EmptyDrawSlot() {
-  return (
-    <div
-      className="h-full w-full rounded-2xl border border-dashed flex items-center justify-center"
-      style={{ borderColor: "rgba(255, 255, 255, 0.15)" }}
-    >
-      <p className="text-xs text-white/70 px-6 text-center">
-        Click <span className="text-white">Draw a card</span> to begin
-      </p>
-    </div>
-  );
-}
-
 /* -------------------- Animations -------------------- */
 
-const shimmerCSS = `
+const deckCSS = `
 @keyframes deckBob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-3px); }
+  0%, 100% { transform: translateX(-50%) translate(0px, 0px); }
+  50%      { transform: translateX(-50%) translate(0px, -3px); }
 }
 .deck-bob {
   animation: deckBob 4.2s ease-in-out infinite;
 }
 
-@keyframes cardFlipIn {
-  0%   { transform: translateY(-40px) rotateY(180deg) scale(0.92); opacity: 0; }
-  40%  { opacity: 1; }
-  100% { transform: translateY(0) rotateY(0deg) scale(1); opacity: 1; }
+/* Drawn card flips in place on top of the pile.
+   Start: lifted, untilted, face-down (rotateY 180), slightly larger.
+   End:   per-card tilt and small offset, face-up. */
+@keyframes flipOnPile {
+  0% {
+    transform:
+      translateX(-50%)
+      translate(0px, -30px)
+      rotate(0deg)
+      rotateY(180deg)
+      scale(1.04);
+    opacity: 0.85;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    transform:
+      translateX(-50%)
+      translate(var(--final-x), var(--final-y))
+      rotate(var(--final-tilt))
+      rotateY(0deg)
+      scale(1);
+    opacity: 1;
+  }
 }
-.card-flip-in {
-  animation: cardFlipIn 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+.card-flip-on-pile {
+  animation: flipOnPile 850ms cubic-bezier(0.22, 1, 0.36, 1) both;
   backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 @keyframes cardShimmer {
@@ -383,7 +383,8 @@ const shimmerCSS = `
 .card-shimmer {
   position: absolute;
   top: 0; left: 0;
-  width: 45%; height: 100%;
+  width: 45%;
+  height: 100%;
   pointer-events: none;
   background: linear-gradient(
     90deg,
@@ -400,7 +401,7 @@ const shimmerCSS = `
 
 @media (prefers-reduced-motion: reduce) {
   .deck-bob,
-  .card-flip-in,
+  .card-flip-on-pile,
   .card-shimmer {
     animation: none !important;
   }
