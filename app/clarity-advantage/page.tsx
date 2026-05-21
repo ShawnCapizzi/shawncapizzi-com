@@ -27,10 +27,28 @@ export default function Page() {
         </div>
       </section>
 
-      {/* THE THREE THINGS */}
+      {/* INTERACTIVE DECK + CARDS INTRO */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="max-w-3xl mb-12 md:mb-16">
+            <p className="eyebrow mb-4">Coming soon</p>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight leading-tight text-text-primary">
+              The Capizzi Clarity Cards
+            </h2>
+            <p className="mt-4 md:mt-6 text-base md:text-lg text-text-secondary leading-relaxed">
+              A 54-card strategic prompt deck based on the Capizzi Process. A
+              working tool for teams making complex decisions.
+            </p>
+          </div>
+
+          <ClarityCardDeck />
+        </div>
+      </section>
+
+      {/* THE TWO THINGS */}
+      <section className="py-16 md:py-24 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {/* Newsletter */}
             <article className="relative p-7 md:p-9 rounded-2xl card-surface border border-border-default">
               <p className="eyebrow mb-4">Newsletter</p>
@@ -68,40 +86,7 @@ export default function Page() {
                 Notify form launches with the first chapter.
               </p>
             </article>
-
-            {/* The Cards */}
-            <article className="relative p-7 md:p-9 rounded-2xl card-surface border border-border-default">
-              <p className="eyebrow mb-4">Coming soon</p>
-              <h2 className="text-xl md:text-2xl font-semibold text-text-primary mb-4 leading-tight">
-                The Capizzi Clarity Cards
-              </h2>
-              <p className="text-base text-text-secondary leading-relaxed mb-6">
-                A 54-card strategic prompt deck based on the Capizzi Process. A
-                working tool for teams making complex decisions.
-              </p>
-              <p className="text-sm text-text-tertiary italic">
-                Early access details to come.
-              </p>
-            </article>
           </div>
-        </div>
-      </section>
-
-      {/* INTERACTIVE DECK TEASE */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="max-w-3xl mb-12 md:mb-16">
-            <p className="eyebrow mb-4">Try the deck</p>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight leading-tight text-text-primary">
-              A taste of the Capizzi Clarity Cards.
-            </h2>
-            <p className="mt-4 md:mt-6 text-base md:text-lg text-text-secondary leading-relaxed">
-              Each card is a question for a moment in the work. Draw one when
-              the work is stuck. The full 54-card deck is in production.
-            </p>
-          </div>
-
-          <ClarityCardDeck />
         </div>
       </section>
 
