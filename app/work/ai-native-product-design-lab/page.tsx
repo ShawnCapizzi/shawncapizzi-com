@@ -1,5 +1,4 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
-import { TiltedPhonePair } from "@/components/TiltedPhonePair";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,7 +8,6 @@ export const metadata: Metadata = {
 };
 
 const ASSET_BASE = "/images/case-studies/05-ai-native-product-design-lab";
-const VIDEO_BASE = "/videos";
 
 export default function Page() {
   return (
@@ -115,29 +113,23 @@ export default function Page() {
           eyebrow: "Public deployment · Live in ChatGPT",
           title: "Three Custom GPTs",
           description: [
-            "Three working Custom GPTs deployed publicly: UX Research Advisor advises on UX research and marketing opportunities using user-provided data; Product Innovation and Case Study Helper generates detailed product definitions and case studies; AEM Design Assistant covers best practices for AEM, Adobe Target, and DAM for storytelling and personalization.",
+            "Three working Custom GPTs deployed publicly: UX Research Advisor advises on UX research and marketing opportunities using user-provided data; Product Story, Strategy and Case Study Partner generates detailed product definitions and case studies; AEM Design Assistant covers best practices for AEM, Adobe Target, and DAM for storytelling and personalization.",
             "Each is live in ChatGPT. Anyone can click through and use them right now.",
           ],
-          images: [
+          links: [
             {
-              src: `${ASSET_BASE}/01-hero-ai-native-design-lab.png`,
-              alt: "Working AI Patient Support platform built using the same Custom GPT-assisted research and prototyping methodology",
+              label: "Try UX Research Advisor",
+              href: "https://chatgpt.com/g/g-MTnad2Xgw-ux-research-advisor",
+            },
+            {
+              label: "Try Product Story, Strategy and Case Study Partner",
+              href: "https://chatgpt.com/g/g-FFhKQN1Oa-product-story-strategy-and-case-study-partner",
+            },
+            {
+              label: "Try AEM Design Assistant",
+              href: "https://chatgpt.com/g/g-w8akbOHzb-aem-design-assistant",
             },
           ],
-          customContent: (
-            <TiltedPhonePair
-              left={{
-                src: `${VIDEO_BASE}/gpt-ux-research-advisor.mp4`,
-                alt: "UX Research Advisor Custom GPT responding to a research methodology prompt inside ChatGPT mobile",
-                caption: "UX Research Advisor",
-              }}
-              right={{
-                src: `${VIDEO_BASE}/gpt-AEM.mp4`,
-                alt: "AEM Design Assistant Custom GPT responding to a question about Adobe Experience Manager best practices inside ChatGPT mobile",
-                caption: "AEM Design Assistant",
-              }}
-            />
-          ),
         },
         {
           eyebrow: "Personal project · Free at-home learning supplement",
