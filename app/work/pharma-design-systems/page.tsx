@@ -293,7 +293,7 @@ export default function Page() {
         },
         {
           src: "/images/case-studies/01-pharma-design-systems/bottom-multi-brand-output.jpg",
-          alt: "Three branded mobile screens showing patient education video, treatment trial results content, and a companion medication tracking app — distinct brand identity expressed within the shared design system",
+          alt: "Three branded mobile screens showing patient education video, treatment trial results content, and a companion medication tracking app, distinct brand identity expressed within the shared design system",
         },
       ]}
       closer={[
