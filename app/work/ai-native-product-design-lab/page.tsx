@@ -132,6 +132,24 @@ export default function Page() {
           ],
         },
         {
+          eyebrow: "Published tool · Figma Community",
+          title: "Detached Instance Finder",
+          description: [
+            "A Figma plugin I concepted, designed, and built, published to the Figma Community. It finds layers that were detached from their components before they cause design-system drift. Detached instances lose their link to the main component and silently stop receiving updates, so a button or card keeps looking right while quietly falling out of the system.",
+            "The plugin surfaces them using two detection signals: name-matching, which finds frames named like a component, and contextual orphan detection, which finds a plain frame sitting among instance siblings (the one black layer in a row of purple). Teams can scan the current page or the entire file and catch drift early. Built with the Figma Plugin API and JavaScript.",
+          ],
+          images: [
+            {
+              src: `${ASSET_BASE}/09-detached-instance-finder-community-listing.jpg`,
+              alt: "Detached Instance Finder listing in the Figma Community, showing the plugin cover art and a layer list with one frame flagged as detached among live instances",
+            },
+            {
+              src: `${ASSET_BASE}/10-detached-instance-finder-plugin-ui.jpg`,
+              alt: "Detached Instance Finder plugin UI, showing the detection signal selector (name match, orphan, both), current page versus entire file scope, and a Scan button",
+            },
+          ],
+        },
+        {
           eyebrow: "Personal project · Free at-home learning supplement",
           title: "Education Tools for Daughters",
           description: [
@@ -156,7 +174,12 @@ export default function Page() {
         {
           headline: "Three Custom GPTs deployed publicly",
           description:
-            "Working AI tools live in the world, not concepts in a deck. UX Research Advisor, Product Innovation Helper, AEM Design Assistant.",
+            "Working AI tools live in the world, not concepts in a deck. UX Research Advisor, Product Story Strategy and Case Study Partner, AEM Design Assistant.",
+        },
+        {
+          headline: "A Figma plugin published to the Community",
+          description:
+            "Detached Instance Finder, concepted, designed, and built end to end. It catches detached instances before they cause design-system drift.",
         },
         {
           headline: "A vendor-agnostic AI advisory practice",
