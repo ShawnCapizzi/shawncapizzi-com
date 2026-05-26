@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 /**
  * Building — "What I'm building" section.
  * Per design system §5: periwinkle full-bleed color block.
@@ -10,7 +12,15 @@
  * Client Component because of the form onSubmit handlers.
  */
 
-const BUILDING = [
+type BuildingItem = {
+  title: string;
+  subtitle?: string;
+  description: string;
+  cta: string;
+  href?: string;
+};
+
+const BUILDING: BuildingItem[] = [
   {
     title: "The Clarity Advantage",
     description: "A practical field guide for enterprise teams turning complexity into action. Coming soon.",
@@ -19,8 +29,9 @@ const BUILDING = [
   {
     title: "Clarity Is the Advantage",
     subtitle: "the book",
-    description: "Honest, no-fluff thinking on AI, design, and strategy for 2026 and beyond.",
-    cta: "Read the first chapter when it publishes",
+    description: "Honest, no-fluff thinking on empathy, AI, and design. Read Chapter 1 — \u201CThe Human Condition\u201D — right now in the reader.",
+    cta: "Read the first chapter",
+    href: "/book/chapter-1",
   },
   {
     title: "The Capizzi Clarity Cards",
@@ -82,31 +93,46 @@ export function Building() {
                 {item.description}
               </p>
 
-              <form
-                className="mt-6 pt-6"
-                style={{ borderTop: "1px solid rgba(10, 10, 10, 0.15)" }}
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <label className="block">
-                  <span className="text-xs font-semibold tracking-tight" style={{ color: "rgba(10, 10, 10, 0.75)" }}>
+              {item.href ? (
+                <div
+                  className="mt-6 pt-6"
+                  style={{ borderTop: "1px solid rgba(10, 10, 10, 0.15)" }}
+                >
+                  <Link
+                    href={item.href}
+                    className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl text-sm font-medium bg-bg-primary text-text-primary hover:opacity-90 transition-opacity"
+                  >
                     {item.cta}
-                  </span>
-                  <div className="mt-3 flex flex-col gap-2">
-                    <input
-                      type="email"
-                      placeholder="Work email"
-                      className="w-full px-4 py-3 rounded-xl text-sm bg-bg-primary text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2"
-                      style={{ borderColor: "rgba(10, 10, 10, 0.2)" }}
-                    />
-                    <button
-                      type="submit"
-                      className="w-full px-4 py-3 rounded-xl text-sm font-medium bg-bg-primary text-text-primary hover:opacity-90 transition-opacity"
-                    >
-                      Notify me
-                    </button>
-                  </div>
-                </label>
-              </form>
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              ) : (
+                <form
+                  className="mt-6 pt-6"
+                  style={{ borderTop: "1px solid rgba(10, 10, 10, 0.15)" }}
+                  onSubmit={(e) => e.preventDefault()}
+                >
+                  <label className="block">
+                    <span className="text-xs font-semibold tracking-tight" style={{ color: "rgba(10, 10, 10, 0.75)" }}>
+                      {item.cta}
+                    </span>
+                    <div className="mt-3 flex flex-col gap-2">
+                      <input
+                        type="email"
+                        placeholder="Work email"
+                        className="w-full px-4 py-3 rounded-xl text-sm bg-bg-primary text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2"
+                        style={{ borderColor: "rgba(10, 10, 10, 0.2)" }}
+                      />
+                      <button
+                        type="submit"
+                        className="w-full px-4 py-3 rounded-xl text-sm font-medium bg-bg-primary text-text-primary hover:opacity-90 transition-opacity"
+                      >
+                        Notify me
+                      </button>
+                    </div>
+                  </label>
+                </form>
+              )}
             </article>
           ))}
         </div>

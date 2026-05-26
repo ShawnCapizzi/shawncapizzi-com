@@ -1,4 +1,4 @@
-const CAL_URL = "https://cal.com/capizzi/15min";
+const CAL_URL = "https://cal.com/capizzi/30min";
 
 export function FinalCTA() {
   return (
@@ -9,7 +9,7 @@ export function FinalCTA() {
             Let&apos;s talk through your challenges.
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            30 minutes. Virtual. No pitch. We figure out together if there&apos;s a fit.
+            30 minutes. Virtual. We figure out together if there&apos;s a fit.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
             <a
@@ -23,10 +23,10 @@ export function FinalCTA() {
             <p className="text-base text-text-secondary">
               Or email{" "}
               <a
-                href="mailto:capizzi@gmail.com"
+                href="mailto:capizzi@shawncapizzi.com"
                 className="text-text-primary font-medium hover:text-link transition-colors"
               >
-                capizzi@gmail.com
+                capizzi@shawncapizzi.com
               </a>
             </p>
           </div>

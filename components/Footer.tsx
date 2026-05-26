@@ -6,13 +6,14 @@ const NAV = [
   { href: "/work", label: "Work" },
   { href: "/engagements", label: "Engagements" },
   { href: "/thinking", label: "Thinking" },
+  { href: "/book/chapter-1", label: "Read" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
   { href: "/clarity-advantage", label: "Clarity Advantage" },
 ];
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/shawncapizzi";
-const EMAIL = "capizzi@gmail.com";
+const EMAIL = "capizzi@shawncapizzi.com";
 const PHONE_DISPLAY = "212-380-3900";
 const PHONE_DIAL = "2123803900";
 

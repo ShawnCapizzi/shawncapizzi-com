@@ -4,12 +4,15 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Wordmark } from "./Wordmark";
 
-const NAV_LINKS = [
+type NavLink = { href: string; label: string; accent?: boolean };
+
+const NAV_LINKS: NavLink[] = [
   { href: "/work", label: "Work" },
   { href: "/engagements", label: "Engagements" },
   { href: "/thinking", label: "Thinking" },
+  { href: "/book/chapter-1", label: "Read", accent: true },
   { href: "/about", label: "About" },
-] as const;
+];
 
 const SECONDARY_LINKS = [
   { href: "/clarity-advantage", label: "Clarity Advantage" },
@@ -17,7 +20,7 @@ const SECONDARY_LINKS = [
   { href: "/contact", label: "Contact" },
 ] as const;
 
-const CAL_URL = "https://cal.com/capizzi/15min";
+const CAL_URL = "https://cal.com/capizzi/30min";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -59,8 +62,11 @@ export function Header() {
 
           <nav className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} className="text-sm font-medium tracking-tight text-text-secondary hover:text-text-primary transition-colors">
+              <Link key={link.href} href={link.href} className="inline-flex items-center gap-1.5 text-sm font-medium tracking-tight text-text-secondary hover:text-text-primary transition-colors">
                 {link.label}
+                {link.accent ? (
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#6B5CFF]" aria-hidden="true" />
+                ) : null}
               </Link>
             ))}
           </nav>
@@ -94,8 +100,11 @@ export function Header() {
         <div className="fixed inset-0 z-40 bg-bg-elevated md:hidden pt-20 overflow-y-auto">
           <nav className="px-6 py-12 flex flex-col gap-6">
             {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="text-3xl font-semibold tracking-tight text-text-primary">
+              <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="inline-flex items-center gap-2.5 text-3xl font-semibold tracking-tight text-text-primary">
                 {link.label}
+                {link.accent ? (
+                  <span className="w-2 h-2 rounded-full bg-[#6B5CFF]" aria-hidden="true" />
+                ) : null}
               </Link>
             ))}
             <div className="border-t border-border-subtle pt-6 flex flex-col gap-4">
