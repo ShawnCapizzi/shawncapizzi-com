@@ -56,6 +56,15 @@ const CASE_STUDIES = [
     image:
       "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-native-design-lab.png",
   },
+  {
+    slug: "vui-voice-pill-tracker",
+    eyebrow: "Conversational Design · VUI · Healthcare · 2018",
+    title:
+      "A voice-first medication adherence skill, designed before voice was a category",
+    description:
+      "Early Alexa Skill exploration for medication adherence. Hand-mapped dialog architecture, intent and utterance modeling, SaySpring prototyping, live user testing — pre-LLM, pre-agentic, and the foundation for every conversational engagement since.",
+    image: "/images/case-studies/06-vui-voice-pill-tracker/01-hero-vui-dialog-chart.jpg",
+  },
 ];
 
 function isAnimated(src: string): boolean {
@@ -128,10 +137,10 @@ export default function Page() {
             Want to talk through how this kind of work would fit your team?
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
-            30 minutes. Virtual. No pitch.
+            30 minutes. Virtual. We figure out together if there’s a fit.
           </p>
           <a
-            href="https://cal.com/capizzi/15min"
+            href="https://cal.com/capizzi/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
