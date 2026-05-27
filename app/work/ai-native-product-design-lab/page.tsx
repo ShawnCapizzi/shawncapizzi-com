@@ -70,28 +70,13 @@ export default function Page() {
           eyebrow: "Prototype · AI-assisted dashboard, built in v0",
           title: "Channel Optimizer",
           description: [
-            "An AI-assisted dashboard for media-mix decision support, built in v0. Channel performance, engagement metrics, and AI-generated insights and recommendations: \u201CIncrease budget allocation to social media campaigns by 15%,\u201D \u201CConsider reducing radio ad spend and reallocating to higher-performing channels.\u201D",
-            "Built in 4 hours. Would have taken a 4-week designer-engineer sprint in 2022.",
+            "An AI-assisted dashboard for media buying and mix decision support, built in v0. Channel performance, engagement metrics, and AI-generated insights and recommendations: \u201CIncrease budget allocation to social media campaigns by 15%,\u201D \u201CConsider reducing radio ad spend and reallocating to higher-performing channels.\u201D",
+            "Built and refined over 3 days. Would have taken a 4-week sprint in 2022, with a team of designers and engineers.",
           ],
           images: [
             {
               src: `${ASSET_BASE}/03-channel-optimizer-in-v0-environment.gif`,
               alt: "Channel Optimizer media-mix dashboard built in v0, showing channel performance metrics and AI-generated reallocation recommendations",
-            },
-          ],
-        },
-        {
-          eyebrow: "Prototype · Health-data integration on Base44",
-          title: "HealthSync Pro",
-          description: [
-            "A health-data integration prototype built on Base44, Garmin watch device configuration with regulatory-grade granular consent design. Heart rate, steps, sleep tracking, workout data, blood pressure, blood oxygen, body temperature, weight metrics, each with explicit user permission toggling.",
-            "This is what AI-assisted prototyping looks like for healthcare specifically. Consent design isn't a checkbox feature. It's the product.",
-          ],
-          images: [
-            {
-              src: `${ASSET_BASE}/04-healthsync-pro-on-base44.png`,
-              alt: "HealthSync Pro on Base44, Garmin device integration with granular consent toggles per metric: heart rate, steps, sleep, workouts, blood pressure, blood oxygen, body temperature, weight",
-              browserFrame: { url: "healthsync-pro.app" },
             },
           ],
         },
@@ -169,7 +154,7 @@ export default function Page() {
         {
           headline: "Working prototypes built in hours, not weeks",
           description:
-            "AI Patient Support, Channel Optimizer, HealthSync Pro, Vision Pro concept, all built using AI-assisted development tools (v0, Base44, Claude, ChatGPT).",
+            "AI Patient Support, Channel Optimizer, Vision Pro concept, all built using AI-assisted development tools (v0, Base44, Claude, ChatGPT).",
         },
         {
           headline: "Three Custom GPTs deployed publicly",
