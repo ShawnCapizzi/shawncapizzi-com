@@ -3,7 +3,6 @@ import { HeroBottom } from "@/components/HeroBottom";
 import { LogoStrip } from "@/components/LogoStrip";
 import { HowIWork } from "@/components/HowIWork";
 import { SelectedWork } from "@/components/SelectedWork";
-import { Thinking } from "@/components/Thinking";
 import { Testimonials } from "@/components/Testimonials";
 import { Building } from "@/components/Building";
 import { FinalCTA } from "@/components/FinalCTA";
@@ -16,7 +15,6 @@ export default function HomePage() {
       <HeroBottom />
       <HowIWork />
       <SelectedWork />
-      <Thinking />
       <Testimonials />
       <Building />
       <FinalCTA />
