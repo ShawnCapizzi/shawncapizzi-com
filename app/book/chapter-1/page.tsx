@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Reader, type ReaderPage } from "@/components/Reader";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "The Human Condition — Chapter 1 | Clarity Is the Advantage",
@@ -157,6 +158,11 @@ const CHAPTER_ONE: ReaderPage[] = [
 export default function ChapterOnePage() {
   return (
     <article className="pt-28 md:pt-36 pb-24 md:pb-32">
+      {/* Force the page to land at the top on mount — works around mobile
+          browsers (and Next scroll restoration) that occasionally land users
+          mid-page when there's a tall fixed-height inner region. */}
+      <ScrollToTop />
+
       {/* ── BOOK INTRO / TITLE-PAGE ENTRANCE ───────────────────────────── */}
       <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12 mb-14 md:mb-20">
         <div className="max-w-3xl">
