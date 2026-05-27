@@ -1,5 +1,6 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { CaseStudyCarousel } from "@/components/CaseStudyCarousel";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -52,9 +53,9 @@ export default function Page() {
           eyebrow="(Process)"
           heading="The walk-through"
           slides={[
-            // ─── Slide 1: DEMO (video) ───────────────────────────────
+            // ─── Slide 1: ALEXA SKILL (video) ─────────────────────────
             {
-              tag: "DEMO",
+              tag: "ALEXA SKILL",
               title: "The prototype in motion",
               body:
                 "A short walkthrough of the VUI Pill Tracker prototype: setting a daily reminder, querying status, and confirming a dose, all by voice. Recorded in 2018 against the SaySpring prototype. Pre-mainstream voice, pre-LLM, pre-agentic anything. The conversational-design instincts on display \u2014 modeling intent, designing for repair, never leaving the user without an option \u2014 are the same instincts I bring to every AI and conversational engagement today.",
@@ -87,7 +88,56 @@ export default function Page() {
                 "Hand-mapped Voice User Interface dialog chart for the Pill Tracker Alexa Skill, showing user utterance, identified intent, conditions of response, device-specific responses, and conversation follow-up across three branches.",
             },
 
-            // ─── Slide 3: RESEARCH (whiteboard session) ─────────────
+            // ─── Slide 3: COMPANION SCREENS (stacked mobile pair) ────
+            {
+              tag: "COMPANION SCREENS",
+              title: "When the user does want a screen",
+              body:
+                "Voice is the primary modality, but a pill reminder also needs a moment of considered setup. I designed the companion mobile flow for configuring daily reminders, refill schedules, and account-level preferences \u2014 then handed the alerting back to voice and SMS. The screen and the voice channel shared one state model: anything you configured by tapping was referenceable by asking, and vice versa. That handoff is where most voice products fail, and where the design work actually lives.",
+              media: (
+                <div className="flex flex-col gap-4 lg:gap-5 w-full">
+                  <div
+                    style={{
+                      borderRadius: "8px",
+                      overflow: "hidden",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      background: "#fff",
+                      boxShadow:
+                        "0 8px 20px -6px rgba(0,0,0,0.35), 0 18px 40px -16px rgba(0,0,0,0.5)",
+                    }}
+                  >
+                    <Image
+                      src={`${ASSET_BASE}/03-pill-reminder-setup-mobile.jpg`}
+                      alt="Three iPhone screens for the Pill Tracker companion app: daily pill and refill reminder configuration, alert setup with email and SMS, and an Alert Notice Sent confirmation."
+                      width={1500}
+                      height={900}
+                      style={{ width: "100%", height: "auto", display: "block" }}
+                    />
+                  </div>
+
+                  <div
+                    style={{
+                      borderRadius: "8px",
+                      overflow: "hidden",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      background: "#fff",
+                      boxShadow:
+                        "0 8px 20px -6px rgba(0,0,0,0.35), 0 18px 40px -16px rgba(0,0,0,0.5)",
+                    }}
+                  >
+                    <Image
+                      src={`${ASSET_BASE}/04-profile-and-alert-settings.jpg`}
+                      alt="Three iPhone screens for the Pill Tracker user profile: default profile with editable fields, Edit Alert Screen toggling alerts on/off with cadence and time zone, and a fuller Edit Alert Screen with email and SMS alert configuration."
+                      width={1500}
+                      height={900}
+                      style={{ width: "100%", height: "auto", display: "block" }}
+                    />
+                  </div>
+                </div>
+              ),
+            },
+
+            // ─── Slide 4: RESEARCH (whiteboard session) ─────────────
             {
               tag: "RESEARCH",
               title: "Watching humans talk to a machine",
@@ -100,38 +150,6 @@ export default function Page() {
           ]}
         />
       }
-      projectShowcases={[
-        // ─── Showcase 1: Pill reminder setup (mobile) ─────────────
-        {
-          eyebrow: "Companion screens · Pill reminder configuration",
-          title: "When the user does want a screen",
-          description: [
-            "Voice is the primary modality, but a pill reminder also needs a moment of considered setup. I designed the companion mobile flow for configuring daily reminders and refill schedules, then handing the alerting back to voice and SMS.",
-            "The screen and the voice channel had to share state cleanly. Anything you configured by tapping had to be referenceable by asking, and vice versa. That handoff is where most voice products fail; it\u2019s also where the design work actually lives.",
-          ],
-          images: [
-            {
-              src: `${ASSET_BASE}/03-pill-reminder-setup-mobile.jpg`,
-              alt: "Three iPhone screens for the Pill Tracker companion app: daily pill and refill reminder configuration, alert setup with email and SMS, and an Alert Notice Sent confirmation.",
-            },
-          ],
-        },
-        // ─── Showcase 2: Profile + alert settings (mobile) ────────
-        {
-          eyebrow: "Companion screens · Profile and alert settings",
-          title: "Account and alert management",
-          description: [
-            "The profile flow lets users review and edit core account fields \u2014 name, email, password, mailing address \u2014 and adjust their alert cadence between daily and refill, with email and SMS toggles per channel.",
-            "Once again, the principle is shared state. Anything the user could change here, they could ask about by voice. Anything they configured by voice was visible here. Two interfaces, one model.",
-          ],
-          images: [
-            {
-              src: `${ASSET_BASE}/04-profile-and-alert-settings.jpg`,
-              alt: "Three iPhone screens for the Pill Tracker user profile: default profile with editable fields, Edit Alert Screen toggling alerts on/off with cadence and time zone, and a fuller Edit Alert Screen with email and SMS alert configuration.",
-            },
-          ],
-        },
-      ]}
       outcomes={[
         {
           headline: "A working VUI prototype, in 2018",
