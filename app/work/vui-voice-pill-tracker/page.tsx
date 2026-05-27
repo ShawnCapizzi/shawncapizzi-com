@@ -63,6 +63,7 @@ export default function Page() {
                   <video
                     src={`${VIDEO_BASE}/pill-tracker-vui-demo.mp4`}
                     poster={`${ASSET_BASE}/01-vui-demo-poster.jpg`}
+                    controls
                     autoPlay
                     loop
                     muted
