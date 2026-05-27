@@ -4,7 +4,7 @@ import { Reader, type ReaderPage } from "@/components/Reader";
 export const metadata: Metadata = {
   title: "The Human Condition — Chapter 1 | Clarity Is the Advantage",
   description:
-    "Read Chapter 1 of Clarity Is the Advantage: why empathy is the foundation of digital experience — designing for people who are muddling through real life.",
+    "Read Chapter 1 of Clarity Is the Advantage — the book on making thoughtful design decisions that create lasting competitive advantage in regulated industries. Free, one chapter at a time.",
 };
 
 /**
@@ -35,12 +35,12 @@ const CHAPTER_ONE: ReaderPage[] = [
   {
     blocks: [
       { type: "heading", text: "Muddling Through: The Universal Experience of Being Human" },
-      // LYRIC 1 — paraphrase of "Have Yourself a Merry Little Christmas". Replace if licensed.
-      { type: "para", text: "There's a quiet, almost whispered moment in the holiday standard \u201CHave Yourself a Merry Little Christmas\u201D \u2014 the gentle admission that, until better days arrive, we simply have to get by however we can. It captures something profound about being human: life is often about persevering through uncertainty, about navigating challenges we didn't see coming, about getting by while we wait for better days." },
-      { type: "para", text: "This idea of \u201Cmuddling through\u201D isn't just poetic \u2014 it's the reality for most people interacting with your digital products. They're not coming to your website or app during their peak moments of clarity and calm. They're coming while dealing with a medical diagnosis, after learning their rent increased, while their car is broken down and they need to get their child from school. They're coming with invisible burdens, temporary crises, and the accumulated stress of a full life." },
-      // LYRIC 2 — paraphrase of Taylor Swift, "Out of the Woods". Replace if licensed.
-      { type: "para", text: "Taylor Swift's \u201COut of the Woods\u201D circles the same fundamental question that echoes through the human condition across time and place: are we past the danger yet? Have we made it through? It's about stability, clarity, and the universal desire to know whether we've moved beyond the point of difficulty. Whether it's a relationship, a financial crisis, or simply trying to use a transit app to get home, we're all constantly asking the same thing." },
-      { type: "para", text: "Every user who encounters your product is carrying some version of this question." },
+      // HOLIDAY SONG — interpretive, no lyric reproduced.
+      { type: "para", text: "There's a moment in the old holiday standard \u201CHave Yourself a Merry Little Christmas\u201D that has always stayed with me \u2014 a quiet, almost reluctant admission, tucked into a song about joy, that sometimes the honest thing to say is: until things get better, we'll get by however we can. It's a strange, beautiful piece of writing, because it refuses to pretend. It names the gap between the life we want and the one we're actually living through right now." },
+      { type: "para", text: "That gap isn't just poetic. It's the reality for most people interacting with your digital products. They're not arriving in their peak moments of clarity and calm. They're arriving while dealing with a diagnosis, after learning their rent jumped, while the car is broken down and the kid still needs picking up. They come carrying invisible burdens, temporary crises, and the accumulated weight of a full life." },
+      // TAYLOR SWIFT — interpretive, no lyric reproduced.
+      { type: "para", text: "Taylor Swift built an entire song, \u201COut of the Woods,\u201D around a single anxious question asked over and over \u2014 some version of are we safe yet, are we through the worst of it. She repeats it because that's how the question actually lives in us: not asked once and answered, but asked again and again until the danger finally lifts. It's the most human question there is, and it doesn't care whether the woods are a relationship, a diagnosis, a layoff, or a transit app that won't load while you're trying to get home." },
+      { type: "para", text: "Every user who reaches your product is carrying some version of that question." },
     ],
   },
 
@@ -68,9 +68,9 @@ const CHAPTER_ONE: ReaderPage[] = [
       { type: "para", text: "Users aren't just adapting to new features; they're grieving the loss of familiarity. Someone who could previously navigate your app while distracted or stressed now has to relearn it when they might already be having their worst day. This approach essentially tells loyal users that their investment in learning your system was worthless." },
       { type: "para", text: "True empathy in redesign means auditing current patterns and carrying over the best and most useful elements. It means understanding that people rely on digital tools as stable anchors when everything else feels uncertain. When you suddenly change that anchor without consideration, you're adding stress to someone who may already be overwhelmed." },
       { type: "heading", text: "The Anchor in the Storm: Lou Reed and the Power of Repetition" },
-      // LYRIC 3 — paraphrase of Lou Reed, "It's a Temporary Thing". Replace if licensed.
-      { type: "para", text: "Lou Reed understood something fundamental about human nature in his song \u201CIt's a Temporary Thing.\u201D The insistent repetition of the hi-hat, the steady reminder \u2014 again and again \u2014 that the thing is only temporary: it creates a grounding rhythm that cuts through chaos. The repetition isn't just musical; it's meditative, like a mantra that helps us remember that pain passes, stress shifts, circumstances change." },
-      { type: "para", text: "This same principle applies to digital empathy. Just like Lou Reed's song serves as an anchor during turbulent moments, our products should be that steady, reassuring presence when someone's world feels unstable. Good design creates predictable, reliable patterns that don't add cognitive load when someone's already overwhelmed." },
+      // LOU REED — interpretive, no lyric reproduced. Your insight is the hero.
+      { type: "para", text: "Lou Reed understood something about endurance that most designers don't. In \u201CIt's a Temporary Thing,\u201D the song doesn't argue its point \u2014 it drums it into you. The same insistent hi-hat, the same steady return, again and again, until the repetition itself becomes the meaning: this passes. The discomfort is not permanent. You will get through it." },
+      { type: "para", text: "That isn't just a songwriting trick. It's an interface principle. When someone is overwhelmed, novelty is cruelty and repetition is mercy. A predictable pattern they've seen a hundred times asks nothing of them \u2014 it's the digital equivalent of a steady hand on the shoulder, the quiet, repeated reassurance that they know where they are and what comes next." },
       { type: "quote", text: "Design for the temporary crisis, the temporary confusion, the temporary pain. Because if your interface works for someone having their worst day, it'll work brilliantly for someone having their best day too." },
     ],
   },
@@ -157,17 +157,49 @@ const CHAPTER_ONE: ReaderPage[] = [
 export default function ChapterOnePage() {
   return (
     <article className="pt-28 md:pt-36 pb-24 md:pb-32">
-      <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12 mb-10 md:mb-14">
-        <p className="eyebrow mb-4">From the book</p>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-3xl">
-          Read Chapter 1
-        </h1>
-        <p className="mt-5 text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl">
-          The first chapter of <em>Clarity Is the Advantage</em>. Read it here — adjust the
-          type to your liking, and get each new chapter in your inbox as it&apos;s written.
-        </p>
+      {/* ── BOOK INTRO / TITLE-PAGE ENTRANCE ───────────────────────────── */}
+      <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12 mb-14 md:mb-20">
+        <div className="max-w-3xl">
+          <p className="eyebrow mb-5">The book · Read it free, one chapter at a time</p>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.04]">
+            Clarity Is the Advantage
+          </h1>
+
+          <p className="mt-6 text-xl md:text-2xl text-text-secondary leading-relaxed font-normal max-w-2xl">
+            Most design books teach you how to make things look good. This one teaches you how to
+            make <em>thoughtful</em> design decisions that create lasting competitive advantage —
+            where compliance, transformation, and measurable ROI aren&apos;t optional.
+          </p>
+
+          <div className="mt-8 max-w-2xl space-y-4 text-base md:text-lg text-text-secondary leading-relaxed">
+            <p>
+              When design tools become accessible to everyone, strategic thinking becomes your only
+              sustainable advantage. This book is for the Creative Director fighting for budget, the
+              SVP navigating impossible stakeholder demands, and the design leader who needs
+              frameworks that actually hold up in regulated industries — pharma, healthcare, finance.
+            </p>
+            <p>
+              It begins where all of it begins: with the human on the other side of the screen.
+              Chapter 1 is below. Read it free. If it resonates, each new chapter lands in your inbox
+              as it&apos;s written.
+            </p>
+          </div>
+
+          {/* Chapter marker — the transition from book-intro into the reader */}
+          <div className="mt-12 md:mt-16 flex items-center gap-4">
+            <span className="font-mono text-xs tracking-widest uppercase text-text-tertiary whitespace-nowrap">
+              Chapter 1
+            </span>
+            <span className="h-px flex-1 bg-border-subtle" aria-hidden="true" />
+            <span className="text-sm italic text-text-tertiary whitespace-nowrap">
+              The Human Condition
+            </span>
+          </div>
+        </div>
       </div>
 
+      {/* ── THE READER ─────────────────────────────────────────────────── */}
       <div className="px-4 sm:px-6">
         <Reader
           kicker="Chapter 1"
