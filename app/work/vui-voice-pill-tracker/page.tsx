@@ -1,5 +1,6 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { CaseStudyCarousel } from "@/components/CaseStudyCarousel";
+import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -30,7 +31,7 @@ export default function Page() {
         },
         {
           label: "STACK",
-          value: "Alexa Skills Kit · SaySpring · Sketch · Whiteboarding",
+          value: "Alexa Skills Kit · SaySpring / Adobe XD · Sketch · Whiteboarding",
         },
       ]}
       challenge={[
@@ -60,20 +61,11 @@ export default function Page() {
               body:
                 "A short walkthrough of the VUI Pill Tracker prototype: setting a daily reminder, querying status, and confirming a dose, all by voice. Recorded in 2018 against the SaySpring prototype. Pre-mainstream voice, pre-LLM, pre-agentic anything. The conversational-design instincts on display \u2014 modeling intent, designing for repair, never leaving the user without an option \u2014 are the same instincts I bring to every AI and conversational engagement today.",
               media: (
-                <div className="w-full rounded-xl overflow-hidden border border-border-default bg-bg-elevated">
-                  <video
-                    src={`${VIDEO_BASE}/pill-tracker-vui-demo.mp4`}
-                    poster={`${ASSET_BASE}/01-vui-demo-poster.jpg`}
-                    controls
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                    aria-label="Demo walkthrough of the VUI Pill Tracker Alexa Skill prototype: setting a daily medication reminder, querying status, and confirming a dose entirely by voice."
-                    className="block w-full h-auto"
-                  />
-                </div>
+                <VideoWithPlayOverlay
+                  src={`${VIDEO_BASE}/pill-tracker-vui-demo.mp4`}
+                  poster={`${ASSET_BASE}/01-vui-demo-poster.jpg`}
+                  ariaLabel="Demo walkthrough of the VUI Pill Tracker Alexa Skill prototype: setting a daily medication reminder, querying status, and confirming a dose entirely by voice."
+                />
               ),
             },
 
