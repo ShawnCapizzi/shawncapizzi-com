@@ -188,6 +188,57 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       {props.processCarousel}
 
       {/* ============================================================
+          MID IMAGES / VIDEO (optional)
+          Renders prominently between the approach and the project
+          showcases. Supports .mp4/.webm video (auto-plays muted, loops)
+          via the same isVideo() detection used by bottomImages.
+          Single item renders full-width 16:9; two items render 2-up.
+          ============================================================ */}
+      {props.midImages && props.midImages.length > 0 && (
+        <section className="border-t border-border-subtle">
+          <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-24">
+            <div
+              className={`grid gap-6 md:gap-8 ${
+                props.midImages.length === 1
+                  ? "grid-cols-1"
+                  : "grid-cols-1 md:grid-cols-2"
+              }`}
+            >
+              {props.midImages.map((img) => (
+                <div
+                  key={img.src}
+                  className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-border-default"
+                >
+                  {isVideo(img.src) ? (
+                    <video
+                      src={img.src}
+                      poster={img.poster}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="metadata"
+                      aria-label={img.alt}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  ) : (
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover"
+                      unoptimized={isAnimated(img.src)}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ============================================================
           PROJECT SHOWCASES (optional)
           Each project: eyebrow, title, description paragraphs, optional images.
           Rendered after processCarousel, before Selected outcomes.
