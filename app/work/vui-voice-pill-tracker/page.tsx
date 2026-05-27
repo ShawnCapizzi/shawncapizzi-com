@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const ASSET_BASE = "/images/case-studies/06-vui-voice-pill-tracker";
-const YOUTUBE_URL = "https://youtu.be/paAzgeo5SYA";
+const VIDEO_BASE = "/videos";
 
 export default function Page() {
   return (
@@ -16,8 +16,11 @@ export default function Page() {
       eyebrow="(Case Study)"
       title="VUI Pill Tracker"
       subtitle="An early voice-first design exploration for medication adherence — built as an Alexa Skill in 2018, before voice was a mainstream healthcare category."
-      heroImage={`${ASSET_BASE}/01-hero-vui-dialog-chart.jpg`}
-      heroImageAlt="Hand-mapped Voice User Interface dialog chart for the Pill Tracker Alexa Skill, showing user utterance, identified intent, conditions of response, device-specific responses, and conversation follow-up across three branches."
+      /* Hero is the Echo device photo — the platform attribution lives in
+         the copy (title, subtitle, metadata). The demo video itself plays
+         large via midImages just below. */
+      heroImage={`${ASSET_BASE}/00-hero-echo-device.jpg`}
+      heroImageAlt="An Amazon Echo smart speaker on a kitchen surface — the platform the VUI Pill Tracker Alexa Skill was built and tested on in 2017–2018."
       metadata={[
         { label: "ROLE", value: "Concept, VUI design, prototyping, testing" },
         { label: "YEAR", value: "2017–2018" },
@@ -46,7 +49,16 @@ export default function Page() {
       pullQuote={[
         "Voice navigation and touchless interaction were becoming more integrated everyday. The same thinking and principles that make a good application and web design apply to VUI \u2014 they\u2019re just stricter, because there\u2019s no screen to bail you out.",
         "The most important part of designing for VUI is understanding how people actually request something \u2014 their intent, and the many ways a single person can phrase it. Mapping that surface area is the work.",
-        "If users can\u2019t understand how to use your app, they won\u2019t stay long enough to learn it. That\u2019s true everywhere, but voice makes it unforgivable.",
+      ]}
+      /* The demo video — renders large, autoplays muted, loops, with the
+         hero still as poster. This is the dominant visual element near the
+         top of the page; the layout's midImages slot supports .mp4 natively. */
+      midImages={[
+        {
+          src: `${VIDEO_BASE}/pill-tracker-vui-demo.mp4`,
+          alt: "Demo walkthrough of the VUI Pill Tracker Alexa Skill prototype: setting a daily medication reminder, querying status, and confirming a dose entirely by voice.",
+          poster: `${ASSET_BASE}/01-vui-demo-poster.jpg`,
+        },
       ]}
       projectShowcases={[
         {
@@ -58,8 +70,8 @@ export default function Page() {
           ],
           images: [
             {
-              src: `${ASSET_BASE}/02-vui-dialog-chart-detail.jpg`,
-              alt: "Detail of the VUI dialog chart annotated with user utterance, identified intent, technical requirements, S-Voice response, device-specific responses, and conversation follow-up.",
+              src: `${ASSET_BASE}/02-vui-dialog-chart.jpg`,
+              alt: "Hand-mapped Voice User Interface dialog chart for the Pill Tracker Alexa Skill, showing user utterance, identified intent, conditions of response, device-specific responses, and conversation follow-up across three branches.",
             },
           ],
         },
@@ -94,20 +106,6 @@ export default function Page() {
               alt: "A whiteboard research session with four people standing around sticky notes mapping conversational flows and user intents during VUI Pill Tracker testing.",
             },
           ],
-        },
-        {
-          eyebrow: "The working prototype · Watch the demo",
-          title: "The VUI Pill Tracker in motion",
-          description: [
-            "A short walkthrough of the prototype in action \u2014 setting a daily reminder, querying status, and confirming a dose, all by voice. Recorded in 2018 against the SaySpring prototype.",
-            "Watch it as a time capsule: pre-mainstream voice, pre-LLM, pre-agentic anything. The conversational design instincts on display \u2014 modeling intent, designing for repair, never leaving the user without an option \u2014 are the same instincts I bring to every AI and conversational engagement today.",
-          ],
-          links: [
-            { label: "Watch the demo on YouTube", href: YOUTUBE_URL },
-          ],
-          // NOTE: Self-hosting an .mp4 in /public/videos/ would let us embed
-          // inline via CaseStudyLayout's existing bottomImages video handler.
-          // Left as YouTube link for now per current asset availability.
         },
       ]}
       outcomes={[

@@ -31,6 +31,8 @@ const BUILDING: BuildingItem[] = [
       "Honest, no-fluff thinking on empathy, AI, and design. Read Chapter 1, \u201CThe Human Condition,\u201D right now in the reader.",
     cta: "Read the first chapter",
     href: "/book/chapter-1",
+    image: "/images/book-reader.png",
+    imageAlt: "Clarity Is the Advantage \u2014 Chapter 1 in the reader",
   },
   {
     title: "The Capizzi Clarity Cards",
