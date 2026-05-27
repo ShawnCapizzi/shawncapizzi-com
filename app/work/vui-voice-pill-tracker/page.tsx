@@ -59,9 +59,7 @@ export default function Page() {
               body:
                 "A short walkthrough of the VUI Pill Tracker prototype: setting a daily reminder, querying status, and confirming a dose, all by voice. Recorded in 2018 against the SaySpring prototype. Pre-mainstream voice, pre-LLM, pre-agentic anything. The conversational-design instincts on display \u2014 modeling intent, designing for repair, never leaving the user without an option \u2014 are the same instincts I bring to every AI and conversational engagement today.",
               media: (
-                <div
-                  className="relative w-full aspect-[16/9] rounded-xl overflow-hidden border border-border-default bg-bg-elevated"
-                >
+                <div className="w-full rounded-xl overflow-hidden border border-border-default bg-bg-elevated">
                   <video
                     src={`${VIDEO_BASE}/pill-tracker-vui-demo.mp4`}
                     poster={`${ASSET_BASE}/01-vui-demo-poster.jpg`}
@@ -71,7 +69,7 @@ export default function Page() {
                     playsInline
                     preload="metadata"
                     aria-label="Demo walkthrough of the VUI Pill Tracker Alexa Skill prototype: setting a daily medication reminder, querying status, and confirming a dose entirely by voice."
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="block w-full h-auto"
                   />
                 </div>
               ),
