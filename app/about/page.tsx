@@ -91,7 +91,7 @@ export default function Page() {
                 style={{ width: "min(100%, 360px)", aspectRatio: "4 / 5" }}
               >
                 <Image
-                  src="/images/brand/headshot-2026.png"
+                  src="/images/brand/shawn_m_capizzi_2026.png"
                   alt="Shawn Capizzi"
                   fill
                   priority
