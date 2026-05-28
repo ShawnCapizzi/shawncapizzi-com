@@ -190,8 +190,8 @@ export default function ChapterOnePage() {
               actually gets decided.
             </p>
             <p>
-              Chapter 1 is below. Read it free. If it resonates, the next one lands in your inbox as
-              it&apos;s written.
+              The book is written. Chapter 1 is below &mdash; read it free. I&apos;ll send you the
+              finished book when it&apos;s ready, plus the occasional note from the work in between.
             </p>
           </div>
 
@@ -216,8 +216,8 @@ export default function ChapterOnePage() {
           subtitle="Why empathy is the foundation of digital experience."
           pages={CHAPTER_ONE}
           /* audioSrc="/audio/chapter-1.mp3"  // ← uncomment when your narration is recorded */
-          signupHeading="That's Chapter 1."
-          signupSubcopy="New chapters land in your inbox as they're written. No noise — just the work."
+          signupHeading="That's Chapter 1. The book is written."
+          signupSubcopy="I'll send you the finished book when it's ready — plus the occasional note from the work in between. No noise. Just the thinking, and what I'm seeing in the field."
         />
       </div>
     </article>
