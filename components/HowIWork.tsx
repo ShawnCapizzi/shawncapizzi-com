@@ -104,9 +104,9 @@ export function HowIWork() {
         </div>
 
         {/* Two paths */}
-        <div className="mt-16 md:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+        <div className="mt-16 md:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
           {/* Path 1 — Embedded */}
-          <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors">
+          <article className="relative flex flex-col p-8 md:p-10 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors">
             <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
               Path 01
             </p>
@@ -123,7 +123,7 @@ export function HowIWork() {
               </p>
             </AccordionDetail>
 
-            <div className="mt-8">
+            <div className="mt-auto pt-8">
               <Link
                 href="/engagements#embedded"
                 className="inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
@@ -134,7 +134,7 @@ export function HowIWork() {
           </article>
 
           {/* Path 2 — Advisory */}
-          <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors">
+          <article className="relative flex flex-col p-8 md:p-10 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors">
             <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
               Path 02
             </p>
@@ -160,7 +160,7 @@ export function HowIWork() {
               </dl>
             </AccordionDetail>
 
-            <div className="mt-8">
+            <div className="mt-auto pt-8">
               <Link
                 href="/engagements#advisory"
                 className="inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
