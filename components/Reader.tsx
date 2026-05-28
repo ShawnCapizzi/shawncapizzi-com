@@ -113,7 +113,7 @@ export function Reader({
   };
 
   return (
-    <div className="sc-reader">
+    <div className="sc-reader" id="read" style={{ scrollMarginTop: "90px" }}>
       <style>{readerStyles}</style>
 
       {/* ---------- Toolbar ---------- */}
@@ -152,7 +152,7 @@ export function Reader({
             className="sc-reader__subscribe"
             onClick={() => goTo(signupIndex)}
           >
-            Get the next chapter
+            Get on the list
           </button>
         </div>
       </header>
@@ -308,7 +308,7 @@ function SignupCard({ heading, subcopy }: { heading: string; subcopy: string }) 
         <div className="sc-signup__check"><Check /></div>
         <h2 className="sc-signup__heading">Check your inbox.</h2>
         <p className="sc-signup__sub">
-          Confirm your email and the next chapter will be waiting for you. Thanks for reading.
+          Confirm your email and you&apos;re on the list. I&apos;ll send you the finished book when it&apos;s ready, plus the occasional note from the work. Thanks for reading.
         </p>
       </div>
     );
@@ -342,7 +342,7 @@ function SignupCard({ heading, subcopy }: { heading: string; subcopy: string }) 
           onClick={submit}
           disabled={state === "loading"}
         >
-          {state === "loading" ? "Sending…" : "Send me the next chapter"}
+          {state === "loading" ? "Sending…" : "Send me the book"}
         </button>
       </div>
 

@@ -191,7 +191,13 @@ export default function ChapterOnePage() {
             </p>
             <p>
               The book is written. Chapter 1 is below &mdash; read it free. I&apos;ll send you the
-              finished book when it&apos;s ready, plus the occasional note from the work in between.
+              finished book when it&apos;s ready, plus the occasional note from the work in between.{" "}
+              <a
+                href="#read"
+                className="text-link hover:text-link-hover font-medium underline underline-offset-4 decoration-1 transition-colors"
+              >
+                Get on the list&nbsp;&rarr;
+              </a>
             </p>
           </div>
 
