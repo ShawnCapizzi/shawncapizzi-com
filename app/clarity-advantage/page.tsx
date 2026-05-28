@@ -1,3 +1,4 @@
+// Destination: app/clarity-advantage/page.tsx
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ClarityCardDeck } from "@/components/ClarityCardDeck";
@@ -16,9 +17,11 @@ export default function Page() {
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-6">The Clarity Advantage</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-4xl">
-            Honest design and strategy for the way we work now.
+          <p className="eyebrow mb-3">The Clarity Advantage</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] max-w-4xl">
+            Honest design and strategy{" "}
+            <br className="hidden lg:block" />
+            for the way we work now.
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
             The book, the cards, and the newsletter. All in progress. All
@@ -103,7 +106,7 @@ export default function Page() {
             href={CAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
+            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
           >
             Book a Strategy Call
           </a>

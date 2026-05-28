@@ -1,3 +1,4 @@
+// Destination: app/work/page.tsx
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -77,10 +78,11 @@ export default function Page() {
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-6">Selected work</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-4xl">
-            Engagements where experience structure changed the business
-            outcome.
+          <p className="eyebrow mb-3">Work</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] max-w-4xl">
+            Engagements where experience structure{" "}
+            <br className="hidden lg:block" />
+            changed the business outcome.
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
             A decade of enterprise experience design across pharma, healthcare,

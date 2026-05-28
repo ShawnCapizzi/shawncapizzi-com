@@ -1,3 +1,4 @@
+// Destination: app/about/page.tsx
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -60,13 +61,14 @@ export default function Page() {
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-20">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-6">About</p>
+          <p className="eyebrow mb-3">About</p>
 
           {/* Full-width declarative headline */}
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
-              I help leadership teams make clear decisions in complex digital
-              environments.
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[0.95]">
+              I help leadership teams make clear decisions{" "}
+              <br className="hidden lg:block" />
+              in complex digital environments.
             </h1>
           </div>
 
@@ -422,7 +424,7 @@ export default function Page() {
             href={CAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
+            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
           >
             Book a Strategy Call
           </a>

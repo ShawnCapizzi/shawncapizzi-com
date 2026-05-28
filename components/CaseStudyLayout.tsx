@@ -1,3 +1,4 @@
+// Destination: components/CaseStudyLayout.tsx
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
@@ -50,7 +51,9 @@ interface ProjectShowcase {
 
 interface CaseStudyLayoutProps {
   eyebrow: string;
-  title: string;
+  /** Accepts a string OR ReactNode so individual case studies can pass a manually-wrapped title
+   *  (e.g. with <br className="hidden lg:block" /> for deliberate breakpoints). */
+  title: ReactNode;
   subtitle: string;
   heroImage: string;
   heroImageAlt: string;
@@ -100,8 +103,8 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
             <span aria-hidden="true" className="mr-2">←</span> All work
           </Link>
 
-          <p className="eyebrow mb-6">{props.eyebrow}</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-4xl">
+          <p className="eyebrow mb-3">{props.eyebrow}</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] max-w-4xl">
             {props.title}
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">

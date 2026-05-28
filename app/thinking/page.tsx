@@ -1,3 +1,4 @@
+// Destination: app/thinking/page.tsx
 import type { Metadata } from "next";
 import { LiteYouTube } from "@/components/LiteYouTube";
 
@@ -46,9 +47,11 @@ export default function Page() {
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-6">Thinking</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-4xl">
-            Essays on AI adoption, regulatory design, experience strategy.
+          <p className="eyebrow mb-3">Thinking</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] max-w-4xl">
+            Essays on AI adoption, regulatory design,{" "}
+            <br className="hidden lg:block" />
+            experience strategy.
           </h1>
         </div>
       </section>
@@ -228,7 +231,7 @@ export default function Page() {
             href={CAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
+            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
           >
             Book a Strategy Call
           </a>

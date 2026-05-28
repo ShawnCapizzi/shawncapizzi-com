@@ -1,3 +1,4 @@
+// Destination: app/layout.tsx
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Nunito_Sans } from "next/font/google";
 import "./globals.css";
@@ -104,6 +105,9 @@ export const metadata: Metadata = {
    ROOT LAYOUT
    ParticleField sits behind everything (z-index 0); Header,
    main content, and Footer sit above via document flow.
+
+   Particle field wrapped in opacity:0.65 to subdue the ambient
+   motion — keeps the charm but lets the typography lead.
    ============================================================ */
 
 export default function RootLayout({
@@ -114,7 +118,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${nunitoSans.variable}`}>
       <body className="bg-bg-primary text-text-primary antialiased">
-        <ParticleField />
+        <div style={{ opacity: 0.65 }}>
+          <ParticleField />
+        </div>
         <CursorGlow />
         <ScrollFadeController />
         <div className="relative" style={{ zIndex: 1 }}>
