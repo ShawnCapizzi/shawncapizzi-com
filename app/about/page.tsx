@@ -88,15 +88,15 @@ export default function Page() {
             <div className="lg:col-span-5 order-1 lg:order-2">
               <div
                 className="relative mx-auto rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card"
-                style={{ width: "min(100%, 360px)", aspectRatio: "4 / 5" }}
+                style={{ width: "min(100%, 420px)", aspectRatio: "4 / 5" }}
               >
                 <Image
                   src="/images/brand/shawn_m_capizzi_2026.png"
                   alt="Shawn Capizzi"
                   fill
                   priority
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 80vw, 360px"
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 80vw, 420px"
                 />
               </div>
             </div>
