@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { BrowserFrame } from "@/components/BrowserFrame";
 import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
+import { CollapsibleSection } from "@/components/CollapsibleSection";
 
 const CAL_URL = "https://cal.com/capizzi/15min";
 
@@ -183,14 +184,13 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
             </blockquote>
           )}
 
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8 md:mb-10">
-            The approach
-          </h2>
-          <div className="max-w-3xl space-y-6 text-lg text-text-secondary leading-relaxed">
-            {props.approach.map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
-          </div>
+          <CollapsibleSection id="approach-detail" heading="The approach">
+            <div className="max-w-3xl space-y-6 text-lg text-text-secondary leading-relaxed">
+              {props.approach.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+          </CollapsibleSection>
         </div>
       </section>
 
@@ -430,14 +430,13 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           ============================================================ */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8 md:mb-10">
-            What this means
-          </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-primary leading-relaxed">
-            {props.closer.map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
-          </div>
+          <CollapsibleSection id="closer-detail" heading="What this means">
+            <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-primary leading-relaxed">
+              {props.closer.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+          </CollapsibleSection>
         </div>
       </section>
 
