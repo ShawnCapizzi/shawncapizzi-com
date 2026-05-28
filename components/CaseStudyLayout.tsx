@@ -448,7 +448,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           ============================================================ */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-10 md:mb-12 max-w-3xl mx-auto leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-10 md:mb-12 max-w-3xl mx-auto leading-tight">
             {props.ctaHeadline}
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-center">

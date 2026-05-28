@@ -65,7 +65,7 @@ export default function Page() {
 
           {/* Full-width declarative headline */}
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[0.95]">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95]">
               I help leadership teams make clear decisions{" "}
               <br className="hidden lg:block" />
               in complex digital environments.
@@ -414,7 +414,7 @@ export default function Page() {
       {/* CTA */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
             Let&apos;s see if there&apos;s a fit.
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">

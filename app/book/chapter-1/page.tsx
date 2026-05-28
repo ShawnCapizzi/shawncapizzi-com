@@ -157,18 +157,18 @@ const CHAPTER_ONE: ReaderPage[] = [
 
 export default function ChapterOnePage() {
   return (
-    <article className="pt-28 md:pt-36 pb-24 md:pb-32">
+    <article className="pt-32 md:pt-40 pb-24 md:pb-32">
       {/* Force the page to land at the top on mount — works around mobile
           browsers (and Next scroll restoration) that occasionally land users
           mid-page when there's a tall fixed-height inner region. */}
       <ScrollToTop />
 
       {/* ── BOOK INTRO / TITLE-PAGE ENTRANCE ───────────────────────────── */}
-      <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12 mb-14 md:mb-20">
+      <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 mb-14 md:mb-20">
         <div className="max-w-5xl">
-          <p className="eyebrow mb-5">The book · Read it free, one chapter at a time</p>
+          <p className="eyebrow mb-3">The book</p>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.04] max-w-none">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] max-w-4xl">
             Clarity Is the Advantage
           </h1>
 
