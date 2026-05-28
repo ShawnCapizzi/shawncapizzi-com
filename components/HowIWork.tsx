@@ -1,6 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
-const CAL_URL = "https://cal.com/capizzi/15min";
+const CAL_URL = "https://cal.com/capizzi/30min";
 
 const ADVISORY_SHAPES = [
   {
@@ -21,6 +24,59 @@ const ADVISORY_SHAPES = [
       "I come in, ask the right questions, and help uncover where AI fits in your actual workflows and business model. Vendor-agnostic. Roadmap, not vendor list.",
   },
 ];
+
+/* ------------------------------------------------------------------
+   AccordionDetail — collapsible region for the bottom-half card detail.
+   - Collapsed by default.
+   - Toggle button with aria-expanded / aria-controls for accessibility.
+   - Smooth grid-rows height animation (no fixed max-height guesswork),
+     which collapses cleanly and respects content of any length.
+   - prefers-reduced-motion users get an instant show/hide (no transition).
+   ------------------------------------------------------------------ */
+function AccordionDetail({
+  id,
+  label,
+  children,
+}: {
+  id: string;
+  label: string;
+  children: React.ReactNode;
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="mt-8 pt-8 border-t border-border-subtle">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-controls={id}
+        className="flex w-full items-center justify-between gap-4 text-left group"
+      >
+        <span className="text-base font-medium text-text-primary">{label}</span>
+        <span
+          aria-hidden="true"
+          className={`shrink-0 text-text-tertiary transition-transform duration-300 group-hover:text-text-secondary ${
+            open ? "rotate-180" : "rotate-0"
+          }`}
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </span>
+      </button>
+
+      <div
+        id={id}
+        className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
+          open ? "grid-rows-[1fr] mt-4" : "grid-rows-[0fr]"
+        }`}
+      >
+        <div className="overflow-hidden">{children}</div>
+      </div>
+    </div>
+  );
+}
 
 export function HowIWork() {
   return (
@@ -48,7 +104,7 @@ export function HowIWork() {
         </div>
 
         {/* Two paths */}
-        <div className="mt-16 md:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+        <div className="mt-16 md:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
           {/* Path 1 — Embedded */}
           <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors">
             <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
@@ -61,14 +117,11 @@ export function HowIWork() {
               For agencies and in-house pharma, healthcare, and enterprise teams that need senior UX, IA, and content strategy leadership inside live work — campaigns, platforms, sites, apps, sales tools, and regulated brand programs.
             </p>
 
-            <div className="mt-8 pt-8 border-t border-border-subtle">
-              <p className="text-base font-medium text-text-primary">
-                Embedded UX &amp; Experience Design Lead
-              </p>
-              <p className="mt-3 text-sm text-text-secondary leading-relaxed">
+            <AccordionDetail id="embedded-detail" label="Embedded UX & Experience Design Lead">
+              <p className="text-sm text-text-secondary leading-relaxed">
                 I work directly with creative directors, account leads, technologists, dev teams, copywriters, and visual designers on digital brand and product work. Deliverables include engagement strategy, site architecture, user flows, wireframes, content frameworks, RC and pitch decks, and design system governance and refinements.
               </p>
-            </div>
+            </AccordionDetail>
 
             <div className="mt-8">
               <Link
@@ -92,10 +145,7 @@ export function HowIWork() {
               Senior strategic counsel without a full-time hire — product design, AI adoption, engagement strategy, design system governance, multi-brand experience strategy, and regulatory program redesign.
             </p>
 
-            <div className="mt-8 pt-8 border-t border-border-subtle">
-              <p className="text-base font-medium text-text-primary mb-5">
-                Four advisory shapes:
-              </p>
+            <AccordionDetail id="advisory-detail" label="Four advisory shapes">
               <dl className="space-y-5">
                 {ADVISORY_SHAPES.map((shape) => (
                   <div key={shape.name}>
@@ -108,7 +158,7 @@ export function HowIWork() {
                   </div>
                 ))}
               </dl>
-            </div>
+            </AccordionDetail>
 
             <div className="mt-8">
               <Link
