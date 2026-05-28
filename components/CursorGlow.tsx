@@ -12,7 +12,9 @@ import { useEffect, useRef, useState } from "react";
  *   - Eased follow (lerp) so it trails the cursor smoothly rather than
  *     snapping, which feels more considered.
  *   - Pointer-events: none — never intercepts clicks.
- *   - Fixed, full-viewport, sits behind page content.
+ *   - Sits ABOVE page content (z-index 5) with mix-blend-mode: screen, so it
+ *     washes over cards and sections as the cursor passes — only ever
+ *     lightening, never darkening or covering text.
  *   - Disabled on touch devices (no cursor) and when the user prefers
  *     reduced motion.
  *   - Fades in on first mouse move so there's no glow parked in a corner
@@ -22,7 +24,7 @@ import { useEffect, useRef, useState } from "react";
  */
 
 const GLOW_SIZE = 600; // diameter of the glow in px
-const GLOW_OPACITY = 0.18; // 0–1; higher = brighter. Keep subtle.
+const GLOW_OPACITY = 0.144; // 0–1; higher = brighter. 20% dimmer than the original 0.18, for subtlety.
 const EASE = 0.12; // 0–1; lower = more lag/trail, higher = snappier.
 
 export function CursorGlow() {
@@ -96,7 +98,8 @@ export function CursorGlow() {
           GLOW_OPACITY * 0.5
         }) 30%, rgba(107,92,255,0) 70%)`,
         willChange: "transform",
-        zIndex: 0,
+        zIndex: 5,
+        mixBlendMode: "screen",
       }}
     />
   );
