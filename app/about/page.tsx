@@ -62,44 +62,49 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-6">About</p>
 
-          {/* Headline + intro paragraphs — full column width */}
+          {/* Full-width declarative headline */}
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
               I help leadership teams make clear decisions in complex digital
               environments.
             </h1>
-            <p className="mt-8 md:mt-10 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
-              I&apos;m a strategic experience design leader with 15+ years
-              working at the intersection of UX, CX, product, and regulated
-              digital systems. The work I do best is the work that&apos;s
-              hard to staff full-time but too important to skip. Senior
-              input on the moments where the structure of the experience
-              changes the structure of the business outcome.
-            </p>
-            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
-              Currently leading UX strategy at Razorfish (Publicis) on Pfizer
-              brands. I work with biotech, fintech, software, agency, and
-              enterprise teams to bring senior depth across stakeholders,
-              deadlines, and decisions.
-            </p>
           </div>
 
-          {/* Portrait — left-aligned, stacked below the intro copy. Image is
-              CSS-scaled inside the card to tighten the framing by ~20%. */}
-          <div className="mt-12 md:mt-16">
-            <div
-              className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card"
-              style={{ width: "min(100%, 420px)", aspectRatio: "4 / 5" }}
-            >
-              <Image
-                src="/images/brand/shawn_m_capizzi_2026.png"
-                alt="Shawn Capizzi"
-                fill
-                priority
-                className="object-cover object-top"
-                style={{ transform: "scale(1.2)", transformOrigin: "center top" }}
-                sizes="(max-width: 1024px) 80vw, 420px"
-              />
+          {/* Body copy + portrait, side-by-side on desktop; stacks on mobile.
+              Portrait keeps its 420px max-width and scale(1.2) tightened crop. */}
+          <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div className="lg:col-span-7 order-2 lg:order-1">
+              <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
+                I&apos;m a strategic experience design leader with 15+ years
+                working at the intersection of UX, CX, product, and regulated
+                digital systems. The work I do best is the work that&apos;s
+                hard to staff full-time but too important to skip. Senior
+                input on the moments where the structure of the experience
+                changes the structure of the business outcome.
+              </p>
+              <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
+                Currently leading UX strategy at Razorfish (Publicis) on Pfizer
+                brands. I work with biotech, fintech, software, agency, and
+                enterprise teams to bring senior depth across stakeholders,
+                deadlines, and decisions.
+              </p>
+            </div>
+
+            <div className="lg:col-span-5 order-1 lg:order-2">
+              <div
+                className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card"
+                style={{ width: "min(100%, 420px)", aspectRatio: "4 / 5" }}
+              >
+                <Image
+                  src="/images/brand/shawn_m_capizzi_2026.png"
+                  alt="Shawn Capizzi"
+                  fill
+                  priority
+                  className="object-cover object-top"
+                  style={{ transform: "scale(1.2)", transformOrigin: "center top" }}
+                  sizes="(max-width: 1024px) 80vw, 420px"
+                />
+              </div>
             </div>
           </div>
         </div>
