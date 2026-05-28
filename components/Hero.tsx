@@ -25,8 +25,8 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left: Headline + wordmark (signature) */}
           <div className="relative z-10 lg:col-span-7 order-2 lg:order-1">
-            <h1 className="headline-gleam text-2xl md:text-3xl lg:text-3xl font-bold tracking-tight leading-[1.15] max-w-[90%]">
-              Experience design and strategy that delivers clarity
+            <h1 className="headline-gleam text-2xl md:text-3xl lg:text-3xl font-bold tracking-tight leading-[1.1] max-w-[90%]">
+              Experience design &amp; strategy that delivers clarity
               <span className="block mt-3 md:mt-4 text-lg md:text-xl lg:text-2xl font-normal text-text-secondary tracking-tight">
                 Experience and AI counsel across apps, ecosystems and marketing &mdash; for pharma, biotech, FinTech and their agencies.
               </span>
@@ -37,7 +37,7 @@ export function Hero() {
               animate
               href={null}
               priority
-              className="mt-12 md:mt-8 mx-auto -translate-x-[7px] md:-translate-x-[110px] md:translate-y-[3px] w-full max-w-[326px] lg:max-w-[435px] h-auto"
+              className="mt-6 md:mt-5 mx-auto -translate-x-[7px] md:-translate-x-[110px] md:translate-y-[3px] w-full max-w-[326px] lg:max-w-[435px] h-auto"
             />
           </div>
 
