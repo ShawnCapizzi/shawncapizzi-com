@@ -71,10 +71,9 @@ export default function Page() {
           </div>
 
           {/* Body copy + portrait, side-by-side on desktop; stacks on mobile.
-              Photo column stretches to match the body-copy column height
-              (items-stretch + h-full). Crop is tuned via object-position so
-              the face sits in the upper-middle of the frame — no scale hack. */}
-          <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
+              Photo uses fixed 4:5 aspect ratio for a tight, well-framed face
+              crop. Copy and photo are vertically centered against each other. */}
+          <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-7 order-2 lg:order-1">
               <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
                 I&apos;m a strategic experience design leader with 15+ years
@@ -92,10 +91,10 @@ export default function Page() {
               </p>
             </div>
 
-            <div className="lg:col-span-5 order-1 lg:order-2 h-full">
+            <div className="lg:col-span-5 order-1 lg:order-2">
               <div
-                className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card h-full min-h-[420px]"
-                style={{ width: "min(100%, 420px)" }}
+                className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card"
+                style={{ width: "min(100%, 420px)", aspectRatio: "4 / 5" }}
               >
                 <Image
                   src="/images/brand/shawn_m_capizzi_2026.png"
