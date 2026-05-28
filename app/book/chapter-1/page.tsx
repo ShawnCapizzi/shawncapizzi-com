@@ -165,30 +165,33 @@ export default function ChapterOnePage() {
 
       {/* ── BOOK INTRO / TITLE-PAGE ENTRANCE ───────────────────────────── */}
       <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12 mb-14 md:mb-20">
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
           <p className="eyebrow mb-5">The book · Read it free, one chapter at a time</p>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.04]">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.04] max-w-none">
             Clarity Is the Advantage
           </h1>
 
-          <p className="mt-6 text-xl md:text-2xl text-text-secondary leading-relaxed font-normal max-w-2xl">
-            Most design books teach you how to make things look good. This one teaches you how to
-            make <em>thoughtful</em>{" "}design decisions that create lasting competitive advantage,
-            in a landscape where compliance, transformation, and measurable ROI aren&apos;t optional.
+          <p className="mt-4 text-lg md:text-xl text-text-secondary italic tracking-tight font-normal">
+            Orienteering to great design decisions
           </p>
 
           <div className="mt-8 max-w-2xl space-y-4 text-base md:text-lg text-text-secondary leading-relaxed">
             <p>
-              When design tools become accessible to everyone, strategic thinking becomes your only
-              sustainable advantage. This book is for the Creative Director fighting for budget, the
-              SVP navigating impossible stakeholder demands, and the design leader who needs
-              frameworks that actually hold up in regulated industries: pharma, healthcare, finance.
+              I wrote this because I got tired of watching design leadership become a thing people
+              talk about instead of do. Fifteen years in the trenches of New York agency life taught
+              me something different: the best people don&apos;t complain about the seat at the table
+              &mdash; they earn it by pushing the work forward and owning the outcome. This book is
+              what I learned from them, and from a path that&apos;s been anything but typical.
             </p>
             <p>
-              It begins where all of it begins: with the human on the other side of the screen.
-              Chapter 1 is below. Read it free. If it resonates, each new chapter lands in your inbox
-              as it&apos;s written.
+              It&apos;s one person&apos;s hard-won take on smart design &mdash; why clarity wins, how
+              to cut through the noise, and what it takes to do great work in the rooms where it
+              actually gets decided.
+            </p>
+            <p>
+              Chapter 1 is below. Read it free. If it resonates, the next one lands in your inbox as
+              it&apos;s written.
             </p>
           </div>
 
