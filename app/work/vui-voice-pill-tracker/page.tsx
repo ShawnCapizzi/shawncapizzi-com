@@ -21,6 +21,12 @@ export default function Page() {
       subtitle="An early voice-first design exploration for medication adherence — built as an Alexa Skill in 2018. The conversational-design practice underneath every AI agent and chatbot engagement I run today."
       heroImage={`${ASSET_BASE}/00-hero-echo-device.jpg`}
       heroImageAlt="An Amazon Echo smart speaker — the platform the VUI Pill Tracker Alexa Skill was built and tested on in 2017–2018."
+      heroVideo={{
+        src: `${VIDEO_BASE}/pill-tracker-vui-demo.mp4`,
+        poster: `${ASSET_BASE}/01-vui-demo-poster.jpg`,
+        ariaLabel:
+          "Demo walkthrough of the VUI Pill Tracker Alexa Skill prototype: setting a daily medication reminder, querying status, and confirming a dose entirely by voice.",
+      }}
       metadata={[
         { label: "ROLE", value: "Concept, VUI design, prototyping, testing" },
         { label: "YEAR", value: "2017–2018" },

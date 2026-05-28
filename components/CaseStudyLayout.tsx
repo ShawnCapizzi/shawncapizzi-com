@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { BrowserFrame } from "@/components/BrowserFrame";
+import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
 
 const CAL_URL = "https://cal.com/capizzi/15min";
 
@@ -52,6 +53,10 @@ interface CaseStudyLayoutProps {
   subtitle: string;
   heroImage: string;
   heroImageAlt: string;
+  /** Optional. When provided, the hero renders this video (with an always-visible
+   *  play affordance) in place of heroImage, in the same 16:9 hero container.
+   *  heroImage is still used as the video's poster/fallback. */
+  heroVideo?: { src: string; poster?: string; ariaLabel: string };
   metadata: MetadataItem[];
   challenge: string[];
   approach: string[];
@@ -102,17 +107,27 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
             {props.subtitle}
           </p>
 
-          {/* Hero image */}
+          {/* Hero — video if provided, otherwise image. Same 16:9 container either way. */}
           <div className="mt-12 md:mt-16 relative aspect-[16/9] rounded-2xl overflow-hidden border border-border-default">
-            <Image
-              src={props.heroImage}
-              alt={props.heroImageAlt}
-              fill
-              priority
-              unoptimized={isAnimated(props.heroImage)}
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
-            />
+            {props.heroVideo ? (
+              <VideoWithPlayOverlay
+                src={props.heroVideo.src}
+                poster={props.heroVideo.poster ?? props.heroImage}
+                ariaLabel={props.heroVideo.ariaLabel}
+                wrapperClassName="absolute inset-0 w-full h-full"
+                videoClassName="absolute inset-0 w-full h-full object-cover"
+              />
+            ) : (
+              <Image
+                src={props.heroImage}
+                alt={props.heroImageAlt}
+                fill
+                priority
+                unoptimized={isAnimated(props.heroImage)}
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
+              />
+            )}
           </div>
 
           {/* Metadata block */}

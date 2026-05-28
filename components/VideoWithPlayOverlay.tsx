@@ -8,6 +8,10 @@ interface VideoWithPlayOverlayProps {
   ariaLabel: string;
   /** Optional wrapper className for styling the outer container (border, radius, etc). */
   wrapperClassName?: string;
+  /** Optional className for the <video> element itself. Defaults to natural-ratio
+   *  block sizing; pass an object-cover fill class when the video must fill a
+   *  fixed-aspect container (e.g. a 16:9 hero box). */
+  videoClassName?: string;
 }
 
 /**
@@ -31,6 +35,7 @@ export function VideoWithPlayOverlay({
   poster,
   ariaLabel,
   wrapperClassName = "w-full rounded-xl overflow-hidden border border-border-default bg-bg-elevated",
+  videoClassName = "block w-full h-auto",
 }: VideoWithPlayOverlayProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [hasStarted, setHasStarted] = useState(false);
@@ -68,7 +73,7 @@ export function VideoWithPlayOverlay({
           // finished the video (handled by onEnded). Pause + un-pause should
           // feel like normal video controls, not a re-entry.
         }}
-        className="block w-full h-auto"
+        className={videoClassName}
       />
 
       {!hasStarted && (
