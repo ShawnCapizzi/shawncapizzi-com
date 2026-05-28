@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ParticleField } from "@/components/ParticleField";
+import { CursorGlow } from "@/components/CursorGlow";
 import { BackToTop } from "@/components/BackToTop";
 import { ScrollFadeController } from "@/components/ScrollFadeController";
 import { NavigationProgress } from "@/components/NavigationProgress";
@@ -114,6 +115,7 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${nunitoSans.variable}`}>
       <body className="bg-bg-primary text-text-primary antialiased">
         <ParticleField />
+        <CursorGlow />
         <ScrollFadeController />
         <div className="relative" style={{ zIndex: 1 }}>
           <Header />
