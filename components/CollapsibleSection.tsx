@@ -30,7 +30,7 @@ export function CollapsibleSection({
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div>
+    <div className="rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors p-6 md:p-8">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
