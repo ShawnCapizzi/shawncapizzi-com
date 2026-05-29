@@ -28,7 +28,7 @@ export function Hero() {
             <h1 className="headline-gleam text-4xl md:text-3xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-[90%]">
               Experience design &amp; strategy that delivers clarity
               <span className="block mt-3 md:mt-4 text-xl md:text-xl lg:text-xl font-normal text-text-secondary tracking-tight">
-                Experience and AI counsel across apps, ecosystems and marketing &mdash; for pharma, biotech, FinTech and their agencies.
+                Experience and AI counsel across product, strategy, and marketing: pharma, biotech, FinTech, and agencies.
               </span>
             </h1>
 
