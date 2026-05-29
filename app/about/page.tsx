@@ -94,8 +94,7 @@ export default function Page() {
 
             <div className="lg:col-span-5 order-1 lg:order-2 flex">
               <div
-                className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card w-full aspect-[4/5] lg:aspect-auto lg:min-h-0"
-                style={{ maxWidth: "min(100%, 378px)" }}
+                className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card w-full max-w-[82%] sm:max-w-[72%] lg:max-w-[378px] mx-auto lg:mx-0 aspect-[4/5] lg:aspect-auto lg:min-h-0"
               >
                 <Image
                   src="/images/brand/shawn_m_capizzi_2026.png"
