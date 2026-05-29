@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Selected Work",
   description:
-    "A decade of enterprise experience design across pharma, healthcare, and finance. Engagements where the structure of the experience changed the structure of the business outcome.",
+    "15+ years of enterprise experience design across pharma, healthcare, and finance. Engagements where the structure of the experience changed the structure of the business outcome.",
 };
 
 const CASE_STUDIES = [
@@ -83,8 +83,8 @@ export default function Page() {
             Engagements where experience structure changed the business outcome.
           </h1>
           <p className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
-            A decade of enterprise experience design across pharma, healthcare,
-            and finance — and selected work outside it.
+            15+ years of enterprise experience design across pharma, healthcare,
+            and finance, and selected work outside it.
           </p>
         </div>
       </section>

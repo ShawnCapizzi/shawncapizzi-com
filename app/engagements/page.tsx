@@ -5,10 +5,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Engagements",
   description:
-    "Two flexible ways of working with senior experience design leadership: embedded UX engagements and strategic advisory retainers. Built for regulated and enterprise teams.",
+    "Three ways to engage senior product and experience strategy leadership: embedded leadership, strategic advisory, and on-call retainer. Built for regulated and enterprise teams.",
 };
 
-const CAL_URL = "https://cal.com/capizzi/15min";
+const CAL_URL = "https://cal.com/capizzi/30min";
 
 const EMBEDDED_INCLUDED = [
   "Site architecture, wireframes, prototypes, and high-fidelity mockups",
@@ -47,37 +47,41 @@ const ADVISORY_SHAPES = [
       "An AI initiative needs to be defined and gotten into production. A redesign or platform consolidation is hard to use and over budget. A multi-brand program needs a governance reset. An organization needs a vendor-agnostic view of AI opportunities and design actions that can actually move revenue.",
   },
   {
-    name: "Strategic Advisory Retainer",
-    description:
-      "Monthly partnership for ongoing decision-side counsel. Built for leaders who want a senior thinking partner over time.",
-    included:
-      "Working sessions, async document and decision review, Slack or email access for fast decisions between sessions, quarterly strategic alignment review.",
-    works:
-      "A multi-quarter initiative needs ongoing senior input. A leadership team wants a thinking partner who's seen this kind of work succeed and fail at scale.",
-  },
-  {
     name: "AI Opportunity Diagnostic",
     description:
       "A short, multi-week engagement that assesses where AI could fit in your team's workflows and the efficacy of operations. Vendor-agnostic. Output is a prioritized roadmap, not a vendor list.",
     included:
       "Stakeholder interviews, process mapping, data and workflow review, identification of high-leverage AI opportunities, identification of places AI shouldn't go yet, prioritized roadmap with clear next actions.",
     works:
-      "You're being pitched on AI tools and don't know which to trust. You have an AI initiative stuck in pilot. You want to understand where your team is actually ready for AI integration — and where the foundation needs work first.",
+      "You're being pitched on AI tools and don't know which to trust. You have an AI initiative stuck in pilot. You want to understand where your team is actually ready for AI integration, and where the foundation needs work first.",
   },
+];
+
+const ONCALL_INCLUDED = [
+  "Working sessions on the decisions that matter, on your cadence",
+  "Async document and decision review between sessions",
+  "Slack or email access for fast calls when timing is tight",
+  "Quarterly strategic alignment review tied to current goals and metrics",
+];
+
+const ONCALL_WORKS = [
+  "A multi-quarter initiative needs ongoing senior input, not a one-time deliverable",
+  "A leadership team wants a thinking partner who has seen this kind of work succeed and fail at scale",
+  "You want senior judgment available the moment a decision lands, without a full-time hire",
 ];
 
 const PILLARS = [
   {
-    name: "Pillar 1 — Regulatory",
-    body: "Healthcare and financial product teams operate under real constraints: fixed regulatory deadlines, multiple rounds of legal and medical review, complex scientific content, and development windows that cannot be missed. Speed matters. Trust matters more. I help teams design UX and CX systems that meet business goals while respecting FDA, RC, MLR, and financial compliance — without losing clarity, accessibility, or time to market.",
+    name: "Pillar 1: Regulatory",
+    body: "Healthcare and financial product teams operate under real constraints: fixed regulatory deadlines, multiple rounds of legal and medical review, complex scientific content, and development windows that cannot be missed. Speed matters. Trust matters more. I help teams design UX and CX systems that meet business goals while respecting FDA, RC, MLR, and financial compliance, without losing clarity, accessibility, or time to market.",
   },
   {
-    name: "Pillar 2 — Interfaces",
-    body: "New technology doesn't create adoption. Clarity does. I help teams design modern interfaces — AI tools, conversational systems, QR activations, mobile wallet integrations, sales funnels, multi-touchpoint experiences — in ways that feel intuitive, trusted, and grounded in real behavior. Users don't care about novelty. They care about getting what they need and moving on with the rest of their life.",
+    name: "Pillar 2: Interfaces",
+    body: "New technology doesn't create adoption. Clarity does. I help teams design modern interfaces (AI tools, conversational systems, QR activations, mobile wallet integrations, sales funnels, multi-touchpoint experiences) in ways that feel intuitive, trusted, and grounded in real behavior. Users don't care about novelty. They care about getting what they need and moving on with the rest of their life.",
   },
   {
-    name: "Pillar 3 — Systems",
-    body: "Enterprise systems fail quietly. They fragment over time. Each team builds its own version. I help teams design — and govern — systems that scale across brands, teams, and product lines. The work is half architecture, half organizational design. A system only works if the people maintaining it can actually use it.",
+    name: "Pillar 3: Systems",
+    body: "Enterprise systems fail quietly. They fragment over time. Each team builds its own version. I help teams design and govern systems that scale across brands, teams, and product lines. The work is half architecture, half organizational design. A system only works if the people maintaining it can actually use it.",
   },
 ];
 
@@ -89,20 +93,22 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagements</p>
           <h1 className="headline-static text-4xl md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-4xl">
-            Two flexible ways of working, based on your team&apos;s needs.
+            Three ways to bring in senior leadership, built around your team.
           </h1>
           <p className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
-            Engagements are designed for teams inside regulated and enterprise
-            organizations navigating complexity — both in content and in the
-            tasks that need to get done. Most start with a single defined piece
-            of work, and the relationship grows from there.
+            I take on a small number of teams inside regulated and enterprise
+            organizations navigating complexity, in their content and in the
+            decisions that have to get made. Most start with a single defined
+            piece of work, and the relationship grows from there.
           </p>
           <div className="mt-8 md:mt-10">
             <p className="metadata-label mb-3">Jump to</p>
             <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
-              <a href="#embedded" className="hover:text-text-primary transition-colors">Embedded</a>
+              <a href="#leadership" className="hover:text-text-primary transition-colors">Leadership</a>
               <span aria-hidden="true">·</span>
               <a href="#advisory" className="hover:text-text-primary transition-colors">Advisory</a>
+              <span aria-hidden="true">·</span>
+              <a href="#oncall" className="hover:text-text-primary transition-colors">On Call</a>
               <span aria-hidden="true">·</span>
               <a href="#focus" className="hover:text-text-primary transition-colors">Focus</a>
               <span aria-hidden="true">·</span>
@@ -143,11 +149,11 @@ export default function Page() {
       </section>
 
       {/* PATH 1 - EMBEDDED */}
-      <section id="embedded" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+      <section id="leadership" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">Engagement type 01</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
-            Embedded UX & Experience Design Lead
+            Leadership: Embedded UX &amp; Experience Design Lead
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
             For agencies and in-house pharma, healthcare, and enterprise teams
@@ -225,7 +231,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">Engagement type 02</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
-            Strategic Advisory
+            Advisory: Strategic, Project-Based Counsel
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-14 md:mb-16">
             For VPs, Directors, and senior leaders inside pharma, healthcare,
@@ -265,8 +271,71 @@ export default function Page() {
 
           <div className="mt-14 md:mt-16 max-w-3xl">
             <p className="text-base text-text-secondary italic">
-              Engagements scope to duration and scope. Let&apos;s talk through
-              what your team actually needs.
+              Advisory engagements scale to scope and duration. Let&apos;s talk
+              through what your team actually needs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PATH 3 - ON CALL */}
+      <section id="oncall" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <p className="eyebrow mb-4">Engagement type 03</p>
+          <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
+            On Call: Senior Counsel on a Monthly Retainer
+          </h2>
+          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
+            A monthly retainer for leaders who want a senior thinking partner
+            available over time, not just for a single deliverable. Reserved for
+            a small number of teams so the access stays real.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+            <div>
+              <h3 className="text-xl md:text-2xl font-semibold mb-6 text-text-primary">
+                What&apos;s included
+              </h3>
+              <ul className="space-y-3">
+                {ONCALL_INCLUDED.map((item, i) => (
+                  <li
+                    key={i}
+                    className="text-base md:text-lg text-text-secondary leading-relaxed pl-5 relative"
+                  >
+                    <span
+                      className="absolute left-0 top-3 w-2 h-px bg-text-tertiary"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl md:text-2xl font-semibold mb-6 text-text-primary">
+                When this works
+              </h3>
+              <ul className="space-y-3">
+                {ONCALL_WORKS.map((item, i) => (
+                  <li
+                    key={i}
+                    className="text-base md:text-lg text-text-secondary leading-relaxed pl-5 relative"
+                  >
+                    <span
+                      className="absolute left-0 top-3 w-2 h-px bg-text-tertiary"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-14 md:mt-16 max-w-3xl">
+            <p className="text-base text-text-secondary italic">
+              Retainers are monthly and scope to the cadence of access you need.
+              Let&apos;s talk through what your team actually needs.
             </p>
           </div>
         </div>
@@ -280,7 +349,7 @@ export default function Page() {
           </h2>
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl mb-14 md:mb-16">
             Every engagement runs through three lenses. They&apos;re not
-            separate practices — they&apos;re how I look at any complex
+            separate practices. They&apos;re how I look at any complex
             experience problem.
           </p>
 

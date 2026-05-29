@@ -12,7 +12,7 @@ import Image from "next/image";
  * though the LogoStrip splits them physically.
  */
 
-const CAL_URL = "https://cal.com/capizzi/15min";
+const CAL_URL = "https://cal.com/capizzi/30min";
 
 export function HeroBottom() {
   return (
@@ -20,7 +20,9 @@ export function HeroBottom() {
       <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-2xl">
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-            Deep experience delivering results in regulated industries. Available embedded, fractional, or as senior counsel.
+            I help leadership teams make complex, AI-touched products clear
+            enough to ship. Defensible enough to launch. Leadership, advisory,
+            or on call.
           </p>
 
           <a

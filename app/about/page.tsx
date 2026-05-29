@@ -185,7 +185,7 @@ export default function Page() {
             </p>
             <p>
               I&apos;ve led teams of 3–8 full-time and freelance designers
-              across multi-brand work. The thread across two decades: making
+              across multi-brand work. The thread across all of it: making
               complex digital systems clear enough for the people who use them.
               The constraint isn&apos;t usually the technology. It&apos;s the
               architecture of decisions, content, and trust that wraps around
@@ -349,8 +349,8 @@ export default function Page() {
           </p>
           <p className="text-base md:text-lg text-white/80 mb-10 max-w-3xl leading-relaxed">
             Honest, no-fluff thinking on AI, design, and strategy for 2026 and
-            beyond. The book is written. Chapter 1 &mdash; &ldquo;The Human
-            Condition&rdquo; &mdash; is live in the reader.
+            beyond. The book is written. Chapter 1, &ldquo;The Human
+            Condition,&rdquo; is live in the reader.
           </p>
           <Link
             href="/book/chapter-1"

@@ -16,7 +16,7 @@ const FAQS = [
   },
   {
     q: "How do you integrate AI into pharma, healthcare, or other regulated industries without breaking compliance?",
-    a: "You treat compliance as a design constraint, not an afterthought. That means mapping every AI touchpoint to its regulatory surface (FDA, HIPAA, MLR, SOC 2), structuring content for auditability, and building human-in-the-loop checkpoints where model confidence drops. I've done this across 70+ pharmaceutical brands and major enterprise systems.",
+    a: "You treat compliance as a design constraint, not an afterthought. That means mapping every AI touchpoint to its regulatory surface (FDA, HIPAA, MLR, SOC 2), structuring content for auditability, and building human-in-the-loop checkpoints where model confidence drops. I've done this across 70+ therapeutic brands and major enterprise systems.",
   },
   {
     q: "Should I hire a full-time Director of UX, a VP of Design, or a fractional design leader?",
@@ -40,7 +40,7 @@ const FAQS = [
   },
   {
     q: "How do engagements typically start?",
-    a: "Every engagement starts with a free 30-minute Strategy Call. Virtual. We talk through what's stuck and what success looks like. No pitch. If there's not a fit, I'll tell you and try to point you to possible solutions or partners. If the strategy call goes well, a longer scoping conversation with the relevant stakeholders to understand scope, timing, and constraints. Then a Statement of Work. Most engagements move from first call to signed SOW in 2–3 weeks.",
+    a: "Every engagement starts with a free 30-minute Strategy Call. Virtual. We talk through what's stuck and what success looks like. No pitch. If there's not a fit, I'll tell you and try to point you to possible solutions or partners. If the strategy call goes well, we move into a longer scoping conversation with the relevant stakeholders to map scope, timing, and constraints. Then I write the Statement of Work. Most engagements move from first call to signed SOW in 2–3 weeks.",
   },
   {
     q: "Do you work with agency partners or only direct clients?",
@@ -52,7 +52,7 @@ const FAQS = [
   },
   {
     q: "Do you travel for workshops or onsite work?",
-    a: "Yes. Virtual delivery is included in all engagements. Onsite delivery bills travel at cost. Workshops, executive presentations, and stakeholder alignment sessions often benefit from being in the room. I'm available for that when it's the right call.",
+    a: "Most work is remote, and virtual delivery is included in every engagement. I travel for onsite work when being in the room is the right call. Workshops, executive presentations, and stakeholder alignment sessions are often better in person, and I bill travel at cost.",
   },
 ];
 

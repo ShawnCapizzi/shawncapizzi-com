@@ -26,9 +26,9 @@ export function Hero() {
           {/* Left: Headline + wordmark (signature) */}
           <div className="relative z-10 lg:col-span-7 order-2 lg:order-1">
             <h1 className="headline-gleam text-4xl md:text-3xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-[90%]">
-              Experience design &amp; strategy that delivers clarity
+              Product and experience strategy for regulated industries
               <span className="block mt-3 md:mt-4 text-xl md:text-xl lg:text-xl font-normal text-text-secondary tracking-tight">
-                Experience and AI counsel across product, strategy, and marketing: pharma, biotech, FinTech, and agencies.
+                Experience and AI counsel across product, strategy, and marketing for pharma, biotech, fintech, and agency teams.
               </span>
             </h1>
 
