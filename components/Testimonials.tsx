@@ -41,7 +41,7 @@ const TESTIMONIALS = [
 export function Testimonials() {
   return (
     <section className="py-24 md:py-32 border-t border-border-subtle">
-      <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
+      <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Words from collaborators</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight">

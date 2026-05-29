@@ -58,7 +58,7 @@ const BUILDING: BuildingItem[] = [
 export function Building() {
   return (
     <section className="py-24 md:py-32 mt-24 md:mt-32 border-t border-border-subtle">
-      <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
+      <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">In the studio</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05]">
