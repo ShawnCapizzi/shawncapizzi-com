@@ -146,22 +146,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* JUMP NAV — section anchors so visitors can self-route */}
-      <section className="pb-12 md:pb-16">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="metadata-label mb-3">Jump to</p>
-          <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
-            <a href="#embedded" className="hover:text-text-primary transition-colors">Embedded</a>
-            <span aria-hidden="true">·</span>
-            <a href="#advisory" className="hover:text-text-primary transition-colors">Advisory</a>
-            <span aria-hidden="true">·</span>
-            <a href="#focus" className="hover:text-text-primary transition-colors">Focus</a>
-            <span aria-hidden="true">·</span>
-            <a href="#process" className="hover:text-text-primary transition-colors">Process</a>
-          </nav>
-        </div>
-      </section>
-
       {/* PATH 1 - EMBEDDED */}
       <section id="embedded" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
