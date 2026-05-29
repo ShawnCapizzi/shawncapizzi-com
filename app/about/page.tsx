@@ -104,11 +104,7 @@ export default function Page() {
                   fill
                   priority
                   className="object-cover"
-                  style={{
-                    objectPosition: "center 30%",
-                    transform: "scale(1.1)",
-                    transformOrigin: "center 30%",
-                  }}
+                  style={{ objectPosition: "center 20%" }}
                   sizes="(max-width: 1024px) 80vw, 420px"
                 />
               </div>
