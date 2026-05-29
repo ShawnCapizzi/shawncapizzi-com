@@ -101,6 +101,12 @@ export default function Page() {
             decisions that have to get made. Most start with a single defined
             piece of work, and the relationship grows from there.
           </p>
+          <p className="mt-5 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
+            Think of the three below as shapes one relationship can take, not
+            three products to choose between. Teams move between them as needs
+            change: embedded leadership one year, on call the next. The shape
+            flexes. The partnership holds.
+          </p>
           <div className="mt-8 md:mt-10">
             <p className="metadata-label mb-3">Jump to</p>
             <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
