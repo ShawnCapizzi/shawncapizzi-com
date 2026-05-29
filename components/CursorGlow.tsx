@@ -24,7 +24,7 @@ import { useEffect, useRef, useState } from "react";
  */
 
 const GLOW_SIZE = 600; // diameter of the glow in px
-const GLOW_OPACITY = 0.144; // 0–1; higher = brighter. 20% dimmer than the original 0.18, for subtlety.
+const GLOW_OPACITY = 0.1152; // 0–1; higher = brighter. ~36% dimmer than the original 0.18, for additional subtlety.
 const EASE = 0.12; // 0–1; lower = more lag/trail, higher = snappier.
 
 export function CursorGlow() {
