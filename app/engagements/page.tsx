@@ -113,14 +113,14 @@ export default function Page() {
       {/* FRAMEWORK SKETCH — how I think before any pixel gets pushed */}
       <section className="pb-8 md:pb-12">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <figure className="max-w-3xl mx-auto">
+          <figure>
             <div className="relative aspect-video rounded-2xl overflow-hidden border border-border-default">
               <Image
                 src="/images/engagements/needs-framework-sketch.jpg"
                 alt="Hand-drawn framework: user need and want flowing down through company to users, business, and resources"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 720px"
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
               />
             </div>
             <figcaption className="mt-5 text-sm md:text-base text-text-tertiary text-center italic">
