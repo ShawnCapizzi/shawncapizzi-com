@@ -145,7 +145,7 @@ export function HowIWork() {
               Senior strategic counsel without a full-time hire — product design, AI adoption, engagement strategy, design system governance, multi-brand experience strategy, and regulatory program redesign.
             </p>
 
-            <AccordionDetail id="advisory-detail" label="Four advisory shapes">
+            <AccordionDetail id="advisory-detail" label="Four flexible advisory options">
               <dl className="space-y-5">
                 {ADVISORY_SHAPES.map((shape) => (
                   <div key={shape.name}>
