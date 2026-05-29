@@ -176,7 +176,7 @@ export default function ChapterOnePage() {
             Orienteering to great design decisions
           </p>
 
-          <div className="mt-8 max-w-2xl space-y-4 text-base md:text-lg text-text-secondary leading-relaxed">
+          <div className="mt-8 max-w-2xl space-y-4 text-lg md:text-xl text-text-secondary leading-relaxed">
             <p>
               I wrote this because I got tired of watching design leadership become a thing people
               talk about instead of do. Fifteen years in the trenches of New York agency life taught
