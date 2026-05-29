@@ -339,7 +339,7 @@ export default function Page() {
       >
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
-            Forthcoming
+            Now reading
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white leading-tight mb-6">
             Clarity Is the Advantage
@@ -349,13 +349,14 @@ export default function Page() {
           </p>
           <p className="text-base md:text-lg text-white/80 mb-10 max-w-3xl leading-relaxed">
             Honest, no-fluff thinking on AI, design, and strategy for 2026 and
-            beyond. Currently in edit. First chapter coming soon.
+            beyond. The book is written. Chapter 1 &mdash; &ldquo;The Human
+            Condition&rdquo; &mdash; is live in the reader.
           </p>
           <Link
-            href="/clarity-advantage"
+            href="/book/chapter-1"
             className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white text-bg-primary text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
           >
-            Notify me when the first chapter publishes
+            Read Chapter 1 free <span aria-hidden="true" className="ml-2">&rarr;</span>
           </Link>
         </div>
       </section>
