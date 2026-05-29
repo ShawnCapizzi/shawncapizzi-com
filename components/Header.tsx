@@ -2,15 +2,16 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Wordmark } from "./Wordmark";
 
-type NavLink = { href: string; label: string; accent?: boolean };
+type NavLink = { href: string; label: string };
 
 const NAV_LINKS: NavLink[] = [
   { href: "/work", label: "Work" },
   { href: "/engagements", label: "Engagements" },
   { href: "/thinking", label: "Thinking" },
-  { href: "/book/chapter-1", label: "Read", accent: true },
+  { href: "/book/chapter-1", label: "Read" },
   { href: "/about", label: "About" },
 ];
 
@@ -25,6 +26,7 @@ const CAL_URL = "https://cal.com/capizzi/30min";
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
@@ -61,14 +63,26 @@ export function Header() {
           </div>
 
           <nav className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} className="inline-flex items-center gap-1.5 text-sm font-medium tracking-tight text-text-secondary hover:text-text-primary transition-colors">
-                {link.label}
-                {link.accent ? (
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#6B5CFF]" aria-hidden="true" />
-                ) : null}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname === link.href || pathname.startsWith(`${link.href}/`);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`inline-flex items-center text-sm tracking-tight transition-colors ${
+                    isActive
+                      ? "text-text-primary font-medium"
+                      : "text-text-secondary hover:text-text-primary font-normal"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <a href={CAL_URL} target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center px-6 py-2.5 rounded-full bg-text-primary text-text-inverse text-sm font-medium tracking-tight hover:scale-[1.02] transition-transform">
@@ -99,14 +113,27 @@ export function Header() {
       {mobileOpen ? (
         <div className="fixed inset-0 z-40 bg-bg-elevated md:hidden pt-20 overflow-y-auto">
           <nav className="px-6 py-12 flex flex-col gap-6">
-            {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="inline-flex items-center gap-2.5 text-3xl font-semibold tracking-tight text-text-primary">
-                {link.label}
-                {link.accent ? (
-                  <span className="w-2 h-2 rounded-full bg-[#6B5CFF]" aria-hidden="true" />
-                ) : null}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname === link.href || pathname.startsWith(`${link.href}/`);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`inline-flex items-center text-3xl tracking-tight ${
+                    isActive
+                      ? "text-text-primary font-semibold"
+                      : "text-text-secondary font-medium"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <div className="border-t border-border-subtle pt-6 flex flex-col gap-4">
               {SECONDARY_LINKS.map((link) => (
                 <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="text-lg text-text-secondary">
