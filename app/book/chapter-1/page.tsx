@@ -165,52 +165,50 @@ export default function ChapterOnePage() {
 
       {/* ── BOOK INTRO / TITLE-PAGE ENTRANCE ───────────────────────────── */}
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 mb-14 md:mb-20">
-        <div className="max-w-5xl">
-          <p className="eyebrow mb-3">The book</p>
+        <p className="eyebrow mb-3">The book</p>
 
-          <h1 className="headline-static text-4xl md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] text-balance max-w-4xl">
-            Clarity Is the Advantage
-          </h1>
+        <h1 className="headline-static text-4xl md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] text-balance max-w-4xl">
+          Clarity Is the Advantage
+        </h1>
 
-          <p className="mt-4 text-lg md:text-xl text-text-secondary italic tracking-tight font-normal">
-            Orienteering to great design decisions
+        <p className="mt-4 text-lg md:text-xl text-text-secondary italic tracking-tight font-normal">
+          Orienteering to great design decisions
+        </p>
+
+        <div className="mt-8 max-w-3xl space-y-4 text-lg md:text-xl text-text-secondary leading-relaxed">
+          <p>
+            I wrote this because I got tired of watching design leadership become a thing people
+            talk about instead of do. Fifteen years in the trenches of New York agency life taught
+            me something different: the best people don&apos;t complain about the seat at the table
+            &mdash; they earn it by pushing the work forward and owning the outcome. This book is
+            what I learned from them, and from a path that&apos;s been anything but typical.
           </p>
+          <p>
+            It&apos;s one person&apos;s hard-won take on smart design &mdash; why clarity wins, how
+            to cut through the noise, and what it takes to do great work in the rooms where it
+            actually gets decided.
+          </p>
+          <p>
+            The book is written. Chapter 1 is below &mdash; read it free. I&apos;ll send you the
+            finished book when it&apos;s ready, plus the occasional note from the work in between.{" "}
+            <a
+              href="#read"
+              className="text-link hover:text-link-hover font-medium underline underline-offset-4 decoration-1 transition-colors"
+            >
+              Get on the list&nbsp;&rarr;
+            </a>
+          </p>
+        </div>
 
-          <div className="mt-8 max-w-2xl space-y-4 text-lg md:text-xl text-text-secondary leading-relaxed">
-            <p>
-              I wrote this because I got tired of watching design leadership become a thing people
-              talk about instead of do. Fifteen years in the trenches of New York agency life taught
-              me something different: the best people don&apos;t complain about the seat at the table
-              &mdash; they earn it by pushing the work forward and owning the outcome. This book is
-              what I learned from them, and from a path that&apos;s been anything but typical.
-            </p>
-            <p>
-              It&apos;s one person&apos;s hard-won take on smart design &mdash; why clarity wins, how
-              to cut through the noise, and what it takes to do great work in the rooms where it
-              actually gets decided.
-            </p>
-            <p>
-              The book is written. Chapter 1 is below &mdash; read it free. I&apos;ll send you the
-              finished book when it&apos;s ready, plus the occasional note from the work in between.{" "}
-              <a
-                href="#read"
-                className="text-link hover:text-link-hover font-medium underline underline-offset-4 decoration-1 transition-colors"
-              >
-                Get on the list&nbsp;&rarr;
-              </a>
-            </p>
-          </div>
-
-          {/* Chapter marker — the transition from book-intro into the reader */}
-          <div className="mt-12 md:mt-16 flex items-center gap-4">
-            <span className="font-mono text-xs tracking-widest uppercase text-text-tertiary whitespace-nowrap">
-              Chapter 1
-            </span>
-            <span className="h-px flex-1 bg-border-subtle" aria-hidden="true" />
-            <span className="text-sm italic text-text-tertiary whitespace-nowrap">
-              The Human Condition
-            </span>
-          </div>
+        {/* Chapter marker — the transition from book-intro into the reader */}
+        <div className="mt-12 md:mt-16 flex items-center gap-4">
+          <span className="font-mono text-xs tracking-widest uppercase text-text-tertiary whitespace-nowrap">
+            Chapter 1
+          </span>
+          <span className="h-px flex-1 bg-border-subtle" aria-hidden="true" />
+          <span className="text-sm italic text-text-tertiary whitespace-nowrap">
+            The Human Condition
+          </span>
         </div>
       </div>
 
