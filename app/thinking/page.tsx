@@ -113,29 +113,17 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">Recently shared</p>
 
-          {/* Side-by-side: Talk (left) + Short (right) */}
+          {/* Side-by-side: Short (left) + Talk (right). On mobile the Short
+              centers in its column so the vertical embed reads as intentional
+              rather than left-floating against the wider page. */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-start">
-            {/* YouTube — talk at Intouch, Nov 2023 */}
-            <div>
-              <p className="metadata-label mb-4">Talk · Intouch · Nov 2023</p>
-              <LiteYouTube
-                videoId="iUvwk-KoA7s"
-                title="Optimize your process with No Code in Advertising"
-                aspect="16:9"
-              />
-              <p className="mt-4 text-sm text-text-tertiary italic">
-                Optimize your process with No Code in Advertising — delivered
-                at Intouch.
-              </p>
-            </div>
-
-            {/* YouTube Short */}
-            <div>
+            {/* YouTube Short — leads on mobile (more visually arresting) */}
+            <div className="text-center lg:text-left">
               <p className="metadata-label mb-4">
                 AI UX & CX Research GPT · Jan 2025
               </p>
               <div
-                className="rounded-xl overflow-hidden bg-black"
+                className="rounded-xl overflow-hidden bg-black mx-auto lg:mx-0"
                 style={{ aspectRatio: "9 / 16", maxWidth: "300px" }}
               >
                 <iframe
@@ -152,6 +140,20 @@ export default function Page() {
                   }}
                 />
               </div>
+            </div>
+
+            {/* YouTube — talk at Intouch, Nov 2023 */}
+            <div>
+              <p className="metadata-label mb-4">Talk · Intouch · Nov 2023</p>
+              <LiteYouTube
+                videoId="iUvwk-KoA7s"
+                title="Optimize your process with No Code in Advertising"
+                aspect="16:9"
+              />
+              <p className="mt-4 text-sm text-text-tertiary italic">
+                Optimize your process with No Code in Advertising — delivered
+                at Intouch.
+              </p>
             </div>
           </div>
 
