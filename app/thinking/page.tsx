@@ -58,7 +58,7 @@ export default function Page() {
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Thinking</p>
-          <h1 className="headline-static text-4xl md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] text-balance max-w-4xl">
+          <h1 className="headline-static text-[1.8rem] md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] text-balance max-w-4xl">
             Essays on AI adoption, regulatory design, experience strategy.
           </h1>
           <p className="text-lg md:text-xl text-text-secondary mt-6 md:mt-8 max-w-2xl leading-relaxed">

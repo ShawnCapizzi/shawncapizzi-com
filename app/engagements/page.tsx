@@ -92,7 +92,7 @@ export default function Page() {
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-20">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagements</p>
-          <h1 className="headline-static text-4xl md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-4xl">
+          <h1 className="headline-static text-[1.8rem] md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-4xl">
             Three ways to bring in senior leadership, built around your team.
           </h1>
           <p className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
