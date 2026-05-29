@@ -1,0 +1,10 @@
+[33me4d68f5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Unify H1 leading across all inner pages and chapter-1 to match Hero (lg:1.05)
+[33mf72b788[m Mobile H1 typography: text-4xl with responsive leading ramp (1.15 → 1.1 → display)
+[33md1fd4c6[m Apply typography system to chapter-1 page: 39px H1, headline-static palette
+[33m46b4021[m Typography system v2: unified 39px H1, 30px H2 on desktop; home hero rebalanced
+[33m4cbd651[m Mobile hero hierarchy: larger photo and headline, smaller wordmark cap
+[33meb36e20[m Site polish: testimonials, About book section, /work + /thinking cross-links, container width unification
+[33mfa2630a[m Update About book section: chapter is live, not forthcoming; CTA to /book/chapter-1
+[33m4412a23[m Add case studies cross-link below thesis closing line
+[33m3e61cab[m Cross-link About thought leadership to /thinking
+[33mad8361f[m Add D&AD Pencil logo to hero credential line; finish width unification on HeroBottom

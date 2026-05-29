@@ -87,7 +87,7 @@ export default function Page() {
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-20">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-6">Engagements</p>
+          <p className="eyebrow mb-3">Engagements</p>
           <h1 className="headline-static text-4xl md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-4xl">
             Two flexible ways of working, based on your team&apos;s needs.
           </h1>
@@ -145,7 +145,7 @@ export default function Page() {
       {/* PATH 1 - EMBEDDED */}
       <section id="embedded" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-3">Engagement type 01</p>
+          <p className="eyebrow mb-4">Engagement type 01</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
             Embedded UX & Experience Design Lead
           </h2>
@@ -223,7 +223,7 @@ export default function Page() {
       {/* PATH 2 - ADVISORY */}
       <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-3">Engagement type 02</p>
+          <p className="eyebrow mb-4">Engagement type 02</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
             Strategic Advisory
           </h2>

@@ -110,7 +110,7 @@ export default function Page() {
                   />
                 </div>
                 <div className="p-7 md:p-10">
-                  <p className="eyebrow mb-4">{cs.eyebrow}</p>
+                  <p className="eyebrow mb-3">{cs.eyebrow}</p>
                   <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-text-primary group-hover:text-link transition-colors leading-tight">
                     {cs.title}
                   </h2>

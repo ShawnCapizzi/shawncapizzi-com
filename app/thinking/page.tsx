@@ -72,7 +72,7 @@ export default function Page() {
       {PUBLISHED.length > 0 && (
         <section className="pb-12 md:pb-16">
           <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-            <p className="eyebrow mb-6">Published</p>
+            <p className="eyebrow mb-4">Published</p>
             <div className="grid grid-cols-1 gap-6 md:gap-8 max-w-3xl">
               {PUBLISHED.map((essay) => (
                 <a
@@ -111,7 +111,7 @@ export default function Page() {
       {/* RECENTLY SHARED — Intouch talk + YouTube Short */}
       <section className="pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-6">Recently shared</p>
+          <p className="eyebrow mb-4">Recently shared</p>
 
           {/* Side-by-side: Talk (left) + Short (right) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-start">
