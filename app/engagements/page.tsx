@@ -113,14 +113,14 @@ export default function Page() {
       {/* FRAMEWORK SKETCH — how I think before any pixel gets pushed */}
       <section className="pb-8 md:pb-12">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <figure>
+          <figure className="max-w-3xl mx-auto">
             <div className="relative aspect-video rounded-2xl overflow-hidden border border-border-default">
               <Image
                 src="/images/engagements/needs-framework-sketch.jpg"
                 alt="Hand-drawn framework: user need and want flowing down through company to users, business, and resources"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
+                sizes="(max-width: 768px) 100vw, 720px"
               />
             </div>
             <figcaption className="mt-5 text-sm md:text-base text-text-tertiary text-center italic">
@@ -130,8 +130,40 @@ export default function Page() {
         </div>
       </section>
 
+      {/* JUMP NAV — section anchors so visitors can self-route */}
+      <section className="pb-12 md:pb-16">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <p className="metadata-label mb-3">Jump to</p>
+          <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
+            <a href="#embedded" className="hover:text-text-primary transition-colors">Embedded</a>
+            <span aria-hidden="true">·</span>
+            <a href="#advisory" className="hover:text-text-primary transition-colors">Advisory</a>
+            <span aria-hidden="true">·</span>
+            <a href="#focus" className="hover:text-text-primary transition-colors">Focus</a>
+            <span aria-hidden="true">·</span>
+            <a href="#process" className="hover:text-text-primary transition-colors">Process</a>
+          </nav>
+        </div>
+      </section>
+
+      {/* JUMP NAV — section anchors so visitors can self-route */}
+      <section className="pb-12 md:pb-16">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <p className="metadata-label mb-3">Jump to</p>
+          <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
+            <a href="#embedded" className="hover:text-text-primary transition-colors">Embedded</a>
+            <span aria-hidden="true">·</span>
+            <a href="#advisory" className="hover:text-text-primary transition-colors">Advisory</a>
+            <span aria-hidden="true">·</span>
+            <a href="#focus" className="hover:text-text-primary transition-colors">Focus</a>
+            <span aria-hidden="true">·</span>
+            <a href="#process" className="hover:text-text-primary transition-colors">Process</a>
+          </nav>
+        </div>
+      </section>
+
       {/* PATH 1 - EMBEDDED */}
-      <section id="embedded" className="py-16 md:py-24 border-t border-border-subtle">
+      <section id="embedded" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagement type 01</p>
           <h2 className="subhead-editorial text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-10 max-w-3xl">
@@ -209,7 +241,7 @@ export default function Page() {
       </section>
 
       {/* PATH 2 - ADVISORY */}
-      <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle">
+      <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagement type 02</p>
           <h2 className="subhead-editorial text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-10 max-w-3xl">
@@ -261,7 +293,7 @@ export default function Page() {
       </section>
 
       {/* THREE PILLARS */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section id="focus" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
             What I focus on across engagements
@@ -288,7 +320,7 @@ export default function Page() {
       </section>
 
       {/* HOW IT STARTS */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section id="process" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-14 md:mb-16 max-w-3xl">
             How an engagement starts
