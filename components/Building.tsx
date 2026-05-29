@@ -21,6 +21,13 @@ type BuildingItem = {
   href: string;
   image?: string;
   imageAlt?: string;
+  /** Tailwind aspect-ratio class for the image container.
+   *  Defaults to "aspect-[16/10]" for landscape imagery; override per item
+   *  when the source image is a different ratio (e.g. "aspect-[4/3]"). */
+  imageAspect?: string;
+  /** Optional small label above the title (e.g. "Read", "Interactive").
+   *  Renders with the site's .eyebrow treatment — purple, uppercase, tracked. */
+  eyebrow?: string;
 };
 
 const BUILDING: BuildingItem[] = [
@@ -33,6 +40,7 @@ const BUILDING: BuildingItem[] = [
     href: "/book/chapter-1",
     image: "/images/book-reader.png",
     imageAlt: "Clarity Is the Advantage \u2014 Chapter 1 in the reader",
+    eyebrow: "Read",
   },
   {
     title: "The Capizzi Clarity Cards",
@@ -40,8 +48,10 @@ const BUILDING: BuildingItem[] = [
       "A 54-card strategic prompt deck built on the Capizzi Process. A working tool for teams making complex decisions. Draw a card and try it.",
     cta: "Try the cards",
     href: "/clarity-advantage",
-    image: "/images/clarity-cards.png",
-    imageAlt: "The Capizzi Clarity Cards \u2014 a strategic prompt deck",
+    image: "/images/clarity-cards-deck.png",
+    imageAlt: "The Capizzi Clarity Cards \u2014 a strategic prompt deck with a draw-next interaction",
+    imageAspect: "aspect-[4/3]",
+    eyebrow: "Interactive",
   },
 ];
 
@@ -67,7 +77,7 @@ export function Building() {
               className="group relative flex flex-col rounded-2xl card-surface border border-border-default hover:border-border-strong overflow-hidden transition-colors"
             >
               {item.image ? (
-                <div className="relative aspect-[16/10] overflow-hidden border-b border-border-subtle">
+                <div className={`relative ${item.imageAspect ?? "aspect-[16/10]"} overflow-hidden border-b border-border-subtle`}>
                   <Image
                     src={item.image}
                     alt={item.imageAlt ?? ""}
@@ -79,6 +89,10 @@ export function Building() {
               ) : null}
 
               <div className="flex flex-col flex-1 p-7 md:p-9">
+                {item.eyebrow ? (
+                  <p className="eyebrow mb-3">{item.eyebrow}</p>
+                ) : null}
+
                 <h3 className="text-xl md:text-2xl font-semibold tracking-tight leading-snug text-text-primary group-hover:text-link transition-colors">
                   {item.title}
                   {item.subtitle ? (
