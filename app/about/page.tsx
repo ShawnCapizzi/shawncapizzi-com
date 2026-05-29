@@ -71,10 +71,12 @@ export default function Page() {
           </div>
 
           {/* Body copy + portrait, side-by-side on desktop; stacks on mobile.
-              Photo uses fixed 4:5 aspect ratio for a tight, well-framed face
-              crop. Copy and photo are vertically centered against each other. */}
-          <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-7 order-2 lg:order-1">
+              On desktop (lg+), the grid stretches both columns to equal
+              height, and the photo fills its column via h-full — so the
+              photo always matches the copy block height. On mobile the
+              layout stacks and the photo reverts to a fixed 4:5 ratio. */}
+          <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-stretch">
+            <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center">
               <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
                 I&apos;m a strategic experience design leader with 15+ years
                 working at the intersection of UX, CX, product, and regulated
@@ -91,10 +93,10 @@ export default function Page() {
               </p>
             </div>
 
-            <div className="lg:col-span-5 order-1 lg:order-2">
+            <div className="lg:col-span-5 order-1 lg:order-2 flex">
               <div
-                className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card"
-                style={{ width: "min(100%, 420px)", aspectRatio: "4 / 5" }}
+                className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card w-full aspect-[4/5] lg:aspect-auto lg:min-h-0"
+                style={{ maxWidth: "min(100%, 420px)" }}
               >
                 <Image
                   src="/images/brand/shawn_m_capizzi_2026.png"
