@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { LiteYouTube } from "@/components/LiteYouTube";
 
 export const metadata: Metadata = {
   title: "About",
@@ -192,27 +191,10 @@ export default function Page() {
               it.
             </p>
             <p>
-              I taught at NYSCPS: design fundamentals, Adobe Photoshop, and
+              I taught at NYU SPS: design fundamentals, Adobe Photoshop, and
               Adobe InDesign. My BFA is from Pratt Institute in Communications
               Design and Advertising/Marketing.
             </p>
-          </div>
-
-          {/* AI tool demo — the UXR AI tool I built in Dec 2024 */}
-          <div className="mt-14 md:mt-16 max-w-3xl">
-            <p className="metadata-label mb-4">A working demo</p>
-            <h3 className="text-xl md:text-2xl font-semibold text-text-primary mb-3">
-              UXR AI tool built in ChatGPT, Dec 2024
-            </h3>
-            <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-6">
-              The clearest way to explain how I think about AI integration is
-              to show one of the tools I&apos;ve built.
-            </p>
-            <LiteYouTube
-              videoId="bRmymrOs_iA"
-              title="UXR AI tool demo, December 2024"
-              aspect="9:16"
-            />
           </div>
         </div>
       </section>
@@ -275,7 +257,7 @@ export default function Page() {
             </div>
             <div className="border-l-2 border-border-default pl-6 md:pl-8">
               <p className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight">
-                Teaching at NYSCPS
+                Teaching at NYU SPS
               </p>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed">
                 Design fundamentals, Adobe Photoshop, Adobe InDesign.
