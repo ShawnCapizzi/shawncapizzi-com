@@ -61,7 +61,7 @@ export function Building() {
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">In the studio</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05]">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-bold tracking-tight leading-[1.05]">
             What I&apos;m building
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">

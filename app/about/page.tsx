@@ -65,7 +65,7 @@ export default function Page() {
 
           {/* Full-width declarative headline */}
           <div className="max-w-4xl">
-            <h1 className="headline-static text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance">
+            <h1 className="headline-static text-3xl md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[0.95] text-balance">
               I help leadership teams make clear decisions in complex digital environments.
             </h1>
           </div>
@@ -115,7 +115,7 @@ export default function Page() {
       {/* THESIS */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
             What I believe about this work
           </h2>
           <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -164,7 +164,7 @@ export default function Page() {
       {/* BACKGROUND */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
             Background
           </h2>
           <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -220,7 +220,7 @@ export default function Page() {
       {/* RECOGNITION */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10 md:mb-14 max-w-3xl">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-10 md:mb-14 max-w-3xl">
             Recognition
           </h2>
           <div className="space-y-8 max-w-3xl">
@@ -289,7 +289,7 @@ export default function Page() {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">(Recent)</p>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10 md:mb-12 max-w-3xl">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-10 md:mb-12 max-w-3xl">
             In the work
           </h2>
 
@@ -341,7 +341,7 @@ export default function Page() {
           <p className="eyebrow mb-4" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
             Now reading
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white leading-tight mb-6">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight text-white leading-tight mb-6">
             Clarity Is the Advantage
           </h2>
           <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl leading-relaxed">
@@ -364,7 +364,7 @@ export default function Page() {
       {/* BEYOND THE WORK */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
             Beyond the work
           </h2>
           <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -429,7 +429,7 @@ export default function Page() {
       {/* CTA */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
             Let&apos;s see if there&apos;s a fit.
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">

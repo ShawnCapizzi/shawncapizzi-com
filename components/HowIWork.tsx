@@ -85,7 +85,7 @@ export function HowIWork() {
         {/* Header */}
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Engagement model</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight leading-tight">
             How I work with teams
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">

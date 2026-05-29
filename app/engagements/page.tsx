@@ -88,7 +88,7 @@ export default function Page() {
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-20">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-6">Engagements</p>
-          <h1 className="headline-static text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-4xl">
+          <h1 className="headline-static text-3xl md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.05] max-w-4xl">
             Two flexible ways of working, based on your team&apos;s needs.
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
@@ -146,7 +146,7 @@ export default function Page() {
       <section id="embedded" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagement type 01</p>
-          <h2 className="subhead-editorial text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-10 max-w-3xl">
+          <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
             Embedded UX & Experience Design Lead
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
@@ -224,7 +224,7 @@ export default function Page() {
       <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagement type 02</p>
-          <h2 className="subhead-editorial text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-10 max-w-3xl">
+          <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
             Strategic Advisory
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-14 md:mb-16">
@@ -275,7 +275,7 @@ export default function Page() {
       {/* THREE PILLARS */}
       <section id="focus" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
             What I focus on across engagements
           </h2>
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl mb-14 md:mb-16">
@@ -302,7 +302,7 @@ export default function Page() {
       {/* HOW IT STARTS */}
       <section id="process" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-14 md:mb-16 max-w-3xl">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-14 md:mb-16 max-w-3xl">
             How an engagement starts
           </h2>
 
@@ -353,7 +353,7 @@ export default function Page() {
       {/* FINAL CTA */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
+          <h2 className="text-3xl md:text-[30px] font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
             Tell me what&apos;s stuck.
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">

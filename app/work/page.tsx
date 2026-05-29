@@ -79,7 +79,7 @@ export default function Page() {
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Work</p>
-          <h1 className="headline-static text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance max-w-4xl">
+          <h1 className="headline-static text-3xl md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[0.95] text-balance max-w-4xl">
             Engagements where experience structure changed the business outcome.
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
@@ -133,7 +133,7 @@ export default function Page() {
       {/* BOTTOM CTA */}
       <section className="py-24 md:py-32 mt-16 md:mt-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
             Want to talk through how this kind of work would fit your team?
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">

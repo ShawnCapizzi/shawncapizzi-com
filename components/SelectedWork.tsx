@@ -45,7 +45,7 @@ export function SelectedWork() {
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Case studies</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight">
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight leading-tight">
             Selected work
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
