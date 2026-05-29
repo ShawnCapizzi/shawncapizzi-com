@@ -82,7 +82,7 @@ export default function Page() {
           <h1 className="headline-static text-4xl md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] text-balance max-w-4xl">
             Engagements where experience structure changed the business outcome.
           </h1>
-          <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
+          <p className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
             A decade of enterprise experience design across pharma, healthcare,
             and finance — and selected work outside it.
           </p>
