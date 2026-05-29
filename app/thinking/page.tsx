@@ -51,24 +51,6 @@ const PUBLISHED = [
   },
 ];
 
-// Essays in progress — refreshed dates so the page reads as active, not stalled
-const UPCOMING = [
-  {
-    title: "Stop Buying AI. Start Fixing the Boring Stuff First.",
-    date: "May 2026",
-    readTime: "9 min read",
-    description:
-      "Most companies aren't ready for AI. Not because the technology is hard, but because the foundational work hasn't been done yet.",
-  },
-  {
-    title: "The Capizzi Process — Strategic Experience Design Methodology",
-    date: "Summer 2026",
-    readTime: "7 min read",
-    description:
-      "The framework I use across regulated and enterprise engagements. Clarity before creativity. Hierarchy before decoration.",
-  },
-];
-
 export default function Page() {
   return (
     <article>
@@ -126,10 +108,12 @@ export default function Page() {
         </section>
       )}
 
-      {/* RECENTLY SHARED — LinkedIn + YouTube */}
+      {/* RECENTLY SHARED — 1 LinkedIn embed + 2 YouTube videos */}
       <section className="pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-6">Recently shared</p>
+
+          {/* Row 1 — LinkedIn embed + regular YouTube talk */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
             {/* LinkedIn embed card */}
             <div>
@@ -151,64 +135,45 @@ export default function Page() {
               </div>
             </div>
 
-            {/* YouTube embed card */}
+            {/* YouTube — talk at Intouch, Nov 2023 */}
             <div>
-              <p className="metadata-label mb-4">Recent talk</p>
+              <p className="metadata-label mb-4">Talk · Intouch · Nov 2023</p>
               <LiteYouTube
                 videoId="iUvwk-KoA7s"
-                title="Recent talk on experience design and AI"
+                title="Optimize your process with No Code in Advertising"
                 aspect="16:9"
               />
               <p className="mt-4 text-sm text-text-tertiary italic">
-                Hear me think through the work — voice rather than text.
+                Optimize your process with No Code in Advertising — delivered
+                at Intouch.
               </p>
             </div>
           </div>
 
-          {/* Second row — two more LinkedIn posts in compact format */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 mt-10 md:mt-12">
-            {/* LinkedIn compact embed — newer */}
-            <div>
-              <p className="metadata-label mb-4">From LinkedIn</p>
-              <div
-                className="rounded-xl overflow-hidden"
-                style={{ maxWidth: "504px" }}
-              >
-                <iframe
-                  src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7308172568761421824?compact=1"
-                  height="399"
-                  width="100%"
-                  frameBorder="0"
-                  allowFullScreen
-                  title="LinkedIn post"
-                  loading="lazy"
-                  style={{ display: "block", borderRadius: "12px" }}
-                />
-              </div>
-            </div>
-
-            {/* LinkedIn compact embed — older */}
-            <div>
-              <p className="metadata-label mb-4">From LinkedIn</p>
-              <div
-                className="rounded-xl overflow-hidden"
-                style={{ maxWidth: "504px" }}
-              >
-                <iframe
-                  src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7156977534964760576?compact=1"
-                  height="399"
-                  width="100%"
-                  frameBorder="0"
-                  allowFullScreen
-                  title="LinkedIn post"
-                  loading="lazy"
-                  style={{ display: "block", borderRadius: "12px" }}
-                />
-              </div>
+          {/* Row 2 — YouTube Short */}
+          <div className="mt-10 md:mt-12">
+            <p className="metadata-label mb-4">A shorter take</p>
+            <div
+              className="rounded-xl overflow-hidden bg-black"
+              style={{ aspectRatio: "9 / 16", maxWidth: "300px" }}
+            >
+              <iframe
+                src="https://www.youtube.com/embed/8FibVFlaW30"
+                title="YouTube Short — Shawn Capizzi"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  border: 0,
+                  display: "block",
+                }}
+              />
             </div>
           </div>
 
-          {/* Quiet link to full activity — for visitors who want more */}
+          {/* Quiet link to full activity */}
           <div className="mt-10 md:mt-12">
             <a
               href={LINKEDIN_PROFILE_URL}
@@ -221,44 +186,6 @@ export default function Page() {
                 →
               </span>
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* IN PROGRESS — 2 cards, dates refreshed */}
-      <section className="pb-12 md:pb-16">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-6">In progress</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {UPCOMING.map((essay) => (
-              <article
-                key={essay.title}
-                className="relative p-7 md:p-9 rounded-2xl card-surface border border-border-default"
-              >
-                <div className="flex items-center gap-3 mb-5 text-sm text-text-tertiary">
-                  <span className="metadata-label">{essay.date}</span>
-                  <span aria-hidden="true">·</span>
-                  <span>{essay.readTime}</span>
-                </div>
-                <h2 className="subhead-editorial text-xl md:text-2xl leading-tight mb-4">
-                  {essay.title}
-                </h2>
-                <p className="lead-text text-base md:text-lg leading-relaxed mb-6">
-                  {essay.description}
-                </p>
-                <p className="text-sm text-text-tertiary italic">
-                  Publishing soon —{" "}
-                  <a
-                    href={CAL_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-link hover:text-link-hover transition-colors not-italic"
-                  >
-                    talk to me about the ideas
-                  </a>
-                </p>
-              </article>
-            ))}
           </div>
         </div>
       </section>
