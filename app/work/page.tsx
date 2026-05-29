@@ -79,10 +79,8 @@ export default function Page() {
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Work</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] max-w-4xl">
-            Engagements where experience structure{" "}
-            <br className="hidden lg:block" />
-            changed the business outcome.
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance max-w-4xl">
+            Engagements where experience structure changed the business outcome.
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
             A decade of enterprise experience design across pharma, healthcare,

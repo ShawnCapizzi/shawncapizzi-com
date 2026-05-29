@@ -51,8 +51,9 @@ interface ProjectShowcase {
 
 interface CaseStudyLayoutProps {
   eyebrow: string;
-  /** Accepts a string OR ReactNode so individual case studies can pass a manually-wrapped title
-   *  (e.g. with <br className="hidden lg:block" /> for deliberate breakpoints). */
+  /** Title — accepts a string OR ReactNode. Wrapping is handled by text-balance
+   *  on the h1, so manual <br /> breaks are not needed. ReactNode is kept here
+   *  to support inline emphasis (<em>, <span>) if a case study wants it. */
   title: ReactNode;
   subtitle: string;
   heroImage: string;
@@ -104,7 +105,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           </Link>
 
           <p className="eyebrow mb-3">{props.eyebrow}</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] max-w-4xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance max-w-4xl">
             {props.title}
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">

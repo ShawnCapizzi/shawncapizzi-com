@@ -65,10 +65,8 @@ export default function Page() {
 
           {/* Full-width declarative headline */}
           <div className="max-w-4xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95]">
-              I help leadership teams make clear decisions{" "}
-              <br className="hidden lg:block" />
-              in complex digital environments.
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance">
+              I help leadership teams make clear decisions in complex digital environments.
             </h1>
           </div>
 
@@ -104,7 +102,11 @@ export default function Page() {
                   fill
                   priority
                   className="object-cover"
-                  style={{ objectPosition: "center 15%" }}
+                  style={{
+                    objectPosition: "center 30%",
+                    transform: "scale(1.1)",
+                    transformOrigin: "center 30%",
+                  }}
                   sizes="(max-width: 1024px) 80vw, 420px"
                 />
               </div>
