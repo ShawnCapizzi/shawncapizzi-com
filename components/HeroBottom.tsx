@@ -34,7 +34,7 @@ export function HeroBottom() {
               alt="D&AD Pencil 2022 award"
               width={300}
               height={300}
-              className="h-7 w-7 shrink-0"
+              className="h-10 w-10 shrink-0 rotate-90"
             />
             <span>D&amp;AD Pencil 2022</span>
           </a>
