@@ -65,7 +65,7 @@ export default function Page() {
 
           {/* Full-width declarative headline */}
           <div className="max-w-4xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance">
+            <h1 className="headline-static text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance">
               I help leadership teams make clear decisions in complex digital environments.
             </h1>
           </div>

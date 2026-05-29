@@ -473,10 +473,20 @@ h3 {
 }
 
 /* ============================================================
-   HEADLINE GLEAM
-   Subtle light sweep across hero headline text.
-   ~1s sweep, ~6s pause, on infinite loop. Base color is off-white;
-   gleam peak has barely-perceptible periwinkle tint.
+   HEADLINE PALETTE
+   All hero display headlines share a unified warm cream palette
+   built around #dad8c9. Two variants form a pair:
+
+   - .headline-gleam   Animated light sweep. Home hero ONLY.
+                       ~1s sweep, ~6s pause, infinite loop.
+                       Base #dad8c9, gleam peak #ffffff with a
+                       barely-perceptible periwinkle tint.
+
+   - .headline-static  Solid #dad8c9. Used on every other page
+                       hero (Engagements, About, Thinking, etc.)
+                       so the palette unifies while only the home
+                       gets the signature animation.
+
    Per design system v1.1 amendment: text-level gleam permitted
    on hero display headlines only. Other text remains static.
    ============================================================ */
@@ -506,6 +516,10 @@ h3 {
     background-image: linear-gradient(180deg, #dad8c9 0%, #c9c7b8 100%);
     background-size: 100% 100%;
   }
+}
+
+.headline-static {
+  color: #dad8c9;
 }
 
 /* ============================================================
