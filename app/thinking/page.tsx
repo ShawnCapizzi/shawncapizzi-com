@@ -14,15 +14,6 @@ const LINKEDIN_PROFILE_URL = "https://www.linkedin.com/in/shawncapizzi/";
 // Published — externally hosted, links out
 const PUBLISHED = [
   {
-    title: "The FDA's New Digital Era",
-    date: "Nov 2025",
-    readTime: "7 min read",
-    description:
-      "Why pharma's future belongs to honest, human-centered experience design. The September 2025 FDA mandate makes clarity, accessibility, and structured content systems the new competitive edge — not the constraint.",
-    url: "https://www.linkedin.com/pulse/fdas-new-digital-era-why-pharmas-future-belongs-honest-capizzi-lyjne/",
-    source: "LinkedIn",
-  },
-  {
     title: "Beyond User Flows: Agentic AI Is Rewriting UX Fundamentals",
     date: "Oct 2025",
     readTime: "8 min read",
@@ -30,6 +21,15 @@ const PUBLISHED = [
       "Designing for trust, transparency, and control in the age of agentic AI. Three principles for when AI should act, speak, or stay silent — with examples from healthcare.",
     url: "https://medium.com/p/e335c1789bc7",
     source: "Medium",
+  },
+  {
+    title: "The FDA's New Digital Era",
+    date: "Nov 2025",
+    readTime: "7 min read",
+    description:
+      "Why pharma's future belongs to honest, human-centered experience design. The September 2025 FDA mandate makes clarity, accessibility, and structured content systems the new competitive edge — not the constraint.",
+    url: "https://www.linkedin.com/pulse/fdas-new-digital-era-why-pharmas-future-belongs-honest-capizzi-lyjne/",
+    source: "LinkedIn",
   },
   {
     title: "The Agentic AI Starter Kit",
@@ -108,33 +108,13 @@ export default function Page() {
         </section>
       )}
 
-      {/* RECENTLY SHARED — 1 LinkedIn embed + 2 YouTube videos */}
+      {/* RECENTLY SHARED — Intouch talk + YouTube Short */}
       <section className="pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-6">Recently shared</p>
 
-          {/* Row 1 — LinkedIn embed + regular YouTube talk */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
-            {/* LinkedIn embed card */}
-            <div>
-              <p className="metadata-label mb-4">From LinkedIn</p>
-              <div
-                className="rounded-xl overflow-hidden"
-                style={{ maxWidth: "504px" }}
-              >
-                <iframe
-                  src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7395158706776072192?collapsed=1"
-                  height="619"
-                  width="100%"
-                  frameBorder="0"
-                  allowFullScreen
-                  title="LinkedIn post — recent thinking"
-                  loading="lazy"
-                  style={{ display: "block", borderRadius: "12px" }}
-                />
-              </div>
-            </div>
-
+          {/* Side-by-side: Talk (left) + Short (right) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 items-start">
             {/* YouTube — talk at Intouch, Nov 2023 */}
             <div>
               <p className="metadata-label mb-4">Talk · Intouch · Nov 2023</p>
@@ -148,28 +128,28 @@ export default function Page() {
                 at Intouch.
               </p>
             </div>
-          </div>
 
-          {/* Row 2 — YouTube Short */}
-          <div className="mt-10 md:mt-12">
-            <p className="metadata-label mb-4">A shorter take</p>
-            <div
-              className="rounded-xl overflow-hidden bg-black"
-              style={{ aspectRatio: "9 / 16", maxWidth: "300px" }}
-            >
-              <iframe
-                src="https://www.youtube.com/embed/8FibVFlaW30"
-                title="YouTube Short — Shawn Capizzi"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  border: 0,
-                  display: "block",
-                }}
-              />
+            {/* YouTube Short */}
+            <div>
+              <p className="metadata-label mb-4">A shorter take</p>
+              <div
+                className="rounded-xl overflow-hidden bg-black"
+                style={{ aspectRatio: "9 / 16", maxWidth: "300px" }}
+              >
+                <iframe
+                  src="https://www.youtube.com/embed/8FibVFlaW30"
+                  title="YouTube Short — Shawn Capizzi"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    border: 0,
+                    display: "block",
+                  }}
+                />
+              </div>
             </div>
           </div>
 
