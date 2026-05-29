@@ -97,6 +97,18 @@ export default function Page() {
             tasks that need to get done. Most start with a single defined piece
             of work, and the relationship grows from there.
           </p>
+          <div className="mt-8 md:mt-10">
+            <p className="metadata-label mb-3">Jump to</p>
+            <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
+              <a href="#embedded" className="hover:text-text-primary transition-colors">Embedded</a>
+              <span aria-hidden="true">·</span>
+              <a href="#advisory" className="hover:text-text-primary transition-colors">Advisory</a>
+              <span aria-hidden="true">·</span>
+              <a href="#focus" className="hover:text-text-primary transition-colors">Focus</a>
+              <span aria-hidden="true">·</span>
+              <a href="#process" className="hover:text-text-primary transition-colors">Process</a>
+            </nav>
+          </div>
           <div className="mt-10 md:mt-12">
             <a
               href={CAL_URL}
@@ -127,22 +139,6 @@ export default function Page() {
               Where every engagement begins.
             </figcaption>
           </figure>
-        </div>
-      </section>
-
-      {/* JUMP NAV — section anchors so visitors can self-route */}
-      <section className="pb-12 md:pb-16">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="metadata-label mb-3">Jump to</p>
-          <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
-            <a href="#embedded" className="hover:text-text-primary transition-colors">Embedded</a>
-            <span aria-hidden="true">·</span>
-            <a href="#advisory" className="hover:text-text-primary transition-colors">Advisory</a>
-            <span aria-hidden="true">·</span>
-            <a href="#focus" className="hover:text-text-primary transition-colors">Focus</a>
-            <span aria-hidden="true">·</span>
-            <a href="#process" className="hover:text-text-primary transition-colors">Process</a>
-          </nav>
         </div>
       </section>
 
