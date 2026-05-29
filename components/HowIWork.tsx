@@ -45,7 +45,7 @@ function AccordionDetail({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="mt-8 pt-8 border-t border-border-subtle">
+    <div className="mt-8 rounded-xl card-surface border border-border-subtle p-5 md:p-6">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
