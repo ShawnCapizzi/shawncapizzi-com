@@ -148,6 +148,15 @@ export default function Page() {
               on creativity. It&apos;s the discipline that makes the design
               defensible, scalable, and durable.
             </p>
+            <p>
+              See some case studies{" "}
+              <Link
+                href="/work"
+                className="text-link hover:text-link-hover transition-colors"
+              >
+                here
+              </Link>.
+            </p>
           </div>
         </div>
       </section>
