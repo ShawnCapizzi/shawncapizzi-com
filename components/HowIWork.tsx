@@ -15,14 +15,17 @@ const ADVISORY_SHAPES = [
     description: "A scoped piece of work carried out over a few weeks. Defined problem, clear outcome.",
   },
   {
-    name: "Strategic Advisory Retainer",
-    description: "Monthly partnership for ongoing decision-side counsel.",
-  },
-  {
     name: "AI Opportunity Diagnostic",
     description:
       "I come in, ask the right questions, and help uncover where AI fits in your actual workflows and business model. Vendor-agnostic. Roadmap, not vendor list.",
   },
+];
+
+const ONCALL_INCLUDED = [
+  "Working sessions on the decisions that matter, on your cadence",
+  "Async document and decision review between sessions",
+  "Slack or email access for fast calls when timing is tight",
+  "Quarterly strategic alignment review tied to current goals",
 ];
 
 /* ------------------------------------------------------------------
@@ -89,7 +92,10 @@ export function HowIWork() {
             How I work with teams
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            Two ways in, depending on what your team needs. Not sure which fits? Tell me what&apos;s going on — we&apos;ll figure it out together.
+            One relationship that changes shape as your needs do. Most start
+            with a single piece of work and grow from there: embedded leadership
+            one year, on call the next. Not sure which fits? Tell me what&apos;s
+            going on and we&apos;ll figure it out together.
           </p>
           <div className="mt-8">
             <a
@@ -103,21 +109,24 @@ export function HowIWork() {
           </div>
         </div>
 
-        {/* Two paths */}
-        <div className="mt-16 md:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
-          {/* Path 1 — Embedded */}
-          <article className="relative flex flex-col p-8 md:p-10 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors">
+        {/* Three modes — one relationship, three shapes */}
+        <div className="mt-16 md:mt-20 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          {/* Mode 1 — Leadership */}
+          <article className="relative flex flex-col p-7 md:p-8 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors">
             <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
-              Path 01
+              Leadership
             </p>
-            <h3 className="mt-3 text-2xl md:text-3xl font-semibold tracking-tight leading-tight">
+            <h3 className="mt-3 text-xl md:text-2xl font-semibold tracking-tight leading-tight">
               Bring me onto the organization
             </h3>
             <p className="mt-4 text-base text-text-secondary leading-relaxed">
-              For agencies and in-house pharma, healthcare, and enterprise teams that need senior UX, IA, and content strategy leadership inside live work — campaigns, platforms, sites, apps, sales tools, and regulated brand programs.
+              For agencies and in-house pharma, healthcare, and enterprise teams
+              that need senior UX, IA, and content strategy leadership inside
+              live work: campaigns, platforms, sites, apps, sales tools, and
+              regulated brand programs.
             </p>
 
-            <AccordionDetail id="embedded-detail" label="Embedded UX & Experience Design Lead">
+            <AccordionDetail id="leadership-detail" label="Embedded UX &amp; Experience Design Lead">
               <p className="text-sm text-text-secondary leading-relaxed">
                 I work directly with creative directors, account leads, technologists, dev teams, copywriters, and visual designers on digital brand and product work. Deliverables include engagement strategy, site architecture, user flows, wireframes, content frameworks, RC and pitch decks, and design system governance and refinements.
               </p>
@@ -125,27 +134,29 @@ export function HowIWork() {
 
             <div className="mt-auto pt-8">
               <Link
-                href="/engagements#embedded"
+                href="/engagements#leadership"
                 className="inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
               >
-                See embedded engagements <span aria-hidden="true" className="ml-2">→</span>
+                See leadership engagements <span aria-hidden="true" className="ml-2">→</span>
               </Link>
             </div>
           </article>
 
-          {/* Path 2 — Advisory */}
-          <article className="relative flex flex-col p-8 md:p-10 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors">
+          {/* Mode 2 — Advisory */}
+          <article className="relative flex flex-col p-7 md:p-8 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors">
             <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
-              Path 02
+              Advisory
             </p>
-            <h3 className="mt-3 text-2xl md:text-3xl font-semibold tracking-tight leading-tight">
+            <h3 className="mt-3 text-xl md:text-2xl font-semibold tracking-tight leading-tight">
               Hire me to advise
             </h3>
             <p className="mt-4 text-base text-text-secondary leading-relaxed">
-              Senior strategic counsel without a full-time hire — product design, AI adoption, engagement strategy, design system governance, multi-brand experience strategy, and regulatory program redesign.
+              Senior strategic counsel without a full-time hire: product design,
+              AI adoption, engagement strategy, design system governance,
+              multi-brand experience strategy, and regulatory program redesign.
             </p>
 
-            <AccordionDetail id="advisory-detail" label="Four flexible advisory options">
+            <AccordionDetail id="advisory-detail" label="Three project-based options">
               <dl className="space-y-5">
                 {ADVISORY_SHAPES.map((shape) => (
                   <div key={shape.name}>
@@ -166,6 +177,47 @@ export function HowIWork() {
                 className="inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
               >
                 See advisory engagements <span aria-hidden="true" className="ml-2">→</span>
+              </Link>
+            </div>
+          </article>
+
+          {/* Mode 3 — On Call */}
+          <article className="relative flex flex-col p-7 md:p-8 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors">
+            <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
+              On Call
+            </p>
+            <h3 className="mt-3 text-xl md:text-2xl font-semibold tracking-tight leading-tight">
+              Keep me on call
+            </h3>
+            <p className="mt-4 text-base text-text-secondary leading-relaxed">
+              A monthly retainer for leaders who want a senior thinking partner
+              on hand between the big decisions. Reserved for a small number of
+              teams so the access stays real.
+            </p>
+
+            <AccordionDetail id="oncall-detail" label="Senior counsel on a monthly retainer">
+              <ul className="space-y-3">
+                {ONCALL_INCLUDED.map((item, i) => (
+                  <li
+                    key={i}
+                    className="text-sm text-text-secondary leading-relaxed pl-5 relative"
+                  >
+                    <span
+                      className="absolute left-0 top-2 w-2 h-px bg-text-tertiary"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </AccordionDetail>
+
+            <div className="mt-auto pt-8">
+              <Link
+                href="/engagements#oncall"
+                className="inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
+              >
+                See on-call engagements <span aria-hidden="true" className="ml-2">→</span>
               </Link>
             </div>
           </article>
