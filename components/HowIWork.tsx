@@ -48,7 +48,7 @@ function AccordionDetail({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="mt-8 rounded-xl card-surface border border-border-subtle p-5 md:p-6">
+    <div className="mt-6 rounded-xl card-surface border border-border-subtle p-5 md:p-6">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -117,9 +117,9 @@ export function HowIWork() {
               Leadership
             </p>
             <h3 className="mt-3 text-xl md:text-2xl font-semibold tracking-tight leading-tight">
-              Bring me onto the organization
+              Bring me in
             </h3>
-            <p className="mt-4 text-base text-text-secondary leading-relaxed">
+            <p className="mt-4 flex-1 text-base text-text-secondary leading-relaxed">
               For agencies and in-house pharma, healthcare, and enterprise teams
               that need senior UX, IA, and content strategy leadership inside
               live work: campaigns, platforms, sites, apps, sales tools, and
@@ -132,7 +132,7 @@ export function HowIWork() {
               </p>
             </AccordionDetail>
 
-            <div className="mt-auto pt-8">
+            <div className="pt-8">
               <Link
                 href="/engagements#leadership"
                 className="inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
@@ -150,7 +150,7 @@ export function HowIWork() {
             <h3 className="mt-3 text-xl md:text-2xl font-semibold tracking-tight leading-tight">
               Hire me to advise
             </h3>
-            <p className="mt-4 text-base text-text-secondary leading-relaxed">
+            <p className="mt-4 flex-1 text-base text-text-secondary leading-relaxed">
               Senior strategic counsel without a full-time hire: product design,
               AI adoption, engagement strategy, design system governance,
               multi-brand experience strategy, and regulatory program redesign.
@@ -171,7 +171,7 @@ export function HowIWork() {
               </dl>
             </AccordionDetail>
 
-            <div className="mt-auto pt-8">
+            <div className="pt-8">
               <Link
                 href="/engagements#advisory"
                 className="inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
@@ -189,7 +189,7 @@ export function HowIWork() {
             <h3 className="mt-3 text-xl md:text-2xl font-semibold tracking-tight leading-tight">
               Keep me on call
             </h3>
-            <p className="mt-4 text-base text-text-secondary leading-relaxed">
+            <p className="mt-4 flex-1 text-base text-text-secondary leading-relaxed">
               A monthly retainer for leaders who want a senior thinking partner
               on hand between the big decisions. Reserved for a small number of
               teams so the access stays real.
@@ -212,7 +212,7 @@ export function HowIWork() {
               </ul>
             </AccordionDetail>
 
-            <div className="mt-auto pt-8">
+            <div className="pt-8">
               <Link
                 href="/engagements#oncall"
                 className="inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
