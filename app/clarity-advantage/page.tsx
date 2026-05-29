@@ -2,6 +2,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ClarityCardDeck } from "@/components/ClarityCardDeck";
+import { SignupCard } from "@/components/SignupCard";
 
 export const metadata: Metadata = {
   title: "The Clarity Advantage",
@@ -50,43 +51,41 @@ export default function Page() {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-            {/* Newsletter */}
+            {/* Newsletter — inline signup form, same CRM endpoint as the
+                chapter-1 reader's "Get on the list" CTA. */}
             <article className="relative p-7 md:p-9 rounded-2xl card-surface border border-border-default">
               <p className="eyebrow mb-4">Newsletter</p>
               <h2 className="text-xl md:text-2xl font-semibold text-text-primary mb-4 leading-tight">
                 Clarity Advantage Subscriber List
               </h2>
-              <p className="text-base text-text-secondary leading-relaxed mb-6">
-                Occasional, useful, no spam. New essays and thinking when
-                they&apos;re ready. Sign-up coming soon.
+              <p className="text-base text-text-secondary leading-relaxed mb-8">
+                First in line for new essays, chapter releases, and occasional
+                notes from the work in between. No spam, no noise.
               </p>
-              <p className="text-sm text-text-tertiary italic">
-                Want to talk through the ideas in the meantime?{" "}
-                <a
-                  href={CAL_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-link hover:text-link-hover transition-colors not-italic"
-                >
-                  Book a call
-                </a>
-              </p>
+              <SignupCard />
             </article>
 
             {/* The Book */}
-            <article className="relative p-7 md:p-9 rounded-2xl card-surface border border-border-default">
-              <p className="eyebrow mb-4">Forthcoming</p>
-              <h2 className="text-xl md:text-2xl font-semibold text-text-primary mb-4 leading-tight">
+            <Link
+              href="/book/chapter-1"
+              className="group relative p-7 md:p-9 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors"
+            >
+              <p className="eyebrow mb-4">The book</p>
+              <h2 className="text-xl md:text-2xl font-semibold text-text-primary mb-4 leading-tight group-hover:text-link transition-colors">
                 Clarity Is the Advantage
               </h2>
               <p className="text-base text-text-secondary leading-relaxed mb-6">
                 Honest, no-fluff thinking on AI, design, and strategy for 2026
-                and beyond. Currently in edit. First chapter coming soon.
+                and beyond. Chapter 1 is live in the reader &mdash; read it
+                free.
               </p>
-              <p className="text-sm text-text-tertiary italic">
-                Notify form launches with the first chapter.
+              <p className="text-link group-hover:text-link-hover transition-colors text-base font-medium">
+                Read Chapter 1{" "}
+                <span aria-hidden="true" className="ml-1">
+                  &rarr;
+                </span>
               </p>
-            </article>
+            </Link>
           </div>
         </div>
       </section>
