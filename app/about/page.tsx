@@ -255,7 +255,13 @@ export default function Page() {
                 >
                   COVID-19 and Its Impact on Healthcare Website Design
                 </a>{" "}
-                in EVERSANA INTOUCH.
+                in EVERSANA INTOUCH, and more in{" "}
+                <Link
+                  href="/thinking"
+                  className="text-link hover:text-link-hover transition-colors"
+                >
+                  Thinking
+                </Link>.
               </p>
             </div>
             <div className="border-l-2 border-border-default pl-6 md:pl-8">
