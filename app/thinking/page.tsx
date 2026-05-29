@@ -131,7 +131,9 @@ export default function Page() {
 
             {/* YouTube Short */}
             <div>
-              <p className="metadata-label mb-4">A shorter take</p>
+              <p className="metadata-label mb-4">
+                AI UX & CX Research GPT · Jan 2025
+              </p>
               <div
                 className="rounded-xl overflow-hidden bg-black"
                 style={{ aspectRatio: "9 / 16", maxWidth: "300px" }}
