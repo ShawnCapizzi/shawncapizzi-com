@@ -25,9 +25,9 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left: Headline + wordmark (signature) */}
           <div className="relative z-10 lg:col-span-7 order-2 lg:order-1">
-            <h1 className="headline-gleam text-2xl md:text-3xl lg:text-3xl font-bold tracking-tight leading-[1.1] max-w-[90%]">
+            <h1 className="headline-gleam text-3xl md:text-3xl lg:text-3xl font-bold tracking-tight leading-[1.1] max-w-[90%]">
               Experience design &amp; strategy that delivers clarity
-              <span className="block mt-3 md:mt-4 text-lg md:text-xl lg:text-2xl font-normal text-text-secondary tracking-tight">
+              <span className="block mt-3 md:mt-4 text-xl md:text-xl lg:text-2xl font-normal text-text-secondary tracking-tight">
                 Experience and AI counsel across apps, ecosystems and marketing &mdash; for pharma, biotech, FinTech and their agencies.
               </span>
             </h1>
@@ -37,14 +37,14 @@ export function Hero() {
               animate
               href={null}
               priority
-              className="mt-6 md:mt-5 mx-auto -translate-x-[7px] md:-translate-x-[110px] md:translate-y-[3px] w-full max-w-[326px] lg:max-w-[435px] h-auto"
+              className="mt-6 md:mt-5 mx-auto -translate-x-[7px] md:-translate-x-[110px] md:translate-y-[3px] w-full max-w-[240px] sm:max-w-[280px] lg:max-w-[435px] h-auto"
             />
           </div>
 
           {/* Right: Headshot — knockout subject on navy + brand glow, soft edge dissolve */}
           <div className="relative lg:col-span-5 order-1 lg:order-2">
             <div
-              className="relative aspect-square max-w-[70%] sm:max-w-[60%] md:max-w-[80%] lg:max-w-[85%] mx-auto"
+              className="relative aspect-square max-w-[82%] sm:max-w-[72%] md:max-w-[80%] lg:max-w-[85%] mx-auto"
               style={{
                 maskImage:
                   "radial-gradient(ellipse 95% 95% at 50% 45%, #000 82%, rgba(0,0,0,0.5) 95%, transparent 100%)",
