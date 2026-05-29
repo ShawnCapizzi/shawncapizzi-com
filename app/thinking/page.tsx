@@ -9,21 +9,49 @@ export const metadata: Metadata = {
 };
 
 const CAL_URL = "https://cal.com/capizzi/15min";
+const LINKEDIN_PROFILE_URL = "https://www.linkedin.com/in/shawncapizzi/";
 
 // Published — externally hosted, links out
 const PUBLISHED = [
   {
-    title: "Beyond User Flows: AI Is Rewriting UX Fundamentals",
-    date: "2024",
+    title: "The FDA's New Digital Era",
+    date: "Nov 2025",
+    readTime: "7 min read",
+    description:
+      "Why pharma's future belongs to honest, human-centered experience design. The September 2025 FDA mandate makes clarity, accessibility, and structured content systems the new competitive edge — not the constraint.",
+    url: "https://www.linkedin.com/pulse/fdas-new-digital-era-why-pharmas-future-belongs-honest-capizzi-lyjne/",
+    source: "LinkedIn",
+  },
+  {
+    title: "Beyond User Flows: Agentic AI Is Rewriting UX Fundamentals",
+    date: "Oct 2025",
     readTime: "8 min read",
     description:
-      "How the rise of non-deterministic interfaces changes what UX design even means. Why workflow logic, content readiness, and trust signals matter more than interface novelty.",
+      "Designing for trust, transparency, and control in the age of agentic AI. Three principles for when AI should act, speak, or stay silent — with examples from healthcare.",
     url: "https://medium.com/p/e335c1789bc7",
+    source: "Medium",
+  },
+  {
+    title: "The Agentic AI Starter Kit",
+    date: "2025",
+    readTime: "7 min read",
+    description:
+      "The companion playbook. How to take the enterprise data you already own and turn it into proactive, intelligent experiences — without rebuilding the stack.",
+    url: "https://www.linkedin.com/pulse/agentic-ai-starter-kit-turn-data-you-already-have-capizzi-yi5ie",
+    source: "LinkedIn",
+  },
+  {
+    title: "24 Storytelling Guidelines for Effective Digital Design",
+    date: "Oct 2025",
+    readTime: "6 min read",
+    description:
+      "A field-tested ruleset for building brand stories across modern omnichannel touchpoints. Empathy, hierarchy, opinionated design, and the restraint to leave the obvious solution on the table.",
+    url: "https://medium.com/p/8c13681079de",
     source: "Medium",
   },
 ];
 
-// Essays still in progress — keeping the two strongest as placeholders
+// Essays in progress — refreshed dates so the page reads as active, not stalled
 const UPCOMING = [
   {
     title: "Stop Buying AI. Start Fixing the Boring Stuff First.",
@@ -34,7 +62,7 @@ const UPCOMING = [
   },
   {
     title: "The Capizzi Process — Strategic Experience Design Methodology",
-    date: "March 2026",
+    date: "Summer 2026",
     readTime: "7 min read",
     description:
       "The framework I use across regulated and enterprise engagements. Clarity before creativity. Hierarchy before decoration.",
@@ -51,6 +79,10 @@ export default function Page() {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance max-w-4xl">
             Essays on AI adoption, regulatory design, experience strategy.
           </h1>
+          <p className="text-lg md:text-xl text-text-secondary mt-6 md:mt-8 max-w-2xl leading-relaxed">
+            AI adoption isn't a technology problem. It's an experience
+            architecture problem.
+          </p>
         </div>
       </section>
 
@@ -175,10 +207,25 @@ export default function Page() {
               </div>
             </div>
           </div>
+
+          {/* Quiet link to full activity — for visitors who want more */}
+          <div className="mt-10 md:mt-12">
+            <a
+              href={LINKEDIN_PROFILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link hover:text-link-hover transition-colors text-base font-medium"
+            >
+              See more on LinkedIn{" "}
+              <span aria-hidden="true" className="ml-1">
+                →
+              </span>
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* IN PROGRESS — reduced to 2 */}
+      {/* IN PROGRESS — 2 cards, dates refreshed */}
       <section className="pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-6">In progress</p>
