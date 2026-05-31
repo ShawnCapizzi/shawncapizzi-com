@@ -37,11 +37,11 @@ const CHAPTER_ONE: ReaderPage[] = [
     blocks: [
       { type: "heading", text: "Muddling Through: The Universal Experience of Being Human" },
       { type: "para", text: "In the classic holiday song \u201CHave Yourself a Merry Little Christmas,\u201D there's a line that captures something profound about the human experience:" },
-      { { type: "quote", text: "\u201CUntil then we'll have to muddle through somehow.\u201D", cite: "Have Yourself a Merry Little Christmas"  },
+      { type: "quote", text: "\u201CUntil then we'll have to muddle through somehow.\u201D", cite: "Have Yourself a Merry Little Christmas"  },
       { type: "para", text: "It's a gentle, almost whispered acknowledgment that life is often about persevering through uncertainty, about navigating challenges we didn't see coming, about getting by while we wait for better days." },
       { type: "para", text: "This idea of \u201Cmuddling through\u201D isn't just poetic. It's the reality for most people interacting with your digital products. They're not coming to your website or app during their peak moments of clarity and calm. They're coming while dealing with a medical diagnosis, after learning their rent increased, while their car is broken down and they need to get their child from school. They're coming with invisible burdens, temporary crises, and the accumulated stress of a full life." },
       { type: "para", text: "Taylor Swift's \u201COut of the Woods\u201D asks the same fundamental question that echoes through the human condition across time and place:" },
-      { { type: "quote", text: "\u201CAre we out of the woods yet? Are we out of trouble?\u201D", cite: "Out of the Woods"  },
+      { type: "quote", text: "\u201CAre we out of the woods yet? Are we out of trouble?\u201D", cite: "Out of the Woods"  },
       { type: "para", text: "It's about stability, clarity, and the universal desire to know if we've moved past the point of difficulty. Whether it's a relationship, a financial crisis, or simply trying to use a transit app to get home, we're all constantly asking: are we through the hard part yet?" },
       { type: "para", text: "Every user who encounters your product is carrying some version of this question." },
     ],
