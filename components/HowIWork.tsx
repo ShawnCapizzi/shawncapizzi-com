@@ -93,9 +93,10 @@ export function HowIWork() {
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
             A flexible relationship that changes as business needs do. Start
-            with a single piece of work and grow from there: embedded
-            leadership, advisory, or on call. Not sure which? Share your goals
-            or pain points and we&apos;ll figure it out together.
+            with a single piece of work and grow from there. Move between the
+            options as needs change: the intensity flexes, the partnership
+            holds. Not sure which? Share your goals or pain points and
+            we&apos;ll figure it out together.
           </p>
           <div className="mt-8">
             <a
