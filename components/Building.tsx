@@ -39,11 +39,11 @@ const BUILDING: BuildingItem[] = [
     title: "Clarity Is the Advantage",
     subtitle: "the book",
     description:
-      "Honest, no-fluff thinking on empathy, AI, and design. Read Chapter 1, \u201CThe Human Condition,\u201D right now in the reader.",
+      "Why clarity wins and what it takes to do great work in the rooms where decisions get made. Read Chapter 1, \u201CThe Human Condition,\u201D free in the reader.",
     cta: "Read the first chapter",
     href: "/book/chapter-1",
     image: "/images/book-reader.png",
-    imageAlt: "Clarity Is the Advantage \u2014 Chapter 1 in the reader",
+    imageAlt: "Clarity Is the Advantage, Chapter 1 in the reader",
     eyebrow: "Read",
   },
   {
@@ -53,7 +53,7 @@ const BUILDING: BuildingItem[] = [
     cta: "Try the cards",
     href: "/clarity-advantage",
     image: "/images/clarity-cards-deck.png",
-    imageAlt: "The Capizzi Clarity Cards \u2014 a strategic prompt deck with a draw-next interaction",
+    imageAlt: "The Capizzi Clarity Cards, a strategic prompt deck with a draw-next interaction",
     imageAspect: "aspect-[4/3]",
     eyebrow: "Interactive",
   },
