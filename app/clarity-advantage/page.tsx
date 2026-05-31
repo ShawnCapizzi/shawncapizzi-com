@@ -76,9 +76,12 @@ export default function Page() {
               className="group relative p-7 md:p-9 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors"
             >
               <p className="eyebrow mb-4">The book</p>
-              <h2 className="text-xl md:text-2xl font-semibold text-text-primary mb-4 leading-tight group-hover:text-link transition-colors">
+              <h2 className="text-xl md:text-2xl font-semibold text-text-primary mb-2 leading-tight group-hover:text-link transition-colors">
                 Clarity Is the Advantage
               </h2>
+              <p className="text-sm md:text-base italic text-text-tertiary mb-4 leading-snug">
+                Orienteering to great design decisions
+              </p>
               <p className="text-base text-text-secondary leading-relaxed mb-6">
                 Honest, no-fluff thinking on AI, design, and strategy for 2026
                 and beyond. Chapter 1 is live in the reader. Read it
