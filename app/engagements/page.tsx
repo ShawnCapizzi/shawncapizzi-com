@@ -93,19 +93,20 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagements</p>
           <h1 className="headline-static text-[1.8rem] md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-4xl">
-            Three ways to bring in senior leadership, built around your team.
+            Three flexible ways of working to level up your design and experience impact.
           </h1>
           <p className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
             I take on a small number of teams inside regulated and enterprise
-            organizations navigating complexity, in their content and in the
-            decisions that have to get made. Most start with a single defined
-            piece of work, and the relationship grows from there.
+            organizations navigating complexity, in their content and experience
+            design decisions.
           </p>
           <p className="mt-5 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
-            Think of the three below as shapes one relationship can take, not
-            three products to choose between. Teams move between them as needs
-            change: embedded leadership one year, on call the next. The shape
-            flexes. The partnership holds.
+            The three below are shapes a relationship can take, not three
+            products to choose between.
+          </p>
+          <p className="mt-5 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
+            Move between the options as needs change. Wins accrue over time and
+            collaboration compounds. The partnership strengthens.
           </p>
           <div className="mt-8 md:mt-10">
             <p className="metadata-label mb-3">Jump to</p>
@@ -159,15 +160,16 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">Engagement type 01</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
-            Leadership: Embedded UX &amp; Experience Design Lead
+            Leadership: Embedded Product Vision, UX &amp; Experience Design Lead
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
-            For agencies and in-house pharma, healthcare, and enterprise teams
-            that need senior UX, actionable engagement strategy, IA, and content
-            strategy leadership inside active work. I work directly with creative
-            directors, account leads, copywriters, visual designers, and
-            engineering partners on real tactics, campaigns, platforms, sites,
-            apps, and sales tools.
+            For agencies and in-house pharma, healthcare, start-up, and
+            enterprise teams that need senior design, actionable engagement
+            strategy, IA, and content strategy inside active business goals. I
+            work directly with PMs, creative directors, account leads,
+            copywriters, visual designers, and engineering partners on real
+            tactics, campaigns (US and Global), platforms (app and enterprise
+            systems), websites, apps, VR, and sales tools.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
@@ -241,8 +243,9 @@ export default function Page() {
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-14 md:mb-16">
             For VPs, Directors, and senior leaders inside pharma, healthcare,
-            financial services, and enterprise teams who need senior strategic,
-            design, and systems counsel without a full-time hire.
+            financial services, and enterprise teams who need senior strategy,
+            pitch deck, blue sky options, design, a voice in the room, and
+            systems counsel without a full-time hire.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -289,12 +292,14 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">Engagement type 03</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
-            On Call: Senior Counsel on a Monthly Retainer
+            On Call: Design help, just a phone call away, on a monthly retainer
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
             A monthly retainer for leaders who want a senior thinking partner
-            available over time, not just for a single deliverable. Reserved for
-            a small number of teams so the access stays real.
+            available over time, not just for a single deliverable. We jump on a
+            Zoom, review, and move forward. For when you and your team want an
+            outside POV that brings clarity. Reserved for a small number of
+            teams so the access stays real.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
@@ -432,7 +437,7 @@ export default function Page() {
             Tell me what&apos;s stuck.
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
-            30 minutes. No pitch. We figure out together if there&apos;s a fit.
+            30 minutes. No pitch. Let&apos;s discuss current goals and pain points and see the best options for you.
           </p>
           <a
             href={CAL_URL}
