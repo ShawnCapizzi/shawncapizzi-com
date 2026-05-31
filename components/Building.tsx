@@ -91,6 +91,8 @@ export function Building() {
               <SignupCard
                 heading="Sign up for updates"
                 subcopy="Be first to know when the printed versions and new tools are ready."
+                buttonLabel="Keep me posted"
+                successText="Confirm your email and you're on the list. I'll let you know the moment the printed versions and new tools are ready."
               />
             </div>
           )}

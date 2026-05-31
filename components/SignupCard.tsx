@@ -25,16 +25,27 @@
  *   - heading, subcopy: optional. When omitted, no heading/subcopy is
  *     rendered — useful when the parent card already provides marketing
  *     copy and only wants the form below it.
+ *   - buttonLabel: optional CTA text. Defaults to "Send me the book".
+ *     Pass a context-appropriate label per placement (e.g. "Join the list").
+ *   - successText: optional confirmation body shown in the done state.
+ *     Defaults to the book-send confirmation. Override to match the CTA.
  */
 
 import { useState } from "react";
 
+const DEFAULT_SUCCESS_TEXT =
+  "Confirm your email and you're on the list. I'll send you the finished book when it's ready, plus the occasional note from the work.";
+
 export function SignupCard({
   heading,
   subcopy,
+  buttonLabel = "Send me the book",
+  successText = DEFAULT_SUCCESS_TEXT,
 }: {
   heading?: string;
   subcopy?: string;
+  buttonLabel?: string;
+  successText?: string;
 }) {
   const [email, setEmail] = useState("");
   const [state, setState] = useState<"idle" | "loading" | "done" | "error">("idle");
@@ -71,11 +82,7 @@ export function SignupCard({
         <div className="sc-signup">
           <div className="sc-signup__check"><Check /></div>
           <h2 className="sc-signup__heading">Check your inbox.</h2>
-          <p className="sc-signup__sub">
-            Confirm your email and you&apos;re on the list. I&apos;ll send you
-            the finished book when it&apos;s ready, plus the occasional note
-            from the work.
-          </p>
+          <p className="sc-signup__sub">{successText}</p>
         </div>
       </>
     );
@@ -111,7 +118,7 @@ export function SignupCard({
             onClick={submit}
             disabled={state === "loading"}
           >
-            {state === "loading" ? "Sending…" : "Send me the book"}
+            {state === "loading" ? "Sending…" : buttonLabel}
           </button>
         </div>
 

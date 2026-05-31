@@ -7,10 +7,10 @@ import { SignupCard } from "@/components/SignupCard";
 export const metadata: Metadata = {
   title: "The Clarity Advantage",
   description:
-    "The book, the cards, and the newsletter. Honest design and strategy for the way we work now.",
+    "The book, the cards, and the newsletter from Shawn Capizzi: tools grounded in 15+ years inside regulated and enterprise teams.",
 };
 
-const CAL_URL = "https://cal.com/capizzi/15min";
+const CAL_URL = "https://cal.com/capizzi/30min";
 
 export default function Page() {
   return (
@@ -23,8 +23,10 @@ export default function Page() {
             Honest design and strategy for the way we work now.
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
-            The book, the cards, and the newsletter. All in progress. All
-            grounded in a decade of work inside regulated and enterprise teams.
+            The book, the cards, and the newsletter: tools you can hold and use,
+            grounded in 15+ years inside regulated and enterprise teams. Built
+            to help your teams, and your family, think through complex decisions
+            with greater clarity and focus.
           </p>
         </div>
       </section>
@@ -62,7 +64,10 @@ export default function Page() {
                 First in line for new essays, chapter releases, and occasional
                 notes from the work in between. No spam, no noise.
               </p>
-              <SignupCard />
+              <SignupCard
+                buttonLabel="Join the list"
+                successText="Confirm your email and you're on the list. New essays, chapter releases, and the occasional note from the work, nothing else."
+              />
             </article>
 
             {/* The Book */}
@@ -76,7 +81,7 @@ export default function Page() {
               </h2>
               <p className="text-base text-text-secondary leading-relaxed mb-6">
                 Honest, no-fluff thinking on AI, design, and strategy for 2026
-                and beyond. Chapter 1 is live in the reader &mdash; read it
+                and beyond. Chapter 1 is live in the reader. Read it
                 free.
               </p>
               <p className="text-link group-hover:text-link-hover transition-colors text-base font-medium">
