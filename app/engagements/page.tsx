@@ -93,7 +93,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagements</p>
           <h1 className="headline-static text-[1.8rem] md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-4xl">
-            Three flexible ways of working to level up your design and experience impact.
+            Three flexible ways of working, scaled to where your team needs senior depth.
           </h1>
           <p className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
             I take on a small number of teams inside regulated and enterprise
@@ -108,6 +108,35 @@ export default function Page() {
             Move between the options as needs change. Wins accrue over time and
             collaboration compounds. The partnership strengthens.
           </p>
+
+          <figure className="mt-10 md:mt-12 max-w-3xl p-7 md:p-8 rounded-2xl card-surface border border-border-default">
+            <blockquote>
+              <p className="text-base md:text-lg text-text-primary leading-relaxed">
+                As a UX leader and subject matter expert, he provided essential
+                governance and content strategy for our brand&apos;s new design
+                system and platform migration across indications for both HCP
+                and DTC.
+              </p>
+            </blockquote>
+            <figcaption className="mt-6 flex items-center gap-4">
+              <Image
+                src="/images/testimonials/courtney-mcknight.avif"
+                alt="Courtney McKnight"
+                width={56}
+                height={56}
+                className="rounded-full object-cover h-12 w-12 md:h-14 md:w-14 border border-border-subtle"
+              />
+              <div>
+                <p className="text-sm font-semibold text-text-primary">
+                  Courtney McKnight
+                </p>
+                <p className="text-xs text-text-tertiary mt-0.5">
+                  Brand Account Manager
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
           <div className="mt-8 md:mt-10">
             <p className="metadata-label mb-3">Jump to</p>
             <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
@@ -292,14 +321,14 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">Engagement type 03</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
-            On Call: Design help, just a phone call away, on a monthly retainer
+            On Call: Senior counsel on standing call, on a monthly retainer
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
             A monthly retainer for leaders who want a senior thinking partner
-            available over time, not just for a single deliverable. We jump on a
-            Zoom, review, and move forward. For when you and your team want an
-            outside POV that brings clarity. Reserved for a small number of
-            teams so the access stays real.
+            available over time, not just for a single deliverable. We meet on
+            your cadence, review what matters, and move the decision forward.
+            For when you and your team want an outside POV that brings clarity.
+            Reserved for a small number of teams so the access stays real.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
