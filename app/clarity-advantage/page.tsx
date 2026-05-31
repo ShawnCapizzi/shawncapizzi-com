@@ -83,8 +83,9 @@ export default function Page() {
                 Orienteering to great design decisions
               </p>
               <p className="text-base text-text-secondary leading-relaxed mb-6">
-                Honest, no-fluff thinking on AI, design, and strategy for 2026
-                and beyond. Chapter 1 is live in the reader. Read it
+                Why clarity wins, how to cut through the noise, and what it
+                takes to do great work in the rooms where decisions get made.
+                15+ years of agency life, distilled. Chapter 1 is live. Read it
                 free.
               </p>
               <p className="text-link group-hover:text-link-hover transition-colors text-base font-medium">
