@@ -47,8 +47,8 @@ const FAQS = [
     a: "Both. I work directly with brands and embed as senior experience leadership inside agency engagements when the client is regulated, enterprise, or AI-heavy and the agency team needs a senior voice in the room. The structure depends on the work. What matters is the right level of accountability for the outcome.",
   },
   {
-    q: "Are you available for full-time roles, or only consulting engagements?",
-    a: "Currently leading UX strategy at Razorfish (Publicis) on Pfizer brands. Open to senior Director, VP, or Head of Design roles for the right mandate, and to selected embedded and advisory engagements in parallel. The 30-minute Strategy Call is also the right starting point if you're trying to figure out which structure makes sense for your team.",
+    q: "Is this an ongoing engagement, or just one-off projects?",
+    a: "Either, and it's built to flex. Most engagements start with a single defined piece of work and grow into an ongoing relationship as needs change. You can move between embedded leadership, advisory, and on-call support without renegotiating from scratch. The intensity flexes with what you need; the partnership stays in place. The 30-minute Strategy Call is the right starting point if you're trying to figure out which structure makes sense for your team.",
   },
   {
     q: "Do you travel for workshops or onsite work?",
