@@ -93,7 +93,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagements</p>
           <h1 className="headline-static text-[1.8rem] md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-4xl">
-            Three flexible ways of working, scaled to where your team needs senior depth.
+            Three flexible ways to bring in senior depth, scaled to your needs, timing, and roadmap.
           </h1>
           <p className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
             I take on a small number of teams inside regulated and enterprise
@@ -101,8 +101,8 @@ export default function Page() {
             design decisions.
           </p>
           <p className="mt-5 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
-            The three below are shapes a relationship can take, not three
-            products to choose between.
+            The three ways of working below are shapes a flexible, collaborative
+            relationship can take, not off-the-shelf products you pick from.
           </p>
           <p className="mt-5 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
             Move between the options as needs change. Wins accrue over time and
