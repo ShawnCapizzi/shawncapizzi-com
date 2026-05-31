@@ -1,5 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { SignupCard } from "./SignupCard";
 
 /**
  * Building — "What I'm building" section.
@@ -56,17 +60,40 @@ const BUILDING: BuildingItem[] = [
 ];
 
 export function Building() {
+  const [showSignup, setShowSignup] = useState(false);
+
   return (
     <section className="py-24 md:py-32 mt-24 md:mt-32 border-t border-border-subtle">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">In the studio</p>
           <h2 className="text-3xl md:text-3xl lg:text-[30px] font-bold tracking-tight leading-[1.05]">
-            What I&apos;m building
+            My systems in your pocket or on your bookshelf
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            Tools that come out of 15+ years of practice in regulated experience design. Built for ongoing work, not one-time reads. Two are live now.
+            Tools (physical and digital) that come out of 15+ years of practice
+            in marketing and experience design. Built for helping your teams or
+            family think through solutions with greater efficacy and focus. Full
+            printed versions available soon.{" "}
+            {!showSignup && (
+              <button
+                type="button"
+                onClick={() => setShowSignup(true)}
+                className="text-link hover:text-link-hover transition-colors font-medium underline underline-offset-4"
+              >
+                Sign up for updates
+              </button>
+            )}
           </p>
+
+          {showSignup && (
+            <div className="mt-8">
+              <SignupCard
+                heading="Sign up for updates"
+                subcopy="Be first to know when the printed versions and new tools are ready."
+              />
+            </div>
+          )}
         </div>
 
         <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">

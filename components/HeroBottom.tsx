@@ -20,9 +20,9 @@ export function HeroBottom() {
       <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-2xl">
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-            I help leadership teams make complex, AI-touched products clear
-            enough to ship. Defensible enough to launch. Leadership, advisory,
-            or on call.
+            I help teams bring clarity to complex content and AI-powered
+            products, and ship them on time. Defensible enough to launch.
+            Leadership, advisory, or on call.
           </p>
 
           <a

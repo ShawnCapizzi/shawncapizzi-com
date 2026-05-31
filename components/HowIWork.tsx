@@ -92,10 +92,10 @@ export function HowIWork() {
             How I work with teams
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            One relationship that changes shape as your needs do. Most start
-            with a single piece of work and grow from there: embedded leadership
-            one year, on call the next. Not sure which fits? Tell me what&apos;s
-            going on and we&apos;ll figure it out together.
+            A flexible relationship that changes as business needs do. Start
+            with a single piece of work and grow from there: embedded
+            leadership, advisory, or on call. Not sure which? Share your goals
+            or pain points and we&apos;ll figure it out together.
           </p>
           <div className="mt-8">
             <a
