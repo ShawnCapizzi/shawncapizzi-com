@@ -346,7 +346,7 @@ export default function Page() {
             <p className="metadata-label mb-4">From LinkedIn</p>
             <div
               className="rounded-xl overflow-hidden"
-              style={{ maxWidth: "504px", margin: "0 auto" }}
+              style={{ maxWidth: "720px", margin: "0 auto" }}
             >
               <iframe
                 src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7091549601580621824?collapsed=1"
@@ -361,7 +361,7 @@ export default function Page() {
             </div>
             <p
               className="mt-4 text-sm text-text-tertiary italic text-center"
-              style={{ maxWidth: "504px", margin: "1rem auto 0" }}
+              style={{ maxWidth: "720px", margin: "1rem auto 0" }}
             >
               A look at the live performance work, visuals generated in real
               time alongside poetry and music.
