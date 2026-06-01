@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { AccordionDetail } from "@/components/AccordionDetail";
+import { CTACards } from "@/components/CTACards";
 
 export const metadata: Metadata = {
   title: "Engagements",
@@ -567,6 +568,13 @@ export default function Page() {
           <p className="mt-14 md:mt-16 text-lg text-text-secondary max-w-3xl">
             Many engagements move from first call to signed SOW in 2–3 weeks.
           </p>
+        </div>
+      </section>
+
+      {/* CTA CARDS — work (proof) + book (deeper read) */}
+      <section className="py-16 md:py-24 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <CTACards cards={["work", "book"]} />
         </div>
       </section>
 

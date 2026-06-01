@@ -2,11 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { CTACards } from "@/components/CTACards";
 
 export const metadata: Metadata = {
   title: "Selected Work",
   description:
-    "15+ years of enterprise experience design across pharma, healthcare, and finance. Engagements where the structure of the experience changed the structure of the business outcome.",
+    "A decade of enterprise experience design across pharma, healthcare, and finance. Engagements where the structure of the experience changed the structure of the business outcome.",
 };
 
 const CASE_STUDIES = [
@@ -77,21 +78,21 @@ export default function Page() {
     <article>
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Work</p>
-          <h1 className="headline-static text-[1.8rem] md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] text-balance max-w-4xl">
-            Engagements and touch points where design and systems structure changed the business outcomes.
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance max-w-4xl">
+            Engagements where experience structure changed the business outcome.
           </h1>
-          <p className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
-            15+ years of enterprise experience design across pharma, healthcare,
-            and finance, and selected work outside it.
+          <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
+            A decade of enterprise experience design across pharma, healthcare,
+            and finance — and selected work outside it.
           </p>
         </div>
       </section>
 
       {/* CASE STUDIES GRID */}
       <section className="py-12 md:py-16">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
             {CASE_STUDIES.map((cs) => (
               <Link
@@ -110,7 +111,7 @@ export default function Page() {
                   />
                 </div>
                 <div className="p-7 md:p-10">
-                  <p className="eyebrow mb-3">{cs.eyebrow}</p>
+                  <p className="eyebrow mb-4">{cs.eyebrow}</p>
                   <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-text-primary group-hover:text-link transition-colors leading-tight">
                     {cs.title}
                   </h2>
@@ -130,10 +131,17 @@ export default function Page() {
         </div>
       </section>
 
+      {/* CTA CARDS — book (deeper read) + about (human context) */}
+      <section className="py-16 md:py-24 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <CTACards cards={["book", "about"]} />
+        </div>
+      </section>
+
       {/* BOTTOM CTA */}
       <section className="py-24 md:py-32 mt-16 md:mt-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
             Want to talk through how this kind of work would fit your team?
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">

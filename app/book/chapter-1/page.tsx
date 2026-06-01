@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Reader, type ReaderPage } from "@/components/Reader";
+import { CTACards } from "@/components/CTACards";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
@@ -36,14 +37,12 @@ const CHAPTER_ONE: ReaderPage[] = [
   {
     blocks: [
       { type: "heading", text: "Muddling Through: The Universal Experience of Being Human" },
-      { type: "para", text: "In the classic holiday song \u201CHave Yourself a Merry Little Christmas,\u201D there's a line that captures something profound about the human experience:" },
-      { type: "quote", text: "\u201CUntil then we'll have to muddle through somehow.\u201D", cite: "Have Yourself a Merry Little Christmas"  },
-      { type: "para", text: "It's a gentle, almost whispered acknowledgment that life is often about persevering through uncertainty, about navigating challenges we didn't see coming, about getting by while we wait for better days." },
-      { type: "para", text: "This idea of \u201Cmuddling through\u201D isn't just poetic. It's the reality for most people interacting with your digital products. They're not coming to your website or app during their peak moments of clarity and calm. They're coming while dealing with a medical diagnosis, after learning their rent increased, while their car is broken down and they need to get their child from school. They're coming with invisible burdens, temporary crises, and the accumulated stress of a full life." },
-      { type: "para", text: "Taylor Swift's \u201COut of the Woods\u201D asks the same fundamental question that echoes through the human condition across time and place:" },
-      { type: "quote", text: "\u201CAre we out of the woods yet? Are we out of trouble?\u201D", cite: "Out of the Woods"  },
-      { type: "para", text: "It's about stability, clarity, and the universal desire to know if we've moved past the point of difficulty. Whether it's a relationship, a financial crisis, or simply trying to use a transit app to get home, we're all constantly asking: are we through the hard part yet?" },
-      { type: "para", text: "Every user who encounters your product is carrying some version of this question." },
+      // HOLIDAY SONG — interpretive, no lyric reproduced.
+      { type: "para", text: "There's a moment in the old holiday standard \u201CHave Yourself a Merry Little Christmas\u201D that has always stayed with me. Tucked inside a song about joy is a quiet, almost reluctant admission: that sometimes the honest thing to say is we'll get by however we can until things get better. It's beautiful writing because it refuses to pretend. It names the gap between the life we want and the one we're living through right now." },
+      { type: "para", text: "That gap isn't just poetic. It's the reality for most people interacting with your digital products. They're not arriving in their peak moments of clarity and calm. They're arriving while dealing with a diagnosis, after learning their rent jumped, while the car is broken down and the kid still needs picking up. They come carrying invisible burdens, temporary crises, and the accumulated weight of a full life." },
+      // TAYLOR SWIFT — interpretive, no lyric reproduced.
+      { type: "para", text: "Taylor Swift built an entire song, \u201COut of the Woods,\u201D around one anxious question, asked over and over. Some version of: are we safe yet? Are we through the worst of it? She keeps asking because that's how the question really lives in us. We don't ask it once and get an answer. We ask it again and again until the danger lifts. It's the most human question there is, and it doesn't care whether the woods are a relationship, a diagnosis, a layoff, or a transit app that won't load while you're trying to get your kid home." },
+      { type: "para", text: "Every user who reaches your product is carrying some version of that question." },
     ],
   },
 
@@ -71,10 +70,9 @@ const CHAPTER_ONE: ReaderPage[] = [
       { type: "para", text: "Users aren't just adapting to new features; they're grieving the loss of familiarity. Someone who could previously navigate your app while distracted or stressed now has to relearn it when they might already be having their worst day. This approach essentially tells loyal users that their investment in learning your system was worthless." },
       { type: "para", text: "True empathy in redesign means auditing current patterns and carrying over the best and most useful elements. It means understanding that people rely on digital tools as stable anchors when everything else feels uncertain. When you suddenly change that anchor without consideration, you're adding stress to someone who may already be overwhelmed." },
       { type: "heading", text: "The Anchor in the Storm: Lou Reed and the Power of Repetition" },
-      { type: "para", text: "Lou Reed understood something fundamental about human nature in his song \u201CIt's a Temporary Thing.\u201D The repetition of the hi-hat, the insistent reminder that runs through it:" },
-      { type: "quote", text: "\u201Cit's only a temporary thing\u201D", cite: "It's a Temporary Thing" },
-      { type: "para", text: "It creates a grounding rhythm that cuts through chaos. The repetition isn't just musical; it's meditative, like a mantra that helps us remember that pain passes, stress shifts, circumstances change." },
-      { type: "para", text: "This same principle applies to digital empathy. Just like Lou Reed's song serves as an anchor during turbulent moments, our products should be that steady, reassuring presence when someone's world feels unstable. Good design creates predictable, reliable patterns that don't add cognitive load when someone's already overwhelmed." },
+      // LOU REED — interpretive, no lyric reproduced. Your insight is the hero.
+      { type: "para", text: "Lou Reed understood something about endurance that most designers don't. In \u201CIt's a Temporary Thing,\u201D the song doesn't argue its point. It drums it into you. The same insistent hi-hat, the same steady return, over and over, until the repetition itself becomes the meaning. This passes. The discomfort isn't permanent. You'll get through it." },
+      { type: "para", text: "That isn't just a songwriting trick. It's an interface principle. When someone is already overwhelmed, the last thing they need is novelty. A pattern they've seen a hundred times asks nothing of them. It's the closest a screen gets to a steady hand on the shoulder, a quiet reassurance that they still know where they are and what comes next." },
       { type: "quote", text: "Design for the temporary crisis, the temporary confusion, the temporary pain. Because if your interface works for someone having their worst day, it'll work brilliantly for someone having their best day too." },
     ],
   },
@@ -168,50 +166,52 @@ export default function ChapterOnePage() {
 
       {/* ── BOOK INTRO / TITLE-PAGE ENTRANCE ───────────────────────────── */}
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 mb-14 md:mb-20">
-        <p className="eyebrow mb-3">The book</p>
+        <div className="max-w-5xl">
+          <p className="eyebrow mb-3">The book</p>
 
-        <h1 className="headline-static text-4xl md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] text-balance max-w-4xl">
-          Clarity Is the Advantage
-        </h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance max-w-4xl">
+            Clarity Is the Advantage
+          </h1>
 
-        <p className="mt-4 text-lg md:text-xl text-text-secondary italic tracking-tight font-normal">
-          Orienteering to great design decisions
-        </p>
-
-        <div className="mt-8 max-w-3xl space-y-4 text-lg md:text-xl text-text-secondary leading-relaxed">
-          <p>
-            I wrote this because I got tired of watching design leadership become a thing people
-            talk about instead of do. Fifteen years in the trenches of New York agency life taught
-            me something different: the best people don&apos;t complain about the seat at the table
-            &mdash; they earn it by pushing the work forward and owning the outcome. This book is
-            what I learned from them, and from a path that&apos;s been anything but typical.
+          <p className="mt-4 text-lg md:text-xl text-text-secondary italic tracking-tight font-normal">
+            Orienteering to great design decisions
           </p>
-          <p>
-            It&apos;s one person&apos;s hard-won take on smart design &mdash; why clarity wins, how
-            to cut through the noise, and what it takes to do great work in the rooms where it
-            actually gets decided.
-          </p>
-          <p>
-            The book is written. Chapter 1 is below &mdash; read it free. I&apos;ll send you the
-            finished book when it&apos;s ready, plus the occasional note from the work in between.{" "}
-            <a
-              href="#read"
-              className="text-link hover:text-link-hover font-medium underline underline-offset-4 decoration-1 transition-colors"
-            >
-              Get on the list&nbsp;&rarr;
-            </a>
-          </p>
-        </div>
 
-        {/* Chapter marker — the transition from book-intro into the reader */}
-        <div className="mt-12 md:mt-16 flex items-center gap-4">
-          <span className="font-mono text-xs tracking-widest uppercase text-text-tertiary whitespace-nowrap">
-            Chapter 1
-          </span>
-          <span className="h-px flex-1 bg-border-subtle" aria-hidden="true" />
-          <span className="text-sm italic text-text-tertiary whitespace-nowrap">
-            The Human Condition
-          </span>
+          <div className="mt-8 max-w-2xl space-y-4 text-base md:text-lg text-text-secondary leading-relaxed">
+            <p>
+              I wrote this because I got tired of watching design leadership become a thing people
+              talk about instead of do. Fifteen years in the trenches of New York agency life taught
+              me something different: the best people don&apos;t complain about the seat at the table
+              &mdash; they earn it by pushing the work forward and owning the outcome. This book is
+              what I learned from them, and from a path that&apos;s been anything but typical.
+            </p>
+            <p>
+              It&apos;s one person&apos;s hard-won take on smart design &mdash; why clarity wins, how
+              to cut through the noise, and what it takes to do great work in the rooms where it
+              actually gets decided.
+            </p>
+            <p>
+              The book is written. Chapter 1 is below &mdash; read it free. I&apos;ll send you the
+              finished book when it&apos;s ready, plus the occasional note from the work in between.{" "}
+              <a
+                href="#read"
+                className="text-link hover:text-link-hover font-medium underline underline-offset-4 decoration-1 transition-colors"
+              >
+                Get on the list&nbsp;&rarr;
+              </a>
+            </p>
+          </div>
+
+          {/* Chapter marker — the transition from book-intro into the reader */}
+          <div className="mt-12 md:mt-16 flex items-center gap-4">
+            <span className="font-mono text-xs tracking-widest uppercase text-text-tertiary whitespace-nowrap">
+              Chapter 1
+            </span>
+            <span className="h-px flex-1 bg-border-subtle" aria-hidden="true" />
+            <span className="text-sm italic text-text-tertiary whitespace-nowrap">
+              The Human Condition
+            </span>
+          </div>
         </div>
       </div>
 
@@ -227,6 +227,13 @@ export default function ChapterOnePage() {
           signupSubcopy="I'll send you the finished book when it's ready — plus the occasional note from the work in between. No noise. Just the thinking, and what I'm seeing in the field."
         />
       </div>
+
+      {/* CTA CARDS — cards (close cousin to what they just read) + work (proof of thinking applied) */}
+      <section className="mt-24 md:mt-32 pt-16 md:pt-24 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <CTACards cards={["cards", "work"]} />
+        </div>
+      </section>
     </article>
   );
 }
