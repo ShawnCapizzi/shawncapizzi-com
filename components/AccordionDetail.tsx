@@ -25,12 +25,14 @@ export function AccordionDetail({
   id,
   label,
   children,
+  defaultOpen = false,
 }: {
   id: string;
   label: string;
   children: React.ReactNode;
+  defaultOpen?: boolean;
 }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(defaultOpen);
 
   return (
     <div className="mt-6 rounded-xl card-surface border border-border-subtle p-5 md:p-6">
