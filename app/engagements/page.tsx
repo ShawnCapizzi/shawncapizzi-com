@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { AccordionDetail } from "@/components/AccordionDetail";
 
 export const metadata: Metadata = {
   title: "Engagements",
@@ -210,11 +211,8 @@ export default function Page() {
             systems), websites, apps, VR, and sales tools.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
-            <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-6 text-text-primary">
-                What&apos;s included
-              </h3>
+          <div className="max-w-3xl">
+            <AccordionDetail id="leadership-included" label="What's included">
               <ul className="space-y-3">
                 {EMBEDDED_INCLUDED.map((item, i) => (
                   <li
@@ -229,11 +227,9 @@ export default function Page() {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-6 text-text-primary">
-                When this works
-              </h3>
+            </AccordionDetail>
+
+            <AccordionDetail id="leadership-works" label="When this works">
               <ul className="space-y-3">
                 {EMBEDDED_WORKS.map((item, i) => (
                   <li
@@ -248,7 +244,7 @@ export default function Page() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </AccordionDetail>
           </div>
 
           <div className="mt-14 md:mt-16 p-6 md:p-8 rounded-2xl card-surface border border-border-default max-w-3xl">
@@ -305,19 +301,23 @@ export default function Page() {
                 <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-6">
                   {shape.description}
                 </p>
-                <div className="space-y-4 border-t border-border-subtle pt-5">
-                  <div>
-                    <p className="metadata-label mb-2">What&apos;s included</p>
+                <div className="border-t border-border-subtle pt-2">
+                  <AccordionDetail
+                    id={`advisory-${shape.name.toLowerCase().replace(/\s+/g, "-")}-included`}
+                    label="What's included"
+                  >
                     <p className="text-sm md:text-base text-text-secondary leading-relaxed">
                       {shape.included}
                     </p>
-                  </div>
-                  <div>
-                    <p className="metadata-label mb-2">When this works</p>
+                  </AccordionDetail>
+                  <AccordionDetail
+                    id={`advisory-${shape.name.toLowerCase().replace(/\s+/g, "-")}-works`}
+                    label="When this works"
+                  >
                     <p className="text-sm md:text-base text-text-secondary leading-relaxed">
                       {shape.works}
                     </p>
-                  </div>
+                  </AccordionDetail>
                 </div>
               </article>
             ))}
@@ -354,11 +354,8 @@ export default function Page() {
             Reserved for a small number of teams so the access stays real.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
-            <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-6 text-text-primary">
-                What&apos;s included
-              </h3>
+          <div className="max-w-3xl">
+            <AccordionDetail id="oncall-included" label="What's included">
               <ul className="space-y-3">
                 {ONCALL_INCLUDED.map((item, i) => (
                   <li
@@ -373,11 +370,9 @@ export default function Page() {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div>
-              <h3 className="text-xl md:text-2xl font-semibold mb-6 text-text-primary">
-                When this works
-              </h3>
+            </AccordionDetail>
+
+            <AccordionDetail id="oncall-works" label="When this works">
               <ul className="space-y-3">
                 {ONCALL_WORKS.map((item, i) => (
                   <li
@@ -392,7 +387,7 @@ export default function Page() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </AccordionDetail>
           </div>
 
           <div className="mt-14 md:mt-16 max-w-3xl">

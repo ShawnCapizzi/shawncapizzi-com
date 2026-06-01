@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
+import { AccordionDetail } from "./AccordionDetail";
 
 const CAL_URL = "https://cal.com/capizzi/30min";
 
@@ -27,59 +27,6 @@ const ONCALL_INCLUDED = [
   "Slack or email access for fast calls when timing is tight",
   "Quarterly strategic alignment review tied to current goals",
 ];
-
-/* ------------------------------------------------------------------
-   AccordionDetail — collapsible region for the bottom-half card detail.
-   - Collapsed by default.
-   - Toggle button with aria-expanded / aria-controls for accessibility.
-   - Smooth grid-rows height animation (no fixed max-height guesswork),
-     which collapses cleanly and respects content of any length.
-   - prefers-reduced-motion users get an instant show/hide (no transition).
-   ------------------------------------------------------------------ */
-function AccordionDetail({
-  id,
-  label,
-  children,
-}: {
-  id: string;
-  label: string;
-  children: React.ReactNode;
-}) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="mt-6 rounded-xl card-surface border border-border-subtle p-5 md:p-6">
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-        aria-controls={id}
-        className="flex w-full items-center justify-between gap-4 text-left group"
-      >
-        <span className="text-base font-medium text-text-primary">{label}</span>
-        <span
-          aria-hidden="true"
-          className={`shrink-0 text-text-tertiary transition-transform duration-300 group-hover:text-text-secondary ${
-            open ? "rotate-180" : "rotate-0"
-          }`}
-        >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </span>
-      </button>
-
-      <div
-        id={id}
-        className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
-          open ? "grid-rows-[1fr] mt-4" : "grid-rows-[0fr]"
-        }`}
-      >
-        <div className="overflow-hidden">{children}</div>
-      </div>
-    </div>
-  );
-}
 
 export function HowIWork() {
   return (
