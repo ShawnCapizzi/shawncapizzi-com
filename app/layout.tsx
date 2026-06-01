@@ -49,8 +49,10 @@ export const metadata: Metadata = {
     template: "%s — Shawn Capizzi",
   },
   description:
-    "AI adoption isn't a technology problem. It's an experience architecture problem. I help regulated and enterprise teams make clear UX, CX, and product strategy decisions.",
+    "Senior experience strategy, UX, and design system governance for regulated and enterprise teams. AI adoption isn't a technology problem — it's an experience architecture problem.",
   keywords: [
+    "experience strategy",
+    "design system governance",
     "experience architecture",
     "AI adoption",
     "regulated industries",
@@ -68,7 +70,7 @@ export const metadata: Metadata = {
     siteName: "Shawn Capizzi",
     title: "Shawn Capizzi — Strategic Experience Design",
     description:
-      "AI adoption isn't a technology problem. It's an experience architecture problem.",
+      "Senior experience strategy, UX, and design system governance for regulated and enterprise teams. AI adoption is an experience architecture problem.",
     images: [
       {
         url: "/images/og/og-default.jpg",
@@ -82,7 +84,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shawn Capizzi — Strategic Experience Design",
     description:
-      "AI adoption isn't a technology problem. It's an experience architecture problem.",
+      "Senior experience strategy, UX, and design system governance for regulated and enterprise teams. AI adoption is an experience architecture problem.",
     images: ["/images/og/og-default.jpg"],
     creator: "@shawncapizzi",
   },
