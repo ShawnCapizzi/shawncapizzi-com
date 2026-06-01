@@ -115,6 +115,8 @@ export default function Page() {
               <span aria-hidden="true">·</span>
               <a href="#oncall" className="hover:text-text-primary transition-colors">On Call</a>
               <span aria-hidden="true">·</span>
+              <a href="#who" className="hover:text-text-primary transition-colors">Who</a>
+              <span aria-hidden="true">·</span>
               <a href="#focus" className="hover:text-text-primary transition-colors">Focus</a>
               <span aria-hidden="true">·</span>
               <a href="#process" className="hover:text-text-primary transition-colors">Process</a>
@@ -212,7 +214,7 @@ export default function Page() {
           </p>
 
           <div className="max-w-3xl">
-            <AccordionDetail id="leadership-included" label="What's included">
+            <AccordionDetail id="leadership-included" label="What's included" defaultOpen>
               <ul className="space-y-3">
                 {EMBEDDED_INCLUDED.map((item, i) => (
                   <li
@@ -305,6 +307,7 @@ export default function Page() {
                   <AccordionDetail
                     id={`advisory-${shape.name.toLowerCase().replace(/\s+/g, "-")}-included`}
                     label="What's included"
+                    defaultOpen
                   >
                     <p className="text-sm md:text-base text-text-secondary leading-relaxed">
                       {shape.included}
@@ -355,7 +358,7 @@ export default function Page() {
           </p>
 
           <div className="max-w-3xl">
-            <AccordionDetail id="oncall-included" label="What's included">
+            <AccordionDetail id="oncall-included" label="What's included" defaultOpen>
               <ul className="space-y-3">
                 {ONCALL_INCLUDED.map((item, i) => (
                   <li
@@ -395,6 +398,82 @@ export default function Page() {
               Retainers are monthly and scope to the cadence of access you need.
               Let&apos;s talk through what your team actually needs.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* WHO I WORK WITH */}
+      <section id="who" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <a
+            href="#engagements-nav"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            aria-label="Jump back to navigation"
+          >
+            <span aria-hidden="true" className="mr-1.5">↑</span> Jump menu
+          </a>
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+            Who I work with
+          </h2>
+          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
+            The most useful seat I take in any engagement is the one between
+            the leaders who set direction and the practitioners building toward
+            it. I do my best work when I&apos;m trusted by both.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {/* Leadership tier */}
+            <article className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default">
+              <p className="eyebrow mb-3">Leadership tier</p>
+              <p className="text-base md:text-lg text-text-primary font-medium mb-4">
+                SVPs, VPs, Directors, PMs, brand managers, account leads.
+              </p>
+              <p className="text-base text-text-secondary leading-relaxed">
+                The people who hire me, set the direction, and need senior
+                judgment on the decisions that matter most. We work in 1:1s,
+                working sessions, and the moments before a critical room.
+              </p>
+            </article>
+
+            {/* Creative tier */}
+            <article className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default">
+              <p className="eyebrow mb-3">Creative tier</p>
+              <p className="text-base md:text-lg text-text-primary font-medium mb-4">
+                Copywriters, visual designers, design directors.
+              </p>
+              <p className="text-base text-text-secondary leading-relaxed">
+                My closest daily collaborators. I work shoulder-to-shoulder on
+                the actual artifacts &mdash; wireframes, content frameworks,
+                decks, prototypes &mdash; and earn trust through the craft, not
+                the title above it.
+              </p>
+            </article>
+
+            {/* Build tier */}
+            <article className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default">
+              <p className="eyebrow mb-3">Build tier</p>
+              <p className="text-base md:text-lg text-text-primary font-medium mb-4">
+                Dev partners, engineering teams, design system practitioners.
+              </p>
+              <p className="text-base text-text-secondary leading-relaxed">
+                The people who turn the work into a product. I write to be
+                built. Onshore primarily, with global partners as needed.
+              </p>
+            </article>
+
+            {/* Adjacent tier */}
+            <article className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default">
+              <p className="eyebrow mb-3">Adjacent tier</p>
+              <p className="text-base md:text-lg text-text-primary font-medium mb-4">
+                Regulatory reviewers, strategy partners, project managers.
+              </p>
+              <p className="text-base text-text-secondary leading-relaxed">
+                The functions that wrap around the work. I treat regulatory
+                partners &mdash; RC, MLR, FDA, SEC &mdash; as collaborators,
+                not gatekeepers. The work moves faster when they&apos;re
+                brought in early.
+              </p>
+            </article>
           </div>
         </div>
       </section>

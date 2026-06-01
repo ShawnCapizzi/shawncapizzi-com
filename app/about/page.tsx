@@ -66,7 +66,7 @@ export default function Page() {
           {/* Full-width declarative headline */}
           <div className="max-w-4xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance">
-              I help leadership teams make clear decisions in complex digital environments.
+              I help teams make clear design and marketing decisions across content strategy, experience design, and product development for regulated digital environments.
             </h1>
           </div>
 
@@ -86,10 +86,11 @@ export default function Page() {
                 changes the structure of the business outcome.
               </p>
               <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-                Currently leading senior UX strategy inside a major
-                pharmaceutical portfolio. I work with biotech, fintech,
-                software, agency, and enterprise teams to bring senior depth
-                across stakeholders, deadlines, and decisions.
+                Currently leading senior experience strategy, UX, and design
+                system governance inside a major pharmaceutical portfolio. I
+                work with biotech, fintech, software, agency, and enterprise
+                teams to bring senior depth across stakeholders, deadlines,
+                and decisions.
               </p>
             </div>
 
