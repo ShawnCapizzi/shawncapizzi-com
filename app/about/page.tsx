@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { LiteYouTube } from "@/components/LiteYouTube";
+import { CTACards } from "@/components/CTACards";
 
 export const metadata: Metadata = {
   title: "About",
@@ -189,23 +189,6 @@ export default function Page() {
               Design and Advertising/Marketing.
             </p>
           </div>
-
-          {/* AI tool demo — the UXR AI tool I built in Dec 2024 */}
-          <div className="mt-14 md:mt-16 max-w-3xl">
-            <p className="metadata-label mb-4">A working demo</p>
-            <h3 className="text-xl md:text-2xl font-semibold text-text-primary mb-3">
-              UXR AI tool built in ChatGPT, Dec 2024
-            </h3>
-            <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-6">
-              The clearest way to explain how I think about AI integration is
-              to show one of the tools I&apos;ve built.
-            </p>
-            <LiteYouTube
-              videoId="bRmymrOs_iA"
-              title="UXR AI tool demo, December 2024"
-              aspect="9:16"
-            />
-          </div>
         </div>
       </section>
 
@@ -315,34 +298,10 @@ export default function Page() {
         </div>
       </section>
 
-      {/* THE BOOK */}
-      <section
-        className="py-24 md:py-32 mt-16 md:mt-24"
-        style={{
-          background:
-            "radial-gradient(ellipse 1400px 900px at 75% 10%, #7867FF 0%, #6B5CFF 35%, #5A4DE8 100%)",
-        }}
-      >
+      {/* CTA CARDS — book (deeper read) + work (proof of practice) */}
+      <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-4" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
-            Forthcoming
-          </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white leading-tight mb-6">
-            Clarity Is the Advantage
-          </h2>
-          <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl leading-relaxed">
-            Honest Design and Strategy for the Way We Work Now.
-          </p>
-          <p className="text-base md:text-lg text-white/80 mb-10 max-w-3xl leading-relaxed">
-            Honest, no-fluff thinking on AI, design, and strategy for 2026 and
-            beyond. Currently in edit. First chapter coming soon.
-          </p>
-          <Link
-            href="/clarity-advantage"
-            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white text-bg-primary text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
-          >
-            Notify me when the first chapter publishes
-          </Link>
+          <CTACards cards={["book", "work"]} />
         </div>
       </section>
 
