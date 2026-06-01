@@ -104,7 +104,23 @@ export default function Page() {
             The three ways of working below are shapes a flexible, collaborative
             relationship can take, not off-the-shelf products you pick from.
           </p>
-          <p className="mt-5 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
+
+          <div id="engagements-nav" className="mt-8 md:mt-10 scroll-mt-32 md:scroll-mt-40">
+            <p className="metadata-label mb-3">Jump to</p>
+            <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
+              <a href="#leadership" className="hover:text-text-primary transition-colors">Leadership</a>
+              <span aria-hidden="true">·</span>
+              <a href="#advisory" className="hover:text-text-primary transition-colors">Advisory</a>
+              <span aria-hidden="true">·</span>
+              <a href="#oncall" className="hover:text-text-primary transition-colors">On Call</a>
+              <span aria-hidden="true">·</span>
+              <a href="#focus" className="hover:text-text-primary transition-colors">Focus</a>
+              <span aria-hidden="true">·</span>
+              <a href="#process" className="hover:text-text-primary transition-colors">Process</a>
+            </nav>
+          </div>
+
+          <p className="mt-8 md:mt-10 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
             Move between the options as needs change. Wins accrue over time and
             collaboration compounds. The partnership strengthens.
           </p>
@@ -137,20 +153,6 @@ export default function Page() {
             </figcaption>
           </figure>
 
-          <div className="mt-8 md:mt-10">
-            <p className="metadata-label mb-3">Jump to</p>
-            <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
-              <a href="#leadership" className="hover:text-text-primary transition-colors">Leadership</a>
-              <span aria-hidden="true">·</span>
-              <a href="#advisory" className="hover:text-text-primary transition-colors">Advisory</a>
-              <span aria-hidden="true">·</span>
-              <a href="#oncall" className="hover:text-text-primary transition-colors">On Call</a>
-              <span aria-hidden="true">·</span>
-              <a href="#focus" className="hover:text-text-primary transition-colors">Focus</a>
-              <span aria-hidden="true">·</span>
-              <a href="#process" className="hover:text-text-primary transition-colors">Process</a>
-            </nav>
-          </div>
           <div className="mt-10 md:mt-12">
             <a
               href={CAL_URL}
@@ -186,7 +188,14 @@ export default function Page() {
 
       {/* PATH 1 - EMBEDDED */}
       <section id="leadership" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <a
+            href="#engagements-nav"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            aria-label="Jump back to navigation"
+          >
+            <span aria-hidden="true" className="mr-1.5">↑</span> Jump menu
+          </a>
           <p className="eyebrow mb-4">Engagement type 01</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
             Leadership: Embedded Product Vision, UX &amp; Experience Design Lead
@@ -265,7 +274,14 @@ export default function Page() {
 
       {/* PATH 2 - ADVISORY */}
       <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <a
+            href="#engagements-nav"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            aria-label="Jump back to navigation"
+          >
+            <span aria-hidden="true" className="mr-1.5">↑</span> Jump menu
+          </a>
           <p className="eyebrow mb-4">Engagement type 02</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
             Advisory: Strategic, Project-Based Counsel
@@ -318,7 +334,14 @@ export default function Page() {
 
       {/* PATH 3 - ON CALL */}
       <section id="oncall" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <a
+            href="#engagements-nav"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            aria-label="Jump back to navigation"
+          >
+            <span aria-hidden="true" className="mr-1.5">↑</span> Jump menu
+          </a>
           <p className="eyebrow mb-4">Engagement type 03</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
             On Call: Senior counsel on standing call, on a monthly retainer
@@ -383,7 +406,14 @@ export default function Page() {
 
       {/* THREE PILLARS */}
       <section id="focus" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <a
+            href="#engagements-nav"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            aria-label="Jump back to navigation"
+          >
+            <span aria-hidden="true" className="mr-1.5">↑</span> Jump menu
+          </a>
           <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
             What I focus on across engagements
           </h2>
@@ -410,7 +440,14 @@ export default function Page() {
 
       {/* HOW IT STARTS */}
       <section id="process" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <a
+            href="#engagements-nav"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            aria-label="Jump back to navigation"
+          >
+            <span aria-hidden="true" className="mr-1.5">↑</span> Jump menu
+          </a>
           <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-14 md:mb-16 max-w-3xl">
             How an engagement starts
           </h2>
