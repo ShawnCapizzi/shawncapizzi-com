@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { LiteYouTube } from "@/components/LiteYouTube";
 
 export const metadata: Metadata = {
   title: "About",
@@ -64,7 +65,7 @@ export default function Page() {
 
           {/* Full-width declarative headline */}
           <div className="max-w-4xl">
-            <h1 className="headline-static text-[1.8rem] md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] text-balance">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance">
               I help leadership teams make clear decisions in complex digital environments.
             </h1>
           </div>
@@ -85,16 +86,17 @@ export default function Page() {
                 changes the structure of the business outcome.
               </p>
               <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-                Currently leading UX strategy at Razorfish (Publicis) on Pfizer
-                brands. I work with biotech, fintech, software, agency, and
-                enterprise teams to bring senior depth across stakeholders,
-                deadlines, and decisions.
+                Currently leading senior UX strategy inside a major
+                pharmaceutical portfolio. I work with biotech, fintech,
+                software, agency, and enterprise teams to bring senior depth
+                across stakeholders, deadlines, and decisions.
               </p>
             </div>
 
             <div className="lg:col-span-5 order-1 lg:order-2 flex">
               <div
-                className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card w-full max-w-[82%] sm:max-w-[72%] lg:max-w-[378px] mx-auto lg:mx-0 aspect-[4/5] lg:aspect-auto lg:min-h-0"
+                className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card w-full aspect-[4/5] lg:aspect-auto lg:min-h-0"
+                style={{ maxWidth: "min(100%, 378px)" }}
               >
                 <Image
                   src="/images/brand/shawn_m_capizzi_2026.png"
@@ -113,7 +115,7 @@ export default function Page() {
       {/* THESIS */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
             What I believe about this work
           </h2>
           <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -146,15 +148,6 @@ export default function Page() {
               on creativity. It&apos;s the discipline that makes the design
               defensible, scalable, and durable.
             </p>
-            <p>
-              See some case studies{" "}
-              <Link
-                href="/work"
-                className="text-link hover:text-link-hover transition-colors"
-              >
-                here
-              </Link>.
-            </p>
           </div>
         </div>
       </section>
@@ -162,38 +155,55 @@ export default function Page() {
       {/* BACKGROUND */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
             Background
           </h2>
           <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
             <p>
-              I&apos;m currently Director of UX Strategy at Razorfish
-              (Publicis), leading experience design on Pfizer brands. The
-              day-to-day work is strategic experience design across one of the
-              most complex pharmaceutical portfolios in the industry:
-              multi-brand governance, regulatory-ready content systems, design
-              system architecture, and AI integration in HCP and patient
-              touchpoints.
+              Currently leading senior consulting work at Publicis CoLab, on
+              the Pfizer portfolio. The day-to-day is strategic experience
+              design across one of the most complex pharmaceutical accounts in
+              the industry: multi-brand governance, regulatory-ready content
+              systems, design system architecture, and AI integration in HCP
+              and patient touchpoints. Available for select leadership,
+              advisory, and on-call engagements outside that.
             </p>
             <p>
-              Before Razorfish, I led senior UX engagements across regulated
+              Before this engagement, I led senior UX engagements across regulated
               industries: pharmaceutical, financial services, enterprise
               technology, and patient experience initiatives spanning oncology,
               cardiovascular, neurological, immunology, and rare disease.
             </p>
             <p>
               I&apos;ve led teams of 3–8 full-time and freelance designers
-              across multi-brand work. The thread across all of it: making
+              across multi-brand work. The thread across two decades: making
               complex digital systems clear enough for the people who use them.
               The constraint isn&apos;t usually the technology. It&apos;s the
               architecture of decisions, content, and trust that wraps around
               it.
             </p>
             <p>
-              I taught at NYU SPS: design fundamentals, Adobe Photoshop, and
+              I taught at NYSCPS: design fundamentals, Adobe Photoshop, and
               Adobe InDesign. My BFA is from Pratt Institute in Communications
               Design and Advertising/Marketing.
             </p>
+          </div>
+
+          {/* AI tool demo — the UXR AI tool I built in Dec 2024 */}
+          <div className="mt-14 md:mt-16 max-w-3xl">
+            <p className="metadata-label mb-4">A working demo</p>
+            <h3 className="text-xl md:text-2xl font-semibold text-text-primary mb-3">
+              UXR AI tool built in ChatGPT, Dec 2024
+            </h3>
+            <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-6">
+              The clearest way to explain how I think about AI integration is
+              to show one of the tools I&apos;ve built.
+            </p>
+            <LiteYouTube
+              videoId="bRmymrOs_iA"
+              title="UXR AI tool demo, December 2024"
+              aspect="9:16"
+            />
           </div>
         </div>
       </section>
@@ -201,7 +211,7 @@ export default function Page() {
       {/* RECOGNITION */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-10 md:mb-14 max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10 md:mb-14 max-w-3xl">
             Recognition
           </h2>
           <div className="space-y-8 max-w-3xl">
@@ -245,18 +255,12 @@ export default function Page() {
                 >
                   COVID-19 and Its Impact on Healthcare Website Design
                 </a>{" "}
-                in EVERSANA INTOUCH, and more in{" "}
-                <Link
-                  href="/thinking"
-                  className="text-link hover:text-link-hover transition-colors"
-                >
-                  Thinking
-                </Link>.
+                in EVERSANA INTOUCH.
               </p>
             </div>
             <div className="border-l-2 border-border-default pl-6 md:pl-8">
               <p className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight">
-                Teaching at NYU SPS
+                Teaching at NYSCPS
               </p>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed">
                 Design fundamentals, Adobe Photoshop, Adobe InDesign.
@@ -270,7 +274,7 @@ export default function Page() {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">(Recent)</p>
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-10 md:mb-12 max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10 md:mb-12 max-w-3xl">
             In the work
           </h2>
 
@@ -320,9 +324,9 @@ export default function Page() {
       >
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4" style={{ color: "rgba(255, 255, 255, 0.7)" }}>
-            Now reading
+            Forthcoming
           </p>
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight text-white leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white leading-tight mb-6">
             Clarity Is the Advantage
           </h2>
           <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl leading-relaxed">
@@ -330,14 +334,13 @@ export default function Page() {
           </p>
           <p className="text-base md:text-lg text-white/80 mb-10 max-w-3xl leading-relaxed">
             Honest, no-fluff thinking on AI, design, and strategy for 2026 and
-            beyond. The book is written. Chapter 1, &ldquo;The Human
-            Condition,&rdquo; is live in the reader.
+            beyond. Currently in edit. First chapter coming soon.
           </p>
           <Link
-            href="/book/chapter-1"
+            href="/clarity-advantage"
             className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white text-bg-primary text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
           >
-            Read Chapter 1 free <span aria-hidden="true" className="ml-2">&rarr;</span>
+            Notify me when the first chapter publishes
           </Link>
         </div>
       </section>
@@ -345,7 +348,7 @@ export default function Page() {
       {/* BEYOND THE WORK */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
             Beyond the work
           </h2>
           <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -410,7 +413,7 @@ export default function Page() {
       {/* CTA */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
             Let&apos;s see if there&apos;s a fit.
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
