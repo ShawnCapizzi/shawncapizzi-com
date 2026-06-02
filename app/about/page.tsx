@@ -255,14 +255,21 @@ export default function Page() {
               <p className="text-base md:text-lg text-text-secondary leading-relaxed">
                 On pharma UX, regulatory design, and AI integration. Including{" "}
                 <a
-                  href="https://www.eversanaintouch.com/blog/healthcare-marketing/covid-19-and-its-impact-on-healthcare-website-design/"
+                  href="https://www.linkedin.com/pulse/fdas-new-digital-era-why-pharmas-future-belongs-honest-capizzi-lyjne"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-link hover:text-link-hover transition-colors"
                 >
-                  COVID-19 and Its Impact on Healthcare Website Design
+                  The FDA&apos;s New Digital Era
                 </a>{" "}
-                in EVERSANA INTOUCH.
+                on LinkedIn. See{" "}
+                <Link
+                  href="/thinking"
+                  className="text-link hover:text-link-hover transition-colors"
+                >
+                  more published essays and talks
+                </Link>
+                .
               </p>
             </div>
           </div>
