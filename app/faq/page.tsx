@@ -2,8 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-
-const CAL_URL = "https://cal.com/capizzi/30min";
+import { CTACards } from "@/components/CTACards";
 
 const FAQS = [
   {
@@ -156,23 +155,10 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 md:py-32 mt-12 md:mt-16 border-t border-border-subtle">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
-            Have a question that isn&apos;t here?
-          </h2>
-          <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
-            30 minutes. No pitch. We figure out together if there&apos;s a fit.
-          </p>
-          <a
-            href={CAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
-          >
-            Book a Strategy Call
-          </a>
+      {/* CTA CARDS — work (proof) + contact (path forward) */}
+      <section className="py-16 md:py-24 mt-12 md:mt-16 border-t border-border-subtle">
+        <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
+          <CTACards cards={["work", "contact"]} />
         </div>
       </section>
     </article>
