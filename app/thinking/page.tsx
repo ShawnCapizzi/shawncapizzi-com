@@ -17,6 +17,15 @@ const PHONE_TEL = "+12123803900";
 // Published — externally hosted, links out
 const PUBLISHED = [
   {
+    title: "Beyond User Flows: Agentic AI is Rewriting UX Fundamentals",
+    date: "October 11, 2025",
+    readTime: "8 min read",
+    description:
+      "How the rise of non-deterministic interfaces changes what UX design even means. Why workflow logic, content readiness, and trust signals matter more than interface novelty.",
+    url: "https://medium.com/p/e335c1789bc7",
+    source: "Medium",
+  },
+  {
     title:
       "The FDA's New Digital Era: Why Pharma's Future Belongs to Honest, Human-Centered Experience Design",
     date: "November 2025",
@@ -25,15 +34,6 @@ const PUBLISHED = [
       "On the September 2025 FDA mandate that ended 'disclose risks elsewhere.' Why information architecture, accessibility, and design systems are now the front line of pharma marketing.",
     url: "https://www.linkedin.com/pulse/fdas-new-digital-era-why-pharmas-future-belongs-honest-capizzi-lyjne",
     source: "LinkedIn",
-  },
-  {
-    title: "Beyond User Flows: AI Is Rewriting UX Fundamentals",
-    date: "2024",
-    readTime: "8 min read",
-    description:
-      "How the rise of non-deterministic interfaces changes what UX design even means. Why workflow logic, content readiness, and trust signals matter more than interface novelty.",
-    url: "https://medium.com/p/e335c1789bc7",
-    source: "Medium",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Page() {
         <section className="pb-12 md:pb-16">
           <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
             <p className="eyebrow mb-6">Published</p>
-            <div className="grid grid-cols-1 gap-6 md:gap-8 max-w-3xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {PUBLISHED.map((essay) => (
                 <a
                   key={essay.title}
