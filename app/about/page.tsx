@@ -94,7 +94,7 @@ export default function Page() {
 
             <div className="lg:col-span-5 order-1 lg:order-2 flex">
               <div
-                className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-bg-raised capizzi-rim-card w-full aspect-[4/5] lg:aspect-auto lg:min-h-0"
+                className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-black capizzi-rim-card w-full aspect-[16/10]"
                 style={{ maxWidth: "min(100%, 378px)" }}
               >
                 <Image
@@ -102,7 +102,7 @@ export default function Page() {
                   alt="Shawn Capizzi"
                   fill
                   priority
-                  className="object-cover"
+                  className="object-contain object-center"
                   sizes="(max-width: 1024px) 80vw, 378px"
                 />
               </div>
