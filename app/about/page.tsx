@@ -410,7 +410,12 @@ export default function Page() {
 
           {/* Sora video — playful close */}
           <div className="mt-14 md:mt-16 max-w-3xl">
-            <p className="metadata-label mb-4">A recent one with my daughters</p>
+            <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-4">
+              My daughters and I cook all the time. Sometimes we take photos
+              of our creations and turn them into AI videos to bring new
+              context to them &mdash; and help the girls have fun
+              experimenting with AI.
+            </p>
             <figure className="rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
               <video
                 controls
