@@ -17,6 +17,16 @@ const PHONE_TEL = "+12123803900";
 // Published — externally hosted, links out
 const PUBLISHED = [
   {
+    title:
+      "The FDA's New Digital Era: Why Pharma's Future Belongs to Honest, Human-Centered Experience Design",
+    date: "November 2025",
+    readTime: "5 min read",
+    description:
+      "On the September 2025 FDA mandate that ended 'disclose risks elsewhere.' Why information architecture, accessibility, and design systems are now the front line of pharma marketing.",
+    url: "https://www.linkedin.com/pulse/fdas-new-digital-era-why-pharmas-future-belongs-honest-capizzi-lyjne",
+    source: "LinkedIn",
+  },
+  {
     title: "Beyond User Flows: AI Is Rewriting UX Fundamentals",
     date: "2024",
     readTime: "8 min read",
