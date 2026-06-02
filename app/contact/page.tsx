@@ -62,12 +62,12 @@ export default function Page() {
             <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
               <p className="metadata-label mb-4">Path 02 · Async</p>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-tight mb-4">
-                You&apos;re evaluating fit.
+                Start a conversation.
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
-                Email me what you&apos;re considering. A brief, a question, a
-                context note &mdash; whatever&apos;s useful. I reply within a
-                business day.
+                Email when you&apos;d rather start in writing. A brief, a
+                question, a context note, an introduction &mdash; all welcome.
+                I reply within a business day.
               </p>
               <a
                 href={`mailto:${EMAIL}`}
@@ -148,7 +148,7 @@ export default function Page() {
           <div className="max-w-3xl">
             <p className="metadata-label mb-4">Also</p>
             <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-              Active on{" "}
+              I&apos;m always active on{" "}
               <a
                 href={LINKEDIN_URL}
                 target="_blank"
@@ -157,9 +157,10 @@ export default function Page() {
               >
                 LinkedIn
               </a>{" "}
-              &mdash; essays and short posts on AI adoption, regulated design,
-              and experience strategy. Connections from this site welcome; a
-              note about why is appreciated.
+              &mdash; that&apos;s where I sometimes post essays and short
+              pieces on AI adoption, current design topics, and experience
+              strategy. Connections are always welcome; feel free to send a
+              DM.
             </p>
           </div>
         </div>
