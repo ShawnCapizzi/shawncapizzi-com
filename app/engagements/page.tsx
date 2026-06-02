@@ -524,7 +524,7 @@ export default function Page() {
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
           <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-14 md:mb-16 max-w-3xl">
-            How an engagement starts
+            Engagement kickoff
           </h2>
 
           <div className="space-y-10 md:space-y-12 max-w-3xl">
