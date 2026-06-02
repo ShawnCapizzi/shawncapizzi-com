@@ -64,7 +64,7 @@ interface CaseStudyLayoutProps {
   heroVideo?: { src: string; poster?: string; ariaLabel: string };
   metadata: MetadataItem[];
   challenge: string[];
-  approach: string[];
+  approach: ReactNode[];
   pullQuote?: string | string[];
   midImages?: CaseStudyImage[];
   /** Optional carousel slot rendered between the approach section and outcomes. */
@@ -75,7 +75,7 @@ interface CaseStudyLayoutProps {
   bottomImages?: CaseStudyImage[];
   /** Optional full-width hero image rendered just before the closer section. */
   closerHero?: { src: string; alt: string };
-  closer: string[];
+  closer: ReactNode[];
   ctaHeadline: string;
   related?: RelatedCaseStudy[];
 }
