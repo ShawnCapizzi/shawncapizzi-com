@@ -571,10 +571,10 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA CARDS — work (proof) + book (deeper read) */}
+      {/* CTA CARDS — work (proof) + contact (start the conversation) */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <CTACards cards={["work", "book"]} />
+          <CTACards cards={["work", "contact"]} />
         </div>
       </section>
 

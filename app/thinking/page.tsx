@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Essays on AI adoption, regulatory design, and experience strategy in regulated industries.",
 };
 
-const CAL_URL = "https://cal.com/capizzi/15min";
+const CAL_URL = "https://cal.com/capizzi/30min";
 
 // Published — externally hosted, links out
 const PUBLISHED = [
