@@ -110,17 +110,17 @@ export default function Page() {
           <div id="engagements-nav" className="mt-8 md:mt-10 scroll-mt-32 md:scroll-mt-40">
             <p className="metadata-label mb-3">Jump to</p>
             <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
-              <a href="#leadership" className="hover:text-text-primary transition-colors">Leadership</a>
+              <a href="#leadership" className="text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors">Leadership</a>
               <span aria-hidden="true">·</span>
-              <a href="#advisory" className="hover:text-text-primary transition-colors">Advisory</a>
+              <a href="#advisory" className="text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors">Advisory</a>
               <span aria-hidden="true">·</span>
-              <a href="#oncall" className="hover:text-text-primary transition-colors">On Call</a>
+              <a href="#oncall" className="text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors">On Call</a>
               <span aria-hidden="true">·</span>
-              <a href="#who" className="hover:text-text-primary transition-colors">Who</a>
+              <a href="#who" className="text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors">Who</a>
               <span aria-hidden="true">·</span>
-              <a href="#focus" className="hover:text-text-primary transition-colors">Focus</a>
+              <a href="#focus" className="text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors">Focus</a>
               <span aria-hidden="true">·</span>
-              <a href="#process" className="hover:text-text-primary transition-colors">Process</a>
+              <a href="#process" className="text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors">Process</a>
             </nav>
           </div>
 
