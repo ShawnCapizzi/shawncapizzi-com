@@ -2,6 +2,7 @@ import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { CaseStudyCarousel } from "@/components/CaseStudyCarousel";
 import { BrowserFrame } from "@/components/BrowserFrame";
 import { TiltedPhoneFrame } from "@/components/TiltedPhoneFrame";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,7 +31,17 @@ export default function Page() {
         "The leadership team needed digital governance that could support a multi-billion dollar therapeutic portfolio without slowing the brand teams down.",
       ]}
       approach={[
-        "I led the architecture and governance of three enterprise design systems, each serving a different audience and use case across the portfolio.",
+        <>
+          <Link
+            href="/engagements#leadership"
+            className="text-link hover:text-link-hover transition-colors"
+          >
+            I led the architecture and governance of three enterprise design
+            systems
+          </Link>
+          , each serving a different audience and use case across the
+          portfolio.
+        </>,
         "The work happened in three layers. The first was strategic: direct partnership with CTOs and senior business strategists on multi-million dollar digital initiative planning, including ROI documentation that could be reported to the board.",
         "The second was architectural: defining the modular component logic, taxonomy, and content frameworks that would govern brand work across all 70+ brands. Each brand operates inside its own sandbox, working out particular content needs and creative expression within the governance framework. The system is intentionally restrained. Working with copywriters, medical strategists, and regulatory partners, I helped brand teams build information architecture that served both the system and the scientific story.",
         "The third was operational: a governance training program shared with copy, design, and media partners. The training teaches the correct way to leverage the system, the tolerance to which it can be modified, and best practices for initial setup. The goal isn't compliance enforcement. It's knowledge sharing.",

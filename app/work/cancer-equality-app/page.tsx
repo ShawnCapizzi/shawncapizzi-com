@@ -1,5 +1,6 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { BrowserFrame } from "@/components/BrowserFrame";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -31,7 +32,16 @@ export default function Page() {
       ]}
       approach={[
         "The platform was designed as a two-sided product. The coach-facing experience supported onboarding of coaches and content storage about the patients in their care. The patient-facing dashboard gave users visibility into their engagements, notes from sessions with their coach, and direct communication with the coaching team. Both sides had to work for very different users, in very different emotional states, while supporting the same underlying mission.",
-        "I led product design across both sides of the platform, working directly with the initiative owner, account team, creative team, SharePoint developers, and a Salesforce CMS specialist.",
+        <>
+          <Link
+            href="/engagements#leadership"
+            className="text-link hover:text-link-hover transition-colors"
+          >
+            I led product design across both sides of the platform
+          </Link>
+          , working directly with the initiative owner, account team, creative
+          team, SharePoint developers, and a Salesforce CMS specialist.
+        </>,
         "The product included coach and peer navigation, the heart of the platform, matching patients with trained coaches who had often been through breast cancer themselves, alongside a peer community of others on similar journeys. Education modules helped users recognize racism and bias in healthcare interactions, not abstractly, but in the specific patterns that show up in oncology care. Documentation tools designed to record symptoms, concerns, and provider responses before, during, and after appointments, simple enough to use under stress, detailed enough to create a record that mattered. Advocacy guides giving step-by-step language for addressing concerns and requesting appropriate care. Community support connecting users to others with similar experiences. A healthcare provider directory with ratings and reviews focused on culturally competent care.",
         "The hard part wasn't deciding what to build. It was the language. Every screen had to be empowering without being patronizing. Every feature had to respect that the user might be in crisis. The design had to feel like a tool that trusts the user, not one that's trying to fix her.",
       ]}

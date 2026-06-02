@@ -1,4 +1,5 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -168,7 +169,16 @@ export default function Page() {
       closer={[
         "Most teams hiring AI consultants get advice. The teams hiring me get advice plus a demonstration.",
         "AI isn't a strategy. It's a tool. The teams that win with AI long-term aren't the ones with the best models. They're the ones who treated the experience architecture around the model as the actual work.",
-        "That's the lab. That's what I bring into client engagements. That's the difference.",
+        <>
+          That&apos;s the lab. That&apos;s what I bring into{" "}
+          <Link
+            href="/engagements"
+            className="text-link hover:text-link-hover transition-colors"
+          >
+            client engagements
+          </Link>
+          . That&apos;s the difference.
+        </>,
       ]}
       ctaHeadline="Working through AI integration in your team?"
       related={[

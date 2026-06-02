@@ -1,5 +1,6 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { RotatingProductShowcase } from "@/components/RotatingProductShowcase";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -31,7 +32,20 @@ export default function Page() {
         "The challenge wasn't replacing the system. It was understanding what the actual users were doing in it, identifying the friction points that cost real time, and proposing changes that could be implemented quickly within a development environment defined by command-line constraints unique to the platform.",
       ]}
       approach={[
-        "I led the engagement through architectural inquiry. I personally scheduled, scripted, and ran in-person interviews with the three salesperson types, bringing stimulus and prototypes into each conversation rather than asking abstract questions about workflow preferences. I served as researcher, engagement strategist, and the liaison between the R&D team commissioning the work and the development team that would implement it.",
+        <>
+          <Link
+            href="/engagements#advisory"
+            className="text-link hover:text-link-hover transition-colors"
+          >
+            I led the engagement through architectural inquiry
+          </Link>
+          . I personally scheduled, scripted, and ran in-person interviews with
+          the three salesperson types, bringing stimulus and prototypes into
+          each conversation rather than asking abstract questions about workflow
+          preferences. I served as researcher, engagement strategist, and the
+          liaison between the R&amp;D team commissioning the work and the
+          development team that would implement it.
+        </>,
         "The final presentation went screen by screen, module by module: which screens should be moved, which modules should be recomposed, which interactions should be redesigned to be most efficient across all three salesperson types. The recommendations weren't speculative. They came directly from observed friction in real workflows.",
         "The CRM facelift and design system refinement that followed enabled cleaner scanability, quicker decisions, and faster task completion across the rep experience. UI refinements were prioritized based on the cost of friction in actual rep workflows, not on aesthetic preference.",
         "The technical constraint that shaped everything: this is a command-line-driven terminal system. The entire company runs on it. Every interface decision had to work within those constraints. There was no option to redesign the underlying paradigm. The work was about making the existing system clearer, faster, and more aligned to how three different rep types actually do their jobs.",

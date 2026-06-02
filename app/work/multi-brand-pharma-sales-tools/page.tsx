@@ -2,6 +2,7 @@ import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { CaseStudyCarousel } from "@/components/CaseStudyCarousel";
 import { RotatingProductShowcase } from "@/components/RotatingProductShowcase";
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -33,7 +34,20 @@ export default function Page() {
         "The friction wasn't obvious to executives. But it was costing time, money, and the confidence reps needed in conversations with healthcare providers, conversations that often ran 45 seconds to six minutes to a 12-minute coffee chat, with no way to predict in advance which version it would be.",
       ]}
       approach={[
-        "I came onto the engagement at the pitch stage, helping define the opportunity, prototype the proposed system, and ultimately win the business. Once the work was won, I partnered with brand managers internally to map components to each brand's particular content needs, and with development teams to ensure templates and design system rules would scale across the current portfolio and through future product indication expansion.",
+        <>
+          <Link
+            href="/engagements#leadership"
+            className="text-link hover:text-link-hover transition-colors"
+          >
+            I came onto the engagement at the pitch stage
+          </Link>
+          , helping define the opportunity, prototype the proposed system, and
+          ultimately win the business. Once the work was won, I partnered with
+          brand managers internally to map components to each brand&apos;s
+          particular content needs, and with development teams to ensure
+          templates and design system rules would scale across the current
+          portfolio and through future product indication expansion.
+        </>,
         "The result was a modular enterprise design system. Thirty-three reusable components. Unified navigation structure. Standardized taxonomy. Flexible content architecture that supported both 45-second elevator pitches and six-minute deeper conversations. Salesforce-integrated interaction tracking. Embedded resource-sharing pathways for PDFs, video, and rep-to-HCP follow-ups. Built-in field notes for pre-call planning and post-call follow-up.",
         "Brand teams could still express campaign identity. But inside a governed design system. The result wasn't uniformity. It was structured flexibility.",
         "The harder work was organizational. Brand managers had to give up some autonomy to gain shared infrastructure. Regulatory teams had to trust pre-approved components. Development teams had to commit to the framework instead of building bespoke solutions on every brief. None of that happens because the system is well-designed. It happens because the governance is.",

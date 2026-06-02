@@ -2,6 +2,7 @@ import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { CaseStudyCarousel } from "@/components/CaseStudyCarousel";
 import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -173,7 +174,18 @@ export default function Page() {
       closer={[
         "The reason this case study still matters in 2026 is not the Alexa Skill itself. The skill was a learning vehicle. The reason it matters is what doing it taught me: conversational interfaces \u2014 voice, chat, and now AI agents \u2014 share a single underlying design discipline.",
         "Map the intent before you map the interface. Design the repair before you design the success state. Never leave the user without a next move. Treat what the system says as carefully as you treat what it does.",
-        "Every AI agent and chatbot I help a pharma or healthcare team scope today gets the same questions I asked of this Alexa Skill in 2018. I\u2019ve been doing this work and building for new systems all along. The modality changes; the work doesn\u2019t.",
+        <>
+          Every AI agent and chatbot{" "}
+          <Link
+            href="/engagements#advisory"
+            className="text-link hover:text-link-hover transition-colors"
+          >
+            I help a pharma or healthcare team scope today
+          </Link>{" "}
+          gets the same questions I asked of this Alexa Skill in 2018. I&apos;ve
+          been doing this work and building for new systems all along. The
+          modality changes; the work doesn&apos;t.
+        </>,
       ]}
       ctaHeadline="Working on a conversational interface, an AI agent, or a chatbot in healthcare?"
       related={[
