@@ -76,14 +76,26 @@ const PILLARS = [
   {
     name: "Pillar 1: Regulatory",
     body: "Healthcare and financial product teams operate under real constraints: fixed regulatory deadlines, multiple rounds of legal and medical review, complex scientific content, and development windows that cannot be missed. Speed matters. Trust matters more. I help teams design UX and CX systems that meet business goals while respecting FDA, RC, MLR, and financial compliance, without losing clarity, accessibility, or time to market.",
+    crossLink: {
+      href: "/work/pharma-design-systems",
+      label: "See this across 70+ therapeutic brands",
+    },
   },
   {
     name: "Pillar 2: Interfaces",
     body: "New technology doesn't create adoption. Clarity does. I help teams design modern interfaces (AI tools, conversational systems, QR activations, mobile wallet integrations, sales funnels, multi-touchpoint experiences) in ways that feel intuitive, trusted, and grounded in real behavior. Users don't care about novelty. They care about getting what they need and moving on with the rest of their life.",
+    crossLink: {
+      href: "/work/ai-native-product-design-lab",
+      label: "See the AI-native product design lab",
+    },
   },
   {
     name: "Pillar 3: Systems",
     body: "Enterprise systems fail quietly. They fragment over time. Each team builds its own version. I help teams design and govern systems that scale across brands, teams, and product lines. The work is half architecture, half organizational design. A system only works if the people maintaining it can actually use it.",
+    crossLink: {
+      href: "/work/multi-brand-pharma-sales-tools",
+      label: "See a multi-brand design system in practice",
+    },
   },
 ];
 
@@ -507,6 +519,16 @@ export default function Page() {
                 <p className="text-base md:text-lg text-text-secondary leading-relaxed">
                   {pillar.body}
                 </p>
+                {pillar.crossLink && (
+                  <p className="mt-4">
+                    <Link
+                      href={pillar.crossLink.href}
+                      className="text-base text-link hover:text-link-hover transition-colors italic"
+                    >
+                      {pillar.crossLink.label} &rarr;
+                    </Link>
+                  </p>
+                )}
               </div>
             ))}
           </div>

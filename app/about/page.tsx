@@ -194,7 +194,14 @@ export default function Page() {
                 D&amp;AD Pencil 2022: Future Impact Initiative
               </p>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-                For the Cancer Equality App with The Chrysalis Initiative.{" "}
+                For the{" "}
+                <Link
+                  href="/work/cancer-equality-app"
+                  className="text-link hover:text-link-hover transition-colors"
+                >
+                  Cancer Equality App
+                </Link>{" "}
+                with The Chrysalis Initiative.{" "}
                 <a
                   href="https://www.dandad.org/annual/2022/entry/professional/235946"
                   target="_blank"
@@ -211,8 +218,14 @@ export default function Page() {
               </p>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed">
                 For patient medication information across iOS and Android
-                (2024). QR-based, FDA-compliant, deployed across a multi-brand
-                portfolio.
+                (2024). QR-based, FDA-compliant, deployed across a{" "}
+                <Link
+                  href="/work/pharma-design-systems"
+                  className="text-link hover:text-link-hover transition-colors"
+                >
+                  multi-brand portfolio
+                </Link>
+                .
               </p>
             </div>
             <div className="border-l-2 border-border-default pl-6 md:pl-8">
