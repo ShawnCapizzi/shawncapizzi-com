@@ -1,5 +1,4 @@
 // Destination: app/thinking/page.tsx
-import Link from "next/link";
 import type { Metadata } from "next";
 import { LiteYouTube } from "@/components/LiteYouTube";
 import { CTACards } from "@/components/CTACards";
@@ -11,6 +10,9 @@ export const metadata: Metadata = {
 };
 
 const CAL_URL = "https://cal.com/capizzi/30min";
+const EMAIL = "capizzi@shawncapizzi.com";
+const PHONE_DISPLAY = "212-380-3900";
+const PHONE_TEL = "+12123803900";
 
 // Published — externally hosted, links out
 const PUBLISHED = [
@@ -22,34 +24,6 @@ const PUBLISHED = [
       "How the rise of non-deterministic interfaces changes what UX design even means. Why workflow logic, content readiness, and trust signals matter more than interface novelty.",
     url: "https://medium.com/p/e335c1789bc7",
     source: "Medium",
-  },
-];
-
-// Essays still in progress — keeping the two strongest as placeholders
-const UPCOMING = [
-  {
-    title: "Stop Buying AI. Start Fixing the Boring Stuff First.",
-    date: "May 2026",
-    readTime: "9 min read",
-    description:
-      "Most companies aren't ready for AI. Not because the technology is hard, but because the foundational work hasn't been done yet.",
-  },
-  {
-    title: "The Capizzi Process — Strategic Experience Design Methodology",
-    date: "March 2026",
-    readTime: "7 min read",
-    description: (
-      <>
-        The framework I use across{" "}
-        <Link
-          href="/work"
-          className="text-link hover:text-link-hover transition-colors"
-        >
-          regulated and enterprise engagements
-        </Link>
-        . Clarity before creativity. Hierarchy before decoration.
-      </>
-    ),
   },
 ];
 
@@ -190,44 +164,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* IN PROGRESS — reduced to 2 */}
-      <section className="pb-12 md:pb-16">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-6">In progress</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {UPCOMING.map((essay) => (
-              <article
-                key={essay.title}
-                className="relative p-7 md:p-9 rounded-2xl card-surface border border-border-default"
-              >
-                <div className="flex items-center gap-3 mb-5 text-sm text-text-tertiary">
-                  <span className="metadata-label">{essay.date}</span>
-                  <span aria-hidden="true">·</span>
-                  <span>{essay.readTime}</span>
-                </div>
-                <h2 className="subhead-editorial text-xl md:text-2xl leading-tight mb-4">
-                  {essay.title}
-                </h2>
-                <p className="lead-text text-base md:text-lg leading-relaxed mb-6">
-                  {essay.description}
-                </p>
-                <p className="text-sm text-text-tertiary italic">
-                  Publishing soon —{" "}
-                  <a
-                    href={CAL_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-link hover:text-link-hover transition-colors not-italic"
-                  >
-                    talk to me about the ideas
-                  </a>
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA CARDS — book + cards: tools that operationalize this thinking */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
@@ -239,11 +175,13 @@ export default function Page() {
         </div>
       </section>
 
-      {/* BOTTOM CTA */}
+      {/* BOTTOM CTA — action-forward close. Three paths: Book button is primary,
+          email + phone are quiet text alternates below. No form here (forms
+          serve content moments; this is a commercial close). */}
       <section className="py-24 md:py-32 mt-16 md:mt-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
-            Want to talk through these ideas?
+            Want to put any of this to work?
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
             30 minutes. Virtual. No pitch.
@@ -256,6 +194,30 @@ export default function Page() {
           >
             Book a Strategy Call
           </a>
+
+          {/* Whisper alternates — quieter than the primary action,
+              visible to anyone who needs a different path. */}
+          <p className="mt-10 md:mt-12 text-sm md:text-base text-text-tertiary italic">
+            or reach me directly
+          </p>
+          <p className="mt-3 text-base md:text-lg text-text-secondary">
+            <a
+              href={`mailto:${EMAIL}`}
+              className="text-link hover:text-link-hover transition-colors"
+            >
+              {EMAIL}
+            </a>
+            <span aria-hidden="true" className="mx-3 text-text-tertiary">
+              ·
+            </span>
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="text-link hover:text-link-hover transition-colors"
+              aria-label={`Call ${PHONE_DISPLAY}`}
+            >
+              {PHONE_DISPLAY}
+            </a>
+          </p>
         </div>
       </section>
     </article>
