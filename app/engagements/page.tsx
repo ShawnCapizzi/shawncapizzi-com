@@ -122,17 +122,17 @@ export default function Page() {
           <div id="engagements-nav" className="mt-8 md:mt-10 scroll-mt-32 md:scroll-mt-40">
             <p className="metadata-label mb-3">Jump to</p>
             <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
-              <a href="#leadership" className="text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors">Leadership</a>
+              <a href="#leadership" className="text-link hover:text-link-hover transition-colors">Leadership</a>
               <span aria-hidden="true">·</span>
-              <a href="#advisory" className="text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors">Advisory</a>
+              <a href="#advisory" className="text-link hover:text-link-hover transition-colors">Advisory</a>
               <span aria-hidden="true">·</span>
-              <a href="#oncall" className="text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors">On Call</a>
+              <a href="#oncall" className="text-link hover:text-link-hover transition-colors">On Call</a>
               <span aria-hidden="true">·</span>
-              <a href="#who" className="text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors">Who</a>
+              <a href="#who" className="text-link hover:text-link-hover transition-colors">Who</a>
               <span aria-hidden="true">·</span>
-              <a href="#focus" className="text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors">Focus</a>
+              <a href="#focus" className="text-link hover:text-link-hover transition-colors">Focus</a>
               <span aria-hidden="true">·</span>
-              <a href="#process" className="text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors">Process</a>
+              <a href="#process" className="text-link hover:text-link-hover transition-colors">Process</a>
             </nav>
           </div>
 
@@ -207,7 +207,7 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <a
             href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
             aria-label="Jump back to navigation"
           >
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
@@ -288,7 +288,7 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <a
             href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
             aria-label="Jump back to navigation"
           >
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
@@ -353,7 +353,7 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <a
             href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
             aria-label="Jump back to navigation"
           >
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
@@ -420,7 +420,7 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <a
             href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
             aria-label="Jump back to navigation"
           >
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
@@ -496,7 +496,7 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <a
             href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
             aria-label="Jump back to navigation"
           >
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
@@ -540,7 +540,7 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <a
             href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
             aria-label="Jump back to navigation"
           >
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
