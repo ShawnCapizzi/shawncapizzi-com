@@ -137,26 +137,6 @@ export default function Page() {
           <CTACards cards={["engagements", "contact"]} />
         </div>
       </section>
-
-      {/* BOTTOM CTA */}
-      <section className="py-24 md:py-32 mt-16 md:mt-24 border-t border-border-subtle">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
-            Want to talk through how this kind of work would fit your team?
-          </h2>
-          <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
-            30 minutes. Virtual. We figure out together if there’s a fit.
-          </p>
-          <a
-            href="https://cal.com/capizzi/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
-          >
-            Book a Strategy Call
-          </a>
-        </div>
-      </section>
     </article>
   );
 }
