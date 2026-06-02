@@ -377,24 +377,29 @@ export default function Page() {
               And the people I push it on hardest are my daughters. We&apos;ve
               made Sora videos together that started as &ldquo;what would it
               look like if&hellip;&rdquo; conversations at the dinner table.
-              I&apos;ve built small math and learning apps for them &mdash; a{" "}
-              <a
-                href="/apps/fractions-quiz.html"
-                className="underline decoration-text-tertiary hover:decoration-text-primary underline-offset-2 transition-colors"
-              >
-                fractions quiz
-              </a>
-              {" "}and an{" "}
-              <a
-                href="/apps/area-perimeter-quiz.html"
-                className="underline decoration-text-tertiary hover:decoration-text-primary underline-offset-2 transition-colors"
-              >
-                area and perimeter quiz
-              </a>
-              , free, no sign-up, no tracking. Same instinct as everything
-              else: the right tool, in the right moment, for the actual person
-              who needs it.
+              I&apos;ve also built small math and learning apps for them &mdash;
+              free, no sign-up, no tracking. Same instinct as everything else:
+              the right tool, in the right moment, for the actual person who
+              needs it.
             </p>
+          </div>
+
+          {/* Kids' learning apps — pill buttons matching Lab page CTAs */}
+          <div className="mt-8 md:mt-10 max-w-3xl flex flex-wrap gap-3">
+            <a
+              href="/apps/fractions-quiz.html"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-bg-raised border border-border-default text-text-primary text-sm md:text-base font-medium hover:bg-bg-hover transition-colors"
+            >
+              Try the Fractions Quiz
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a
+              href="/apps/area-perimeter-quiz.html"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-bg-raised border border-border-default text-text-primary text-sm md:text-base font-medium hover:bg-bg-hover transition-colors"
+            >
+              Try the Area &amp; Perimeter Quiz
+              <span aria-hidden="true">&rarr;</span>
+            </a>
           </div>
 
           {/* Sora video — playful close */}
