@@ -13,15 +13,36 @@ const NAV_LINKS: NavLink[] = [
   { href: "/thinking", label: "Thinking" },
   { href: "/book/chapter-1", label: "Read" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const SECONDARY_LINKS = [
   { href: "/clarity-advantage", label: "Clarity Advantage" },
   { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
 ] as const;
 
 const CAL_URL = "https://cal.com/capizzi/30min";
+
+// Phone shown in the header on lg+ desktop and at the top of the mobile drawer.
+// Single source of truth: edit PHONE_DISPLAY for the visible label and PHONE_TEL
+// for the dial URI (E.164 with country code).
+const PHONE_DISPLAY = "212-380-3900";
+const PHONE_TEL = "+12123803900";
+
+function PhoneIcon({ size = 14 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className="flex-shrink-0"
+    >
+      <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15.07 15.07 0 0 1-6.59-6.58l2.2-2.21a1 1 0 0 0 .25-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z" />
+    </svg>
+  );
+}
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -62,7 +83,7 @@ export function Header() {
             <Wordmark size="small" />
           </div>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
             {NAV_LINKS.map((link) => {
               const isActive =
                 link.href === "/"
@@ -85,9 +106,24 @@ export function Header() {
             })}
           </nav>
 
-          <a href={CAL_URL} target="_blank" rel="noopener noreferrer" className="hidden md:inline-flex items-center px-6 py-2.5 rounded-full bg-text-primary text-text-inverse text-sm font-medium tracking-tight hover:scale-[1.02] transition-transform">
-            Book a Strategy Call
-          </a>
+          <div className="hidden md:flex items-center gap-5">
+            <a
+              href={`tel:${PHONE_TEL}`}
+              className="hidden lg:inline-flex items-center gap-2 text-sm font-medium text-link hover:text-link-hover transition-colors"
+              aria-label={`Call ${PHONE_DISPLAY}`}
+            >
+              <PhoneIcon size={14} />
+              {PHONE_DISPLAY}
+            </a>
+            <a
+              href={CAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-2.5 rounded-full bg-text-primary text-text-inverse text-sm font-medium tracking-tight hover:scale-[1.02] transition-transform"
+            >
+              Book a Strategy Call
+            </a>
+          </div>
 
           <button
             type="button"
@@ -113,6 +149,16 @@ export function Header() {
       {mobileOpen ? (
         <div className="fixed inset-0 z-40 bg-bg-elevated md:hidden pt-20 overflow-y-auto">
           <nav className="px-6 py-12 flex flex-col gap-6">
+            <a
+              href={`tel:${PHONE_TEL}`}
+              onClick={() => setMobileOpen(false)}
+              className="inline-flex items-center gap-3 text-2xl font-semibold text-link"
+              aria-label={`Call ${PHONE_DISPLAY}`}
+            >
+              <PhoneIcon size={20} />
+              {PHONE_DISPLAY}
+            </a>
+            <div className="border-b border-border-subtle -mt-1" />
             {NAV_LINKS.map((link) => {
               const isActive =
                 link.href === "/"
