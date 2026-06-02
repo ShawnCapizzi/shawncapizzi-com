@@ -45,6 +45,14 @@ export type CTACard = {
    *               cropped.
    */
   imageFit?: "cover" | "contain";
+  /**
+   * Optional phone number for tap-to-call. When provided, renders a
+   * separate tap-to-call link at the bottom of the card (outside the
+   * main link target, so the phone tap is distinct from the card click).
+   * Format as the display string (e.g. "212-380-3900"); the component
+   * normalizes it to a tel:+1... URI automatically.
+   */
+  phone?: string;
 };
 
 export const CTA_CARDS: Record<string, CTACard> = {
@@ -100,5 +108,15 @@ export const CTA_CARDS: Record<string, CTACard> = {
     href: "/engagements",
     image: "/images/engagements/needs-framework-sketch.jpg",
     imageAlt: "Hand-drawn framework: user need and want flowing down through company to users, business, and resources",
+  },
+  contact: {
+    eyebrow: "Contact",
+    title: "Get in touch",
+    description:
+      "Strategy call, project brief, or a direct note. Pick the way in that fits where you are.",
+    cta: "Start a conversation",
+    href: "/contact",
+    phone: "212-380-3900",
+    // Image intentionally omitted for now — add during the contact page revamp.
   },
 };

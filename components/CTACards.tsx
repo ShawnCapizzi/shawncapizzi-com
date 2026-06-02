@@ -37,51 +37,84 @@ export function CTACards({ cards }: { cards: string[] }) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-      {items.map((item) => (
-        <Link
-          key={item.href}
-          href={item.href}
-          className="group relative flex flex-col rounded-2xl card-surface border border-border-default hover:border-border-strong overflow-hidden transition-colors"
-        >
-          {item.image ? (
-            <div
-              className={`relative ${item.imageAspect ?? "aspect-[16/10]"} overflow-hidden border-b border-border-subtle ${item.imageFit === "contain" ? "bg-black" : ""}`}
-            >
-              <Image
-                src={item.image}
-                alt={item.imageAlt ?? ""}
-                fill
-                className={`${item.imageFit === "contain" ? "object-contain" : "object-cover"} object-center transition-transform duration-500 group-hover:scale-[1.02]`}
-                unoptimized={isAnimated(item.image)}
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-          ) : null}
+      {items.map((item) => {
+        // Normalize "212-380-3900" → "tel:+12123803900"
+        // Note: assumes US numbers. If international support is ever needed,
+        // store the tel: URI as a separate field instead of computing it.
+        const telHref = item.phone
+          ? `tel:+1${item.phone.replace(/\D/g, "")}`
+          : undefined;
 
-          <div className="flex flex-col flex-1 p-7 md:p-9">
-            <p className="eyebrow mb-3">{item.eyebrow}</p>
-            <h3 className="text-xl md:text-2xl font-semibold tracking-tight leading-snug text-text-primary group-hover:text-link transition-colors">
-              {item.title}
-              {item.subtitle ? (
-                <span className="block mt-1 text-sm font-normal italic text-text-tertiary">
-                  ({item.subtitle})
-                </span>
+        return (
+          <div
+            key={item.href}
+            className="group relative flex flex-col rounded-2xl card-surface border border-border-default hover:border-border-strong overflow-hidden transition-colors"
+          >
+            <Link href={item.href} className="flex flex-col flex-1">
+              {item.image ? (
+                <div
+                  className={`relative ${item.imageAspect ?? "aspect-[16/10]"} overflow-hidden border-b border-border-subtle ${item.imageFit === "contain" ? "bg-black" : ""}`}
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt ?? ""}
+                    fill
+                    className={`${item.imageFit === "contain" ? "object-contain" : "object-cover"} object-center transition-transform duration-500 group-hover:scale-[1.02]`}
+                    unoptimized={isAnimated(item.image)}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
               ) : null}
-            </h3>
 
-            <p className="mt-4 text-base text-text-secondary leading-relaxed flex-1">
-              {item.description}
-            </p>
+              <div className="flex flex-col flex-1 p-7 md:p-9">
+                <p className="eyebrow mb-3">{item.eyebrow}</p>
+                <h3 className="text-xl md:text-2xl font-semibold tracking-tight leading-snug text-text-primary group-hover:text-link transition-colors">
+                  {item.title}
+                  {item.subtitle ? (
+                    <span className="block mt-1 text-sm font-normal italic text-text-tertiary">
+                      ({item.subtitle})
+                    </span>
+                  ) : null}
+                </h3>
 
-            <p className="mt-6 text-link group-hover:text-link-hover transition-colors text-base font-medium">
-              {item.cta}{" "}
-              <span aria-hidden="true" className="ml-1">
-                &rarr;
-              </span>
-            </p>
+                <p className="mt-4 text-base text-text-secondary leading-relaxed flex-1">
+                  {item.description}
+                </p>
+
+                <p className="mt-6 text-link group-hover:text-link-hover transition-colors text-base font-medium">
+                  {item.cta}{" "}
+                  <span aria-hidden="true" className="ml-1">
+                    &rarr;
+                  </span>
+                </p>
+              </div>
+            </Link>
+
+            {/* Tap-to-call link — sits outside the main Link to avoid
+                nested interactive elements. Visible footer with its own
+                divider so users see it as a distinct action. */}
+            {telHref && item.phone ? (
+              <a
+                href={telHref}
+                className="flex items-center gap-2 border-t border-border-subtle px-7 md:px-9 py-4 text-text-secondary hover:text-text-primary transition-colors text-sm md:text-base font-medium"
+                aria-label={`Call ${item.phone}`}
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  className="flex-shrink-0"
+                >
+                  <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15.07 15.07 0 0 1-6.59-6.58l2.2-2.21a1 1 0 0 0 .25-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z" />
+                </svg>
+                Call {item.phone}
+              </a>
+            ) : null}
           </div>
-        </Link>
-      ))}
+        );
+      })}
     </div>
   );
 }

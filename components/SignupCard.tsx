@@ -36,6 +36,33 @@ import { useState } from "react";
 const DEFAULT_SUCCESS_TEXT =
   "Confirm your email and you're on the list. I'll send you the finished book when it's ready, plus the occasional note from the work.";
 
+// Phone number shown on every SignupCard. Single source of truth: edit
+// PHONE_DISPLAY to change what appears in the visible link, and PHONE_TEL
+// to change what dialing actually triggers (must be E.164 with country code).
+const PHONE_DISPLAY = "212-380-3900";
+const PHONE_TEL = "+12123803900";
+
+function PhoneLink() {
+  return (
+    <a
+      href={`tel:${PHONE_TEL}`}
+      className="sc-signup__phone"
+      aria-label={`Call ${PHONE_DISPLAY}`}
+    >
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 0 0-1.02.24l-2.2 2.2a15.07 15.07 0 0 1-6.59-6.58l2.2-2.21a1 1 0 0 0 .25-1.02A11.36 11.36 0 0 1 8.5 4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1c0 9.39 7.61 17 17 17a1 1 0 0 0 1-1v-3.5a1 1 0 0 0-1-1z" />
+      </svg>
+      Call {PHONE_DISPLAY}
+    </a>
+  );
+}
+
 export function SignupCard({
   heading,
   subcopy,
@@ -83,6 +110,7 @@ export function SignupCard({
           <div className="sc-signup__check"><Check /></div>
           <h2 className="sc-signup__heading">Check your inbox.</h2>
           <p className="sc-signup__sub">{successText}</p>
+          <PhoneLink />
         </div>
       </>
     );
@@ -124,6 +152,7 @@ export function SignupCard({
 
         {state === "error" && <p className="sc-signup__err">{message}</p>}
         <p className="sc-signup__fine">No spam. Unsubscribe anytime.</p>
+        <PhoneLink />
       </div>
     </>
   );
@@ -200,6 +229,18 @@ const signupStyles = `
 .sc-signup__btn:disabled { opacity: 0.7; cursor: default; }
 .sc-signup__err { color: #C0392B; font-size: 13px; margin: 12px 0 0; }
 .sc-signup__fine { color: var(--sc-ink-soft, #9A9AA4); font-size: 12px; margin: 16px 0 0; opacity: 0.8; }
+.sc-signup__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 14px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sc-accent, #6B5CFF);
+  text-decoration: none;
+  transition: filter .2s;
+}
+.sc-signup__phone:hover { filter: brightness(1.15); }
 .sc-signup__check {
   width: 56px;
   height: 56px;
