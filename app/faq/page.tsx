@@ -15,7 +15,22 @@ const FAQS = [
   },
   {
     q: "How do you integrate AI into pharma, healthcare, or other regulated industries without breaking compliance?",
-    a: "You treat compliance as a design constraint, not an afterthought. That means mapping every AI touchpoint to its regulatory surface (FDA, HIPAA, MLR, SOC 2), structuring content for auditability, and building human-in-the-loop checkpoints where model confidence drops. I've done this across 70+ therapeutic brands and major enterprise systems.",
+    a: (
+      <>
+        You treat compliance as a design constraint, not an afterthought. That
+        means mapping every AI touchpoint to its regulatory surface (FDA,
+        HIPAA, MLR, SOC 2), structuring content for auditability, and building
+        human-in-the-loop checkpoints where model confidence drops. I&apos;ve
+        done this across{" "}
+        <Link
+          href="/work/pharma-design-systems"
+          className="text-link hover:text-link-hover transition-colors"
+        >
+          70+ therapeutic brands
+        </Link>{" "}
+        and major enterprise systems.
+      </>
+    ),
   },
   {
     q: "Should I hire a full-time Director of UX, a VP of Design, or a fractional design leader?",
@@ -39,7 +54,24 @@ const FAQS = [
   },
   {
     q: "How do engagements typically start?",
-    a: "Every engagement starts with a free 30-minute Strategy Call. Virtual. We talk through what's stuck and what success looks like. No pitch. If there's not a fit, I'll tell you and try to point you to possible solutions or partners. If the strategy call goes well, we move into a longer scoping conversation with the relevant stakeholders to map scope, timing, and constraints. Then I write the Statement of Work. Most engagements move from first call to signed SOW in 2–3 weeks.",
+    a: (
+      <>
+        Every engagement starts with a free 30-minute Strategy Call. Virtual.
+        We talk through what&apos;s stuck and what success looks like. No
+        pitch. If there&apos;s not a fit, I&apos;ll tell you and try to point
+        you to possible solutions or partners. If the strategy call goes well,
+        we move into a longer scoping conversation with the relevant
+        stakeholders to map scope, timing, and constraints. Then I write the{" "}
+        <Link
+          href="/engagements#process"
+          className="text-link hover:text-link-hover transition-colors"
+        >
+          Statement of Work
+        </Link>
+        . Most engagements move from first call to signed SOW in 2&ndash;3
+        weeks.
+      </>
+    ),
   },
   {
     q: "Do you work with agency partners or only direct clients?",
@@ -47,7 +79,37 @@ const FAQS = [
   },
   {
     q: "Is this an ongoing engagement, or just one-off projects?",
-    a: "Either, and it's built to flex. Most engagements start with a single defined piece of work and grow into an ongoing relationship as needs change. You can move between embedded leadership, advisory, and on-call support without renegotiating from scratch. The intensity flexes with what you need; the partnership stays in place. The 30-minute Strategy Call is the right starting point if you're trying to figure out which structure makes sense for your team.",
+    a: (
+      <>
+        Either, and it&apos;s built to flex. Most engagements start with a
+        single defined piece of work and grow into an ongoing relationship as
+        needs change. You can move between{" "}
+        <Link
+          href="/engagements#leadership"
+          className="text-link hover:text-link-hover transition-colors"
+        >
+          embedded leadership
+        </Link>
+        ,{" "}
+        <Link
+          href="/engagements#advisory"
+          className="text-link hover:text-link-hover transition-colors"
+        >
+          advisory
+        </Link>
+        , and{" "}
+        <Link
+          href="/engagements#oncall"
+          className="text-link hover:text-link-hover transition-colors"
+        >
+          on-call support
+        </Link>{" "}
+        without renegotiating from scratch. The intensity flexes with what you
+        need; the partnership stays in place. The 30-minute Strategy Call is
+        the right starting point if you&apos;re trying to figure out which
+        structure makes sense for your team.
+      </>
+    ),
   },
   {
     q: "Do you travel for workshops or onsite work?",

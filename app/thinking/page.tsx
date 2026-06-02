@@ -1,4 +1,5 @@
 // Destination: app/thinking/page.tsx
+import Link from "next/link";
 import type { Metadata } from "next";
 import { LiteYouTube } from "@/components/LiteYouTube";
 import { CTACards } from "@/components/CTACards";
@@ -37,8 +38,18 @@ const UPCOMING = [
     title: "The Capizzi Process — Strategic Experience Design Methodology",
     date: "March 2026",
     readTime: "7 min read",
-    description:
-      "The framework I use across regulated and enterprise engagements. Clarity before creativity. Hierarchy before decoration.",
+    description: (
+      <>
+        The framework I use across{" "}
+        <Link
+          href="/work"
+          className="text-link hover:text-link-hover transition-colors"
+        >
+          regulated and enterprise engagements
+        </Link>
+        . Clarity before creativity. Hierarchy before decoration.
+      </>
+    ),
   },
 ];
 

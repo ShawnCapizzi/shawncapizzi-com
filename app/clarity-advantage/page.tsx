@@ -24,9 +24,15 @@ export default function Page() {
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
             The book, the cards, and the newsletter: tools you can hold and use,
-            grounded in 15+ years inside regulated and enterprise teams. Built
-            to help your teams, and your family, think through complex decisions
-            with greater clarity and focus.
+            grounded in{" "}
+            <Link
+              href="/work"
+              className="text-link hover:text-link-hover transition-colors"
+            >
+              15+ years inside regulated and enterprise teams
+            </Link>
+            . Built to help your teams, and your family, think through complex
+            decisions with greater clarity and focus.
           </p>
         </div>
       </section>

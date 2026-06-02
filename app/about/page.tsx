@@ -87,8 +87,28 @@ export default function Page() {
               </p>
               <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
                 I work with pharma, biotech, fintech, software, agency, and
-                enterprise teams &mdash; embedded as senior leadership, on
-                advisory engagements, or on call between the big decisions.
+                enterprise teams &mdash; embedded as{" "}
+                <Link
+                  href="/engagements#leadership"
+                  className="text-link hover:text-link-hover transition-colors"
+                >
+                  senior leadership
+                </Link>
+                , on{" "}
+                <Link
+                  href="/engagements#advisory"
+                  className="text-link hover:text-link-hover transition-colors"
+                >
+                  advisory engagements
+                </Link>
+                , or{" "}
+                <Link
+                  href="/engagements#oncall"
+                  className="text-link hover:text-link-hover transition-colors"
+                >
+                  on call
+                </Link>{" "}
+                between the big decisions.
               </p>
             </div>
 
