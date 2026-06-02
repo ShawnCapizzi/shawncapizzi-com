@@ -363,8 +363,14 @@ export default function Page() {
               AI isn&apos;t something I clock in and out of. It&apos;s a daily
               creative practice that runs across the live performance work,
               the consulting, and pretty much everything I make for the people
-              in my life. The Lab on the work page is just the most visible
-              part of it.
+              in my life.{" "}
+              <a
+                href="/work/ai-native-product-design-lab"
+                className="underline decoration-text-tertiary hover:decoration-text-primary underline-offset-2 transition-colors"
+              >
+                The Lab on the work page
+              </a>
+              {" "}is just the most visible part of it.
             </p>
             <p>
               I share what I learn as I learn it &mdash; with co-workers,
