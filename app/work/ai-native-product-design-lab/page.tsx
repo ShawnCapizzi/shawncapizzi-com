@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AI-Native Product Design Lab",
   description:
-    "How I use AI to accelerate research, design, prototype, and delivery, built on years of bringing teams together. A vendor-agnostic AI practice grounded in healthcare and regulated environments.",
+    "A vendor-agnostic AI practice grounded in healthcare, regulated environments, and design-system governance. Working prototypes, public Custom GPTs, and a Figma plugin published to the Community \u2014 advice plus demonstration.",
 };
 
 const ASSET_BASE = "/images/case-studies/05-ai-native-product-design-lab";
@@ -81,16 +81,31 @@ export default function Page() {
           ],
         },
         {
-          eyebrow: "Concept · Spatial computing for in-office HCP education",
-          title: "Apple Vision Pro Concept",
+          eyebrow: "Published tool · Figma Community · Design system governance",
+          title: "Detached Instance Finder",
           description: [
-            "In-office HCP education rendered inside a Vision Pro spatial computing interface. Patient Weight Over 5 Years chart, patient profile, SD-tier navigation tabs, and a Type O- Universal Donor blood-type badge, designed for the moment when an HCP and patient are reviewing data together in an exam room.",
-            "Most senior pharma designers haven't touched Vision Pro yet. The frontier isn't where you wait to arrive. It's where you go.",
+            "Design-system governance only works if drift is visible. The fastest way a client\u2019s system erodes inside an agency or vendor workflow is the detached instance \u2014 a component pulled off the system, modified, and silently disconnected from updates. Figma flags none of this. The layer name turns from purple to black, and the debt accumulates invisibly.",
+            "I built Detached Instance Finder to make that debt visible in seconds. The plugin scans a page or entire file and surfaces likely detaches using two complementary signals. Name match catches the easy case: a frame named like a component, since detaches keep their original name by default. Orphan is the harder one \u2014 it flags a plain frame sitting among instance siblings, the one black layer in a row of purple. That second signal catches detaches even after they\u2019ve been renamed, which name-matching alone can\u2019t. Built with the Figma Plugin API and JavaScript, published to the Figma Community.",
+            "What I find interesting as a design leader: the tell designers use by eye (purple vs. black) and the thing the Figma API actually exposes (node type) are the same underlying fact. The plugin doesn\u2019t invent a new method. It just makes the invisible visible \u2014 so governance becomes something a system owner can enforce, not just preach. This is the same instinct I bring to multi-brand system work at scale.",
+          ],
+          links: [
+            {
+              label: "Open in Figma Community",
+              href: "https://www.figma.com/community/plugin/1639652505677306792",
+            },
+            {
+              label: "See it scaled across 70+ brands",
+              href: "/work/pharma-design-systems",
+            },
           ],
           images: [
             {
-              src: `${ASSET_BASE}/05-apple-vision-pro-ar-concept.png`,
-              alt: "Apple Vision Pro spatial computing concept showing patient weight trend chart, patient profile, SD-tier tabs, and Type O- Universal Donor blood-type badge for in-office HCP and patient review",
+              src: `${ASSET_BASE}/09-detached-instance-finder-community-listing.jpg`,
+              alt: "Detached Instance Finder listing in the Figma Community, showing the plugin cover art and a layer list with one frame flagged as detached among live instances",
+            },
+            {
+              src: `${ASSET_BASE}/10-detached-instance-finder-plugin-ui.jpg`,
+              alt: "Detached Instance Finder plugin UI, showing the detection signal selector (name match, orphan, both), current page versus entire file scope, and a Scan button",
             },
           ],
         },
@@ -116,45 +131,12 @@ export default function Page() {
             },
           ],
         },
-        {
-          eyebrow: "Published tool · Figma Community",
-          title: "Detached Instance Finder",
-          description: [
-            "A Figma plugin I concepted, designed, and built, published to the Figma Community. It finds layers that were detached from their components before they cause design-system drift. Detached instances lose their link to the main component and silently stop receiving updates, so a button or card keeps looking right while quietly falling out of the system.",
-            "The plugin surfaces them using two detection signals: name-matching, which finds frames named like a component, and contextual orphan detection, which finds a plain frame sitting among instance siblings (the one black layer in a row of purple). Teams can scan the current page or the entire file and catch drift early. Built with the Figma Plugin API and JavaScript.",
-          ],
-          images: [
-            {
-              src: `${ASSET_BASE}/09-detached-instance-finder-community-listing.jpg`,
-              alt: "Detached Instance Finder listing in the Figma Community, showing the plugin cover art and a layer list with one frame flagged as detached among live instances",
-            },
-            {
-              src: `${ASSET_BASE}/10-detached-instance-finder-plugin-ui.jpg`,
-              alt: "Detached Instance Finder plugin UI, showing the detection signal selector (name match, orphan, both), current page versus entire file scope, and a Scan button",
-            },
-          ],
-        },
-        {
-          eyebrow: "Personal project · Free at-home learning supplement",
-          title: "Education Tools for Daughters",
-          description: [
-            "The lab also includes a small repository of educational apps I've built for my daughters, math and English learning tools that started as personal projects and have grown into a free at-home learning supplement. Same instinct as everything else: the right tool, in the right moment, for the actual person who needs it.",
-            "Two are live and playable right now: a fractions quiz that walks through pies, strips, and number lines, and an area and perimeter quiz with adjustable difficulty. Both built mobile-first, no sign-up, no tracking.",
-          ],
-          links: [
-            { label: "Try the Fractions Quiz", href: "/apps/fractions-quiz.html" },
-            {
-              label: "Try the Area & Perimeter Quiz",
-              href: "/apps/area-perimeter-quiz.html",
-            },
-          ],
-        },
       ]}
       outcomes={[
         {
           headline: "Working prototypes built in hours, not weeks",
           description:
-            "AI Patient Support, Channel Optimizer, Vision Pro concept, all built using AI-assisted development tools (v0, Base44, Claude, ChatGPT).",
+            "AI Patient Support and Channel Optimizer, built using AI-assisted development tools (v0, Base44, Claude, ChatGPT) in days, not sprints.",
         },
         {
           headline: "Three Custom GPTs deployed publicly",
@@ -164,7 +146,7 @@ export default function Page() {
         {
           headline: "A Figma plugin published to the Community",
           description:
-            "Detached Instance Finder, concepted, designed, and built end to end. It catches detached instances before they cause design-system drift.",
+            "Detached Instance Finder, concepted, designed, and built end to end. Surfaces detached components before they erode the system \u2014 the same governance instinct, scaled down to a single tool.",
         },
         {
           headline: "A vendor-agnostic AI advisory practice",
