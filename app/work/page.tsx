@@ -133,7 +133,7 @@ export default function Page() {
 
       {/* CTA CARDS — book (deeper read) + about (human context) */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
           <CTACards cards={["book", "about"]} />
         </div>
       </section>

@@ -45,13 +45,13 @@ export function CTACards({ cards }: { cards: string[] }) {
         >
           {item.image ? (
             <div
-              className={`relative ${item.imageAspect ?? "aspect-[16/10]"} overflow-hidden border-b border-border-subtle`}
+              className={`relative ${item.imageAspect ?? "aspect-[16/10]"} overflow-hidden border-b border-border-subtle ${item.imageFit === "contain" ? "bg-black" : ""}`}
             >
               <Image
                 src={item.image}
                 alt={item.imageAlt ?? ""}
                 fill
-                className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                className={`${item.imageFit === "contain" ? "object-contain" : "object-cover"} object-center transition-transform duration-500 group-hover:scale-[1.02]`}
                 unoptimized={isAnimated(item.image)}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />

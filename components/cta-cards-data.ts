@@ -35,6 +35,16 @@ export type CTACard = {
    * "aspect-[4/5]" for portrait-oriented imagery like the headshot).
    */
   imageAspect?: string;
+  /**
+   * How the image fills its container.
+   *   "cover" (default) — fills the container, cropping if needed.
+   *   "contain" — fits the entire image inside the container,
+   *               letterboxing with black bars when the source image
+   *               doesn't match the container's aspect ratio. Use for
+   *               portrait headshots or compositions you don't want
+   *               cropped.
+   */
+  imageFit?: "cover" | "contain";
 };
 
 export const CTA_CARDS: Record<string, CTACard> = {
@@ -79,7 +89,7 @@ export const CTA_CARDS: Record<string, CTACard> = {
     href: "/about",
     image: "/images/brand/shawn_m_capizzi_2026.png",
     imageAlt: "Shawn Capizzi",
-    imageAspect: "aspect-[4/5]",
+    imageFit: "contain",
   },
   engagements: {
     eyebrow: "Engagement modes",
