@@ -52,7 +52,7 @@ export default function Page() {
       {/* THE TWO THINGS */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Newsletter — inline signup form, same CRM endpoint as the
                 chapter-1 reader's "Get on the list" CTA. */}
             <article className="relative p-7 md:p-9 rounded-2xl card-surface border border-border-default">
