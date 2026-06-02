@@ -195,10 +195,10 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <a
             href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors"
             aria-label="Jump back to navigation"
           >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Jump menu
+            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
           <p className="eyebrow mb-4">Engagement type 01</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
@@ -276,10 +276,10 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <a
             href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors"
             aria-label="Jump back to navigation"
           >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Jump menu
+            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
           <p className="eyebrow mb-4">Engagement type 02</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
@@ -341,10 +341,10 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <a
             href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors"
             aria-label="Jump back to navigation"
           >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Jump menu
+            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
           <p className="eyebrow mb-4">Engagement type 03</p>
           <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
@@ -408,10 +408,10 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <a
             href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors"
             aria-label="Jump back to navigation"
           >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Jump menu
+            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
           <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
             Who I work with
@@ -484,13 +484,13 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <a
             href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors"
             aria-label="Jump back to navigation"
           >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Jump menu
+            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
           <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
-            What I focus on across engagements
+            How I work across engagements
           </h2>
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl mb-14 md:mb-16">
             Every engagement runs through three lenses. They&apos;re not
@@ -518,10 +518,10 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <a
             href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-text-tertiary hover:text-text-primary transition-colors"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-[#7B7FE0] hover:text-[#9DA0EE] transition-colors"
             aria-label="Jump back to navigation"
           >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Jump menu
+            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
           <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-14 md:mb-16 max-w-3xl">
             How an engagement starts
