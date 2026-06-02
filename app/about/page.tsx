@@ -66,7 +66,7 @@ export default function Page() {
           {/* Full-width declarative headline */}
           <div className="max-w-4xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance">
-              I help teams make clear design and marketing decisions across content strategy, experience design, and product development for regulated digital environments.
+              I help regulated teams make clearer decisions across content, experience design, and product.
             </h1>
           </div>
 
@@ -86,11 +86,9 @@ export default function Page() {
                 changes the structure of the business outcome.
               </p>
               <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-                Currently leading senior experience strategy, UX, and design
-                system governance inside a major pharmaceutical portfolio. I
-                work with biotech, fintech, software, agency, and enterprise
-                teams to bring senior depth across stakeholders, deadlines,
-                and decisions.
+                I work with pharma, biotech, fintech, software, agency, and
+                enterprise teams &mdash; embedded as senior leadership, on
+                advisory engagements, or on call between the big decisions.
               </p>
             </div>
 
@@ -176,14 +174,6 @@ export default function Page() {
               cardiovascular, neurological, immunology, and rare disease.
             </p>
             <p>
-              I&apos;ve led teams of 3–8 full-time and freelance designers
-              across multi-brand work. The thread across two decades: making
-              complex digital systems clear enough for the people who use them.
-              The constraint isn&apos;t usually the technology. It&apos;s the
-              architecture of decisions, content, and trust that wraps around
-              it.
-            </p>
-            <p>
               I taught at NYSCPS: design fundamentals, Adobe Photoshop, and
               Adobe InDesign. My BFA is from Pratt Institute in Communications
               Design and Advertising/Marketing.
@@ -240,14 +230,6 @@ export default function Page() {
                   COVID-19 and Its Impact on Healthcare Website Design
                 </a>{" "}
                 in EVERSANA INTOUCH.
-              </p>
-            </div>
-            <div className="border-l-2 border-border-default pl-6 md:pl-8">
-              <p className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight">
-                Teaching at NYSCPS
-              </p>
-              <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-                Design fundamentals, Adobe Photoshop, Adobe InDesign.
               </p>
             </div>
           </div>
@@ -366,6 +348,75 @@ export default function Page() {
               A look at the live performance work, visuals generated in real
               time alongside poetry and music.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SHARING THE PRACTICE — AI as a creative practice, ending on family */}
+      <section className="py-16 md:py-24 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+            Sharing the practice
+          </h2>
+          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
+            <p>
+              AI isn&apos;t something I clock in and out of. It&apos;s a daily
+              creative practice that runs across the live performance work,
+              the consulting, and pretty much everything I make for the people
+              in my life. The Lab on the work page is just the most visible
+              part of it.
+            </p>
+            <p>
+              I share what I learn as I learn it &mdash; with co-workers,
+              friends, and anyone curious enough to ask. Custom GPTs I&apos;ve
+              built, prompts I&apos;ve refined, tools I&apos;ve shipped to the
+              Figma Community. The goal isn&apos;t to teach AI. It&apos;s to
+              get more people excited about what they can make with it.
+            </p>
+            <p>
+              And the people I push it on hardest are my daughters. We&apos;ve
+              made Sora videos together that started as &ldquo;what would it
+              look like if&hellip;&rdquo; conversations at the dinner table.
+              I&apos;ve built small math and learning apps for them &mdash; a{" "}
+              <a
+                href="/apps/fractions-quiz.html"
+                className="underline decoration-text-tertiary hover:decoration-text-primary underline-offset-2 transition-colors"
+              >
+                fractions quiz
+              </a>
+              {" "}and an{" "}
+              <a
+                href="/apps/area-perimeter-quiz.html"
+                className="underline decoration-text-tertiary hover:decoration-text-primary underline-offset-2 transition-colors"
+              >
+                area and perimeter quiz
+              </a>
+              , free, no sign-up, no tracking. Same instinct as everything
+              else: the right tool, in the right moment, for the actual person
+              who needs it.
+            </p>
+          </div>
+
+          {/* Sora video — playful close */}
+          <div className="mt-14 md:mt-16 max-w-3xl">
+            <p className="metadata-label mb-4">A recent one with my daughters</p>
+            <figure className="rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
+              <video
+                controls
+                preload="metadata"
+                poster="/videos/sora-holiday-cookies-poster.jpg"
+                className="w-full h-auto block"
+              >
+                <source src="/videos/sora-holiday-cookies.mp4" type="video/mp4" />
+                Your browser doesn&apos;t support the video tag. The video
+                shows a Sora-generated stack of patriotic-sprinkled holiday
+                cookies on a gold plate.
+              </video>
+              <figcaption className="px-5 py-4 text-sm text-text-secondary border-t border-border-subtle">
+                Generated in Sora. The kind of thing that starts as a question
+                at the dinner table.
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
