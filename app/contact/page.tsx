@@ -4,7 +4,7 @@ import { CTACards } from "@/components/CTACards";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Three ways in: a 30-minute strategy call, email, or phone. No pitch. Most engagements move from first call to signed SOW in 2–3 weeks.",
+    "Three ways in: a 30-minute strategy call, email, or phone. Most engagements move from first call to signed SOW in 2–3 weeks.",
 };
 
 const CAL_URL = "https://cal.com/capizzi/30min";
@@ -16,17 +16,17 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/shawncapizzi";
 export default function Page() {
   return (
     <article>
-      {/* HERO — anxiety-resolving in the first sentence ("No pitch") */}
+      {/* HERO — confident, action-oriented setup */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-6">Contact</p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-4xl">
-            Three ways in. No pitch.
+            Three ways in.
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
-            Most engagements start with the 30-minute call. Email works when
-            you&apos;d rather think on the page. Phone is fine if you just want
-            to talk.
+            Most engagements start with the 30-minute call. Email is great so
+            you can include some context and documentation. Phone is fine if
+            you want to get going quick too.
           </p>
         </div>
       </section>
