@@ -121,6 +121,7 @@ export default function Page() {
                   alt="Shawn Capizzi"
                   fill
                   priority
+                  quality={100}
                   className="object-cover object-[50%_40%]"
                   sizes="(max-width: 1024px) 220px, 250px"
                 />
