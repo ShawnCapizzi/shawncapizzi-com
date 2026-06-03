@@ -71,14 +71,12 @@ export default function Page() {
           </div>
 
           {/* Body copy + portrait, side-by-side on desktop; stacks on mobile.
-              On desktop the columns are vertically centered relative to each
-              other (items-center). The portrait container is sized 6% larger
-              (360 wide max desktop, 276 mobile) and the source image has been
-              cropped on the left to remove the neighboring shoulder — so Shawn
-              sits naturally centered in the frame. object-[50%_40%] anchors
-              the visible window slightly down from the top: head sits higher
-              in the frame, more chest visible below, less gray background
-              above. */}
+              On desktop the photo container is sized so its height matches
+              the text block on the left (~316px at text-xl leading-relaxed,
+              two paragraphs). At aspect-[340/430], a 250px max-width yields
+              ~316px height — the columns now read as a balanced pair rather
+              than the photo dominating. object-[50%_40%] keeps the head
+              high in the frame, chest visible below. */}
           <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-center">
             <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center">
               <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -117,14 +115,14 @@ export default function Page() {
             </div>
 
             <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-start">
-              <div className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl capizzi-rim-card w-full max-w-[276px] lg:max-w-[360px] aspect-[340/430]">
+              <div className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl capizzi-rim-card w-full max-w-[220px] lg:max-w-[250px] aspect-[340/430]">
                 <Image
                   src="/images/brand/shawn_m_capizzi_2026.png"
                   alt="Shawn Capizzi"
                   fill
                   priority
                   className="object-cover object-[50%_40%]"
-                  sizes="(max-width: 1024px) 276px, 360px"
+                  sizes="(max-width: 1024px) 220px, 250px"
                 />
               </div>
             </div>
