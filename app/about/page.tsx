@@ -194,7 +194,7 @@ export default function Page() {
               cardiovascular, neurological, immunology, and rare disease.
             </p>
             <p>
-              I taught at NYSCPS: design fundamentals, Adobe Photoshop, and
+              I taught at NYU: design fundamentals, Adobe Photoshop, and
               Adobe InDesign. My BFA is from Pratt Institute in Communications
               Design and Advertising/Marketing.
             </p>

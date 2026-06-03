@@ -110,13 +110,13 @@ export default function Page() {
             Three flexible ways to bring in senior depth, scaled to your needs, timing, and roadmap.
           </h1>
           <p className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
-            I take on a small number of teams inside regulated and enterprise
-            organizations navigating complexity, in their content and experience
-            design decisions.
+            I take on a small number of teams navigating complexity in their
+            content and experience design decisions, inside regulated and
+            enterprise organizations.
           </p>
           <p className="mt-5 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
-            The three ways of working below are shapes a flexible, collaborative
-            relationship can take, not off-the-shelf products you pick from.
+            The three options below are flexible shapes a working partnership
+            takes. Not products on a shelf.
           </p>
 
           <div id="engagements-nav" className="mt-8 md:mt-10 scroll-mt-32 md:scroll-mt-40">
