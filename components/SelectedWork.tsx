@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+// Detects animated formats that must bypass Next.js image optimization.
+// Without `unoptimized`, Next.js converts .gif to static WebP and the
+// animation freezes on frame 1. Apply via the `unoptimized` prop below.
+const isAnimated = (src: string) => src.toLowerCase().endsWith(".gif");
+
 const CASE_STUDIES = [
   {
     slug: "pharma-design-systems",
@@ -35,7 +40,7 @@ const CASE_STUDIES = [
     eyebrow: "AI integration · Healthcare prototyping · Vendor-agnostic",
     headline: "How I use AI to accelerate research, design, prototype, and delivery",
     outcome: "Built on years of bringing teams together. Working prototypes, deployed Custom GPTs, and a contrarian thesis: AI is the boring work most companies haven't done yet.",
-    image: "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-patient-support-disease-first.png",
+    image: "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-patient-support-demo.gif",
   },
 ];
 
@@ -66,6 +71,7 @@ export function SelectedWork() {
                   alt=""
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  unoptimized={isAnimated(cs.image)}
                   className="object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                 />
               </div>
