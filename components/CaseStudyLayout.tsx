@@ -6,7 +6,7 @@ import { BrowserFrame } from "@/components/BrowserFrame";
 import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
 import { CollapsibleSection } from "@/components/CollapsibleSection";
 
-const CAL_URL = "https://cal.com/capizzi/15min";
+const CAL_URL = "https://cal.com/capizzi/30min";
 
 interface MetadataItem {
   label: string;
@@ -40,8 +40,11 @@ interface ProjectShowcase {
   images?: {
     src: string;
     alt: string;
-    /** When set, wraps this image in a BrowserFrame with the given URL bar label. */
-    browserFrame?: { url: string };
+    /** When set, wraps this image in a BrowserFrame with the given URL bar label.
+     *  Optional `aspectRatio` (W/H as a number, e.g. 4/3 or 16/10) forces a
+     *  uniform viewport size — use when pairing two browser-framed images in
+     *  a grid that need to render at exactly the same height. */
+    browserFrame?: { url: string; aspectRatio?: number };
   }[];
   /** Optional call-to-action links (e.g. "Try it" buttons for live apps). External links open in new tab. */
   links?: { label: string; href: string }[];
@@ -317,6 +320,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                             url={image.browserFrame.url}
                             ariaLabel={image.alt}
                             theme="dark"
+                            aspectRatio={image.browserFrame.aspectRatio}
                           />
                         </div>
                       ) : (

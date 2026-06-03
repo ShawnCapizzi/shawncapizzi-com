@@ -58,12 +58,12 @@ export default function Page() {
             {
               src: `${ASSET_BASE}/01-hero-ai-patient-support-demo.gif`,
               alt: "AI Patient Support live demo, disease-organized navigation across oncology, diabetes, cardiovascular, immunology, neurology, HIV/AIDS, rare disease, and respiratory",
-              browserFrame: { url: "ai-patient-support.com" },
+              browserFrame: { url: "ai-patient-support.com", aspectRatio: 4 / 3 },
             },
             {
               src: `${ASSET_BASE}/02-ai-patient-support-drug-detail.png`,
               alt: "AI Patient Support drug detail view, oncology IO lead deep dive with tagged media by length, source, and category",
-              browserFrame: { url: "ai-patient-support.com/oncology" },
+              browserFrame: { url: "ai-patient-support.com/oncology", aspectRatio: 4 / 3 },
             },
           ],
         },

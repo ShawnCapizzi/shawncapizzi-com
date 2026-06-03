@@ -12,6 +12,16 @@ export interface BrowserFrameProps {
   url?: string;
   width?: number;
   fallbackAspect?: number;
+  /**
+   * Explicit viewport aspect ratio (W/H, e.g. 16/10 or 4/3). When set,
+   * overrides the natural-image aspect detection AND switches the media
+   * fit to object-cover (so the image fills the viewport, cropping if
+   * needed). Use this when pairing multiple BrowserFrames in a grid that
+   * need uniform sizing — both siblings render at exactly the same height.
+   * When undefined (default), the viewport auto-sizes to the source's
+   * natural aspect ratio and uses object-contain.
+   */
+  aspectRatio?: number;
   tiltDegrees?: number;
   /** "dark" matches the site's navy aesthetic. "light" is the legacy default. */
   theme?: "light" | "dark";
@@ -30,6 +40,7 @@ export function BrowserFrame({
   url = "https://example.com",
   width = 720,
   fallbackAspect = 16 / 10,
+  aspectRatio,
   tiltDegrees = 0,
   theme = "dark",
   ariaLabel = "Product video in browser frame",
@@ -70,6 +81,13 @@ export function BrowserFrame({
   }, [src, isImage]);
 
   const chromeHeight = 38;
+
+  // When aspectRatio is explicitly provided, use it (override natural detection).
+  // Otherwise fall back to the detected/fallback natural aspect.
+  const effectiveAspect = aspectRatio ?? aspect;
+  // Explicit aspect → object-cover (fills the viewport, crops if needed).
+  // Natural aspect → object-contain (no crop, image fits naturally).
+  const objectFitClass = aspectRatio !== undefined ? "object-cover" : "object-contain";
 
   // Theme-aware colors: dark default tuned to Shawn's design tokens
   const isDark = theme === "dark";
@@ -140,21 +158,21 @@ export function BrowserFrame({
           className="relative bg-black"
           style={{
             width: "100%",
-            aspectRatio: `${aspect}`,
+            aspectRatio: `${effectiveAspect}`,
           }}
         >
           {isImage ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               ref={imgRef}
-              className="w-full h-full object-contain block"
+              className={`w-full h-full ${objectFitClass} block`}
               src={src}
               alt={ariaLabel}
             />
           ) : (
             <video
               ref={videoRef}
-              className="w-full h-full object-contain block"
+              className={`w-full h-full ${objectFitClass} block`}
               src={src}
               poster={poster}
               autoPlay={autoPlay}
