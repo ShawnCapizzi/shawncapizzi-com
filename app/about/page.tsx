@@ -73,11 +73,11 @@ export default function Page() {
           {/* Body copy + portrait, side-by-side on desktop; stacks on mobile.
               On desktop the columns are vertically centered relative to each
               other (items-center). The portrait container is sized smaller
-              (340×530 desktop) with an aspect ratio that's narrower than the
-              source — so object-cover + object-right-top anchors the image
-              to the right edge and crops the left side, hiding the
-              neighboring shoulder for a cleaner, more focused headshot.
-              Smaller container also reduces vertical footprint. */}
+              (340×430 desktop) and the source image has been cropped 100px
+              from the bottom — so the framing is tight on Shawn's face and
+              upper torso. object-right-top anchors to the right edge and
+              crops the left side, hiding the neighboring shoulder for a
+              clean, focused headshot. */}
           <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-center">
             <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center">
               <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -116,7 +116,7 @@ export default function Page() {
             </div>
 
             <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-start">
-              <div className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl capizzi-rim-card w-full max-w-[260px] lg:max-w-[340px] aspect-[340/530]">
+              <div className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl capizzi-rim-card w-full max-w-[260px] lg:max-w-[340px] aspect-[340/430]">
                 <Image
                   src="/images/brand/shawn_m_capizzi_2026.png"
                   alt="Shawn Capizzi"
