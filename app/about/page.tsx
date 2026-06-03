@@ -75,9 +75,10 @@ export default function Page() {
               other (items-center). The portrait container is sized 6% larger
               (360 wide max desktop, 276 mobile) and the source image has been
               cropped on the left to remove the neighboring shoulder — so Shawn
-              sits naturally centered in the frame. object-top preserves the
-              face and crops slightly from the bottom suit area, for a tighter
-              editorial framing. */}
+              sits naturally centered in the frame. object-[50%_40%] anchors
+              the visible window slightly down from the top: head sits higher
+              in the frame, more chest visible below, less gray background
+              above. */}
           <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-center">
             <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center">
               <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -122,7 +123,7 @@ export default function Page() {
                   alt="Shawn Capizzi"
                   fill
                   priority
-                  className="object-cover object-top"
+                  className="object-cover object-[50%_40%]"
                   sizes="(max-width: 1024px) 276px, 360px"
                 />
               </div>
