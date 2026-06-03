@@ -71,11 +71,13 @@ export default function Page() {
           </div>
 
           {/* Body copy + portrait, side-by-side on desktop; stacks on mobile.
-              On desktop (lg+), the grid stretches both columns to equal
-              height, and the photo fills its column via h-full — so the
-              photo always matches the copy block height. On mobile the
-              layout stacks and the photo reverts to a fixed 4:5 ratio. */}
-          <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-stretch">
+              On desktop the columns are vertically centered relative to each
+              other (items-center). The portrait uses its native 4:5 aspect
+              ratio with object-cover so the photo fills the frame cleanly —
+              no letterboxing, no stark black bars. Editorial scale on
+              desktop (440px max), restrained on mobile (320px max) so the
+              headshot doesn't dominate the small viewport. */}
+          <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-center">
             <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center">
               <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
                 I&apos;m a strategic experience design leader with 15+ years
@@ -112,18 +114,15 @@ export default function Page() {
               </p>
             </div>
 
-            <div className="lg:col-span-5 order-1 lg:order-2 flex">
-              <div
-                className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl bg-black capizzi-rim-card w-full aspect-[16/10]"
-                style={{ maxWidth: "min(100%, 378px)" }}
-              >
+            <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-start">
+              <div className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl capizzi-rim-card w-full max-w-[320px] lg:max-w-[440px] aspect-[4/5]">
                 <Image
                   src="/images/brand/shawn_m_capizzi_2026.png"
                   alt="Shawn Capizzi"
                   fill
                   priority
-                  className="object-contain object-center"
-                  sizes="(max-width: 1024px) 80vw, 378px"
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 320px, 440px"
                 />
               </div>
             </div>
