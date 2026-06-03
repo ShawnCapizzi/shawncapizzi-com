@@ -196,7 +196,8 @@ export default function Page() {
             <p>
               I taught at NYU: design fundamentals, Adobe Photoshop, and
               Adobe InDesign. My BFA is from Pratt Institute in Communications
-              Design and Advertising/Marketing.
+              Design and Advertising/Marketing. Most recently, I completed the
+              Rutgers AI Automation cohort.
             </p>
           </div>
         </div>
