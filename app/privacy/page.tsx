@@ -1,12 +1,11 @@
 // Destination: app/privacy/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CookieDeclaration } from "@/components/CookieDeclaration";
 
 export const metadata: Metadata = {
   title: "Privacy",
   description:
-    "How I handle the small amount of personal information collected through shawncapizzi.com. Plain language, no surprises.",
+    "How information shared through shawncapizzi.com is handled. Same discipline that applies to client work.",
   alternates: {
     canonical: "/privacy",
   },
@@ -25,258 +24,245 @@ export default function PrivacyPage() {
             Last updated: June 12, 2026
           </p>
 
+          {/* ============================================================
+              OPENING: establishes posture, not a data inventory
+              ============================================================ */}
           <p className="mt-10 text-lg md:text-xl text-text-secondary leading-relaxed">
-            I run shawncapizzi.com as the public site for my independent
-            consulting practice. This page describes what information I
-            collect when you visit or contact me, how I use it, and how to
-            ask me to remove it. The site collects very little data, and I
-            do not sell or trade any of it.
+            Most of my work is done under NDA for pharma, biotech, fintech,
+            and enterprise teams. The same discipline applies here. Anything
+            shared through this site is treated the way I treat client
+            information under engagement: confidentially, deliberately, and
+            with as small a footprint as the work requires.
           </p>
 
-          {/* WHAT I COLLECT */}
+          <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
+            This page is the practical version of that posture. It covers
+            what the site collects, what it does with that information, and
+            how to ask me to remove it.
+          </p>
+
+          {/* ============================================================
+              HOW THIS WORKS: replaces "what I collect" with posture-first
+              ============================================================ */}
           <div className="mt-16 md:mt-20">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              What I collect
+              How privacy actually works here
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              There are three places where you might intentionally share
-              information with me through this site:
+              The practice is independent, which means a few useful things
+              for anyone who reaches out:
+            </p>
+            <ul className="mt-6 space-y-3 text-lg md:text-xl text-text-secondary leading-relaxed list-disc pl-6">
+              <li>
+                The person who reads your message is the same person who
+                replies to it. No shared inbox, no routing, no junior
+                handler.
+              </li>
+              <li>
+                Contact information stays with me. There is no CRM passing
+                leads to a sales team, because there is no sales team.
+              </li>
+              <li>
+                I do not sell, trade, or share contact data with third
+                parties for marketing. Ever.
+              </li>
+              <li>
+                If your inquiry touches confidential material before
+                signing an NDA, send a paragraph rather than a deck. We
+                can paper the engagement before the detailed conversation.
+              </li>
+            </ul>
+          </div>
+
+          {/* ============================================================
+              WHAT THE SITE COLLECTS
+              ============================================================ */}
+          <div className="mt-16 md:mt-20">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
+              What the site collects
+            </h2>
+            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
+              Three places where you might share information intentionally:
             </p>
             <ul className="mt-6 space-y-3 text-lg md:text-xl text-text-secondary leading-relaxed list-disc pl-6">
               <li>
                 <strong className="text-text-primary">Contact form.</strong>{" "}
-                Your name, email address, and the message you send. Used to
-                reply to you about your inquiry.
+                Your name, email, and the message you send. Used to reply
+                to your inquiry.
               </li>
               <li>
                 <strong className="text-text-primary">
                   Strategy call bookings.
                 </strong>{" "}
-                When you book through Cal.com, you provide your name,
-                email, and the meeting time. Cal.com manages this data on
-                my behalf as a third-party scheduling tool.
+                Name, email, and meeting time, managed through Cal.com.
               </li>
               <li>
-                <strong className="text-text-primary">
-                  Newsletter signups.
-                </strong>{" "}
-                If you subscribe to my newsletter, your email address is
-                stored with Kit (formerly ConvertKit), the platform that
-                sends my newsletter. You can unsubscribe with one click
-                from any email I send.
-              </li>
-            </ul>
-
-            <p className="mt-8 text-lg md:text-xl text-text-secondary leading-relaxed">
-              I also use Google Analytics 4 to understand which pages are
-              visited and roughly where visitors come from. This data is
-              anonymized and aggregated. Analytics only run after you
-              accept the cookie banner. If you decline, Google Analytics
-              still receives a small number of cookieless signals
-              (essentially: a page was viewed) under Google&apos;s Consent
-              Mode v2, but nothing identifiable to you.
-            </p>
-          </div>
-
-          {/* HOW I USE IT */}
-          <div className="mt-16 md:mt-20">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              How I use it
-            </h2>
-            <ul className="mt-6 space-y-3 text-lg md:text-xl text-text-secondary leading-relaxed list-disc pl-6">
-              <li>
-                To reply to your contact-form message or confirm your
-                strategy call.
-              </li>
-              <li>
-                To send you the newsletter you signed up for, until you
-                unsubscribe.
-              </li>
-              <li>
-                To understand which case studies and pages are useful, so
-                I can write more of what works.
+                <strong className="text-text-primary">Newsletter.</strong>{" "}
+                If you subscribe, your email is stored with Kit (formerly
+                ConvertKit). One-click unsubscribe in every email.
               </li>
             </ul>
             <p className="mt-8 text-lg md:text-xl text-text-secondary leading-relaxed">
-              I do not sell your information. I do not use it for
-              targeted advertising. I do not share it with third parties
-              for marketing purposes.
+              The site also uses Google Analytics 4 to understand which
+              pages and case studies are useful. Analytics only activate
+              after you accept the cookie banner. If you decline, GA4
+              receives a small number of cookieless signals under
+              Google&apos;s Consent Mode v2, none of which identify you.
             </p>
           </div>
 
-          {/* WHO I SHARE IT WITH */}
+          {/* ============================================================
+              THE STACK: reframe third parties as deliberate choices
+              ============================================================ */}
           <div className="mt-16 md:mt-20">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              Who I share it with
+              The stack
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              The site uses a small number of third-party services to
-              function. Each one only sees the specific data it needs for
-              its job:
+              The site runs on a small, deliberate set of services. Each
+              one sees only the data it needs to do its job, and each is
+              chosen for its own compliance posture:
             </p>
             <ul className="mt-6 space-y-3 text-lg md:text-xl text-text-secondary leading-relaxed list-disc pl-6">
               <li>
-                <strong className="text-text-primary">Vercel</strong> hosts
-                the site itself. Standard server logs (IP address, page
-                requested) are retained briefly for security and
-                performance.
+                <strong className="text-text-primary">Vercel</strong>{" "}
+                hosts the site. Standard server logs are retained briefly
+                for security.
               </li>
               <li>
                 <strong className="text-text-primary">Cal.com</strong>{" "}
-                handles strategy call scheduling. Their privacy policy
-                lives at{" "}
+                handles scheduling.{" "}
                 <a
                   href="https://cal.com/privacy"
                   className="text-link hover:text-link-hover transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  cal.com/privacy
+                  Their policy
                 </a>
                 .
               </li>
               <li>
-                <strong className="text-text-primary">Kit (ConvertKit)</strong>{" "}
-                manages newsletter subscriptions. Their privacy policy
-                lives at{" "}
+                <strong className="text-text-primary">Kit</strong>{" "}
+                handles newsletter subscriptions.{" "}
                 <a
                   href="https://kit.com/privacy"
                   className="text-link hover:text-link-hover transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  kit.com/privacy
+                  Their policy
                 </a>
                 .
               </li>
               <li>
                 <strong className="text-text-primary">Google Analytics 4</strong>{" "}
-                provides traffic analytics. Configured with IP anonymization
-                and consent-mode defaults set to denied until you accept.
+                with IP anonymization and Consent Mode v2 defaults set to
+                denied.
               </li>
               <li>
                 <strong className="text-text-primary">Cookiebot</strong>{" "}
-                manages the cookie consent banner you saw when you arrived.
+                runs the consent banner you saw when you arrived.
               </li>
             </ul>
           </div>
 
-          {/* COOKIES AND TRACKING */}
+          {/* ============================================================
+              COOKIES: short, no embedded table
+              ============================================================ */}
           <div className="mt-16 md:mt-20">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              Cookies and tracking
+              Cookies
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              Cookies are small files stored by your browser. This site
-              uses them for two things: keeping the site working (necessary
-              cookies, which cannot be turned off) and understanding
-              traffic (analytics cookies, which only activate after you
-              click Accept on the banner).
+              Two categories are in use: necessary cookies that keep the
+              site working, and analytics cookies that only activate after
+              you accept the banner. Change your consent anytime via the
+              fingerprint icon in the bottom-left corner of any page.
             </p>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              You can change your consent choice anytime by clicking the
-              small fingerprint icon in the bottom-left corner of any page,
-              or by clearing your browser cookies for this site.
+              The full technical list with expiry dates is maintained by
+              Cookiebot at{" "}
+              <a
+                href={`https://consent.cookiebot.com/${process.env.NEXT_PUBLIC_COOKIEBOT_CBID}/cd.js`}
+                className="text-link hover:text-link-hover transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                their hosted declaration page
+              </a>
+              .
             </p>
-            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              The full, current list of cookies in use is auto-generated
-              and updated by Cookiebot each month:
-            </p>
-
-            <div className="mt-8">
-              <CookieDeclaration />
-            </div>
           </div>
 
-          {/* YOUR RIGHTS */}
+          {/* ============================================================
+              YOUR CONTROL
+              ============================================================ */}
           <div className="mt-16 md:mt-20">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              Your rights
+              Your control over your data
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              I am based in the United States and most of my clients are
-              also US-based. The practical rights below apply to everyone
-              who contacts me through this site, regardless of where you
-              live.
+              At any point you can ask me to tell you what information I
+              have about you, correct it, delete it, or send you a copy.
+              Email is the fastest path. Requests are honored within 30
+              days, usually faster.
             </p>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              You can ask me to:
-            </p>
-            <ul className="mt-6 space-y-3 text-lg md:text-xl text-text-secondary leading-relaxed list-disc pl-6">
-              <li>Tell you what information I have about you, if any.</li>
-              <li>Correct any information that is wrong.</li>
-              <li>
-                Delete your information from my email, Cal.com, and Kit.
-              </li>
-              <li>
-                Unsubscribe from the newsletter (also possible via the
-                unsubscribe link in any email).
-              </li>
-              <li>Receive a copy of any information I have about you.</li>
-            </ul>
-            <p className="mt-8 text-lg md:text-xl text-text-secondary leading-relaxed">
               For California residents, these rights are formalized under
-              the California Consumer Privacy Act (CCPA) and the California
-              Privacy Rights Act (CPRA). I do not sell or share personal
-              information as those terms are defined under California law.
-            </p>
-            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              For visitors from the EU, UK, or other GDPR jurisdictions, I
-              process personal data on the legal basis of legitimate
-              interest (responding to your inquiry) or consent (newsletter
-              signup, analytics). You have the right to withdraw consent
-              and request data portability at any time.
+              the CCPA and CPRA. I do not sell or share personal information
+              as defined under California law. For EU and UK visitors,
+              processing relies on legitimate interest (replying to your
+              inquiry) or explicit consent (newsletter, analytics), and you
+              can withdraw consent at any time.
             </p>
           </div>
 
-          {/* DATA RETENTION */}
+          {/* ============================================================
+              RETENTION
+              ============================================================ */}
           <div className="mt-16 md:mt-20">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              How long I keep your information
+              How long information is kept
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              I keep contact-form messages and call notes for as long as
-              there is an active conversation or working relationship, then
-              archive them in case you reach out again later. If you ask me
-              to delete your information, I will do so within 30 days.
-            </p>
-            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              Newsletter subscribers stay on the list until they
-              unsubscribe.
-            </p>
-            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              Analytics data is retained by Google for 14 months at the
-              event level, then aggregated indefinitely. I have no access
-              to individual visitor records, only aggregated reports.
+              Contact-form messages and call notes are kept while a
+              conversation or working relationship is active, then archived
+              in case you reach out again. Deletion requests are honored
+              within 30 days. Newsletter subscribers stay on the list until
+              they unsubscribe. Analytics data is retained by Google for 14
+              months at the event level, then aggregated indefinitely.
             </p>
           </div>
 
-          {/* CHANGES */}
+          {/* ============================================================
+              CHANGES
+              ============================================================ */}
           <div className="mt-16 md:mt-20">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              Changes to this policy
+              Changes
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              If I add a new tool that handles personal data, or change how
-              existing data is used, I will update this page and the
-              last-updated date at the top. For material changes that
-              affect existing subscribers, I will also notify the
-              newsletter list.
+              If a new tool starts handling personal data, or existing
+              handling changes meaningfully, this page and the
+              last-updated date will reflect that. Material changes
+              affecting newsletter subscribers also go out through the
+              newsletter itself.
             </p>
           </div>
 
-          {/* CONTACT */}
+          {/* ============================================================
+              CONTACT
+              ============================================================ */}
           <div className="mt-16 md:mt-20 pt-12 border-t border-border-subtle">
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-              Questions, requests, or concerns
+              Questions
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              The best way to reach me for anything related to your data is
-              email. I read everything personally and reply within a few
-              business days.
+              For anything related to your data on this site, email is the
+              cleanest path:
             </p>
             <p className="mt-8 text-lg md:text-xl text-text-secondary leading-relaxed">
-              <strong className="text-text-primary">Email:</strong>{" "}
               <a
                 href="mailto:capizzi@shawncapizzi.com"
                 className="text-link hover:text-link-hover transition-colors"
@@ -284,7 +270,6 @@ export default function PrivacyPage() {
                 capizzi@shawncapizzi.com
               </a>
               <br />
-              <strong className="text-text-primary">Phone:</strong>{" "}
               <a
                 href="tel:+12123803900"
                 className="text-link hover:text-link-hover transition-colors"
@@ -299,8 +284,8 @@ export default function PrivacyPage() {
                 className="text-link hover:text-link-hover transition-colors"
               >
                 contact form
-              </Link>{" "}
-              and mention privacy in your message.
+              </Link>
+              .
             </p>
           </div>
         </div>
