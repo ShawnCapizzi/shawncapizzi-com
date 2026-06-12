@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Allow .env.example to be tracked (it has no secrets, only documents which vars to set)
+!.env.example
