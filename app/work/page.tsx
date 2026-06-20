@@ -21,9 +21,9 @@ const CASE_STUDIES = [
   },
   {
     slug: "enterprise-financial-services-crm",
-    eyebrow: "Bloomberg · Enterprise · Terminal Environment",
+    eyebrow: "Bloomberg · Financial services · Enterprise CRM",
     title:
-      "Redesigning CRM workflows inside a terminal-driven enterprise environment",
+      "Redesigning rep workflows in a terminal-driven CRM environment",
     description:
       "Architectural inquiry across three rep types. Faster scanability, quicker decisions, measurable time-in-task reduction across the rep experience.",
     image:
@@ -54,7 +54,7 @@ const CASE_STUDIES = [
     eyebrow: "Solo · AI Native Design Lab",
     title: "Building an AI-native product design lab",
     description:
-      "A working AI-native product design practice — UXR tools, prototype agents, healthcare-first applications. Vendor-agnostic AI advisory grounded in hands-on work.",
+      "A working AI-native product design practice: UXR tools, prototype agents, healthcare-first applications. Vendor-agnostic AI advisory grounded in hands-on work.",
     image:
       "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-native-design-lab.png",
   },
@@ -64,7 +64,7 @@ const CASE_STUDIES = [
     title:
       "A voice-first medication adherence skill, designed before voice was a category",
     description:
-      "Early Alexa Skill exploration for medication adherence. Hand-mapped dialog architecture, intent and utterance modeling, SaySpring prototyping, live user testing — pre-LLM, pre-agentic, and the foundation for every conversational engagement since.",
+      "Early Alexa Skill exploration for medication adherence. Hand-mapped dialog architecture, intent and utterance modeling, SaySpring prototyping, live user testing. Pre-LLM, pre-agentic, and the foundation for every conversational engagement since.",
     image: "/images/case-studies/06-vui-voice-pill-tracker/01-hero-vui-dialog-chart.jpg",
   },
 ];
@@ -85,7 +85,7 @@ export default function Page() {
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
             A decade of enterprise experience design across pharma, healthcare,
-            and finance — and selected work outside it.
+            and finance, plus selected work outside it.
           </p>
         </div>
       </section>

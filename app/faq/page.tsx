@@ -42,7 +42,7 @@ const FAQS = [
   },
   {
     q: "What is the Capizzi Process?",
-    a: "A field-tested methodology for moving complex, regulated, AI-touched products from strategy to shipped experience. Built around six principles: clarity before creativity, HVA (highest-value action) before CTA, hierarchy before decoration, trust before action, systems before scattered activity, and judgment over output. It's the spine of the case studies, the book, and the workshops on this site.",
+    a: "A field-tested methodology for moving complex, regulated, AI-touched products from strategy to shipped experience. Built around six principles: clarity before creativity, HVA (highest-value action) before CTA, hierarchy before decoration, trust before action, systems before scattered activity, and judgment over output. Not every engagement uses all six. Which principles apply depends on your team's process, where the initiative sits in its timeline, and the state it's in. It's the spine of the case studies, the book, and the workshops on this site.",
   },
   {
     q: "What industries and clients have you worked with?",

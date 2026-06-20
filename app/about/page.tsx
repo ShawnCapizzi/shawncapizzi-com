@@ -66,7 +66,7 @@ export default function Page() {
           {/* Full-width declarative headline */}
           <div className="max-w-4xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance">
-              I help regulated teams make clearer decisions across content, experience design, and product.
+              I help regulated and enterprise teams make complex digital work clearer, more trusted, and easier to ship.
             </h1>
           </div>
 
@@ -74,7 +74,7 @@ export default function Page() {
               On desktop the photo container is sized so its height matches
               the text block on the left (~316px at text-xl leading-relaxed,
               two paragraphs). At aspect-[340/430], a 250px max-width yields
-              ~316px height — the columns now read as a balanced pair rather
+              ~316px height, the columns now read as a balanced pair rather
               than the photo dominating. The source is 1:1, so object-cover
               shows the full vertical frame and crops the side padding evenly;
               object-center is correct. */}
@@ -90,7 +90,7 @@ export default function Page() {
               </p>
               <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
                 I work with pharma, biotech, fintech, software, agency, and
-                enterprise teams &mdash; embedded as{" "}
+                enterprise teams, embedded as{" "}
                 <Link
                   href="/engagements#leadership"
                   className="text-link hover:text-link-hover transition-colors"
@@ -415,7 +415,7 @@ export default function Page() {
               {" "}is just the most visible part of it.
             </p>
             <p>
-              I share what I learn as I learn it &mdash; with co-workers,
+              I share what I learn as I learn it, with co-workers,
               friends, and anyone curious enough to ask. Custom GPTs I&apos;ve
               built, prompts I&apos;ve refined, tools I&apos;ve shipped to the
               Figma Community. The goal isn&apos;t to teach AI. It&apos;s to
@@ -425,7 +425,7 @@ export default function Page() {
               And the people I push it on hardest are my daughters. We&apos;ve
               made Sora videos together that started as &ldquo;what would it
               look like if&hellip;&rdquo; conversations at the dinner table.
-              I&apos;ve also built small math and learning apps for them &mdash;
+              I&apos;ve also built small math and learning apps for them:
               free, no sign-up, no tracking. Same instinct as everything else:
               the right tool, in the right moment, for the actual person who
               needs it.
@@ -455,7 +455,7 @@ export default function Page() {
             <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-4">
               My daughters and I cook all the time. Sometimes we take photos
               of our creations and turn them into AI videos to bring new
-              context to them &mdash; and help the girls have fun
+              context to them, and help the girls have fun
               experimenting with AI.
             </p>
             <figure className="rounded-2xl overflow-hidden border border-border-default bg-bg-raised">

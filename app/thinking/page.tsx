@@ -108,7 +108,7 @@ export default function Page() {
                   width="100%"
                   frameBorder="0"
                   allowFullScreen
-                  title="LinkedIn post — recent thinking"
+                  title="LinkedIn post: recent thinking"
                   loading="lazy"
                   style={{ display: "block", borderRadius: "12px" }}
                 />
@@ -124,7 +124,7 @@ export default function Page() {
                 aspect="16:9"
               />
               <p className="mt-4 text-sm text-text-tertiary italic">
-                Hear me think through the work — voice rather than text.
+                Hear me think through the work. Voice rather than text.
               </p>
             </div>
           </div>
@@ -177,7 +177,7 @@ export default function Page() {
       {/* CTA CARDS — book + cards: tools that operationalize this thinking */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-3">Also from the studio</p>
+          <p className="eyebrow mb-3">Also from the practice</p>
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-10 md:mb-12 max-w-3xl">
             Tools that operationalize the thinking
           </h2>

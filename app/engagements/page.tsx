@@ -456,8 +456,8 @@ export default function Page() {
               </p>
               <p className="text-base text-text-secondary leading-relaxed">
                 My closest daily collaborators. I work shoulder-to-shoulder on
-                the actual artifacts &mdash; wireframes, content frameworks,
-                decks, prototypes &mdash; and earn trust through the craft, not
+                the actual artifacts (wireframes, content frameworks,
+                decks, prototypes) and earn trust through the craft, not
                 the title above it.
               </p>
             </article>
@@ -482,7 +482,7 @@ export default function Page() {
               </p>
               <p className="text-base text-text-secondary leading-relaxed">
                 The functions that wrap around the work. I treat regulatory
-                partners &mdash; RC, MLR, FDA, SEC &mdash; as collaborators,
+                partners (RC, MLR, FDA, SEC) as collaborators,
                 not gatekeepers. The work moves faster when they&apos;re
                 brought in early.
               </p>

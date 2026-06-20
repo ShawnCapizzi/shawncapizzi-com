@@ -45,6 +45,12 @@ export function HowIWork() {
             holds. Not sure which? Share your goals or pain points and
             we&apos;ll figure it out together.
           </p>
+          <p className="mt-5 text-lg md:text-xl text-text-secondary leading-relaxed">
+            However you need to staff it: embedded experience lead, fractional
+            product and AI strategy partner, senior advisor for regulated
+            launches, migrations, and design systems, or a contract lead inside
+            an agency, pharma, fintech, or enterprise team.
+          </p>
           <div className="mt-8">
             <a
               href={CAL_URL}
@@ -52,7 +58,7 @@ export function HowIWork() {
               rel="noopener noreferrer"
               className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
             >
-              Tell me what&apos;s stuck <span aria-hidden="true" className="ml-2">→</span>
+              Talk through the role or project <span aria-hidden="true" className="ml-2">→</span>
             </a>
           </div>
         </div>
