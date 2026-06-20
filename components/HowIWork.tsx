@@ -1,32 +1,6 @@
-"use client";
-
 import Link from "next/link";
-import { AccordionDetail } from "./AccordionDetail";
 
 const CAL_URL = "https://cal.com/capizzi/30min";
-
-const ADVISORY_SHAPES = [
-  {
-    name: "Strategic Snapshot",
-    description: "A focused diagnostic for a single, well-defined problem. Single deliverable.",
-  },
-  {
-    name: "Engagement Sprint",
-    description: "A scoped piece of work carried out over a few weeks. Defined problem, clear outcome.",
-  },
-  {
-    name: "AI Opportunity Diagnostic",
-    description:
-      "I come in, ask the right questions, and help uncover where AI fits in your actual workflows and business model. Vendor-agnostic. Roadmap, not vendor list.",
-  },
-];
-
-const ONCALL_INCLUDED = [
-  "Working sessions on the decisions that matter, on your cadence",
-  "Async document and decision review between sessions",
-  "Slack or email access for fast calls when timing is tight",
-  "Quarterly strategic alignment review tied to current goals",
-];
 
 export function HowIWork() {
   return (
@@ -74,18 +48,17 @@ export function HowIWork() {
             <h3 className="mt-3 text-xl md:text-2xl font-semibold tracking-tight leading-tight">
               Bring me in
             </h3>
-            <p className="mt-4 flex-1 text-base text-text-secondary leading-relaxed">
-              For agencies and in-house pharma, healthcare, and enterprise teams
-              that need senior UX, IA, and content strategy leadership inside
-              live work: campaigns, platforms, sites, apps, sales tools, and
-              regulated brand programs.
-            </p>
-
-            <AccordionDetail id="leadership-detail" label="Embedded UX &amp; Experience Design Lead">
-              <p className="text-sm text-text-secondary leading-relaxed">
-                I work directly with creative directors, account leads, technologists, dev teams, copywriters, and visual designers on digital brand and product work. Deliverables include engagement strategy, site architecture, user flows, wireframes, content frameworks, RC and pitch decks, and design system governance and refinements.
+            <div className="mt-4 flex-1">
+              <p className="text-base text-text-secondary leading-relaxed">
+                Senior UX, CX, IA, and content strategy leadership, embedded inside
+                your live work. For agencies and in-house pharma, healthcare,
+                and enterprise teams.
               </p>
-            </AccordionDetail>
+              <p className="mt-4 text-sm text-text-tertiary leading-relaxed">
+                Campaigns · Platforms · Sites · Apps · Sales tools · Regulated
+                brand programs
+              </p>
+            </div>
 
             <div className="pt-8">
               <Link
@@ -105,26 +78,17 @@ export function HowIWork() {
             <h3 className="mt-3 text-xl md:text-2xl font-semibold tracking-tight leading-tight">
               Hire me to advise
             </h3>
-            <p className="mt-4 flex-1 text-base text-text-secondary leading-relaxed">
-              Senior strategic counsel without a full-time hire: product design,
-              AI adoption, engagement strategy, design system governance,
-              multi-brand experience strategy, and regulatory program redesign.
-            </p>
-
-            <AccordionDetail id="advisory-detail" label="Three project-based options">
-              <dl className="space-y-5">
-                {ADVISORY_SHAPES.map((shape) => (
-                  <div key={shape.name}>
-                    <dt className="text-sm font-semibold text-text-primary">
-                      {shape.name}
-                    </dt>
-                    <dd className="mt-1 text-sm text-text-secondary leading-relaxed">
-                      {shape.description}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </AccordionDetail>
+            <div className="mt-4 flex-1">
+              <p className="text-base text-text-secondary leading-relaxed">
+                Product design and experience-first user flows that lift
+                sign-ups and product adoption. Senior counsel, without a
+                full-time hire.
+              </p>
+              <p className="mt-4 text-sm text-text-tertiary leading-relaxed">
+                CRM and onboarding flows · AI adoption · Design system
+                governance · Regulatory redesign
+              </p>
+            </div>
 
             <div className="pt-8">
               <Link
@@ -144,28 +108,19 @@ export function HowIWork() {
             <h3 className="mt-3 text-xl md:text-2xl font-semibold tracking-tight leading-tight">
               Keep me on call
             </h3>
-            <p className="mt-4 flex-1 text-base text-text-secondary leading-relaxed">
-              A monthly retainer for leaders who want a senior thinking partner
-              on hand between the big decisions. Reserved for a small number of
-              teams so the access stays real.
-            </p>
-
-            <AccordionDetail id="oncall-detail" label="Senior counsel on a monthly retainer">
-              <ul className="space-y-3">
-                {ONCALL_INCLUDED.map((item, i) => (
-                  <li
-                    key={i}
-                    className="text-sm text-text-secondary leading-relaxed pl-5 relative"
-                  >
-                    <span
-                      className="absolute left-0 top-2 w-2 h-px bg-text-tertiary"
-                      aria-hidden="true"
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </AccordionDetail>
+            <div className="mt-4 flex-1">
+              <p className="text-base text-text-secondary leading-relaxed">
+                A monthly retainer for leaders who want a senior thinking partner
+                on hand between the big decisions. An honest extension of your
+                team, there to talk through the product refinements and
+                implementations you&apos;d rather not handle alone. Reserved for
+                a small number of teams so the access stays real.
+              </p>
+              <p className="mt-4 text-sm text-text-tertiary leading-relaxed">
+                Vendor management · Dev team direction (on/offshore) · Time and
+                budget tradeoffs · Working sessions
+              </p>
+            </div>
 
             <div className="pt-8">
               <Link

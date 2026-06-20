@@ -63,6 +63,7 @@ const ONCALL_INCLUDED = [
   "Working sessions on the decisions that matter, on your cadence",
   "Async document and decision review between sessions",
   "Slack or email access for fast calls when timing is tight",
+  "Vendor and dev-team direction, onshore and offshore, kept on task and on budget",
   "Quarterly strategic alignment review tied to current goals and metrics",
 ];
 
@@ -218,8 +219,8 @@ export default function Page() {
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
             For agencies and in-house pharma, healthcare, start-up, and
-            enterprise teams that need senior design, actionable engagement
-            strategy, IA, and content strategy inside active business goals. I
+            enterprise teams that need senior UX, CX, IA, content strategy, and
+            actionable engagement strategy inside active business goals. I
             work directly with PMs, creative directors, account leads,
             copywriters, visual designers, and engineering partners on real
             tactics, campaigns (US and Global), platforms (app and enterprise
@@ -299,9 +300,11 @@ export default function Page() {
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-14 md:mb-16">
             For VPs, Directors, and senior leaders inside pharma, healthcare,
-            financial services, and enterprise teams who need senior strategy,
-            pitch deck, blue sky options, design, a voice in the room, and
-            systems counsel without a full-time hire.
+            financial services, and enterprise teams who need senior counsel
+            without a full-time hire. Often that means product design and
+            experience-first user flows that lift sign-ups and adoption.
+            Sometimes it&apos;s strategy, a pitch deck, blue-sky options, or a
+            voice in the room.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -364,10 +367,13 @@ export default function Page() {
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
             A monthly retainer for leaders who want a senior thinking partner
-            available over time, not just for a single deliverable. We meet on
-            your cadence, review what matters, and move the decision forward.
-            For when you and your team want an outside POV that brings clarity.
-            Reserved for a small number of teams so the access stays real.
+            available over time, not just for a single deliverable. An honest
+            extension of your team: we meet on your cadence, talk through the
+            product refinements and implementations you&apos;d rather not handle
+            alone, and keep vendors and dev teams (onshore and offshore) on task
+            and on budget. For when you and your team want an outside POV that
+            brings clarity. Reserved for a small number of teams so the access
+            stays real.
           </p>
 
           <div className="max-w-3xl">
