@@ -39,11 +39,12 @@ export function HowIWork() {
             How I work with teams
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            A flexible relationship that changes as business needs do. Start
-            with a single piece of work and grow from there. Move between the
-            options as needs change: the intensity flexes, the partnership
-            holds. Not sure which? Share your goals or pain points and
-            we&apos;ll figure it out together.
+            We work together in a flexible relationship that changes as
+            your business needs do. Start with solving or defining a single
+            business opportunity and grow from there. Move between options as
+            needs change: the intensity flexes, the partnership holds. Not sure
+            which will work best for your process? Share your goals or pain
+            points and we&apos;ll figure it out together.
           </p>
           <p className="mt-5 text-lg md:text-xl text-text-secondary leading-relaxed">
             However you need to staff it: embedded experience lead, fractional
