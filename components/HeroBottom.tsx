@@ -20,8 +20,8 @@ export function HeroBottom() {
       <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-2xl">
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-            Senior experience leadership for the work that&apos;s too complex,
-            too regulated, or too important to leave vague.
+            I work with pharma and enterprise teams, plus the agencies and
+            founders pitching to win the room.
           </p>
 
           <a
