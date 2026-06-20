@@ -66,8 +66,13 @@ export default function Page() {
           {/* Full-width declarative headline */}
           <div className="max-w-4xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance">
-              I help regulated and enterprise teams make complex digital work clearer, more trusted, and easier to ship.
+              I help regulated and enterprise teams make complex work clearer, more trusted, and easier to ship.
             </h1>
+            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
+              Usually that means structuring dense financial or scientific data
+              and the regulated communication around it. Sometimes it&apos;s
+              shipping a product, winning a pitch, or simplifying a user flow.
+            </p>
           </div>
 
           {/* Body copy + portrait, side-by-side on desktop; stacks on mobile.

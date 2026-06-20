@@ -28,7 +28,7 @@ export function Hero() {
             <h1 className="headline-gleam text-[1.8rem] md:text-3xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-[90%]">
               Senior experience design for regulated products, platforms, and AI-enabled teams
               <span className="block mt-3 md:mt-4 text-xl md:text-xl lg:text-xl font-normal text-text-secondary tracking-tight">
-                I help regulated and enterprise teams make complex digital work clearer, more trusted, and easier to ship.
+                I help regulated and enterprise teams make complex work clearer, more trusted, and easier to ship.
               </span>
             </h1>
 
