@@ -26,6 +26,17 @@ export function HowIWork() {
             launches, migrations, and design systems, or a contract lead inside
             an agency, pharma, fintech, or enterprise team.
           </p>
+          {/* AI as a working partner */}
+          <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
+            AI runs through most of this work now, as a speed-and-rigor
+            partner: more options explored, more drafts pressure-tested,
+            faster paths from idea to a working prototype you can test.
+          </p>
+          <p className="mt-3 text-lg md:text-xl text-text-secondary leading-relaxed">
+            When organizations can&apos;t find where AI adds value or make
+            adoption stick, I see an experience problem, not a tooling one,
+            and I&apos;ve built the systems myself.
+          </p>
           <div className="mt-8">
             <a
               href={CAL_URL}
