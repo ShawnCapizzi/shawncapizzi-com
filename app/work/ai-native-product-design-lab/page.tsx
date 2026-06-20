@@ -15,7 +15,7 @@ export default function Page() {
     <CaseStudyLayout
       eyebrow="(Case Study)"
       title="AI-Native Product Design Lab"
-      subtitle="How I use AI to accelerate research, design, prototype, and delivery, built on years of bringing teams together."
+      subtitle="How I use AI to accelerate research, design, prototype, and delivery, built on years of bringing teams together. Working prototypes in hours, not weeks."
       heroImage={`${ASSET_BASE}/01-hero-ai-native-design-lab.png`}
       heroImageAlt="AI-Native Design Lab, disease-first patient support hero"
       metadata={[

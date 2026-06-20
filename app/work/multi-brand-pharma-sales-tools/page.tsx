@@ -19,7 +19,7 @@ export default function Page() {
     <CaseStudyLayout
       eyebrow="(Case Study)"
       title="Multi-Brand Sales Design System"
-      subtitle="A modular sales design system consolidating 12 fragmented tools across a multi-brand neurological portfolio."
+      subtitle="Consolidating 12 fragmented tools into 33 reusable components across a multi-brand neurological portfolio. Adoption climbed from 65% to 92%."
       heroImage={`${ASSET_BASE}/01-hero-lead-brand-wireframe-to-product.png`}
       heroImageAlt="Lead MS brand homepage wireframe alongside the finished product"
       metadata={[

@@ -16,7 +16,7 @@ export default function Page() {
     <CaseStudyLayout
       eyebrow="(Case Study)"
       title="Pharma Design Systems & Multi-Brand Architecture"
-      subtitle="Governing 70+ product brands with 3 design systems."
+      subtitle="Governing 70+ product brands across 3 design systems and $3.5M+ in digital transformation."
       heroImage="/images/hero/consumer-care-hub-hero-balanced.gif"
       heroImageAlt="Consumer care hub homepage. A new offer to help Americans save."
       metadata={[
