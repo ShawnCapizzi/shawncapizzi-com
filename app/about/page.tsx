@@ -75,8 +75,9 @@ export default function Page() {
               the text block on the left (~316px at text-xl leading-relaxed,
               two paragraphs). At aspect-[340/430], a 250px max-width yields
               ~316px height — the columns now read as a balanced pair rather
-              than the photo dominating. object-[50%_40%] keeps the head
-              high in the frame, chest visible below. */}
+              than the photo dominating. The source is 1:1, so object-cover
+              shows the full vertical frame and crops the side padding evenly;
+              object-center is correct. */}
           <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-center">
             <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center">
               <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -117,12 +118,12 @@ export default function Page() {
             <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-start">
               <div className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl capizzi-rim-card w-full max-w-[220px] lg:max-w-[250px] aspect-[340/430]">
                 <Image
-                  src="/images/brand/shawn_m_capizzi_2026.png"
+                  src="/images/brand/headshot-2026-knockout.webp"
                   alt="Shawn Capizzi"
                   fill
                   priority
                   quality={100}
-                  className="object-cover object-[50%_40%]"
+                  className="object-cover object-center"
                   sizes="(max-width: 1024px) 220px, 250px"
                 />
               </div>
