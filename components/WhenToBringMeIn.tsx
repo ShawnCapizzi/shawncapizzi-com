@@ -23,7 +23,7 @@ const CAL_URL = "https://cal.com/capizzi/30min";
 
 const SITUATIONS = [
   "You work in regulated industries where product and brand experience demands real CX and user-first direction.",
-  "You need someone who can turn ambiguity into a scoped plan, and the story that wins the room: the client, the pitch, or the first round of funding.",
+  "You need someone who can turn ambiguity into a scoped plan, and the story that wins the room.",
   "Your AI initiative is stuck between strategy, workflow, and trust.",
   "Your design system exists, but governance and adoption are breaking down.",
   "You need a senior experience lead embedded inside live agency or product work.",

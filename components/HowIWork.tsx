@@ -13,18 +13,10 @@ export function HowIWork() {
             How I work with teams
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            We work together in a flexible relationship that changes as
-            your business needs do. Start with solving or defining a single
-            business opportunity and grow from there. Move between options as
-            needs change: the intensity flexes, the partnership holds. Not sure
-            which will work best for your process? Share your goals or pain
+            Start by solving or defining a single business opportunity, then
+            grow from there. The intensity flexes as your needs change; the
+            partnership holds. Not sure where you fit? Share your goals or pain
             points and we&apos;ll figure it out together.
-          </p>
-          <p className="mt-5 text-lg md:text-xl text-text-secondary leading-relaxed">
-            However you need to staff it: embedded experience lead, fractional
-            product and AI strategy partner, senior advisor for regulated
-            launches, migrations, and design systems, or a contract lead inside
-            an agency, pharma, fintech, or enterprise team.
           </p>
           {/* AI as a working partner */}
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -124,8 +116,7 @@ export function HowIWork() {
                 A monthly retainer for leaders who want a senior thinking partner
                 on hand between the big decisions. An honest extension of your
                 team, there to talk through the product refinements and
-                implementations you&apos;d rather not handle alone. Reserved for
-                a small number of teams so the access stays real.
+                implementations you&apos;d rather not handle alone.
               </p>
               <p className="mt-4 text-sm text-text-tertiary leading-relaxed">
                 Vendor management · Dev team direction (on/offshore) · Time and
