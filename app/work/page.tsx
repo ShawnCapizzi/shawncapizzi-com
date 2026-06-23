@@ -30,6 +30,15 @@ const CASE_STUDIES = [
       "/images/case-studies/03-enterprise-financial-services-crm/01-hero-final-person-view-terminal.png",
   },
   {
+    slug: "courtvisual",
+    eyebrow: "Solo · Multi-sport PWA · AI-native build · 2026",
+    title:
+      "A multi-sport product that scores every game by what's worth watching",
+    description:
+      "Designed, built, and shipped solo. Six leagues, a 151-team catalog, a four-factor excitement engine, and an AI-assisted data pipeline. Live at courtvisual.com.",
+    image: "/images/case-studies/07-courtvisual/01-hero-team-view-knicks.png",
+  },
+  {
     slug: "cancer-equality-app",
     eyebrow: "Chrysalis Initiative · Patient Experience · D&AD Pencil 2022",
     title:

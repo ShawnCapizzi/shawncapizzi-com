@@ -22,6 +22,13 @@ const CASE_STUDIES = [
     image: "/images/case-studies/03-enterprise-financial-services-crm/01-hero-final-person-view-terminal.png",
   },
   {
+    slug: "courtvisual",
+    eyebrow: "Solo build · Multi-sport PWA · AI-native",
+    headline: "Scoring every game 0–10 for what's actually worth watching",
+    outcome: "Designed, built, and shipped solo: six leagues, a 151-team catalog, a four-factor excitement engine, and an AI-assisted data pipeline. Live at courtvisual.com.",
+    image: "/images/case-studies/07-courtvisual/01-hero-team-view-knicks.png",
+  },
+  {
     slug: "cancer-equality-app",
     eyebrow: "Patient experience · Healthcare equity · D&AD Pencil 2022",
     headline: "A patient navigation platform for women facing bias in cancer care",
