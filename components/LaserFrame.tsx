@@ -19,7 +19,15 @@ import "./laserframe.css";
  * Honors prefers-reduced-motion: no orbit, just a faint static indigo edge.
  * The orbit only runs while the card is in view (perf + intent).
  */
-export function LaserFrame({ radius = 15 }: { radius?: number }) {
+export function LaserFrame({
+  radius = 15,
+  delay = 0,
+}: {
+  radius?: number;
+  /** Negative seconds offset the orbit's starting phase, so multiple
+   *  comets in one viewport sit at different points instead of lockstep. */
+  delay?: number;
+}) {
   const ref = useRef<SVGSVGElement | null>(null);
   const [inView, setInView] = useState(false);
 
@@ -48,6 +56,7 @@ export function LaserFrame({ radius = 15 }: { radius?: number }) {
     <svg
       ref={ref}
       className={`sc-frame${inView ? " is-inview" : ""}`}
+      style={{ ["--sc-delay" as string]: `${delay}s` } as React.CSSProperties}
       aria-hidden="true"
       focusable="false"
     >

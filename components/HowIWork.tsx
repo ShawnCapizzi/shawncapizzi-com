@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LaserFrame } from "./LaserFrame";
 
 const CAL_URL = "https://cal.com/capizzi/30min";
 
@@ -71,6 +72,8 @@ export function HowIWork() {
                 See leadership engagements <span aria-hidden="true" className="ml-2">→</span>
               </Link>
             </div>
+
+            <LaserFrame radius={15} delay={0} />
           </article>
 
           {/* Mode 2 — Advisory */}
@@ -101,6 +104,8 @@ export function HowIWork() {
                 See advisory engagements <span aria-hidden="true" className="ml-2">→</span>
               </Link>
             </div>
+
+            <LaserFrame radius={15} delay={-2.3} />
           </article>
 
           {/* Mode 3 — On Call */}
@@ -132,6 +137,8 @@ export function HowIWork() {
                 See on-call engagements <span aria-hidden="true" className="ml-2">→</span>
               </Link>
             </div>
+
+            <LaserFrame radius={15} delay={-4.6} />
           </article>
         </div>
       </div>

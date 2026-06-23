@@ -52,14 +52,17 @@
 .sc-frame.is-inview .comet-glow {
   opacity: 0.55;
   animation: sc-orbit 7s linear infinite;
+  animation-delay: var(--sc-delay, 0s);
 }
 .sc-frame.is-inview .comet-mid {
   opacity: 0.9;
   animation: sc-orbit 7s linear infinite;
+  animation-delay: var(--sc-delay, 0s);
 }
 .sc-frame.is-inview .comet-head {
   opacity: 1;
   animation: sc-orbit 7s linear infinite;
+  animation-delay: var(--sc-delay, 0s);
 }
 
 /* head leads, halo trails: motion runs path-backward (offset 0 -> 100) */
