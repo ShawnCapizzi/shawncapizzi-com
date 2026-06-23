@@ -110,6 +110,7 @@ export default function Page() {
             {
               src: `${ASSET_BASE}/04-live-slate-watch-and-tickets.png`,
               alt: "CourtVisual search results, Rivalry Showdowns: ranked Mets vs Yankees Subway Series games, each scored with a why-this-game-scores breakdown and a ticket path.",
+              maxWidthClass: "max-w-xl",
             },
           ],
         },
@@ -124,6 +125,7 @@ export default function Page() {
             {
               src: `${ASSET_BASE}/05-world-cup-crest-cards-1.png`,
               alt: "CourtVisual World Cup league view: Turkiye vs United States scored 8.0, both federation crests beside the matchup, green pitch color, and where-to-watch options.",
+              maxWidthClass: "max-w-xl",
             },
           ],
         },

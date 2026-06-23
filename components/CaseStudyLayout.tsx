@@ -45,6 +45,9 @@ interface ProjectShowcase {
      *  uniform viewport size — use when pairing two browser-framed images in
      *  a grid that need to render at exactly the same height. */
     browserFrame?: { url: string; aspectRatio?: number };
+    /** Optional max-width utility (e.g. "max-w-xl") to cap a single image's
+     *  rendered size; the image is centered when set. */
+    maxWidthClass?: string;
   }[];
   /** Optional call-to-action links (e.g. "Try it" buttons for live apps). External links open in new tab. */
   links?: { label: string; href: string }[];
@@ -322,7 +325,14 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                   >
                     {project.images.map((image, ix) =>
                       image.browserFrame ? (
-                        <div key={ix} className="w-full">
+                        <div
+                          key={ix}
+                          className={`w-full ${
+                            image.maxWidthClass
+                              ? `${image.maxWidthClass} mx-auto`
+                              : ""
+                          }`}
+                        >
                           <BrowserFrame
                             src={image.src}
                             url={image.browserFrame.url}
@@ -334,7 +344,11 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                       ) : (
                         <div
                           key={ix}
-                          className="relative w-full overflow-hidden rounded-xl border border-border-subtle bg-bg-elevated shadow-2xl"
+                          className={`relative w-full overflow-hidden rounded-xl border border-border-subtle bg-bg-elevated shadow-2xl ${
+                            image.maxWidthClass
+                              ? `${image.maxWidthClass} mx-auto`
+                              : ""
+                          }`}
                         >
                           <Image
                             src={image.src}
