@@ -13,10 +13,12 @@ type PhoneVideo = {
 type TiltedPhonePairProps = {
   left: PhoneVideo;
   right: PhoneVideo;
-  /** Tilt for the left phone in degrees. Default -8. */
+  /** Tilt for the left phone in degrees. Default -10. */
   leftTilt?: number;
-  /** Tilt for the right phone in degrees. Default +8. */
+  /** Tilt for the right phone in degrees. Default +10. */
   rightTilt?: number;
+  /** Tailwind max-width classes for each phone. Default ~1.5x the original. */
+  phoneMaxWidth?: string;
   className?: string;
 };
 
@@ -32,25 +34,34 @@ type TiltedPhonePairProps = {
 export function TiltedPhonePair({
   left,
   right,
-  leftTilt = -8,
-  rightTilt = 8,
+  leftTilt = -10,
+  rightTilt = 10,
+  phoneMaxWidth = "max-w-[300px] sm:max-w-[340px]",
   className = "",
 }: TiltedPhonePairProps) {
   return (
     <div
       className={[
-        "mx-auto grid w-full max-w-3xl grid-cols-1 gap-12",
-        "sm:grid-cols-2 sm:gap-6 md:gap-10",
+        "mx-auto grid w-full max-w-4xl grid-cols-1 gap-14",
+        "sm:grid-cols-2 sm:gap-8 md:gap-12",
         className,
       ].join(" ")}
     >
-      <TiltedPhone video={left} tilt={leftTilt} />
-      <TiltedPhone video={right} tilt={rightTilt} />
+      <TiltedPhone video={left} tilt={leftTilt} maxWidth={phoneMaxWidth} />
+      <TiltedPhone video={right} tilt={rightTilt} maxWidth={phoneMaxWidth} />
     </div>
   );
 }
 
-function TiltedPhone({ video, tilt }: { video: PhoneVideo; tilt: number }) {
+function TiltedPhone({
+  video,
+  tilt,
+  maxWidth,
+}: {
+  video: PhoneVideo;
+  tilt: number;
+  maxWidth: string;
+}) {
   // Expose tilt as a CSS variable so hover state can compose with it.
   const style = { "--tilt": `${tilt}deg` } as CSSProperties;
 
@@ -58,7 +69,8 @@ function TiltedPhone({ video, tilt }: { video: PhoneVideo; tilt: number }) {
     <figure className="group flex flex-col items-center" style={style}>
       <div
         className={[
-          "relative w-full max-w-[220px]",
+          "relative w-full",
+          maxWidth,
           // Mobile: no tilt, sits upright stacked. Desktop: tilted slab.
           "[transform:rotate(0deg)] sm:[transform:rotate(var(--tilt))]",
           "transition-transform duration-500 ease-out will-change-transform",
