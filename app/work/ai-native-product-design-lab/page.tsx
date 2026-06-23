@@ -151,6 +151,7 @@ export default function Page() {
             {
               src: "/images/case-studies/06-vui-voice-pill-tracker/02-vui-dialog-chart.jpg",
               alt: "A hand-mapped voice dialog chart for a 2018 medication-adherence Alexa Skill: user utterance to identified intent to conditions of response to device-specific response to conversation follow-up, across three branches.",
+              maxWidthClass: "max-w-2xl",
             },
           ],
           customContent: (
