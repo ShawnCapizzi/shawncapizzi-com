@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CTA_CARDS } from "./cta-cards-data";
 import { LaserFrame } from "./LaserFrame";
+import { BookReaderThumb } from "./BookReaderThumb";
 
 /**
  * CTACards — bottom-of-page CTA cards.
@@ -52,18 +53,22 @@ export function CTACards({ cards }: { cards: string[] }) {
             className="group relative flex flex-col rounded-2xl card-surface border border-border-default hover:border-border-strong overflow-hidden transition-colors"
           >
             <Link href={item.href} className="flex flex-col flex-1">
-              {item.image ? (
+              {item.image || item.thumb ? (
                 <div
                   className={`relative ${item.imageAspect ?? "aspect-[16/10]"} overflow-hidden border-b border-border-subtle ${item.imageFit === "contain" ? "bg-black" : ""}`}
                 >
-                  <Image
-                    src={item.image}
-                    alt={item.imageAlt ?? ""}
-                    fill
-                    className={`${item.imageFit === "contain" ? "object-contain" : "object-cover"} object-center transition-transform duration-500 group-hover:scale-[1.02]`}
-                    unoptimized={isAnimated(item.image)}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+                  {item.thumb === "book-reader" ? (
+                    <BookReaderThumb />
+                  ) : item.image ? (
+                    <Image
+                      src={item.image}
+                      alt={item.imageAlt ?? ""}
+                      fill
+                      className={`${item.imageFit === "contain" ? "object-contain" : "object-cover"} object-center transition-transform duration-500 group-hover:scale-[1.02]`}
+                      unoptimized={isAnimated(item.image)}
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  ) : null}
                 </div>
               ) : null}
 

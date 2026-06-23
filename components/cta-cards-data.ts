@@ -46,6 +46,13 @@ export type CTACard = {
    */
   imageFit?: "cover" | "contain";
   /**
+   * Optional interactive thumbnail in place of the static image.
+   *   "book-reader" — renders the living reader panel (BookReaderThumb),
+   *                   cross-fading Chapter 1 lines. When set, the image
+   *                   field is ignored for this card. Used by the book card.
+   */
+  thumb?: "book-reader";
+  /**
    * Optional phone number for tap-to-call. When provided, renders a
    * separate tap-to-call link at the bottom of the card (outside the
    * main link target, so the phone tap is distinct from the card click).
@@ -64,6 +71,7 @@ export const CTA_CARDS: Record<string, CTACard> = {
       "Why clarity wins and what it takes to do great work in the rooms where decisions get made. Read Chapter 1, \u201CThe Human Condition,\u201D free in the reader.",
     cta: "Read the first chapter",
     href: "/book/chapter-1",
+    thumb: "book-reader",
     image: "/images/book-reader.png",
     imageAlt: "Clarity Is the Advantage \u2014 Chapter 1 in the reader",
   },
