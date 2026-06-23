@@ -53,6 +53,7 @@ export default function Page() {
         },
       ]}
       challenge={[
+        "The idea started at a Mets game. A player was closing in on a record, and the only reason I knew to watch for it was that I happened to be in the building. I wondered whether there was a way to tell fans before a game which ones might be historic, a record in reach, a milestone, a last ride, so they would know to show up. That question grew into a bigger one: not just which games are historic, but which games are worth your night at all.",
         "A fan's question is simple, and nobody answers it: what's worth watching tonight, and where do I watch or go? To answer it today you check ESPN for the schedule, a sportsbook like FanDuel for the odds, a streaming guide for the channel, and Ticketmaster for seats. Four apps, four logins, and not one of them tells you the thing you actually want to know, which is whether the game is worth your night.",
         "The reason the platforms avoid that question is that the answer is subjective. A neutral classic, a bitter rivalry, your team fighting for a playoff spot, a title decider on the line: these are not the same to the same person, let alone to different people. A score that means anything has to weigh the stakes of the game and the taste of the viewer at the same time.",
         "So the find, watch, buy journey stays split across companies that each own one slice and have no reason to connect them. The connective tissue, an honest read that turns raw sports data into a decision, was missing. That gap is the product.",
@@ -72,11 +73,12 @@ export default function Page() {
       projectShowcases={[
         {
           eyebrow: "The progression · From PRD to shipped",
-          title: "Three builds, left to right",
+          title: "Proving the idea was the easy part",
           description: [
             "Left to right is the whole arc. I started by writing a full PRD and product vision, and v1 came straight out of it: a Game Excitement Analyzer with raw priority sliders and an uncapped score that ran past 14, on weights that didn't even need to add up. It proved the idea and nothing more.",
             "The middle build capped the score to a legible 0 to 10 and turned it into a ranked slate. The third is where it landed: each card carries the four factors a fan actually feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why it scored that way.",
-            "I built it with Claude Code and ChatGPT, working the way an art director works with a team. I wrote the spec, directed the tools through it, and reviewed every pass, refining the UI until the look and feel matched what I wanted. The distance from v1 to v3 is that iteration, the same instinct I bring to client work, now pointed at AI tools instead of a design team.",
+            "Plenty of people are vibe-coding apps right now. Most lack the business focus and the discipline to stay on real value and a user-first point of view, so they ship something oversaturated and purposeless. I built this with Claude Code and ChatGPT, but I stayed the orchestrator: I described what I wanted to happen and what I wanted to see, in screenshots, text, and micro-interaction notes, and directed the tools until it matched the picture in my head. Miss on the first pass, and it landed by the second or third.",
+            "AI, if told, will keep building whatever features you ask it to, forever. My job as an orchestrator and the human crafting the experience is to have judgment and pull from my experience. That includes going back and trimming, defining the visual hierarchy, the design and pattern system, deciding how a user with zero context gets onboarded, which features earn their place, and which surprises people get to discover, keep, or switch off. That editing is the product.",
           ],
           customContent: (
             <PhoneFan
@@ -132,10 +134,10 @@ export default function Page() {
         },
         {
           eyebrow: "Under the hood · The build, not just the screens",
-          title: "The back end is mine too",
+          title: "I found the pipes, then wired them",
           description: [
-            "A scoring product is only as trustworthy as the data under it, so I built that layer myself instead of faking it with a static file. Each fan's state, their teams, sliders, and follows, lives in Supabase behind row-level security, so a row is readable only by the person it belongs to. Not a setting in a dashboard, a policy enforced at the database.",
-            "The live feeds are wired the same way: ESPN for fixtures and standings, The Odds API for the moneyline that competitiveness is derived from, Ticketmaster for the ticket path, each keyed and handled server-side so the score re-reads from real data rather than a snapshot. The screens get the attention. This is the part that makes the number mean something.",
+            "A scoring product is only as trustworthy as the data under it. I used AI to research which feeds even existed and what each one could give me, then I architected the data layer and directed the build. Each fan's state, their teams, sliders, and follows, lives in Supabase behind row-level security, so a row is readable only by the person it belongs to: a policy enforced at the database, not a setting in a dashboard. I decided what it had to guarantee; the tools wrote and rewrote the SQL until it did.",
+            "The live feeds are wired the same way, ESPN for fixtures and standings, The Odds API for the moneyline competitiveness comes from, Ticketmaster for the ticket path, each keyed server-side and deployed continuously on Vercel. I directed the integrations and debugged the edges, the tools moved fast through the boilerplate, and the architecture, what connects to what and what the score is allowed to claim, stayed my call. The screens get the attention. This is the part that makes the number mean something.",
           ],
           images: [
             {
@@ -172,16 +174,16 @@ export default function Page() {
             "One restrained system across onboarding, settings, loading, and empty states, so the data-rich game card stays the star instead of the chrome.",
         },
         {
-          headline: "Built solo, concept to live PWA",
+          headline: "Concept to live PWA in 50 to 60 hours",
           description:
-            "Product design and full-stack engineering, on Next.js, Supabase, and Vercel, deployed continuously from v1 to a mature sports-entertainment tool.",
+            "Product design and AI-assisted full-stack engineering, on Next.js, Supabase, and Vercel. Designed, built, and shipped solo in roughly 50 to 60 hours of focused work, deployed continuously from v1 to a mature tool.",
         },
       ]}
       closer={[
         "The big platforms each own a slice of the fan's night and have no reason to connect them. The opportunity was never more data. It was the connective tissue, the honest read that turns data into a decision.",
-        "CourtVisual is a product. It's also a proof of how I work: the score is the easy part, and the experience architecture around it is the actual product. The instinct is the same whether the thing in the middle is a sports feed or an AI model.",
+        "CourtVisual is one person defining the product, doing the research, connecting the pipes, refining the UI, and shipping it, all of it solo. Now picture that same person inside your walls, with your data, your team, and real users in the room. That is what a strategist and designer looks like now: someone who folds AI in for the economics and the speed to market without giving up the judgment that decides whether a thing is worth shipping.",
         <>
-          That&apos;s the build. That&apos;s what I bring into{" "}
+          That&apos;s the proof. That&apos;s what I bring into{" "}
           <Link
             href="/engagements"
             className="text-link hover:text-link-hover transition-colors"
