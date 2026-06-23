@@ -21,13 +21,17 @@ export default function Page() {
       heroImageAlt="CourtVisual home screen: the welcome headline, a Knicks game scored 9.3 out of 10, and the team and sport picker"
       heroSlot={
         <TiltedPhonePair
+          rightStartDelayMs={0}
+          leftStartDelayMs={16000}
           left={{
-            src: `${ASSET_BASE}/courtvisual-onboarding-demo.gif`,
+            src: "/videos/courtvisual-onboarding-demo.mp4",
+            poster: "/videos/courtvisual-onboarding-poster.jpg",
             alt: "CourtVisual onboarding: following a team, and the app taking on that team's colors and reordering the slate.",
             caption: "Onboarding: pick a team, the app suits up",
           }}
           right={{
-            src: `${ASSET_BASE}/courtvisual-ranking-demo.gif`,
+            src: "/videos/courtvisual-ranking-demo.mp4",
+            poster: "/videos/courtvisual-ranking-poster.jpg",
             alt: "CourtVisual live slate: tonight's games scored 0 to 10 and ranked, each card showing where to watch and a ticket path.",
             caption: "The slate: every game scored and ranked",
           }}
