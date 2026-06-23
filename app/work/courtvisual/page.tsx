@@ -1,6 +1,5 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { TiltedPhonePair } from "@/components/TiltedPhonePair";
-import { RotatingProductShowcase } from "@/components/RotatingProductShowcase";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -67,48 +66,27 @@ export default function Page() {
       ]}
       projectShowcases={[
         {
-          eyebrow: "The engine · A score you can read",
-          title: "The excitement score, made legible and yours",
-          description: [
-            "Every game carries a 0 to 10 ring and a plain-English verdict, scored from four factors a fan already understands: stakes, rivalry, the race, and the matchup. The card shows the why, not just the number, so the score earns trust instead of asking for it.",
-            "A neutral-fan baseline keeps the ranking fair for anyone, rooting or just watching. From there the viewer tunes what counts, with quick presets or per-factor sliders. The factors carry the same color language on the card and in settings, so the thing you weight up is the thing you see drive the score.",
-          ],
-          images: [
-            {
-              src: `${ASSET_BASE}/02-game-card-score-ring.png`,
-              alt: "A CourtVisual game card: a 0 to 10 excitement score ring with the plain-English verdict, Worth the watch, everything on the line.",
-              browserFrame: { url: "courtvisual.com", aspectRatio: 4 / 3 },
-            },
-          ],
-        },
-        {
           eyebrow: "The progression · From PRD to shipped",
-          title: "How the score card grew up",
+          title: "From PRD prototype to shipped app",
           description: [
-            "v1 came straight from the PRD: a Game Excitement Analyzer with raw priority sliders and an uncapped score that could read 11.8. It proved the idea and nothing more. The factors were there; the discipline wasn't.",
-            "From there the card got honest. The score was capped to a legible 0 to 10, the factors were renamed and reweighted to what a fan actually feels, Stakes, Rivalry, the race, and Matchup, and the breakdown moved onto the card itself so the number always shows its work. The shipped card is the same idea, finally legible.",
+            "The left phone is v1, straight from the PRD: a Game Excitement Analyzer with raw priority sliders and an uncapped score that ran past 14, on weights that didn't even need to add up. It proved the idea and nothing more.",
+            "The right phone is where it landed. The score is capped to a legible 0 to 10, the raw sliders gave way to a ranked slate, and the why-breakdown moved onto each card so the number always shows its work. Same idea, finally a product.",
           ],
           customContent: (
-            <RotatingProductShowcase
-              aspectRatio="4 / 3"
-              intervalMs={3600}
-              items={[
-                {
-                  src: `${ASSET_BASE}/09-progression-prd.png`,
-                  alt: "CourtVisual v1 from the PRD: a Game Excitement Analyzer with four priority sliders (Playoff Stakes, Rivalry, Hot Player, Historical Meaning) and an uncapped total weight.",
-                  label: "v1 · straight from the PRD",
-                },
-                {
-                  src: `${ASSET_BASE}/10-progression-iteration.png`,
-                  alt: "CourtVisual v2: an early dark game card with a score ring and a factor breakdown using the older names Playoff stakes, Rivalry, Star power, and Historic weight.",
-                  label: "v2 · the first dark iteration",
-                },
-                {
-                  src: `${ASSET_BASE}/11-progression-shipped.png`,
-                  alt: "CourtVisual shipped card: a capped 0 to 10 score with the current factor breakdown, Stakes, Rivalry, The race, and Matchup, plus a Fan lens adjustment.",
-                  label: "v3 · shipped, capped and legible",
-                },
-              ]}
+            <TiltedPhonePair
+              leftTilt={-6}
+              rightTilt={6}
+              phoneMaxWidth="max-w-[260px] sm:max-w-[300px]"
+              left={{
+                src: `${ASSET_BASE}/09-progression-prd.png`,
+                alt: "CourtVisual v1 from the PRD: a Game Excitement Analyzer with four priority sliders and an uncapped total weight over 100 percent.",
+                caption: "v1 · straight from the PRD",
+              }}
+              right={{
+                src: `${ASSET_BASE}/10-progression-shipped.png`,
+                alt: "The shipped CourtVisual ranking: games scored 0 to 10 in a ranked slate, each card showing the why-this-game-scores breakdown, a ticket path, and reactions.",
+                caption: "shipped · capped, ranked, on a card",
+              }}
             />
           ),
         },
@@ -124,10 +102,6 @@ export default function Page() {
               src: `${ASSET_BASE}/04-live-slate-watch-and-tickets.png`,
               alt: "CourtVisual search results, Rivalry Showdowns: ranked Mets vs Yankees Subway Series games, each scored with a why-this-game-scores breakdown and a ticket path.",
             },
-            {
-              src: `${ASSET_BASE}/04-live-slate-watch-and-tickets-2.png`,
-              alt: "More ranked cards in the CourtVisual Mets feed: a Yankees Subway Series game scored 8.3 and a Phillies rivalry game scored 8.0, each with where-to-watch options and a ticket path.",
-            },
           ],
         },
         {
@@ -142,10 +116,6 @@ export default function Page() {
               src: `${ASSET_BASE}/05-world-cup-crest-cards-1.png`,
               alt: "CourtVisual World Cup league view: Turkiye vs United States scored 8.0, both federation crests beside the matchup, green pitch color, and where-to-watch options.",
             },
-            {
-              src: `${ASSET_BASE}/05-world-cup-crest-cards-2.png`,
-              alt: "CourtVisual World Cup cards for Colombia vs Portugal and Norway vs France, each with both national crests and the why-this-game-scores breakdown.",
-            },
           ],
         },
         {
@@ -155,23 +125,12 @@ export default function Page() {
             "A scoring product is only as trustworthy as the data under it, so I built that layer myself instead of faking it with a static file. Each fan's state, their teams, sliders, and follows, lives in Supabase behind row-level security, so a row is readable only by the person it belongs to. Not a setting in a dashboard, a policy enforced at the database.",
             "The live feeds are wired the same way: ESPN for fixtures and standings, The Odds API for the moneyline that competitiveness is derived from, Ticketmaster for the ticket path, each keyed and handled server-side so the score re-reads from real data rather than a snapshot. The screens get the attention. This is the part that makes the number mean something.",
           ],
-          customContent: (
-            <RotatingProductShowcase
-              aspectRatio="16 / 10"
-              items={[
-                {
-                  src: `${ASSET_BASE}/07-engine-supabase-rls.png`,
-                  alt: "Supabase SQL editor: a user_state table with row-level security enabled and an 'own state' policy restricting each row to its owner via auth.uid().",
-                  label: "Row-level security · each fan's state locked to them",
-                },
-                {
-                  src: `${ASSET_BASE}/08-engine-service-role-key.png`,
-                  alt: "Supabase service_role key marked secret, warning that it bypasses row-level security and must stay server-side.",
-                  label: "Service-role key · kept server-side, never shipped",
-                },
-              ]}
-            />
-          ),
+          images: [
+            {
+              src: `${ASSET_BASE}/07-engine-supabase-rls.png`,
+              alt: "Supabase SQL editor: a user_state table with row-level security enabled and an 'own state' policy restricting each row to its owner via auth.uid().",
+            },
+          ],
         },
       ]}
       outcomes={[
