@@ -132,6 +132,26 @@ export default function Page() {
             },
           ],
         },
+        {
+          eyebrow: "Before AI · Voice design in 2018",
+          title: "The instinct predates the tools",
+          description: [
+            "This pattern did not start with AI. In 2018, before \u201Cconversational design\u201D was a discipline anyone hired for, I built a voice-first medication-adherence prototype as an Alexa Skill, and mapped every intent, utterance, and response path by hand before a prototype existed. The chart below is that architecture: user utterance to identified intent to conditions of response to device response to follow-up.",
+            "It is the same instinct the AI work runs on. The architecture around the interaction is the product, whether the surface is a voice skill in 2018 or an AI agent today. I build for new touchpoints early, on purpose, so that by the time a team needs them I have already learned where they break.",
+          ],
+          links: [
+            {
+              label: "See the conversational-design discipline behind it",
+              href: "/engagements#advisory",
+            },
+          ],
+          images: [
+            {
+              src: "/images/case-studies/06-vui-voice-pill-tracker/02-vui-dialog-chart.jpg",
+              alt: "A hand-mapped voice dialog chart for a 2018 medication-adherence Alexa Skill: user utterance to identified intent to conditions of response to device-specific response to conversation follow-up, across three branches.",
+            },
+          ],
+        },
       ]}
       outcomes={[
         {
