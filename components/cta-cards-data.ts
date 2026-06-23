@@ -74,6 +74,7 @@ export const CTA_CARDS: Record<string, CTACard> = {
     thumb: "book-reader",
     image: "/images/book-reader.png",
     imageAlt: "Clarity Is the Advantage \u2014 Chapter 1 in the reader",
+    imageAspect: "aspect-[4/3]",
   },
   cards: {
     eyebrow: "Interactive",
