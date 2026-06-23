@@ -372,8 +372,7 @@ export default function Page() {
             product refinements and implementations you&apos;d rather not handle
             alone, and keep vendors and dev teams (onshore and offshore) on task
             and on budget. For when you and your team want an outside POV that
-            brings clarity. Reserved for a small number of teams so the access
-            stays real.
+            brings clarity.
           </p>
 
           <div className="max-w-3xl">
