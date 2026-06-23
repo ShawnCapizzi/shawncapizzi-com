@@ -38,7 +38,7 @@ export function CTACards({ cards }: { cards: string[] }) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-      {items.map((item) => {
+      {items.map((item, i) => {
         // Normalize "212-380-3900" → "tel:+12123803900"
         // Note: assumes US numbers. If international support is ever needed,
         // store the tel: URI as a separate field instead of computing it.
@@ -118,7 +118,7 @@ export function CTACards({ cards }: { cards: string[] }) {
                 into view. pointer-events:none, so it never blocks the card
                 link or the tap-to-call footer. Rides just inside the
                 rounded-2xl (16px) edge; inner radius 15 stays concentric. */}
-            <LaserFrame radius={15} />
+            <LaserFrame radius={15} delay={-i * 3.3} />
           </div>
         );
       })}
