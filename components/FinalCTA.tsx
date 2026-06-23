@@ -9,7 +9,7 @@ export function FinalCTA() {
             Let&apos;s talk through your challenges.
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            30 minutes. Virtual. It will be time well spent.
+            30 minutes. Virtual.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
             <a
