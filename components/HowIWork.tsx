@@ -105,7 +105,7 @@ export function HowIWork() {
               </Link>
             </div>
 
-            <LaserFrame radius={15} delay={-2.3} />
+            <LaserFrame radius={15} delay={-3.3} />
           </article>
 
           {/* Mode 3 — On Call */}
@@ -138,7 +138,7 @@ export function HowIWork() {
               </Link>
             </div>
 
-            <LaserFrame radius={15} delay={-4.6} />
+            <LaserFrame radius={15} delay={-6.6} />
           </article>
         </div>
       </div>
