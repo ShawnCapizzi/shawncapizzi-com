@@ -1,4 +1,5 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
+import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -136,8 +137,9 @@ export default function Page() {
           eyebrow: "Before AI · Voice design in 2018",
           title: "The instinct predates the tools",
           description: [
-            "This pattern did not start with AI. In 2018, before \u201Cconversational design\u201D was a discipline anyone hired for, I built a voice-first medication-adherence prototype as an Alexa Skill, and mapped every intent, utterance, and response path by hand before a prototype existed. The chart below is that architecture: user utterance to identified intent to conditions of response to device response to follow-up.",
-            "It is the same instinct the AI work runs on. The architecture around the interaction is the product, whether the surface is a voice skill in 2018 or an AI agent today. I build for new touchpoints early, on purpose, so that by the time a team needs them I have already learned where they break.",
+            "This pattern did not start with AI. In 2018, before \u201Cconversational design\u201D was a discipline anyone hired for, I built a voice-first medication-adherence prototype as an Alexa Skill on the Amazon Echo. Adherence was already a multi-billion-dollar problem, and every existing solution asked the patient to do the one thing they were already failing at: remember to look at a screen. The question was what a reminder looks like if you never have to look at it, if you can just ask and be answered in the room where you live.",
+            "I started where voice forces you to start, with the conversation and not the device. I wrote the directed dialog prompts, mapped every intent, utterance, and slot, and drew the full conversation tree by hand before any prototype existed. The chart below is that architecture: user utterance to identified intent, to conditions of response, to device-specific response, to follow-up. Then I prototyped in SaySpring and tested with real people, designing the repair paths for when the skill heard the wrong thing and making sure it never left the user without a next move.",
+            "It is the same instinct the AI work runs on. The architecture around the interaction is the product, whether the surface is a voice skill in 2018 or an AI agent today: map the intent before the interface, design the repair before the success state, and treat what the system says as carefully as what it does. I build for new touchpoints early, on purpose, so that by the time a team needs them I have already learned where they break.",
           ],
           links: [
             {
@@ -151,6 +153,19 @@ export default function Page() {
               alt: "A hand-mapped voice dialog chart for a 2018 medication-adherence Alexa Skill: user utterance to identified intent to conditions of response to device-specific response to conversation follow-up, across three branches.",
             },
           ],
+          customContent: (
+            <figure className="mx-auto max-w-2xl">
+              <VideoWithPlayOverlay
+                src="/videos/pill-tracker-vui-demo.mp4"
+                poster="/images/case-studies/06-vui-voice-pill-tracker/01-vui-demo-poster.jpg"
+                ariaLabel="Demo walkthrough of the VUI Pill Tracker Alexa Skill prototype: setting a daily medication reminder, querying status, and confirming a dose entirely by voice."
+              />
+              <figcaption className="mt-4 text-center text-sm text-text-tertiary">
+                The 2018 Alexa Skill prototype in motion: setting a reminder,
+                checking status, and confirming a dose, entirely by voice.
+              </figcaption>
+            </figure>
+          ),
         },
       ]}
       outcomes={[
