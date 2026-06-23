@@ -67,15 +67,6 @@ const CASE_STUDIES = [
     image:
       "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-native-design-lab.png",
   },
-  {
-    slug: "vui-voice-pill-tracker",
-    eyebrow: "Conversational Design · VUI · Healthcare · 2018",
-    title:
-      "A voice-first medication adherence skill, designed before voice was a category",
-    description:
-      "Early Alexa Skill exploration for medication adherence. Hand-mapped dialog architecture, intent and utterance modeling, SaySpring prototyping, live user testing. Pre-LLM, pre-agentic, and the foundation for every conversational engagement since.",
-    image: "/images/case-studies/06-vui-voice-pill-tracker/01-hero-vui-dialog-chart.jpg",
-  },
 ];
 
 function isAnimated(src: string): boolean {
