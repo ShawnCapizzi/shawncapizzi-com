@@ -1,9 +1,8 @@
 /* ============================================================
-   LaserFrame — metallic perimeter gleam (shawncapizzi.com)
-   One slow silver pass when a framed element scrolls into view,
-   then it rests. Used by components/LaserFrame.tsx.
-   Namespaced sc- to stay isolated from anything else.
-   Append this block to the end of your global stylesheet.
+   LaserFrame — orbiting comet gleam (shawncapizzi.com)
+   A soft indigo light orbits the card edge: bright head, glowing
+   halo, slow continuous loop. Darker and luminous, not chrome.
+   Used by components/LaserFrame.tsx (imports this file directly).
    ============================================================ */
 
 .sc-frame {
@@ -17,44 +16,70 @@
   z-index: 2;
 }
 
-/* the moving metallic glint — invisible at rest */
-.sc-frame .laser {
+/* shared: all three comet layers ride the same rounded path */
+.sc-frame .comet {
   fill: none;
-  stroke: url(#sc-metallic);
-  stroke-width: 1.4;
   stroke-linecap: round;
-  stroke-dasharray: 0 100;
-  filter: drop-shadow(0 0 2px rgba(215, 219, 226, 0.4));
+  opacity: 0; /* hidden until the card is in view */
 }
 
-/* single pass on reveal: fade in, sweep the perimeter once, fade out clean */
-.sc-frame.is-inview .laser {
-  stroke-dasharray: 16 84; /* dash + gap = 100, pathLength-normalized */
-  animation: sc-perim 2.6s ease-out 1 forwards;
+/* soft outer halo — the cursor-cloud glow, wide and low */
+.sc-frame .comet-glow {
+  stroke: #6b5cff;
+  stroke-width: 6;
+  stroke-dasharray: 22 78;
+  filter: drop-shadow(0 0 6px rgba(107, 92, 255, 0.65))
+          drop-shadow(0 0 13px rgba(107, 92, 255, 0.45));
 }
 
-@keyframes sc-perim {
-  0% {
-    stroke-dashoffset: 0;
-    opacity: 0;
-  }
-  12% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: -100;
-    opacity: 0;
+/* mid streak — the body of the comet */
+.sc-frame .comet-mid {
+  stroke: #b9c4ff;
+  stroke-width: 2.6;
+  stroke-dasharray: 11 89;
+  filter: drop-shadow(0 0 4px rgba(150, 170, 255, 0.7));
+}
+
+/* bright head — the leading point of light */
+.sc-frame .comet-head {
+  stroke: #eaf0ff;
+  stroke-width: 1.6;
+  stroke-dasharray: 3 97;
+  filter: drop-shadow(0 0 3px rgba(234, 240, 255, 0.9));
+}
+
+/* in view: reveal and orbit, slow and continuous */
+.sc-frame.is-inview .comet-glow {
+  opacity: 0.55;
+  animation: sc-orbit 7s linear infinite;
+}
+.sc-frame.is-inview .comet-mid {
+  opacity: 0.9;
+  animation: sc-orbit 7s linear infinite;
+}
+.sc-frame.is-inview .comet-head {
+  opacity: 1;
+  animation: sc-orbit 7s linear infinite;
+}
+
+/* head leads, halo trails: motion runs path-backward (offset 0 -> 100) */
+@keyframes sc-orbit {
+  to {
+    stroke-dashoffset: 100;
   }
 }
 
-/* reduced motion: no sweep, just a static faint silver edge */
+/* reduced motion: no orbit, just a faint static indigo edge */
 @media (prefers-reduced-motion: reduce) {
-  .sc-frame .laser {
+  .sc-frame .comet {
     animation: none !important;
+  }
+  .sc-frame .comet-glow {
+    opacity: 0.22;
     stroke-dasharray: none;
-    opacity: 0.45;
+  }
+  .sc-frame .comet-mid,
+  .sc-frame .comet-head {
+    opacity: 0;
   }
 }

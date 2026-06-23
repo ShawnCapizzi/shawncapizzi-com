@@ -4,23 +4,20 @@ import { useEffect, useRef, useState } from "react";
 import "./laserframe.css";
 
 /**
- * LaserFrame — a single metallic perimeter trace that fires once when the
- * element scrolls into view, then rests. Brand-restrained: cool silver,
- * one slow pass, no loop. The card's own border is the resting state; this
- * is just the glint.
+ * LaserFrame — a soft indigo comet that orbits the card edge.
+ *
+ * A glowing head with a trailing halo (the same luminous quality as the
+ * cursor cloud) travels the rounded perimeter on a slow, continuous loop,
+ * so it's always there to catch mid-scroll rather than a one-shot you miss.
  *
  * Drop inside any `position: relative` container with a rounded border.
  * Defaults are tuned for rounded-2xl (16px outer radius): the SVG insets
  * itself 1px, so the inner trace radius is 15px to stay concentric with the
- * card corner and ride just inside an `overflow-hidden` clip without clipping.
- * Pass `radius` to match a different corner (outer radius minus 1).
+ * card corner and ride just inside an `overflow-hidden` clip. Pass `radius`
+ * to match a different corner (outer radius minus 1).
  *
- * Honors prefers-reduced-motion: skips the observer and the CSS shows a
- * static faint silver edge instead of any motion.
- *
- * The gradient id is shared across instances by design. Duplicate ids resolve
- * to the first match in every browser, and every instance uses the identical
- * gradient, so the result is visually uniform with no per-instance wiring.
+ * Honors prefers-reduced-motion: no orbit, just a faint static indigo edge.
+ * The orbit only runs while the card is in view (perf + intent).
  */
 export function LaserFrame({ radius = 15 }: { radius?: number }) {
   const ref = useRef<SVGSVGElement | null>(null);
@@ -30,20 +27,17 @@ export function LaserFrame({ radius = 15 }: { radius?: number }) {
     const el = ref.current;
     if (!el) return;
 
-    // Reduced motion: skip the observer entirely. CSS renders a static edge.
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    // Reduced motion: show the static edge, skip the observer.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setInView(true);
+      return;
+    }
 
     const obs = new IntersectionObserver(
       (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setInView(true);
-            obs.disconnect(); // fire once, then stop watching
-            break;
-          }
-        }
+        for (const entry of entries) setInView(entry.isIntersecting);
       },
-      { threshold: 0.35 }
+      { threshold: 0.2 }
     );
 
     obs.observe(el);
@@ -57,17 +51,28 @@ export function LaserFrame({ radius = 15 }: { radius?: number }) {
       aria-hidden="true"
       focusable="false"
     >
-      <defs>
-        <linearGradient id="sc-metallic" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#8a8f99" />
-          <stop offset="38%" stopColor="#d7dbe2" />
-          <stop offset="50%" stopColor="#ffffff" />
-          <stop offset="62%" stopColor="#d7dbe2" />
-          <stop offset="100%" stopColor="#9aa0aa" />
-        </linearGradient>
-      </defs>
       <rect
-        className="laser"
+        className="comet comet-glow"
+        x="0"
+        y="0"
+        width="100%"
+        height="100%"
+        rx={radius}
+        ry={radius}
+        pathLength={100}
+      />
+      <rect
+        className="comet comet-mid"
+        x="0"
+        y="0"
+        width="100%"
+        height="100%"
+        rx={radius}
+        ry={radius}
+        pathLength={100}
+      />
+      <rect
+        className="comet comet-head"
         x="0"
         y="0"
         width="100%"
