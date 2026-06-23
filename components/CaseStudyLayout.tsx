@@ -65,6 +65,10 @@ interface CaseStudyLayoutProps {
    *  play affordance) in place of heroImage, in the same 16:9 hero container.
    *  heroImage is still used as the video's poster/fallback. */
   heroVideo?: { src: string; poster?: string; ariaLabel: string };
+  /** Optional. When provided, this node replaces the standard 16:9 hero box
+   *  entirely (e.g. a TiltedPhonePair of demo recordings). heroImage/heroVideo
+   *  are ignored for the hero when this is set. */
+  heroSlot?: ReactNode;
   metadata: MetadataItem[];
   challenge: string[];
   approach: ReactNode[];
@@ -115,28 +119,32 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
             {props.subtitle}
           </p>
 
-          {/* Hero — video if provided, otherwise image. Same 16:9 container either way. */}
-          <div className="mt-12 md:mt-16 relative aspect-[16/9] rounded-2xl overflow-hidden border border-border-default">
-            {props.heroVideo ? (
-              <VideoWithPlayOverlay
-                src={props.heroVideo.src}
-                poster={props.heroVideo.poster ?? props.heroImage}
-                ariaLabel={props.heroVideo.ariaLabel}
-                wrapperClassName="absolute inset-0 w-full h-full"
-                videoClassName="absolute inset-0 w-full h-full object-cover"
-              />
-            ) : (
-              <Image
-                src={props.heroImage}
-                alt={props.heroImageAlt}
-                fill
-                priority
-                unoptimized={isAnimated(props.heroImage)}
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
-              />
-            )}
-          </div>
+          {/* Hero — custom slot (e.g. tilted phones) if provided, else video, else image. */}
+          {props.heroSlot ? (
+            <div className="mt-12 md:mt-16">{props.heroSlot}</div>
+          ) : (
+            <div className="mt-12 md:mt-16 relative aspect-[16/9] rounded-2xl overflow-hidden border border-border-default">
+              {props.heroVideo ? (
+                <VideoWithPlayOverlay
+                  src={props.heroVideo.src}
+                  poster={props.heroVideo.poster ?? props.heroImage}
+                  ariaLabel={props.heroVideo.ariaLabel}
+                  wrapperClassName="absolute inset-0 w-full h-full"
+                  videoClassName="absolute inset-0 w-full h-full object-cover"
+                />
+              ) : (
+                <Image
+                  src={props.heroImage}
+                  alt={props.heroImageAlt}
+                  fill
+                  priority
+                  unoptimized={isAnimated(props.heroImage)}
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
+                />
+              )}
+            </div>
+          )}
 
           {/* Metadata block */}
           <div className="mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 border-t border-border-subtle pt-10">

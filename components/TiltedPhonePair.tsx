@@ -86,19 +86,30 @@ function TiltedPhone({ video, tilt }: { video: PhoneVideo; tilt: number }) {
             "shadow-[0_24px_60px_-18px_rgba(0,0,0,0.45),0_10px_28px_-12px_rgba(0,0,0,0.35),inset_0_0_0_1px_rgba(255,255,255,0.06)]",
           ].join(" ")}
         >
-          {/* Screen. Video uses object-cover so the chat content fills the iPhone-shaped frame; ~14% per side is cropped from the wider source. */}
+          {/* Screen. Media uses object-cover so the content fills the iPhone-shaped frame; ~14% per side is cropped from a wider source. */}
           <div className="relative h-full w-full overflow-hidden rounded-[2.15rem] sm:rounded-[2.35rem] bg-black">
-            <video
-              src={video.src}
-              poster={video.poster}
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              aria-label={video.alt}
-              className="h-full w-full object-cover object-center"
-            />
+            {/\.(mp4|webm|mov)$/i.test(video.src) ? (
+              <video
+                src={video.src}
+                poster={video.poster}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                aria-label={video.alt}
+                className="h-full w-full object-cover object-center"
+              />
+            ) : (
+              // GIF or static image. Plain <img> so animated GIFs keep animating
+              // (next/image would freeze them to the first frame).
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={video.src}
+                alt={video.alt ?? ""}
+                className="h-full w-full object-cover object-center"
+              />
+            )}
           </div>
         </div>
       </div>

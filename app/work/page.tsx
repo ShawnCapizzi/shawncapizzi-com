@@ -36,7 +36,7 @@ const CASE_STUDIES = [
       "A multi-sport product that scores every game by what's worth watching",
     description:
       "Designed, built, and shipped solo. Six leagues, a 151-team catalog, a four-factor excitement engine, and an AI-assisted data pipeline. Live at courtvisual.com.",
-    image: "/images/case-studies/07-courtvisual/01-hero-team-view-knicks.png",
+    image: "/images/case-studies/07-courtvisual/01-hero-courtvisual-slate.png",
   },
   {
     slug: "cancer-equality-app",

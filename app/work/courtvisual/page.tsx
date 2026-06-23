@@ -20,6 +20,20 @@ export default function Page() {
       subtitle="A multi-sport app that scores how worth watching tonight's games are, tuned to your taste, then points you to where to watch and how to get in. Built solo, concept to live PWA, on real-time data pipes."
       heroImage={`${ASSET_BASE}/01-hero-courtvisual-slate.png`}
       heroImageAlt="CourtVisual home screen: the welcome headline, a Knicks game scored 9.3 out of 10, and the team and sport picker"
+      heroSlot={
+        <TiltedPhonePair
+          left={{
+            src: `${ASSET_BASE}/courtvisual-onboarding-demo.gif`,
+            alt: "CourtVisual onboarding: following a team, and the app taking on that team's colors and reordering the slate.",
+            caption: "Onboarding: pick a team, the app suits up",
+          }}
+          right={{
+            src: `${ASSET_BASE}/courtvisual-ranking-demo.gif`,
+            alt: "CourtVisual live slate: tonight's games scored 0 to 10 and ranked, each card showing where to watch and a ticket path.",
+            caption: "The slate: every game scored and ranked",
+          }}
+        />
+      }
       metadata={[
         { label: "SCOPE", value: "Solo product, concept to live PWA" },
         { label: "YEAR", value: "2025–present" },
@@ -52,28 +66,6 @@ export default function Page() {
         "I didn't want a database of games. I wanted a living read on what's worth watching, refreshed from the same pipes the big platforms run on.",
       ]}
       projectShowcases={[
-        {
-          eyebrow: "The app, live · Find what's worth watching",
-          title: "Open to a scored slate, in your colors",
-          description: [
-            "Open CourtVisual and tonight's games are already scored and ranked. Pick a team or a sport in onboarding and the app suits up in your colors and reorders the feed around what you care about. No setup wall, no empty dashboard, just the night read for you.",
-            "One card does the three jobs a fan currently splits across four apps: it tells you whether the game is worth watching, where to watch it, and how to get in. The two recordings here are the live PWA, not a mockup.",
-          ],
-          customContent: (
-            <TiltedPhonePair
-              left={{
-                src: "/videos/courtvisual-onboarding-demo.mp4",
-                alt: "CourtVisual onboarding: following a team, and the app taking on that team's colors and reordering the slate.",
-                caption: "Onboarding: pick a team, the app suits up",
-              }}
-              right={{
-                src: "/videos/courtvisual-ranking-demo.mp4",
-                alt: "CourtVisual live slate: tonight's games scored 0 to 10 and ranked, each card showing where to watch and a ticket path.",
-                caption: "The slate: every game scored and ranked",
-              }}
-            />
-          ),
-        },
         {
           eyebrow: "The engine · A score you can read",
           title: "The excitement score, made legible and yours",
