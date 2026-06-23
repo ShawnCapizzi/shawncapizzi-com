@@ -1,51 +1,53 @@
 // Destination: components/PhoneFan.tsx
-// A three-device "evolution fan": oldest on the left, current on the right and
-// on top, gently fanned and overlapping. Each frame is sized to the image's own
-// aspect ratio so the screenshot fills it edge to edge (no letterboxing).
+// A three-device UI-progression row: oldest -> current, left to right. By default
+// the devices sit in a clean aligned row (equal height, upright). Hovering or
+// focusing one lifts and tilts it, so the angle is an interaction, not the
+// resting state. Each frame is sized to the image's own aspect ratio, so the
+// screenshot fills it edge to edge with no letterboxing.
 
 type FanPhone = {
   src: string;
   alt: string;
+  /** Small step label rendered under the device, e.g. "v1 · the PRD". */
+  label?: string;
 };
-
-// Per-position layout, left -> right (oldest -> current). The last sits largest,
-// upright, and on top. All literal class strings so Tailwind JIT keeps them.
-const LAYOUT = [
-  { w: "w-[30%] sm:w-[29%]", ml: "", z: "z-10", rot: "rotate-[-8deg]" },
-  { w: "w-[31%] sm:w-[30%]", ml: "-ml-[6%]", z: "z-20", rot: "rotate-[-4deg]" },
-  { w: "w-[35%] sm:w-[34%]", ml: "-ml-[6%]", z: "z-30", rot: "rotate-[0deg]" },
-];
 
 export function PhoneFan({ phones }: { phones: FanPhone[] }) {
   return (
-    <div className="relative mx-auto flex w-full max-w-4xl items-end justify-center px-2 py-8 md:py-10">
-      {phones.slice(0, 3).map((p, i) => {
-        const L = LAYOUT[i] ?? LAYOUT[0];
-        return (
+    <div className="mx-auto grid w-full max-w-2xl grid-cols-3 gap-3 sm:gap-5 md:gap-6">
+      {phones.slice(0, 3).map((p) => (
+        <figure
+          key={p.src}
+          tabIndex={0}
+          className="group flex flex-col items-center outline-none"
+        >
           <div
-            key={p.src}
             className={[
-              L.w,
-              L.ml,
-              L.z,
-              L.rot,
-              "origin-bottom transition-transform duration-500 ease-out will-change-transform",
-              "hover:-translate-y-2",
+              "relative aspect-[597/999] w-full origin-bottom rounded-[1.1rem] sm:rounded-[1.3rem]",
+              "bg-zinc-950 p-[3px] sm:p-[4px]",
+              "shadow-[0_18px_44px_-16px_rgba(0,0,0,0.6),0_6px_16px_-10px_rgba(0,0,0,0.5)]",
+              "transition-transform duration-500 ease-out will-change-transform",
+              // Angle + lift only on interaction.
+              "group-hover:-translate-y-2 group-hover:rotate-[-5deg]",
+              "group-focus-visible:-translate-y-2 group-focus-visible:rotate-[-5deg]",
             ].join(" ")}
           >
-            <div className="relative aspect-[597/999] w-full rounded-[1.5rem] bg-zinc-950 p-[5px] shadow-[0_24px_56px_-16px_rgba(0,0,0,0.6),0_8px_20px_-10px_rgba(0,0,0,0.5)]">
-              <div className="relative h-full w-full overflow-hidden rounded-[1.25rem] bg-black">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={p.src}
-                  alt={p.alt}
-                  className="h-full w-full object-cover object-top"
-                />
-              </div>
+            <div className="relative h-full w-full overflow-hidden rounded-[0.95rem] sm:rounded-[1.1rem] bg-black">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={p.src}
+                alt={p.alt}
+                className="h-full w-full object-cover object-top"
+              />
             </div>
           </div>
-        );
-      })}
+          {p.label ? (
+            <figcaption className="mt-3 text-center text-[0.7rem] sm:text-xs font-medium tracking-wide text-text-tertiary">
+              {p.label}
+            </figcaption>
+          ) : null}
+        </figure>
+      ))}
     </div>
   );
 }

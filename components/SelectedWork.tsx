@@ -26,7 +26,7 @@ const CASE_STUDIES = [
     eyebrow: "Solo build · Multi-sport PWA · AI-native",
     headline: "Scoring every game 0–10 for what's actually worth watching",
     outcome: "Designed, built, and shipped solo: six leagues, a 151-team catalog, a four-factor excitement engine, and an AI-assisted data pipeline. Live at courtvisual.com.",
-    image: "/images/case-studies/07-courtvisual/01-hero-courtvisual-slate.png",
+    image: "/images/case-studies/07-courtvisual/02-game-card-score-ring.png",
   },
   {
     slug: "cancer-equality-app",

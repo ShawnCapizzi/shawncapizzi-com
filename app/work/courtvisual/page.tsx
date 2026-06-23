@@ -18,7 +18,7 @@ export default function Page() {
       eyebrow="(Case Study)"
       title="CourtVisual"
       subtitle="A multi-sport app that scores how worth watching tonight's games are, tuned to your taste, then points you to where to watch and how to get in. Built solo, concept to live PWA, on real-time data pipes."
-      heroImage={`${ASSET_BASE}/01-hero-courtvisual-slate.png`}
+      heroImage={`${ASSET_BASE}/02-game-card-score-ring.png`}
       heroImageAlt="CourtVisual home screen: the welcome headline, a Knicks game scored 9.3 out of 10, and the team and sport picker"
       heroSlot={
         <TiltedPhonePair
@@ -75,7 +75,7 @@ export default function Page() {
           title: "Three builds, left to right",
           description: [
             "Left to right is the whole arc. v1 came straight from the PRD: a Game Excitement Analyzer with raw priority sliders and an uncapped score that ran past 14, on weights that didn't even need to add up. It proved the idea and nothing more.",
-            "The middle build capped the score to a legible 0 to 10 and turned it into a ranked slate. The one in front is where it landed: each card carries the four factors a fan actually feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why it scored that way.",
+            "The middle build capped the score to a legible 0 to 10 and turned it into a ranked slate. The third is where it landed: each card carries the four factors a fan actually feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why it scored that way.",
           ],
           customContent: (
             <PhoneFan
@@ -83,14 +83,17 @@ export default function Page() {
                 {
                   src: `${ASSET_BASE}/09-progression-prd.png`,
                   alt: "v1, from the PRD: a Game Excitement Analyzer with four priority sliders and an uncapped total weight over 100 percent.",
+                  label: "v1 · the PRD",
                 },
                 {
                   src: `${ASSET_BASE}/10-progression-ranking.png`,
                   alt: "The middle build: a ranked slate with each game scored and a why-this-game-scores breakdown on the card.",
+                  label: "v2 · ranked build",
                 },
                 {
                   src: `${ASSET_BASE}/11-progression-card.png`,
                   alt: "The shipped card: a Subway Series game scored with the current factors, Stakes, Rivalry, The race, and Matchup, plus a plain-English verdict and a ticket path.",
+                  label: "v3 · shipped",
                 },
               ]}
             />
