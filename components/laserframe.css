@@ -1,0 +1,60 @@
+/* ============================================================
+   LaserFrame — metallic perimeter gleam (shawncapizzi.com)
+   One slow silver pass when a framed element scrolls into view,
+   then it rests. Used by components/LaserFrame.tsx.
+   Namespaced sc- to stay isolated from anything else.
+   Append this block to the end of your global stylesheet.
+   ============================================================ */
+
+.sc-frame {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  pointer-events: none;
+  overflow: visible;
+  z-index: 2;
+}
+
+/* the moving metallic glint — invisible at rest */
+.sc-frame .laser {
+  fill: none;
+  stroke: url(#sc-metallic);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-dasharray: 0 100;
+  filter: drop-shadow(0 0 2px rgba(215, 219, 226, 0.4));
+}
+
+/* single pass on reveal: fade in, sweep the perimeter once, fade out clean */
+.sc-frame.is-inview .laser {
+  stroke-dasharray: 16 84; /* dash + gap = 100, pathLength-normalized */
+  animation: sc-perim 2.6s ease-out 1 forwards;
+}
+
+@keyframes sc-perim {
+  0% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -100;
+    opacity: 0;
+  }
+}
+
+/* reduced motion: no sweep, just a static faint silver edge */
+@media (prefers-reduced-motion: reduce) {
+  .sc-frame .laser {
+    animation: none !important;
+    stroke-dasharray: none;
+    opacity: 0.45;
+  }
+}

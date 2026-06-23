@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CTA_CARDS } from "./cta-cards-data";
+import { LaserFrame } from "./LaserFrame";
 
 /**
  * CTACards — bottom-of-page CTA cards.
@@ -112,6 +113,12 @@ export function CTACards({ cards }: { cards: string[] }) {
                 Call {item.phone}
               </a>
             ) : null}
+
+            {/* Metallic perimeter glint — fires once when the card scrolls
+                into view. pointer-events:none, so it never blocks the card
+                link or the tap-to-call footer. Rides just inside the
+                rounded-2xl (16px) edge; inner radius 15 stays concentric. */}
+            <LaserFrame radius={15} />
           </div>
         );
       })}
