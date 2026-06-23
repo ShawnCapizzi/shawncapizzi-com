@@ -1,5 +1,6 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { TiltedPhonePair } from "@/components/TiltedPhonePair";
+import { PhoneFan } from "@/components/PhoneFan";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -71,26 +72,27 @@ export default function Page() {
       projectShowcases={[
         {
           eyebrow: "The progression · From PRD to shipped",
-          title: "From PRD prototype to shipped app",
+          title: "Three builds, left to right",
           description: [
-            "The left phone is v1, straight from the PRD: a Game Excitement Analyzer with raw priority sliders and an uncapped score that ran past 14, on weights that didn't even need to add up. It proved the idea and nothing more.",
-            "The right phone is where it landed. The score is capped to a legible 0 to 10, the raw sliders gave way to a ranked slate, and the why-breakdown moved onto each card so the number always shows its work. Same idea, finally a product.",
+            "Left to right is the whole arc. v1 came straight from the PRD: a Game Excitement Analyzer with raw priority sliders and an uncapped score that ran past 14, on weights that didn't even need to add up. It proved the idea and nothing more.",
+            "The middle build capped the score to a legible 0 to 10 and turned it into a ranked slate. The one in front is where it landed: each card carries the four factors a fan actually feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why it scored that way.",
           ],
           customContent: (
-            <TiltedPhonePair
-              leftTilt={-6}
-              rightTilt={6}
-              phoneMaxWidth="max-w-[260px] sm:max-w-[300px]"
-              left={{
-                src: `${ASSET_BASE}/09-progression-prd.png`,
-                alt: "CourtVisual v1 from the PRD: a Game Excitement Analyzer with four priority sliders and an uncapped total weight over 100 percent.",
-                caption: "v1 · straight from the PRD",
-              }}
-              right={{
-                src: `${ASSET_BASE}/10-progression-shipped.png`,
-                alt: "The shipped CourtVisual ranking: games scored 0 to 10 in a ranked slate, each card showing the why-this-game-scores breakdown, a ticket path, and reactions.",
-                caption: "shipped · capped, ranked, on a card",
-              }}
+            <PhoneFan
+              phones={[
+                {
+                  src: `${ASSET_BASE}/09-progression-prd.png`,
+                  alt: "v1, from the PRD: a Game Excitement Analyzer with four priority sliders and an uncapped total weight over 100 percent.",
+                },
+                {
+                  src: `${ASSET_BASE}/10-progression-ranking.png`,
+                  alt: "The middle build: a ranked slate with each game scored and a why-this-game-scores breakdown on the card.",
+                },
+                {
+                  src: `${ASSET_BASE}/11-progression-card.png`,
+                  alt: "The shipped card: a Subway Series game scored with the current factors, Stakes, Rivalry, The race, and Matchup, plus a plain-English verdict and a ticket path.",
+                },
+              ]}
             />
           ),
         },
