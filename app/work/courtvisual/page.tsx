@@ -44,12 +44,12 @@ export default function Page() {
         {
           label: "CAPABILITIES",
           value:
-            "Product design · Experience architecture · Full-stack build · Live data integration · Affiliate strategy",
+            "Product design · Experience architecture · AI-assisted full-stack build · Live data integration · Affiliate strategy",
         },
         {
           label: "STACK",
           value:
-            "Next.js · React · Tailwind · Supabase · Vercel · ESPN · The Odds API · Ticketmaster",
+            "Next.js · React · Tailwind · Supabase · Vercel · Claude Code · ChatGPT · ESPN · The Odds API · Ticketmaster",
         },
       ]}
       challenge={[
@@ -74,8 +74,9 @@ export default function Page() {
           eyebrow: "The progression · From PRD to shipped",
           title: "Three builds, left to right",
           description: [
-            "Left to right is the whole arc. v1 came straight from the PRD: a Game Excitement Analyzer with raw priority sliders and an uncapped score that ran past 14, on weights that didn't even need to add up. It proved the idea and nothing more.",
+            "Left to right is the whole arc. I started by writing a full PRD and product vision, and v1 came straight out of it: a Game Excitement Analyzer with raw priority sliders and an uncapped score that ran past 14, on weights that didn't even need to add up. It proved the idea and nothing more.",
             "The middle build capped the score to a legible 0 to 10 and turned it into a ranked slate. The third is where it landed: each card carries the four factors a fan actually feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why it scored that way.",
+            "I built it with Claude Code and ChatGPT, working the way an art director works with a team. I wrote the spec, directed the tools through it, and reviewed every pass, refining the UI until the look and feel matched what I wanted. The distance from v1 to v3 is that iteration, the same instinct I bring to client work, now pointed at AI tools instead of a design team.",
           ],
           customContent: (
             <PhoneFan
