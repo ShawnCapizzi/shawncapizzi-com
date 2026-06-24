@@ -102,6 +102,14 @@ function isVideo(src: string): boolean {
 }
 
 export function CaseStudyLayout(props: CaseStudyLayoutProps) {
+  const quotes = props.pullQuote
+    ? Array.isArray(props.pullQuote)
+      ? props.pullQuote
+      : [props.pullQuote]
+    : [];
+  const leadQuote = quotes[0];
+  const restQuotes = quotes.slice(1);
+
   return (
     <article>
       {/* ============================================================
@@ -161,6 +169,17 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
               </div>
             ))}
           </div>
+
+          {/* Lead pull quote (epigraph), above the challenge */}
+          {leadQuote && (
+            <blockquote className="mt-12 md:mt-16 max-w-3xl border-l-2 border-brand-purple pl-6 md:pl-10 py-2">
+              <p className="text-xl md:text-2xl text-text-primary leading-relaxed italic">
+                {"\u201C"}
+                {leadQuote}
+                {"\u201D"}
+              </p>
+            </blockquote>
+          )}
         </div>
       </section>
 
@@ -185,12 +204,9 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           ============================================================ */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          {props.pullQuote && (
+          {restQuotes.length > 0 && (
             <blockquote className="mb-12 md:mb-16 max-w-3xl border-l-2 border-brand-purple pl-6 md:pl-10 py-2">
-              {(Array.isArray(props.pullQuote)
-                ? props.pullQuote
-                : [props.pullQuote]
-              ).map((line, i, arr) => (
+              {restQuotes.map((line, i, arr) => (
                 <p
                   key={i}
                   className={`text-xl md:text-2xl text-text-primary leading-relaxed italic${
