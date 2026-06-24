@@ -26,9 +26,10 @@ const RANK_FONT_HREF =
  * (mirrored) diagonal. One marker per corner; suit and rank never share a side.
  */
 
-// Card dimensions used by the stack. Single source of truth.
-const CARD_W = 260;
-const CARD_H = 364;
+// Card dimensions are responsive and live as CSS custom properties on the
+// .clarity-deck wrapper (see deckCSS). They step up at sm / md / lg breakpoints,
+// holding a constant 1.4 height:width ratio. Inline styles read var(--card-w)
+// and var(--card-h) so the stack geometry follows the breakpoint automatically.
 
 // Fine fractal-noise texture (felt + paper grain), as an inline SVG data URI so
 // no asset file is needed. Applied at low opacity with a soft-light blend.
@@ -94,11 +95,11 @@ export function ClarityCardDeck() {
   const visibleDeck = useMemo(() => deckIndices.slice(-3), [deckIndices]);
 
   return (
-    <div className="w-full">
+    <div className="clarity-deck w-full">
       <style>{deckCSS}</style>
 
       <div
-        className="relative rounded-3xl overflow-hidden p-8 md:p-12 lg:p-16"
+        className="relative rounded-3xl overflow-hidden p-4 sm:p-8 md:p-12 lg:p-16"
         style={{
           background:
             "radial-gradient(ellipse 55% 70% at 86% 16%, rgba(255,240,205,0.17) 0%, rgba(255,240,205,0) 55%), radial-gradient(ellipse 95% 85% at 16% 122%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 55%), linear-gradient(160deg, #2a5c30 0%, #1f4a24 58%, #163a1a 100%)",
@@ -128,8 +129,8 @@ export function ClarityCardDeck() {
           <div
             className="relative"
             style={{
-              width: CARD_W + 60,
-              height: CARD_H + 40,
+              width: "calc(var(--card-w) + 60px)",
+              height: "calc(var(--card-h) + 40px)",
             }}
             aria-live="polite"
           >
@@ -145,8 +146,8 @@ export function ClarityCardDeck() {
                     style={{
                       left: "50%",
                       top: 20,
-                      width: CARD_W,
-                      height: CARD_H,
+                      width: "var(--card-w)",
+                      height: "var(--card-h)",
                       transform: `translateX(-50%) translate(${depth}px, ${depth}px)`,
                       zIndex: stackPos,
                     }}
@@ -170,8 +171,8 @@ export function ClarityCardDeck() {
                     position: "absolute",
                     left: "50%",
                     top: 20,
-                    width: CARD_W,
-                    height: CARD_H,
+                    width: "var(--card-w)",
+                    height: "var(--card-h)",
                     transform: `translateX(-50%) translate(${x}px, ${y}px) rotate(${tilt}deg)`,
                     transformOrigin: "center center",
                     zIndex: 100 + i,
@@ -257,19 +258,19 @@ function CardFront({ card }: { card: ClarityCard }) {
 
       {/* CORNERS — suit on the TL/BR diagonal, rank on the TR/BL diagonal. */}
       <span
-        className="absolute top-3 left-3 text-2xl leading-none"
+        className="absolute top-3 left-3 md:top-4 md:left-4 text-2xl md:text-3xl leading-none"
         style={{ color: "#6B5CFF" }}
       >
         {card.suitSymbol}
       </span>
       <span
-        className="absolute top-3 right-3 text-[28px] leading-none tabular-nums"
+        className="absolute top-3 right-3 md:top-4 md:right-4 text-[28px] md:text-[36px] leading-none tabular-nums"
         style={{ color: "#ffffff", fontFamily: RANK_FONT, fontWeight: 600 }}
       >
         {card.rank}
       </span>
       <span
-        className="absolute bottom-3 left-3 text-[28px] leading-none tabular-nums"
+        className="absolute bottom-3 left-3 md:bottom-4 md:left-4 text-[28px] md:text-[36px] leading-none tabular-nums"
         style={{
           color: "#ffffff",
           fontFamily: RANK_FONT,
@@ -280,24 +281,24 @@ function CardFront({ card }: { card: ClarityCard }) {
         {card.rank}
       </span>
       <span
-        className="absolute bottom-3 right-3 text-2xl leading-none"
+        className="absolute bottom-3 right-3 md:bottom-4 md:right-4 text-2xl md:text-3xl leading-none"
         style={{ color: "#6B5CFF", transform: "rotate(180deg)" }}
       >
         {card.suitSymbol}
       </span>
 
       {/* CENTER content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center">
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-9 lg:px-10 text-center">
         <p
-          className="font-mono text-[10px] tracking-[0.18em] uppercase mb-4"
+          className="font-mono text-[11px] md:text-xs tracking-[0.18em] uppercase mb-3 md:mb-5"
           style={{ color: "#6B5CFF" }}
         >
           {card.title}
         </p>
-        <h3 className="text-lg md:text-xl font-bold text-white leading-[1.2] tracking-tight mb-4 text-balance">
+        <h3 className="text-lg md:text-2xl font-bold text-white leading-[1.2] tracking-tight mb-3 md:mb-5 text-balance">
           {card.prompt}
         </h3>
-        <p className="text-xs md:text-sm italic text-white/60 leading-relaxed text-balance">
+        <p className="text-[13px] md:text-base italic text-white/65 leading-relaxed text-balance">
           {card.clarifier}
         </p>
       </div>
@@ -345,6 +346,20 @@ function CardBack() {
 /* -------------------- Animations -------------------- */
 
 const deckCSS = `
+.clarity-deck {
+  --card-w: 250px;
+  --card-h: 350px;
+}
+@media (min-width: 640px) {
+  .clarity-deck { --card-w: 274px; --card-h: 384px; }
+}
+@media (min-width: 768px) {
+  .clarity-deck { --card-w: 312px; --card-h: 437px; }
+}
+@media (min-width: 1024px) {
+  .clarity-deck { --card-w: 342px; --card-h: 479px; }
+}
+
 @keyframes deckBob {
   0%, 100% { transform: translateX(-50%) translate(0px, 0px); }
   50%      { transform: translateX(-50%) translate(0px, -3px); }
