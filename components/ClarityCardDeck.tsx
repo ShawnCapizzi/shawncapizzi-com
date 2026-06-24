@@ -79,9 +79,9 @@ export function ClarityCardDeck() {
         className="relative rounded-3xl overflow-hidden p-8 md:p-12 lg:p-16"
         style={{
           background:
-            "radial-gradient(ellipse 100% 80% at 50% 115%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 55%), linear-gradient(160deg, #2a5c30 0%, #1f4a24 58%, #163a1a 100%)",
+            "radial-gradient(ellipse 55% 70% at 86% 16%, rgba(255,240,205,0.17) 0%, rgba(255,240,205,0) 55%), radial-gradient(ellipse 95% 85% at 16% 122%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 55%), linear-gradient(160deg, #2a5c30 0%, #1f4a24 58%, #163a1a 100%)",
           boxShadow:
-            "inset 0 0 0 1px rgba(255,255,255,0.05), inset 0 0 90px rgba(0,0,0,0.5), 0 30px 80px -30px rgba(0,0,0,0.7)",
+            "inset 0 0 0 1px rgba(255,255,255,0.05), inset 0 0 90px rgba(0,0,0,0.5), -12px 34px 80px -30px rgba(0,0,0,0.72)",
         }}
       >
         {/* Matte felt grain */}
@@ -166,8 +166,8 @@ export function ClarityCardDeck() {
           </div>
 
           {/* CONTROLS directly below the stack */}
-          <div className="mt-8 flex items-center gap-4">
-            {!noDrawsLeft ? (
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            {!noDrawsLeft && (
               <button
                 type="button"
                 onClick={drawNext}
@@ -175,15 +175,14 @@ export function ClarityCardDeck() {
               >
                 {drawn.length === 0 ? "Draw a card" : "Draw next"}
               </button>
-            ) : (
-              <button
-                type="button"
-                onClick={reshuffle}
-                className="inline-flex items-center justify-center px-7 py-3 rounded-full border border-white/30 text-white hover:bg-white/[0.08] text-sm md:text-base font-medium tracking-tight transition-all"
-              >
-                Reshuffle
-              </button>
             )}
+            <button
+              type="button"
+              onClick={reshuffle}
+              className="inline-flex items-center justify-center px-7 py-3 rounded-full border border-white/30 text-white hover:bg-white/[0.08] text-sm md:text-base font-medium tracking-tight transition-all"
+            >
+              Shuffle
+            </button>
             <p className="text-xs md:text-sm text-white/70 tabular-nums">
               {cardsRemaining} {cardsRemaining === 1 ? "card" : "cards"} left
             </p>
@@ -205,10 +204,18 @@ function CardFront({ card }: { card: ClarityCard }) {
           "linear-gradient(155deg, #0a2742 0%, #05192b 58%, #02101d 100%)",
         borderColor: "rgba(107, 92, 255, 0.22)",
         boxShadow:
-          "0 30px 60px -20px rgba(0,0,0,0.62), 0 12px 24px -10px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.05)",
+          "-16px 26px 52px -18px rgba(0,0,0,0.62), -7px 12px 22px -10px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06)",
       }}
     >
-      {/* Paper grain */}
+      {/* Desk-light catch on the top-right edge */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none rounded-2xl"
+        style={{
+          background:
+            "radial-gradient(ellipse 75% 60% at 88% -5%, rgba(255,248,230,0.12) 0%, rgba(255,248,230,0) 55%)",
+        }}
+      />
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none rounded-2xl"
@@ -280,9 +287,18 @@ function CardBack() {
           "radial-gradient(circle at 50% 38%, #0c2a4d 0%, #05192b 58%, #02101d 100%)",
         borderColor: "rgba(107, 92, 255, 0.28)",
         boxShadow:
-          "0 18px 40px -16px rgba(0,0,0,0.55), 0 6px 14px -6px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05)",
+          "-12px 18px 40px -16px rgba(0,0,0,0.55), -5px 6px 14px -6px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05)",
       }}
     >
+      {/* Desk-light catch on the top-right edge */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none rounded-2xl"
+        style={{
+          background:
+            "radial-gradient(ellipse 75% 60% at 88% -5%, rgba(255,248,230,0.10) 0%, rgba(255,248,230,0) 55%)",
+        }}
+      />
       {/* Paper grain */}
       <div
         aria-hidden="true"
