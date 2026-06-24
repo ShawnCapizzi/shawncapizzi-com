@@ -1,7 +1,18 @@
 "use client";
 
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { CLARITY_CARDS, type ClarityCard } from "@/lib/clarity-cards";
+
+/**
+ * Corner rank typeface. Oswald is a condensed, strong-stroked gothic that reads
+ * cleanly as a large single glyph and keeps "10" tidy in the corner. To retune,
+ * swap both RANK_FONT and RANK_FONT_HREF together (e.g. Bebas Neue for max
+ * poster presence, Playfair Display for a classic Bicycle/KEM serif, or Archivo
+ * for a neutral modern grotesque).
+ */
+const RANK_FONT = "'Oswald', system-ui, sans-serif";
+const RANK_FONT_HREF =
+  "https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap";
 
 /**
  * ClarityCardDeck
@@ -42,6 +53,17 @@ export function ClarityCardDeck() {
   );
   const [drawn, setDrawn] = useState<number[]>([]);
   const animatingRef = useRef(false);
+
+  // Load the corner rank font once, without touching layout.tsx or Tailwind config.
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    if (document.getElementById("clarity-rank-font")) return;
+    const link = document.createElement("link");
+    link.id = "clarity-rank-font";
+    link.rel = "stylesheet";
+    link.href = RANK_FONT_HREF;
+    document.head.appendChild(link);
+  }, []);
 
   const drawNext = useCallback(() => {
     if (animatingRef.current || deckIndices.length === 0) return;
@@ -204,16 +226,16 @@ function CardFront({ card }: { card: ClarityCard }) {
           "linear-gradient(155deg, #0a2742 0%, #05192b 58%, #02101d 100%)",
         borderColor: "rgba(107, 92, 255, 0.22)",
         boxShadow:
-          "-16px 26px 52px -18px rgba(0,0,0,0.62), -7px 12px 22px -10px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06)",
+          "-16px 26px 52px -18px rgba(0,0,0,0.62), -7px 12px 22px -10px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.05), inset -1px 0 0 rgba(255,255,255,0.035)",
       }}
     >
-      {/* Desk-light catch on the top-right edge */}
+      {/* Desk-light wash: a faint warm wash off the top-right, no hotspot */}
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none rounded-2xl"
         style={{
           background:
-            "radial-gradient(ellipse 75% 60% at 88% -5%, rgba(255,248,230,0.12) 0%, rgba(255,248,230,0) 55%)",
+            "linear-gradient(215deg, rgba(255,249,236,0.05) 0%, rgba(255,249,236,0) 42%)",
         }}
       />
       <div
@@ -241,14 +263,19 @@ function CardFront({ card }: { card: ClarityCard }) {
         {card.suitSymbol}
       </span>
       <span
-        className="absolute top-3 right-3 text-2xl font-bold leading-none tabular-nums"
-        style={{ color: "#ffffff" }}
+        className="absolute top-3 right-3 text-[28px] leading-none tabular-nums"
+        style={{ color: "#ffffff", fontFamily: RANK_FONT, fontWeight: 600 }}
       >
         {card.rank}
       </span>
       <span
-        className="absolute bottom-3 left-3 text-2xl font-bold leading-none tabular-nums"
-        style={{ color: "#ffffff", transform: "rotate(180deg)" }}
+        className="absolute bottom-3 left-3 text-[28px] leading-none tabular-nums"
+        style={{
+          color: "#ffffff",
+          fontFamily: RANK_FONT,
+          fontWeight: 600,
+          transform: "rotate(180deg)",
+        }}
       >
         {card.rank}
       </span>
@@ -287,18 +314,9 @@ function CardBack() {
           "radial-gradient(circle at 50% 38%, #0c2a4d 0%, #05192b 58%, #02101d 100%)",
         borderColor: "rgba(107, 92, 255, 0.28)",
         boxShadow:
-          "-12px 18px 40px -16px rgba(0,0,0,0.55), -5px 6px 14px -6px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05)",
+          "-12px 18px 40px -16px rgba(0,0,0,0.55), -5px 6px 14px -6px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05), inset -1px 0 0 rgba(255,255,255,0.03)",
       }}
     >
-      {/* Desk-light catch on the top-right edge */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none rounded-2xl"
-        style={{
-          background:
-            "radial-gradient(ellipse 75% 60% at 88% -5%, rgba(255,248,230,0.10) 0%, rgba(255,248,230,0) 55%)",
-        }}
-      />
       {/* Paper grain */}
       <div
         aria-hidden="true"
