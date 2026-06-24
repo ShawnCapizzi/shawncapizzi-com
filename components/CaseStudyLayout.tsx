@@ -76,6 +76,9 @@ interface CaseStudyLayoutProps {
   challenge: string[];
   approach: ReactNode[];
   pullQuote?: string | string[];
+  /** Optional ReactNode rendered immediately below the pull quote, before the
+   *  approach. Used to lift a key visual (e.g. a progression) high on the page. */
+  afterQuote?: ReactNode;
   midImages?: CaseStudyImage[];
   /** Optional carousel slot rendered between the approach section and outcomes. */
   processCarousel?: ReactNode;
@@ -200,6 +203,10 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                 </p>
               ))}
             </blockquote>
+          )}
+
+          {props.afterQuote && (
+            <div className="mb-12 md:mb-16">{props.afterQuote}</div>
           )}
 
           <CollapsibleSection id="approach-detail" heading="The approach">

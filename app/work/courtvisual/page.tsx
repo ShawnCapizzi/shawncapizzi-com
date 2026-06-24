@@ -70,17 +70,23 @@ export default function Page() {
         "The score isn't the hard part. Making it honest, and making it yours, is the hard part.",
         "I didn't want a database of games. I wanted a living read on what's worth watching, refreshed from the same pipes the big platforms run on.",
       ]}
-      projectShowcases={[
-        {
-          eyebrow: "The progression · From PRD to shipped",
-          title: "Proving the idea was the easy part",
-          description: [
-            "Left to right is the whole arc. I started by writing a full PRD and product vision, and v1 came straight out of it: a Game Excitement Analyzer with raw priority sliders and an uncapped score that ran past 14, on weights that didn't even need to add up. It proved the idea and nothing more.",
-            "The middle build capped the score to a legible 0 to 10 and turned it into a ranked slate. The third is where it landed: each card carries the four factors a fan actually feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why it scored that way.",
-            "Plenty of people are vibe-coding apps right now. Most lack the business focus and the discipline to stay on real value and a user-first point of view, so they ship something oversaturated and purposeless. I built this with Claude Code and ChatGPT, but I stayed the orchestrator: I described what I wanted to happen and what I wanted to see, in screenshots, text, and micro-interaction notes, and directed the tools until it matched the picture in my head. Miss on the first pass, and it landed by the second or third.",
-            "AI, if told, will keep building whatever features you ask it to, forever. My job as an orchestrator and the human crafting the experience is to have judgment and pull from my experience. That includes going back and trimming, defining the visual hierarchy, the design and pattern system, deciding how a user with zero context gets onboarded, which features earn their place, and which surprises people get to discover, keep, or switch off. That editing is the product.",
-          ],
-          customContent: (
+      afterQuote={
+        <div>
+          <p className="eyebrow mb-4">The progression · From PRD to shipped</p>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl">
+            Proving the idea was the easy part
+          </h3>
+          <div className="max-w-3xl space-y-5 text-lg text-text-secondary leading-relaxed">
+            {[
+              "Left to right is the whole arc. I started by writing a full PRD and product vision, and v1 came straight out of it: a Game Excitement Analyzer with raw priority sliders and an uncapped score that ran past 14, on weights that didn't even need to add up. It proved the idea and nothing more.",
+              "The middle build capped the score to a legible 0 to 10 and turned it into a ranked slate. The third is where it landed: each card carries the four factors a fan actually feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why it scored that way.",
+              "Plenty of people are vibe-coding apps right now. Most lack the business focus and the discipline to stay on real value and a user-first point of view, so they ship something oversaturated and purposeless. I built this with Claude Code and ChatGPT, but I stayed the orchestrator: I described what I wanted to happen and what I wanted to see, in screenshots, text, and micro-interaction notes, and directed the tools until it matched the picture in my head. Miss on the first pass, and it landed by the second or third.",
+              "AI, if told, will keep building whatever features you ask it to, forever. My job as an orchestrator and the human crafting the experience is to have judgment and pull from my experience. That includes going back and trimming, defining the visual hierarchy, the design and pattern system, deciding how a user with zero context gets onboarded, which features earn their place, and which surprises people get to discover, keep, or switch off. That editing is the product.",
+            ].map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+          </div>
+          <div className="mt-10 md:mt-14">
             <PhoneFan
               phones={[
                 {
@@ -100,8 +106,10 @@ export default function Page() {
                 },
               ]}
             />
-          ),
-        },
+          </div>
+        </div>
+      }
+      projectShowcases={[
         {
           eyebrow: "Live data · Not a static list",
           title: "Scored from live pipes, and find, watch, buy on one card",

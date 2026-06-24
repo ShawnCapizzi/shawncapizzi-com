@@ -21,6 +21,9 @@ export function PhoneFan({ phones }: { phones: FanPhone[] }) {
         // Mobile: horizontal snap-scroll row (hidden scrollbar).
         "mx-auto flex w-full max-w-[840px] snap-x snap-mandatory gap-4 overflow-x-auto pb-3",
         "[scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
+        // Only claim horizontal gestures so vertical page scroll passes through,
+        // and don't let the horizontal scroll chain to the page/back-nav.
+        "touch-pan-x overscroll-x-contain sm:touch-auto",
         // Desktop: switch to an aligned three-up grid.
         "sm:grid sm:grid-cols-3 sm:gap-6 sm:overflow-visible sm:pb-0",
       ].join(" ")}
