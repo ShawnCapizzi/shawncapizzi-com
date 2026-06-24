@@ -112,10 +112,10 @@ export function ClarityCardDeck() {
         className="relative mx-auto w-full max-w-[860px] rounded-3xl overflow-hidden p-4 sm:p-8 md:p-12 lg:p-16"
         style={{
           background:
-            "radial-gradient(ellipse 55% 70% at 86% 14%, rgba(255,244,222,0.22) 0%, rgba(255,244,222,0) 55%)," +
-            "radial-gradient(ellipse 95% 85% at 16% 122%, rgba(40,28,12,0.32) 0%, rgba(40,28,12,0) 55%)," +
-            "repeating-linear-gradient(92deg, rgba(110,84,46,0) 0px, rgba(110,84,46,0) 150px, rgba(108,82,44,0.16) 151px, rgba(108,82,44,0.16) 152px)," +
-            "linear-gradient(160deg, #D9C49B 0%, #CBB084 60%, #BDA070 100%)",
+            "radial-gradient(ellipse 52% 66% at 88% 12%, rgba(255,243,216,0.34) 0%, rgba(255,243,216,0) 56%)," +
+            "radial-gradient(ellipse 95% 85% at 16% 122%, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0) 55%)," +
+            "repeating-linear-gradient(92deg, rgba(40,28,14,0) 0px, rgba(40,28,14,0) 150px, rgba(34,24,12,0.34) 151px, rgba(34,24,12,0.34) 152px)," +
+            "linear-gradient(160deg, #82765D 0%, #79694D 60%, #6B5B41 100%)",
           boxShadow:
             "inset 0 0 0 1px rgba(255,255,255,0.06), inset 0 0 90px rgba(40,28,12,0.26), -12px 34px 80px -30px rgba(40,28,12,0.55)",
         }}
@@ -219,7 +219,7 @@ export function ClarityCardDeck() {
           onClick={reshuffle}
           className="inline-flex items-center justify-center px-7 py-3 rounded-full border border-[#16161A]/20 text-[#16161A] hover:bg-[#16161A]/[0.04] text-sm md:text-base font-medium tracking-tight transition-all"
         >
-          Shuffle
+          Shuffle deck
         </button>
         <p className="text-xs md:text-sm tabular-nums" style={{ color: MUTE }}>
           {cardsRemaining} {cardsRemaining === 1 ? "card" : "cards"} left
@@ -466,7 +466,7 @@ function StickyNote({
       style={{
         background: color,
         transform: `rotate(${rotate}deg)`,
-        boxShadow: "0 10px 18px -6px rgba(40,28,12,0.30)",
+        boxShadow: "-8px 14px 22px -6px rgba(18,12,5,0.46), -3px 5px 9px -3px rgba(18,12,5,0.36)",
         color: "#37352b",
         fontFamily: HAND,
       }}

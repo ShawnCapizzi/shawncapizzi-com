@@ -41,7 +41,7 @@ export default function Page() {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-16">
-            <p className="eyebrow mb-4">Coming soon</p>
+            <p className="eyebrow mb-4">Printed version coming soon</p>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight leading-tight text-text-primary">
               The Capizzi Clarity Cards
             </h2>
