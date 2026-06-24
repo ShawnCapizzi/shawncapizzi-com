@@ -1,79 +1,31 @@
 "use client";
 
 import { useCallback, useMemo, useRef, useState } from "react";
+import { CLARITY_CARDS, type ClarityCard } from "@/lib/clarity-cards";
 
 /**
  * ClarityCardDeck
  *
- * A single stacked deck of Capizzi Clarity Cards sitting on a green felt
- * playmat. Click "Draw" and the top card lifts a little, tilts to roughly 8
- * degrees, and flips face-up on top of the stack so its content is readable.
- * Click again and the next card flips on top of that one. Pile grows.
+ * A single stacked deck of Capizzi Clarity Cards on a matte green felt playmat.
+ * Click "Draw" and the top card lifts, tilts, and flips face-up onto the pile.
+ * All 54 cards come from lib/clarity-cards.ts (4 suits of 13 + 2 wildcards).
  *
- * Cards are CSS-rendered from the data array below.
+ * Card front follows the deck's layout spec: suit symbol on the top-left and
+ * bottom-right (mirrored) diagonal, rank on the top-right and bottom-left
+ * (mirrored) diagonal. One marker per corner; suit and rank never share a side.
  */
-
-type ClarityCard = {
-  rank: string;
-  eyebrow: string;
-  question: string;
-  note: string;
-};
-
-const CARDS: ClarityCard[] = [
-  {
-    rank: "A",
-    eyebrow: "Clarity",
-    question: "What's actually stuck?",
-    note: "Before you brief the design, name the actual blocker. Political, technical, strategic, or unclear scope.",
-  },
-  {
-    rank: "2",
-    eyebrow: "The Real Problem",
-    question: "What problem is this actually solving?",
-    note: "Strip away the request and ask what the underlying need is. The brief is rarely the brief.",
-  },
-  {
-    rank: "3",
-    eyebrow: "Two Sentences",
-    question: "Can you state the problem in two sentences?",
-    note: "If you can't, you don't have a problem statement. You have a problem feeling.",
-  },
-  {
-    rank: "6",
-    eyebrow: "The Actual User",
-    question: "Are we designing for the user or the stakeholder reviewing this?",
-    note: "Most enterprise design optimizes for the approver, not the person who'll use it.",
-  },
-  {
-    rank: "7",
-    eyebrow: "Cost of Wrong",
-    question: "What happens if we get this wrong?",
-    note: "If nothing happens, this isn't worth designing carefully. If a lot happens, slow down.",
-  },
-  {
-    rank: "9",
-    eyebrow: "What's Off Limits",
-    question: "What can't we change, and why?",
-    note: "Constraints aren't always real. Sometimes they're inherited assumptions worth challenging.",
-  },
-  {
-    rank: "10",
-    eyebrow: "The Yes/No Test",
-    question: "Can a stakeholder give us a clear yes or no on this?",
-    note: "If they can only say 'maybe' or 'it depends,' the question isn't sharp enough.",
-  },
-];
-
-const SPADE = "\u2660";
 
 // Card dimensions used by the stack. Single source of truth.
 const CARD_W = 260;
 const CARD_H = 364;
 
+// Fine fractal-noise texture (felt + paper grain), as an inline SVG data URI so
+// no asset file is needed. Applied at low opacity with a soft-light blend.
+const NOISE =
+  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")";
+
 // Per-draw tilt and offset so each face-up card lands in a slightly different
-// spot, like a real fanned pile of drawn cards. Deterministic by draw index
-// so re-renders don't reshuffle the visible layout.
+// spot, like a real fanned pile. Deterministic by draw index.
 function tiltFor(seed: number) {
   const sequence = [-8, 6, -5, 9, -7, 4, -10, 7, -6, 8];
   return sequence[seed % sequence.length];
@@ -86,7 +38,7 @@ function offsetFor(seed: number) {
 
 export function ClarityCardDeck() {
   const [deckIndices, setDeckIndices] = useState<number[]>(() =>
-    CARDS.map((_, i) => i).reverse()
+    CLARITY_CARDS.map((_, i) => i).reverse()
   );
   const [drawn, setDrawn] = useState<number[]>([]);
   const animatingRef = useRef(false);
@@ -107,7 +59,7 @@ export function ClarityCardDeck() {
   const reshuffle = useCallback(() => {
     if (animatingRef.current) return;
     setDrawn([]);
-    const fresh = CARDS.map((_, i) => i);
+    const fresh = CLARITY_CARDS.map((_, i) => i);
     for (let i = fresh.length - 1; i > 0; i -= 1) {
       const j = Math.floor(Math.random() * (i + 1));
       [fresh[i], fresh[j]] = [fresh[j], fresh[i]];
@@ -127,11 +79,23 @@ export function ClarityCardDeck() {
         className="relative rounded-3xl overflow-hidden p-8 md:p-12 lg:p-16"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% 30%, rgba(41, 168, 41, 0.28) 0%, rgba(41, 168, 41, 0.14) 40%, rgba(20, 90, 25, 0.85) 100%), linear-gradient(160deg, #1f7a25 0%, #176019 60%, #0f4612 100%)",
+            "radial-gradient(ellipse 100% 80% at 50% 115%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 55%), linear-gradient(160deg, #2a5c30 0%, #1f4a24 58%, #163a1a 100%)",
           boxShadow:
-            "inset 0 0 0 1px rgba(255, 255, 255, 0.08), inset 0 0 80px rgba(0, 0, 0, 0.45), 0 30px 80px -30px rgba(0, 0, 0, 0.7)",
+            "inset 0 0 0 1px rgba(255,255,255,0.05), inset 0 0 90px rgba(0,0,0,0.5), 0 30px 80px -30px rgba(0,0,0,0.7)",
         }}
       >
+        {/* Matte felt grain */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: NOISE,
+            backgroundSize: "180px 180px",
+            opacity: 0.12,
+            mixBlendMode: "soft-light",
+          }}
+        />
+
         <div
           aria-hidden="true"
           className="absolute inset-4 md:inset-5 rounded-2xl pointer-events-none"
@@ -194,7 +158,7 @@ export function ClarityCardDeck() {
                     ["--final-y" as string]: `${y}px`,
                   }}
                 >
-                  <CardFront card={CARDS[cardIdx]} />
+                  <CardFront card={CLARITY_CARDS[cardIdx]} />
                   {isNewest && <span className="card-shimmer" aria-hidden="true" />}
                 </div>
               );
@@ -238,55 +202,69 @@ function CardFront({ card }: { card: ClarityCard }) {
       className="relative h-full w-full overflow-hidden rounded-2xl border"
       style={{
         background:
-          "linear-gradient(155deg, #08233f 0%, #021524 55%, #010d1a 100%)",
+          "linear-gradient(155deg, #0a2742 0%, #05192b 58%, #02101d 100%)",
         borderColor: "rgba(107, 92, 255, 0.22)",
         boxShadow:
-          "0 30px 60px -20px rgba(0,0,0,0.6), 0 12px 24px -10px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(107,92,255,0.08)",
+          "0 30px 60px -20px rgba(0,0,0,0.62), 0 12px 24px -10px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.05)",
       }}
     >
+      {/* Paper grain */}
       <div
-        className="absolute top-3 left-3 flex flex-col items-center leading-none"
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none rounded-2xl"
+        style={{
+          backgroundImage: NOISE,
+          backgroundSize: "160px 160px",
+          opacity: 0.05,
+          mixBlendMode: "soft-light",
+        }}
+      />
+      {/* Printed inner border frame, the way a real card is trimmed */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-[10px] rounded-xl pointer-events-none"
+        style={{ border: "1px solid rgba(107, 92, 255, 0.16)" }}
+      />
+
+      {/* CORNERS — suit on the TL/BR diagonal, rank on the TR/BL diagonal. */}
+      <span
+        className="absolute top-3 left-3 text-2xl leading-none"
         style={{ color: "#6B5CFF" }}
       >
-        <span className="text-2xl font-bold tabular-nums">{card.rank}</span>
-      </div>
-      <div className="absolute top-3.5 left-9 text-[#6B5CFF] text-lg leading-none">
-        {SPADE}
-      </div>
-
-      <div
-        className="absolute top-3 right-3 flex flex-col items-center leading-none"
+        {card.suitSymbol}
+      </span>
+      <span
+        className="absolute top-3 right-3 text-2xl font-bold leading-none tabular-nums"
         style={{ color: "#ffffff" }}
       >
-        <span className="text-2xl font-bold tabular-nums">{card.rank}</span>
-      </div>
-
-      <div
-        className="absolute bottom-3 left-3 leading-none"
+        {card.rank}
+      </span>
+      <span
+        className="absolute bottom-3 left-3 text-2xl font-bold leading-none tabular-nums"
         style={{ color: "#ffffff", transform: "rotate(180deg)" }}
       >
-        <span className="text-2xl font-bold tabular-nums">{card.rank}</span>
-      </div>
-
-      <div
-        className="absolute bottom-3 right-3 text-[#6B5CFF] text-lg leading-none"
-        style={{ transform: "rotate(180deg)" }}
+        {card.rank}
+      </span>
+      <span
+        className="absolute bottom-3 right-3 text-2xl leading-none"
+        style={{ color: "#6B5CFF", transform: "rotate(180deg)" }}
       >
-        {SPADE}
-      </div>
+        {card.suitSymbol}
+      </span>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-7 text-center">
+      {/* CENTER content */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center">
         <p
           className="font-mono text-[10px] tracking-[0.18em] uppercase mb-4"
           style={{ color: "#6B5CFF" }}
         >
-          {card.eyebrow}
+          {card.title}
         </p>
         <h3 className="text-lg md:text-xl font-bold text-white leading-[1.2] tracking-tight mb-4 text-balance">
-          {card.question}
+          {card.prompt}
         </h3>
         <p className="text-xs md:text-sm italic text-white/60 leading-relaxed text-balance">
-          {card.note}
+          {card.clarifier}
         </p>
       </div>
     </div>
@@ -299,29 +277,28 @@ function CardBack() {
       className="relative h-full w-full overflow-hidden rounded-2xl border"
       style={{
         background:
-          "radial-gradient(circle at 30% 30%, #0c2a4d 0%, #021524 55%, #010d1a 100%)",
+          "radial-gradient(circle at 50% 38%, #0c2a4d 0%, #05192b 58%, #02101d 100%)",
         borderColor: "rgba(107, 92, 255, 0.28)",
         boxShadow:
-          "0 18px 40px -16px rgba(0,0,0,0.55), 0 6px 14px -6px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(107,92,255,0.10)",
+          "0 18px 40px -16px rgba(0,0,0,0.55), 0 6px 14px -6px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05)",
       }}
     >
+      {/* Paper grain */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none rounded-2xl"
+        style={{
+          backgroundImage: NOISE,
+          backgroundSize: "160px 160px",
+          opacity: 0.06,
+          mixBlendMode: "soft-light",
+        }}
+      />
       <div
         className="absolute inset-0 flex items-center justify-center text-7xl"
-        style={{ color: "rgba(107, 92, 255, 0.20)" }}
+        style={{ color: "rgba(107, 92, 255, 0.18)" }}
       >
-        {SPADE}
-      </div>
-      <div
-        className="absolute top-3 left-3 text-base"
-        style={{ color: "rgba(107, 92, 255, 0.55)" }}
-      >
-        {SPADE}
-      </div>
-      <div
-        className="absolute bottom-3 right-3 text-base"
-        style={{ color: "rgba(107, 92, 255, 0.55)", transform: "rotate(180deg)" }}
-      >
-        {SPADE}
+        {"\u2605"}
       </div>
       <div
         className="absolute inset-3 rounded-xl pointer-events-none"
