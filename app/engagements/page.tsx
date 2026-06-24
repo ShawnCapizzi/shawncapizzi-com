@@ -123,17 +123,17 @@ export default function Page() {
           <div id="engagements-nav" className="mt-8 md:mt-10 scroll-mt-32 md:scroll-mt-40">
             <p className="metadata-label mb-3">Jump to</p>
             <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
-              <a href="#leadership" className="text-link hover:text-link-hover transition-colors">Leadership</a>
-              <span aria-hidden="true">·</span>
-              <a href="#advisory" className="text-link hover:text-link-hover transition-colors">Advisory</a>
-              <span aria-hidden="true">·</span>
-              <a href="#oncall" className="text-link hover:text-link-hover transition-colors">On Call</a>
-              <span aria-hidden="true">·</span>
               <a href="#who" className="text-link hover:text-link-hover transition-colors">Who</a>
               <span aria-hidden="true">·</span>
               <a href="#focus" className="text-link hover:text-link-hover transition-colors">Focus</a>
               <span aria-hidden="true">·</span>
               <a href="#process" className="text-link hover:text-link-hover transition-colors">Process</a>
+              <span aria-hidden="true">·</span>
+              <a href="#leadership" className="text-link hover:text-link-hover transition-colors">Leadership</a>
+              <span aria-hidden="true">·</span>
+              <a href="#advisory" className="text-link hover:text-link-hover transition-colors">Advisory</a>
+              <span aria-hidden="true">·</span>
+              <a href="#oncall" className="text-link hover:text-link-hover transition-colors">On Call</a>
             </nav>
           </div>
 
@@ -169,17 +169,6 @@ export default function Page() {
               </div>
             </figcaption>
           </figure>
-
-          <div className="mt-10 md:mt-12">
-            <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
-            >
-              Book a Strategy Call
-            </a>
-          </div>
         </div>
       </section>
 
@@ -200,6 +189,232 @@ export default function Page() {
               Where every engagement begins.
             </figcaption>
           </figure>
+        </div>
+      </section>
+
+      {/* WHO I WORK WITH */}
+      <section id="who" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <a
+            href="#engagements-nav"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
+            aria-label="Jump back to navigation"
+          >
+            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
+          </a>
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+            Who I work with
+          </h2>
+          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
+            The most useful seat I take in any engagement is the one between
+            the leaders who set direction and the practitioners building toward
+            it. I do my best work when I&apos;m trusted by both.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {/* Leadership tier */}
+            <article className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default">
+              <p className="eyebrow mb-3">Leadership tier</p>
+              <p className="text-base md:text-lg text-text-primary font-medium mb-4">
+                SVPs, VPs, Directors, PMs, brand managers, account leads.
+              </p>
+              <p className="text-base text-text-secondary leading-relaxed">
+                The people who hire me, set the direction, and need senior
+                judgment on the decisions that matter most. We work in 1:1s,
+                working sessions, and the moments before a critical room.
+              </p>
+            </article>
+
+            {/* Creative tier */}
+            <article className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default">
+              <p className="eyebrow mb-3">Creative tier</p>
+              <p className="text-base md:text-lg text-text-primary font-medium mb-4">
+                Copywriters, visual designers, design directors.
+              </p>
+              <p className="text-base text-text-secondary leading-relaxed">
+                My closest daily collaborators. I work shoulder-to-shoulder on
+                the actual artifacts (wireframes, content frameworks,
+                decks, prototypes) and earn trust through the craft, not
+                the title above it.
+              </p>
+            </article>
+
+            {/* Build tier */}
+            <article className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default">
+              <p className="eyebrow mb-3">Build tier</p>
+              <p className="text-base md:text-lg text-text-primary font-medium mb-4">
+                Dev partners, engineering teams, design system practitioners.
+              </p>
+              <p className="text-base text-text-secondary leading-relaxed">
+                The people who turn the work into a product. I write to be
+                built. Onshore primarily, with global partners as needed.
+              </p>
+            </article>
+
+            {/* Adjacent tier */}
+            <article className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default">
+              <p className="eyebrow mb-3">Adjacent tier</p>
+              <p className="text-base md:text-lg text-text-primary font-medium mb-4">
+                Regulatory reviewers, strategy partners, project managers.
+              </p>
+              <p className="text-base text-text-secondary leading-relaxed">
+                The functions that wrap around the work. I treat regulatory
+                partners (RC, MLR, FDA, SEC) as collaborators,
+                not gatekeepers. The work moves faster when they&apos;re
+                brought in early.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* THREE PILLARS */}
+      <section id="focus" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <a
+            href="#engagements-nav"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
+            aria-label="Jump back to navigation"
+          >
+            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
+          </a>
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+            How I work across engagements
+          </h2>
+          <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl mb-14 md:mb-16">
+            Every engagement runs through three lenses. They&apos;re not
+            separate practices. They&apos;re how I look at any complex
+            experience problem.
+          </p>
+
+          <div className="space-y-12 md:space-y-16">
+            {PILLARS.map((pillar) => (
+              <div key={pillar.name} className="max-w-3xl">
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 text-text-primary">
+                  {pillar.name}
+                </h3>
+                <p className="text-base md:text-lg text-text-secondary leading-relaxed">
+                  {pillar.body}
+                </p>
+                {pillar.crossLink && (
+                  <p className="mt-4">
+                    <Link
+                      href={pillar.crossLink.href}
+                      className="text-base text-link hover:text-link-hover transition-colors italic"
+                    >
+                      {pillar.crossLink.label} &rarr;
+                    </Link>
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* RECURRING CTA — first appears after Who + How */}
+      <section className="pb-4 md:pb-10">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <div className="rounded-2xl card-surface border border-border-subtle px-6 md:px-10 py-7 md:py-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-lg md:text-xl font-medium text-text-primary">
+                Not sure which way in fits?
+              </p>
+              <p className="mt-1 text-text-secondary">
+                A free 30-minute call, no pitch. We&apos;ll find the best option for you.
+              </p>
+            </div>
+            <a
+              href={CAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
+            >
+              Book a Strategy Call
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT STARTS */}
+      <section id="process" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <a
+            href="#engagements-nav"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
+            aria-label="Jump back to navigation"
+          >
+            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
+          </a>
+          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-14 md:mb-16 max-w-3xl">
+            Engagement kickoff
+          </h2>
+
+          <div className="space-y-10 md:space-y-12 max-w-3xl">
+            {[
+              {
+                step: "Step 1",
+                title: "Strategy Call (free, 30 minutes)",
+                body: "Virtual. We talk through what's stuck and what success looks like. No pitch. If there's not a fit, I'll tell you and try to point you to possible solutions or partners.",
+              },
+              {
+                step: "Step 2",
+                title: "Scoping conversation",
+                body: "If the strategy call goes well, a longer conversation with the relevant stakeholders to understand scope, timing, and constraints. This is where I'll ask the questions that make the engagement actually work.",
+              },
+              {
+                step: "Step 3",
+                title: "Statement of Work",
+                body: "The brief or SOW with scope, deliverables, timing, and pricing. Can also be written for your marketing team if I'm serving as an adviser to procurement.",
+              },
+              {
+                step: "Step 4",
+                title: "Quarterly data and actions check-in",
+                body: "Most engagements evolve. Every 90 days we step back, review what's working, and adjust based on current goals and metrics. Some stay the same shape for years. Others shift as the business shifts. The relationship matters more than the SOW.",
+              },
+            ].map((step) => (
+              <div
+                key={step.step}
+                className="border-l-2 border-border-default pl-6 md:pl-8"
+              >
+                <p className="metadata-label mb-2">{step.step}</p>
+                <h3 className="text-xl md:text-2xl font-semibold text-text-primary mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-base md:text-lg text-text-secondary leading-relaxed">
+                  {step.body}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-14 md:mt-16 text-lg text-text-secondary max-w-3xl">
+            Many engagements move from first call to signed SOW in 2–3 weeks.
+          </p>
+        </div>
+      </section>
+
+      {/* RECURRING CTA — after the kickoff steps */}
+      <section className="pb-4 md:pb-10">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <div className="rounded-2xl card-surface border border-border-subtle px-6 md:px-10 py-7 md:py-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-lg md:text-xl font-medium text-text-primary">
+                Want to talk it through first?
+              </p>
+              <p className="mt-1 text-text-secondary">
+                30 minutes, no pitch. Tell me what&apos;s stuck and we&apos;ll find the path.
+              </p>
+            </div>
+            <a
+              href={CAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
+            >
+              Book a Strategy Call
+            </a>
+          </div>
         </div>
       </section>
 
@@ -417,184 +632,6 @@ export default function Page() {
               Let&apos;s talk through what your team actually needs.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* WHO I WORK WITH */}
-      <section id="who" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
-        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <a
-            href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
-            aria-label="Jump back to navigation"
-          >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
-          </a>
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
-            Who I work with
-          </h2>
-          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
-            The most useful seat I take in any engagement is the one between
-            the leaders who set direction and the practitioners building toward
-            it. I do my best work when I&apos;m trusted by both.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {/* Leadership tier */}
-            <article className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default">
-              <p className="eyebrow mb-3">Leadership tier</p>
-              <p className="text-base md:text-lg text-text-primary font-medium mb-4">
-                SVPs, VPs, Directors, PMs, brand managers, account leads.
-              </p>
-              <p className="text-base text-text-secondary leading-relaxed">
-                The people who hire me, set the direction, and need senior
-                judgment on the decisions that matter most. We work in 1:1s,
-                working sessions, and the moments before a critical room.
-              </p>
-            </article>
-
-            {/* Creative tier */}
-            <article className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default">
-              <p className="eyebrow mb-3">Creative tier</p>
-              <p className="text-base md:text-lg text-text-primary font-medium mb-4">
-                Copywriters, visual designers, design directors.
-              </p>
-              <p className="text-base text-text-secondary leading-relaxed">
-                My closest daily collaborators. I work shoulder-to-shoulder on
-                the actual artifacts (wireframes, content frameworks,
-                decks, prototypes) and earn trust through the craft, not
-                the title above it.
-              </p>
-            </article>
-
-            {/* Build tier */}
-            <article className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default">
-              <p className="eyebrow mb-3">Build tier</p>
-              <p className="text-base md:text-lg text-text-primary font-medium mb-4">
-                Dev partners, engineering teams, design system practitioners.
-              </p>
-              <p className="text-base text-text-secondary leading-relaxed">
-                The people who turn the work into a product. I write to be
-                built. Onshore primarily, with global partners as needed.
-              </p>
-            </article>
-
-            {/* Adjacent tier */}
-            <article className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default">
-              <p className="eyebrow mb-3">Adjacent tier</p>
-              <p className="text-base md:text-lg text-text-primary font-medium mb-4">
-                Regulatory reviewers, strategy partners, project managers.
-              </p>
-              <p className="text-base text-text-secondary leading-relaxed">
-                The functions that wrap around the work. I treat regulatory
-                partners (RC, MLR, FDA, SEC) as collaborators,
-                not gatekeepers. The work moves faster when they&apos;re
-                brought in early.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      {/* THREE PILLARS */}
-      <section id="focus" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
-        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <a
-            href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
-            aria-label="Jump back to navigation"
-          >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
-          </a>
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
-            How I work across engagements
-          </h2>
-          <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl mb-14 md:mb-16">
-            Every engagement runs through three lenses. They&apos;re not
-            separate practices. They&apos;re how I look at any complex
-            experience problem.
-          </p>
-
-          <div className="space-y-12 md:space-y-16">
-            {PILLARS.map((pillar) => (
-              <div key={pillar.name} className="max-w-3xl">
-                <h3 className="text-xl md:text-2xl font-semibold mb-4 text-text-primary">
-                  {pillar.name}
-                </h3>
-                <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-                  {pillar.body}
-                </p>
-                {pillar.crossLink && (
-                  <p className="mt-4">
-                    <Link
-                      href={pillar.crossLink.href}
-                      className="text-base text-link hover:text-link-hover transition-colors italic"
-                    >
-                      {pillar.crossLink.label} &rarr;
-                    </Link>
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* HOW IT STARTS */}
-      <section id="process" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
-        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <a
-            href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
-            aria-label="Jump back to navigation"
-          >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
-          </a>
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-14 md:mb-16 max-w-3xl">
-            Engagement kickoff
-          </h2>
-
-          <div className="space-y-10 md:space-y-12 max-w-3xl">
-            {[
-              {
-                step: "Step 1",
-                title: "Strategy Call (free, 30 minutes)",
-                body: "Virtual. We talk through what's stuck and what success looks like. No pitch. If there's not a fit, I'll tell you and try to point you to possible solutions or partners.",
-              },
-              {
-                step: "Step 2",
-                title: "Scoping conversation",
-                body: "If the strategy call goes well, a longer conversation with the relevant stakeholders to understand scope, timing, and constraints. This is where I'll ask the questions that make the engagement actually work.",
-              },
-              {
-                step: "Step 3",
-                title: "Statement of Work",
-                body: "The brief or SOW with scope, deliverables, timing, and pricing. Can also be written for your marketing team if I'm serving as an adviser to procurement.",
-              },
-              {
-                step: "Step 4",
-                title: "Quarterly data and actions check-in",
-                body: "Most engagements evolve. Every 90 days we step back, review what's working, and adjust based on current goals and metrics. Some stay the same shape for years. Others shift as the business shifts. The relationship matters more than the SOW.",
-              },
-            ].map((step) => (
-              <div
-                key={step.step}
-                className="border-l-2 border-border-default pl-6 md:pl-8"
-              >
-                <p className="metadata-label mb-2">{step.step}</p>
-                <h3 className="text-xl md:text-2xl font-semibold text-text-primary mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-                  {step.body}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-14 md:mt-16 text-lg text-text-secondary max-w-3xl">
-            Many engagements move from first call to signed SOW in 2–3 weeks.
-          </p>
         </div>
       </section>
 
