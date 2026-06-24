@@ -217,11 +217,11 @@ export function ClarityCardDeck() {
         <button
           type="button"
           onClick={reshuffle}
-          className="inline-flex items-center justify-center px-7 py-3 rounded-full border border-[#16161A]/20 text-[#16161A] hover:bg-[#16161A]/[0.04] text-sm md:text-base font-medium tracking-tight transition-all"
+          className="inline-flex items-center justify-center px-7 py-3 rounded-full border border-border-default text-text-primary hover:bg-text-primary/[0.06] text-sm md:text-base font-medium tracking-tight transition-all"
         >
           Shuffle deck
         </button>
-        <p className="text-xs md:text-sm tabular-nums" style={{ color: MUTE }}>
+        <p className="text-xs md:text-sm text-text-secondary tabular-nums">
           {cardsRemaining} {cardsRemaining === 1 ? "card" : "cards"} left
         </p>
       </div>
