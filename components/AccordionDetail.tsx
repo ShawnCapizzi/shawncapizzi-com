@@ -35,7 +35,7 @@ export function AccordionDetail({
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="mt-6 rounded-xl card-surface border border-border-subtle p-5 md:p-6">
+    <div className="mt-6 rounded-xl card-surface border border-border-subtle p-4 md:p-5">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -59,7 +59,7 @@ export function AccordionDetail({
       <div
         id={id}
         className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
-          open ? "grid-rows-[1fr] mt-4" : "grid-rows-[0fr]"
+          open ? "grid-rows-[1fr] mt-3" : "grid-rows-[0fr]"
         }`}
       >
         <div className="overflow-hidden">{children}</div>

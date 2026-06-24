@@ -14,7 +14,8 @@ import { useState } from "react";
  *   - Smooth grid-rows height animation; respects prefers-reduced-motion.
  *
  * The heading is rendered as the toggle, so the section title doubles as the
- * expand control (with a rotating chevron affordance).
+ * expand control (with a rotating chevron affordance). Styled to match the
+ * lighter, quieter AccordionDetail family used elsewhere on the site.
  */
 export function CollapsibleSection({
   id,
@@ -30,7 +31,7 @@ export function CollapsibleSection({
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors p-6 md:p-8">
+    <div className="rounded-xl card-surface border border-border-subtle hover:border-border-default transition-colors p-5 md:p-6">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -38,7 +39,7 @@ export function CollapsibleSection({
         aria-controls={id}
         className="group flex w-full items-center justify-between gap-4 text-left"
       >
-        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+        <h2 className="text-lg md:text-xl font-medium tracking-tight text-text-primary">
           {heading}
         </h2>
         <span
@@ -48,8 +49,8 @@ export function CollapsibleSection({
           }`}
         >
           <svg
-            width="24"
-            height="24"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +69,7 @@ export function CollapsibleSection({
       <div
         id={id}
         className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
-          open ? "grid-rows-[1fr] mt-8 md:mt-10" : "grid-rows-[0fr]"
+          open ? "grid-rows-[1fr] mt-6 md:mt-8" : "grid-rows-[0fr]"
         }`}
       >
         <div className="overflow-hidden">{children}</div>
