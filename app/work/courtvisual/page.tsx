@@ -44,29 +44,28 @@ export default function Page() {
         {
           label: "CAPABILITIES",
           value:
-            "Product design · Experience architecture · AI-assisted full-stack build · Live data integration · Affiliate strategy",
+            "Product design · Experience architecture · AI-assisted full-stack build · Live data integration",
         },
         {
           label: "STACK",
           value:
-            "Next.js · React · Tailwind · Supabase · Vercel · Claude Code · ChatGPT · ESPN · The Odds API · Ticketmaster",
+            "Next.js · React · Tailwind · Supabase · Vercel · Claude Code · ChatGPT",
         },
       ]}
       challenge={[
-        "The idea started at a Mets game. A player was closing in on a record, and the only reason I knew to watch for it was that I happened to be in the building. I wondered whether there was a way to tell fans before a game which ones might be historic, a record in reach, a milestone, a last ride, so they would know to show up. That question grew into a bigger one: not just which games are historic, but which games are worth your night at all.",
-        "A fan's question is simple, and nobody answers it: what's worth watching tonight, and where do I watch or go? To answer it today you check ESPN for the schedule, a sportsbook like FanDuel for the odds, a streaming guide for the channel, and Ticketmaster for seats. Four apps, four logins, and not one of them tells you the thing you actually want to know, which is whether the game is worth your night.",
-        "The reason the platforms avoid that question is that the answer is subjective. A neutral classic, a bitter rivalry, your team fighting for a playoff spot, a title decider on the line: these are not the same to the same person, let alone to different people. A score that means anything has to weigh the stakes of the game and the taste of the viewer at the same time.",
-        "So the find, watch, buy journey stays split across companies that each own one slice and have no reason to connect them. The connective tissue, an honest read that turns raw sports data into a decision, was missing. That gap is the product.",
+        "The idea started at a Mets game. A player was closing in on a record, and the only reason I knew to watch for it was that I was in the building. That grew into a bigger question: not which games are historic, but which are worth your night at all.",
+        "On any given night the sports calendar is crowded, dozens of games competing for the same few hours, and nothing tells you which one is worth showing up for. The schedule lives in one app, where to watch in another, tickets in a third. Each owns a slice; none answers the only question a fan actually has.",
+        "That question is hard because the answer is personal. A neutral classic, a bitter rivalry, your team chasing a playoff spot: not the same to any two people. An honest read has to weigh the stakes of the game and the taste of the viewer at once, and that connective tissue, the thing that turns raw sports data into a decision, is what nobody built. That gap is the product.",
       ]}
       approach={[
-        "I started with the score. I broke excitement into a few factors a fan already feels: the stakes (playoff and championship weight), the rivalry, the race (how live the standings and the matchup are), and the matchup history. Every game gets a 0 to 10 score and a plain-English verdict, from \u201Cgood game\u201D up to \u201Chottest ticket.\u201D The math is explainable on purpose. A fan should be able to see why a game scored the way it did, not just trust a number.",
-        "Then I fed it from live pipes instead of a static list. v1 was a hand-built slate, useful for proving the idea and nothing more. The live app pulls fixtures, scores, and standings from ESPN's feeds, derives competitiveness from moneyline odds through The Odds API, resolves where to watch from broadcast data, and links the ticket path through Ticketmaster. The score is a living read on tonight, refreshed from the same kind of data the big platforms sit on, not a snapshot I curated by hand.",
-        "Most of the refinement work was making the score honest against real data. The 2026 World Cup feed forced the hard calls: fixtures come first, so a match exists whether or not tickets are listed yet; knockout rounds carry a stakes floor; competitiveness is derived from the odds rather than asserted. When I added player follows, the language stayed honest too. The app surfaces \u201CMessi's Argentina,\u201D never a promise that Messi will start, because lineups aren't set until kickoff. The credibility of the whole thing rests on not overclaiming.",
-        "I also made the score yours. A neutral-fan baseline keeps the ranking fair, then the viewer tunes what counts with sliders and presets, and follows teams, sports, players, and a home city. The same slate reorders for a Knicks die-hard, a neutral League Pass watcher, and someone who only follows Messi. It's personalization that actually changes the ranking, not a cosmetic filter on top of it.",
-        "Then I built the experience around the data, which is the part most data products skip. CourtVisual runs on one restrained design system so the supporting surfaces, onboarding, settings, loading, empty states, get out of the way, while the data-rich game card stays rich. That is the same instinct I bring to client work: the experience architecture around the model is the actual product, and the model is just an ingredient.",
+        "I started with the score. Excitement breaks into factors a fan already feels: stakes, rivalry, the race (how live the standings and matchup are), and matchup history. Every game gets a 0 to 10 score and a plain-English verdict, from \u201Cgood game\u201D to \u201Chottest ticket,\u201D and it shows why, so you trust the read instead of a bare number.",
+        "Then I fed it from live pipes, not a static list. v1 was a hand-built slate, enough to prove the idea. The live app pulls fixtures, scores, and standings, reads competitiveness from how close a matchup projects, and resolves where to watch and how to get in. It's a living read on tonight, not a snapshot I curated by hand.",
+        "Most of the work was making the score honest against real data. The 2026 World Cup forced the calls: fixtures come first, so a match exists whether or not tickets are listed; knockout rounds carry a stakes floor; competitiveness is derived, not asserted. Player follows stayed honest too, the app surfaces \u201CMessi's Argentina,\u201D never a promise he'll start. The credibility rests on not overclaiming.",
+        "I made the score yours. A neutral-fan baseline keeps it fair, then you tune what counts with sliders and presets and follow teams, sports, players, and a city. The same slate reorders for a Knicks die-hard, a neutral League Pass watcher, and a Messi-only fan, personalization that changes the ranking, not a filter on top.",
+        "Then I built the experience around the data, the part most data products skip. One restrained system keeps the supporting surfaces, onboarding, settings, loading, empty states, out of the way so the data-rich card stays the star. That's the instinct I bring to client work: the architecture around the model is the product; the model is just an ingredient.",
       ]}
       pullQuote={[
-        "ESPN tells you the score. A sportsbook tells you the odds. Ticketmaster sells you the seat. None of them tell you whether the game is worth your night.",
+        "The schedule lives in one app, the broadcast in another, the tickets in a third. None of them tell you whether the game is worth your night.",
         "The score isn't the hard part. Making it honest, and making it yours, is the hard part.",
         "I didn't want a database of games. I wanted a living read on what's worth watching, refreshed from the same pipes the big platforms run on.",
       ]}
@@ -78,10 +77,9 @@ export default function Page() {
           </h3>
           <div className="max-w-3xl space-y-5 text-lg text-text-secondary leading-relaxed">
             {[
-              "Left to right is the whole arc. I started by writing a full PRD and product vision, and v1 came straight out of it: a Game Excitement Analyzer with raw priority sliders and an uncapped score that ran past 14, on weights that didn't even need to add up. It proved the idea and nothing more.",
-              "The middle build capped the score to a legible 0 to 10 and turned it into a ranked slate. The third is where it landed: each card carries the four factors a fan actually feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why it scored that way.",
-              "Plenty of people are vibe-coding apps right now. Most lack the business focus and the discipline to stay on real value and a user-first point of view, so they ship something oversaturated and purposeless. I built this with Claude Code and ChatGPT, but I stayed the orchestrator: I described what I wanted to happen and what I wanted to see, in screenshots, text, and micro-interaction notes, and directed the tools until it matched the picture in my head. Miss on the first pass, and it landed by the second or third.",
-              "AI, if told, will keep building whatever features you ask it to, forever. My job as an orchestrator and the human crafting the experience is to have judgment and pull from my experience. That includes going back and trimming, defining the visual hierarchy, the design and pattern system, deciding how a user with zero context gets onboarded, which features earn their place, and which surprises people get to discover, keep, or switch off. That editing is the product.",
+              "Left to right is the whole arc. I wrote a full PRD and product vision, and v1 came straight out of it: a Game Excitement Analyzer with raw sliders and an uncapped score that ran past 14. It proved the idea, but it wasn't yet useful. The middle build capped the score to a legible 0 to 10 and ranked the slate. The third is where it landed: each card carries the four factors a fan actually feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why it scored that way.",
+              "Plenty of people are vibe-coding apps right now, and most ship something oversaturated and purposeless because they have no discipline about real value. I built this with Claude Code and ChatGPT, but I stayed the orchestrator: I described what I wanted in screenshots, copy, and micro-interaction notes, and directed the tools until it matched the picture in my head. Miss on the first pass, land it on the second or third.",
+              "My job is to bring judgment, not to let AI keep bolting on features so it feels like progress. Trimming, setting the visual hierarchy and pattern system, deciding how someone with zero context gets onboarded, which features earn their place, which surprises people get to keep or switch off, that editing is the product. It's the part that comes from years with devs, creative directors, and real users.",
             ].map((para, i) => (
               <p key={i}>{para}</p>
             ))}
@@ -114,8 +112,8 @@ export default function Page() {
           eyebrow: "Live data · Not a static list",
           title: "Scored from live pipes, and find, watch, buy on one card",
           description: [
-            "The slate is built from real-time feeds, not a database I maintain by hand: ESPN for fixtures, scores, and standings; The Odds API for the moneyline that competitiveness is derived from; broadcast data for where to watch; Ticketmaster for the ticket path. The score re-reads as the night develops.",
-            "That's also where the market position lives. The same card that tells you a game is worth watching tells you where to watch it and how to get in, the three jobs a fan currently splits across ESPN, a sportsbook, a streaming guide, and Ticketmaster, collapsed into one decision.",
+            "The slate is built from real-time feeds, not a database I maintain by hand. Fixtures, scores, and standings, how competitive a matchup projects, where to watch, and the path to tickets all flow in live, and the score re-reads as the night develops.",
+            "That's also where the market position lives. The same card that tells you a game is worth watching tells you where to watch it and how to get in, the jobs a fan currently splits across a handful of apps, collapsed into one decision.",
           ],
           images: [
             {
@@ -129,8 +127,8 @@ export default function Page() {
           eyebrow: "Built for the moment · 2026 World Cup",
           title: "The World Cup, live and in its own colors",
           description: [
-            "The tournament feed is fixtures-first, pulled from ESPN, so a match shows up the moment it's scheduled, independent of whether tickets are listed yet. Knockout rounds carry a stakes floor, and competitiveness comes from the live odds.",
-            "Each card wears both nations' federation crests and team color. The color is run through a luminance floor so the navy and near-black kits that would normally vanish on a dark card stay legible, the kind of detail that separates a real product from a feed wrapped in a template.",
+            "With the whole sports calendar crowded, the World Cup is the night most people actually want to find, and the product leans in. The tournament feed is fixtures-first, pulled from live international feeds, so a match shows up the moment it's scheduled, whether or not tickets are listed yet.",
+            "Each card wears both nations' federation crests and national colors, the one place the product shows a crest at all, since club cards stay color-only by design. The color runs through a luminance floor so the navy and near-black kits that would vanish on a dark card stay legible, the kind of detail that separates a real product from a feed dropped into a template.",
           ],
           images: [
             {
@@ -144,8 +142,8 @@ export default function Page() {
           eyebrow: "Under the hood · The build, not just the screens",
           title: "I found the pipes, then wired them",
           description: [
-            "A scoring product is only as trustworthy as the data under it. I used AI to research which feeds even existed and what each one could give me, then I architected the data layer and directed the build. Each fan's state, their teams, sliders, and follows, lives in Supabase behind row-level security, so a row is readable only by the person it belongs to: a policy enforced at the database, not a setting in a dashboard. I decided what it had to guarantee; the tools wrote and rewrote the SQL until it did.",
-            "The live feeds are wired the same way, ESPN for fixtures and standings, The Odds API for the moneyline competitiveness comes from, Ticketmaster for the ticket path, each keyed server-side and deployed continuously on Vercel. I directed the integrations and debugged the edges, the tools moved fast through the boilerplate, and the architecture, what connects to what and what the score is allowed to claim, stayed my call. The screens get the attention. This is the part that makes the number mean something.",
+            "A scoring product is only as trustworthy as the data under it. I used AI to map which live feeds existed, then architected the data layer myself. Each fan's state, teams, sliders, and follows, lives in Supabase behind row-level security, enforced at the database, not as a dashboard toggle, so a row is readable only by its owner.",
+            "The feeds are keyed server-side and deployed continuously on Vercel. The tools moved fast through the boilerplate; the architecture, what connects to what and what the score is allowed to claim, stayed my call. The screens get the attention. This is the part that makes the number mean something.",
           ],
           images: [
             {
@@ -169,7 +167,7 @@ export default function Page() {
         {
           headline: "Find, watch, and buy, unified",
           description:
-            "The excitement read, where to watch, and the ticket path on one card. A journey that's split across ESPN, sportsbooks, streaming guides, and Ticketmaster today.",
+            "The excitement read, where to watch, and the ticket path on one card. A journey that's split across separate schedule, broadcast, and ticketing apps today.",
         },
         {
           headline: "Shipped for a live moment, the 2026 World Cup",
