@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "CourtVisual: Scoring Sports by What's Worth Watching",
   description:
-    "A multi-sport app that scores how worth watching tonight's games are, tuned to your taste, then points you to where to watch and how to get in. Built solo from a single idea to a live PWA, on real-time data pipes.",
+    "A multi-sport app that scores how worth watching tonight's games are, tuned to your taste, then points you where to watch and how to get in. Product, build, and go-to-market shipped solo, concept to live PWA, with AI as the partner.",
 };
 
 const ASSET_BASE = "/images/case-studies/07-courtvisual";
@@ -17,9 +17,9 @@ export default function Page() {
     <CaseStudyLayout
       eyebrow="(Case Study)"
       title="CourtVisual"
-      subtitle="A multi-sport app that scores how worth watching tonight's games are, tuned to your taste, then points you to where to watch and how to get in. Built solo, concept to live PWA, on real-time data pipes."
+      subtitle="A multi-sport app that scores how worth watching tonight's games are, tuned to you, then sends you where to watch and how to get in. Product, build, and go-to-market run solo, concept to live PWA, with AI as the build partner."
       heroImage={`${ASSET_BASE}/02-game-card-score-ring.png`}
-      heroImageAlt="CourtVisual home screen: the welcome headline, a Knicks game scored 9.3 out of 10, and the team and sport picker"
+      heroImageAlt="CourtVisual home screen: a Knicks game scored 9.3 out of 10, with the team and sport picker"
       heroSlot={
         <TiltedPhonePair
           rightStartDelayMs={0}
@@ -27,13 +27,13 @@ export default function Page() {
           left={{
             src: "/videos/courtvisual-onboarding-demo.mp4",
             poster: "/videos/courtvisual-onboarding-poster.jpg",
-            alt: "CourtVisual onboarding: following a team, and the app taking on that team's colors and reordering the slate.",
+            alt: "CourtVisual onboarding: following a team, the app taking on its colors and reordering the slate.",
             caption: "Onboarding: pick a team, the app suits up",
           }}
           right={{
             src: "/videos/courtvisual-ranking-demo.mp4",
             poster: "/videos/courtvisual-ranking-poster.jpg",
-            alt: "CourtVisual live slate: tonight's games scored 0 to 10 and ranked, each card showing where to watch and a ticket path.",
+            alt: "CourtVisual live slate: tonight's games scored 0 to 10 and ranked, each card showing where to watch and tickets.",
             caption: "The slate: every game scored and ranked",
           }}
         />
@@ -44,7 +44,7 @@ export default function Page() {
         {
           label: "CAPABILITIES",
           value:
-            "Product design · Experience architecture · AI-assisted full-stack build · Live data integration",
+            "Product design · Experience architecture · AI-assisted full-stack build · Live data integration · Go-to-market",
         },
         {
           label: "STACK",
@@ -53,16 +53,15 @@ export default function Page() {
         },
       ]}
       challenge={[
-        "The idea started at a Mets game. A player was closing in on a record, and the only reason I knew to watch for it was that I was in the building. That grew into a bigger question: not which games are historic, but which are worth your night at all.",
-        "On any given night the sports calendar is crowded, dozens of games competing for the same few hours, and nothing tells you which one is worth showing up for. The schedule lives in one app, where to watch in another, tickets in a third. Each owns a slice; none answers the only question a fan actually has.",
-        "That question is hard because the answer is personal. A neutral classic, a bitter rivalry, your team chasing a playoff spot: not the same to any two people. An honest read has to weigh the stakes of the game and the taste of the viewer at once, and that connective tissue, the thing that turns raw sports data into a decision, is what nobody built. That gap is the product.",
+        "The idea started at a Mets game. A player was closing in on a record, and I only knew to watch because I was in the building. That became a bigger question: not which games are historic, but which are worth your night.",
+        "Any given night, dozens of games compete for the same few hours, and nothing tells you which is worth it. Schedule in one app, where to watch in another, tickets in a third. Each owns a slice; none answers the question a fan actually has.",
+        "Because the answer is personal: a neutral classic, a bitter rivalry, your team chasing a playoff spot, not the same to any two people. An honest read weighs the stakes and the viewer's taste at once, the connective tissue that turns raw data into a decision. Nobody built it. That gap is the product.",
       ]}
       approach={[
-        "I started with the score. Excitement breaks into factors a fan already feels: stakes, rivalry, the race (how live the standings and matchup are), and matchup history. Every game gets a 0 to 10 score and a plain-English verdict, from \u201Cgood game\u201D to \u201Chottest ticket,\u201D and it shows why, so you trust the read instead of a bare number.",
-        "Then I fed it from live pipes, not a static list. v1 was a hand-built slate, enough to prove the idea. The live app pulls fixtures, scores, and standings, reads competitiveness from how close a matchup projects, and resolves where to watch and how to get in. It's a living read on tonight, not a snapshot I curated by hand.",
-        "Most of the work was making the score honest against real data. The 2026 World Cup forced the calls: fixtures come first, so a match exists whether or not tickets are listed; knockout rounds carry a stakes floor; competitiveness is derived, not asserted. Player follows stayed honest too, the app surfaces \u201CMessi's Argentina,\u201D never a promise he'll start. The credibility rests on not overclaiming.",
-        "I made the score yours. A neutral-fan baseline keeps it fair, then you tune what counts with sliders and presets and follow teams, sports, players, and a city. The same slate reorders for a Knicks die-hard, a neutral League Pass watcher, and a Messi-only fan, personalization that changes the ranking, not a filter on top.",
-        "Then I built the experience around the data, the part most data products skip. One restrained system keeps the supporting surfaces, onboarding, settings, loading, empty states, out of the way so the data-rich card stays the star. That's the instinct I bring to client work: the architecture around the model is the product; the model is just an ingredient.",
+        "I started with the score. Excitement breaks into factors a fan already feels: stakes, rivalry, the race (how live the standings and matchup are), and matchup history. Every game gets a 0 to 10 score and a verdict that shows its work, so you trust the read, not a bare number.",
+        "Then I fed it from live pipes, not a static list, and made it honest. Live data forced the discipline: fixtures come first, so a match exists whether or not tickets are listed; competitiveness is derived, not asserted; follows surface \u201CMessi's Argentina,\u201D never a promise he'll start. Credibility rests on not overclaiming.",
+        "Then I made it yours. A neutral-fan baseline keeps it fair; from there you tune what counts and follow teams, sports, players, and a city. The same slate reorders for a Knicks die-hard, a neutral, and a Messi-only fan, personalization that changes the ranking, not a filter on top.",
+        "Then I built the experience around the data, the part most data products skip. One restrained system keeps onboarding, settings, loading, and empty states out of the way so the data-rich card stays the star. That's what I bring to client work: the architecture around the model is the product; the model is just an ingredient.",
       ]}
       pullQuote={[
         "The schedule lives in one app, the broadcast in another, the tickets in a third. None of them tell you whether the game is worth your night.",
@@ -77,9 +76,9 @@ export default function Page() {
           </h3>
           <div className="max-w-3xl space-y-5 text-lg text-text-secondary leading-relaxed">
             {[
-              "Left to right is the whole arc. I wrote a full PRD and product vision, and v1 came straight out of it: a Game Excitement Analyzer with raw sliders and an uncapped score that ran past 14. It proved the idea, but it wasn't yet useful. The middle build capped the score to a legible 0 to 10 and ranked the slate. The third is where it landed: each card carries the four factors a fan actually feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why it scored that way.",
-              "Plenty of people are vibe-coding apps right now, and most ship something oversaturated and purposeless because they have no discipline about real value. I built this with Claude Code and ChatGPT, but I stayed the orchestrator: I described what I wanted in screenshots, copy, and micro-interaction notes, and directed the tools until it matched the picture in my head. Miss on the first pass, land it on the second or third.",
-              "My job is to bring judgment, not to let AI keep bolting on features so it feels like progress. Trimming, setting the visual hierarchy and pattern system, deciding how someone with zero context gets onboarded, which features earn their place, which surprises people get to keep or switch off, that editing is the product. It's the part that comes from years with devs, creative directors, and real users.",
+              "Left to right is the whole arc. v1 came straight out of a full PRD: raw sliders and an uncapped score past 14. It proved the idea but wasn't useful. The middle build capped it to a legible 0 to 10 and ranked the slate. The third is where it landed: each card carries the four factors a fan feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why.",
+              "Plenty of people vibe-code apps now, and most ship something bloated and purposeless for lack of discipline about value. I built this with Claude Code and ChatGPT but stayed the orchestrator: I described what I wanted in screenshots, copy, and micro-interaction notes, and directed the tools until it matched the picture in my head.",
+              "My job is judgment, not letting AI bolt on features so it feels like progress. Trimming, the visual hierarchy, onboarding someone with zero context, which features earn their place, which surprises people keep or switch off, that editing is the product. It comes from years with devs, creative directors, and real users.",
             ].map((para, i) => (
               <p key={i}>{para}</p>
             ))}
@@ -89,17 +88,17 @@ export default function Page() {
               phones={[
                 {
                   src: `${ASSET_BASE}/09-progression-prd.png`,
-                  alt: "v1, from the PRD: a Game Excitement Analyzer with four priority sliders and an uncapped total weight over 100 percent.",
+                  alt: "v1 from the PRD: a Game Excitement Analyzer with four priority sliders and an uncapped total weight.",
                   label: "v1 · the PRD",
                 },
                 {
                   src: `${ASSET_BASE}/10-progression-ranking.png`,
-                  alt: "The middle build: a ranked slate with each game scored and a why-this-game-scores breakdown on the card.",
+                  alt: "The middle build: a ranked slate, each game scored with a why-it-scores breakdown.",
                   label: "v2 · ranked build",
                 },
                 {
                   src: `${ASSET_BASE}/11-progression-card.png`,
-                  alt: "The shipped card: a Subway Series game scored with the current factors, Stakes, Rivalry, The race, and Matchup, plus a plain-English verdict and a ticket path.",
+                  alt: "The shipped card: a Subway Series game scored on Stakes, Rivalry, The race, and Matchup, with a verdict and ticket path.",
                   label: "v3 · shipped",
                 },
               ]}
@@ -112,13 +111,16 @@ export default function Page() {
           eyebrow: "Live data · Not a static list",
           title: "Scored from live pipes, and find, watch, buy on one card",
           description: [
-            "The slate is built from real-time feeds, not a database I maintain by hand. Fixtures, scores, and standings, how competitive a matchup projects, where to watch, and the path to tickets all flow in live, and the score re-reads as the night develops.",
-            "That's also where the market position lives. The same card that tells you a game is worth watching tells you where to watch it and how to get in, the jobs a fan currently splits across a handful of apps, collapsed into one decision.",
+            "The slate is built from real-time feeds, not a database I keep by hand. Fixtures, scores, standings, projected competitiveness, where to watch, and the ticket path all flow in live, and the score re-reads as the night develops.",
+            "That's the market position: one card tells you a game is worth watching, where to watch it, and how to get in, the jobs a fan splits across a handful of apps, collapsed into one decision.",
+          ],
+          links: [
+            { label: "See the live app", href: "https://www.courtvisual.com" },
           ],
           images: [
             {
               src: `${ASSET_BASE}/04-live-slate-watch-and-tickets.png`,
-              alt: "CourtVisual search results, Rivalry Showdowns: ranked Mets vs Yankees Subway Series games, each scored with a why-this-game-scores breakdown and a ticket path.",
+              alt: "CourtVisual search results, Rivalry Showdowns: ranked Mets vs Yankees Subway Series games, each scored with a breakdown and a ticket path.",
               maxWidthClass: "max-w-xl",
             },
           ],
@@ -127,13 +129,13 @@ export default function Page() {
           eyebrow: "Built for the moment · 2026 World Cup",
           title: "The World Cup, live and in its own colors",
           description: [
-            "With the whole sports calendar crowded, the World Cup is the night most people actually want to find, and the product leans in. The tournament feed is fixtures-first, pulled from live international feeds, so a match shows up the moment it's scheduled, whether or not tickets are listed yet.",
-            "Each card wears both nations' federation crests and national colors, the one place the product shows a crest at all, since club cards stay color-only by design. The color runs through a luminance floor so the navy and near-black kits that would vanish on a dark card stay legible, the kind of detail that separates a real product from a feed dropped into a template.",
+            "With the calendar crowded, the World Cup is the night most people want to find, and the product leans in. The feed is fixtures-first from live international sources, so a match appears the moment it's scheduled, tickets or not.",
+            "Each card wears both nations' federation crests and colors, the one place the product shows a crest, since club cards stay color-only by design. The color runs through a luminance floor so navy and near-black kits stay legible on a dark card, the detail that separates a product from a template.",
           ],
           images: [
             {
               src: `${ASSET_BASE}/05-world-cup-crest-cards-1.png`,
-              alt: "CourtVisual World Cup league view: Turkiye vs United States scored 8.0, both federation crests beside the matchup, green pitch color, and where-to-watch options.",
+              alt: "CourtVisual World Cup view: Turkiye vs United States scored 8.0, both federation crests beside the matchup, green pitch color, and where-to-watch.",
               maxWidthClass: "max-w-xl",
             },
           ],
@@ -142,13 +144,16 @@ export default function Page() {
           eyebrow: "Under the hood · The build, not just the screens",
           title: "I found the pipes, then wired them",
           description: [
-            "A scoring product is only as trustworthy as the data under it. I used AI to map which live feeds existed, then architected the data layer myself. Each fan's state, teams, sliders, and follows, lives in Supabase behind row-level security, enforced at the database, not as a dashboard toggle, so a row is readable only by its owner.",
-            "The feeds are keyed server-side and deployed continuously on Vercel. The tools moved fast through the boilerplate; the architecture, what connects to what and what the score is allowed to claim, stayed my call. The screens get the attention. This is the part that makes the number mean something.",
+            "A scoring product is only as trustworthy as its data. I used AI to map which live feeds existed, then architected the data layer myself. Each fan's state, teams, sliders, follows, lives in Supabase behind row-level security, enforced at the database, so a row is readable only by its owner.",
+            "The feeds are keyed server-side and deployed continuously on Vercel. The tools moved fast through the boilerplate; the architecture, what connects to what and what the score may claim, stayed my call. The screens get the attention. This is the part that makes the number mean something.",
+          ],
+          links: [
+            { label: "Open CourtVisual", href: "https://www.courtvisual.com" },
           ],
           images: [
             {
               src: `${ASSET_BASE}/07-engine-supabase-rls.png`,
-              alt: "Supabase SQL editor: a user_state table with row-level security enabled and an 'own state' policy restricting each row to its owner via auth.uid().",
+              alt: "Supabase SQL editor: a user_state table with row-level security and an 'own state' policy restricting each row to its owner via auth.uid().",
             },
           ],
         },
@@ -157,7 +162,7 @@ export default function Page() {
         {
           headline: "A live, multi-sport excitement engine",
           description:
-            "Every game scored 0 to 10 from real-time data, each with a plain-English verdict. A living read on tonight, not a static list of fixtures.",
+            "Every game scored 0 to 10 from real-time data, each with a plain-English verdict. A living read on tonight, not a static list.",
         },
         {
           headline: "Personalization that reorders the slate",
@@ -167,7 +172,7 @@ export default function Page() {
         {
           headline: "Find, watch, and buy, unified",
           description:
-            "The excitement read, where to watch, and the ticket path on one card. A journey that's split across separate schedule, broadcast, and ticketing apps today.",
+            "The excitement read, where to watch, and the ticket path on one card, a journey split across separate apps today.",
         },
         {
           headline: "Shipped for a live moment, the 2026 World Cup",
@@ -177,17 +182,17 @@ export default function Page() {
         {
           headline: "A design system that scales calm",
           description:
-            "One restrained system across onboarding, settings, loading, and empty states, so the data-rich game card stays the star instead of the chrome.",
+            "One restrained system across onboarding, settings, loading, and empty states, so the data-rich card stays the star.",
         },
         {
           headline: "Concept to live PWA in 50 to 60 hours",
           description:
-            "Product design and AI-assisted full-stack engineering, on Next.js, Supabase, and Vercel. Designed, built, and shipped solo in roughly 50 to 60 hours of focused work, deployed continuously from v1 to a mature tool.",
+            "Product design and AI-assisted full-stack build on Next.js, Supabase, and Vercel. Shipped solo in roughly 50 to 60 hours, deployed continuously from v1 to a mature tool.",
         },
       ]}
       closer={[
-        "The big platforms each own a slice of the fan's night and have no reason to connect them. The opportunity was never more data. It was the connective tissue, the honest read that turns data into a decision.",
-        "CourtVisual is one person defining the product, doing the research, connecting the pipes, refining the UI, and shipping it, all of it solo. Now picture that same person inside your walls, with your data, your team, and real users in the room. That is what a strategist and designer looks like now: someone who folds AI in for the economics and the speed to market without giving up the judgment that decides whether a thing is worth shipping.",
+        "The big platforms each own a slice of the fan's night and no reason to connect them. The opportunity was never more data. It was the connective tissue, the honest read that turns data into a decision.",
+        "CourtVisual is one person finding the gap, building the product, wiring the data, and taking it to market, solo. Put that person inside your walls, with your data, your team, and real users in the room. That's what a strategist and designer looks like now: someone who folds AI in for speed and economics without giving up the judgment about what's worth shipping.",
         <>
           That&apos;s the proof. That&apos;s what I bring into{" "}
           <Link
@@ -196,6 +201,18 @@ export default function Page() {
           >
             client engagements
           </Link>
+          .
+        </>,
+        <>
+          If you&apos;re a fellow New Yorker and football fan, I&apos;ll save you the time,{" "}
+          <a
+            href="https://courtvisual.com/?team=giants"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-link hover:text-link-hover transition-colors"
+          >
+            follow Big Blue now on CourtVisual
+          </a>
           .
         </>,
       ]}
