@@ -1,4 +1,7 @@
 // Destination: components/WhenToBringMeIn.tsx
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 /**
@@ -30,6 +33,38 @@ const SITUATIONS = [
 ];
 
 export function WhenToBringMeIn() {
+  // Reveal-on-scroll for the list. Each item fades + slides up in sequence
+  // when the list enters the viewport. Fires once, then disconnects — no
+  // re-triggering on scroll back. Respects prefers-reduced-motion (shows
+  // everything immediately, no transitions).
+  const listRef = useRef<HTMLUListElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const node = listRef.current;
+    if (!node) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setVisible(true);
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            io.disconnect();
+            break;
+          }
+        }
+      },
+      { rootMargin: "0px 0px -15% 0px", threshold: 0.1 }
+    );
+    io.observe(node);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <section className="py-24 md:py-32 border-t border-border-subtle">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
@@ -44,11 +79,17 @@ export function WhenToBringMeIn() {
           </p>
         </div>
 
-        <ul className="mt-12 md:mt-16 max-w-3xl space-y-6 md:space-y-7">
+        <ul
+          ref={listRef}
+          className="mt-12 md:mt-16 max-w-3xl space-y-6 md:space-y-7"
+        >
           {SITUATIONS.map((situation, i) => (
             <li
               key={i}
-              className="border-l-2 border-border-strong pl-5 md:pl-6 text-lg md:text-xl text-text-primary leading-relaxed"
+              className={`border-l-2 border-border-strong pl-5 md:pl-6 text-lg md:text-xl text-text-primary leading-relaxed transition-all duration-700 ease-out motion-reduce:transition-none ${
+                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+              }`}
+              style={{ transitionDelay: visible ? `${i * 120}ms` : "0ms" }}
             >
               {situation}
             </li>
