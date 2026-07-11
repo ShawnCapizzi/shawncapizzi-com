@@ -99,6 +99,15 @@ export function ClarityCardDeck() {
     setDeckIndices(fresh);
   }, []);
 
+  // Shuffle the deck on mount so every page load starts with a fresh order.
+  // Done in an effect (not the useState initializer) to avoid SSR/hydration
+  // mismatches — Math.random() during SSR would produce a different order
+  // than on the client. The deck is face-down at mount, so the transition
+  // from ordered to shuffled isn't visible.
+  useEffect(() => {
+    reshuffle();
+  }, [reshuffle]);
+
   const noDrawsLeft = deckIndices.length === 0;
   const cardsRemaining = deckIndices.length;
   const visibleDeck = useMemo(() => deckIndices.slice(-3), [deckIndices]);
