@@ -67,7 +67,7 @@ export function BookReaderThumb({
             {quotes.map((q, idx) => (
               <p
                 key={idx}
-                className={`absolute inset-0 border-l-2 border-[#6b5cff]/55 pl-4 font-serif text-[34px] italic leading-snug text-[#d6dceb] transition-opacity duration-1000 ease-in-out md:text-[44px] ${
+                className={`absolute inset-0 border-l-2 border-[#6b5cff]/55 pl-4 font-serif text-[29px] italic leading-snug text-[#d6dceb] transition-opacity duration-1000 ease-in-out md:text-[37px] ${
                   idx === index ? "opacity-100" : "opacity-0"
                 }`}
               >
