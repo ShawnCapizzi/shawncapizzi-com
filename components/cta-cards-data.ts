@@ -83,8 +83,8 @@ export const CTA_CARDS: Record<string, CTACard> = {
       "A 54-card strategic prompt deck built on the Capizzi Process. A working tool for teams making complex decisions. Draw a card and try it.",
     cta: "Try the cards",
     href: "/clarity-advantage",
-    image: "/images/clarity-cards-deck.png",
-    imageAlt: "The Capizzi Clarity Cards \u2014 a strategic prompt deck with a draw-next interaction",
+    image: "/images/clarity-cards-worktable.png",
+    imageAlt: "A Capizzi Clarity Card on a walnut worktable, surrounded by sticky notes for the three-step Capizzi Process: listen first, make it visible, prove it worked",
     imageAspect: "aspect-[4/3]",
   },
   work: {
