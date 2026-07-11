@@ -63,11 +63,11 @@ export function BookReaderThumb({
             From Chapter 1
           </span>
 
-          <div className="relative min-h-[140px] md:min-h-[185px]">
+          <div className="relative min-h-[170px] md:min-h-[220px]">
             {quotes.map((q, idx) => (
               <p
                 key={idx}
-                className={`absolute inset-0 border-l-2 border-[#6b5cff]/55 pl-4 font-serif text-[24px] italic leading-snug text-[#d6dceb] transition-opacity duration-1000 ease-in-out md:text-[32px] ${
+                className={`absolute inset-0 border-l-2 border-[#6b5cff]/55 pl-4 font-serif text-[34px] italic leading-snug text-[#d6dceb] transition-opacity duration-1000 ease-in-out md:text-[44px] ${
                   idx === index ? "opacity-100" : "opacity-0"
                 }`}
               >
