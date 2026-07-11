@@ -24,7 +24,7 @@ const DEFAULT_QUOTES = [
 
 export function BookReaderThumb({
   quotes = DEFAULT_QUOTES,
-  interval = 5000,
+  interval = 6250,
 }: {
   quotes?: string[];
   interval?: number;
