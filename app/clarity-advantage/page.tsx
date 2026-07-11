@@ -1,7 +1,7 @@
 // Destination: app/clarity-advantage/page.tsx
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ClarityCardDeck } from "@/components/ClarityCardDeck";
+import { ClarityCardsSection } from "@/components/ClarityCardsSection";
 import { SignupCard } from "@/components/SignupCard";
 
 export const metadata: Metadata = {
@@ -37,23 +37,8 @@ export default function Page() {
         </div>
       </section>
 
-      {/* INTERACTIVE DECK + CARDS INTRO */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="max-w-3xl mb-12 md:mb-16">
-            <p className="eyebrow mb-4">Printed version coming soon</p>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight leading-tight text-text-primary">
-              The Capizzi Clarity Cards
-            </h2>
-            <p className="mt-4 md:mt-6 text-base md:text-lg text-text-secondary leading-relaxed">
-              A 54-card strategic prompt deck based on the Capizzi Process. A
-              working tool for teams making complex decisions.
-            </p>
-          </div>
-
-          <ClarityCardDeck />
-        </div>
-      </section>
+      {/* INTERACTIVE DECK + CARDS INTRO (shared with homepage) */}
+      <ClarityCardsSection />
 
       {/* THE TWO THINGS */}
       <section className="py-16 md:py-24 border-t border-border-subtle">

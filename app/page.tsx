@@ -1,6 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { HeroBottom } from "@/components/HeroBottom";
 import { LogoStrip } from "@/components/LogoStrip";
+import { ClarityCardsSection } from "@/components/ClarityCardsSection";
 import { WhenToBringMeIn } from "@/components/WhenToBringMeIn";
 import { HowIWork } from "@/components/HowIWork";
 import { SelectedWork } from "@/components/SelectedWork";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Hero />
       <LogoStrip />
       <HeroBottom />
+      <ClarityCardsSection />
       <WhenToBringMeIn />
       <HowIWork />
       <SelectedWork />
