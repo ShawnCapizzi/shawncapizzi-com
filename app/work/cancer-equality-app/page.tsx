@@ -120,9 +120,9 @@ export default function Page() {
             "And 30% reported increased confidence in their treatment. Outcomes that mean something in oncology specifically.",
         },
         {
-          headline: "Hospital partnerships and national media coverage",
+          headline: "National reach for the initiative",
           description:
-            "Penn Medicine, Rush, Fox Chase Cancer Center, MD Anderson, University of Illinois Chicago, Northwestern Medicine. Coverage in NBC News, ABC News, CNN, People, Today, Good Morning America, Ebony, Yahoo.",
+            "The Chrysalis Initiative's program grew its hospital relationships and drew national media coverage. My work was the system beneath it: the coach experience, the patient dashboard, and the service that connected them.",
         },
         {
           headline: "Live operational improvement",

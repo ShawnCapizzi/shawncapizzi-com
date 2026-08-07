@@ -40,11 +40,11 @@ const CASE_STUDIES = [
   },
   {
     slug: "cancer-equality-app",
-    eyebrow: "Chrysalis Initiative · Patient Experience · D&AD Pencil 2022",
+    eyebrow: "Chrysalis Initiative · Service Design · D&AD Pencil 2022",
     title:
       "A patient navigation platform for women facing bias in cancer care",
     description:
-      "Two-sided platform connecting patients with trained coaches and peer navigators. Hospital partnerships across Penn Medicine, Rush, MD Anderson, Northwestern.",
+      "A breast cancer patient-and-coach mentoring program, run on a spreadsheet and email, rebuilt as a real two-sided digital platform.",
     image:
       "/images/case-studies/04-cancer-equality-app/01-hero-erase-the-line-campaign-poster.jpeg",
   },
@@ -85,7 +85,8 @@ export default function Page() {
           </h1>
           <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
             A decade of enterprise experience design across pharma, healthcare,
-            and finance, plus selected work outside it.
+            and finance, alongside live products I designed, built, and shipped
+            myself.
           </p>
         </div>
       </section>
