@@ -14,13 +14,13 @@ const ASSET_BASE = "/images/case-studies/04-cancer-equality-app";
 export default function Page() {
   return (
     <CaseStudyLayout
-      eyebrow="(Case Study)"
+      eyebrow="(Service Design · Patient Navigation)"
       title="A Patient Navigation Platform for Women Facing Bias in Cancer Care"
       subtitle="Built with The Chrysalis Initiative. Recognized with a D&AD Pencil for Future Impact, 2022."
       heroImage={`${ASSET_BASE}/01-hero-erase-the-line-campaign-poster.jpeg`}
       heroImageAlt="Erase The Line campaign poster, patient navigation platform"
       metadata={[
-        { label: "ENGAGEMENT", value: "Lead Product Designer" },
+        { label: "ENGAGEMENT", value: "Lead Product and Service Designer" },
         { label: "YEAR", value: "2021–2022" },
         { label: "PARTNER", value: "The Chrysalis Initiative" },
         { label: "RECOGNITION", value: "D&AD Pencil, Future Impact 2022" },
@@ -29,9 +29,10 @@ export default function Page() {
         "Women of color in the United States face a documented healthcare gap. They receive inconsistent standard of care across regions and providers. They are profiled based on assumed insurance coverage. They are assumed, often incorrectly, to lack health literacy. These assumptions affect what tests are ordered, what conversations are had, what referrals are made, and ultimately what outcomes follow.",
         "Late diagnoses follow bias. Worse outcomes follow late diagnoses. Many patients avoid the system altogether because they know what's waiting for them inside it.",
         "The Chrysalis Initiative, founded by Jamila, built the Cancer Equality App as the product response to that gap. The Erase The Line campaign was the wrapper that brought the platform to a national audience. The app itself was the actual work: a navigation platform that connected patients with trained coaches and peer navigators, putting tools, documentation, advocacy language, and verified provider data directly in the hands of patients managing breast cancer care.",
+        "Before any of that existed, the coaching program ran on a spreadsheet and an email thread. A founder had built something real, matching breast cancer patients with trained coaches, many of whom had been through it themselves, but the operation lived in a document passed by hand. It worked at a small scale and made growth impossible. The constraint was never usability. It was operational: a human service that could not expand on the infrastructure holding it up.",
       ]}
       approach={[
-        "The platform was designed as a two-sided product. The coach-facing experience supported onboarding of coaches and content storage about the patients in their care. The patient-facing dashboard gave users visibility into their engagements, notes from sessions with their coach, and direct communication with the coaching team. Both sides had to work for very different users, in very different emotional states, while supporting the same underlying mission.",
+        "The work was to redesign a service, not just ship an app. Research started backstage, with the founder, on how coaches were recruited and how patients were matched to them. Then contextual inquiry with the coaches themselves, on how they cataloged patient conversations and reached their training materials. Only then did the two-sided product take shape. The coach-facing experience supported onboarding and the record coaches kept about the patients in their care. The patient-facing dashboard gave users visibility into their engagements, notes from sessions with their coach, and direct communication with the coaching team. Four communication flows, founder to coach, coach to coach, coach to patient, and patient to coach, became one role-segmented system.",
         <>
           <Link
             href="/engagements#leadership"
