@@ -54,11 +54,12 @@ export function SelectedWork() {
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Case studies</p>
           <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight leading-tight">
-            Selected work
+            View some of my selected work
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            Engagements where experience structure changed the business
-            outcome.
+            Engagements where experience, collaboration, thoughtful
+            consideration, and structure drove positive business outcomes and
+            transformation.
           </p>
         </div>
 

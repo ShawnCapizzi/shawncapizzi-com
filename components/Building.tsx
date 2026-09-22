@@ -33,17 +33,6 @@ type Product = {
 
 const PRODUCTS: Product[] = [
   {
-    key: "courtvisual",
-    name: "CourtVisual",
-    status: "Live · Consumer",
-    body: "Every game scored 0 to 10 for what is worth watching, with where to watch it and where to buy tickets, on one card. Real-time fixtures, scores, and standings across six leagues.",
-    liveUrl: "https://www.courtvisual.com",
-    liveLabel: "Open courtvisual.com",
-    caseStudyHref: "/work/courtvisual",
-    image: "/images/case-studies/07-courtvisual/04-live-slate-watch-and-tickets.png",
-    imageAlt: "CourtVisual live slate showing scored games with watch and ticket options",
-  },
-  {
     key: "aipatientsupport",
     name: "AI Patient Support",
     status: "Live · Healthcare",
@@ -55,6 +44,17 @@ const PRODUCTS: Product[] = [
       "/images/case-studies/05-ai-native-product-design-lab/11-aipatientsupport-live-home.png",
     imageAlt: "AI Patient Support, the live home page with condition search",
   },
+  {
+    key: "courtvisual",
+    name: "CourtVisual",
+    status: "Live · Consumer",
+    body: "Every game scored 0 to 10 for what is worth watching, with where to watch it and where to buy tickets, on one card. Real-time fixtures, scores, and standings across six leagues.",
+    liveUrl: "https://www.courtvisual.com",
+    liveLabel: "Open courtvisual.com",
+    caseStudyHref: "/work/courtvisual",
+    image: "/images/case-studies/07-courtvisual/04-live-slate-watch-and-tickets.png",
+    imageAlt: "CourtVisual live slate showing scored games with watch and ticket options",
+  },
 ];
 
 export function Building() {
@@ -64,13 +64,13 @@ export function Building() {
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Designed, built, and shipped solo</p>
           <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight leading-tight">
-            Working software, not a description of it
+            Working products and prototypes, not a description of it
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
             Live products on the same stack I use for client work: Next.js,
             Supabase, and Vercel, with Claude Code and ChatGPT as build
-            partners and me as the orchestrator. More in the build queue,
-            named here when they deploy.
+            partners and myself as the orchestrator. I also work with onshore
+            and offshore dev teams to get what you need built and shipped.
           </p>
         </div>
 

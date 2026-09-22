@@ -27,10 +27,10 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left: Headline + wordmark (signature) */}
           <div className="relative z-10 lg:col-span-7 order-2 lg:order-1">
-            <h1 className="headline-gleam text-[1.8rem] md:text-3xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-[90%]">
-              Senior design leadership for regulated products, platforms, and AI-enabled teams
+            <h1 className="headline-gleam text-[1.8rem] md:text-3xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-full lg:max-w-[90%]">
+              Strategic design leadership for regulated products, platforms, and AI-enabled workflows
               <span className="block mt-3 md:mt-4 text-xl md:text-xl lg:text-xl font-normal text-text-secondary tracking-tight">
-                Fifteen years leading design across pharma, financial services, and enterprise. I also design, build, and ship production software myself.
+                15 years leading design and innovation across pharma, healthcare, financial services, and enterprise. I can also design, build, and ship products myself, so the thinking arrives tangible, not a crumb of it.
               </span>
             </h1>
 

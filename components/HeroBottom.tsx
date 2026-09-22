@@ -56,7 +56,7 @@ const DOORS: Door[] = [
     key: "thinking",
     eyebrow: "Method",
     title: "Tangible thinking.",
-    body: "What I bring to every meeting, made portable for you and your teams to use at work.",
+    body: "I took my operations and beliefs and put them to paper. What I bring to every discussion, now as a system: digital, printed, and in your pocket.",
     cta: "Read chapter one and try the cards",
     href: "/clarity-advantage",
   },
