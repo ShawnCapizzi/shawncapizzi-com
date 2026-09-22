@@ -4,7 +4,7 @@ import { CTACards } from "@/components/CTACards";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Three ways in: a 30-minute strategy call, email, or phone. Most engagements move from first call to signed SOW in 2–3 weeks.",
+    "Three ways in: a 30-minute strategy call, email, or phone. Most engagements move from first call to signed SOW in 2 to 3 weeks.",
 };
 
 const CAL_URL = "https://cal.com/capizzi/30min";
@@ -16,7 +16,7 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/shawncapizzi";
 export default function Page() {
   return (
     <article>
-      {/* HERO — confident, action-oriented setup */}
+      {/* HERO: confident, action-oriented setup */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-6">Contact</p>
@@ -31,11 +31,11 @@ export default function Page() {
         </div>
       </section>
 
-      {/* THREE INTENT CARDS — Framing B with hybrid softening on Card 3 */}
+      {/* THREE INTENT CARDS: Framing B with hybrid softening on Card 3 */}
       <section className="py-12 md:py-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-            {/* Card 1 — Project scope (highest commercial value) */}
+            {/* Card 1: project scope (highest commercial value) */}
             <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
               <p className="metadata-label mb-4">Path 01 · Recommended</p>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-tight mb-4">
@@ -58,7 +58,7 @@ export default function Page() {
               </a>
             </article>
 
-            {/* Card 2 — Evaluating fit (Stewart buyer, pre-decision) */}
+            {/* Card 2: evaluating fit (Stewart buyer, pre-decision) */}
             <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
               <p className="metadata-label mb-4">Path 02 · Async</p>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-tight mb-4">
@@ -66,7 +66,7 @@ export default function Page() {
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
                 Email when you&apos;d rather start in writing. A brief, a
-                question, a context note, an introduction &mdash; all welcome.
+                question, a context note, or an introduction. All welcome.
                 I reply within a business day.
               </p>
               <a
@@ -78,7 +78,7 @@ export default function Page() {
               </a>
             </article>
 
-            {/* Card 3 — Quick question (lower stakes, warmer framing) */}
+            {/* Card 3: quick question (lower stakes, warmer framing) */}
             <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
               <p className="metadata-label mb-4">Path 03 · Voice</p>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-tight mb-4">
@@ -101,14 +101,14 @@ export default function Page() {
         </div>
       </section>
 
-      {/* TRUST STRIP — four short proof points addressing the four anxieties:
+      {/* TRUST STRIP: four short proof points addressing the four anxieties:
           how long, will I get a response, will he sell me, is he qualified */}
       <section className="py-10 md:py-14 border-t border-b border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             <div>
               <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
-                2&ndash;3 weeks
+                2 to 3 weeks
               </p>
               <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug">
                 From first call to signed SOW for most engagements.
@@ -142,7 +142,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECONDARY — LinkedIn */}
+      {/* SECONDARY: LinkedIn */}
       <section className="py-12 md:py-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl">
@@ -156,17 +156,16 @@ export default function Page() {
                 className="text-link hover:text-link-hover transition-colors"
               >
                 LinkedIn
-              </a>{" "}
-              &mdash; that&apos;s where I sometimes post essays and short
-              pieces on AI adoption, current design topics, and experience
-              strategy. Connections are always welcome; feel free to send a
-              DM.
+              </a>
+              . That is where I post essays and short pieces on AI adoption,
+              current design topics, and experience strategy. Connections
+              are always welcome; feel free to send a DM.
             </p>
           </div>
         </div>
       </section>
 
-      {/* BOTTOM CTACards — for visitors who didn't take action above.
+      {/* BOTTOM CTACards, for visitors who did not take action above.
           'work' answers "is he qualified"; 'engagements' answers "how would
           this actually work" */}
       <section className="py-16 md:py-24 mt-8 md:mt-12 border-t border-border-subtle">

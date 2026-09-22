@@ -33,16 +33,12 @@ const FAQS = [
     ),
   },
   {
-    q: "Should I hire a full-time Director of UX, a VP of Design, or a fractional design leader?",
-    a: "It depends on what's actually broken. Hire full-time if you're building a multi-year design org or design system. Bring in a fractional leader if you need senior judgment on a 6–12 month transformation, are between full-time hires, or are launching a regulated or AI-heavy product where one wrong assumption costs millions. The two roles solve different problems. The wrong choice burns 6 months before anyone notices.",
-  },
-  {
     q: "What does a strategic design partner do that an agency doesn't?",
     a: "An agency executes against a brief you wrote. A strategic design partner writes the brief with you: challenging the framing, mapping the system, and translating business outcomes into experience decisions. You get accountability for the outcome, not just the deliverable. Agencies are great when you know what you need. Strategic partners are necessary when you're trying to figure out what you need.",
   },
   {
     q: "What is the Capizzi Process?",
-    a: "A field-tested methodology for moving complex, regulated, AI-touched products from strategy to shipped experience. Built around six principles: clarity before creativity, HVA (highest-value action) before CTA, hierarchy before decoration, trust before action, systems before scattered activity, and judgment over output. Not every engagement uses all six. Which principles apply depends on your team's process, where the initiative sits in its timeline, and the state it's in. It's the spine of the case studies, the book, and the workshops on this site.",
+    a: "Three steps and six operating principles. The steps are the Process: listen first, make it visible, prove it worked. That is the shape of every engagement, from the first conversation to the shipped experience. Inside those steps sit six operating principles that guide the judgment calls: clarity before creativity, highest-value action before CTA, hierarchy before decoration, trust before action, systems before scattered activity, and judgment over output. Not every engagement leans on all six; which ones apply depends on your team, where the initiative sits in its timeline, and the state it is in. The Process is the spine of the case studies, the book, the Clarity Cards, and the workshops on this site.",
   },
   {
     q: "What industries and clients have you worked with?",
@@ -217,7 +213,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA CARDS — work (proof) + contact (path forward) */}
+      {/* CTA CARDS: work (proof) + contact (path forward) */}
       <section className="py-16 md:py-24 mt-12 md:mt-16 border-t border-border-subtle">
         <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
           <CTACards cards={["work", "contact"]} />
