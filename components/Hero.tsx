@@ -2,15 +2,17 @@ import Image from "next/image";
 import { Wordmark } from "./Wordmark";
 
 /**
- * Hero — homepage hero.
+ * Hero: homepage hero.
  *
  * Contains: headline (top) + wordmark (signature below) + headshot (right on desktop, top on mobile).
  *
- * The sub-headline and CTAs live in HeroBottom, which renders AFTER
- * LogoStrip on the homepage. Producing the mobile reading order:
- *   image → headline → wordmark → logos → sub-headline → CTAs
+ * The headline asserts leadership first and the working-software claim
+ * second, in that order on purpose: buyers arriving from a cold email hire
+ * on precedent first. The three doors live in HeroBottom, which renders
+ * AFTER LogoStrip on the homepage, producing the mobile reading order:
+ *   image, headline, wordmark, logos, three doors
  *
- * No backdrop / gradient frame around the image — the rounded photo
+ * No backdrop or gradient frame around the image; the rounded photo
  * floats clean on the dark page. Top padding generous on mobile so
  * the image has breathing room from the transparent header bar.
  *
@@ -26,9 +28,9 @@ export function Hero() {
           {/* Left: Headline + wordmark (signature) */}
           <div className="relative z-10 lg:col-span-7 order-2 lg:order-1">
             <h1 className="headline-gleam text-[1.8rem] md:text-3xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-[90%]">
-              Senior experience design for regulated products, platforms, and AI-enabled teams
+              Senior design leadership for regulated products, platforms, and AI-enabled teams
               <span className="block mt-3 md:mt-4 text-xl md:text-xl lg:text-xl font-normal text-text-secondary tracking-tight">
-                I help regulated and enterprise teams make complex work clearer, more trusted, and easier to ship.
+                Fifteen years leading design across pharma, financial services, and enterprise. I also design, build, and ship production software myself, so the thinking arrives as working software, not just a description of it.
               </span>
             </h1>
 
@@ -41,7 +43,7 @@ export function Hero() {
             />
           </div>
 
-          {/* Right: Headshot — knockout subject on navy + brand glow, soft edge dissolve */}
+          {/* Right: headshot, knockout subject on navy plus brand glow, soft edge dissolve */}
           <div className="relative lg:col-span-5 order-1 lg:order-2">
             <div
               className="relative aspect-square max-w-[82%] sm:max-w-[72%] md:max-w-[80%] lg:max-w-[100%] mx-auto"

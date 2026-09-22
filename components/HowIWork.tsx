@@ -7,7 +7,7 @@ import { LaserFrame } from "./LaserFrame";
 const CAL_URL = "https://cal.com/capizzi/30min";
 
 /**
- * HowIWork — homepage engagement modes as a single-open accordion.
+ * HowIWork: homepage engagement modes as a single-open accordion.
  *
  * Three modes (Leadership / Advisory / On Call) collapse to compact rows so
  * the section reads short before the case studies land, especially on mobile.
@@ -38,9 +38,9 @@ const MODES: Mode[] = [
     key: "leadership",
     eyebrow: "Leadership",
     title: "Bring me in",
-    body: "Senior UX, CX, IA, and content strategy leadership, embedded inside your live work. For agencies and in-house pharma, healthcare, and enterprise teams.",
+    body: "Senior UX, CX, IA, and content strategy leadership, embedded inside your live work. For agencies and in-house pharma, healthcare, and enterprise teams. That includes the internal tools a department has waited years for, and full 0-to-1 product delivery when something needs to exist that does not yet.",
     deliverables:
-      "Campaigns · Platforms · Sites · Apps · Sales tools · Regulated brand programs",
+      "Campaigns · Platforms · Sites · Apps · Sales tools · Internal tools · 0-to-1 products · Regulated brand programs",
     href: "/engagements#leadership",
     linkLabel: "See leadership engagements",
     laserDelay: 0,
@@ -85,8 +85,8 @@ export function HowIWork() {
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
             Start by solving or defining a single business opportunity, then
             grow from there. The intensity flexes as your needs change; the
-            partnership holds. Not sure where you fit? Share your goals or pain
-            points and we&apos;ll figure it out together.
+            partnership holds. Engagements range from embedded builds to
+            fractional product leadership.
           </p>
           {/* AI as a working partner */}
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -111,7 +111,7 @@ export function HowIWork() {
           </div>
         </div>
 
-        {/* Three modes — single-open accordion */}
+        {/* Three modes, single-open accordion */}
         <div className="mt-16 md:mt-20 space-y-4">
           {MODES.map((mode) => {
             const isOpen = mode.key === openKey;

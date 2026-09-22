@@ -2,61 +2,135 @@ import Link from "next/link";
 import Image from "next/image";
 
 /**
- * HeroBottom — sub-headline + CTAs that live below the LogoStrip on the
- * homepage, continuing the Hero's text column.
+ * HeroBottom: three doors, named by what the visitor came to do.
  *
- * Reading flow: Hero (image + headline) → LogoStrip → HeroBottom (sub + CTAs)
+ * Reading flow on the homepage: Hero (image + headline), LogoStrip, then
+ * this block. It replaces the old audience line and CTA pair with three
+ * intent-named entry points, because a visitor does not know which audience
+ * they are on arrival, but they do know what they came to do.
  *
- * Aligned to the same left column as the Hero text (max-w-2xl, no centering)
- * so visually it reads as a continuation of the Hero text column even
- * though the LogoStrip splits them physically.
+ *   Door 1  Bring me into a problem   the strategy call (the page's one ask)
+ *   Door 2  See the work              /work
+ *   Door 3  Tangible thinking         /clarity-advantage (moves to /process
+ *                                     when that page ships)
+ *
+ * The D&AD line stays underneath as a credential. It is shown, not claimed.
+ *
+ * To retune a door, edit DOORS below. Door 1 is styled as the primary and
+ * opens in a new tab because it is an external calendar.
  */
 
 const CAL_URL = "https://cal.com/capizzi/30min";
+
+type Door = {
+  key: string;
+  eyebrow: string;
+  title: string;
+  body: string;
+  cta: string;
+  href: string;
+  external?: boolean;
+  primary?: boolean;
+};
+
+const DOORS: Door[] = [
+  {
+    key: "problem",
+    eyebrow: "Start here",
+    title: "Bring me into a problem.",
+    body: "A 30-minute call, virtual, no pitch. We work out what is stuck, what success looks like, and whether I am the right person for it.",
+    cta: "Book a Strategy Call",
+    href: CAL_URL,
+    external: true,
+    primary: true,
+  },
+  {
+    key: "work",
+    eyebrow: "Proof",
+    title: "See the work.",
+    body: "Enterprise pharma governance, a Bloomberg terminal CRM, a patient navigation platform, and a product designed, built, and shipped solo.",
+    cta: "See the case studies",
+    href: "/work",
+  },
+  {
+    key: "thinking",
+    eyebrow: "Method",
+    title: "Tangible thinking.",
+    body: "What I bring to every meeting, now in a portable system for you and your teams to use at work: the Capizzi Process, the book, and the 54-card deck.",
+    cta: "Read chapter one and try the cards",
+    href: "/clarity-advantage",
+  },
+];
 
 export function HeroBottom() {
   return (
     <section className="pt-10 md:pt-12 pb-14 md:pb-20">
       <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-        <div className="max-w-2xl">
-          <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-            I work with pharma and enterprise teams, plus the agencies and
-            founders pitching to win the room.
-          </p>
-
-          <a
-            href="https://www.dandad.org/annual/2022/entry/professional/235946"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center gap-2 text-sm italic font-light text-text-tertiary hover:text-text-secondary transition-colors"
-          >
-            <Image
-              src="/images/awards/dandad-pencil-2022.webp"
-              alt="D&AD Pencil 2022 award"
-              width={300}
-              height={300}
-              className="h-10 w-10 shrink-0 rotate-90"
-            />
-            <span>D&amp;AD Pencil 2022</span>
-          </a>
-
-          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
-            <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
-            >
-              Book a Strategy Call
-            </a>
-            <Link
-              href="/engagements"
-              className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
-            >
-              See how I work <span aria-hidden="true" className="ml-2">→</span>
-            </Link>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+          {DOORS.map((door) => {
+            const cardClass = `group relative flex flex-col p-7 md:p-8 rounded-2xl card-surface border transition-colors ${
+              door.primary
+                ? "border-[#6B5CFF]/60 hover:border-[#8F84FF]"
+                : "border-border-default hover:border-border-strong"
+            }`;
+            const inner = (
+              <>
+                <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
+                  {door.eyebrow}
+                </p>
+                <h2 className="mt-3 text-xl md:text-2xl font-semibold tracking-tight leading-tight text-text-primary">
+                  {door.title}
+                </h2>
+                <p className="mt-3 text-sm md:text-base text-text-secondary leading-relaxed flex-1">
+                  {door.body}
+                </p>
+                <p
+                  className={`mt-6 inline-flex items-center text-sm font-medium transition-colors ${
+                    door.primary
+                      ? "text-[#A798FF] group-hover:text-white"
+                      : "text-link group-hover:text-link-hover"
+                  }`}
+                >
+                  {door.cta}
+                  <span aria-hidden="true" className="ml-2">
+                    &rarr;
+                  </span>
+                </p>
+              </>
+            );
+            return door.external ? (
+              <a
+                key={door.key}
+                href={door.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cardClass}
+              >
+                {inner}
+              </a>
+            ) : (
+              <Link key={door.key} href={door.href} className={cardClass}>
+                {inner}
+              </Link>
+            );
+          })}
         </div>
+
+        <a
+          href="https://www.dandad.org/annual/2022/entry/professional/235946"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 md:mt-10 inline-flex items-center gap-2 text-sm italic font-light text-text-tertiary hover:text-text-secondary transition-colors"
+        >
+          <Image
+            src="/images/awards/dandad-pencil-2022.webp"
+            alt="D&AD Pencil 2022 award"
+            width={300}
+            height={300}
+            className="h-10 w-10 shrink-0 rotate-90"
+          />
+          <span>D&amp;AD Pencil 2022, Future Impact, with The Chrysalis Initiative</span>
+        </a>
       </div>
     </section>
   );

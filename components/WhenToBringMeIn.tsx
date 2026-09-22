@@ -5,49 +5,46 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 /**
- * WhenToBringMeIn — homepage self-qualification module.
+ * WhenToBringMeIn: homepage self-qualification module.
  *
  * A self-recognition mirror: scannable "this is you if..." statements that
  * let a visitor identify themselves without filling out a form. Placed after
  * HeroBottom and before HowIWork so the "why now" lands before the "how we
  * work" (the engagement modes).
  *
- * The industry mix in the intro and the spread of the bullets is deliberate:
- * the regulated/pharma authority stays the spine (bullets 1 and 3), while
- * bullets 2 and 5 broaden the net to AI-stuck teams and founder-led work
- * (fintech, drone/ad ops, AI hedge fund, etc.) without diluting the premium.
+ * The spread of the bullets is deliberate. Regulated and pharma authority
+ * is the spine (1 and 4). Bullets 2 and 3 speak to leaders whose plan or AI
+ * initiative has stalled. Bullet 5 is written for merged agency networks
+ * working one client with several inherited vocabularies. Bullet 6 is the
+ * embedded internal-tools work, in the buyer's own words.
  *
- * To retune who this speaks to, edit SITUATIONS below — no other changes.
- * Internal Link is unused for now but kept available if any bullet should
- * deep-link to an engagements anchor later.
+ * This section does not repeat the strategy call. The homepage asks once at
+ * the top and once at the bottom; here the link goes deeper, to engagements.
+ *
+ * To retune who this speaks to, edit SITUATIONS below. No other changes.
  */
 
-const CAL_URL = "https://cal.com/capizzi/30min";
-
 const SITUATIONS = [
-  "You work in regulated industries where product and brand experience demands real CX and user-first direction.",
+  "You work in a regulated category where the product and brand experience has to survive medical, legal, and regulatory review and still work for a human.",
   "You need someone who can turn ambiguity into a scoped plan, and the story that wins the room.",
   "Your AI initiative is stuck between strategy, workflow, and trust.",
   "Your design system exists, but governance and adoption are breaking down.",
-  "You need a senior experience lead embedded inside live agency or product work.",
+  "Merged teams are working one client with three different vocabularies for the same deliverable.",
+  "The tool your department has waited years for is still a spreadsheet.",
 ];
 
 export function WhenToBringMeIn() {
-  // Reveal-on-scroll for the list. Each item fades + slides up in sequence
-  // when the list enters the viewport. Fires once, then disconnects — no
-  // re-triggering on scroll back. Respects prefers-reduced-motion (shows
-  // everything immediately, no transitions).
+  // Reveal-on-scroll for the list. Each item fades and slides up in sequence
+  // when the list enters the viewport. Fires once, then disconnects, so there
+  // is no re-triggering on scroll back. Reduced motion is handled in CSS on
+  // each item (motion-reduce: forces the resting state), which keeps this
+  // effect free of synchronous setState calls.
   const listRef = useRef<HTMLUListElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const node = listRef.current;
     if (!node) return;
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setVisible(true);
-      return;
-    }
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -75,7 +72,7 @@ export function WhenToBringMeIn() {
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
             The industry changes across pharma, fintech, agency, enterprise, and
-            founder-led teams. The pattern usually doesn&apos;t.
+            founder-led teams. The pattern usually does not.
           </p>
         </div>
 
@@ -86,7 +83,7 @@ export function WhenToBringMeIn() {
           {SITUATIONS.map((situation, i) => (
             <li
               key={i}
-              className={`border-l-2 border-border-strong pl-5 md:pl-6 text-lg md:text-xl text-text-primary leading-relaxed transition-all duration-700 ease-out motion-reduce:transition-none ${
+              className={`border-l-2 border-border-strong pl-5 md:pl-6 text-lg md:text-xl text-text-primary leading-relaxed transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:opacity-100 motion-reduce:translate-y-0 ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
               }`}
               style={{ transitionDelay: visible ? `${i * 120}ms` : "0ms" }}
@@ -97,14 +94,15 @@ export function WhenToBringMeIn() {
         </ul>
 
         <div className="mt-12 md:mt-16">
-          <a
-            href={CAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
+          <Link
+            href="/engagements"
+            className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
           >
-            Book a Strategy Call
-          </a>
+            See how engagements work{" "}
+            <span aria-hidden="true" className="ml-2">
+              &rarr;
+            </span>
+          </Link>
         </div>
       </div>
     </section>
