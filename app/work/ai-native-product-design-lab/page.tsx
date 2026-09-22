@@ -1,4 +1,5 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
+import { BrowserFrame } from "@/components/BrowserFrame";
 import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -6,41 +7,55 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AI-Native Product Design Lab",
   description:
-    "A vendor-agnostic AI practice grounded in healthcare, regulated environments, and design-system governance. Working prototypes, public Custom GPTs, and a Figma plugin published to the Community \u2014 advice plus demonstration.",
+    "How I design, build, and ship with AI: production software designed and shipped solo, working prototypes in days, a Figma plugin in the Community, and the dated record of early adoption behind all of it.",
 };
 
 const ASSET_BASE = "/images/case-studies/05-ai-native-product-design-lab";
 
+/**
+ * The lab page stays a case study, revised September 2026. What changed:
+ *   - AI Patient Support is live, not a concept. The address bar labels
+ *     now show the real domain, the reel plays inside a browser frame, and
+ *     the copy no longer lists condition counts that drift as the product
+ *     grows. The full story moves to the Live Health Data case study when
+ *     that page ships; this block then shortens to a pointer.
+ *   - A production block names what the lab now ships: CourtVisual live,
+ *     AI Patient Support live, ClinicalTrialsForMe in preview.
+ *   - The Custom GPTs are framed as the dated early-adoption record, with
+ *     the current practice named plainly: Claude Code and agentic pipelines.
+ *   - The 2018 voice section links to its own case study.
+ *   - Em dashes removed from copy and metadata.
+ */
 export default function Page() {
   return (
     <CaseStudyLayout
       eyebrow="(Case Study)"
       title="AI-Native Product Design Lab"
-      subtitle="How I use AI to accelerate research, design, prototype, and delivery, built on years of bringing teams together. Working prototypes in hours, not weeks."
+      subtitle="How I design, build, and ship with AI. Working prototypes in hours, and production software shipped solo, built on years of bringing teams together."
       heroImage={`${ASSET_BASE}/01-hero-ai-native-design-lab.png`}
       heroImageAlt="AI-Native Design Lab, disease-first patient support hero"
       metadata={[
         { label: "SCOPE", value: "Personal lab + selective client integration" },
-        { label: "YEAR", value: "2022–present" },
+        { label: "YEAR", value: "2022 to present" },
         {
           label: "CAPABILITIES",
           value:
-            "AI prototyping · Methodology · Custom GPTs · Vendor-agnostic advisory",
+            "AI prototyping · Agentic build pipelines · Methodology · Vendor-agnostic advisory",
         },
         {
           label: "STACK",
           value:
-            "Claude · ChatGPT · Midjourney · Runway · v0 · Base44 · React · Next.js · Tailwind",
+            "Claude Code · ChatGPT · Next.js · Supabase · Vercel · Tailwind · v0 · Base44 · Midjourney · Runway",
         },
       ]}
       challenge={[
-        "Most consultants advising on AI today are vendor-coded or theoretical. Few have actually built AI-augmented products end-to-end. Enterprise teams hiring AI advisors are getting slide decks and vendor partnerships. They're not getting people who can walk into a room, assess where AI actually fits, and demonstrate what's possible by building it in real time.",
+        "Most consultants advising on AI today are vendor-coded or theoretical. Few have actually built AI-augmented products end to end. Enterprise teams hiring AI advisors are getting slide decks and vendor partnerships. They are not getting people who can walk into a room, assess where AI actually fits, and demonstrate what is possible by building it in real time.",
         "I built this lab to keep AI fluency hands-on, not because I needed to add AI to my marketing, but because I wanted to know, from the inside, what the tools could actually do in a regulated, healthcare-adjacent context.",
       ]}
       approach={[
-        "I'm classically trained, Pratt BFA in Communications Design and Advertising/Marketing, fine arts background, two decades as a graphic designer, marketer, and senior UX leader. AI experimentation began in 2022, alongside a creative practice that dates back to college. My best friend, now Poet Laureate of Connecticut, and I co-founded a creative arts and music collective at Rider University. We've been collaborating creatively for 25+ years, getting together annually for live performances where I create live visual art alongside his poetry and music.",
-        "In 2022 I started using Midjourney and Runway to generate live visuals during those performances, projected through two or three projectors, tied to lyrics and music in real time. Live performance is an unforgiving classroom for AI tooling. There's no regenerating when the band is playing. Everything I now know about how AI fits into design work started there.",
-        "The lab has expanded since then into healthcare-specific prototypes and tools.",
+        "I am classically trained, Pratt BFA in Communications Design and Advertising/Marketing, fine arts background, two decades as a graphic designer, marketer, and senior UX leader. AI experimentation began in 2022, alongside a creative practice that dates back to college. My best friend, now Poet Laureate of Connecticut, and I co-founded a creative arts and music collective at Rider University. We have been collaborating creatively for 25+ years, getting together annually for live performances where I create live visual art alongside his poetry and music.",
+        "In 2022 I started using Midjourney and Runway to generate live visuals during those performances, projected through two or three projectors, tied to lyrics and music in real time. Live performance is an unforgiving classroom for AI tooling. There is no regenerating when the band is playing. Everything I now know about how AI fits into design work started there.",
+        "The lab has expanded since then into healthcare-specific prototypes and tools, and now into production software. The current practice runs on Claude Code and ChatGPT as build partners, with me as the orchestrator: I describe what I want in screenshots, copy, and interaction notes, and direct the tools until the result matches the picture in my head. The stack is the one I use for client work: Next.js, Supabase, and Vercel.",
       ]}
       pullQuote={[
         "Now any idea you can conceive, you can create stimulus to test. That speed-to-market is real.",
@@ -49,30 +64,79 @@ export default function Page() {
       ]}
       projectShowcases={[
         {
-          eyebrow: "Prototype · Healthcare patient navigation",
+          eyebrow: "Live product · Healthcare patient navigation",
           title: "AI Patient Support",
           description: [
-            "The future of healthcare is disease-first, brand-second. The AI Patient Support concept is the working prototype that proves it. Instead of patients searching across twelve brand sites for assistance, they search by their disease and find every option in one place, every support program, savings card, study, KOL video, and patient story, verified and organized by condition.",
-            "The concept covers Oncology (4 indications, 47 drugs), Diabetes, Cardiovascular, Immunology, Neurology, HIV/AIDS, Rare Disease, and Respiratory. Click a condition, find every drug. Click a drug, find every resource: support and savings, videos and media, downloadable materials, clinical studies, drug timeline, legal and safety. Each piece of media tagged by length (short, long), source (brand, YouTube, social), and category (patient stories, campaigns, KOL, community).",
+            "The future of healthcare is disease-first, brand-second. AI Patient Support is the working product that proves it. Instead of patients searching across twelve brand sites for assistance, they search by their condition and find every option in one place: support programs, savings paths, studies, videos, and patient stories, verified and organized by condition rather than by the company selling the drug.",
+            "Every drug page pulls from the public record: medication information from DailyMed and openFDA, trials from ClinicalTrials.gov, with the government record always one click away and a plain statement when something cannot be traced to a source. Media is tagged by length, source, and category so a patient can find a two-minute video or a full study without wading through either.",
+          ],
+          links: [
+            { label: "Open aipatientsupport.com", href: "https://aipatientsupport.com" },
           ],
           images: [
             {
-              src: `${ASSET_BASE}/01-hero-ai-patient-support-demo.gif`,
-              alt: "AI Patient Support live demo, disease-organized navigation across oncology, diabetes, cardiovascular, immunology, neurology, HIV/AIDS, rare disease, and respiratory",
-              browserFrame: { url: "ai-patient-support.com", aspectRatio: 4 / 3 },
+              src: `${ASSET_BASE}/11-aipatientsupport-live-home.png`,
+              alt: "AI Patient Support, live: the home page with condition search and the browse-by-condition grid",
+              browserFrame: { url: "aipatientsupport.com", aspectRatio: 1204 / 884 },
             },
             {
-              src: `${ASSET_BASE}/02-ai-patient-support-drug-detail.png`,
-              alt: "AI Patient Support drug detail view, oncology IO lead deep dive with tagged media by length, source, and category",
-              browserFrame: { url: "ai-patient-support.com/oncology", aspectRatio: 4 / 3 },
+              src: `${ASSET_BASE}/12-aipatientsupport-live-drug-timeline.png`,
+              alt: "AI Patient Support, live: a drug page's approval timeline, each entry linking to the FDA's own approval letter",
+              browserFrame: { url: "aipatientsupport.com", aspectRatio: 1204 / 884 },
             },
           ],
+          customContent: (
+            <figure className="mx-auto max-w-3xl">
+              <BrowserFrame
+                src="/videos/aipatientsupport-walkthrough.mp4"
+                poster="/videos/aipatientsupport-walkthrough-poster.jpg"
+                url="aipatientsupport.com"
+                width={720}
+                fallbackAspect={1400 / 1080}
+                tiltDegrees={0}
+                theme="dark"
+                ariaLabel="AI Patient Support walkthrough: condition search, a drug page with its materials, the FDA source letter, and the paying-for-treatment path"
+                loop
+                autoPlay
+              />
+              <figcaption className="mt-4 text-center text-sm text-text-tertiary">
+                A 30-second walkthrough: search by condition, open a drug, read
+                the source document, find the path to paying for treatment.
+              </figcaption>
+            </figure>
+          ),
+        },
+        {
+          eyebrow: "Production · Designed, built, and shipped solo",
+          title: "From prototypes to production",
+          description: [
+            "The lab now ships. CourtVisual is live at courtvisual.com: every game scored 0 to 10 for what is worth watching, with live fixtures, standings, and broadcast data behind it, and a Supabase backend with row-level security. AI Patient Support is live at aipatientsupport.com. ClinicalTrialsForMe is in preview at clinicaltrialsforme.com, with the architecture complete and the cancer trial path loaded end to end as the demonstrated vertical.",
+            "Three products, one conviction: decisions deserve current truth, rendered plain enough to act on. Each one takes live, authoritative sources and compresses them into a display a person can act on in seconds.",
+          ],
+          links: [
+            { label: "Read the CourtVisual case study", href: "/work/courtvisual" },
+            { label: "Open courtvisual.com", href: "https://www.courtvisual.com" },
+            { label: "Preview clinicaltrialsforme.com", href: "https://clinicaltrialsforme.com" },
+          ],
+          customContent: (
+            <figure className="mx-auto max-w-3xl">
+              <VideoWithPlayOverlay
+                src="/videos/courtvisual-ranking-demo.mp4"
+                poster="/videos/courtvisual-ranking-poster.jpg"
+                ariaLabel="CourtVisual ranking demo: the nightly slate scored and ranked, with reasoning on each card"
+              />
+              <figcaption className="mt-4 text-center text-sm text-text-tertiary">
+                CourtVisual: the nightly slate, scored and ranked, with the
+                reasoning on the card.
+              </figcaption>
+            </figure>
+          ),
         },
         {
           eyebrow: "Prototype · AI-assisted dashboard, built in v0",
           title: "Channel Optimizer",
           description: [
-            "An AI-assisted dashboard for media buying and mix decision support, built in v0. Channel performance, engagement metrics, and AI-generated insights and recommendations: \u201CIncrease budget allocation to social media campaigns by 15%,\u201D \u201CConsider reducing radio ad spend and reallocating to higher-performing channels.\u201D",
+            "An AI-assisted dashboard for media buying and mix decision support, built in v0. Channel performance, engagement metrics, and AI-generated insights and recommendations: “Increase budget allocation to social media campaigns by 15%,” “Consider reducing radio ad spend and reallocating to higher-performing channels.”",
             "Built and refined over 3 days. Would have taken a 4-week sprint in 2022, with a team of designers and engineers.",
           ],
           images: [
@@ -86,9 +150,9 @@ export default function Page() {
           eyebrow: "Published tool · Figma Community · Design system governance",
           title: "Detached Instance Finder",
           description: [
-            "Design-system governance only works if drift is visible. The fastest way a client\u2019s system erodes inside an agency or vendor workflow is the detached instance \u2014 a component pulled off the system, modified, and silently disconnected from updates. Figma flags none of this. The layer name turns from purple to black, and the debt accumulates invisibly.",
-            "I built Detached Instance Finder to make that debt visible in seconds. The plugin scans a page or entire file and surfaces likely detaches using two complementary signals. Name match catches the easy case: a frame named like a component, since detaches keep their original name by default. Orphan is the harder one \u2014 it flags a plain frame sitting among instance siblings, the one black layer in a row of purple. That second signal catches detaches even after they\u2019ve been renamed, which name-matching alone can\u2019t. Built with the Figma Plugin API and JavaScript, published to the Figma Community.",
-            "What I find interesting as a design leader: the tell designers use by eye (purple vs. black) and the thing the Figma API actually exposes (node type) are the same underlying fact. The plugin doesn\u2019t invent a new method. It just makes the invisible visible \u2014 so governance becomes something a system owner can enforce, not just preach. This is the same instinct I bring to multi-brand system work at scale.",
+            "Design-system governance only works if drift is visible. The fastest way a client’s system erodes inside an agency or vendor workflow is the detached instance: a component pulled off the system, modified, and silently disconnected from updates. Figma flags none of this. The layer name turns from purple to black, and the debt accumulates invisibly.",
+            "I built Detached Instance Finder to make that debt visible in seconds. The plugin scans a page or entire file and surfaces likely detaches using two complementary signals. Name match catches the easy case: a frame named like a component, since detaches keep their original name by default. Orphan is the harder one. It flags a plain frame sitting among instance siblings, the one black layer in a row of purple. That second signal catches detaches even after they have been renamed, which name-matching alone cannot. Built with the Figma Plugin API and JavaScript, published to the Figma Community.",
+            "What I find interesting as a design leader: the tell designers use by eye (purple versus black) and the thing the Figma API actually exposes (node type) are the same underlying fact. The plugin does not invent a new method. It makes the invisible visible, so governance becomes something a system owner can enforce, not just preach. This is the same instinct I bring to multi-brand system work at scale.",
           ],
           links: [
             {
@@ -112,11 +176,11 @@ export default function Page() {
           ],
         },
         {
-          eyebrow: "Public deployment · Live in ChatGPT",
+          eyebrow: "Early adoption · Live in ChatGPT",
           title: "Three Custom GPTs",
           description: [
-            "Three working Custom GPTs deployed publicly: UX Research Advisor advises on UX research and marketing opportunities using user-provided data; Product Story, Strategy and Case Study Partner generates detailed product definitions and case studies; AEM Design Assistant covers best practices for AEM, Adobe Target, and DAM for storytelling and personalization.",
-            "Each is live in ChatGPT. Anyone can click through and use them right now.",
+            "Three Custom GPTs, all still live in ChatGPT. The first was built the night OpenAI opened Custom GPTs to the public. UX Research Advisor advises on UX research and marketing opportunities using user-provided data; Product Story, Strategy and Case Study Partner generates detailed product definitions and case studies; AEM Design Assistant covers best practices for AEM, Adobe Target, and DAM for storytelling and personalization.",
+            "They are the dated record of early adoption, not the current practice. The practice now runs on Claude Code and agentic pipelines and ships production software rather than assistants. Anyone can still click through and use these right now.",
           ],
           links: [
             {
@@ -137,11 +201,15 @@ export default function Page() {
           eyebrow: "Before AI · Voice design in 2018",
           title: "The instinct predates the tools",
           description: [
-            "This pattern did not start with AI. In 2018, before \u201Cconversational design\u201D was a discipline anyone hired for, I built a voice-first medication-adherence prototype as an Alexa Skill on the Amazon Echo. Adherence was already a multi-billion-dollar problem, and every existing solution asked the patient to do the one thing they were already failing at: remember to look at a screen. The question was what a reminder looks like if you never have to look at it, if you can just ask and be answered in the room where you live.",
+            "This pattern did not start with AI. In 2018, before “conversational design” was a discipline anyone hired for, I built a voice-first medication-adherence prototype as an Alexa Skill on the Amazon Echo. Adherence was already a multi-billion-dollar problem, and every existing solution asked the patient to do the one thing they were already failing at: remember to look at a screen. The question was what a reminder looks like if you never have to look at it, if you can just ask and be answered in the room where you live.",
             "I started where voice forces you to start, with the conversation and not the device. I wrote the directed dialog prompts, mapped every intent, utterance, and slot, and drew the full conversation tree by hand before any prototype existed. The chart below is that architecture: user utterance to identified intent, to conditions of response, to device-specific response, to follow-up. Then I prototyped in SaySpring and tested with real people, designing the repair paths for when the skill heard the wrong thing and making sure it never left the user without a next move.",
             "It is the same instinct the AI work runs on. The architecture around the interaction is the product, whether the surface is a voice skill in 2018 or an AI agent today: map the intent before the interface, design the repair before the success state, and treat what the system says as carefully as what it does. I build for new touchpoints early, on purpose, so that by the time a team needs them I have already learned where they break.",
           ],
           links: [
+            {
+              label: "Read the VUI Pill Tracker case study",
+              href: "/work/vui-voice-pill-tracker",
+            },
             {
               label: "See the conversational-design discipline behind it",
               href: "/engagements#advisory",
@@ -171,19 +239,24 @@ export default function Page() {
       ]}
       outcomes={[
         {
-          headline: "Working prototypes built in hours, not weeks",
+          headline: "Production software, designed, built, and shipped solo",
           description:
-            "AI Patient Support and Channel Optimizer, built using AI-assisted development tools (v0, Base44, Claude, ChatGPT) in days, not sprints.",
+            "CourtVisual and AI Patient Support live, ClinicalTrialsForMe in preview. Research through deploy, with Claude Code and ChatGPT as working partners, not demos.",
         },
         {
-          headline: "Three Custom GPTs deployed publicly",
+          headline: "Working prototypes built in hours, not weeks",
           description:
-            "Working AI tools live in the world, not concepts in a deck. UX Research Advisor, Product Story Strategy and Case Study Partner, AEM Design Assistant.",
+            "AI Patient Support and Channel Optimizer began as prototypes built with AI-assisted development tools (v0, Base44, Claude, ChatGPT) in days, not sprints.",
         },
         {
           headline: "A Figma plugin published to the Community",
           description:
-            "Detached Instance Finder, concepted, designed, and built end to end. Surfaces detached components before they erode the system \u2014 the same governance instinct, scaled down to a single tool.",
+            "Detached Instance Finder, concepted, designed, and built end to end. Surfaces detached components before they erode the system, the same governance instinct scaled down to a single tool.",
+        },
+        {
+          headline: "A dated record of early adoption",
+          description:
+            "Three Custom GPTs still live in ChatGPT, the first built the night the feature launched. Everyone claims to have been early. These carry timestamps.",
         },
         {
           headline: "A vendor-agnostic AI advisory practice",
@@ -191,49 +264,42 @@ export default function Page() {
             "Built on hands-on tool experience, not vendor partnership commissions. The Automation Opportunity Assessment framework moves teams from intent to prioritized roadmap.",
         },
         {
-          headline: "Experience Strategy and Creative extended with AI",
+          headline: "A repeatable methodology for integrating AI into business workflows",
           description:
-            "Not replaced by it. Get to great quicker via optimized workflows and data-led decision making.",
-        },
-        {
-          headline:
-            "A repeatable methodology .MD and systems for integrating AI into business workflows",
-          description:
-            "Custom frameworks feed AI the inputs it needs to produce real strategic work, tailored to your business, not generic output.",
+            "Custom frameworks feed AI the inputs it needs to produce real strategic work, tailored to your business, not generic output. Experience strategy and creative are extended by AI, not replaced by it.",
         },
       ]}
       closer={[
         "Most teams hiring AI consultants get advice. The teams hiring me get advice plus a demonstration.",
-        "AI isn't a strategy. It's a tool. The teams that win with AI long-term aren't the ones with the best models. They're the ones who treated the experience architecture around the model as the actual work.",
+        "AI is not a strategy. It is a tool. The teams that win with AI long-term are not the ones with the best models. They are the ones who treated the experience architecture around the model as the actual work.",
         <>
-          That&apos;s the lab. That&apos;s what I bring into{" "}
+          That is the lab. That is what I bring into{" "}
           <Link
             href="/engagements"
             className="text-link hover:text-link-hover transition-colors"
           >
             client engagements
           </Link>
-          . That&apos;s the difference.
+          . That is the difference.
         </>,
       ]}
       ctaHeadline="Working through AI integration in your team?"
       related={[
         {
+          slug: "courtvisual",
+          eyebrow: "Solo build · Live product · courtvisual.com",
+          title: "A multi-sport product that scores every game by what's worth watching",
+          description:
+            "Designed, built, and shipped solo. Six leagues, a 151-team catalog, a four-factor excitement engine, and live data feeds.",
+          image: "/images/case-studies/07-courtvisual/02-game-card-score-ring.png",
+        },
+        {
           slug: "pharma-design-systems",
-          eyebrow: "Multi-Brand · 3x Design Systems · Governance",
+          eyebrow: "Enterprise pharma · Governance · 70+ brands",
           title: "Building digital governance across 70+ therapeutic brands",
           description:
             "$3.5M+ in digital transformation. Industry-first mobile wallet integration for patient medication information.",
           image: "/images/hero/consumer-care-hub-hero-balanced.gif",
-        },
-        {
-          slug: "cancer-equality-app",
-          eyebrow: "Chrysalis Initiative · Patient Experience",
-          title: "A patient navigation platform for women facing bias in cancer care",
-          description:
-            "D&AD Pencil 2022 for Future Impact. Two-sided platform connecting patients with trained coaches and peer navigators.",
-          image:
-            "/images/case-studies/04-cancer-equality-app/01-hero-erase-the-line-campaign-poster.jpeg",
         },
       ]}
     />
