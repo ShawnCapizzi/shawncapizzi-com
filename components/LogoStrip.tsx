@@ -1,8 +1,14 @@
 import Image from "next/image";
 
 /**
- * LogoStrip — "Trusted by leaders across:" with 6 client logos in a
+ * LogoStrip: "Trusted by leaders across:" with six client logos in a
  * continuous horizontal marquee.
+ *
+ * IPG Health was replaced by Omnicom in September 2026. The IPG Health name
+ * was retired when Omnicom completed the Interpublic acquisition, and a
+ * live logo for a retired network read as a stale credential to exactly
+ * the buyers it was meant to impress. The Omnicom asset is white on
+ * transparent, supplied by Shawn.
  *
  * Per design system §5 + manuscript line 45: "horizontal scroll banner",
  * monochrome white treatment.
@@ -28,7 +34,7 @@ const LOGOS = [
     width: 200,
   },
   { src: "/images/logos/05-openai.avif", alt: "OpenAI", width: 120 },
-  { src: "/images/logos/06-ipg-health.avif", alt: "IPG Health", width: 130 },
+  { src: "/images/logos/06-omnicom.png", alt: "Omnicom", width: 150 },
 ];
 
 export function LogoStrip() {
