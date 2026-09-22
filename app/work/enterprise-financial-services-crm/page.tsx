@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Enterprise Financial Services CRM Transformation",
   description:
-    "Redesigning rep workflows inside a terminal-driven CRM environment used company-wide. Architectural inquiry across three salesperson types.",
+    "Redesigning rep workflows inside a terminal-driven CRM environment used company-wide. Architectural inquiry across three salesperson types. $1.5M+ in annual ROI.",
 };
 
 const ASSET_BASE =
@@ -149,6 +149,11 @@ export default function Page() {
         </>
       }
       outcomes={[
+        {
+          headline: "$1.5M+ in annual ROI",
+          description:
+            "The annual return tracked for the CRM transformation. The mechanism is the rest of this page: cleaner scanability, quicker decisions, and faster task completion for the reps who run the terminal all day.",
+        },
         {
           headline: "In-person research with three salesperson types",
           description:

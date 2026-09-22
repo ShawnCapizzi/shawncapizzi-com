@@ -25,7 +25,7 @@ const CASE_STUDIES = [
     title:
       "Redesigning rep workflows in a terminal-driven CRM environment",
     description:
-      "Architectural inquiry across three rep types. Faster scanability, quicker decisions, measurable time-in-task reduction across the rep experience.",
+      "$1.5M+ in annual ROI. Architectural inquiry across three rep types. Faster scanability, quicker decisions, measurable time-in-task reduction across the rep experience.",
     image:
       "/images/case-studies/03-enterprise-financial-services-crm/01-hero-final-person-view-terminal.png",
   },
@@ -132,7 +132,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA CARDS — engagements (how we'd work together) + contact (start the conversation) */}
+      {/* CTA CARDS: engagements (how we would work together) + contact (start the conversation) */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
           <CTACards cards={["engagements", "contact"]} />
