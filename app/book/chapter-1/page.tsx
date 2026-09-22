@@ -169,11 +169,11 @@ export default function ChapterOnePage() {
         <div className="max-w-5xl">
           <p className="eyebrow mb-3">The book</p>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance max-w-4xl">
+          <h1 className="headline-static hero-title text-balance max-w-4xl">
             Clarity Is the Advantage
           </h1>
 
-          <p className="mt-4 text-lg md:text-xl text-text-secondary italic tracking-tight font-normal">
+          <p className="hero-lead italic">
             Orienteering to great design decisions
           </p>
 

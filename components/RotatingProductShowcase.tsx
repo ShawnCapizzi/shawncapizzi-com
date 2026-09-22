@@ -34,7 +34,10 @@ export function RotatingProductShowcase({
 
   return (
     <div
-      className="w-full"
+      // overflow-x-clip: on phones the stage fills the column, so the -8%
+      // glow below ran 3px past the viewport and made the page scroll
+      // sideways. Clip only the x axis; the vertical bleed is untouched.
+      className="w-full overflow-x-clip"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onFocus={() => setIsPaused(true)}

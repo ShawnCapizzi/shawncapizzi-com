@@ -77,7 +77,7 @@ export function HeroBottom() {
                 <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
                   {door.eyebrow}
                 </p>
-                <h2 className="mt-3 text-xl md:text-2xl font-semibold tracking-tight leading-tight text-text-primary">
+                <h2 className="card-title mt-3 text-text-primary">
                   {door.title}
                 </h2>
                 <p className="mt-3 text-sm md:text-base text-text-secondary leading-relaxed flex-1">

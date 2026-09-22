@@ -107,15 +107,15 @@ export default function Page() {
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-20">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagements</p>
-          <h1 className="headline-static text-[1.8rem] md:text-4xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-4xl">
+          <h1 className="headline-static hero-title max-w-4xl">
             Three flexible ways to bring in senior depth, scaled to your needs, timing, and roadmap.
           </h1>
-          <p className="mt-6 md:mt-8 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
+          <p className="hero-lead max-w-3xl">
             I take on a small number of teams navigating complexity in their
             content and experience design decisions, inside regulated and
             enterprise organizations.
           </p>
-          <p className="mt-5 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
+          <p className="hero-lead max-w-3xl">
             The three options below are flexible shapes a working partnership
             takes. Not products on a shelf.
           </p>
@@ -202,7 +202,7 @@ export default function Page() {
           >
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             Who I work with
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
@@ -278,7 +278,7 @@ export default function Page() {
           >
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             How I work across engagements
           </h2>
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl mb-14 md:mb-16">
@@ -290,7 +290,7 @@ export default function Page() {
           <div className="space-y-12 md:space-y-16">
             {PILLARS.map((pillar) => (
               <div key={pillar.name} className="max-w-3xl">
-                <h3 className="text-xl md:text-2xl font-semibold mb-4 text-text-primary">
+                <h3 className="card-title mb-4 text-text-primary">
                   {pillar.name}
                 </h3>
                 <p className="text-base md:text-lg text-text-secondary leading-relaxed">
@@ -346,7 +346,7 @@ export default function Page() {
           >
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight mb-14 md:mb-16 max-w-3xl">
+          <h2 className="section-title mb-14 md:mb-16 max-w-3xl">
             Engagement kickoff
           </h2>
 
@@ -378,7 +378,7 @@ export default function Page() {
                 className="border-l-2 border-border-default pl-6 md:pl-8"
               >
                 <p className="metadata-label mb-2">{step.step}</p>
-                <h3 className="text-xl md:text-2xl font-semibold text-text-primary mb-3">
+                <h3 className="card-title text-text-primary mb-3">
                   {step.title}
                 </h3>
                 <p className="text-base md:text-lg text-text-secondary leading-relaxed">
@@ -429,7 +429,7 @@ export default function Page() {
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
           <p className="eyebrow mb-4">Engagement type 01</p>
-          <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             Leadership: Embedded Product Vision, UX &amp; Experience Design Lead
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
@@ -510,7 +510,7 @@ export default function Page() {
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
           <p className="eyebrow mb-4">Engagement type 02</p>
-          <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             Advisory: Strategic, Project-Based Counsel
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-14 md:mb-16">
@@ -528,7 +528,7 @@ export default function Page() {
                 key={shape.name}
                 className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default"
               >
-                <h3 className="text-xl md:text-2xl font-semibold mb-3 text-text-primary leading-tight">
+                <h3 className="card-title mb-3 text-text-primary">
                   {shape.name}
                 </h3>
                 <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-6">
@@ -577,7 +577,7 @@ export default function Page() {
             <span aria-hidden="true" className="mr-1.5">↑</span> Menu
           </a>
           <p className="eyebrow mb-4">Engagement type 03</p>
-          <h2 className="subhead-editorial text-2xl md:text-2xl lg:text-[30px] mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             On Call: Senior counsel on standing call, on a monthly retainer
           </h2>
           <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
@@ -645,7 +645,7 @@ export default function Page() {
       {/* FINAL CTA */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-[30px] font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
+          <h2 className="section-title mb-6 md:mb-8 max-w-3xl mx-auto">
             Tell me what&apos;s stuck.
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">

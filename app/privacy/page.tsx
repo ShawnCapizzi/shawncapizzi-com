@@ -10,25 +10,25 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <section className="pt-32 md:pt-40 lg:pt-48 pb-24">
+    <section className="pt-32 md:pt-40 pb-24">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
-          <p className="eyebrow mb-4">Privacy</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-tight">
+          <p className="eyebrow mb-3">Privacy</p>
+          <h1 className="headline-static hero-title">
             Privacy policy
           </h1>
           <p className="mt-6 font-mono text-xs tracking-widest uppercase text-text-tertiary">
             Last updated: June 12, 2026
           </p>
 
-          <p className="mt-10 text-lg md:text-xl text-text-secondary leading-relaxed">
+          <p className="hero-lead mt-8 md:mt-10">
             Most of my work is done under NDA. The same discipline applies
             here. Information shared through this site is handled with the
             same care as client information.
           </p>
 
           <div className="mt-12">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
+            <h2 className="section-title">
               What the site collects
             </h2>
             <ul className="mt-6 space-y-3 text-lg md:text-xl text-text-secondary leading-relaxed list-disc pl-6">
@@ -56,7 +56,7 @@ export default function PrivacyPage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
+            <h2 className="section-title">
               Services used
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -67,7 +67,7 @@ export default function PrivacyPage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
+            <h2 className="section-title">
               Cookies
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -79,7 +79,7 @@ export default function PrivacyPage() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
+            <h2 className="section-title">
               Your rights
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -89,7 +89,7 @@ export default function PrivacyPage() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-border-subtle">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
+            <h2 className="section-title">
               Contact
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">

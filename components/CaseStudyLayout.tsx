@@ -133,10 +133,10 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           </Link>
 
           <p className="eyebrow mb-3">{props.eyebrow}</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance max-w-4xl">
+          <h1 className="headline-static hero-title text-balance max-w-4xl">
             {props.title}
           </h1>
-          <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
+          <p className="hero-lead max-w-3xl">
             {props.subtitle}
           </p>
 
@@ -195,7 +195,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           ============================================================ */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-8 md:mb-10">
+          <h2 className="section-title mb-8 md:mb-10">
             The challenge
           </h2>
           <div className="max-w-3xl space-y-6 text-lg text-text-secondary leading-relaxed">
@@ -317,7 +317,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
               >
                 <div className="max-w-3xl">
                   <p className="eyebrow mb-4">{project.eyebrow}</p>
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mb-6 md:mb-8">
+                  <h3 className="section-title mb-6 md:mb-8">
                     {project.title}
                   </h3>
                   <div className="space-y-5 text-lg text-text-secondary leading-relaxed">
@@ -414,7 +414,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           ============================================================ */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-10 md:mb-14">
+          <h2 className="section-title mb-10 md:mb-14">
             Selected outcomes
           </h2>
           <div className="space-y-8 md:space-y-10 max-w-3xl">
@@ -510,7 +510,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           ============================================================ */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-10 md:mb-12 max-w-3xl mx-auto leading-tight">
+          <h2 className="section-title mb-10 md:mb-12 max-w-3xl mx-auto">
             {props.ctaHeadline}
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-center">
@@ -540,9 +540,9 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           ============================================================ */}
       {props.related && props.related.length > 0 && (
         <section className="py-16 md:py-24 border-t border-border-subtle">
-          <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
+          <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
             <p className="eyebrow mb-4">Related work</p>
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-12 md:mb-14">
+            <h2 className="section-title mb-12 md:mb-14">
               Continue reading
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -564,7 +564,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                   </div>
                   <div className="p-7 md:p-8">
                     <p className="eyebrow mb-3">{rel.eyebrow}</p>
-                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight text-text-primary group-hover:text-link transition-colors leading-tight">
+                    <h3 className="card-title text-text-primary group-hover:text-link transition-colors">
                       {rel.title}
                     </h3>
                     <p className="mt-3 text-text-secondary text-sm leading-relaxed">

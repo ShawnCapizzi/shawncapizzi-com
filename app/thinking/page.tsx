@@ -62,13 +62,13 @@ export default function Page() {
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Thinking</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance max-w-4xl">
+          <h1 className="headline-static hero-title text-balance max-w-4xl">
             The Capizzi Process
           </h1>
           <p className="mt-4 font-mono text-base md:text-lg text-link tracking-tight">
             Listen first. Make it visible. Prove it worked.
           </p>
-          <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
+          <p className="hero-lead max-w-3xl">
             A working method for people and teams who have to decide under
             pressure: listen before deciding, make the thinking visible, and
             prove what changed. Three moves, with six operating principles
@@ -84,7 +84,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-16">
             <p className="eyebrow mb-4">The model</p>
-            <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight leading-tight">
+            <h2 className="section-title">
               Three moves. Six stations. One loop.
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -103,7 +103,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-14">
             <p className="eyebrow mb-4">In the app</p>
-            <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight leading-tight">
+            <h2 className="section-title">
               The Process, running as software
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -154,7 +154,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-14">
             <p className="eyebrow mb-4">In print and in hand</p>
-            <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight leading-tight">
+            <h2 className="section-title">
               The argument, and the instrument.
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -230,7 +230,7 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             <article className="relative p-7 md:p-9 rounded-2xl card-surface border border-border-default">
               <p className="eyebrow mb-4">The field manual</p>
-              <h2 className="text-xl md:text-2xl font-semibold text-text-primary mb-4 leading-tight">
+              <h2 className="card-title text-text-primary mb-4">
                 The whole method, in something you can hold.
               </h2>
               <p className="text-base text-text-secondary leading-relaxed mb-8">
@@ -251,7 +251,7 @@ export default function Page() {
               className="group relative p-7 md:p-9 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors flex flex-col"
             >
               <p className="eyebrow mb-4">Read</p>
-              <h2 className="text-xl md:text-2xl font-semibold text-text-primary mb-2 leading-tight group-hover:text-link transition-colors">
+              <h2 className="card-title text-text-primary mb-2 group-hover:text-link transition-colors">
                 Chapter one, free.
               </h2>
               <p className="text-sm md:text-base italic text-text-tertiary mb-4 leading-snug">
@@ -280,7 +280,7 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
             <div>
               <p className="eyebrow mb-4">Published</p>
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-8">
+              <h2 className="section-title mb-8">
                 Two essays, elsewhere
               </h2>
               <ul className="divide-y divide-border-subtle border-y border-border-subtle">
@@ -305,7 +305,7 @@ export default function Page() {
             </div>
             <div>
               <p className="eyebrow mb-4">In person</p>
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-8">
+              <h2 className="section-title mb-8">
                 Hear it, not just read it
               </h2>
               <LiteYouTube
@@ -321,7 +321,7 @@ export default function Page() {
       {/* CLOSE */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl mx-auto leading-tight">
+          <h2 className="section-title mb-6 md:mb-8 max-w-3xl mx-auto">
             Want to run this on something real?
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">

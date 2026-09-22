@@ -71,7 +71,7 @@ export default function Page() {
       afterQuote={
         <div>
           <p className="eyebrow mb-4">The progression · From PRD to shipped</p>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mb-6 md:mb-8 max-w-3xl">
+          <h3 className="section-title mb-6 md:mb-8 max-w-3xl">
             Proving the idea was the easy part
           </h3>
           <div className="max-w-3xl space-y-5 text-lg text-text-secondary leading-relaxed">

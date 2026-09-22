@@ -112,7 +112,7 @@ export function CaseStudyCarousel({
         <div className="flex items-start justify-between gap-8 flex-wrap mb-10 md:mb-14">
           <div>
             <p className="eyebrow mb-4">{eyebrow}</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+            <h2 className="section-title">
               {heading}
             </h2>
           </div>
@@ -176,7 +176,7 @@ export function CaseStudyCarousel({
 
             {/* Text column */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-semibold tracking-tight leading-tight mb-5">
+              <h3 className="card-title mb-5">
                 {slide.title}
               </h3>
               <div

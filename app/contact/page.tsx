@@ -19,11 +19,11 @@ export default function Page() {
       {/* HERO: confident, action-oriented setup */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-6">Contact</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-4xl">
+          <p className="eyebrow mb-3">Contact</p>
+          <h1 className="headline-static hero-title max-w-4xl">
             Three ways in.
           </h1>
-          <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
+          <p className="hero-lead max-w-3xl">
             Most engagements start with the 30-minute call. Email is great so
             you can include some context and documentation. Phone is fine if
             you want to get going quick too.
@@ -38,7 +38,7 @@ export default function Page() {
             {/* Card 1: project scope (highest commercial value) */}
             <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
               <p className="metadata-label mb-4">Path 01 · Recommended</p>
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-tight mb-4">
+              <h2 className="card-title text-text-primary mb-4">
                 You have a project to scope.
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
@@ -61,7 +61,7 @@ export default function Page() {
             {/* Card 2: evaluating fit (Stewart buyer, pre-decision) */}
             <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
               <p className="metadata-label mb-4">Path 02 · Async</p>
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-tight mb-4">
+              <h2 className="card-title text-text-primary mb-4">
                 Start a conversation.
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
@@ -81,7 +81,7 @@ export default function Page() {
             {/* Card 3: quick question (lower stakes, warmer framing) */}
             <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
               <p className="metadata-label mb-4">Path 03 · Voice</p>
-              <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-tight mb-4">
+              <h2 className="card-title text-text-primary mb-4">
                 Have a quick question?
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
@@ -169,7 +169,7 @@ export default function Page() {
           'work' answers "is he qualified"; 'engagements' answers "how would
           this actually work" */}
       <section className="py-16 md:py-24 mt-8 md:mt-12 border-t border-border-subtle">
-        <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <CTACards cards={["work", "engagements"]} />
         </div>
       </section>

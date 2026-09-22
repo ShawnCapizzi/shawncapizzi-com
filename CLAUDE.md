@@ -26,6 +26,14 @@ All visual decisions follow `docs/design-system.md`. This is non-negotiable.
   edit there, not in `tailwind.config.js` (which doesn't exist in v4)
 - Anti-patterns are listed in section 8 of the design system — read them before 
   introducing any new pattern
+- Heading sizes come from four type roles in `app/globals.css`, never from
+  per-element size utilities: `.hero-title` (page H1, 30px then 39px from
+  1024px), `.hero-lead` (paragraph under the H1, Instrument Sans 20/28),
+  `.section-title` (every section H2 and closing ask, 30px), and `.card-title`
+  (card and panel titles, 20px then 24px from 768px). Page heroes pair
+  `.hero-title` with `.headline-static`; only the homepage uses
+  `.headline-gleam`. Page content sits in `max-w-content`; `max-w-wide` is for
+  the header, footer, and logo strip only.
 
 ## Content
 

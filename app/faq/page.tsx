@@ -149,11 +149,11 @@ export default function Page() {
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-6">FAQ</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.05] max-w-4xl">
+          <p className="eyebrow mb-3">FAQ</p>
+          <h1 className="headline-static hero-title max-w-4xl">
             Frequently asked.
           </h1>
-          <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
+          <p className="hero-lead max-w-3xl">
             Plain answers to the questions that come up most often about AI UX,
             regulated design, and how strategic experience design partners
             differ from agencies.
@@ -215,7 +215,7 @@ export default function Page() {
 
       {/* CTA CARDS: work (proof) + contact (path forward) */}
       <section className="py-16 md:py-24 mt-12 md:mt-16 border-t border-border-subtle">
-        <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <CTACards cards={["work", "contact"]} />
         </div>
       </section>

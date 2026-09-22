@@ -382,6 +382,76 @@ h3 {
 }
 
 /* ============================================================
+   TYPE ROLES: every heading size on the site comes from one of
+   these four classes. The homepage hero set the standard in
+   September 2026 and every page now matches it. Before this,
+   page heroes ran at 39, 56, and 72px with three different line
+   heights, and section titles at 24, 30, 36, 40, and 48px.
+
+   - .hero-title     page H1. 30px, then 39px from 1024px up.
+                     Pair with .headline-gleam (home) or
+                     .headline-static (every other page).
+   - .hero-lead      the paragraph directly under a page H1.
+                     Instrument Sans 20/28, cream at 82% (the same
+                     value as .lead-text), carries its own top margin.
+   - .section-title  every section H2, including the closing ask.
+                     30px at all widths.
+   - .card-title     titles inside cards and panels. 20px, then
+                     24px from 768px up.
+
+   Unlayered on purpose: these win over any size utility left on
+   the same element, so a size changed here changes everywhere.
+   ============================================================ */
+
+.hero-title {
+  font-size: 1.875rem;
+  line-height: 1.12;
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 2.4375rem;
+    line-height: 1.05;
+  }
+}
+
+.hero-lead {
+  font-family: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  color: rgba(218, 216, 201, 0.82);
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .hero-lead {
+    margin-top: 1rem;
+  }
+}
+
+.section-title {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .card-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================================
    CTA PURPLE BLOCK
    Subtle purple wash for closing-moment sections (final CTA).
    Reads as a deliberate "warm send-off" — flat 3% tint + soft

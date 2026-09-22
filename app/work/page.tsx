@@ -78,12 +78,12 @@ export default function Page() {
     <article>
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
-        <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Work</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[0.95] text-balance max-w-4xl">
+          <h1 className="headline-static hero-title text-balance max-w-4xl">
             Engagements where experience structure changed the business outcome.
           </h1>
-          <p className="mt-6 md:mt-8 text-xl md:text-2xl text-text-secondary leading-relaxed max-w-3xl">
+          <p className="hero-lead max-w-3xl">
             A decade of enterprise experience design across pharma, healthcare,
             and finance, alongside live products I designed, built, and shipped
             myself.
@@ -93,7 +93,7 @@ export default function Page() {
 
       {/* CASE STUDIES GRID */}
       <section className="py-12 md:py-16">
-        <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
             {CASE_STUDIES.map((cs) => (
               <Link
@@ -113,7 +113,7 @@ export default function Page() {
                 </div>
                 <div className="p-7 md:p-10">
                   <p className="eyebrow mb-4">{cs.eyebrow}</p>
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-text-primary group-hover:text-link transition-colors leading-tight">
+                  <h2 className="card-title text-text-primary group-hover:text-link transition-colors">
                     {cs.title}
                   </h2>
                   <p className="mt-4 text-text-secondary leading-relaxed">
@@ -134,7 +134,7 @@ export default function Page() {
 
       {/* CTA CARDS: engagements (how we would work together) + contact (start the conversation) */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
-        <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <CTACards cards={["engagements", "contact"]} />
         </div>
       </section>

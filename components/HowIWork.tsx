@@ -53,7 +53,7 @@ export function HowIWork() {
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Engagement model</p>
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight leading-tight">
+          <h2 className="section-title">
             How I work with teams
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -77,7 +77,7 @@ export function HowIWork() {
               <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
                 {mode.eyebrow}
               </p>
-              <h3 className="mt-2 text-xl font-semibold tracking-tight leading-tight text-text-primary">
+              <h3 className="card-title mt-2 text-text-primary">
                 {mode.title}
               </h3>
               <p className="mt-3 text-sm text-text-secondary leading-relaxed">

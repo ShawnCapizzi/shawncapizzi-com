@@ -34,7 +34,7 @@ export function ClarityCardsSection({
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl mb-12 md:mb-16">
           <p className="eyebrow mb-4">{eyebrow}</p>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight leading-tight text-text-primary">
+          <h2 className="section-title text-text-primary">
             {title}
           </h2>
           <p className="mt-4 md:mt-6 text-base md:text-lg text-text-secondary leading-relaxed">

@@ -43,7 +43,7 @@ export function Testimonials() {
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Words from collaborators</p>
-          <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight leading-tight">
+          <h2 className="section-title">
             What people have said
           </h2>
         </div>

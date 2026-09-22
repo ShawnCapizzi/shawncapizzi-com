@@ -81,7 +81,7 @@ export function Colophon() {
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl mb-12 md:mb-16">
           <p className="eyebrow mb-4">About this site</p>
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+          <h2 className="section-title">
             Type and color
           </h2>
           <p className="mt-6 text-lg text-text-secondary leading-relaxed">
