@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CTACards } from "@/components/CTACards";
+import { Colophon } from "@/components/Colophon";
 
 export const metadata: Metadata = {
   title: "About",
@@ -503,6 +504,10 @@ export default function Page() {
           </a>
         </div>
       </section>
+
+      {/* ABOUT THIS SITE: type and color colophon, after the ask so it
+          never competes with it. Linked from the footer on every page. */}
+      <Colophon />
     </article>
   );
 }

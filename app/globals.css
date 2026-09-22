@@ -335,13 +335,12 @@ body::before {
 
 /* ============================================================
    EDITORIAL TYPOGRAPHY
-   Nunito Sans italic for h2 subheads and lead-in moments.
+   Instrument Sans for h2 subheads and lead-in moments.
    Lead text uses Geist at weight 300 with slightly muted cream.
-   Together they add visual register without going full serif.
    ============================================================ */
 
 .subhead-editorial {
-  font-family: var(--font-nunito-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-weight: 400;
   letter-spacing: -0.01em;
   color: #DAD8C9;
@@ -355,25 +354,31 @@ body::before {
 }
 
 /* ============================================================
-   GLOBAL HEADINGS — Nunito Sans across h1, h2, h3 creates a
-   unified heading family. Geist Sans handles body and UI.
-   - h1: bold (700) — page heroes, anchor moments
-   - h2: regular (400, via .subhead-editorial) — section subheads
-   - h3: semibold (600) — nested subheadings
-   Letter-spacing tightens proportionally as size increases.
-   Components can still override color via Tailwind classes.
+   GLOBAL HEADINGS: Instrument Sans across h1, h2, and h3, so
+   every heading on the site is one face. Geist handles body and
+   UI, Geist Mono the labels.
+   - h1: semibold (600), tracked tight, for page heroes
+   - h2: family only; components keep their own weight and tracking
+   - h3: semibold (600), for nested subheadings
+   These rules are unlayered, so they win over Tailwind utilities
+   on the same element. That is deliberate: the heading voice is
+   set here once, not per component.
    ============================================================ */
 
 h1 {
-  font-family: var(--font-nunito-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-family: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 h3 {
-  font-family: var(--font-nunito-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 /* ============================================================

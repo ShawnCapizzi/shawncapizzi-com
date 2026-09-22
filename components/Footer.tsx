@@ -9,6 +9,7 @@ const NAV = [
   { href: "/book/chapter-1", label: "Read" },
   { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
+  { href: "/about#colophon", label: "About this site" },
 ];
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/shawncapizzi";

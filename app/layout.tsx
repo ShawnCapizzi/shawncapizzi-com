@@ -1,6 +1,6 @@
 // Destination: app/layout.tsx
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Nunito_Sans } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -14,10 +14,13 @@ import { Analytics } from "@/components/Analytics";
 
 /* ============================================================
    FONTS
-   Geist Sans and Geist Mono: primary body and mono.
-   Nunito Sans: humanist sans used for italic subheads, lead-ins,
-   and editorial moments. Adds typographic register without going
-   full serif.
+   Instrument Sans: every heading (h1, h2, h3) and the editorial
+   subhead. Replaced Nunito Sans in September 2026: one crisp
+   grotesk across all headings instead of a rounded humanist face
+   next to a Swiss body face.
+   Geist: body and interface. Geist Mono: eyebrows and labels.
+   All three are SIL Open Font License. The /about colophon lists
+   them; keep it in step if this changes.
    ============================================================ */
 
 const geistSans = Geist({
@@ -32,10 +35,9 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const nunitoSans = Nunito_Sans({
-  variable: "--font-nunito-sans",
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -126,7 +128,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${nunitoSans.variable}`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${instrumentSans.variable}`}>
       <body className="bg-bg-primary text-text-primary antialiased">
         {/* Consent + Analytics. Order matters:
             1. Analytics sets gtag('consent','default', denied) FIRST

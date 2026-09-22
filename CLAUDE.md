@@ -40,7 +40,15 @@ All visual decisions follow `docs/design-system.md`. This is non-negotiable.
 - Next.js 16 (App Router) with Turbopack
 - TypeScript
 - Tailwind CSS v4 (config via `@theme` in globals.css, not a JS config file)
-- Geist Sans + Geist Mono (via `next/font`, wired up in `app/layout.tsx`)
+- Instrument Sans (all headings), Geist (body), Geist Mono (labels), all via
+  `next/font/google` in `app/layout.tsx`. Nunito Sans was retired in September
+  2026. Heading rules in `app/globals.css` are unlayered on purpose, so they
+  win over Tailwind utilities on h1, h2, and h3.
+- Colophon at `/about#colophon` (`components/Colophon.tsx`) lists the fonts and
+  six core colors with nearest PANTONE Solid Coated matches (pantone-cli,
+  CIEDE2000, cross-checked against two other datasets). If a color token
+  changes, re-run the match and update that file; hex values there must equal
+  the tokens exactly.
 - MDX for case studies and essays (to be added)
 - Deployed on Vercel, auto-deploy on `git push` to `main`
 
