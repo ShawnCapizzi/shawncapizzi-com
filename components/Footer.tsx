@@ -56,7 +56,7 @@ export function Footer() {
 
         <div className="border-t border-border-subtle pt-8">
           <p className="text-xs text-text-tertiary tracking-wide">
-            © {year} Shawn M. Capizzi · Strategic Experience Design for Regulated and Enterprise Teams
+            © {year} Shawn M. Capizzi · Senior Design Leadership for Regulated and Enterprise Teams
           </p>
         </div>
       </div>

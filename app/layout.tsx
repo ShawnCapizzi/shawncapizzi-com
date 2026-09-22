@@ -14,8 +14,8 @@ import { Analytics } from "@/components/Analytics";
 
 /* ============================================================
    FONTS
-   Geist Sans + Geist Mono — primary body and mono.
-   Nunito Sans — humanist sans used for italic subheads, lead-ins,
+   Geist Sans and Geist Mono: primary body and mono.
+   Nunito Sans: humanist sans used for italic subheads, lead-ins,
    and editorial moments. Adds typographic register without going
    full serif.
    ============================================================ */
@@ -47,20 +47,26 @@ const nunitoSans = Nunito_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://shawncapizzi.com"),
   title: {
-    default: "Shawn Capizzi — Strategic Experience Design for Regulated and Enterprise Teams",
-    template: "%s — Shawn Capizzi",
+    default: "Shawn Capizzi | Senior Design Leadership for Regulated and Enterprise Teams",
+    template: "%s | Shawn Capizzi",
   },
   description:
-    "Senior experience strategy, UX, and design system governance for regulated and enterprise teams. AI adoption isn't a technology problem — it's an experience architecture problem.",
+    "Senior design leadership for regulated products, platforms, and AI-enabled teams. Fifteen years across pharma, financial services, and enterprise, plus production software designed, built, and shipped solo.",
   keywords: [
+    "design leadership",
     "experience strategy",
+    "service design",
+    "service blueprinting",
+    "journey orchestration",
+    "touchpoint inventory",
+    "operating model design",
+    "contextual inquiry",
     "design system governance",
     "experience architecture",
     "AI adoption",
     "regulated industries",
     "pharma UX",
     "enterprise design strategy",
-    "design leadership",
     "Shawn Capizzi",
   ],
   authors: [{ name: "Shawn Capizzi" }],
@@ -70,23 +76,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://shawncapizzi.com",
     siteName: "Shawn Capizzi",
-    title: "Shawn Capizzi — Strategic Experience Design",
+    title: "Shawn Capizzi | Senior Design Leadership",
     description:
-      "Senior experience strategy, UX, and design system governance for regulated and enterprise teams. AI adoption is an experience architecture problem.",
+      "Senior design leadership for regulated products, platforms, and AI-enabled teams. Fifteen years across pharma, financial services, and enterprise, plus production software designed, built, and shipped solo.",
     images: [
       {
         url: "/images/og/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: "Shawn Capizzi — Strategic Experience Design",
+        alt: "Shawn Capizzi, senior design leadership for regulated and enterprise teams",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shawn Capizzi — Strategic Experience Design",
+    title: "Shawn Capizzi | Senior Design Leadership",
     description:
-      "Senior experience strategy, UX, and design system governance for regulated and enterprise teams. AI adoption is an experience architecture problem.",
+      "Senior design leadership for regulated products, platforms, and AI-enabled teams. Fifteen years across pharma, financial services, and enterprise, plus production software designed, built, and shipped solo.",
     images: ["/images/og/og-default.jpg"],
     creator: "@shawncapizzi",
   },
@@ -111,7 +117,7 @@ export const metadata: Metadata = {
    main content, and Footer sit above via document flow.
 
    Particle field wrapped in opacity:0.65 to subdue the ambient
-   motion — keeps the charm but lets the typography lead.
+   motion. Keeps the charm but lets the typography lead.
    ============================================================ */
 
 export default function RootLayout({
@@ -127,7 +133,7 @@ export default function RootLayout({
                (defense-in-depth in case Cookiebot is blocked by an ad blocker)
             2. CookieBanner loads Cookiebot, which intercepts other tracking
                scripts and updates consent state based on the user's choice.
-            Both components handle missing env vars gracefully — they render
+            Both components handle missing env vars gracefully; they render
             nothing if NEXT_PUBLIC_GA_MEASUREMENT_ID or NEXT_PUBLIC_COOKIEBOT_CBID
             isn't set (e.g., in dev or preview environments). */}
         <Analytics />
