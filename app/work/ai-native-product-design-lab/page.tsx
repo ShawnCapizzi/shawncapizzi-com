@@ -74,19 +74,7 @@ export default function Page() {
           links: [
             { label: "Open aipatientsupport.com", href: "https://aipatientsupport.com" },
           ],
-          images: [
-            {
-              src: `${ASSET_BASE}/11-aipatientsupport-live-home.png`,
-              alt: "AI Patient Support, live: the home page with condition search and the browse-by-condition grid",
-              browserFrame: { url: "aipatientsupport.com", aspectRatio: 1204 / 884 },
-            },
-            {
-              src: `${ASSET_BASE}/12-aipatientsupport-live-drug-timeline.png`,
-              alt: "AI Patient Support, live: a drug page's approval timeline, each entry linking to the FDA's own approval letter",
-              browserFrame: { url: "aipatientsupport.com", aspectRatio: 1204 / 884 },
-            },
-          ],
-          customContent: (
+          customContentBefore: (
             <figure className="mx-auto max-w-3xl">
               <BrowserFrame
                 src="/videos/aipatientsupport-walkthrough.mp4"
@@ -106,6 +94,18 @@ export default function Page() {
               </figcaption>
             </figure>
           ),
+          images: [
+            {
+              src: `${ASSET_BASE}/11-aipatientsupport-live-home.png`,
+              alt: "AI Patient Support, live: the home page with condition search and the browse-by-condition grid",
+              browserFrame: { url: "aipatientsupport.com", aspectRatio: 1204 / 884 },
+            },
+            {
+              src: `${ASSET_BASE}/12-aipatientsupport-live-drug-timeline.png`,
+              alt: "AI Patient Support, live: a drug page's approval timeline, each entry linking to the FDA's own approval letter",
+              browserFrame: { url: "aipatientsupport.com", aspectRatio: 1204 / 884 },
+            },
+          ],
         },
         {
           eyebrow: "Production · Designed, built, and shipped solo",
