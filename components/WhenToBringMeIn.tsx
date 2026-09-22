@@ -2,15 +2,16 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 
 /**
  * WhenToBringMeIn: homepage self-qualification module.
  *
  * A self-recognition mirror: scannable "this is you if..." statements that
- * let a visitor identify themselves without filling out a form. Placed after
- * HeroBottom and before HowIWork so the "why now" lands before the "how we
- * work" (the engagement modes).
+ * let a visitor identify themselves without filling out a form. It now sits
+ * AFTER the work (SelectedWork, Building) and immediately before HowIWork,
+ * so a visitor reads proof first and this lands as confirmation rather than
+ * a gate. The eyebrow reads "Common starting points" because "When to bring
+ * me in" collided with the first door, "Bring me into a problem."
  *
  * The spread of the bullets is deliberate. Regulated and pharma authority
  * is the spine (1 and 4). Bullets 2 and 3 speak to leaders whose plan or AI
@@ -18,8 +19,9 @@ import Link from "next/link";
  * working one client with several inherited vocabularies. Bullet 6 is the
  * embedded internal-tools work, in the buyer's own words.
  *
- * This section does not repeat the strategy call. The homepage asks once at
- * the top and once at the bottom; here the link goes deeper, to engagements.
+ * This section carries no link of its own. The homepage asks for the call
+ * once at the top and once at the bottom, and HowIWork sits directly below
+ * with the one link to /engagements.
  *
  * To retune who this speaks to, edit SITUATIONS below. No other changes.
  */
@@ -66,7 +68,7 @@ export function WhenToBringMeIn() {
     <section className="py-24 md:py-32 border-t border-border-subtle">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
-          <p className="eyebrow mb-4">When to bring me in</p>
+          <p className="eyebrow mb-4">Common starting points</p>
           <h2 className="text-3xl md:text-3xl lg:text-[30px] font-semibold tracking-tight leading-tight">
             You should talk to me if any of this sounds familiar.
           </h2>
@@ -92,18 +94,6 @@ export function WhenToBringMeIn() {
             </li>
           ))}
         </ul>
-
-        <div className="mt-12 md:mt-16">
-          <Link
-            href="/engagements"
-            className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
-          >
-            See how engagements work{" "}
-            <span aria-hidden="true" className="ml-2">
-              &rarr;
-            </span>
-          </Link>
-        </div>
       </div>
     </section>
   );

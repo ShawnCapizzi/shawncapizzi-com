@@ -30,7 +30,7 @@ export function Hero() {
             <h1 className="headline-gleam text-[1.8rem] md:text-3xl lg:text-[39px] font-bold tracking-tight leading-[1.15] md:leading-[1.1] lg:leading-[1.05] max-w-[90%]">
               Senior design leadership for regulated products, platforms, and AI-enabled teams
               <span className="block mt-3 md:mt-4 text-xl md:text-xl lg:text-xl font-normal text-text-secondary tracking-tight">
-                Fifteen years leading design across pharma, financial services, and enterprise. I also design, build, and ship production software myself, so the thinking arrives as working software, not just a description of it.
+                Fifteen years leading design across pharma, financial services, and enterprise. I also design, build, and ship production software myself.
               </span>
             </h1>
 

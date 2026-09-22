@@ -42,7 +42,7 @@ const CASE_STUDIES = [
     eyebrow: "Solo build · Live product · courtvisual.com",
     headline: "Scoring every game 0 to 10 for what is actually worth watching",
     outcome:
-      "Designed, built, and shipped solo. Six leagues, a 151-team catalog, a four-factor excitement engine, and live data feeds, on the same stack I use for client work.",
+      "Six leagues, a 151-team catalog, a four-factor excitement engine, and live data feeds.",
     image: "/images/case-studies/07-courtvisual/02-game-card-score-ring.png",
   },
 ];
@@ -58,7 +58,7 @@ export function SelectedWork() {
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
             Engagements where experience structure changed the business
-            outcome. Three here, the rest on the work page.
+            outcome.
           </p>
         </div>
 
