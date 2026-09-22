@@ -64,6 +64,7 @@ export default function Page() {
       ]}
       projectShowcases={[
         {
+          id: "ai-patient-support",
           eyebrow: "Live product · Healthcare patient navigation",
           title: "AI Patient Support",
           description: [

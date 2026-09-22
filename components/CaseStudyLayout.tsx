@@ -34,6 +34,10 @@ interface RelatedCaseStudy {
 }
 
 interface ProjectShowcase {
+  /** Optional anchor id, so another page can deep-link straight to this
+   *  showcase (e.g. /work/ai-native-product-design-lab#ai-patient-support).
+   *  Rendered with scroll-mt to clear the fixed 88px header. */
+  id?: string;
   eyebrow: string;
   title: string;
   description: string[];
@@ -305,7 +309,8 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
             {props.projectShowcases.map((project, i) => (
               <article
                 key={i}
-                className="border-b border-border-subtle last:border-b-0 pb-20 md:pb-28 last:pb-0"
+                id={project.id}
+                className="border-b border-border-subtle last:border-b-0 pb-20 md:pb-28 last:pb-0 scroll-mt-24 md:scroll-mt-32"
               >
                 <div className="max-w-3xl">
                   <p className="eyebrow mb-4">{project.eyebrow}</p>

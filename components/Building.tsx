@@ -50,7 +50,7 @@ const PRODUCTS: Product[] = [
     body: "Patient support organized by condition rather than by the company selling the drug. Support programs, savings paths, studies, and safety warnings, sourced from DailyMed, openFDA, and ClinicalTrials.gov, with the government record always one click away.",
     liveUrl: "https://aipatientsupport.com",
     liveLabel: "Open aipatientsupport.com",
-    caseStudyHref: "/work/ai-native-product-design-lab",
+    caseStudyHref: "/work/ai-native-product-design-lab#ai-patient-support",
     image:
       "/images/case-studies/05-ai-native-product-design-lab/11-aipatientsupport-live-home.png",
     imageAlt: "AI Patient Support, the live home page with condition search",
