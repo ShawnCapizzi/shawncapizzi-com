@@ -11,8 +11,7 @@ import Image from "next/image";
  *
  *   Door 1  Bring me into a problem   the strategy call (the page's one ask)
  *   Door 2  See the work              /work
- *   Door 3  Tangible thinking         /clarity-advantage (moves to /process
- *                                     when that page ships)
+ *   Door 3  Tangible thinking         /thinking, the Process page
  *
  * The D&AD line stays underneath as a credential. It is shown, not claimed.
  *
@@ -57,8 +56,8 @@ const DOORS: Door[] = [
     eyebrow: "Method",
     title: "Tangible thinking.",
     body: "I took my operations and beliefs and put them to paper. What I bring to every discussion, now as a system: digital, printed, and in your pocket.",
-    cta: "Read chapter one and try the cards",
-    href: "/clarity-advantage",
+    cta: "See the Process",
+    href: "/thinking",
   },
 ];
 

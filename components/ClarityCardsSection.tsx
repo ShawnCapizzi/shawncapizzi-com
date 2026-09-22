@@ -3,16 +3,14 @@ import { ClarityCardDeck } from "@/components/ClarityCardDeck";
 
 /**
  * ClarityCardsSection: the Clarity Cards intro block plus the interactive
- * deck. Used on:
- *   1. /clarity-advantage, the destination page for the deck, book, and
- *      newsletter. Renders with the defaults below.
- *   2. / (homepage), near the bottom, as the "Process in print and in hand"
- *      block. The homepage passes its own eyebrow, title, intro, and link.
+ * deck. Used on the homepage, near the bottom, as the "I wrote it down and
+ * made it usable" block. The section carries id="clarity-cards" so /thinking
+ * can deep-link to the working deck ("Try the deck").
  *
- * One component, two framings. The deck configuration stays in one place so
- * any change to the cards themselves lands on both surfaces. The copy is a
- * prop because the two pages have different jobs: the destination page sells
- * the deck, the homepage places the deck inside the Process.
+ * It used to render on /clarity-advantage as well. That route was retired in
+ * September 2026 and 308s to /thinking, which shows the real cards as a
+ * photograph rather than repeating this interaction. The copy stays a prop
+ * so the block can be reframed without touching the deck.
  *
  * Section chrome (border-t, py-16 md:py-24, max-w-content wrapper) matches
  * the standard section rhythm used throughout the site.
@@ -32,7 +30,7 @@ export function ClarityCardsSection({
   link,
 }: ClarityCardsSectionProps) {
   return (
-    <section className="py-16 md:py-24 border-t border-border-subtle">
+    <section id="clarity-cards" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-24 md:scroll-mt-32">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl mb-12 md:mb-16">
           <p className="eyebrow mb-4">{eyebrow}</p>

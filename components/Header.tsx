@@ -11,15 +11,11 @@ const NAV_LINKS: NavLink[] = [
   { href: "/work", label: "Work" },
   { href: "/engagements", label: "Engagements" },
   { href: "/thinking", label: "Thinking" },
-  { href: "/book/chapter-1", label: "Read" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
-const SECONDARY_LINKS = [
-  { href: "/clarity-advantage", label: "Clarity Advantage" },
-  { href: "/faq", label: "FAQ" },
-] as const;
+const SECONDARY_LINKS = [{ href: "/faq", label: "FAQ" }] as const;
 
 const CAL_URL = "https://cal.com/capizzi/30min";
 

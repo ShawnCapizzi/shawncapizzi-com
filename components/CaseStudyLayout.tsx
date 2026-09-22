@@ -55,6 +55,9 @@ interface ProjectShowcase {
   }[];
   /** Optional call-to-action links (e.g. "Try it" buttons for live apps). External links open in new tab. */
   links?: { label: string; href: string }[];
+  /** Optional custom JSX rendered BEFORE the images block. Use when the lead
+   *  visual is a walkthrough reel and the stills are supporting detail. */
+  customContentBefore?: ReactNode;
   /** Optional custom JSX rendered after the images block (e.g. a TiltedPhonePair). */
   customContent?: ReactNode;
 }
@@ -342,6 +345,10 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                     </div>
                   )}
                 </div>
+
+                {project.customContentBefore && (
+                  <div className="mt-10 md:mt-14">{project.customContentBefore}</div>
+                )}
 
                 {project.images && project.images.length > 0 && (
                   <div

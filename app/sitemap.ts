@@ -21,7 +21,6 @@ const ROUTES: { path: string; priority: number }[] = [
   { path: "/work/ai-native-product-design-lab", priority: 0.7 },
   { path: "/work/vui-voice-pill-tracker", priority: 0.5 },
   { path: "/engagements", priority: 0.9 },
-  { path: "/clarity-advantage", priority: 0.7 },
   { path: "/book/chapter-1", priority: 0.6 },
   { path: "/thinking", priority: 0.6 },
   { path: "/about", priority: 0.6 },

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { InViewVideo } from "./InViewVideo";
 
 /**
  * Building: live products, designed, built, and shipped solo.
@@ -29,6 +30,10 @@ type Product = {
   caseStudyHref: string;
   image: string;
   imageAlt: string;
+  /** When set, the tile plays this reel instead of showing the still. The
+   *  still above becomes the poster, so the card looks identical until the
+   *  video loads. Loading is deferred until the card scrolls into view. */
+  video?: string;
 };
 
 const PRODUCTS: Product[] = [
@@ -40,9 +45,9 @@ const PRODUCTS: Product[] = [
     liveUrl: "https://aipatientsupport.com",
     liveLabel: "Open aipatientsupport.com",
     caseStudyHref: "/work/ai-native-product-design-lab#ai-patient-support",
-    image:
-      "/images/case-studies/05-ai-native-product-design-lab/11-aipatientsupport-live-home.png",
+    image: "/videos/aipatientsupport-walkthrough-poster.jpg",
     imageAlt: "AI Patient Support, the live home page with condition search",
+    video: "/videos/aipatientsupport-walkthrough.mp4",
   },
   {
     key: "courtvisual",
@@ -85,13 +90,17 @@ export function Building() {
                 className="group relative block aspect-[16/10] bg-bg-raised overflow-hidden"
                 aria-label={`${p.name} case study`}
               >
-                <Image
-                  src={p.image}
-                  alt={p.imageAlt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500 ease-out"
-                />
+                {p.video ? (
+                  <InViewVideo src={p.video} poster={p.image} />
+                ) : (
+                  <Image
+                    src={p.image}
+                    alt={p.imageAlt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-top group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                  />
+                )}
               </Link>
               <div className="p-7 md:p-8 flex flex-col flex-1">
                 <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">

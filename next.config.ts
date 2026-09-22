@@ -17,6 +17,14 @@ const nextConfig: NextConfig = {
         destination: "/work",
         permanent: true,
       },
+      // /clarity-advantage retired September 2026. Its deck duplicated the
+      // homepage; its newsletter and book card now live on /thinking, which
+      // is the single Process page.
+      {
+        source: "/clarity-advantage",
+        destination: "/thinking",
+        permanent: true,
+      },
     ];
   },
 };
