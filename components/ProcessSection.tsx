@@ -13,6 +13,11 @@ import { ClarityCardDeck } from "@/components/ClarityCardDeck";
  *
  * Anchors: #capizzi-process is the section; #clarity-cards is the deck
  * itself, which /thinking's "Try the deck" link lands on.
+ *
+ * The cards photo carries no link here. The deck sits directly under it, so
+ * a "Draw a card below" link only jumped a few pixels and read as a detached
+ * second ask. The deck gets its own short label instead, so the photo and
+ * the deck read as one thing: the printed cards, then the cards to try.
  */
 
 export function ProcessSection() {
@@ -48,10 +53,10 @@ export function ProcessSection() {
 
         <BookAndCards
           bookLink={{ href: "/book/chapter-1", label: "Read chapter one free" }}
-          cardsLink={{ href: "#clarity-cards", label: "Draw a card below" }}
         />
 
-        <div id="clarity-cards" className="mt-16 md:mt-20 scroll-mt-24 md:scroll-mt-32">
+        <div id="clarity-cards" className="mt-12 md:mt-16 scroll-mt-24 md:scroll-mt-32">
+          <p className="eyebrow mb-6 text-center">Try the deck</p>
           <ClarityCardDeck />
         </div>
       </div>
