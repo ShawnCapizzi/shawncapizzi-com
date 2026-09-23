@@ -4,7 +4,9 @@ import Link from "next/link";
 /**
  * BookAndCards: the two real objects the Capizzi Process became, side by
  * side. One source for both the homepage Process section and /thinking, so
- * the photos, alt text, and captions never drift apart.
+ * the photos, alt text, and captions never drift apart. The captions carry
+ * the relationship (September 2026): the book develops the ideas, the cards
+ * help people apply them in discussions and decisions.
  *
  * Photos: clarity-cards-desk.jpg is Shawn's own photo of the printed deck,
  * retouched for tone and color only. seeing-past-the-cage-book.jpg is a
@@ -26,7 +28,7 @@ export function BookAndCards({
     {
       eyebrow: "The book",
       title: "Seeing Past the Cage",
-      text: "Better communication design in the age of AI.",
+      text: "Develops the ideas behind the Process: better communication design in the age of AI.",
       link: bookLink,
       src: "/images/process/seeing-past-the-cage-book.jpg",
       alt: "Seeing Past the Cage by Shawn Capizzi, a hardcover standing on a wooden desk",
@@ -34,7 +36,7 @@ export function BookAndCards({
     {
       eyebrow: "The cards",
       title: "The Clarity Cards",
-      text: "Fifty-four questions. Draw one, answer it honestly, then touch the work.",
+      text: "Help people apply those ideas in discussions and decisions. Fifty-four questions: draw one, answer it honestly, then touch the work.",
       link: cardsLink,
       src: "/images/process/clarity-cards-desk.jpg",
       alt: "Seven printed Clarity Cards dealt across a wooden desk beside a keyboard and mouse",

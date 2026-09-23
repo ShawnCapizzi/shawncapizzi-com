@@ -102,7 +102,7 @@ export function Wordmark({
   return (
     <Link
       href={href}
-      aria-label="Shawn Capizzi — home"
+      aria-label="Shawn Capizzi, home"
       className="inline-block focus-visible:outline-2 focus-visible:outline-offset-4"
     >
       {content}

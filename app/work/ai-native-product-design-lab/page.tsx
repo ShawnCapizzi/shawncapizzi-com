@@ -1,6 +1,7 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { BrowserFrame } from "@/components/BrowserFrame";
 import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
+import { CollapsibleSection } from "@/components/CollapsibleSection";
 import Link from "next/link";
 import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
@@ -8,7 +9,7 @@ const META = {
   path: "/work/ai-native-product-design-lab",
   title: "AI-Native Product Design Lab",
   description:
-    "How I design, build, and ship with AI: production software designed and shipped solo, working prototypes in days, a Figma plugin in the Community, and the dated record of early adoption behind all of it.",
+    "How I design, build, and ship with AI: production software designed and shipped solo, working prototypes in days, and a Figma plugin in the Community.",
   image: {
     url: "/images/og/ai-native-product-design-lab.jpg",
     width: 1200,
@@ -20,6 +21,24 @@ const META = {
 export const metadata = pageMetadata({ ...META, type: "article" });
 
 const ASSET_BASE = "/images/case-studies/05-ai-native-product-design-lab";
+
+const EARLIER_EXPERIMENTS = [
+  {
+    name: "UX Research Advisor",
+    what: "UX research and marketing opportunities, from the data you provide.",
+    href: "https://chatgpt.com/g/g-MTnad2Xgw-ux-research-advisor",
+  },
+  {
+    name: "Product Story, Strategy and Case Study Partner",
+    what: "Product definitions and case studies.",
+    href: "https://chatgpt.com/g/g-FFhKQN1Oa-product-story-strategy-and-case-study-partner",
+  },
+  {
+    name: "AEM Design Assistant",
+    what: "AEM, Adobe Target, and DAM practice for storytelling and personalization.",
+    href: "https://chatgpt.com/g/g-w8akbOHzb-aem-design-assistant",
+  },
+];
 
 /**
  * The lab page stays a case study, revised September 2026. What changed:
@@ -34,8 +53,12 @@ const ASSET_BASE = "/images/case-studies/05-ai-native-product-design-lab";
  *     then the CourtVisual demo and the ClinicalTrialsForMe reel here. The
  *     ClinicalTrialsForMe reel is the 39-second walkthrough Shawn supplied,
  *     re-encoded to match the others (H.264 CRF 24, faststart, no audio).
- *   - The Custom GPTs are framed as the dated early-adoption record, with
- *     the current practice named plainly: Claude Code and agentic pipelines.
+ *   - The three Custom GPTs sit in one collapsed "Earlier experiments"
+ *     block after the showcases (September 2026), so current products lead.
+ *   - No comparisons with other consultants or builders. The challenge,
+ *     outcomes, and closer describe Shawn's own part instead: defining the
+ *     problem, directing the tools, refining the experience, making the
+ *     tradeoffs, and shipping something usable.
  *   - The 2018 voice section links to its own case study.
  *   - Em dashes removed from copy and metadata.
  */
@@ -45,7 +68,7 @@ export default function Page() {
       structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
       title="AI-Native Product Design Lab"
-      subtitle="How I design, build, and ship with AI. Working prototypes in hours, and production software shipped solo, built on years of bringing teams together."
+      subtitle="How I design, build, and ship with AI. Working prototypes in days, and production software shipped solo, built on years of bringing teams together."
       heroImage={`${ASSET_BASE}/01-hero-ai-native-design-lab.png`}
       heroImageAlt="AI-Native Design Lab, disease-first patient support hero"
       metadata={[
@@ -63,8 +86,8 @@ export default function Page() {
         },
       ]}
       challenge={[
-        "Most consultants advising on AI today are vendor-coded or theoretical. Few have actually built AI-augmented products end to end. Enterprise teams hiring AI advisors are getting slide decks and vendor partnerships. They are not getting people who can walk into a room, assess where AI actually fits, and demonstrate what is possible by building it in real time.",
-        "I built this lab to keep AI fluency hands-on, not because I needed to add AI to my marketing, but because I wanted to know, from the inside, what the tools could actually do in a regulated, healthcare-adjacent context.",
+        "I built this lab to answer a practical question from the inside: what can these tools actually do in a regulated, healthcare-adjacent context, and what does it take to turn them into something a person can use?",
+        "My part is the same in every project here. I define the problem, direct the tools, refine the experience, make the tradeoffs, and bring the work into a usable form. The evidence is on this page: AI Patient Support, where every drug page traces to DailyMed, openFDA, or ClinicalTrials.gov; CourtVisual, where every score shows its four factors; the ClinicalTrialsForMe preview; and Detached Instance Finder, published to the Figma Community.",
       ]}
       approach={[
         "I am classically trained, Pratt BFA in Communications Design and Advertising/Marketing, fine arts background, two decades as a graphic designer, marketer, and senior UX leader. AI experimentation began in 2022, alongside a creative practice that dates back to college. My best friend, now Poet Laureate of Connecticut, and I co-founded a creative arts and music collective at Rider University. We have been collaborating creatively for 25+ years, getting together annually for live performances where I create live visual art alongside his poetry and music.",
@@ -212,28 +235,6 @@ export default function Page() {
           ],
         },
         {
-          eyebrow: "Early adoption · Live in ChatGPT",
-          title: "Three Custom GPTs",
-          description: [
-            "Three Custom GPTs, all still live in ChatGPT. The first was built the night OpenAI opened Custom GPTs to the public. UX Research Advisor advises on UX research and marketing opportunities using user-provided data; Product Story, Strategy and Case Study Partner generates detailed product definitions and case studies; AEM Design Assistant covers best practices for AEM, Adobe Target, and DAM for storytelling and personalization.",
-            "They are the dated record of early adoption, not the current practice. The practice now runs on Claude Code and agentic pipelines and ships production software rather than assistants. Anyone can still click through and use these right now.",
-          ],
-          links: [
-            {
-              label: "Try UX Research Advisor",
-              href: "https://chatgpt.com/g/g-MTnad2Xgw-ux-research-advisor",
-            },
-            {
-              label: "Try Product Story, Strategy and Case Study Partner",
-              href: "https://chatgpt.com/g/g-FFhKQN1Oa-product-story-strategy-and-case-study-partner",
-            },
-            {
-              label: "Try AEM Design Assistant",
-              href: "https://chatgpt.com/g/g-w8akbOHzb-aem-design-assistant",
-            },
-          ],
-        },
-        {
           eyebrow: "Before AI · Voice design in 2018",
           title: "The instinct predates the tools",
           description: [
@@ -273,6 +274,31 @@ export default function Page() {
           ),
         },
       ]}
+      afterShowcases={
+        <CollapsibleSection id="earlier-experiments" heading="Earlier experiments">
+          <p className="text-base md:text-lg text-text-secondary leading-relaxed">
+            Three Custom GPTs: earlier explorations in applying AI to
+            research, product strategy, and content workflows. They still work
+            in ChatGPT.
+          </p>
+          <ul className="mt-5 space-y-4">
+            {EARLIER_EXPERIMENTS.map((gpt) => (
+              <li key={gpt.href}>
+                <a
+                  href={gpt.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base font-medium text-link hover:text-link-hover transition-colors"
+                >
+                  {gpt.name}{" "}
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
+                <p className="mt-1 text-sm text-text-tertiary">{gpt.what}</p>
+              </li>
+            ))}
+          </ul>
+        </CollapsibleSection>
+      }
       outcomes={[
         {
           headline: "Production software, designed, built, and shipped solo",
@@ -280,7 +306,7 @@ export default function Page() {
             "CourtVisual and AI Patient Support live, ClinicalTrialsForMe in preview. Research through deploy, with Claude Code and ChatGPT as working partners, not demos.",
         },
         {
-          headline: "Working prototypes built in hours, not weeks",
+          headline: "Working prototypes built in days, not weeks",
           description:
             "AI Patient Support and Channel Optimizer began as prototypes built with AI-assisted development tools (v0, Base44, Claude, ChatGPT) in days, not sprints.",
         },
@@ -290,14 +316,9 @@ export default function Page() {
             "Detached Instance Finder, concepted, designed, and built end to end. Surfaces detached components before they erode the system, the same governance instinct scaled down to a single tool.",
         },
         {
-          headline: "A dated record of early adoption",
+          headline: "An AI advisory practice grounded in building",
           description:
-            "Three Custom GPTs still live in ChatGPT, the first built the night the feature launched. Everyone claims to have been early. These carry timestamps.",
-        },
-        {
-          headline: "A vendor-agnostic AI advisory practice",
-          description:
-            "Built on hands-on tool experience, not vendor partnership commissions. The Automation Opportunity Assessment framework moves teams from intent to prioritized roadmap.",
+            "Advice comes from the tools I use to ship, with no vendor to sell. The Automation Opportunity Assessment framework moves teams from intent to a prioritized roadmap.",
         },
         {
           headline: "A repeatable methodology for integrating AI into business workflows",
@@ -306,17 +327,17 @@ export default function Page() {
         },
       ]}
       closer={[
-        "Most teams hiring AI consultants get advice. The teams hiring me get advice plus a demonstration.",
+        "When I advise a team on AI, I can also build a working version, so the decision rests on something people can use and test.",
         "AI is not a strategy. It is a tool. The teams that win with AI long-term are not the ones with the best models. They are the ones who treated the experience architecture around the model as the actual work.",
         <>
-          That is the lab. That is what I bring into{" "}
+          That is the lab, and it is what I bring into{" "}
           <Link
             href="/engagements"
             className="text-link hover:text-link-hover transition-colors"
           >
             client engagements
           </Link>
-          . That is the difference.
+          .
         </>,
       ]}
       ctaHeadline="Working through AI integration in your team?"

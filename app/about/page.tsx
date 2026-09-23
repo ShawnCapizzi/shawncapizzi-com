@@ -339,7 +339,10 @@ export default function Page() {
         </div>
       </section>
 
-      {/* BEYOND THE WORK */}
+      {/* BEYOND THE WORK: the creative practice, briefly. Shortened in
+          September 2026: the AI origin story lives on the Lab page, so it
+          is one sentence here, and the old "performance planned for August
+          2026" line is gone. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
@@ -347,37 +350,24 @@ export default function Page() {
           </h2>
           <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
             <p>
-              Outside the consulting practice, I&apos;m a fine-art photographer
-              (Venice and NYC), painter, and documentary filmmaker working on a
-              pre-9/11 NYC project about the 2000 Subway Series. Born in
-              Queens. Father of daughters. Mets and Yankees fan, in that order.
-              Competitive BBQ enthusiast in the off-season.
+              I&apos;m also a fine-art photographer (Venice and NYC), a
+              painter, and a documentary filmmaker working on a pre-9/11 NYC
+              project about the 2000 Subway Series. Taylor Keer, a friend and
+              now Poet Laureate of Connecticut, and I co-founded a creative
+              arts and music collective at Rider University, and we still
+              perform together: I create live visuals alongside his poetry and
+              music, generated in real time with Midjourney and Runway since
+              2022. That work asks what consulting asks: see what is actually
+              there before deciding what it should be, and know when to stop.
             </p>
             <p>
-              Taylor Keer, a friend and now Poet Laureate of Connecticut, and
-              I co-founded a creative arts and music collective at Rider
-              University 10+ years ago. We still get together annually for
-              live performances. I create live visual art alongside his
-              poetry and music. In 2022 I started generating those visuals
-              with Midjourney and Runway in real time, tied to lyrics and
-              music, projected through two or three projectors. Live
-              performance is an unforgiving classroom for AI tooling.
-              Everything I now know about how AI fits into design work
-              started there. Another AI-assisted performance is planned for
-              August 2026.
-            </p>
-            <p>
-              The fine-art and documentary work informs the consulting practice
-              more than it might seem. Both require seeing what&apos;s actually
-              there before deciding what it should be. Both require knowing
-              when to stop. Both require trust in the work to do its job after
-              you walk away.
+              Born in Queens. Mets and Yankees fan, in that order. Competitive
+              BBQ in the off-season.
             </p>
           </div>
 
-          {/* LinkedIn post — live performance / creative practice */}
-          <div className="mt-14 md:mt-16 max-w-3xl">
-            <p className="metadata-label mb-4">From LinkedIn</p>
+          {/* LinkedIn post: the live performance work */}
+          <div className="mt-12 md:mt-14 max-w-3xl">
             <div
               className="rounded-xl overflow-hidden"
               style={{ maxWidth: "720px", margin: "0 auto" }}
@@ -397,78 +387,31 @@ export default function Page() {
               className="mt-4 text-sm text-text-tertiary italic text-center"
               style={{ maxWidth: "720px", margin: "1rem auto 0" }}
             >
-              A look at the live performance work, visuals generated in real
-              time alongside poetry and music.
+              A live performance, with visuals generated in real time
+              alongside poetry and music.
             </p>
           </div>
         </div>
       </section>
 
-      {/* SHARING THE PRACTICE — AI as a creative practice, ending on family */}
+      {/* SHARING THE PRACTICE: what Shawn shares, and the family story,
+          with the cookie video kept directly under its paragraph. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             Sharing the practice
           </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            <p>
-              AI isn&apos;t something I clock in and out of. It&apos;s a daily
-              creative practice that runs across the live performance work,
-              the consulting, and pretty much everything I make for the people
-              in my life.{" "}
-              <a
-                href="/work/ai-native-product-design-lab"
-                className="underline decoration-text-tertiary hover:decoration-text-primary underline-offset-2 transition-colors"
-              >
-                The Lab on the work page
-              </a>
-              {" "}is just the most visible part of it.
+          <div className="max-w-3xl">
+            <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
+              I share what I learn about building and experimenting with AI
+              with colleagues, friends, and my daughters. At home, we turn
+              questions into small projects, from math and learning apps to
+              experimenting with Sora using photos of things we cook together.
+              It&apos;s a way to explore ideas, learn together, and make
+              something of our own.
             </p>
-            <p>
-              I share what I learn as I learn it, with co-workers,
-              friends, and anyone curious enough to ask. Custom GPTs I&apos;ve
-              built, prompts I&apos;ve refined, tools I&apos;ve shipped to the
-              Figma Community. The goal isn&apos;t to teach AI. It&apos;s to
-              get more people excited about what they can make with it.
-            </p>
-            <p>
-              And the people I push it on hardest are my daughters. We&apos;ve
-              made Sora videos together that started as &ldquo;what would it
-              look like if&hellip;&rdquo; conversations at the dinner table.
-              I&apos;ve also built small math and learning apps for them:
-              free, no sign-up, no tracking. Same instinct as everything else:
-              the right tool, in the right moment, for the actual person who
-              needs it.
-            </p>
-          </div>
 
-          {/* Kids' learning apps — pill buttons matching Lab page CTAs */}
-          <div className="mt-8 md:mt-10 max-w-3xl flex flex-wrap gap-3">
-            <a
-              href="/apps/fractions-quiz.html"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-bg-raised border border-border-default text-text-primary text-sm md:text-base font-medium hover:bg-bg-hover transition-colors"
-            >
-              Try the Fractions Quiz
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-            <a
-              href="/apps/area-perimeter-quiz.html"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-bg-raised border border-border-default text-text-primary text-sm md:text-base font-medium hover:bg-bg-hover transition-colors"
-            >
-              Try the Area &amp; Perimeter Quiz
-              <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-
-          {/* Sora video — playful close */}
-          <div className="mt-14 md:mt-16 max-w-3xl">
-            <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-4">
-              My daughters and I cook all the time. Sometimes we take photos
-              of our creations and turn them into AI videos to bring new
-              context to them, and help the girls have fun
-              experimenting with AI.
-            </p>
-            <figure className="rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
+            <figure className="mt-8 md:mt-10 rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
               <video
                 controls
                 preload="metadata"
@@ -481,10 +424,28 @@ export default function Page() {
                 cookies on a gold plate.
               </video>
               <figcaption className="px-5 py-4 text-sm text-text-secondary border-t border-border-subtle">
-                Generated in Sora. The kind of thing that starts as a question
-                at the dinner table.
+                An experiment with my daughters: turning a photo of our
+                homemade cookies into a Sora video.
               </figcaption>
             </figure>
+
+            <p className="mt-6 text-sm text-text-tertiary">
+              The learning apps are free, with no sign-up:{" "}
+              <a
+                href="/apps/fractions-quiz.html"
+                className="text-link hover:text-link-hover transition-colors"
+              >
+                Fractions Quiz
+              </a>{" "}
+              and{" "}
+              <a
+                href="/apps/area-perimeter-quiz.html"
+                className="text-link hover:text-link-hover transition-colors"
+              >
+                Area and Perimeter Quiz
+              </a>
+              .
+            </p>
           </div>
         </div>
       </section>

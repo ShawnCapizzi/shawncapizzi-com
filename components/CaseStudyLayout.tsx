@@ -102,6 +102,10 @@ interface CaseStudyLayoutProps {
   /** JSON-LD for this case study (Article plus breadcrumbs), built with
    *  caseStudyGraph() from lib/seo.ts so it matches the page metadata. */
   structuredData?: object | object[];
+  /** Optional compact block after the project showcases, before Selected
+   *  outcomes. Used for small archives (e.g. the Lab's Earlier experiments)
+   *  that should not carry the weight of a full showcase. */
+  afterShowcases?: ReactNode;
 }
 
 function isAnimated(src: string): boolean {
@@ -411,6 +415,11 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
               </article>
             ))}
           </div>
+          {props.afterShowcases && (
+            <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 pb-16 md:pb-24">
+              <div className="max-w-3xl">{props.afterShowcases}</div>
+            </div>
+          )}
         </section>
       )}
 

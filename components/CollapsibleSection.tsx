@@ -72,7 +72,11 @@ export function CollapsibleSection({
           open ? "grid-rows-[1fr] mt-6 md:mt-8" : "grid-rows-[0fr]"
         }`}
       >
-        <div className="overflow-hidden">{children}</div>
+        {/* inert while collapsed: the text stays in the HTML for readers
+            and crawlers, but hidden links are not keyboard tab stops. */}
+        <div className="overflow-hidden" inert={!open}>
+          {children}
+        </div>
       </div>
     </div>
   );

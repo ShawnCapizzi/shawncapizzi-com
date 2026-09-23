@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { pageMetadata } from "@/lib/seo";
 import { AccordionDetail } from "@/components/AccordionDetail";
-import { CTACards } from "@/components/CTACards";
 
 export const metadata = pageMetadata({
   path: "/engagements",
@@ -12,6 +11,57 @@ export const metadata = pageMetadata({
 });
 
 const CAL_URL = "https://cal.com/capizzi/30min";
+
+/**
+ * /engagements, restructured September 2026. The page leads with Ways of
+ * working: a brief intro, then the three options side by side, each saying
+ * who it serves, what Shawn contributes, and how to start, so a buyer can
+ * scan and choose before reading anything else. Supporting detail follows:
+ * the three option sections (#leadership, #advisory, #oncall, linked from
+ * the FAQ, About, and case studies), then who he works with, the working
+ * principles, and the kickoff (#process). One call to action sits under the
+ * options and one closes the page; the repeated banners and "let's talk"
+ * lines were consolidated.
+ *
+ * Wherever interviews and AI-assisted simulations both appear, the copy
+ * keeps them distinct: interviews are with real stakeholders, simulations
+ * are labeled as simulations and reported separately.
+ */
+
+const WAYS = [
+  {
+    id: "leadership",
+    name: "Leadership",
+    tagline: "Embedded senior design and experience leadership.",
+    serves:
+      "Agencies and in-house pharma, healthcare, start-up, and enterprise teams that need senior UX, CX, and content leadership inside an active program.",
+    contribute:
+      "Experience strategy, information architecture, content frameworks, and regulatory-ready flows, worked hands-on with PMs, creative, copy, and engineering.",
+    start:
+      "A strategy call, then scoping by program, duration, and how I join the team.",
+  },
+  {
+    id: "advisory",
+    name: "Advisory",
+    tagline: "Focused guidance on a defined opportunity, challenge, or decision.",
+    serves:
+      "VPs, directors, and senior leaders who need senior counsel on one defined question, without a full-time hire.",
+    contribute:
+      "A diagnostic, clear options, and a decision-ready deliverable: a Strategic Snapshot, an Engagement Sprint, or an AI Opportunity Diagnostic.",
+    start: "A strategy call to define the question, then a scoped engagement.",
+  },
+  {
+    id: "oncall",
+    name: "On Call",
+    tagline: "Ongoing access to a senior thinking partner.",
+    serves:
+      "Leaders running multi-quarter initiatives who want senior judgment available when decisions land.",
+    contribute:
+      "Working sessions on your cadence, async review between them, and direction for vendor and dev teams, onshore and offshore.",
+    start:
+      "A strategy call, then a monthly retainer scoped to the access you need.",
+  },
+];
 
 const EMBEDDED_INCLUDED = [
   "Site architecture, wireframes, prototypes, and high-fidelity mockups",
@@ -45,7 +95,7 @@ const ADVISORY_SHAPES = [
     description:
       "Positive forward movement. Defined problem, clear outcome, decision-ready deliverables.",
     included:
-      "Up to 10 stakeholder interviews (human + synthetic), document content review, competitive context where relevant, prioritized flexible roadmap, executive presentation, one to two follow-up reviews.",
+      "Up to 10 interviews with real stakeholders, plus AI-assisted simulations where they help pressure-test ideas, reported separately from the interviews. Document and content review, competitive context where relevant, a prioritized flexible roadmap, an executive presentation, and one to two follow-up reviews.",
     works:
       "An AI initiative needs to be defined and gotten into production. A redesign or platform consolidation is hard to use and over budget. A multi-brand program needs a governance reset. An organization needs a vendor-agnostic view of AI opportunities and design actions that can actually move revenue.",
   },
@@ -104,92 +154,303 @@ const PILLARS = [
 export default function Page() {
   return (
     <article>
-      {/* HERO */}
-      <section className="relative pt-32 md:pt-40 pb-16 md:pb-20">
+      {/* HERO: a brief introduction, then straight into Ways of working */}
+      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagements</p>
           <h1 className="headline-static hero-title max-w-4xl">
             Three flexible ways to bring in senior depth, scaled to your needs, timing, and roadmap.
           </h1>
           <p className="hero-lead max-w-3xl">
-            I take on a small number of teams navigating complexity in their
-            content and experience design decisions, inside regulated and
-            enterprise organizations.
-          </p>
-          <p className="hero-lead max-w-3xl">
-            The three options below are flexible shapes a working partnership
-            takes. Not products on a shelf.
+            I take on a small number of teams navigating complex content and
+            experience decisions inside regulated and enterprise
+            organizations. Choose the way of working that fits now, and move
+            between them as your needs change.
           </p>
 
           <div id="engagements-nav" className="mt-8 md:mt-10 scroll-mt-32 md:scroll-mt-40">
             <p className="metadata-label mb-3">Jump to</p>
             <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
-              <a href="#who" className="text-link hover:text-link-hover transition-colors">Who</a>
-              <span aria-hidden="true">·</span>
-              <a href="#focus" className="text-link hover:text-link-hover transition-colors">Focus</a>
-              <span aria-hidden="true">·</span>
-              <a href="#process" className="text-link hover:text-link-hover transition-colors">Process</a>
+              <a href="#ways" className="text-link hover:text-link-hover transition-colors">Ways of working</a>
               <span aria-hidden="true">·</span>
               <a href="#leadership" className="text-link hover:text-link-hover transition-colors">Leadership</a>
               <span aria-hidden="true">·</span>
               <a href="#advisory" className="text-link hover:text-link-hover transition-colors">Advisory</a>
               <span aria-hidden="true">·</span>
               <a href="#oncall" className="text-link hover:text-link-hover transition-colors">On Call</a>
+              <span aria-hidden="true">·</span>
+              <a href="#who" className="text-link hover:text-link-hover transition-colors">Who</a>
+              <span aria-hidden="true">·</span>
+              <a href="#focus" className="text-link hover:text-link-hover transition-colors">Principles</a>
+              <span aria-hidden="true">·</span>
+              <a href="#process" className="text-link hover:text-link-hover transition-colors">Kickoff</a>
             </nav>
           </div>
-
-          <p className="mt-8 md:mt-10 text-lg md:text-xl text-text-secondary leading-relaxed max-w-3xl">
-            Move between the options as needs change. Wins accrue over time and
-            collaboration compounds. The partnership strengthens.
-          </p>
-
-          <figure className="mt-10 md:mt-12 max-w-3xl p-7 md:p-8 rounded-2xl card-surface border border-border-default">
-            <blockquote>
-              <p className="text-base md:text-lg text-text-primary leading-relaxed">
-                As a UX leader and subject matter expert, he provided essential
-                governance and content strategy for our brand&apos;s new design
-                system and platform migration across indications for both HCP
-                and DTC.
-              </p>
-            </blockquote>
-            <figcaption className="mt-6 flex items-center gap-4">
-              <Image
-                src="/images/testimonials/courtney-mcknight.avif"
-                alt="Courtney McKnight"
-                width={56}
-                height={56}
-                className="rounded-full object-cover h-12 w-12 md:h-14 md:w-14 border border-border-subtle"
-              />
-              <div>
-                <p className="text-sm font-semibold text-text-primary">
-                  Courtney McKnight
-                </p>
-                <p className="text-xs text-text-tertiary mt-0.5">
-                  Brand Account Manager
-                </p>
-              </div>
-            </figcaption>
-          </figure>
         </div>
       </section>
 
-      {/* FRAMEWORK SKETCH — how I think before any pixel gets pushed */}
-      <section className="pb-8 md:pb-12">
+      {/* WAYS OF WORKING: the three options, scannable, before any detail */}
+      <section id="ways" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <figure>
-            <div className="relative aspect-video rounded-2xl overflow-hidden border border-border-default">
-              <Image
-                src="/images/engagements/needs-framework-sketch.jpg"
-                alt="Hand-drawn framework: user need and want flowing down through company to users, business, and resources"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
-              />
+          <p className="eyebrow mb-4">Ways of working</p>
+          <h2 className="section-title mb-10 md:mb-12 max-w-3xl">
+            Leadership, Advisory, or On Call
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+            {WAYS.map((way) => (
+              <article
+                key={way.id}
+                className="flex flex-col p-7 md:p-8 rounded-2xl card-surface border border-border-default"
+              >
+                <p className="eyebrow mb-3">{way.name}</p>
+                <h3 className="card-title text-text-primary">{way.tagline}</h3>
+                <dl className="mt-6 space-y-5 flex-1">
+                  <div>
+                    <dt className="metadata-label mb-1.5">Who it serves</dt>
+                    <dd className="text-base text-text-secondary leading-relaxed">{way.serves}</dd>
+                  </div>
+                  <div>
+                    <dt className="metadata-label mb-1.5">What I contribute</dt>
+                    <dd className="text-base text-text-secondary leading-relaxed">{way.contribute}</dd>
+                  </div>
+                  <div>
+                    <dt className="metadata-label mb-1.5">How to start</dt>
+                    <dd className="text-base text-text-secondary leading-relaxed">{way.start}</dd>
+                  </div>
+                </dl>
+                <a
+                  href={`#${way.id}`}
+                  className="mt-7 inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
+                >
+                  {way.name} in detail{" "}
+                  <span aria-hidden="true" className="ml-2">
+                    &darr;
+                  </span>
+                </a>
+              </article>
+            ))}
+          </div>
+
+          <p className="mt-10 md:mt-12 text-lg md:text-xl text-text-primary leading-relaxed max-w-3xl">
+            When the scope calls for it, I can also assemble and lead the right
+            team across copy, creative, and development.
+          </p>
+
+          <div className="mt-10 md:mt-12 rounded-2xl card-surface border border-border-subtle px-6 md:px-10 py-7 md:py-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-lg md:text-xl font-medium text-text-primary">
+                Not sure which fits?
+              </p>
+              <p className="mt-1 text-text-secondary">
+                Start with a free 30-minute call, no pitch.
+              </p>
             </div>
-            <figcaption className="mt-5 text-sm md:text-base text-text-tertiary text-center italic">
-              Where every engagement begins.
-            </figcaption>
-          </figure>
+            <a
+              href={CAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
+            >
+              Book a Strategy Call
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* PATH 1 - EMBEDDED */}
+      <section id="leadership" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <a
+            href="#engagements-nav"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
+            aria-label="Jump back to navigation"
+          >
+            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
+          </a>
+          <p className="eyebrow mb-4">Engagement type 01</p>
+          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
+            Leadership: Embedded Product Vision, UX &amp; Experience Design Lead
+          </h2>
+          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
+            Senior UX, CX, IA, content strategy, and engagement strategy
+            inside active business goals. I work directly with PMs, creative
+            directors, account leads, copywriters, visual designers, and
+            engineering partners on campaigns (US and Global), platforms (app
+            and enterprise systems), websites, apps, VR, and sales tools.
+          </p>
+
+          <div className="max-w-3xl">
+            <AccordionDetail id="leadership-included" label="What's included" defaultOpen>
+              <ul className="space-y-3">
+                {EMBEDDED_INCLUDED.map((item, i) => (
+                  <li
+                    key={i}
+                    className="text-base md:text-lg text-text-secondary leading-relaxed pl-5 relative"
+                  >
+                    <span
+                      className="absolute left-0 top-3 w-2 h-px bg-text-tertiary"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </AccordionDetail>
+
+            <AccordionDetail id="leadership-works" label="When this works">
+              <ul className="space-y-3">
+                {EMBEDDED_WORKS.map((item, i) => (
+                  <li
+                    key={i}
+                    className="text-base md:text-lg text-text-secondary leading-relaxed pl-5 relative"
+                  >
+                    <span
+                      className="absolute left-0 top-3 w-2 h-px bg-text-tertiary"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </AccordionDetail>
+          </div>
+
+          <div className="mt-14 md:mt-16 max-w-3xl">
+            <p className="text-base text-text-secondary italic">
+              Engagements scope by program, duration, and team integration.
+              Day, weekly, and project rates available.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PATH 2 - ADVISORY */}
+      <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <a
+            href="#engagements-nav"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
+            aria-label="Jump back to navigation"
+          >
+            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
+          </a>
+          <p className="eyebrow mb-4">Engagement type 02</p>
+          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
+            Advisory: Strategic, Project-Based Counsel
+          </h2>
+          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-14 md:mb-16">
+            Often that means product design and experience-first user flows
+            that lift sign-ups and adoption. Sometimes it&apos;s strategy, a
+            pitch deck, blue-sky options, or a voice in the room. Three common
+            shapes:
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {ADVISORY_SHAPES.map((shape) => (
+              <article
+                key={shape.name}
+                className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default"
+              >
+                <h3 className="card-title mb-3 text-text-primary">
+                  {shape.name}
+                </h3>
+                <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-6">
+                  {shape.description}
+                </p>
+                <div className="border-t border-border-subtle pt-2">
+                  <AccordionDetail
+                    id={`advisory-${shape.name.toLowerCase().replace(/\s+/g, "-")}-included`}
+                    label="What's included"
+                    defaultOpen
+                  >
+                    <p className="text-sm md:text-base text-text-secondary leading-relaxed">
+                      {shape.included}
+                    </p>
+                  </AccordionDetail>
+                  <AccordionDetail
+                    id={`advisory-${shape.name.toLowerCase().replace(/\s+/g, "-")}-works`}
+                    label="When this works"
+                  >
+                    <p className="text-sm md:text-base text-text-secondary leading-relaxed">
+                      {shape.works}
+                    </p>
+                  </AccordionDetail>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-14 md:mt-16 max-w-3xl">
+            <p className="text-base text-text-secondary italic">
+              Advisory engagements scale to scope and duration.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PATH 3 - ON CALL */}
+      <section id="oncall" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <a
+            href="#engagements-nav"
+            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
+            aria-label="Jump back to navigation"
+          >
+            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
+          </a>
+          <p className="eyebrow mb-4">Engagement type 03</p>
+          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
+            On Call: Senior counsel on standing call, on a monthly retainer
+          </h2>
+          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
+            An honest extension of your team over time, not a single
+            deliverable: we talk through the product refinements and
+            implementations you&apos;d rather not handle alone, with an outside
+            point of view that brings clarity.
+          </p>
+
+          <div className="max-w-3xl">
+            <AccordionDetail id="oncall-included" label="What's included" defaultOpen>
+              <ul className="space-y-3">
+                {ONCALL_INCLUDED.map((item, i) => (
+                  <li
+                    key={i}
+                    className="text-base md:text-lg text-text-secondary leading-relaxed pl-5 relative"
+                  >
+                    <span
+                      className="absolute left-0 top-3 w-2 h-px bg-text-tertiary"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </AccordionDetail>
+
+            <AccordionDetail id="oncall-works" label="When this works">
+              <ul className="space-y-3">
+                {ONCALL_WORKS.map((item, i) => (
+                  <li
+                    key={i}
+                    className="text-base md:text-lg text-text-secondary leading-relaxed pl-5 relative"
+                  >
+                    <span
+                      className="absolute left-0 top-3 w-2 h-px bg-text-tertiary"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </AccordionDetail>
+          </div>
+
+          <div className="mt-14 md:mt-16 max-w-3xl">
+            <p className="text-base text-text-secondary italic">
+              Retainers are monthly and scope to the cadence of access you need.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -288,6 +549,23 @@ export default function Page() {
             experience problem.
           </p>
 
+          <div className="mb-14 md:mb-16">
+            <figure>
+              <div className="relative aspect-video rounded-2xl overflow-hidden border border-border-default">
+                <Image
+                  src="/images/engagements/needs-framework-sketch.jpg"
+                  alt="Hand-drawn framework: user need and want flowing down through company to users, business, and resources"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
+                />
+              </div>
+              <figcaption className="mt-5 text-sm md:text-base text-text-tertiary text-center italic">
+                Where every engagement begins.
+              </figcaption>
+            </figure>
+          </div>
+
           <div className="space-y-12 md:space-y-16">
             {PILLARS.map((pillar) => (
               <div key={pillar.name} className="max-w-3xl">
@@ -309,30 +587,6 @@ export default function Page() {
                 )}
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* RECURRING CTA — first appears after Who + How */}
-      <section className="pb-4 md:pb-10">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="rounded-2xl card-surface border border-border-subtle px-6 md:px-10 py-7 md:py-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="text-lg md:text-xl font-medium text-text-primary">
-                Not sure which way in fits?
-              </p>
-              <p className="mt-1 text-text-secondary">
-                A free 30-minute call, no pitch. We&apos;ll find the best option for you.
-              </p>
-            </div>
-            <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
-            >
-              Book a Strategy Call
-            </a>
           </div>
         </div>
       </section>
@@ -395,251 +649,36 @@ export default function Page() {
         </div>
       </section>
 
-      {/* RECURRING CTA — after the kickoff steps */}
-      <section className="pb-4 md:pb-10">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="rounded-2xl card-surface border border-border-subtle px-6 md:px-10 py-7 md:py-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="text-lg md:text-xl font-medium text-text-primary">
-                Want to talk it through first?
-              </p>
-              <p className="mt-1 text-text-secondary">
-                30 minutes, no pitch. Tell me what&apos;s stuck and we&apos;ll find the path.
-              </p>
-            </div>
-            <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
-            >
-              Book a Strategy Call
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* PATH 1 - EMBEDDED */}
-      <section id="leadership" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
-        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <a
-            href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
-            aria-label="Jump back to navigation"
-          >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
-          </a>
-          <p className="eyebrow mb-4">Engagement type 01</p>
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
-            Leadership: Embedded Product Vision, UX &amp; Experience Design Lead
-          </h2>
-          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
-            For agencies and in-house pharma, healthcare, start-up, and
-            enterprise teams that need senior UX, CX, IA, content strategy, and
-            actionable engagement strategy inside active business goals. I
-            work directly with PMs, creative directors, account leads,
-            copywriters, visual designers, and engineering partners on real
-            tactics, campaigns (US and Global), platforms (app and enterprise
-            systems), websites, apps, VR, and sales tools.
-          </p>
-
-          <div className="max-w-3xl">
-            <AccordionDetail id="leadership-included" label="What's included" defaultOpen>
-              <ul className="space-y-3">
-                {EMBEDDED_INCLUDED.map((item, i) => (
-                  <li
-                    key={i}
-                    className="text-base md:text-lg text-text-secondary leading-relaxed pl-5 relative"
-                  >
-                    <span
-                      className="absolute left-0 top-3 w-2 h-px bg-text-tertiary"
-                      aria-hidden="true"
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </AccordionDetail>
-
-            <AccordionDetail id="leadership-works" label="When this works">
-              <ul className="space-y-3">
-                {EMBEDDED_WORKS.map((item, i) => (
-                  <li
-                    key={i}
-                    className="text-base md:text-lg text-text-secondary leading-relaxed pl-5 relative"
-                  >
-                    <span
-                      className="absolute left-0 top-3 w-2 h-px bg-text-tertiary"
-                      aria-hidden="true"
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </AccordionDetail>
-          </div>
-
-          <div className="mt-14 md:mt-16 p-6 md:p-8 rounded-2xl card-surface border border-border-default max-w-3xl">
-            <p className="text-base text-text-secondary italic">
-              Engagements scope by program, duration, and team integration. Day,
-              weekly, and project rates available. Let&apos;s talk through what
-              your team actually needs.
-            </p>
-            <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center text-link hover:text-link-hover transition-colors text-base font-medium"
-            >
-              Book a Strategy Call{" "}
-              <span aria-hidden="true" className="ml-2">
-                →
-              </span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* PATH 2 - ADVISORY */}
-      <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
-        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <a
-            href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
-            aria-label="Jump back to navigation"
-          >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
-          </a>
-          <p className="eyebrow mb-4">Engagement type 02</p>
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
-            Advisory: Strategic, Project-Based Counsel
-          </h2>
-          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-14 md:mb-16">
-            For VPs, Directors, and senior leaders inside pharma, healthcare,
-            financial services, and enterprise teams who need senior counsel
-            without a full-time hire. Often that means product design and
-            experience-first user flows that lift sign-ups and adoption.
-            Sometimes it&apos;s strategy, a pitch deck, blue-sky options, or a
-            voice in the room.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {ADVISORY_SHAPES.map((shape) => (
-              <article
-                key={shape.name}
-                className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default"
-              >
-                <h3 className="card-title mb-3 text-text-primary">
-                  {shape.name}
-                </h3>
-                <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-6">
-                  {shape.description}
-                </p>
-                <div className="border-t border-border-subtle pt-2">
-                  <AccordionDetail
-                    id={`advisory-${shape.name.toLowerCase().replace(/\s+/g, "-")}-included`}
-                    label="What's included"
-                    defaultOpen
-                  >
-                    <p className="text-sm md:text-base text-text-secondary leading-relaxed">
-                      {shape.included}
-                    </p>
-                  </AccordionDetail>
-                  <AccordionDetail
-                    id={`advisory-${shape.name.toLowerCase().replace(/\s+/g, "-")}-works`}
-                    label="When this works"
-                  >
-                    <p className="text-sm md:text-base text-text-secondary leading-relaxed">
-                      {shape.works}
-                    </p>
-                  </AccordionDetail>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-14 md:mt-16 max-w-3xl">
-            <p className="text-base text-text-secondary italic">
-              Advisory engagements scale to scope and duration. Let&apos;s talk
-              through what your team actually needs.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* PATH 3 - ON CALL */}
-      <section id="oncall" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
-        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <a
-            href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
-            aria-label="Jump back to navigation"
-          >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
-          </a>
-          <p className="eyebrow mb-4">Engagement type 03</p>
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
-            On Call: Senior counsel on standing call, on a monthly retainer
-          </h2>
-          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
-            A monthly retainer for leaders who want a senior thinking partner
-            available over time, not just for a single deliverable. An honest
-            extension of your team: we meet on your cadence, talk through the
-            product refinements and implementations you&apos;d rather not handle
-            alone, and keep vendors and dev teams (onshore and offshore) on task
-            and on budget. For when you and your team want an outside POV that
-            brings clarity.
-          </p>
-
-          <div className="max-w-3xl">
-            <AccordionDetail id="oncall-included" label="What's included" defaultOpen>
-              <ul className="space-y-3">
-                {ONCALL_INCLUDED.map((item, i) => (
-                  <li
-                    key={i}
-                    className="text-base md:text-lg text-text-secondary leading-relaxed pl-5 relative"
-                  >
-                    <span
-                      className="absolute left-0 top-3 w-2 h-px bg-text-tertiary"
-                      aria-hidden="true"
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </AccordionDetail>
-
-            <AccordionDetail id="oncall-works" label="When this works">
-              <ul className="space-y-3">
-                {ONCALL_WORKS.map((item, i) => (
-                  <li
-                    key={i}
-                    className="text-base md:text-lg text-text-secondary leading-relaxed pl-5 relative"
-                  >
-                    <span
-                      className="absolute left-0 top-3 w-2 h-px bg-text-tertiary"
-                      aria-hidden="true"
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </AccordionDetail>
-          </div>
-
-          <div className="mt-14 md:mt-16 max-w-3xl">
-            <p className="text-base text-text-secondary italic">
-              Retainers are monthly and scope to the cadence of access you need.
-              Let&apos;s talk through what your team actually needs.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA CARDS — work (proof) + contact (start the conversation) */}
+      {/* TESTIMONIAL */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <CTACards cards={["work", "contact"]} />
+          <figure className="max-w-3xl p-7 md:p-8 rounded-2xl card-surface border border-border-default">
+            <blockquote>
+              <p className="text-base md:text-lg text-text-primary leading-relaxed">
+                As a UX leader and subject matter expert, he provided essential
+                governance and content strategy for our brand&apos;s new design
+                system and platform migration across indications for both HCP
+                and DTC.
+              </p>
+            </blockquote>
+            <figcaption className="mt-6 flex items-center gap-4">
+              <Image
+                src="/images/testimonials/courtney-mcknight.avif"
+                alt="Courtney McKnight"
+                width={56}
+                height={56}
+                className="rounded-full object-cover h-12 w-12 md:h-14 md:w-14 border border-border-subtle"
+              />
+              <div>
+                <p className="text-sm font-semibold text-text-primary">
+                  Courtney McKnight
+                </p>
+                <p className="text-xs text-text-tertiary mt-0.5">
+                  Brand Account Manager
+                </p>
+              </div>
+            </figcaption>
+          </figure>
         </div>
       </section>
 

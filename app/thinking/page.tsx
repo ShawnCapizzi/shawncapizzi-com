@@ -158,10 +158,10 @@ export default function Page() {
               The argument, and the instrument.
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              The book is where the argument lives in full. The Clarity Cards
-              are the Process dealt out as questions a room can answer, four
-              suits of thirteen plus two wildcards. Printed editions of both
-              are coming.
+              Two expressions of the same Process. Seeing Past the Cage
+              develops the ideas in full; the Clarity Cards help people apply
+              them in discussions and decisions, four suits of thirteen plus
+              two wildcards. Printed editions of both are coming.
             </p>
           </div>
 

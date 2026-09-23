@@ -71,7 +71,7 @@ export default function Page() {
         "I started with the score. Excitement breaks into factors a fan already feels: stakes, rivalry, the race (how live the standings and matchup are), and matchup history. Every game gets a 0 to 10 score and a verdict that shows its work, so you trust the read, not a bare number.",
         "Then I fed it from live pipes, not a static list, and made it honest. Live data forced the discipline: fixtures come first, so a match exists whether or not tickets are listed; competitiveness is derived, not asserted; follows surface \u201CMessi's Argentina,\u201D never a promise he'll start. Credibility rests on not overclaiming.",
         "Then I made it yours. A neutral-fan baseline keeps it fair; from there you tune what counts and follow teams, sports, players, and a city. The same slate reorders for a Knicks die-hard, a neutral, and a Messi-only fan, personalization that changes the ranking, not a filter on top.",
-        "Then I built the experience around the data, the part most data products skip. One restrained system keeps onboarding, settings, loading, and empty states out of the way so the data-rich card stays the star. That's what I bring to client work: the architecture around the model is the product; the model is just an ingredient.",
+        "Then I built the experience around the data. One restrained system keeps onboarding, settings, loading, and empty states out of the way so the data-rich card stays the star. That's what I bring to client work: the architecture around the model is the product; the model is just an ingredient.",
       ]}
       pullQuote={[
         "The schedule lives in one app, the broadcast in another, the tickets in a third. None of them tell you whether the game is worth your night.",
@@ -87,8 +87,8 @@ export default function Page() {
           <div className="max-w-3xl space-y-5 text-lg text-text-secondary leading-relaxed">
             {[
               "Left to right is the whole arc. v1 came straight out of a full PRD: raw sliders and an uncapped score past 14. It proved the idea but wasn't useful. The middle build capped it to a legible 0 to 10 and ranked the slate. The third is where it landed: each card carries the four factors a fan feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why.",
-              "Plenty of people vibe-code apps now, and most ship something bloated and purposeless for lack of discipline about value. I built this with Claude Code and ChatGPT but stayed the orchestrator: I described what I wanted in screenshots, copy, and micro-interaction notes, and directed the tools until it matched the picture in my head.",
-              "My job is judgment, not letting AI bolt on features so it feels like progress. Trimming, the visual hierarchy, onboarding someone with zero context, which features earn their place, which surprises people keep or switch off, that editing is the product. It comes from years with devs, creative directors, and real users.",
+              "I built it with Claude Code and ChatGPT as build partners and stayed the orchestrator. I defined the problem and the scoring model, described what I wanted in screenshots, copy, and micro-interaction notes, and directed the tools until the result matched the picture in my head.",
+              "The rest was judgment: capping the score at a legible 0 to 10, naming four factors a fan already feels, trimming anything that did not earn its place, and designing onboarding for someone with zero context. That editing is the product. It comes from years of working with developers, creative directors, and real users.",
             ].map((para, i) => (
               <p key={i}>{para}</p>
             ))}

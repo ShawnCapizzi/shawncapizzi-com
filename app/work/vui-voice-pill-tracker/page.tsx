@@ -204,7 +204,7 @@ export default function Page() {
           eyebrow: "Solo · AI Native Design Lab",
           title: "Building an AI-native product design lab",
           description:
-            "Working AI-augmented prototypes, Custom GPTs, and a vendor-agnostic AI advisory practice grounded in hands-on building.",
+            "Production software shipped solo, working prototypes, a Figma plugin, and an AI advisory practice grounded in hands-on building.",
           image:
             "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-native-design-lab.png",
         },

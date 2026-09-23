@@ -44,6 +44,13 @@ All visual decisions follow `docs/design-system.md`. This is non-negotiable.
 - Voice principles in design system §1: senior, direct, editorial, restrained
 - Anti-voice list is enforced: no "we", no "crafted/elevated/journey", no 
   motivational copy, no SaaS marketing tone
+- No criticism of other consultants, agencies, or AI builders (September
+  2026). Describe Shawn's own part instead: defining the problem, directing
+  the tools, refining the experience, making tradeoffs, and shipping
+  something usable, with specific decisions and artifacts as evidence.
+- Where interviews and AI-assisted simulations both appear, keep them
+  distinct: interviews are with real stakeholders; simulations are labeled
+  and reported separately.
 
 ## Stack
 

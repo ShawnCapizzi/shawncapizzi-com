@@ -4,9 +4,12 @@ import Link from "next/link";
 /**
  * SelectedWork: three case studies on the homepage, not six.
  *
- * One job each. Enterprise pharma governance is the credibility anchor,
- * Chrysalis is the service design proof, CourtVisual is the solo build.
- * The full grid lives on /work. Each card's outcome line carries the
+ * One job each, all client work. Enterprise pharma governance is the
+ * credibility anchor, Chrysalis is the service design proof, and Bloomberg
+ * is the enterprise research and CRM proof. CourtVisual moved out of this
+ * set in September 2026 so it appears once on the homepage, beside AI
+ * Patient Support in the independent products (Building). The full grid
+ * lives on /work. Each card's outcome line carries the
  * service layer (who else touched it, what changed off screen), not the
  * deliverable list.
  *
@@ -38,12 +41,13 @@ const CASE_STUDIES = [
       "/images/case-studies/04-cancer-equality-app/01-hero-erase-the-line-campaign-poster.jpeg",
   },
   {
-    slug: "courtvisual",
-    eyebrow: "Solo build · Live product · courtvisual.com",
-    headline: "Scoring every game 0 to 10 for what is actually worth watching",
+    slug: "enterprise-financial-services-crm",
+    eyebrow: "Bloomberg · Financial services · Enterprise CRM",
+    headline: "Redesigning rep workflows in a terminal-driven CRM environment",
     outcome:
-      "Six leagues, a 151-team catalog, a four-factor excitement engine, and live data feeds.",
-    image: "/images/case-studies/07-courtvisual/02-game-card-score-ring.png",
+      "In-person research with three salesperson types, then screen-by-screen recommendations the development team could build inside the terminal's command-line constraints. $1.5M+ in annual ROI.",
+    image:
+      "/images/case-studies/03-enterprise-financial-services-crm/01-hero-final-person-view-terminal.png",
   },
 ];
 

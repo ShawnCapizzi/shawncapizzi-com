@@ -34,9 +34,10 @@ export function ProcessSection() {
           </h2>
           <p className="mt-4 md:mt-6 text-base md:text-lg text-text-secondary leading-relaxed">
             The Capizzi Process is how I work: listen first, make it visible,
-            prove it worked. I wrote it into a book and built it into a deck of
-            cards that puts it to work in a room. Printed editions of both are
-            coming.
+            prove it worked. The book and the cards are two expressions of it.
+            Seeing Past the Cage develops the ideas; the Clarity Cards help
+            people apply them in discussions and decisions. Printed editions of
+            both are coming.
           </p>
           <div className="mt-6">
             <Link
