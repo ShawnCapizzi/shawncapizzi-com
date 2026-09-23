@@ -21,9 +21,11 @@ import { LiteYouTube } from "@/components/LiteYouTube";
  * method as objects you can hold, then the ways to get more of it. The
  * strategy call closes, once.
  *
- * Photos: public/images/process/book.jpg and cards.jpg are labeled
- * placeholders until the real photographs land. Overwrite the two files;
- * nothing here needs to change.
+ * Photos: public/images/process/clarity-cards-desk.jpg is Shawn's own photo
+ * of the printed deck on his desk (September 2026), retouched for tone and
+ * color only; no card content was changed. public/images/process/book.jpg
+ * is still a labeled placeholder. Give a replacement photo a new filename
+ * rather than overwriting, so no image cache can serve the old version.
  *
  * The Governance Deck reel names its loop Gather, Align, Measure, Decide.
  * The caption says so plainly rather than pretending it matches the three
@@ -193,8 +195,8 @@ export default function Page() {
             <figure className="rounded-2xl card-surface border border-border-default overflow-hidden">
               <div className="relative aspect-[4/3] bg-bg-raised">
                 <Image
-                  src="/images/process/cards.jpg"
-                  alt="The Clarity Cards deck"
+                  src="/images/process/clarity-cards-desk.jpg"
+                  alt="Seven printed Clarity Cards dealt across a wooden desk beside a keyboard and mouse"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
