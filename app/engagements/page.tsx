@@ -167,30 +167,47 @@ export default function Page() {
             organizations. Choose the way of working that fits now, and move
             between them as your needs change.
           </p>
-
-          <div id="engagements-nav" className="mt-8 md:mt-10 scroll-mt-32 md:scroll-mt-40">
-            <p className="metadata-label mb-3">Jump to</p>
-            <nav className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm md:text-base text-text-tertiary">
-              <a href="#ways" className="text-link hover:text-link-hover transition-colors">Ways of working</a>
-              <span aria-hidden="true">·</span>
-              <a href="#leadership" className="text-link hover:text-link-hover transition-colors">Leadership</a>
-              <span aria-hidden="true">·</span>
-              <a href="#advisory" className="text-link hover:text-link-hover transition-colors">Advisory</a>
-              <span aria-hidden="true">·</span>
-              <a href="#oncall" className="text-link hover:text-link-hover transition-colors">On Call</a>
-              <span aria-hidden="true">·</span>
-              <a href="#who" className="text-link hover:text-link-hover transition-colors">Who</a>
-              <span aria-hidden="true">·</span>
-              <a href="#focus" className="text-link hover:text-link-hover transition-colors">Principles</a>
-              <span aria-hidden="true">·</span>
-              <a href="#process" className="text-link hover:text-link-hover transition-colors">Kickoff</a>
-            </nav>
-          </div>
         </div>
       </section>
 
+      {/* JUMP LINKS: sticky under the fixed site header (80px, 88px from md)
+          for the whole page, so every section is one tap away. It sits
+          outside the hero, as a direct child of the article, so it stays
+          stuck all the way down. z-30 keeps it under the header (z-50) and
+          under the mobile menu overlay (z-40). On phones the row scrolls
+          sideways instead of wrapping, so the bar stays one line tall.
+          Section anchors use scroll-mt equal to header plus bar, measured:
+          80 + 46 = 126px on phones, 88 + 46 = 134px from md, 88 + 58 =
+          146px from lg. Change those if the header or this bar changes. */}
+      <div
+        id="engagements-nav"
+        className="sticky top-20 md:top-[88px] z-30 border-y border-border-subtle bg-bg-primary/85 backdrop-blur-md"
+      >
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <nav
+            aria-label="On this page"
+            className="flex items-center gap-x-3 overflow-x-auto whitespace-nowrap py-3 lg:py-4 text-sm lg:text-base text-text-tertiary [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            <span className="metadata-label shrink-0 mr-1">Jump to</span>
+            <a href="#ways" className="shrink-0 text-link hover:text-link-hover transition-colors">Ways of working</a>
+            <span aria-hidden="true">·</span>
+            <a href="#leadership" className="shrink-0 text-link hover:text-link-hover transition-colors">Leadership</a>
+            <span aria-hidden="true">·</span>
+            <a href="#advisory" className="shrink-0 text-link hover:text-link-hover transition-colors">Advisory</a>
+            <span aria-hidden="true">·</span>
+            <a href="#oncall" className="shrink-0 text-link hover:text-link-hover transition-colors">On Call</a>
+            <span aria-hidden="true">·</span>
+            <a href="#who" className="shrink-0 text-link hover:text-link-hover transition-colors">Who</a>
+            <span aria-hidden="true">·</span>
+            <a href="#focus" className="shrink-0 text-link hover:text-link-hover transition-colors">Principles</a>
+            <span aria-hidden="true">·</span>
+            <a href="#process" className="shrink-0 text-link hover:text-link-hover transition-colors">Kickoff</a>
+          </nav>
+        </div>
+      </div>
+
       {/* WAYS OF WORKING: the three options, scannable, before any detail */}
-      <section id="ways" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+      <section id="ways" className="py-16 md:py-24 scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">Ways of working</p>
           <h2 className="section-title mb-10 md:mb-12 max-w-3xl">
@@ -259,15 +276,8 @@ export default function Page() {
       </section>
 
       {/* PATH 1 - EMBEDDED */}
-      <section id="leadership" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+      <section id="leadership" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <a
-            href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
-            aria-label="Jump back to navigation"
-          >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
-          </a>
           <p className="eyebrow mb-4">Engagement type 01</p>
           <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             Leadership: Embedded Product Vision, UX &amp; Experience Design Lead
@@ -326,15 +336,8 @@ export default function Page() {
       </section>
 
       {/* PATH 2 - ADVISORY */}
-      <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+      <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <a
-            href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
-            aria-label="Jump back to navigation"
-          >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
-          </a>
           <p className="eyebrow mb-4">Engagement type 02</p>
           <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             Advisory: Strategic, Project-Based Counsel
@@ -390,15 +393,8 @@ export default function Page() {
       </section>
 
       {/* PATH 3 - ON CALL */}
-      <section id="oncall" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+      <section id="oncall" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <a
-            href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
-            aria-label="Jump back to navigation"
-          >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
-          </a>
           <p className="eyebrow mb-4">Engagement type 03</p>
           <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             On Call: Senior counsel on standing call, on a monthly retainer
@@ -455,15 +451,8 @@ export default function Page() {
       </section>
 
       {/* WHO I WORK WITH */}
-      <section id="who" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+      <section id="who" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <a
-            href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
-            aria-label="Jump back to navigation"
-          >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
-          </a>
           <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             Who I work with
           </h2>
@@ -531,15 +520,8 @@ export default function Page() {
       </section>
 
       {/* THREE PILLARS */}
-      <section id="focus" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+      <section id="focus" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <a
-            href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
-            aria-label="Jump back to navigation"
-          >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
-          </a>
           <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             How I work across engagements
           </h2>
@@ -592,15 +574,8 @@ export default function Page() {
       </section>
 
       {/* HOW IT STARTS */}
-      <section id="process" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-32 md:scroll-mt-40">
+      <section id="process" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <a
-            href="#engagements-nav"
-            className="absolute top-0 right-6 md:right-8 lg:right-12 inline-flex items-center text-xs md:text-sm text-link hover:text-link-hover transition-colors"
-            aria-label="Jump back to navigation"
-          >
-            <span aria-hidden="true" className="mr-1.5">↑</span> Menu
-          </a>
           <h2 className="section-title mb-14 md:mb-16 max-w-3xl">
             Engagement kickoff
           </h2>
