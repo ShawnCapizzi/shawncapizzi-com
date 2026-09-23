@@ -4,13 +4,20 @@ import { Wordmark } from "./Wordmark";
 /**
  * Hero: homepage hero.
  *
- * Contains: headline (top) + wordmark (signature below) + headshot (right on desktop, top on mobile).
+ * Contains: headline + lead + wordmark (signature) + headshot.
  *
  * The headline asserts leadership first and the working-software claim
  * second, in that order on purpose: buyers arriving from a cold email hire
  * on precedent first. The three doors live in HeroBottom, which renders
- * AFTER LogoStrip on the homepage, producing the mobile reading order:
- *   image, headline, wordmark, logos, three doors
+ * AFTER LogoStrip on the homepage.
+ *
+ * Desktop (lg and up): two columns, text left, headshot right.
+ * Stacked (below lg, phones and portrait tablets): the headline leads, then
+ * the headshot, then the lead and the wordmark (September 2026). The text
+ * column is display: contents below lg, so its four children join the grid
+ * directly and the order-* classes interleave the photo after the H1. There
+ * is still exactly one H1; nothing is duplicated for mobile.
+ *   headline, image, lead, wordmark, logos, three doors
  *
  * No backdrop or gradient frame around the image; the rounded photo
  * floats clean on the dark page. Top padding generous on mobile so
@@ -24,13 +31,14 @@ export function Hero() {
   return (
     <section className="relative pt-24 md:pt-28 lg:pt-32 pb-4 md:pb-10 overflow-hidden">
       <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left: Headline + wordmark (signature) */}
-          <div className="relative z-10 lg:col-span-7 order-2 lg:order-1">
-            <h1 className="headline-gleam hero-title max-w-full lg:max-w-[90%]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12 items-center">
+          {/* Left: Headline + lead + wordmark (signature). Below lg this
+              wrapper is display: contents; see the note above. */}
+          <div className="contents lg:block relative z-10 lg:col-span-7 lg:order-1">
+            <h1 className="headline-gleam hero-title max-w-full lg:max-w-[90%] order-1">
               Strategic design leadership for regulated products, platforms, and AI-enabled workflows
             </h1>
-            <p className="hero-lead max-w-full lg:max-w-[90%]">
+            <p className="hero-lead max-w-full lg:max-w-[90%] order-3">
               15 years leading design and innovation across pharma, healthcare, financial services, and enterprise. I can also design, build, and ship products myself, so the thinking arrives tangible, not a crumb of it.
             </p>
 
@@ -39,12 +47,12 @@ export function Hero() {
               animate
               href={null}
               priority
-              className="mt-6 md:mt-5 mx-auto -translate-x-[7px] md:-translate-x-[110px] md:translate-y-[3px] w-full max-w-[200px] sm:max-w-[220px] lg:max-w-[240px] h-auto"
+              className="order-4 mt-6 md:mt-5 mx-auto -translate-x-[7px] md:-translate-x-[110px] md:translate-y-[3px] w-full max-w-[200px] sm:max-w-[220px] lg:max-w-[240px] h-auto"
             />
           </div>
 
           {/* Right: headshot, knockout subject on navy plus brand glow, soft edge dissolve */}
-          <div className="relative lg:col-span-5 order-1 lg:order-2">
+          <div className="relative lg:col-span-5 order-2 lg:order-2 mt-6 mb-3 lg:my-0">
             <div
               className="relative aspect-square max-w-[82%] sm:max-w-[72%] md:max-w-[80%] lg:max-w-[100%] mx-auto"
               style={{
