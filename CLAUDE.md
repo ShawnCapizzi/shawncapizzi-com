@@ -1,7 +1,9 @@
 # shawncapizzi.com
 
 Personal brand site for Shawn Capizzi — Director of UX, AI experience architect, 
-and author of "Design Principles for the Modern Era."
+and author of "Seeing Past the Cage: Better Communication Design in the Age of AI."
+The site called the book "Clarity Is the Advantage" until September 2026; that
+phrase now appears only as the brand line in the footer.
 
 The thesis: **AI adoption is not a technology problem. It is an experience 
 architecture problem.** Every page, every word, every visual decision reinforces this.
@@ -12,7 +14,7 @@ Eight-page site. Three conversion paths in priority order:
 
 - **Path A** — Direct booking: Home → Engagements → Book a Strategy Call
 - **Path B** — Content-led: Home → Case Study → Book a Strategy Call  
-- **Path C** — Lead capture: Home → Clarity Advantage → Email → Drip → Booking
+- **Path C** — Lead capture: Home → Thinking (/thinking) → Email → Drip → Booking
 
 Full site map and per-page specs in `docs/ia-framework-v1-1.md`.
 

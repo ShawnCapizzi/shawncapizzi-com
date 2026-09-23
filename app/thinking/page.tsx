@@ -23,9 +23,12 @@ import { LiteYouTube } from "@/components/LiteYouTube";
  *
  * Photos: public/images/process/clarity-cards-desk.jpg is Shawn's own photo
  * of the printed deck on his desk (September 2026), retouched for tone and
- * color only; no card content was changed. public/images/process/book.jpg
- * is still a labeled placeholder. Give a replacement photo a new filename
- * rather than overwriting, so no image cache can serve the old version.
+ * color only; no card content was changed.
+ * public/images/process/seeing-past-the-cage-book.jpg is a rendered mockup
+ * of the hardcover (the copy above says printed editions are coming); the
+ * spine name was re-lettered from the cover's own type and the background
+ * books defocused. Give a replacement photo a new filename rather than
+ * overwriting, so no image cache can serve the old version.
  *
  * The Governance Deck reel names its loop Gather, Align, Measure, Decide.
  * The caption says so plainly rather than pretending it matches the three
@@ -171,8 +174,8 @@ export default function Page() {
             <figure className="rounded-2xl card-surface border border-border-default overflow-hidden">
               <div className="relative aspect-[4/3] bg-bg-raised">
                 <Image
-                  src="/images/process/book.jpg"
-                  alt="Clarity Is the Advantage, the book"
+                  src="/images/process/seeing-past-the-cage-book.jpg"
+                  alt="Seeing Past the Cage by Shawn Capizzi, a hardcover standing on a wooden desk"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
@@ -183,11 +186,11 @@ export default function Page() {
                   The book
                 </p>
                 <p className="mt-2 text-lg font-semibold tracking-tight text-text-primary">
-                  Clarity Is the Advantage
+                  Seeing Past the Cage
                 </p>
                 <p className="mt-1 text-sm text-text-secondary">
-                  Orienteering to great design decisions. Chapter one is free
-                  below.
+                  Better communication design in the age of AI. Chapter one is
+                  free below.
                 </p>
               </figcaption>
             </figure>

@@ -201,7 +201,7 @@ A practical field guide for enterprise teams turning complexity into action. Com
 
 ---
 
-**Card 2 — Clarity Is the Advantage** *(the book)*
+**Card 2: Seeing Past the Cage** *(the book)*
 
 Honest, no-fluff thinking on AI, design, and strategy for 2026 and beyond.
 
@@ -1299,9 +1299,9 @@ I taught at NYSCPS — design fundamentals, Adobe Photoshop, and Adobe InDesign.
 
 **Eyebrow:** Forthcoming
 
-**Title:** Clarity Is the Advantage
+**Title:** Seeing Past the Cage
 
-**Subtitle:** Honest Design and Strategy for the Way We Work Now
+**Subtitle:** Better Communication Design in the Age of AI
 
 **Description:**
 

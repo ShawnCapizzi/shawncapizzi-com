@@ -65,7 +65,7 @@ export type CTACard = {
 export const CTA_CARDS: Record<string, CTACard> = {
   book: {
     eyebrow: "Read",
-    title: "Clarity Is the Advantage",
+    title: "Seeing Past the Cage",
     subtitle: "the book",
     description:
       "Why clarity wins and what it takes to do great work in the rooms where decisions get made. Read Chapter 1, \u201CThe Human Condition,\u201D free in the reader.",
@@ -73,7 +73,7 @@ export const CTA_CARDS: Record<string, CTACard> = {
     href: "/book/chapter-1",
     thumb: "book-reader",
     image: "/images/book-reader.png",
-    imageAlt: "Clarity Is the Advantage \u2014 Chapter 1 in the reader",
+    imageAlt: "Seeing Past the Cage, Chapter 1 in the reader",
     imageAspect: "aspect-[4/3]",
   },
   cards: {

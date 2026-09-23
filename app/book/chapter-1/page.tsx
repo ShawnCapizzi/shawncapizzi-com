@@ -4,9 +4,9 @@ import { CTACards } from "@/components/CTACards";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
-  title: "The Human Condition, Chapter 1 | Clarity Is the Advantage",
+  title: "The Human Condition, Chapter 1 | Seeing Past the Cage",
   description:
-    "Read Chapter 1 of Clarity Is the Advantage: the book on making thoughtful design decisions that create lasting competitive advantage in regulated industries. Free, one chapter at a time.",
+    "Read Chapter 1 of Seeing Past the Cage, a book on better communication design in the age of AI. Free, one chapter at a time.",
 };
 
 /**
@@ -170,11 +170,11 @@ export default function ChapterOnePage() {
           <p className="eyebrow mb-3">The book</p>
 
           <h1 className="headline-static hero-title text-balance max-w-4xl">
-            Clarity Is the Advantage
+            Seeing Past the Cage
           </h1>
 
           <p className="hero-lead italic">
-            Orienteering to great design decisions
+            Better communication design in the age of AI
           </p>
 
           <div className="mt-8 max-w-2xl space-y-4 text-base md:text-lg text-text-secondary leading-relaxed">
