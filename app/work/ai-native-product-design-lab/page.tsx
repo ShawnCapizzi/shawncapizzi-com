@@ -29,7 +29,11 @@ const ASSET_BASE = "/images/case-studies/05-ai-native-product-design-lab";
  *     grows. The full story moves to the Live Health Data case study when
  *     that page ships; this block then shortens to a pointer.
  *   - A production block names what the lab now ships: CourtVisual live,
- *     AI Patient Support live, ClinicalTrialsForMe in preview.
+ *     AI Patient Support live, ClinicalTrialsForMe in preview. Each shipped
+ *     product shows as motion: AI Patient Support's reel in its own block,
+ *     then the CourtVisual demo and the ClinicalTrialsForMe reel here. The
+ *     ClinicalTrialsForMe reel is the 39-second walkthrough Shawn supplied,
+ *     re-encoded to match the others (H.264 CRF 24, faststart, no audio).
  *   - The Custom GPTs are framed as the dated early-adoption record, with
  *     the current practice named plainly: Claude Code and agentic pipelines.
  *   - The 2018 voice section links to its own case study.
@@ -130,17 +134,38 @@ export default function Page() {
             { label: "Preview clinicaltrialsforme.com", href: "https://clinicaltrialsforme.com" },
           ],
           customContent: (
-            <figure className="mx-auto max-w-3xl">
-              <VideoWithPlayOverlay
-                src="/videos/courtvisual-ranking-demo.mp4"
-                poster="/videos/courtvisual-ranking-poster.jpg"
-                ariaLabel="CourtVisual ranking demo: the nightly slate scored and ranked, with reasoning on each card"
-              />
-              <figcaption className="mt-4 text-center text-sm text-text-tertiary">
-                CourtVisual: the nightly slate, scored and ranked, with the
-                reasoning on the card.
-              </figcaption>
-            </figure>
+            <div className="space-y-16 md:space-y-20">
+              <figure className="mx-auto max-w-3xl">
+                <VideoWithPlayOverlay
+                  src="/videos/courtvisual-ranking-demo.mp4"
+                  poster="/videos/courtvisual-ranking-poster.jpg"
+                  ariaLabel="CourtVisual ranking demo: the nightly slate scored and ranked, with reasoning on each card"
+                />
+                <figcaption className="mt-4 text-center text-sm text-text-tertiary">
+                  CourtVisual: the nightly slate, scored and ranked, with the
+                  reasoning on the card.
+                </figcaption>
+              </figure>
+              <figure className="mx-auto max-w-3xl">
+                <BrowserFrame
+                  src="/videos/clinicaltrialsforme-walkthrough.mp4"
+                  poster="/videos/clinicaltrialsforme-walkthrough-poster.jpg"
+                  url="clinicaltrialsforme.com"
+                  width={720}
+                  fallbackAspect={1372 / 1080}
+                  tiltDegrees={0}
+                  theme="dark"
+                  ariaLabel="ClinicalTrialsForMe walkthrough: search by condition, how readable the open studies are, two studies compared side by side, and the words to call or email a study team"
+                  loop
+                  autoPlay
+                />
+                <figcaption className="mt-4 text-center text-sm text-text-tertiary">
+                  ClinicalTrialsForMe, in preview: search by condition, see how
+                  readable each study is, compare two side by side, and get the
+                  words to call or email the study team.
+                </figcaption>
+              </figure>
+            </div>
           ),
         },
         {
