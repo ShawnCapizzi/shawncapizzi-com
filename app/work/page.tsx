@@ -1,14 +1,15 @@
 // Destination: app/work/page.tsx
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { CTACards } from "@/components/CTACards";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/work",
   title: "Selected Work",
   description:
-    "A decade of enterprise experience design across pharma, healthcare, and finance. Engagements where the structure of the experience changed the structure of the business outcome.",
-};
+    "Fifteen years of enterprise experience design across pharma, healthcare, and finance. Engagements where the structure of the experience changed the structure of the business outcome.",
+});
 
 const CASE_STUDIES = [
   {
@@ -84,7 +85,7 @@ export default function Page() {
             Engagements where experience structure changed the business outcome.
           </h1>
           <p className="hero-lead max-w-3xl">
-            A decade of enterprise experience design across pharma, healthcare,
+            Fifteen years of enterprise experience design across pharma, healthcare,
             and finance, alongside live products I designed, built, and shipped
             myself.
           </p>

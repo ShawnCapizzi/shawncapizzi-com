@@ -62,6 +62,36 @@ All visual decisions follow `docs/design-system.md`. This is non-negotiable.
 - MDX for case studies and essays (to be added)
 - Deployed on Vercel, auto-deploy on `git push` to `main`
 
+## SEO and GEO
+
+Set up September 2026. The canonical host is `https://shawncapizzi.com`
+(`SITE_URL` in `lib/seo.ts`); canonicals, the sitemap, robots.txt, and all
+structured data use it.
+
+- Every page builds its metadata with `pageMetadata()` from `lib/seo.ts`. It
+  sets the canonical, Open Graph, X card, and share image together. Never
+  export a bare `{ title, description }`: Next.js does not merge openGraph,
+  so the page would inherit the homepage's og:title and og:url.
+- A page with `"use client"` cannot export metadata. Keep pages as server
+  components and move interactive parts into a component (see /faq and
+  `components/FaqAccordion.tsx`).
+- One H1 per page. Components that render inside a page (the Reader, cards)
+  start at h2.
+- Structured data (JSON-LD) says only what the page shows. The Person node
+  (`@id` `https://shawncapizzi.com/#person`) is rendered once in the root
+  layout; case studies (Article plus breadcrumbs), /about (ProfilePage),
+  /faq (FAQPage, from `lib/faq.ts`), and /book/chapter-1 (Book) point to it.
+  `sameAs` lists only profiles the site itself links (LinkedIn today).
+- Share images are 1200x630 JPEGs in `public/images/og/`: `og-default.jpg`,
+  one per case study named by slug, and `seeing-past-the-cage.jpg`. They were
+  rendered from HTML with the site's fonts and colors. A new case study needs
+  its own image, or it falls back to the default.
+- robots.txt allows every crawler, AI training included (Shawn's call,
+  September 2026), and names the answer-engine crawlers on their own.
+  `/api/` is disallowed. No llms.txt: Google says Search ignores it.
+- Titles under about 60 characters, descriptions under about 160, and one
+  consistent set of facts everywhere (fifteen years, not "a decade").
+
 ## File conventions
 
 - Components in `/components`, one file per component, PascalCase
