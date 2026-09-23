@@ -11,8 +11,8 @@ import { InViewVideo } from "./InViewVideo";
  * work reads as pipeline rather than proof.
  *
  * The book and the cards used to live in this section. They now have their
- * own block near the bottom of the homepage (ClarityCardsSection), so the
- * method and the products no longer compete for the same slot.
+ * own block right after it (ProcessSection), so the method and the products
+ * sit next to each other without competing for the same slot.
  *
  * To add a product once it ships, add an entry to PRODUCTS. It needs a
  * live URL, a case study route, and an image that already exists in

@@ -11,13 +11,15 @@ import { useEffect, useRef, useState } from "react";
  * AFTER the work (SelectedWork, Building) and immediately before HowIWork,
  * so a visitor reads proof first and this lands as confirmation rather than
  * a gate. The eyebrow reads "Common starting points" because "When to bring
- * me in" collided with the first door, "Bring me into a problem."
+ * me in" collided with the first door's old title, "Bring me into a problem."
  *
  * The spread of the bullets is deliberate. Regulated and pharma authority
- * is the spine (1 and 4). Bullets 2 and 3 speak to leaders whose plan or AI
- * initiative has stalled. Bullet 5 is written for merged agency networks
- * working one client with several inherited vocabularies. Bullet 6 is the
- * embedded internal-tools work, in the buyer's own words.
+ * is the spine (1 and 6). Bullets 2 and 4 speak to leaders whose plan or AI
+ * initiative has stalled. Bullets 3 and 5 match the first door: a message
+ * that is not landing, and customer signals nobody turns into business
+ * intelligence (added September 2026). Bullet 7 is written for merged agency
+ * networks working one client with several inherited vocabularies. Bullet 8
+ * is the embedded internal-tools work, in the buyer's own words.
  *
  * This section carries no link of its own. The homepage asks for the call
  * once at the top and once at the bottom, and HowIWork sits directly below
@@ -29,7 +31,9 @@ import { useEffect, useRef, useState } from "react";
 const SITUATIONS = [
   "You work in a regulated category where the product and brand experience has to survive medical, legal, and regulatory review and still work for a human.",
   "You need someone who can turn ambiguity into a scoped plan, and the story that wins the room.",
+  "Your message makes sense inside the building but isn't landing in market.",
   "Your AI initiative is stuck between strategy, workflow, and trust.",
+  "Customers keep telling you something, and nobody is tracking the pattern.",
   "Your design system exists, but governance and adoption are breaking down.",
   "Merged teams are working one client with three different vocabularies for the same deliverable.",
   "The tool your department has waited years for is still a spreadsheet.",

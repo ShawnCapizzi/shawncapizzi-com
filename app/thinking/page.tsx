@@ -1,10 +1,10 @@
 import { pageMetadata } from "@/lib/seo";
-import Image from "next/image";
 import Link from "next/link";
 import { ProcessLoop } from "@/components/ProcessLoop";
 import { BrowserFrame } from "@/components/BrowserFrame";
 import { SignupCard } from "@/components/SignupCard";
 import { LiteYouTube } from "@/components/LiteYouTube";
+import { BookAndCards } from "@/components/BookAndCards";
 
 /**
  * /thinking: the Capizzi Process, and everything that came out of it.
@@ -21,14 +21,8 @@ import { LiteYouTube } from "@/components/LiteYouTube";
  * method as objects you can hold, then the ways to get more of it. The
  * strategy call closes, once.
  *
- * Photos: public/images/process/clarity-cards-desk.jpg is Shawn's own photo
- * of the printed deck on his desk (September 2026), retouched for tone and
- * color only; no card content was changed.
- * public/images/process/seeing-past-the-cage-book.jpg is a rendered mockup
- * of the hardcover (the copy above says printed editions are coming); the
- * spine name was re-lettered from the cover's own type and the background
- * books defocused. Give a replacement photo a new filename rather than
- * overwriting, so no image cache can serve the old version.
+ * Photos: the book and cards figures come from components/BookAndCards.tsx,
+ * shared with the homepage, which documents both images.
  *
  * The Governance Deck reel names its loop Gather, Align, Measure, Decide.
  * The caption says so plainly rather than pretending it matches the three
@@ -171,62 +165,10 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            <figure className="rounded-2xl card-surface border border-border-default overflow-hidden">
-              <div className="relative aspect-[4/3] bg-bg-raised">
-                <Image
-                  src="/images/process/seeing-past-the-cage-book.jpg"
-                  alt="Seeing Past the Cage by Shawn Capizzi, a hardcover standing on a wooden desk"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-              <figcaption className="p-6 md:p-7">
-                <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
-                  The book
-                </p>
-                <p className="mt-2 text-lg font-semibold tracking-tight text-text-primary">
-                  Seeing Past the Cage
-                </p>
-                <p className="mt-1 text-sm text-text-secondary">
-                  Better communication design in the age of AI. Chapter one is
-                  free below.
-                </p>
-              </figcaption>
-            </figure>
-
-            <figure className="rounded-2xl card-surface border border-border-default overflow-hidden">
-              <div className="relative aspect-[4/3] bg-bg-raised">
-                <Image
-                  src="/images/process/clarity-cards-desk.jpg"
-                  alt="Seven printed Clarity Cards dealt across a wooden desk beside a keyboard and mouse"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-              <figcaption className="p-6 md:p-7">
-                <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
-                  The cards
-                </p>
-                <p className="mt-2 text-lg font-semibold tracking-tight text-text-primary">
-                  The Clarity Cards
-                </p>
-                <p className="mt-1 text-sm text-text-secondary">
-                  Fifty-four questions. Draw one, answer it honestly, then
-                  touch the work.{" "}
-                  <Link
-                    href="/#clarity-cards"
-                    className="text-link hover:text-link-hover transition-colors"
-                  >
-                    Try the deck
-                  </Link>
-                  .
-                </p>
-              </figcaption>
-            </figure>
-          </div>
+          <BookAndCards
+            bookLink={{ href: "/book/chapter-1", label: "Read chapter one free" }}
+            cardsLink={{ href: "/#clarity-cards", label: "Try the deck" }}
+          />
         </div>
       </section>
 

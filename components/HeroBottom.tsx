@@ -9,9 +9,9 @@ import Image from "next/image";
  * intent-named entry points, because a visitor does not know which audience
  * they are on arrival, but they do know what they came to do.
  *
- *   Door 1  Bring me into a problem   the strategy call (the page's one ask)
- *   Door 2  See the work              /work
- *   Door 3  Tangible thinking         /thinking, the Process page
+ *   Door 1  Share your business goals   the strategy call (the page's one ask)
+ *   Door 2  See the work                /work
+ *   Door 3  Tangible thinking           /thinking, the Process page
  *
  * The D&AD line stays underneath as a credential. It is shown, not claimed.
  *
@@ -36,8 +36,8 @@ const DOORS: Door[] = [
   {
     key: "problem",
     eyebrow: "Start here",
-    title: "Bring me into a problem.",
-    body: "A 30-minute call, virtual, no pitch. We work out what is stuck, what success looks like, and whether I am the right person for it.",
+    title: "Share your business goals or roadblocks.",
+    body: "A stuck flow, a message that isn't getting the action you want, or customer signals nobody tracks. I find the opportunities, drive product to market, and build feedback loops that turn customer data into actionable business intelligence.",
     cta: "Book a Strategy Call",
     href: CAL_URL,
     external: true,
@@ -80,7 +80,7 @@ export function HeroBottom() {
                 <h2 className="card-title mt-3 text-text-primary">
                   {door.title}
                 </h2>
-                <p className="mt-3 text-sm md:text-base text-text-secondary leading-relaxed flex-1">
+                <p className="mt-3 text-sm md:text-base text-text-secondary leading-relaxed text-pretty flex-1">
                   {door.body}
                 </p>
                 <p

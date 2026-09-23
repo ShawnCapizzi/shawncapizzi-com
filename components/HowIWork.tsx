@@ -14,7 +14,7 @@ import Link from "next/link";
  *
  * The titles stay first person and parallel, matching the doors in the
  * hero. "Embed me in the work" replaced "Bring me in", which collided with
- * the first door, "Bring me into a problem."
+ * the first door's old title, "Bring me into a problem."
  *
  * To retune copy or add a tier, edit MODES below.
  */
