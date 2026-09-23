@@ -1,13 +1,22 @@
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { BOOK, bookGraph, pageMetadata } from "@/lib/seo";
 import { Reader, type ReaderPage } from "@/components/Reader";
 import { CTACards } from "@/components/CTACards";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/book/chapter-1",
   title: "The Human Condition, Chapter 1 | Seeing Past the Cage",
   description:
     "Read Chapter 1 of Seeing Past the Cage, a book on better communication design in the age of AI. Free, one chapter at a time.",
-};
+  type: "book",
+  image: {
+    url: "/images/og/seeing-past-the-cage.jpg",
+    width: 1200,
+    height: 630,
+    alt: `${BOOK.name} by Shawn Capizzi, Chapter 1 free to read`,
+  },
+});
 
 /**
  * CHAPTER 1 CONTENT
@@ -159,6 +168,7 @@ const CHAPTER_ONE: ReaderPage[] = [
 export default function ChapterOnePage() {
   return (
     <article className="pt-32 md:pt-40 pb-24 md:pb-32">
+      <JsonLd data={bookGraph({ chapterName: "The Human Condition", chapterPath: "/book/chapter-1" })} />
       {/* Force the page to land at the top on mount — works around mobile
           browsers (and Next scroll restoration) that occasionally land users
           mid-page when there's a tall fixed-height inner region. */}

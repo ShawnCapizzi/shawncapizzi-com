@@ -91,7 +91,7 @@ export const CTA_CARDS: Record<string, CTACard> = {
     eyebrow: "Case studies",
     title: "Selected work",
     description:
-      "A decade of enterprise experience design across pharma, healthcare, and finance. Engagements where the structure of the experience changed the business outcome.",
+      "Fifteen years of enterprise experience design across pharma, healthcare, and finance. Engagements where the structure of the experience changed the business outcome.",
     cta: "See the work",
     href: "/work",
     image: "/images/hero/consumer-care-hub-hero-balanced.gif",

@@ -11,6 +11,8 @@ import { ScrollFadeController } from "@/components/ScrollFadeController";
 import { NavigationProgress } from "@/components/NavigationProgress";
 import { CookieBanner } from "@/components/CookieBanner";
 import { Analytics } from "@/components/Analytics";
+import { JsonLd } from "@/components/JsonLd";
+import { DEFAULT_SHARE_IMAGE, HOME_DESCRIPTION, HOME_TITLE, SITE_URL, siteGraph } from "@/lib/seo";
 
 /* ============================================================
    FONTS
@@ -47,13 +49,12 @@ const instrumentSans = Instrument_Sans({
    ============================================================ */
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shawncapizzi.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Shawn Capizzi | Senior Design Leadership for Regulated and Enterprise Teams",
+    default: HOME_TITLE,
     template: "%s | Shawn Capizzi",
   },
-  description:
-    "Senior design leadership for regulated products, platforms, and AI-enabled teams. Fifteen years across pharma, financial services, and enterprise, plus production software designed, built, and shipped solo.",
+  description: HOME_DESCRIPTION,
   keywords: [
     "design leadership",
     "experience strategy",
@@ -71,32 +72,25 @@ export const metadata: Metadata = {
     "enterprise design strategy",
     "Shawn Capizzi",
   ],
-  authors: [{ name: "Shawn Capizzi" }],
+  authors: [{ name: "Shawn Capizzi", url: SITE_URL }],
   creator: "Shawn Capizzi",
+  // Defaults for any page that does not call pageMetadata(). Every
+  // route in the sitemap does, so these are a fallback only. No X
+  // handle: the site links no X account (removed September 2026).
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://shawncapizzi.com",
+    url: "/",
     siteName: "Shawn Capizzi",
-    title: "Shawn Capizzi | Senior Design Leadership",
-    description:
-      "Senior design leadership for regulated products, platforms, and AI-enabled teams. Fifteen years across pharma, financial services, and enterprise, plus production software designed, built, and shipped solo.",
-    images: [
-      {
-        url: "/images/og/og-default.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Shawn Capizzi, senior design leadership for regulated and enterprise teams",
-      },
-    ],
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    images: [DEFAULT_SHARE_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shawn Capizzi | Senior Design Leadership",
-    description:
-      "Senior design leadership for regulated products, platforms, and AI-enabled teams. Fifteen years across pharma, financial services, and enterprise, plus production software designed, built, and shipped solo.",
-    images: ["/images/og/og-default.jpg"],
-    creator: "@shawncapizzi",
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    images: [{ url: DEFAULT_SHARE_IMAGE.url, alt: DEFAULT_SHARE_IMAGE.alt }],
   },
   robots: {
     index: true,
@@ -130,6 +124,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${instrumentSans.variable}`}>
       <body className="bg-bg-primary text-text-primary antialiased">
+        {/* Site-wide structured data: the website and the Person entity
+            every page and case study points to. See lib/seo.ts. */}
+        <JsonLd data={siteGraph()} />
         {/* Consent + Analytics. Order matters:
             1. Analytics sets gtag('consent','default', denied) FIRST
                (defense-in-depth in case Cookiebot is blocked by an ad blocker)

@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { CTACards } from "@/components/CTACards";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/contact",
   title: "Contact",
   description:
     "Three ways in: a 30-minute strategy call, email, or phone. Most engagements move from first call to signed SOW in 2 to 3 weeks.",
-};
+});
 
 const CAL_URL = "https://cal.com/capizzi/30min";
 const EMAIL = "capizzi@shawncapizzi.com";

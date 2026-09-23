@@ -1,14 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { AccordionDetail } from "@/components/AccordionDetail";
 import { CTACards } from "@/components/CTACards";
 
-export const metadata: Metadata = {
-  title: "Engagements",
+export const metadata = pageMetadata({
+  path: "/engagements",
+  title: "Engagements: Embedded Leadership, Advisory, and On-Call",
   description:
     "Three ways to engage senior product and experience strategy leadership: embedded leadership, strategic advisory, and on-call retainer. Built for regulated and enterprise teams.",
-};
+});
 
 const CAL_URL = "https://cal.com/capizzi/30min";
 

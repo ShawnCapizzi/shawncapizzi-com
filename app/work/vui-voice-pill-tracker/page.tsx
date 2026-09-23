@@ -3,13 +3,22 @@ import { CaseStudyCarousel } from "@/components/CaseStudyCarousel";
 import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "VUI Pill Tracker — Voice Design for Healthcare Adherence",
+const META = {
+  path: "/work/vui-voice-pill-tracker",
+  title: "VUI Pill Tracker: Voice Design for Healthcare Adherence",
   description:
-    "An early voice-first design exploration for medication adherence, built as an Alexa Skill in 2018 — proof of the conversational-design practice now underneath every AI agent and chatbot engagement.",
+    "An early voice-first design exploration for medication adherence, built as an Alexa Skill in 2018: proof of the conversational-design practice now underneath every AI agent and chatbot engagement.",
+  image: {
+    url: "/images/og/vui-voice-pill-tracker.jpg",
+    width: 1200,
+    height: 630,
+    alt: "VUI Pill Tracker: Voice Design for Healthcare Adherence, a case study by Shawn Capizzi",
+  },
 };
+
+export const metadata = pageMetadata({ ...META, type: "article" });
 
 const ASSET_BASE = "/images/case-studies/06-vui-voice-pill-tracker";
 const VIDEO_BASE = "/videos";
@@ -17,11 +26,12 @@ const VIDEO_BASE = "/videos";
 export default function Page() {
   return (
     <CaseStudyLayout
+      structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
       title="VUI Pill Tracker"
       subtitle="An early voice-first design exploration for medication adherence — built as an Alexa Skill in 2018. The conversational-design practice underneath every AI agent and chatbot engagement I run today."
       heroImage={`${ASSET_BASE}/00-hero-echo-device.jpg`}
-      heroImageAlt="An Amazon Echo smart speaker — the platform the VUI Pill Tracker Alexa Skill was built and tested on in 2017–2018."
+      heroImageAlt="An Amazon Echo smart speaker, the platform the VUI Pill Tracker Alexa Skill was built and tested on in 2017–2018."
       heroVideo={{
         src: `${VIDEO_BASE}/pill-tracker-vui-demo.mp4`,
         poster: `${ASSET_BASE}/01-vui-demo-poster.jpg`,

@@ -3,17 +3,27 @@ import { CaseStudyCarousel } from "@/components/CaseStudyCarousel";
 import { BrowserFrame } from "@/components/BrowserFrame";
 import { TiltedPhoneFrame } from "@/components/TiltedPhoneFrame";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const META = {
+  path: "/work/pharma-design-systems",
   title: "Pharma Design Systems & Multi-Brand Architecture",
   description:
     "Governing 70+ product brands with 3 design systems. $3.5M+ in digital transformation, three enterprise design systems serving HCP, DTC, and patient audiences, and an industry-first mobile wallet integration.",
+  image: {
+    url: "/images/og/pharma-design-systems.jpg",
+    width: 1200,
+    height: 630,
+    alt: "Pharma Design Systems & Multi-Brand Architecture, a case study by Shawn Capizzi",
+  },
 };
+
+export const metadata = pageMetadata({ ...META, type: "article" });
 
 export default function Page() {
   return (
     <CaseStudyLayout
+      structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
       title="Pharma Design Systems & Multi-Brand Architecture"
       subtitle="Governing 70+ product brands across 3 design systems and $3.5M+ in digital transformation."

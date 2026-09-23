@@ -2,19 +2,29 @@ import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { TiltedPhonePair } from "@/components/TiltedPhonePair";
 import { PhoneFan } from "@/components/PhoneFan";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const META = {
+  path: "/work/courtvisual",
   title: "CourtVisual: Scoring Sports by What's Worth Watching",
   description:
     "A multi-sport app that scores how worth watching tonight's games are, tuned to your taste, then points you where to watch and how to get in. Product, build, and go-to-market shipped solo, concept to live PWA, with AI as the partner.",
+  image: {
+    url: "/images/og/courtvisual.jpg",
+    width: 1200,
+    height: 630,
+    alt: "CourtVisual: Scoring Sports by What's Worth Watching, a case study by Shawn Capizzi",
+  },
 };
+
+export const metadata = pageMetadata({ ...META, type: "article" });
 
 const ASSET_BASE = "/images/case-studies/07-courtvisual";
 
 export default function Page() {
   return (
     <CaseStudyLayout
+      structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
       title="CourtVisual"
       subtitle="A multi-sport app that scores how worth watching tonight's games are, tuned to you, then sends you where to watch and how to get in. Product, build, and go-to-market run solo, concept to live PWA, with AI as the build partner."

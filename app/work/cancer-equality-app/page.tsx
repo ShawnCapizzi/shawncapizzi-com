@@ -1,19 +1,29 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { BrowserFrame } from "@/components/BrowserFrame";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const META = {
+  path: "/work/cancer-equality-app",
   title: "A Patient Navigation Platform for Women Facing Bias in Cancer Care",
   description:
     "Built with The Chrysalis Initiative. Recognized with a D&AD Pencil for Future Impact, 2022. A two-sided platform connecting patients with trained coaches and peer navigators.",
+  image: {
+    url: "/images/og/cancer-equality-app.jpg",
+    width: 1200,
+    height: 630,
+    alt: "A Patient Navigation Platform for Women Facing Bias in Cancer Care, a case study by Shawn Capizzi",
+  },
 };
+
+export const metadata = pageMetadata({ ...META, type: "article" });
 
 const ASSET_BASE = "/images/case-studies/04-cancer-equality-app";
 
 export default function Page() {
   return (
     <CaseStudyLayout
+      structuredData={caseStudyGraph(META)}
       eyebrow="(Service Design · Patient Navigation)"
       title="A Patient Navigation Platform for Women Facing Bias in Cancer Care"
       subtitle="Built with The Chrysalis Initiative. Recognized with a D&AD Pencil for Future Impact, 2022."

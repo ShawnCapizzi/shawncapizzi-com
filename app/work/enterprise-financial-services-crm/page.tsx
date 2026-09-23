@@ -1,13 +1,22 @@
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { RotatingProductShowcase } from "@/components/RotatingProductShowcase";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const META = {
+  path: "/work/enterprise-financial-services-crm",
   title: "Enterprise Financial Services CRM Transformation",
   description:
     "Redesigning rep workflows inside a terminal-driven CRM environment used company-wide. Architectural inquiry across three salesperson types. $1.5M+ in annual ROI.",
+  image: {
+    url: "/images/og/enterprise-financial-services-crm.jpg",
+    width: 1200,
+    height: 630,
+    alt: "Enterprise Financial Services CRM Transformation, a case study by Shawn Capizzi",
+  },
 };
+
+export const metadata = pageMetadata({ ...META, type: "article" });
 
 const ASSET_BASE =
   "/images/case-studies/03-enterprise-financial-services-crm";
@@ -15,6 +24,7 @@ const ASSET_BASE =
 export default function Page() {
   return (
     <CaseStudyLayout
+      structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
       title="Enterprise Financial Services CRM Transformation"
       subtitle="Redesigning rep workflows inside a terminal-driven CRM environment used company-wide."

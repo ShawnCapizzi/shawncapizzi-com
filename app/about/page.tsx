@@ -1,21 +1,25 @@
 // Destination: app/about/page.tsx
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { pageMetadata, profilePage } from "@/lib/seo";
 import { CTACards } from "@/components/CTACards";
 import { Colophon } from "@/components/Colophon";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/about",
   title: "About",
   description:
     "Shawn Capizzi is a strategic experience design leader with 15+ years working at the intersection of UX, CX, product, and regulated digital systems.",
-};
+  type: "profile",
+});
 
 const CAL_URL = "https://cal.com/capizzi/30min";
 
 export default function Page() {
   return (
     <article>
+      <JsonLd data={profilePage()} />
       {/* Rim-shimmer CSS — scoped to .capizzi-rim-card class.
           Color matches nav shimmer (brand-blue #4F46E5). Opacity dims
           across three passes (0.95 → 0.55 → 0.25 → 0) mirroring the

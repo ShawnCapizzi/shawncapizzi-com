@@ -2,13 +2,22 @@ import { CaseStudyLayout } from "@/components/CaseStudyLayout";
 import { BrowserFrame } from "@/components/BrowserFrame";
 import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const META = {
+  path: "/work/ai-native-product-design-lab",
   title: "AI-Native Product Design Lab",
   description:
     "How I design, build, and ship with AI: production software designed and shipped solo, working prototypes in days, a Figma plugin in the Community, and the dated record of early adoption behind all of it.",
+  image: {
+    url: "/images/og/ai-native-product-design-lab.jpg",
+    width: 1200,
+    height: 630,
+    alt: "AI-Native Product Design Lab, a case study by Shawn Capizzi",
+  },
 };
+
+export const metadata = pageMetadata({ ...META, type: "article" });
 
 const ASSET_BASE = "/images/case-studies/05-ai-native-product-design-lab";
 
@@ -29,6 +38,7 @@ const ASSET_BASE = "/images/case-studies/05-ai-native-product-design-lab";
 export default function Page() {
   return (
     <CaseStudyLayout
+      structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
       title="AI-Native Product Design Lab"
       subtitle="How I design, build, and ship with AI. Working prototypes in hours, and production software shipped solo, built on years of bringing teams together."

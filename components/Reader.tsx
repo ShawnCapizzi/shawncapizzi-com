@@ -99,7 +99,7 @@ export function Reader({
   const renderBlock = (block: ReaderBlock, key: number) => {
     switch (block.type) {
       case "heading":
-        return <h2 className="sc-reader__h2" key={key}>{block.text}</h2>;
+        return <h3 className="sc-reader__h2" key={key}>{block.text}</h3>;
       case "quote":
         return (
           <blockquote className="sc-reader__quote" key={key}>
@@ -179,7 +179,9 @@ export function Reader({
                 {i === 0 && (
                   <div className="sc-reader__titleblock">
                     <p className="sc-reader__chap">{kicker}</p>
-                    <h1>{title}</h1>
+                    {/* h2, not h1: the host page owns the one H1 (the book title),
+                        and the chapter's section heads sit under this as h3. */}
+                    <h2>{title}</h2>
                     {subtitle && <p className="sc-reader__sub">{subtitle}</p>}
                   </div>
                 )}
@@ -382,7 +384,7 @@ const readerStyles = `
 
 .sc-reader__titleblock { margin-bottom: 30px; padding-bottom: 26px; border-bottom: 1px solid var(--sc-line); }
 .sc-reader__chap { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: var(--sc-accent); margin: 0 0 14px; }
-.sc-reader__titleblock h1 { font-family: var(--sc-serif); font-size: clamp(30px, 5.2vw, 44px); line-height: 1.08; font-weight: 700; margin: 0; letter-spacing: -0.015em; }
+.sc-reader__titleblock h2 { font-family: var(--sc-serif); font-size: clamp(30px, 5.2vw, 44px); line-height: 1.08; font-weight: 700; margin: 0; letter-spacing: -0.015em; }
 .sc-reader__sub { font-size: 1.02em; color: var(--sc-ink-soft); font-style: italic; line-height: 1.4; margin: 16px 0 0; }
 
 .sc-reader__h2 {

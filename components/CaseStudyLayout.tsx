@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import { BrowserFrame } from "@/components/BrowserFrame";
 import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
 import { CollapsibleSection } from "@/components/CollapsibleSection";
+import { JsonLd } from "@/components/JsonLd";
 
 const CAL_URL = "https://cal.com/capizzi/30min";
 
@@ -98,6 +99,9 @@ interface CaseStudyLayoutProps {
   closer: ReactNode[];
   ctaHeadline: string;
   related?: RelatedCaseStudy[];
+  /** JSON-LD for this case study (Article plus breadcrumbs), built with
+   *  caseStudyGraph() from lib/seo.ts so it matches the page metadata. */
+  structuredData?: object | object[];
 }
 
 function isAnimated(src: string): boolean {
@@ -119,6 +123,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
 
   return (
     <article>
+      {props.structuredData && <JsonLd data={props.structuredData} />}
       {/* ============================================================
           HERO
           Eyebrow + title + subtitle + hero image + metadata block

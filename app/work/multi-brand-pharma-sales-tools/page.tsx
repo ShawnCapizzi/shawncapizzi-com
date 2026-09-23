@@ -3,13 +3,22 @@ import { CaseStudyCarousel } from "@/components/CaseStudyCarousel";
 import { RotatingProductShowcase } from "@/components/RotatingProductShowcase";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+const META = {
+  path: "/work/multi-brand-pharma-sales-tools",
   title: "Multi-Brand Sales Design System",
   description:
     "A modular sales design system consolidating 12 fragmented tools across a multi-brand neurological portfolio. 33 reusable components. Adoption from 65% to 92%.",
+  image: {
+    url: "/images/og/multi-brand-pharma-sales-tools.jpg",
+    width: 1200,
+    height: 630,
+    alt: "Multi-Brand Sales Design System, a case study by Shawn Capizzi",
+  },
 };
+
+export const metadata = pageMetadata({ ...META, type: "article" });
 
 const ASSET_BASE =
   "/images/case-studies/02-multi-brand-pharma-sales-tools";
@@ -17,6 +26,7 @@ const ASSET_BASE =
 export default function Page() {
   return (
     <CaseStudyLayout
+      structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
       title="Multi-Brand Sales Design System"
       subtitle="Consolidating 12 fragmented tools into 33 reusable components across a multi-brand neurological portfolio. Adoption climbed from 65% to 92%."

@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { HOME_DESCRIPTION, HOME_TITLE, pageMetadata } from "@/lib/seo";
 import { LogoStrip } from "@/components/LogoStrip";
 import { HeroBottom } from "@/components/HeroBottom";
 import { WhenToBringMeIn } from "@/components/WhenToBringMeIn";
@@ -32,6 +33,13 @@ import { FinalCTA } from "@/components/FinalCTA";
  * The homepage carries one primary ask (the strategy call) at the top and the
  * bottom. Every other link on the page goes deeper rather than asking again.
  */
+export const metadata = pageMetadata({
+  path: "/",
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
+  absolute: true,
+});
+
 export default function HomePage() {
   return (
     <>

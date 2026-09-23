@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { ProcessLoop } from "@/components/ProcessLoop";
@@ -35,11 +35,12 @@ import { LiteYouTube } from "@/components/LiteYouTube";
  * moves. When the app is relabeled, drop the second sentence.
  */
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
+  path: "/thinking",
   title: "Thinking: The Capizzi Process",
   description:
     "The Capizzi Process: listen first, make it visible, prove it worked. The method as an interactive loop, running as software, and in print and in hand.",
-};
+});
 
 const CAL_URL = "https://cal.com/capizzi/30min";
 const GOV_APP_URL = "https://governance-deck-tau.vercel.app";
