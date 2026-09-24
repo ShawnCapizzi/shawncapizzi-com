@@ -58,12 +58,13 @@ export function SelectedWork() {
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Case studies</p>
           <h2 className="section-title">
-            View some of my selected work
+            The work, and the impact behind it.
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            Engagements where experience, collaboration, thoughtful
-            consideration, and structure drove positive business outcomes and
-            transformation.
+            Governance across 70+ pharma brands, a D&amp;AD-recognized patient
+            navigation platform, and a terminal CRM with $1.5M+ in annual ROI.
+            Service design, design systems, and enterprise UX, judged by what
+            changed.
           </p>
         </div>
 

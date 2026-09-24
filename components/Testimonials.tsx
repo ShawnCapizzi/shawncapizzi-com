@@ -44,7 +44,7 @@ export function Testimonials() {
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">In their words</p>
           <h2 className="section-title">
-            What clients have said
+            What it&apos;s like to work together.
           </h2>
         </div>
 

@@ -6,9 +6,11 @@ import { Wordmark } from "./Wordmark";
  *
  * Contains: headline + lead + wordmark (signature) + headshot.
  *
- * The headline asserts leadership first and the working-software claim
- * second, in that order on purpose: buyers arriving from a cold email hire
- * on precedent first. The three doors live in HeroBottom, which renders
+ * The headline names the role, the niche, and the outcome in one line
+ * (September 2026). The lead adds the credential and the build claim, in
+ * that order on purpose: buyers arriving from a cold email hire on
+ * precedent first. Discipline keywords live further down the page and in
+ * the metadata, not here. The three doors live in HeroBottom, which renders
  * AFTER LogoStrip on the homepage.
  *
  * Desktop (lg and up): two columns, text left, headshot right.
@@ -36,10 +38,10 @@ export function Hero() {
               wrapper is display: contents; see the note above. */}
           <div className="contents lg:block relative z-10 lg:col-span-7 lg:order-1">
             <h1 className="headline-gleam hero-title max-w-full lg:max-w-[90%] order-1">
-              Strategic design leadership for regulated products, platforms, and AI-enabled workflows
+              Design leadership that turns complicated, regulated problems into products people trust and teams can ship.
             </h1>
             <p className="hero-lead text-pretty max-w-full lg:max-w-[90%] order-3">
-              15 years leading design and innovation across pharma, healthcare, finance, and enterprise, as well as building products, from idea to live software.
+              15 years designing and building products across pharma, healthcare, financial services, and enterprise. I research, design, prototype, build, and ship, from first sketch to live software.
             </p>
 
             <Wordmark

@@ -6,7 +6,7 @@ export function FinalCTA() {
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <h2 className="section-title">
-            Let&apos;s talk through your challenges.
+            Bring me what you&apos;re working through.
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
             30 minutes. Virtual.

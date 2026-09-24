@@ -69,13 +69,16 @@ export function Building() {
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Designed, built, and shipped solo</p>
           <h2 className="section-title">
-            Working products and prototypes, not a description of it
+            I don&apos;t just recommend what to build. I build it.
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            Live products on the same stack I use for client work: Next.js,
-            Supabase, and Vercel, with Claude Code and ChatGPT as build
-            partners and myself as the orchestrator. I also work with onshore
-            and offshore dev teams to get what you need built and shipped.
+            AI-native product design, end to end: strategy, product
+            definition, experience architecture, service design, UX, and
+            prototyping, through to functioning software. These are live, on
+            the same stack I use for client work: Next.js, Supabase, and
+            Vercel, with Claude Code and ChatGPT as build partners. I also work
+            with onshore and offshore dev teams to get what you need built and
+            shipped.
           </p>
         </div>
 

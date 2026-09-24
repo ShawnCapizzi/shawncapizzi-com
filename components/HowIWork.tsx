@@ -31,7 +31,7 @@ const MODES: Mode[] = [
     key: "leadership",
     eyebrow: "Leadership",
     title: "Embed me in the work.",
-    line: "Design leadership inside your live work, through to 0-to-1 delivery and the internal tools a department has waited years for.",
+    line: "Fractional or embedded design leadership inside your live work, through to 0-to-1 delivery and the internal tools a department has waited years for.",
   },
   {
     key: "advisory",
@@ -54,7 +54,7 @@ export function HowIWork() {
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Engagement model</p>
           <h2 className="section-title">
-            How I work with teams
+            Three ways to bring me into the work.
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
             Start by solving or defining a single business opportunity, then

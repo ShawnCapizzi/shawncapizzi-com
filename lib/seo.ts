@@ -26,9 +26,9 @@ export const LINKEDIN_URL = "https://www.linkedin.com/in/shawncapizzi";
 /** Homepage title and description. Title under 60 characters so results
  *  do not truncate it. The description carries the hero H1 and lead in about
  *  160 characters: leadership first, then the build practice. */
-export const HOME_TITLE = "Shawn Capizzi | Design Leadership for Regulated Industries";
+export const HOME_TITLE = "Shawn Capizzi | Design Leadership, Service Design, and UX";
 export const HOME_DESCRIPTION =
-  "Strategic design leadership for regulated products, platforms, and AI-enabled workflows. 15 years in pharma, healthcare, and finance, and I ship products myself.";
+  "Service design, experience architecture, UX, CX, and AI-native product design for regulated and enterprise teams. 15 years in pharma, healthcare, and finance.";
 
 export type ShareImage = { url: string; width: number; height: number; alt: string };
 

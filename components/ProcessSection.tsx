@@ -30,7 +30,7 @@ export function ProcessSection() {
         <div className="max-w-3xl mb-10 md:mb-12">
           <p className="eyebrow mb-4">The Capizzi Process</p>
           <h2 className="section-title text-text-primary">
-            The method, in print and in hand.
+            The way I work, made tangible.
           </h2>
           <p className="mt-4 md:mt-6 text-base md:text-lg text-text-secondary leading-relaxed">
             The Capizzi Process is how I work: listen first, make it visible,

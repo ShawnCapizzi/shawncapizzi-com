@@ -9,9 +9,9 @@ import Image from "next/image";
  * intent-named entry points, because a visitor does not know which audience
  * they are on arrival, but they do know what they came to do.
  *
- *   Door 1  What are you trying to launch, fix, or grow   the strategy call (the page's one ask)
- *   Door 2  See the work                /work
- *   Door 3  Tangible thinking           /thinking, the Process page
+ *   Door 1  Share your business goals             the strategy call (the page's one ask)
+ *   Door 2  The work, and what changed            /work
+ *   Door 3  A process built for getting unstuck   /thinking, the Process page
  *
  * The D&AD line stays underneath as a credential. It is shown, not claimed.
  *
@@ -36,8 +36,8 @@ const DOORS: Door[] = [
   {
     key: "problem",
     eyebrow: "Start here",
-    title: "What are you trying to launch, fix, or grow?",
-    body: "Modernize an outdated experience, bring an idea to market, make your messaging drive action, or turn customer behavior and data into business value. Start with the business problem. I'll bring your team and stakeholders together to define what comes next.",
+    title: "Share your business goals or roadblocks.",
+    body: "A stuck flow, a message that isn't getting the action you want, or customer signals nobody tracks. I find the opportunities, drive product to market, and build feedback loops that turn customer data into actionable business intelligence.",
     cta: "Book a Strategy Call",
     href: CAL_URL,
     external: true,
@@ -46,15 +46,15 @@ const DOORS: Door[] = [
   {
     key: "work",
     eyebrow: "Proof",
-    title: "See the work.",
+    title: "The work, and what changed because of it.",
     body: "Six case studies, from enterprise pharma governance to a Bloomberg terminal CRM, and the two products I built and shipped myself.",
-    cta: "See the case studies",
+    cta: "See what changed",
     href: "/work",
   },
   {
     key: "thinking",
     eyebrow: "Method",
-    title: "Tangible thinking.",
+    title: "A process built for getting unstuck.",
     body: "I took my operations and beliefs and put them to paper. What I bring to every discussion, now as a system: digital, printed, and in your pocket.",
     cta: "See the Process",
     href: "/thinking",
