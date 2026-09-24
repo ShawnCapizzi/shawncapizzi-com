@@ -37,7 +37,7 @@ const DOORS: Door[] = [
     key: "problem",
     eyebrow: "Start here",
     title: "What are you trying to launch, fix, or grow?",
-    body: "An outdated, stalled experience, an idea that needs to go to market, messaging that's not driving action, or customer flows and data that aren't yet put to profitable use. Start with the business problem. I'll help figure out what comes next.",
+    body: "Modernize an outdated experience, bring an idea to market, make your messaging drive action, or turn customer behavior and data into business value. Start with the business problem. I'll bring your team and stakeholders together to define what comes next.",
     cta: "Book a Strategy Call",
     href: CAL_URL,
     external: true,
