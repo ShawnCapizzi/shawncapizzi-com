@@ -9,7 +9,7 @@ import Image from "next/image";
  * intent-named entry points, because a visitor does not know which audience
  * they are on arrival, but they do know what they came to do.
  *
- *   Door 1  Share your business goals   the strategy call (the page's one ask)
+ *   Door 1  What are you trying to launch, fix, or grow   the strategy call (the page's one ask)
  *   Door 2  See the work                /work
  *   Door 3  Tangible thinking           /thinking, the Process page
  *
@@ -36,8 +36,8 @@ const DOORS: Door[] = [
   {
     key: "problem",
     eyebrow: "Start here",
-    title: "Share your business goals or roadblocks.",
-    body: "A stuck flow, a message that isn't getting the action you want, or customer signals nobody tracks. I find the opportunities, drive product to market, and build feedback loops that turn customer data into actionable business intelligence.",
+    title: "What are you trying to launch, fix, or grow?",
+    body: "An outdated, stalled experience, an idea that needs to go to market, messaging that's not driving action, or customer flows and data that aren't yet put to profitable use. Start with the business problem. I'll help figure out what comes next.",
     cta: "Book a Strategy Call",
     href: CAL_URL,
     external: true,
