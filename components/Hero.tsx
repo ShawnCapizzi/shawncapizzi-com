@@ -38,7 +38,7 @@ export function Hero() {
               wrapper is display: contents; see the note above. */}
           <div className="contents lg:block relative z-10 lg:col-span-7 lg:order-1">
             <h1 className="headline-gleam hero-title max-w-full lg:max-w-[90%] order-1">
-              Design leadership that turns complicated, regulated problems into products people trust and teams can ship.
+              Strategic design leadership that turns complex, regulated problems into trusted experiences that ship.
             </h1>
             <p className="hero-lead text-pretty max-w-full lg:max-w-[90%] order-3">
               15 years designing and building products across pharma, healthcare, financial services, and enterprise. I research, design, prototype, build, and ship, from first sketch to live software.
