@@ -39,7 +39,7 @@ export function Hero() {
               Strategic design leadership for regulated products, platforms, and AI-enabled workflows
             </h1>
             <p className="hero-lead text-pretty max-w-full lg:max-w-[90%] order-3">
-              15 years leading design and innovation across pharma, healthcare, financial services, and enterprise, and I still build. I design and ship my own products, from first sketch to live software.
+              15 years leading design and innovation across pharma, healthcare, financial services, and enterprise, and I still build my own products, from first sketch to live software.
             </p>
 
             <Wordmark
