@@ -38,8 +38,8 @@ export function Hero() {
             <h1 className="headline-gleam hero-title max-w-full lg:max-w-[90%] order-1">
               Strategic design leadership for regulated products, platforms, and AI-enabled workflows
             </h1>
-            <p className="hero-lead max-w-full lg:max-w-[90%] order-3">
-              15 years leading design and innovation across pharma, healthcare, financial services, and enterprise. I can also design, build, and ship products myself, so the thinking arrives tangible, not a crumb of it.
+            <p className="hero-lead text-pretty max-w-full lg:max-w-[90%] order-3">
+              15 years leading design and innovation across pharma, healthcare, financial services, and enterprise, and I still build. I design and ship my own products, from first sketch to live software.
             </p>
 
             <Wordmark
