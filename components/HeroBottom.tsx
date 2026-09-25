@@ -11,7 +11,7 @@ import Image from "next/image";
  *
  *   Door 1  Share your business goals             the strategy call (the page's one ask)
  *   Door 2  The work, and what changed            /work
- *   Door 3  A process built for getting unstuck   /thinking, the Process page
+ *   Door 3  The thinking I bring, as a system     /thinking, the Process page
  *
  * The D&AD line stays underneath as a credential. It is shown, not claimed.
  *
@@ -54,8 +54,8 @@ const DOORS: Door[] = [
   {
     key: "thinking",
     eyebrow: "Method",
-    title: "A process built for getting unstuck.",
-    body: "I took my operations and beliefs and put them to paper. What I bring to every discussion, now as a system: digital, printed, and in your pocket.",
+    title: "The thinking I bring to every discussion, built into a flexible system.",
+    body: "I brought the way I think, collaborate, and make decisions into a system teams can use, from seasoned strategy and product teams to those new to the process. Digital, printed, and in your pocket.",
     cta: "See the Process",
     href: "/thinking",
   },
@@ -77,7 +77,7 @@ export function HeroBottom() {
                 <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
                   {door.eyebrow}
                 </p>
-                <h2 className="card-title mt-3 text-text-primary">
+                <h2 className="card-title mt-3 text-text-primary text-balance">
                   {door.title}
                 </h2>
                 <p className="mt-3 text-sm md:text-base text-text-secondary leading-relaxed text-pretty flex-1">
