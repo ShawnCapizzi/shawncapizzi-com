@@ -41,7 +41,8 @@ export function Hero() {
               Design leadership that turns regulated complexity into trusted experiences that go to market faster.
             </h1>
             <p className="hero-lead text-balance max-w-full lg:max-w-[90%] order-3">
-              15 years across pharma, healthcare, financial services, and enterprise. I diagnose, design, prototype, and build. Idea to launch.
+              15 years across pharma, healthcare, financial services, and enterprise. I diagnose, design, prototype, and build.{" "}
+              <span className="font-semibold text-text-primary">Idea to launch.</span>
             </p>
 
             <Wordmark
