@@ -6,6 +6,7 @@ import { BrowserFrame } from "@/components/BrowserFrame";
 import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
 import { CollapsibleSection } from "@/components/CollapsibleSection";
 import { JsonLd } from "@/components/JsonLd";
+import { KeepHyphens } from "@/components/KeepHyphens";
 
 const CAL_URL = "https://cal.com/capizzi/30min";
 
@@ -143,7 +144,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
 
           <p className="eyebrow mb-3">{props.eyebrow}</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
-            {props.title}
+            <KeepHyphens>{props.title}</KeepHyphens>
           </h1>
           <p className="hero-lead max-w-3xl">
             {props.subtitle}

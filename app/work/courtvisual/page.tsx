@@ -6,14 +6,14 @@ import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
 const META = {
   path: "/work/courtvisual",
-  title: "CourtVisual: Scoring Sports by What's Worth Watching",
+  title: "CourtVisual: Which Game Is Worth Your Night?",
   description:
     "A multi-sport app that scores how worth watching tonight's games are, tuned to your taste, then points you where to watch and how to get in. Product, build, and go-to-market shipped solo, concept to live PWA, with AI as the partner.",
   image: {
     url: "/images/og/courtvisual.jpg",
     width: 1200,
     height: 630,
-    alt: "CourtVisual: Scoring Sports by What's Worth Watching, a case study by Shawn Capizzi",
+    alt: "CourtVisual: Which game is worth your night? A case study by Shawn Capizzi",
   },
 };
 
@@ -27,7 +27,7 @@ export default function Page() {
       structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
       title="CourtVisual"
-      subtitle="A multi-sport app that scores how worth watching tonight's games are, tuned to you, then sends you where to watch and how to get in. Product, build, and go-to-market run solo, concept to live PWA, with AI as the build partner."
+      subtitle="Which game is worth your night? A multi-sport app that scores tonight's games 0 to 10, tuned to you, then shows where to watch and how to get in. Designed, built, and shipped solo, concept to live PWA, with AI as the build partner."
       heroImage={`${ASSET_BASE}/02-game-card-score-ring.png`}
       heroImageAlt="CourtVisual home screen: a Knicks game scored 9.3 out of 10, with the team and sport picker"
       heroSlot={

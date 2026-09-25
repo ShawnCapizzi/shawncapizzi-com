@@ -5,14 +5,14 @@ import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
 const META = {
   path: "/work/enterprise-financial-services-crm",
-  title: "Enterprise Financial Services CRM Transformation",
+  title: "Bloomberg CRM Redesign: $1.5M+ Annual ROI",
   description:
     "Redesigning rep workflows inside a terminal-driven CRM environment used company-wide. Architectural inquiry across three salesperson types. $1.5M+ in annual ROI.",
   image: {
     url: "/images/og/enterprise-financial-services-crm.jpg",
     width: 1200,
     height: 630,
-    alt: "Enterprise Financial Services CRM Transformation, a case study by Shawn Capizzi",
+    alt: "Redesigning a terminal-based CRM to return $1.5M+ annually, a case study by Shawn Capizzi",
   },
 };
 
@@ -26,8 +26,8 @@ export default function Page() {
     <CaseStudyLayout
       structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
-      title="Enterprise Financial Services CRM Transformation"
-      subtitle="Redesigning rep workflows inside a terminal-driven CRM environment used company-wide."
+      title="Redesigning a terminal-based CRM to return $1.5M+ annually"
+      subtitle="A faster, clearer workflow built around the way three distinct salesperson types actually worked."
       heroImage={`${ASSET_BASE}/01-hero-final-person-view-terminal.png`}
       heroImageAlt="Final Person View in terminal CRM environment"
       metadata={[

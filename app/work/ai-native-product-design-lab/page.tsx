@@ -7,14 +7,14 @@ import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
 const META = {
   path: "/work/ai-native-product-design-lab",
-  title: "AI-Native Product Design Lab",
+  title: "AI-Native Product Design: Idea to In-Market",
   description:
     "How I design, build, and ship with AI: production software designed and shipped solo, working prototypes in days, and a Figma plugin in the Community.",
   image: {
     url: "/images/og/ai-native-product-design-lab.jpg",
     width: 1200,
     height: 630,
-    alt: "AI-Native Product Design Lab, a case study by Shawn Capizzi",
+    alt: "How I use AI to get from idea to in-market software faster, a case study by Shawn Capizzi",
   },
 };
 
@@ -67,8 +67,8 @@ export default function Page() {
     <CaseStudyLayout
       structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
-      title="AI-Native Product Design Lab"
-      subtitle="How I design, build, and ship with AI. Working prototypes in days, and production software shipped solo, built on years of bringing teams together."
+      title="How I use AI to get from idea to in-market software faster"
+      subtitle="AI-native product design in practice: production software shipped solo, working prototypes in days, and a Figma plugin in the Community."
       heroImage={`${ASSET_BASE}/01-hero-ai-native-design-lab.png`}
       heroImageAlt="AI-Native Design Lab, disease-first patient support hero"
       metadata={[

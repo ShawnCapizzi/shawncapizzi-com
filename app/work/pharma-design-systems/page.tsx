@@ -7,14 +7,14 @@ import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
 const META = {
   path: "/work/pharma-design-systems",
-  title: "Pharma Design Systems & Multi-Brand Architecture",
+  title: "Pharma Design Systems for 70+ Brands",
   description:
     "Governing 70+ product brands with 3 design systems. $3.5M+ in digital transformation, three enterprise design systems serving HCP, DTC, and patient audiences, and an industry-first mobile wallet integration.",
   image: {
     url: "/images/og/pharma-design-systems.jpg",
     width: 1200,
     height: 630,
-    alt: "Pharma Design Systems & Multi-Brand Architecture, a case study by Shawn Capizzi",
+    alt: "Bringing 70+ pharma brands under one governance model, a case study by Shawn Capizzi",
   },
 };
 
@@ -25,8 +25,8 @@ export default function Page() {
     <CaseStudyLayout
       structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
-      title="Pharma Design Systems & Multi-Brand Architecture"
-      subtitle="Governing 70+ product brands across 3 design systems and $3.5M+ in digital transformation."
+      title="Bringing 70+ pharma brands under one governance model"
+      subtitle="Three design systems for HCP, DTC, and patient audiences, and $3.5M+ in digital transformation."
       heroImage="/images/hero/consumer-care-hub-hero-balanced.gif"
       heroImageAlt="Consumer care hub homepage. A new offer to help Americans save."
       metadata={[

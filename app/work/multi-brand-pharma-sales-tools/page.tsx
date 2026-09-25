@@ -7,14 +7,14 @@ import { caseStudyGraph, pageMetadata } from "@/lib/seo";
 
 const META = {
   path: "/work/multi-brand-pharma-sales-tools",
-  title: "Multi-Brand Sales Design System",
+  title: "Pharma Sales Design System, 92% Adoption",
   description:
     "A modular sales design system consolidating 12 fragmented tools across a multi-brand neurological portfolio. 33 reusable components. Adoption from 65% to 92%.",
   image: {
     url: "/images/og/multi-brand-pharma-sales-tools.jpg",
     width: 1200,
     height: 630,
-    alt: "Multi-Brand Sales Design System, a case study by Shawn Capizzi",
+    alt: "12 fragmented sales tools updated to one optimized new design system, a case study by Shawn Capizzi",
   },
 };
 
@@ -28,8 +28,8 @@ export default function Page() {
     <CaseStudyLayout
       structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
-      title="Multi-Brand Sales Design System"
-      subtitle="Consolidating 12 fragmented tools into 33 reusable components across a multi-brand neurological portfolio. Adoption climbed from 65% to 92%."
+      title="12 fragmented sales tools updated to one optimized new design system"
+      subtitle="Adoption rose from 65% to 92%, while search time fell 40%."
       heroImage={`${ASSET_BASE}/01-hero-lead-brand-wireframe-to-product.png`}
       heroImageAlt="Lead MS brand homepage wireframe alongside the finished product"
       metadata={[

@@ -3,19 +3,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { CTACards } from "@/components/CTACards";
+import { KeepHyphens } from "@/components/KeepHyphens";
 
 export const metadata = pageMetadata({
   path: "/work",
-  title: "Selected Work",
+  title: "Work: Service Design and UX Case Studies",
   description:
-    "Fifteen years of enterprise experience design across pharma, healthcare, and finance. Engagements where the structure of the experience changed the structure of the business outcome.",
+    "Case studies in service design, experience architecture, UX, CX, design systems, and AI-native product design across pharma, healthcare, and finance.",
 });
 
 const CASE_STUDIES = [
   {
     slug: "pharma-design-systems",
     eyebrow: "Multi-Brand · 3x Design Systems · Governance",
-    title: "Building digital governance across 70+ therapeutic brands",
+    title: "Bringing 70+ pharma brands under one governance model",
     description:
       "$3.5M+ in digital transformation. Three enterprise design systems. Industry-first mobile wallet integration for patient medication information.",
     image: "/images/hero/consumer-care-hub-hero-balanced.gif",
@@ -23,8 +24,7 @@ const CASE_STUDIES = [
   {
     slug: "enterprise-financial-services-crm",
     eyebrow: "Bloomberg · Financial services · Enterprise CRM",
-    title:
-      "Redesigning rep workflows in a terminal-driven CRM environment",
+    title: "Redesigning a terminal-based CRM to return $1.5M+ annually",
     description:
       "$1.5M+ in annual ROI. Architectural inquiry across three rep types. Faster scanability, quicker decisions, measurable time-in-task reduction across the rep experience.",
     image:
@@ -52,8 +52,7 @@ const CASE_STUDIES = [
   {
     slug: "multi-brand-pharma-sales-tools",
     eyebrow: "Multi-Brand Design System · Veeva + Salesforce",
-    title:
-      "A modular sales design system that supports a multi-brand product portfolio",
+    title: "12 fragmented sales tools updated to one optimized new design system",
     description:
       "12 sales tools consolidated into 33 reusable components. Adoption from 65% to 92%. 40% reduction in search time during HCP conversations.",
     image:
@@ -62,7 +61,7 @@ const CASE_STUDIES = [
   {
     slug: "ai-native-product-design-lab",
     eyebrow: "Solo · AI Native Design Lab",
-    title: "Building an AI-native product design lab",
+    title: "How I use AI to get from idea to in-market software faster",
     description:
       "A working AI-native product design practice: UXR tools, prototype agents, healthcare-first applications. Vendor-agnostic AI advisory grounded in hands-on work.",
     image:
@@ -82,12 +81,13 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Work</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
-            Engagements where experience structure changed the business outcome.
+            The work, and what changed because of it.
           </h1>
           <p className="hero-lead max-w-3xl">
-            Fifteen years of enterprise experience design across pharma, healthcare,
-            and finance, alongside live products I designed, built, and shipped
-            myself.
+            Fifteen years of service design, experience architecture, product
+            strategy, UX, CX, and design systems on enterprise platforms in
+            pharma, healthcare, and finance. Plus AI-native products I designed,
+            built, and shipped myself.
           </p>
         </div>
       </section>
@@ -115,7 +115,7 @@ export default function Page() {
                 <div className="p-7 md:p-10">
                   <p className="eyebrow mb-4">{cs.eyebrow}</p>
                   <h2 className="card-title text-text-primary group-hover:text-link transition-colors">
-                    {cs.title}
+                    <KeepHyphens>{cs.title}</KeepHyphens>
                   </h2>
                   <p className="mt-4 text-text-secondary leading-relaxed">
                     {cs.description}
