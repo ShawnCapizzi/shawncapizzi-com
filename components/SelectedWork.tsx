@@ -58,13 +58,16 @@ export function SelectedWork() {
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Case studies</p>
           <h2 className="section-title">
-            The work, and the impact behind it.
+            My work, and the difference it made.
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            Governance across 70+ pharma brands, a D&amp;AD-recognized patient
-            navigation platform, and a terminal CRM with $1.5M+ in annual ROI.
-            Service design, design systems, and enterprise UX, judged by what
-            changed.
+          <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            I&apos;ve helped solve digital business problems large and small,
+            for different audiences and across many touchpoints, nationally
+            and globally, from design governance and patient navigation to
+            enterprise platforms and customer-facing products. Campaigns,
+            websites, CX, service design, UI, design systems, enterprise UX,
+            and plenty in between. Different problems, different teams, same
+            question: did it make a difference?
           </p>
         </div>
 
