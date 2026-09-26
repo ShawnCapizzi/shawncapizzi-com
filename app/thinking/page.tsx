@@ -41,16 +41,23 @@ const GOV_APP_URL = "https://governance-deck-tau.vercel.app";
 
 const PUBLISHED = [
   {
-    title: "Beyond User Flows: Agentic AI is Rewriting UX Fundamentals",
-    date: "October 2025",
-    source: "Medium",
-    url: "https://medium.com/p/e335c1789bc7",
+    title:
+      "From Assumptions to Innovation: Why Mental Models Are a Strategic Advantage",
+    url: "https://www.linkedin.com/pulse/from-assumptions-innovation-why-mental-models-shawn-michael-capizzi-buqwe",
+  },
+  {
+    title:
+      "Agentic AI Starter Kit: Turn the Data You Already Have Into Intelligent Experiences",
+    url: "https://www.linkedin.com/pulse/agentic-ai-starter-kit-turn-data-you-already-have-capizzi-yi5ie",
+  },
+  {
+    title:
+      "66% of HCPs Now Use AI for Clinical Questions. Is Your Brand's Content Ready?",
+    url: "https://www.linkedin.com/pulse/66-hcps-now-use-ai-clinical-questions-your-brands-content-capizzi-p8wpe",
   },
   {
     title:
       "The FDA's New Digital Era: Why Pharma's Future Belongs to Honest, Human-Centered Experience Design",
-    date: "November 2025",
-    source: "LinkedIn",
     url: "https://www.linkedin.com/pulse/fdas-new-digital-era-why-pharmas-future-belongs-honest-capizzi-lyjne",
   },
 ];
@@ -228,9 +235,12 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
             <div>
               <p className="eyebrow mb-4">Published</p>
-              <h2 className="section-title mb-8">
-                Two essays, elsewhere
+              <h2 className="section-title text-balance">
+                Writing on design, AI, and healthcare.
               </h2>
+              <p className="mt-4 mb-8 text-lg text-text-secondary leading-relaxed">
+                Ideas from the work, shared with 5,000+ LinkedIn followers.
+              </p>
               <ul className="divide-y divide-border-subtle border-y border-border-subtle">
                 {PUBLISHED.map((e) => (
                   <li key={e.url}>
@@ -241,7 +251,7 @@ export default function Page() {
                       className="group block py-5"
                     >
                       <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
-                        {e.date} · {e.source}
+                        LinkedIn
                       </p>
                       <p className="mt-2 text-base md:text-lg font-medium text-text-primary group-hover:text-link transition-colors leading-snug">
                         {e.title}
@@ -252,10 +262,14 @@ export default function Page() {
               </ul>
             </div>
             <div>
-              <p className="eyebrow mb-4">In person</p>
-              <h2 className="section-title mb-8">
-                Hear it, not just read it
+              <p className="eyebrow mb-4">Talks</p>
+              <h2 className="section-title text-balance">
+                Experience design, no-code, and the beginnings of AI.
               </h2>
+              <p className="mt-4 mb-8 text-lg text-text-secondary leading-relaxed">
+                A 2023 EVERSANA Intouch talk on how no-code tools and emerging
+                AI were changing the way we design experiences.
+              </p>
               <LiteYouTube
                 videoId="iUvwk-KoA7s"
                 title="Shawn Capizzi on experience design and AI"
