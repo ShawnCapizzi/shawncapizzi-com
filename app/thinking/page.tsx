@@ -160,16 +160,27 @@ export default function Page() {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-14">
-            <p className="eyebrow mb-4">In print and in hand</p>
-            <h2 className="section-title">
-              The argument, and the instrument.
+            <p className="eyebrow mb-4">The Process, in two forms</p>
+            <h2 className="section-title text-balance">
+              The Capizzi Process, in print and in practice.
             </h2>
-            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              Two expressions of the same Process. Seeing Past the Cage
-              develops the ideas in full; the Clarity Cards help people apply
-              them in discussions and decisions, four suits of thirteen plus
-              two wildcards. Printed editions of both are coming.
-            </p>
+            <div className="mt-6 space-y-4 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+              <p>
+                <em>Seeing Past the Cage</em> develops the thinking behind the
+                process and shares ways teams can approach communication design
+                and problem-solving with more clarity, shaped by 15+ years
+                across creative, strategy, marketing, and design.
+              </p>
+              <p>
+                The Clarity Cards are a shorthand for the kinds of questions I
+                ask in working sessions. They help teams stay focused,
+                challenge assumptions, and move discussion toward decisions,
+                because decisions are what move the work forward. They work for
+                marketing and design, but also anywhere people need to think
+                through a problem together.
+              </p>
+              <p>Printed editions of both are coming.</p>
+            </div>
           </div>
 
           <BookAndCards
