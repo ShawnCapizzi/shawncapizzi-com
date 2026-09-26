@@ -5,9 +5,9 @@ import { AccordionDetail } from "@/components/AccordionDetail";
 
 export const metadata = pageMetadata({
   path: "/engagements",
-  title: "Engagements: Embedded Leadership, Advisory, and On-Call",
+  title: "Engagements: Fractional Design Leadership",
   description:
-    "Three ways to engage senior product and experience strategy leadership: embedded leadership, strategic advisory, and on-call retainer. Built for regulated and enterprise teams.",
+    "Three ways to bring me in: fractional or embedded design leadership, design advisory on a defined problem, or on-call senior judgment in regulated industries.",
 });
 
 const CAL_URL = "https://cal.com/capizzi/30min";
@@ -32,27 +32,30 @@ const WAYS = [
   {
     id: "leadership",
     name: "Leadership",
-    tagline: "Embedded senior design and experience leadership.",
+    title: "Embed me in the work.",
+    tagline: "Fractional or embedded design leadership inside your team.",
     serves:
       "Agencies and in-house pharma, healthcare, start-up, and enterprise teams that need senior UX, CX, and content leadership inside an active program.",
     contribute:
-      "Experience strategy, information architecture, content frameworks, and regulatory-ready flows, worked hands-on with PMs, creative, copy, and engineering.",
+      "Experience strategy, service design, information architecture, content frameworks, and regulatory-ready flows, worked hands-on with PMs, creative, copy, and engineering.",
     start:
       "A strategy call, then scoping by program, duration, and how I join the team.",
   },
   {
     id: "advisory",
     name: "Advisory",
-    tagline: "Focused guidance on a defined opportunity, challenge, or decision.",
+    title: "Hire me to advise.",
+    tagline: "Design advisory on one defined opportunity, challenge, or decision.",
     serves:
       "VPs, directors, and senior leaders who need senior counsel on one defined question, without a full-time hire.",
     contribute:
-      "A diagnostic, clear options, and a decision-ready deliverable: a Strategic Snapshot, an Engagement Sprint, or an AI Opportunity Diagnostic.",
+      "A diagnostic, clear options, and a deliverable you can act on: a Strategic Snapshot, an Engagement Sprint, or an AI Opportunity Diagnostic.",
     start: "A strategy call to define the question, then a scoped engagement.",
   },
   {
     id: "oncall",
     name: "On Call",
+    title: "Keep me on call.",
     tagline: "Ongoing access to a senior thinking partner.",
     serves:
       "Leaders running multi-quarter initiatives who want senior judgment available when decisions land.",
@@ -159,13 +162,11 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Engagements</p>
           <h1 className="headline-static hero-title max-w-4xl">
-            Three flexible ways to bring in senior depth, scaled to your needs, timing, and roadmap.
+            Three ways to bring me into the work.
           </h1>
           <p className="hero-lead max-w-3xl">
-            I take on a small number of teams navigating complex content and
-            experience decisions inside regulated and enterprise
-            organizations. Choose the way of working that fits now, and move
-            between them as your needs change.
+            Embed me with the team. Bring me in for a defined problem. Or keep
+            me close for the decisions that need senior judgment.
           </p>
         </div>
       </section>
@@ -221,7 +222,8 @@ export default function Page() {
                 className="flex flex-col p-7 md:p-8 rounded-2xl card-surface border border-border-default"
               >
                 <p className="eyebrow mb-3">{way.name}</p>
-                <h3 className="card-title text-text-primary">{way.tagline}</h3>
+                <h3 className="card-title text-text-primary">{way.title}</h3>
+                <p className="mt-2 text-base text-text-secondary leading-relaxed">{way.tagline}</p>
                 <dl className="mt-6 space-y-5 flex-1">
                   <div>
                     <dt className="metadata-label mb-1.5">Who it serves</dt>
