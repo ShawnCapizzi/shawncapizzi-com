@@ -51,7 +51,7 @@ const STATIONS: Station[] = [
     name: "Questions",
     move: MOVES[0],
     job: "Sharpen the problem with the three essential questions. Problem: what is actually stuck? State: where are we now, honestly? Timeline: what has to be true, by when?",
-    line: "Memory is generous. Baselines are less forgiving.",
+    line: "Memory is generous. Hard metrics are less forgiving.",
     feeds: [
       "A problem statement in one clear sentence",
       "A recorded current-state baseline",
