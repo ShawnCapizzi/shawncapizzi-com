@@ -17,9 +17,10 @@ import { BookAndCards } from "@/components/BookAndCards";
  *   - the standalone Process site, whose 1,707 words are now the printed
  *     manual this page offers by email, with only the loop carried over
  *
- * Order is the argument: the method, the method running as software, the
- * method as objects you can hold, then the ways to get more of it. The
- * strategy call closes, once.
+ * Order is the argument (reordered September 2026): the method, the loop,
+ * the method as objects you can hold (book and cards), the method running
+ * as software, then the ways to take some of it with you, published
+ * writing and a talk as credibility, and the strategy call closes, once.
  *
  * Photos: the book and cards figures come from components/BookAndCards.tsx,
  * shared with the homepage, which documents both images.
@@ -105,11 +106,45 @@ export default function Page() {
         </div>
       </section>
 
+      {/* IN PRINT AND IN HAND */}
+      <section className="py-16 md:py-24 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <div className="max-w-3xl mb-12 md:mb-14">
+            <p className="eyebrow mb-4">The Process, in two forms</p>
+            <h2 className="section-title text-balance">
+              The Capizzi Process, in print and in practice.
+            </h2>
+            <div className="mt-6 space-y-4 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+              <p>
+                <em>Seeing Past the Cage</em> develops the thinking behind the
+                process and shares ways teams can approach communication design
+                and problem-solving with more clarity, shaped by 15+ years
+                across creative, strategy, marketing, and design.
+              </p>
+              <p>
+                The Clarity Cards are a shorthand for the kinds of questions I
+                ask in working sessions. They help teams stay focused,
+                challenge assumptions, and move discussion toward decisions,
+                because decisions are what move the work forward. They work for
+                marketing and design, but also anywhere people need to think
+                through a problem together.
+              </p>
+              <p>Printed editions of both are coming.</p>
+            </div>
+          </div>
+
+          <BookAndCards
+            bookLink={{ href: "/book/chapter-1", label: "Read chapter one free" }}
+            cardsLink={{ href: "/#clarity-cards", label: "Try the deck" }}
+          />
+        </div>
+      </section>
+
       {/* RUNNING AS SOFTWARE */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-14">
-            <p className="eyebrow mb-4">In the app</p>
+            <p className="eyebrow mb-4">Working software</p>
             <h2 className="section-title">
               The Process, running as software
             </h2>
@@ -153,40 +188,6 @@ export default function Page() {
               </span>
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* IN PRINT AND IN HAND */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="max-w-3xl mb-12 md:mb-14">
-            <p className="eyebrow mb-4">The Process, in two forms</p>
-            <h2 className="section-title text-balance">
-              The Capizzi Process, in print and in practice.
-            </h2>
-            <div className="mt-6 space-y-4 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
-              <p>
-                <em>Seeing Past the Cage</em> develops the thinking behind the
-                process and shares ways teams can approach communication design
-                and problem-solving with more clarity, shaped by 15+ years
-                across creative, strategy, marketing, and design.
-              </p>
-              <p>
-                The Clarity Cards are a shorthand for the kinds of questions I
-                ask in working sessions. They help teams stay focused,
-                challenge assumptions, and move discussion toward decisions,
-                because decisions are what move the work forward. They work for
-                marketing and design, but also anywhere people need to think
-                through a problem together.
-              </p>
-              <p>Printed editions of both are coming.</p>
-            </div>
-          </div>
-
-          <BookAndCards
-            bookLink={{ href: "/book/chapter-1", label: "Read chapter one free" }}
-            cardsLink={{ href: "/#clarity-cards", label: "Try the deck" }}
-          />
         </div>
       </section>
 
