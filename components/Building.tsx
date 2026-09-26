@@ -67,18 +67,19 @@ export function Building() {
     <section className="py-24 md:py-32 border-t border-border-subtle">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
-          <p className="eyebrow mb-4">Designed, built, and shipped solo</p>
-          <h2 className="section-title">
-            I don&apos;t just recommend what to build. I build it.
+          <p className="eyebrow mb-4">AI-native product design · Working products</p>
+          <h2 className="section-title text-balance">
+            I build to see what&apos;s possible, and bring the learning into
+            the work.
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            AI-native product design, end to end: strategy, product
-            definition, experience architecture, service design, UX, and
-            prototyping, through to functioning software. These are live, on
-            the same stack I use for client work: Next.js, Supabase, and
-            Vercel, with Claude Code and ChatGPT as build partners. I also work
-            with onshore and offshore dev teams to get what you need built and
-            shipped.
+          <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            AI has expanded how far, and how quickly, we can take an idea. I
+            use working prototypes and live products to get clients, teams,
+            and collaborators looking at the same problem, testing
+            assumptions, finding efficiencies, and spotting opportunities
+            while there&apos;s still time to shape the roadmap. Making the idea
+            tangible gives everyone something concrete to react to, discuss,
+            and improve together.
           </p>
         </div>
 
