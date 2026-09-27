@@ -108,6 +108,31 @@ export const CTA_CARDS: Record<string, CTACard> = {
     imageAlt: "Shawn Capizzi",
     imageFit: "contain",
   },
+  /* About page versions (September 2026): the About page carries its own
+     copy for these two cards, so the shared "book" and "engagements" cards
+     on other pages stay as they are. Same images and destinations. */
+  bookAbout: {
+    eyebrow: "Read",
+    title: "Seeing Past the Cage",
+    description:
+      "My upcoming book on communication design, problem-solving, and the lessons behind the Capizzi Process, shaped by 15+ years across creative, strategy, marketing, and design.",
+    cta: "Read Chapter One",
+    href: "/book/chapter-1",
+    thumb: "book-reader",
+    image: "/images/book-reader.png",
+    imageAlt: "Seeing Past the Cage, Chapter 1 in the reader",
+    imageAspect: "aspect-[4/3]",
+  },
+  engagementsAbout: {
+    eyebrow: "Engagement modes",
+    title: "Ways to work together",
+    description:
+      "Embedded leadership, focused advisory, or on call when the work needs another experienced point of view.",
+    cta: "See how I work",
+    href: "/engagements",
+    image: "/images/engagements/needs-framework-sketch.jpg",
+    imageAlt: "Hand-drawn framework: user need and want flowing down through company to users, business, and resources",
+  },
   engagements: {
     eyebrow: "Engagement modes",
     title: "Three flexible ways to work together",

@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { pageMetadata, profilePage } from "@/lib/seo";
 import { CTACards } from "@/components/CTACards";
 import { Colophon } from "@/components/Colophon";
+import { KeepHyphens } from "@/components/KeepHyphens";
 
 export const metadata = pageMetadata({
   path: "/about",
@@ -20,7 +21,7 @@ export default function Page() {
   return (
     <article>
       <JsonLd data={profilePage()} />
-      {/* Rim-shimmer CSS — scoped to .capizzi-rim-card class.
+      {/* Rim-shimmer CSS, scoped to .capizzi-rim-card class.
           Color matches nav shimmer (brand-blue #4F46E5). Opacity dims
           across three passes (0.95 → 0.55 → 0.25 → 0) mirroring the
           nav shimmer's three-pass falloff. */}
@@ -63,65 +64,41 @@ export default function Page() {
         }
       `}</style>
 
-      {/* HERO */}
+      {/* HERO: how the work moved upstream. Rewritten September 2026 in
+          Shawn's words; the portrait and its rim shimmer are unchanged. */}
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-20">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">About</p>
 
-          {/* Full-width declarative headline */}
           <div className="max-w-4xl">
             <h1 className="headline-static hero-title text-balance">
-              I help regulated and enterprise teams make complex work clearer, more trusted, and easier to ship.
+              I found I could add the most value before the creative work officially started.
             </h1>
-            <p className="hero-lead max-w-3xl">
-              Usually that means structuring dense financial or scientific data
-              and the regulated communication around it. Sometimes it&apos;s
-              shipping a product, winning a pitch, or simplifying a user flow.
+            <p className="hero-lead max-w-3xl text-pretty">
+              I studied Communications Design and Advertising/Marketing at
+              Pratt and started my career in identity, visual design, and
+              creative direction.
             </p>
           </div>
 
-          {/* Body copy + portrait, side-by-side on desktop; stacks on mobile.
-              On desktop the photo container is sized so its height matches
-              the text block on the left (~316px at text-xl leading-relaxed,
-              two paragraphs). At aspect-[340/430], a 250px max-width yields
-              ~316px height, the columns now read as a balanced pair rather
-              than the photo dominating. The source is 1:1, so object-cover
-              shows the full vertical frame and crops the side padding evenly;
-              object-center is correct. */}
+          {/* Body copy + portrait, side-by-side on desktop; stacks on mobile,
+              portrait first. */}
           <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-center">
-            <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center">
-              <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-                I&apos;m a strategic experience design leader with 15+ years
-                working at the intersection of UX, CX, product, and regulated
-                digital systems. The work I do best is the work that&apos;s
-                hard to staff full-time but too important to skip. Senior
-                input on the moments where the structure of the experience
-                changes the structure of the business outcome.
+            <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+              <p>
+                The more meetings, planning sessions, and project kickoffs I
+                was part of, the more I saw opportunities earlier in the
+                process, before the brief was locked and before creative
+                began. I became drawn to the research, framing, and definition
+                work that helps teams understand the problem, find the
+                opportunity, and set a clearer direction from the start.
               </p>
-              <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-                I work with pharma, biotech, fintech, software, agency, and
-                enterprise teams, embedded as{" "}
-                <Link
-                  href="/engagements#leadership"
-                  className="text-link hover:text-link-hover transition-colors"
-                >
-                  senior leadership
-                </Link>
-                , on{" "}
-                <Link
-                  href="/engagements#advisory"
-                  className="text-link hover:text-link-hover transition-colors"
-                >
-                  advisory engagements
-                </Link>
-                , or{" "}
-                <Link
-                  href="/engagements#oncall"
-                  className="text-link hover:text-link-hover transition-colors"
-                >
-                  on call
-                </Link>{" "}
-                between the big decisions.
+              <p>
+                That interest pulled me deeper into UX, CX, service design,
+                experience architecture, product strategy, design systems, and
+                design leadership. Today, much of my work sits where business
+                goals, customer needs, technology, and the realities of getting
+                something into market meet.
               </p>
             </div>
 
@@ -142,42 +119,124 @@ export default function Page() {
         </div>
       </section>
 
-      {/* THESIS */}
+      {/* HARD TO STAFF: why a client brings Shawn in. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
-            What I believe about this work
+          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
+            <KeepHyphens>The work that&apos;s hard to staff full-time, but too important to miss.</KeepHyphens>
           </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
+          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
             <p>
-              AI adoption isn&apos;t a technology problem. It&apos;s an
-              experience architecture problem. The companies that win with AI in
-              regulated industries won&apos;t be the ones with the best models.
-              They&apos;ll be the ones who treated the experience layer as the
-              work. The architecture of how AI fits into human workflows, the
-              design of the moments when the AI is wrong, the governance of the
-              systems that have to scale across brands, teams, and regulatory
-              contexts.
+              Sometimes it&apos;s budget. Sometimes the opportunity isn&apos;t
+              clear yet, or the organization doesn&apos;t know what kind of
+              expertise it needs. Either way, important work can sit between
+              roles, teams, or priorities, and opportunities get missed.
             </p>
             <p>
-              That belief shapes how I work. I treat experience design as the
-              discipline of making complex things clear, not the discipline of
-              making things look good. The visual layer matters, but it&apos;s
-              downstream. Upstream is the question of what the experience is{" "}
-              <em>for</em>: what decision it helps the user make, what action
-              it supports, what trust it has to earn before it asks for
-              anything.
+              That might mean defining a product before development starts,
+              untangling a customer journey, aligning a team around a roadmap,
+              shaping a message, building a design system, or bringing an
+              experienced point of view into a difficult decision.
             </p>
             <p>
-              In regulated environments, this isn&apos;t optional. Pharma,
-              healthcare, financial services. These are industries where bad
-              design has consequences. Patient confusion costs lives. Investor
-              confusion costs money. Regulatory confusion costs launches. The
-              teams that work with me are the ones who understand that
-              designing for clarity in these contexts isn&apos;t a constraint
-              on creativity. It&apos;s the discipline that makes the design
-              defensible, scalable, and durable.
+              I work comfortably with executives, strategists, creatives,
+              product managers, researchers, stakeholders, and development
+              teams.
             </p>
+            <p>
+              Experience has taught me when to listen, when to respect the
+              process already in place, and when a new possibility is worth
+              putting on the table.
+            </p>
+            <p>
+              The goal isn&apos;t to add another opinion to the room. It&apos;s
+              to create clarity early enough for the team to make a better
+              decision and move the work forward.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CLARITY BEFORE EXECUTION: the working principle. */}
+      <section className="py-16 md:py-24 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
+            Clarity should come before execution.
+          </h2>
+          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            <p>
+              That principle shapes the judgment and guidance I bring to the
+              day-to-day work: knowing when to listen, when to question, and
+              when a team needs more clarity before moving forward.
+            </p>
+            <p>
+              Before the screen, campaign, platform, or product, there are
+              harder questions.
+            </p>
+            <p>
+              What problem are we actually solving? For whom? What decision or
+              action should the experience support? What does someone need to
+              understand or trust before we ask them to do anything?
+            </p>
+            <p>
+              That matters everywhere, but especially in pharma, healthcare,
+              financial services, and other regulated environments where
+              complexity, compliance, and human needs have to coexist.
+            </p>
+            <p>
+              AI makes those questions more important, not less. Teams can move
+              from idea to output faster than ever. Knowing what should be
+              made, why it matters, and how we&apos;ll know it worked becomes
+              even more valuable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW TOOLS: curiosity, used with judgment. */}
+      <section className="py-16 md:py-24 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
+            I&apos;ve always been interested in what new tools make possible.
+          </h2>
+          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            <p>
+              New technology and new ways of working have been a thread
+              throughout my career.
+            </p>
+            <p>
+              AI has expanded that dramatically. I can make ideas tangible
+              earlier, test assumptions, explore new processes, and see
+              opportunities that can be difficult to understand in a deck or
+              flow alone.
+            </p>
+            <p>
+              But I don&apos;t walk into an established team assuming the
+              newest tool or process is the answer. I listen first, understand
+              what&apos;s happening in the room, respect how the team works,
+              and then introduce what might be useful in context.
+            </p>
+            <p>
+              New thinking works better when people can see it, react to it,
+              and shape it together.
+            </p>
+            <p>
+              A lot of that thinking now feeds the Capizzi Process,{" "}
+              <em>Seeing Past the Cage</em>, and the Clarity Cards: different
+              ways of helping teams make problems visible, ask better
+              questions, and move toward decisions.
+            </p>
+          </div>
+          <div className="mt-8">
+            <Link
+              href="/thinking"
+              className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
+            >
+              Explore the thinking{" "}
+              <span aria-hidden="true" className="ml-2">
+                &rarr;
+              </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -185,119 +244,113 @@ export default function Page() {
       {/* BACKGROUND */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
             Background
           </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
+          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
             <p>
-              Currently leading senior consulting work at Publicis CoLab, on
-              the Pfizer portfolio. The day-to-day is strategic experience
-              design across one of the most complex pharmaceutical accounts in
-              the industry: multi-brand governance, regulatory-ready content
-              systems, design system architecture, and AI integration in HCP
-              and patient touchpoints. Available for select leadership,
-              advisory, and on-call engagements outside that.
+              Today I lead senior consulting work at Publicis CoLab across the
+              Pfizer portfolio, spanning multi-brand governance, regulated
+              digital experiences, design systems, HCP and patient touchpoints,
+              and emerging uses of AI.
             </p>
             <p>
-              Before this engagement, I led senior UX engagements across regulated
-              industries: pharmaceutical, financial services, enterprise
-              technology, and patient experience initiatives spanning oncology,
-              cardiovascular, neurological, immunology, and rare disease.
+              Over the past 15+ years, my work has crossed pharma, healthcare,
+              financial services, enterprise technology, customer experience,
+              and patient experience.
             </p>
             <p>
-              I taught at NYU: design fundamentals, Adobe Photoshop, and
-              Adobe InDesign. My BFA is from Pratt Institute in Communications
-              Design and Advertising/Marketing. Most recently, I completed the
-              Rutgers AI Automation cohort.
+              I&apos;ve also taught design fundamentals, Photoshop, and
+              InDesign at NYU. My BFA is from Pratt Institute in Communications
+              Design and Advertising/Marketing, and I recently completed
+              Rutgers&apos; AI Automation cohort.
             </p>
           </div>
         </div>
       </section>
 
-      {/* RECOGNITION */}
+      {/* PROUD OF */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title mb-10 md:mb-14 max-w-3xl">
-            Recognition
+          <h2 className="section-title text-balance mb-10 md:mb-14 max-w-3xl">
+            A few things I&apos;m proud of
           </h2>
-          <div className="space-y-8 max-w-3xl">
+          <div className="space-y-10 max-w-3xl">
             <div className="border-l-2 border-border-default pl-6 md:pl-8">
-              <p className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight">
-                D&amp;AD Pencil 2022: Future Impact Initiative
-              </p>
+              <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
+                D&amp;AD Pencil &middot; Future Impact Initiative
+              </h3>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-                For the{" "}
+                For the Cancer Equality App with The Chrysalis Initiative.
+              </p>
+              <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
                 <Link
                   href="/work/cancer-equality-app"
-                  className="text-link hover:text-link-hover transition-colors"
+                  className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
                 >
-                  Cancer Equality App
-                </Link>{" "}
-                with The Chrysalis Initiative.{" "}
+                  View the case study{" "}
+                  <span aria-hidden="true" className="ml-2">&rarr;</span>
+                </Link>
                 <a
                   href="https://www.dandad.org/annual/2022/entry/professional/235946"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-link hover:text-link-hover transition-colors"
+                  className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
                 >
-                  View on D&amp;AD
+                  View on D&amp;AD{" "}
+                  <span aria-hidden="true" className="ml-2">&rarr;</span>
                 </a>
-              </p>
+              </div>
             </div>
             <div className="border-l-2 border-border-default pl-6 md:pl-8">
-              <p className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight">
+              <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
                 Industry-first pharmaceutical mobile wallet integration
-              </p>
+              </h3>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-                For patient medication information across iOS and Android
-                (2024). QR-based, FDA-compliant, deployed across a{" "}
+                Patient medication information delivered through an
+                FDA-compliant, QR-based mobile wallet experience across a
+                multi-brand portfolio.
+              </p>
+              <div className="mt-3">
                 <Link
                   href="/work/pharma-design-systems"
-                  className="text-link hover:text-link-hover transition-colors"
+                  className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
                 >
-                  multi-brand portfolio
+                  View the work{" "}
+                  <span aria-hidden="true" className="ml-2">&rarr;</span>
                 </Link>
-                .
-              </p>
+              </div>
             </div>
             <div className="border-l-2 border-border-default pl-6 md:pl-8">
-              <p className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight">
-                Published thought leadership
-              </p>
+              <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
+                Published thinking
+              </h3>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-                On pharma UX, regulatory design, and AI integration. Including{" "}
-                <a
-                  href="https://www.linkedin.com/pulse/fdas-new-digital-era-why-pharmas-future-belongs-honest-capizzi-lyjne"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-link hover:text-link-hover transition-colors"
-                >
-                  The FDA&apos;s New Digital Era
-                </a>{" "}
-                on LinkedIn. See{" "}
+                I write about design, AI, healthcare, regulation, and how the
+                work itself is changing.
+              </p>
+              <div className="mt-3">
                 <Link
                   href="/thinking"
-                  className="text-link hover:text-link-hover transition-colors"
+                  className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
                 >
-                  more published essays and talks
+                  Read the writing and talks{" "}
+                  <span aria-hidden="true" className="ml-2">&rarr;</span>
                 </Link>
-                .
-              </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* RECENT — industry presence proof */}
+      {/* IN THE WORK: industry presence, two photos. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-4">(Recent)</p>
-          <h2 className="section-title mb-10 md:mb-12 max-w-3xl">
+          <h2 className="section-title text-balance mb-10 md:mb-12 max-w-3xl">
             In the work
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {/* Manny Awards */}
             <figure className="rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
               <div className="relative aspect-[4/5]">
                 <Image
@@ -308,12 +361,11 @@ export default function Page() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <figcaption className="px-5 py-4 text-sm text-text-secondary border-t border-border-subtle">
+              <figcaption className="px-5 py-4 text-sm font-semibold text-text-primary border-t border-border-subtle">
                 Manny Awards &middot; NYC
               </figcaption>
             </figure>
 
-            {/* CxO Institute — with Ash Ashutosh */}
             <figure className="rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
               <div className="relative aspect-[4/5]">
                 <Image
@@ -324,7 +376,7 @@ export default function Page() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <figcaption className="px-5 py-4 text-sm text-text-secondary border-t border-border-subtle">
+              <figcaption className="px-5 py-4 text-sm font-semibold text-text-primary border-t border-border-subtle">
                 With Ash Ashutosh, CEO, Pinecone &middot; CxO Institute
               </figcaption>
             </figure>
@@ -332,33 +384,35 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA CARDS — book (deeper read) + engagements (how we'd work together) */}
+      {/* BOOK + WAYS TO WORK TOGETHER: About-specific card copy lives in
+          components/cta-cards-data.ts as bookAbout and engagementsAbout. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <CTACards cards={["book", "engagements"]} />
+          <CTACards cards={["bookAbout", "engagementsAbout"]} />
         </div>
       </section>
 
-      {/* BEYOND THE WORK: the creative practice, briefly. Shortened in
-          September 2026: the AI origin story lives on the Lab page, so it
-          is one sentence here, and the old "performance planned for August
-          2026" line is gone. */}
+      {/* BEYOND THE WORK: the creative practice, briefly. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
             Beyond the work
           </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed">
+          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
             <p>
-              I&apos;m also a fine-art photographer (Venice and NYC), a
-              painter, and a documentary filmmaker working on a pre-9/11 NYC
-              project about the 2000 Subway Series. Taylor Keer, a friend and
-              now Poet Laureate of Connecticut, and I co-founded a creative
-              arts and music collective at Rider University, and we still
-              perform together: I create live visuals alongside his poetry and
-              music, generated in real time with Midjourney and Runway since
-              2022. That work asks what consulting asks: see what is actually
-              there before deciding what it should be, and know when to stop.
+              I&apos;m also a photographer, painter, and documentary filmmaker.
+              I&apos;ve photographed Venice and New York, and I&apos;m working
+              on a film about the 2000 Subway Series and pre-9/11 New York.
+            </p>
+            <p>
+              I also co-founded a creative arts and music collective while at
+              Rider University and still perform with my longtime friend
+              Taylor Keer, creating live visuals alongside poetry and music.
+            </p>
+            <p>
+              That work asks something similar of design: see what&apos;s
+              actually there before deciding what it should be, and know when
+              to stop.
             </p>
             <p>
               Born in Queens. Mets and Yankees fan, in that order. Competitive
@@ -366,7 +420,9 @@ export default function Page() {
             </p>
           </div>
 
-          {/* LinkedIn post: the live performance work */}
+          {/* LinkedIn post: the live performance work, kept as proof of AI
+              visuals made live well before the tools went mainstream. The
+              post's LinkedIn ID decodes to July 30, 2023. */}
           <div className="mt-12 md:mt-14 max-w-3xl">
             <div
               className="rounded-xl overflow-hidden"
@@ -388,28 +444,35 @@ export default function Page() {
               style={{ maxWidth: "720px", margin: "1rem auto 0" }}
             >
               A live performance, with visuals generated in real time
-              alongside poetry and music.
+              alongside poetry and music. Posted July 2023.
             </p>
           </div>
         </div>
       </section>
 
-      {/* SHARING THE PRACTICE: what Shawn shares, and the family story,
-          with the cookie video kept directly under its paragraph. */}
+      {/* CURIOSITY: what Shawn shares, and the family story, with the
+          cookie video kept directly under its paragraph. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
-            Sharing the practice
+          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
+            Curiosity doesn&apos;t stop at work.
           </h2>
           <div className="max-w-3xl">
-            <p className="text-lg md:text-xl text-text-secondary leading-relaxed">
-              I share what I learn about building and experimenting with AI
-              with colleagues, friends, and my daughters. At home, we turn
-              questions into small projects, from math and learning apps to
-              experimenting with Sora using photos of things we cook together.
-              It&apos;s a way to explore ideas, learn together, and make
-              something of our own.
-            </p>
+            <div className="space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+              <p>
+                I share what I learn about design, AI, and building with
+                colleagues, friends, and my daughters.
+              </p>
+              <p>
+                At home, questions often turn into small projects, from
+                learning apps to experiments with Sora using things we&apos;ve
+                made together.
+              </p>
+              <p>
+                It keeps the technology practical, playful, and connected to
+                real people.
+              </p>
+            </div>
 
             <figure className="mt-8 md:mt-10 rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
               <video
@@ -423,7 +486,7 @@ export default function Page() {
                 shows a Sora-generated stack of patriotic-sprinkled holiday
                 cookies on a gold plate.
               </video>
-              <figcaption className="px-5 py-4 text-sm text-text-secondary border-t border-border-subtle">
+              <figcaption className="px-5 py-4 text-sm font-semibold text-text-primary border-t border-border-subtle">
                 An experiment with my daughters: turning a photo of our
                 homemade cookies into a Sora video.
               </figcaption>
@@ -453,7 +516,7 @@ export default function Page() {
       {/* CTA */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="section-title mb-6 md:mb-8 max-w-3xl mx-auto">
+          <h2 className="section-title text-balance mb-6 md:mb-8 max-w-3xl mx-auto">
             Let&apos;s see if there&apos;s a fit.
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
