@@ -81,7 +81,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Case studies</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
-            My work, and how it moved business forward.
+            My work, and how it&apos;s moved business forward.
           </h1>
           <p className="hero-lead max-w-3xl text-pretty">
             I&apos;ve helped solve digital business problems large and small,
