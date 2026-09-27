@@ -221,10 +221,20 @@ export default function Page() {
               and shape it together.
             </p>
             <p>
-              A lot of that thinking now feeds the Capizzi Process,{" "}
-              <em>Seeing Past the Cage</em>, and the Clarity Cards: different
-              ways of helping teams make problems visible, ask better
-              questions, and move toward decisions.
+              A lot of that thinking now feeds the{" "}
+              <Link href="/thinking" className="text-link hover:text-link-hover transition-colors">
+                Capizzi Process
+              </Link>
+              ,{" "}
+              <Link href="/thinking#book" className="text-link hover:text-link-hover transition-colors">
+                <em>Seeing Past the Cage</em>
+              </Link>
+              , and the{" "}
+              <Link href="/thinking#cards" className="text-link hover:text-link-hover transition-colors">
+                Clarity Cards
+              </Link>
+              : different ways of helping teams make problems visible, ask
+              better questions, and move toward decisions.
             </p>
           </div>
           <div className="mt-8">

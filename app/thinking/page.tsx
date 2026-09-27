@@ -115,13 +115,15 @@ export default function Page() {
               The Capizzi Process, in print and in practice.
             </h2>
             <div className="mt-6 space-y-4 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
-              <p>
+              {/* id="book" and id="cards" are jump targets from the About
+                  page. scroll-mt clears the fixed header (80px, 88px from md). */}
+              <p id="book" className="scroll-mt-32 md:scroll-mt-40">
                 <em className="text-text-primary">Seeing Past the Cage</em> is my upcoming book on
                 communication design, problem-solving, and the lessons behind
                 the Capizzi Process, shaped by 15+ years of creative, strategy,
                 marketing, and design work.
               </p>
-              <p>
+              <p id="cards" className="scroll-mt-32 md:scroll-mt-40">
                 <span className="text-text-primary">The Clarity Cards</span> are a practical thinking deck built from the
                 questions I use in working sessions. They help teams stay focused,
                 challenge assumptions, and move discussion toward decisions,
