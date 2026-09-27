@@ -58,7 +58,7 @@ export function SelectedWork() {
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Case studies</p>
           <h2 className="section-title text-balance">
-            My work, and how it moved business forward.
+            My work, and how it&apos;s moved business forward.
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
             I&apos;ve helped solve digital business problems large and small,
