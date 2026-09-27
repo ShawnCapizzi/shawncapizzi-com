@@ -32,7 +32,7 @@ const CASE_STUDIES = [
   },
   {
     slug: "courtvisual",
-    eyebrow: "Solo · Multi-sport PWA · AI-native build · 2026",
+    eyebrow: "Independent product · Multi-sport PWA · AI-native build · 2026",
     title:
       "A multi-sport product that scores every game by what's worth watching",
     description:
@@ -60,10 +60,10 @@ const CASE_STUDIES = [
   },
   {
     slug: "ai-native-product-design-lab",
-    eyebrow: "Solo · AI Native Design Lab",
+    eyebrow: "Independent product work · AI-native product design",
     title: "How I use AI to get from idea to in-market software faster",
     description:
-      "A working AI-native product design practice: UXR tools, prototype agents, healthcare-first applications. Vendor-agnostic AI advisory grounded in hands-on work.",
+      "Working products and prototypes that let me test assumptions, explore new processes, and make emerging ideas tangible. The learning feeds directly back into my product, experience, and client work.",
     image:
       "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-native-design-lab.png",
   },
@@ -79,15 +79,21 @@ export default function Page() {
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-3">Work</p>
+          <p className="eyebrow mb-3">Case studies</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
-            The work, and what changed because of it.
+            My work, and how it moved business forward.
           </h1>
-          <p className="hero-lead max-w-3xl">
-            Fifteen years of service design, experience architecture, product
-            strategy, UX, CX, and design systems on enterprise platforms in
-            pharma, healthcare, and finance. Plus AI-native products I designed,
-            built, and shipped myself.
+          <p className="hero-lead max-w-3xl text-pretty">
+            I&apos;ve helped solve digital business problems large and small,
+            across different audiences, touchpoints, and markets. The work has
+            ranged from design governance and patient navigation to enterprise
+            platforms and customer-facing products: campaigns, websites, CX,
+            service design, UI, design systems, enterprise UX, and plenty in
+            between.
+          </p>
+          <p className="hero-lead max-w-3xl text-pretty">
+            Different problems, different teams, same question: did it make a
+            difference?
           </p>
         </div>
       </section>
