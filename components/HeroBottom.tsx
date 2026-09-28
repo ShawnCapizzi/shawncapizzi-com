@@ -10,7 +10,7 @@ import Image from "next/image";
  * they are on arrival, but they do know what they came to do.
  *
  *   Door 1  Share your business goals             the strategy call (the page's one ask)
- *   Door 2  The work, and what changed            /work
+ *   Door 2  The work behind the experience        /work
  *   Door 3  The thinking I bring, as a system     /thinking, the Process page
  *
  * The D&AD line stays underneath as a credential. It is shown, not claimed.
@@ -46,9 +46,9 @@ const DOORS: Door[] = [
   {
     key: "work",
     eyebrow: "Proof",
-    title: "The work, and what changed because of it.",
-    body: "Six case studies, from enterprise pharma governance to a Bloomberg terminal CRM, and the two products I built and shipped myself.",
-    cta: "See what changed",
+    title: "The work behind the experience.",
+    body: "Six case studies across pharma, healthcare, financial services, and enterprise, from design governance and patient navigation to CRM, CX, and independent products.",
+    cta: "See the case studies",
     href: "/work",
   },
   {
