@@ -159,7 +159,7 @@ export default function Page() {
       <section id="ways" className="py-16 md:py-24 scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">Ways of working</p>
-          <h2 className="section-title mb-10 md:mb-12 max-w-3xl">
+          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             Leadership, Advisory, or On Call
           </h2>
 
@@ -223,7 +223,7 @@ export default function Page() {
       <section id="leadership" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">Engagement type 01</p>
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title mb-4 md:mb-5 max-w-3xl">
             Embedded Leadership
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
@@ -260,10 +260,10 @@ export default function Page() {
       <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">Engagement type 02</p>
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title mb-4 md:mb-5 max-w-3xl">
             Advisory
           </h2>
-          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-14 md:mb-16">
+          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-8 md:mb-10">
             Sometimes that&apos;s product and experience strategy. Sometimes
             it&apos;s a pitch, blue-sky options, or a voice in the room. Three
             common shapes:
@@ -278,10 +278,10 @@ export default function Page() {
                 <h3 className="card-title mb-3 text-text-primary">
                   {shape.name}
                 </h3>
-                <p className="text-base md:text-lg text-text-secondary leading-relaxed text-pretty flex-1">
+                <p className="text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
                   {shape.description}
                 </p>
-                <p className="mt-6 pt-5 border-t border-border-subtle text-sm md:text-base text-text-secondary leading-relaxed text-pretty">
+                <p className="mt-5 text-sm md:text-base text-text-secondary leading-relaxed text-pretty">
                   <span className="metadata-label block mb-1.5">Scope</span>
                   {shape.scope}
                 </p>
@@ -296,7 +296,7 @@ export default function Page() {
       <section id="oncall" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-4">Engagement type 03</p>
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title mb-4 md:mb-5 max-w-3xl">
             On Call
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
@@ -323,7 +323,7 @@ export default function Page() {
       {/* WHO I WORK WITH */}
       <section id="who" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title mb-4 md:mb-5 max-w-3xl">
             Who I work with
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
@@ -346,7 +346,7 @@ export default function Page() {
       {/* WHAT I BRING: three lenses, one line each, with the case-study links */}
       <section id="focus" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title mb-10 md:mb-12 max-w-3xl">
+          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             What I bring to every engagement.
           </h2>
 
@@ -395,7 +395,7 @@ export default function Page() {
       {/* HOW IT STARTS */}
       <section id="process" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title mb-14 md:mb-16 max-w-3xl">
+          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             How we start.
           </h2>
 
