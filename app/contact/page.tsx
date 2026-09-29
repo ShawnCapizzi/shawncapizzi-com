@@ -100,32 +100,25 @@ export default function Page() {
         </div>
       </section>
 
-      {/* TRUST STRIP: four short proof points addressing the four anxieties:
-          how long, will I get a response, will he sell me, is he qualified */}
+      {/* TRUST STRIP: three short proof points: how long, will he sell me,
+          is he qualified. The reply-window stat was removed in September 2026
+          (the cards already say it, and a stat read as salesy). */}
       <section className="py-10 md:py-14 border-t border-b border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-10">
             <div>
               <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
                 2 to 3 weeks
               </p>
-              <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug">
+              <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug text-pretty">
                 From first call to signed SOW, or sooner.
-              </p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
-                1 business day
-              </p>
-              <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug">
-                Reply window for email and voicemail.
               </p>
             </div>
             <div>
               <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
                 No pitch
               </p>
-              <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug">
+              <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug text-pretty">
                 First call is diagnostic, not a sales call.
               </p>
             </div>
@@ -133,7 +126,7 @@ export default function Page() {
               <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
                 15+ years
               </p>
-              <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug">
+              <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug text-pretty">
                 Across pharma, fintech, and enterprise teams.
               </p>
             </div>
