@@ -133,6 +133,28 @@ export const CTA_CARDS: Record<string, CTACard> = {
     image: "/images/engagements/needs-framework-sketch.jpg",
     imageAlt: "Hand-drawn framework: user need and want flowing down through company to users, business, and resources",
   },
+  /* Contact page versions (September 2026): same images and destinations as
+     "work" and "engagements", with the newer homepage and /work language. */
+  workContact: {
+    eyebrow: "Case studies",
+    title: "The work behind the experience.",
+    description:
+      "Case studies across pharma, healthcare, financial services, and enterprise, from design governance and patient navigation to CRM, CX, service design, and independent products.",
+    cta: "See the case studies",
+    href: "/work",
+    image: "/images/hero/consumer-care-hub-hero-balanced.gif",
+    imageAlt: "Selected case studies across pharma, healthcare, and financial services",
+  },
+  engagementsContact: {
+    eyebrow: "Engagements",
+    title: "Three ways to bring me into the work.",
+    description:
+      "Embed me with the team. Bring me in for a defined problem. Or keep me close for the decisions that need experienced judgment.",
+    cta: "See how we can work together",
+    href: "/engagements",
+    image: "/images/engagements/needs-framework-sketch.jpg",
+    imageAlt: "Hand-drawn framework: user need and want flowing down through company to users, business, and resources",
+  },
   engagements: {
     eyebrow: "Engagement modes",
     title: "Three flexible ways to work together",

@@ -5,7 +5,7 @@ export const metadata = pageMetadata({
   path: "/contact",
   title: "Contact",
   description:
-    "Three ways in: a 30-minute strategy call, email, or phone. Most engagements move from first call to signed SOW in 2 to 3 weeks.",
+    "Three ways in: a 30-minute strategy call, email, or phone. First call to signed SOW in 2 to 3 weeks, or sooner.",
 });
 
 const CAL_URL = "https://cal.com/capizzi/30min";
@@ -25,9 +25,9 @@ export default function Page() {
             Three ways in.
           </h1>
           <p className="hero-lead max-w-3xl">
-            Most engagements start with the 30-minute call. Email is great so
-            you can include some context and documentation. Phone is fine if
-            you want to get going quick too.
+            Most engagements start with a 30-minute call. If you&apos;d rather
+            share some context first, email works well. And if it&apos;s a
+            quick question, call me.
           </p>
         </div>
       </section>
@@ -59,16 +59,15 @@ export default function Page() {
               </a>
             </article>
 
-            {/* Card 2: evaluating fit (Stewart buyer, pre-decision) */}
+            {/* Card 2: prefers to start in writing (email) */}
             <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
-              <p className="metadata-label mb-4">Path 02 · Async</p>
+              <p className="metadata-label mb-4">Path 02 · Email</p>
               <h2 className="card-title text-text-primary mb-4">
-                Start a conversation.
+                Prefer to start in writing?
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
-                Email when you&apos;d rather start in writing. A brief, a
-                question, a context note, or an introduction. All welcome.
-                I reply within a business day.
+                Send a brief, a question, some context, or an introduction.
+                All welcome. I reply within a business day.
               </p>
               <a
                 href={`mailto:${EMAIL}`}
@@ -87,8 +86,7 @@ export default function Page() {
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
                 Phone is fine. Voicemail is welcome. I return calls within a
-                business day. For working sessions, the calendar link is
-                faster.
+                business day. For a working session, the calendar is faster.
               </p>
               <a
                 href={`tel:${PHONE_TEL}`}
@@ -112,7 +110,7 @@ export default function Page() {
                 2 to 3 weeks
               </p>
               <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug">
-                From first call to signed SOW for most engagements.
+                From first call to signed SOW, or sooner.
               </p>
             </div>
             <div>
@@ -167,11 +165,12 @@ export default function Page() {
       </section>
 
       {/* BOTTOM CTACards, for visitors who did not take action above.
-          'work' answers "is he qualified"; 'engagements' answers "how would
-          this actually work" */}
+          'workContact' answers "is he qualified"; 'engagementsContact' answers
+          "how would this actually work". Contact-only copy (September 2026),
+          so the shared 'work' and 'engagements' cards on other pages stay. */}
       <section className="py-16 md:py-24 mt-8 md:mt-12 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <CTACards cards={["work", "engagements"]} />
+          <CTACards cards={["workContact", "engagementsContact"]} />
         </div>
       </section>
     </article>
