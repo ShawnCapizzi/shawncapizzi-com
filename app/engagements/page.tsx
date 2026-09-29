@@ -284,12 +284,18 @@ export default function Page() {
           <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
             Leadership: Embedded Product Vision, UX &amp; Experience Design Lead
           </h2>
-          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-12 md:mb-14">
+          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl">
             Senior UX, CX, IA, content strategy, and engagement strategy
             inside active business goals. I work directly with PMs, creative
             directors, account leads, copywriters, visual designers, and
             engineering partners on campaigns (US and Global), platforms (app
             and enterprise systems), websites, apps, VR, and sales tools.
+          </p>
+          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mt-6 mb-12 md:mb-14 text-pretty">
+            I work inside your tools, training, and process, not beside them,
+            whether that&apos;s an enterprise playbook or a start-up still
+            writing its own. Where the process slows the work, I help refine
+            it.
           </p>
 
           <div className="max-w-3xl">
