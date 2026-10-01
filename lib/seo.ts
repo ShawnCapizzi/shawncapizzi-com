@@ -197,7 +197,7 @@ export function faqPage(items: { q: string; a: string }[]) {
   };
 }
 
-/** The book and its free first chapter. No publisher, date, or ISBN:
+/** The book and its free foreword. No publisher, date, or ISBN:
  *  the book is not published yet, and the markup says only what the page says. */
 export const BOOK = {
   name: "Seeing Past the Cage",
@@ -205,7 +205,15 @@ export const BOOK = {
   image: "/images/process/seeing-past-the-cage-book.jpg",
 };
 
-export function bookGraph({ chapterName, chapterPath }: { chapterName: string; chapterPath: string }) {
+export function bookGraph({
+  chapterName,
+  chapterPath,
+  partLabel = "Chapter 1",
+}: {
+  chapterName: string;
+  chapterPath: string;
+  partLabel?: string;
+}) {
   return [
     {
       "@context": "https://schema.org",
@@ -217,7 +225,7 @@ export function bookGraph({ chapterName, chapterPath }: { chapterName: string; c
       inLanguage: "en-US",
       hasPart: {
         "@type": "Chapter",
-        name: chapterName,
+        name: `${partLabel}: ${chapterName}`,
         position: 1,
         url: abs(chapterPath),
         isAccessibleForFree: true,
@@ -226,7 +234,7 @@ export function bookGraph({ chapterName, chapterPath }: { chapterName: string; c
     breadcrumbs([
       { name: "Home", path: "/" },
       { name: "Thinking", path: "/thinking" },
-      { name: `${BOOK.name}, Chapter 1`, path: chapterPath },
+      { name: `${BOOK.name}, ${partLabel}`, path: chapterPath },
     ]),
   ];
 }

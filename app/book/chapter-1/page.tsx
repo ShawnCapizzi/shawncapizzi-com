@@ -3,18 +3,19 @@ import { BOOK, bookGraph, pageMetadata } from "@/lib/seo";
 import { Reader, type ReaderPage } from "@/components/Reader";
 import { CTACards } from "@/components/CTACards";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { BookToc } from "@/components/BookToc";
 
 export const metadata = pageMetadata({
   path: "/book/chapter-1",
-  title: "The Human Condition, Chapter 1 | Seeing Past the Cage",
+  title: "The Human Condition, Foreword | Seeing Past the Cage",
   description:
-    "Read Chapter 1 of Seeing Past the Cage, a book on better communication design in the age of AI. Free, one chapter at a time.",
+    "Read the foreword of Seeing Past the Cage, a book on better communication design in the age of AI, free, and see the full table of contents.",
   type: "book",
   image: {
     url: "/images/og/seeing-past-the-cage.jpg",
     width: 1200,
     height: 630,
-    alt: `${BOOK.name} by Shawn Capizzi, Chapter 1 free to read`,
+    alt: `${BOOK.name} by Shawn Capizzi, foreword free to read`,
   },
 });
 
@@ -168,7 +169,7 @@ const CHAPTER_ONE: ReaderPage[] = [
 export default function ChapterOnePage() {
   return (
     <article className="pt-32 md:pt-40 pb-24 md:pb-32">
-      <JsonLd data={bookGraph({ chapterName: "The Human Condition", chapterPath: "/book/chapter-1" })} />
+      <JsonLd data={bookGraph({ chapterName: "The Human Condition", partLabel: "Foreword", chapterPath: "/book/chapter-1" })} />
       {/* Force the page to land at the top on mount — works around mobile
           browsers (and Next scroll restoration) that occasionally land users
           mid-page when there's a tall fixed-height inner region. */}
@@ -200,7 +201,7 @@ export default function ChapterOnePage() {
               actually gets decided.
             </p>
             <p>
-              The book is written. Chapter 1 is below. Read it free. I&apos;ll send you the
+              The book is written. The foreword is below. Read it free. I&apos;ll send you the
               finished book when it&apos;s ready, plus the occasional note from the work in between.{" "}
               <a
                 href="#read"
@@ -211,10 +212,13 @@ export default function ChapterOnePage() {
             </p>
           </div>
 
-          {/* Chapter marker — the transition from book-intro into the reader */}
-          <div className="mt-12 md:mt-16 flex items-center gap-4">
+          {/* Table of contents (October 2026): the foreword is the free piece */}
+          <BookToc />
+
+          {/* Foreword marker: the transition from the contents into the reader */}
+          <div id="foreword" className="mt-14 md:mt-20 flex items-center gap-4 scroll-mt-28">
             <span className="font-mono text-xs tracking-widest uppercase text-text-tertiary whitespace-nowrap">
-              Chapter 1
+              Foreword
             </span>
             <span className="h-px flex-1 bg-border-subtle" aria-hidden="true" />
             <span className="text-sm italic text-text-tertiary whitespace-nowrap">
@@ -227,12 +231,12 @@ export default function ChapterOnePage() {
       {/* ── THE READER ─────────────────────────────────────────────────── */}
       <div className="px-4 sm:px-6">
         <Reader
-          kicker="Chapter 1"
+          kicker="Foreword"
           title="The Human Condition"
           subtitle="Why empathy is the foundation of digital experience."
           pages={CHAPTER_ONE}
           /* audioSrc="/audio/chapter-1.mp3"  // ← uncomment when your narration is recorded */
-          signupHeading="That's Chapter 1. The book is written."
+          signupHeading="That's the foreword. The book is written."
           signupSubcopy="I'll send you the finished book when it's ready, plus the occasional note from the work in between. No noise. Just the thinking, and what I'm seeing in the field."
         />
       </div>

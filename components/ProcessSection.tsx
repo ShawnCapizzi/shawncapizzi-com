@@ -53,7 +53,7 @@ export function ProcessSection() {
         </div>
 
         <BookAndCards
-          bookLink={{ href: "/book/chapter-1", label: "Read chapter one free" }}
+          bookLink={{ href: "/book/chapter-1", label: "Read the foreword free" }}
         />
 
         <div id="clarity-cards" className="mt-12 md:mt-16 scroll-mt-24 md:scroll-mt-32">

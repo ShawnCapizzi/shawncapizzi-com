@@ -136,7 +136,7 @@ export default function Page() {
           </div>
 
           <BookAndCards
-            bookLink={{ href: "/book/chapter-1", label: "Read chapter one free" }}
+            bookLink={{ href: "/book/chapter-1", label: "Read the foreword free" }}
             cardsLink={{ href: "/#clarity-cards", label: "Try the deck" }}
           />
         </div>
@@ -193,7 +193,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* THE MANUAL + CHAPTER ONE */}
+      {/* THE MANUAL + THE FOREWORD */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
@@ -222,7 +222,7 @@ export default function Page() {
             >
               <p className="eyebrow mb-4">Read</p>
               <h2 className="card-title text-text-primary mb-2 group-hover:text-link transition-colors">
-                Chapter one, free.
+                The foreword, free.
               </h2>
               <p className="text-sm md:text-base italic text-text-tertiary mb-4 leading-snug">
                 The Human Condition: why empathy is the foundation of digital
@@ -234,7 +234,7 @@ export default function Page() {
                 made. Fifteen years of agency life, distilled.
               </p>
               <p className="text-link group-hover:text-link-hover transition-colors text-base font-medium">
-                Read chapter one{" "}
+                Read the foreword{" "}
                 <span aria-hidden="true" className="ml-1">
                   &rarr;
                 </span>

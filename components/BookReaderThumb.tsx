@@ -60,7 +60,7 @@ export function BookReaderThumb({
       <div className="relative flex h-full w-full items-center">
         <div className="w-full px-7 md:px-9">
           <span className="mb-3 block font-mono text-[10px] uppercase tracking-[0.2em] text-[#9aa6ff]">
-            From Chapter 1
+            From the foreword
           </span>
 
           <div className="relative min-h-[170px] md:min-h-[220px]">
