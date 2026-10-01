@@ -32,7 +32,7 @@ const PARTS: Part[] = [
       [1, "Visual Design & Content Strategy Foundation"],
       [2, "Strategic Positioning & Discovery Methodology"],
       [3, "User Personas & Purposeful Segmentation"],
-      [4, "Community Design Principles for 2025"],
+      [4, "Community Design Principles for 2027"],
     ],
   },
   {
@@ -82,13 +82,13 @@ export function BookToc() {
         What&apos;s in Seeing Past the Cage.
       </h2>
       <p className="mt-4 max-w-2xl text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
-        Four parts, each opened by a short breaker chapter. The foreword is
+        Four parts, each opened by a pillar. The foreword is
         free below. Select a part to see what&apos;s in it.
       </p>
       <p className="mt-5 flex flex-wrap gap-x-7 gap-y-2 font-mono text-xs md:text-sm tracking-widest uppercase text-text-tertiary">
         <span><span className="text-text-primary">{PARTS.length}</span> parts</span>
         <span><span className="text-text-primary">{CHAPTER_COUNT}</span> chapters</span>
-        <span><span className="text-text-primary">{PARTS.length}</span> breakers</span>
+        <span><span className="text-text-primary">{PARTS.length}</span> pillars</span>
       </p>
 
       <div className="mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8 lg:gap-10 items-start">
@@ -175,7 +175,7 @@ export function BookToc() {
                   {part.breaker.title}
                 </p>
                 <p className="mt-0.5 text-sm text-text-tertiary text-pretty">
-                  {part.breaker.sub} · Breaker chapter
+                  {part.breaker.sub}
                 </p>
               </div>
             </div>
