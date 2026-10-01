@@ -3,8 +3,9 @@
 /**
  * SignupCard — newsletter / "send me the book" capture.
  *
- * Single source of truth for the CRM signup flow. Wired to
- * /api/subscribe → Kit form 9488992 (same endpoint everywhere).
+ * Single source of truth for the signup flow. Wired to /api/subscribe,
+ * which adds the email to the Google Sheet sign-up list (Kit is the
+ * fallback). The `source` prop says which list: "manual" or "book".
  *
  * Used in two places:
  *   - components/Reader.tsx (the final slide of the chapter-1 reader,
@@ -29,12 +30,13 @@
  *     Pass a context-appropriate label per placement (e.g. "Join the list").
  *   - successText: optional confirmation body shown in the done state.
  *     Defaults to the book-send confirmation. Override to match the CTA.
+ *   - source: which list the signup joins, "book" (default) or "manual".
  */
 
 import { useState } from "react";
 
 const DEFAULT_SUCCESS_TEXT =
-  "Confirm your email and you're on the list. I'll send you the finished book when it's ready, plus the occasional note from the work.";
+  "You're on the list, and a short note is on its way. I'll send you the finished book when it's ready, plus the occasional note from the work.";
 
 // Phone number shown on every SignupCard. Single source of truth: edit
 // PHONE_DISPLAY to change what appears in the visible link, and PHONE_TEL
@@ -68,11 +70,13 @@ export function SignupCard({
   subcopy,
   buttonLabel = "Send me the book",
   successText = DEFAULT_SUCCESS_TEXT,
+  source = "book",
 }: {
   heading?: string;
   subcopy?: string;
   buttonLabel?: string;
   successText?: string;
+  source?: "book" | "manual";
 }) {
   const [email, setEmail] = useState("");
   const [state, setState] = useState<"idle" | "loading" | "done" | "error">("idle");
@@ -92,7 +96,7 @@ export function SignupCard({
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed }),
+        body: JSON.stringify({ email: trimmed, source }),
       });
       if (!res.ok) throw new Error();
       setState("done");

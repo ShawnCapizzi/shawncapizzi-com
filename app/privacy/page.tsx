@@ -41,8 +41,9 @@ export default function PrivacyPage() {
                 name, email, meeting time.
               </li>
               <li>
-                <strong className="text-text-primary">Newsletter (Kit):</strong>{" "}
-                email only. One-click unsubscribe in every send.
+                <strong className="text-text-primary">Mailing list:</strong>{" "}
+                email only, kept in a private Google Sheet. Reply
+                &ldquo;remove&rdquo; to any email and you&apos;re off the list.
               </li>
               <li>
                 <strong className="text-text-primary">Analytics:</strong>{" "}
@@ -60,7 +61,7 @@ export default function PrivacyPage() {
               Services used
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              Vercel (hosting), Cal.com (scheduling), Kit (newsletter),
+              Vercel (hosting), Cal.com (scheduling), Google Sheets and Gmail (mailing list),
               Google Analytics 4 (analytics), Cookiebot (consent banner).
               Each only sees the data needed to do its job.
             </p>

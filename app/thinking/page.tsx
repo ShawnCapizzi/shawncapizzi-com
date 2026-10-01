@@ -211,7 +211,8 @@ export default function Page() {
               </p>
               <SignupCard
                 buttonLabel="Send me the manual"
-                successText="Confirm your email and you're on the list. The manual arrives when it ships, plus the occasional note from the work, nothing else."
+                source="manual"
+                successText="You're on the list, and a short note is on its way. The manual arrives when it ships, plus the occasional note from the work, nothing else."
               />
             </article>
 
