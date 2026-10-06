@@ -9,7 +9,6 @@ import { CursorGlow } from "@/components/CursorGlow";
 import { BackToTop } from "@/components/BackToTop";
 import { ScrollFadeController } from "@/components/ScrollFadeController";
 import { NavigationProgress } from "@/components/NavigationProgress";
-import { CookieBanner } from "@/components/CookieBanner";
 import { Analytics } from "@/components/Analytics";
 import { JsonLd } from "@/components/JsonLd";
 import { DEFAULT_SHARE_IMAGE, HOME_DESCRIPTION, HOME_TITLE, SITE_URL, siteGraph } from "@/lib/seo";
@@ -127,16 +126,9 @@ export default function RootLayout({
         {/* Site-wide structured data: the website and the Person entity
             every page and case study points to. See lib/seo.ts. */}
         <JsonLd data={siteGraph()} />
-        {/* Consent + Analytics. Order matters:
-            1. Analytics sets gtag('consent','default', denied) FIRST
-               (defense-in-depth in case Cookiebot is blocked by an ad blocker)
-            2. CookieBanner loads Cookiebot, which intercepts other tracking
-               scripts and updates consent state based on the user's choice.
-            Both components handle missing env vars gracefully; they render
-            nothing if NEXT_PUBLIC_GA_MEASUREMENT_ID or NEXT_PUBLIC_COOKIEBOT_CBID
-            isn't set (e.g., in dev or preview environments). */}
+        {/* GA4, no consent banner (removed October 2026). Renders nothing
+            when NEXT_PUBLIC_GA_MEASUREMENT_ID is unset. */}
         <Analytics />
-        <CookieBanner />
 
         <div style={{ opacity: 0.65 }}>
           <ParticleField />

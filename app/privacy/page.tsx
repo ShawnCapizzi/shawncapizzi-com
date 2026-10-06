@@ -18,7 +18,7 @@ export default function PrivacyPage() {
             Privacy policy
           </h1>
           <p className="mt-6 font-mono text-xs tracking-widest uppercase text-text-tertiary">
-            Last updated: June 12, 2026
+            Last updated: October 6, 2026
           </p>
 
           <p className="hero-lead mt-8 md:mt-10">
@@ -47,8 +47,8 @@ export default function PrivacyPage() {
               </li>
               <li>
                 <strong className="text-text-primary">Analytics:</strong>{" "}
-                Google Analytics 4 with IP anonymization. Only active
-                after you accept the cookie banner.
+                which pages are viewed, for how long, and in what order,
+                through Google Analytics 4. No advertising identifiers.
               </li>
             </ul>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
@@ -62,7 +62,7 @@ export default function PrivacyPage() {
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
               Vercel (hosting), Cal.com (scheduling), Google Sheets and Gmail (mailing list),
-              Google Analytics 4 (analytics), Cookiebot (consent banner).
+              Google Analytics 4 (analytics).
               Each only sees the data needed to do its job.
             </p>
           </div>
@@ -72,10 +72,10 @@ export default function PrivacyPage() {
               Cookies
             </h2>
             <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              Necessary cookies keep the site working. Analytics cookies
-              activate only after you accept the banner. Change your
-              consent anytime via the fingerprint icon in the bottom-left
-              corner.
+              There is no cookie banner. Necessary cookies keep the site
+              working, and analytics cookies run unless your browser sends
+              the Global Privacy Control signal, which is honored
+              automatically. Email me to have your data removed.
             </p>
           </div>
 
