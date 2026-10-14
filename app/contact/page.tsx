@@ -127,10 +127,17 @@ export default function Page() {
                 15+ years
               </p>
               <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug text-pretty">
-                Across pharma, fintech, and enterprise teams.
+                Across pharma, healthcare, financial services, and enterprise.
               </p>
             </div>
           </div>
+
+          {/* Availability (October 2026): one quiet line, here and on /about
+              only. Never an "open to work" banner. */}
+          <p className="mt-8 md:mt-10 max-w-3xl text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+            Available for remote-first consulting, fractional or embedded
+            UX/design leadership, and select senior full-time opportunities.
+          </p>
         </div>
       </section>
 

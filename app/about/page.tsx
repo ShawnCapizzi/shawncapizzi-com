@@ -391,6 +391,13 @@ export default function Page() {
               </figcaption>
             </figure>
           </div>
+
+          {/* Availability (October 2026): one quiet line, here and on
+              /contact only. Never an "open to work" banner. */}
+          <p className="mt-10 md:mt-12 max-w-3xl text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+            Available for remote-first consulting, fractional or embedded
+            UX/design leadership, and select senior full-time opportunities.
+          </p>
         </div>
       </section>
 
