@@ -188,13 +188,14 @@ export default function Page() {
 
           <div className="mt-10 md:mt-12 max-w-3xl space-y-4 text-lg md:text-xl text-text-primary leading-relaxed text-pretty">
             <p>
-              I work remotely with teams big and small, usually on projects or
-              ongoing freelance engagements. I&apos;m also open to
-              contract-to-hire or the right full-time role.
+              I work remote-first, directly with brands, embedded with agencies,
+              or alongside internal product and technology teams. Engagements
+              can be project-based, ongoing, fractional, or embedded.
             </p>
             <p>
-              When the scope calls for it, I can also assemble and lead the
-              right team across copy, creative, and development.
+              When the work calls for it, I can also bring in a team of trusted
+              partners across research, copy, creative, design, and
+              development. I manage the team, and we deliver.
             </p>
           </div>
 
@@ -229,12 +230,13 @@ export default function Page() {
           <div className="max-w-3xl space-y-6 text-pretty">
             <p className="lead-text text-lg md:text-xl leading-relaxed">
               I join the team and work inside the program, alongside product,
-              creative, strategy, account, regulatory, and development.
+              creative, strategy, account, regulatory, research, and
+              development.
             </p>
             <p className="lead-text text-lg md:text-xl leading-relaxed">
-              This works when you need experienced design or experience
-              leadership, as a fractional lead on a project, a
-              contract-to-hire, or a full-time role.
+              This works when you need experienced UX/design leadership on an
+              important project or program without necessarily adding another
+              full-time role.
             </p>
             <p className="lead-text text-lg md:text-xl leading-relaxed">
               I work inside your tools, training, and process, not beside them,
