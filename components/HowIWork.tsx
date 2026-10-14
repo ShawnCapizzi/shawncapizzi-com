@@ -31,25 +31,25 @@ const MODES: Mode[] = [
     key: "leadership",
     eyebrow: "Leadership",
     title: "Embed me in the work.",
-    line: "Fractional or embedded design leadership inside your live work, through to 0-to-1 delivery and the internal tools a department has waited years for.",
+    line: "Fractional or embedded senior UX and design leadership inside active work, from opportunity definition through delivery.",
   },
   {
     key: "advisory",
     eyebrow: "Advisory",
     title: "Hire me to advise.",
-    line: "Counsel on product flows, AI adoption, and design system governance, without a full-time hire.",
+    line: "Focused guidance around product, UX/CX, experience strategy, AI adoption, design systems, or a decision that needs another experienced point of view.",
   },
   {
     key: "oncall",
     eyebrow: "On Call",
     title: "Keep me on call.",
-    line: "A monthly retainer for leaders who want a thinking partner on hand between the big decisions.",
+    line: "Ongoing access for leaders who want an experienced UX/design thinking partner available between the big decisions.",
   },
 ];
 
 export function HowIWork() {
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-20 md:py-28 border-t border-border-subtle">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <p className="eyebrow mb-4">Engagement model</p>
@@ -57,14 +57,20 @@ export function HowIWork() {
             Three ways to bring me into the work.
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            Start by solving or defining a single business opportunity, then
-            grow from there. Engagements range from embedded builds to
-            fractional product leadership.
+            Start with a defined problem or an opportunity that still needs
+            definition. I can embed with the team, advise on a focused
+            challenge, or stay close when important decisions need another
+            experienced point of view.
           </p>
           <p className="mt-4 text-lg md:text-xl text-text-secondary leading-relaxed">
             AI runs through most of this work now, as a speed-and-rigor
             partner: more options explored, more drafts pressure-tested,
             faster paths from idea to a working prototype you can test.
+          </p>
+          <p className="mt-4 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            Remote-first. Direct with brands, embedded with agencies, or
+            alongside internal product and technology teams. Onsite when being
+            in the room adds value.
           </p>
         </div>
 

@@ -37,12 +37,13 @@ export function Hero() {
           {/* Left: Headline + lead + wordmark (signature). Below lg this
               wrapper is display: contents; see the note above. */}
           <div className="contents lg:block relative z-10 lg:col-span-7 lg:order-1">
+            <p className="eyebrow mb-3 order-0">Senior UX &amp; Design Leadership</p>
             <h1 className="headline-gleam hero-title text-balance max-w-full lg:max-w-[90%] order-1">
               Design leadership that turns regulated complexity into trusted experiences that go to market faster.
             </h1>
             <p className="hero-lead text-balance max-w-full lg:max-w-[90%] order-3">
-              15 years across pharma, healthcare, financial services, and enterprise. I diagnose, design, prototype, and build.{" "}
-              <span className="font-semibold text-text-primary">Idea to launch.</span>
+              <span className="font-semibold text-text-primary">Idea to launch.</span>{" "}
+              I help teams define the opportunity, solve the right problem, and bring useful experiences to market. 15+ years across pharma, healthcare, financial services, and enterprise.
             </p>
 
             <Wordmark

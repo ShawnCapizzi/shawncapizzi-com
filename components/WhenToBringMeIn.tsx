@@ -7,10 +7,9 @@ import { useEffect, useRef, useState } from "react";
  * WhenToBringMeIn: homepage self-qualification module.
  *
  * A self-recognition mirror: scannable "this is you if..." statements that
- * let a visitor identify themselves without filling out a form. It now sits
- * AFTER the work (SelectedWork, Building) and immediately before HowIWork,
- * so a visitor reads proof first and this lands as confirmation rather than
- * a gate. The eyebrow reads "Common starting points" because "When to bring
+ * let a visitor identify themselves without filling out a form. Since
+ * October 2026 it sits right after the three doors and before the case
+ * studies, so a buyer answers "can he help with my problem?" first. The eyebrow reads "Common starting points" because "When to bring
  * me in" collided with the first door's old title, "Bring me into a problem."
  *
  * The spread of the bullets is deliberate. Regulated and pharma authority
@@ -77,8 +76,8 @@ export function WhenToBringMeIn() {
             You should talk to me if any of this sounds familiar.
           </h2>
           <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-            The industry changes across pharma, fintech, agency, enterprise, and
-            founder-led teams. The pattern usually does not.
+            Sometimes the problem is clear. Sometimes you just know there&apos;s a
+            better opportunity. Both are good places to start.
           </p>
         </div>
 

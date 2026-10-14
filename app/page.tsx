@@ -1,6 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { HOME_DESCRIPTION, HOME_TITLE, pageMetadata } from "@/lib/seo";
 import { LogoStrip } from "@/components/LogoStrip";
+import { ProofStrip } from "@/components/ProofStrip";
 import { HeroBottom } from "@/components/HeroBottom";
 import { WhenToBringMeIn } from "@/components/WhenToBringMeIn";
 import { HowIWork } from "@/components/HowIWork";
@@ -11,29 +12,21 @@ import { ProcessSection } from "@/components/ProcessSection";
 import { FinalCTA } from "@/components/FinalCTA";
 
 /**
- * Homepage. The order is the argument: leadership, then shipping, then proof.
+ * Homepage, reordered October 2026 so a buyer answers two questions before
+ * the thought leadership: "Can Shawn help with my problem?" and "How could I
+ * bring him into the work?"
  *
- *   Hero                 the leadership claim, then the working-software claim
+ *   Hero                 the leadership claim, then idea to launch
  *   LogoStrip            the credential strip
+ *   ProofStrip           one quiet line of evidence, each figure from a case study
  *   HeroBottom           three doors, named by what the visitor came to do
+ *   WhenToBringMeIn      self-qualification: "You should talk to me if..."
  *   SelectedWork         three case studies, with the service layer in the copy
- *   Building             live products, designed, built, and shipped solo
- *   ProcessSection       the method, with the book and the cards as objects
- *   WhenToBringMeIn      self-qualification
  *   HowIWork             the three engagement modes, named and handed off
- *   Testimonials         what clients have said, right before the ask
+ *   Testimonials         what it is like to work together
+ *   Building             live products, AI-native product design
+ *   ProcessSection       the method, with the book and the cards as objects
  *   FinalCTA             one ask
- *
- * The first half proves the claim (work, products, the method written down);
- * the second half is how to hire (starting points, engagement model, clients,
- * the ask). The Process moved from after the testimonials into the first half
- * in September 2026 so the book and the cards are seen, not found.
- *
- * Work moved above the two prose blocks in September 2026. Measured on the
- * previous order, the first piece of work imagery sat 3,826px down, behind
- * 2,532px of text with no images in it. Proof now lands right after the
- * doors, and the qualifying copy reads as confirmation rather than a toll
- * gate.
  *
  * The homepage carries one primary ask (the strategy call) at the top and the
  * bottom. Every other link on the page goes deeper rather than asking again.
@@ -50,13 +43,14 @@ export default function HomePage() {
     <>
       <Hero />
       <LogoStrip />
+      <ProofStrip />
       <HeroBottom />
-      <SelectedWork />
-      <Building />
-      <ProcessSection />
       <WhenToBringMeIn />
+      <SelectedWork />
       <HowIWork />
       <Testimonials />
+      <Building />
+      <ProcessSection />
       <FinalCTA />
     </>
   );

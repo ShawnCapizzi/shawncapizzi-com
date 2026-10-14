@@ -1,8 +1,9 @@
 import Image from "next/image";
 
 /**
- * LogoStrip: "Trusted by leaders across:" with six client logos in a
- * continuous horizontal marquee.
+ * LogoStrip: "Trusted by leaders across:" with five logos in a continuous
+ * horizontal marquee. OpenAI was removed in October 2026: it is a tool Shawn
+ * uses, not a client, and the label reads as a client list.
  *
  * IPG Health was replaced by Omnicom in September 2026. The IPG Health name
  * was retired when Omnicom completed the Interpublic acquisition, and a
@@ -33,7 +34,6 @@ const LOGOS = [
     alt: "Columbia Business School",
     width: 200,
   },
-  { src: "/images/logos/05-openai.avif", alt: "OpenAI", width: 120 },
   { src: "/images/logos/06-omnicom.png", alt: "Omnicom", width: 150 },
 ];
 
