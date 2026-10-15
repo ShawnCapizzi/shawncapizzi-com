@@ -8,6 +8,7 @@ const NAV = [
   { href: "/thinking", label: "Thinking" },
   { href: "/book/chapter-1", label: "Read" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
   { href: "/faq", label: "FAQ" },
   { href: "/about#colophon", label: "About this site" },
 ];
@@ -55,8 +56,8 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border-subtle pt-8">
-          <p className="text-xs text-text-tertiary tracking-wide">
-            © {year} Shawn M. Capizzi · Senior Design Leadership for Regulated and Enterprise Teams
+          <p className="text-xs text-text-secondary tracking-wide">
+            {`© ${year} Shawn M. Capizzi · Senior UX & Product Design Leadership for Regulated and Enterprise Teams`}
           </p>
         </div>
       </div>
