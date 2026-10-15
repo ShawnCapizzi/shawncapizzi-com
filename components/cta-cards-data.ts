@@ -169,7 +169,7 @@ export const CTA_CARDS: Record<string, CTACard> = {
     eyebrow: "Contact",
     title: "Get in touch",
     description:
-      "Strategy call, project brief, or a direct note. Pick the way in that fits where you are.",
+      "A call, a project brief, or a direct note. Pick the way in that fits where you are.",
     cta: "Start a conversation",
     href: "/contact",
     phone: "212-380-3900",

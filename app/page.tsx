@@ -28,7 +28,7 @@ import { FinalCTA } from "@/components/FinalCTA";
  *   ProcessSection       the method, with the book and the cards as objects
  *   FinalCTA             one ask
  *
- * The homepage carries one primary ask (the strategy call) at the top and the
+ * The homepage carries one primary ask (start a conversation) at the top and the
  * bottom. Every other link on the page goes deeper rather than asking again.
  */
 export const metadata = pageMetadata({

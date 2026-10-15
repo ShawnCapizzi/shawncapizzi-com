@@ -15,8 +15,6 @@ export const metadata = pageMetadata({
   type: "profile",
 });
 
-const CAL_URL = "https://cal.com/capizzi/30min";
-
 export default function Page() {
   return (
     <article>
@@ -537,16 +535,15 @@ export default function Page() {
             Let&apos;s see if there&apos;s a fit.
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
-            30 minutes. Virtual. No pitch.
+            No pitch. Just a conversation about what you&apos;re working on.
           </p>
-          <a
-            href={CAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
           >
-            Book a Strategy Call
-          </a>
+            Start a conversation
+            <span aria-hidden="true" className="ml-2">&rarr;</span>
+          </Link>
         </div>
       </section>
 

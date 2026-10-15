@@ -12,9 +12,9 @@ architecture problem.** Every page, every word, every visual decision reinforces
 
 Eight-page site. Three conversion paths in priority order:
 
-- **Path A** — Direct booking: Home → Engagements → Book a Strategy Call
-- **Path B** — Content-led: Home → Case Study → Book a Strategy Call  
-- **Path C** — Lead capture: Home → Thinking (/thinking) → Email → Drip → Booking
+- **Path A**: Direct: Home → Engagements → Contact (calendar, email, or phone)
+- **Path B**: Content-led: Home → Case Study → Contact
+- **Path C**: Lead capture: Home → Thinking (/thinking) → Email → Drip → Booking
 
 Full site map and per-page specs in `docs/ia-framework-v1-1.md`.
 
@@ -122,8 +122,11 @@ placeholder in components that reference it until the asset is finalized.
 
 ## Conversion infrastructure
 
-- Booking URL: `https://cal.com/shawn-capizzi/strategy-call` (placeholder until 
-  cal.com handle is locked — search/replace globally when finalized)
+- Booking URL: `https://cal.com/capizzi/30min`, opened only from the Contact
+  page's "Open the calendar" button. Since October 2026 every general CTA
+  ("Let's talk", "Start a conversation", "Tell me what you're working on",
+  and "Talk through something similar" on case studies) goes to /contact.
+  "Strategy Call" is retired; the first step is the "Initial Conversation".
 - Email service: TBD (ConvertKit vs Mailchimp — see open questions in IA doc §13)
 - Phone: 212-380-3900 (footer + contact page only, not body copy)
 - Email: capizzi@gmail.com

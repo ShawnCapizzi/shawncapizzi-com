@@ -17,8 +17,6 @@ const NAV_LINKS: NavLink[] = [
 
 const SECONDARY_LINKS = [{ href: "/faq", label: "FAQ" }] as const;
 
-const CAL_URL = "https://cal.com/capizzi/30min";
-
 // Phone shown in the header on lg+ desktop and at the top of the mobile drawer.
 // Single source of truth: edit PHONE_DISPLAY for the visible label and PHONE_TEL
 // for the dial URI (E.164 with country code).
@@ -111,14 +109,12 @@ export function Header() {
               <PhoneIcon size={14} />
               {PHONE_DISPLAY}
             </a>
-            <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="inline-flex items-center px-6 py-2.5 rounded-full bg-text-primary text-text-inverse text-sm font-medium tracking-tight hover:scale-[1.02] transition-transform"
             >
-              Book a Strategy Call
-            </a>
+              Let&apos;s talk
+            </Link>
           </div>
 
           <button
@@ -183,9 +179,9 @@ export function Header() {
                 </Link>
               ))}
             </div>
-            <a href={CAL_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight w-full">
-              Book a Strategy Call
-            </a>
+            <Link href="/contact" onClick={() => setMobileOpen(false)} className="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight w-full">
+              Let&apos;s talk
+            </Link>
           </nav>
         </div>
       ) : null}

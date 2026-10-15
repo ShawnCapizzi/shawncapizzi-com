@@ -8,18 +8,17 @@ import Link from "next/link";
  * intent-named entry points, because a visitor does not know which audience
  * they are on arrival, but they do know what they came to do.
  *
- *   Door 1  Share your business goals             the strategy call (the page's one ask)
+ *   Door 1  Share your business goals             /contact (the page's one ask)
  *   Door 2  The work behind the experience        /work
  *   Door 3  The thinking I bring, as a system     /thinking, the Process page
  *
  * The D&AD Pencil moved up into ProofStrip in October 2026, with its icon,
  * so the credential shows once, above the doors.
  *
- * To retune a door, edit DOORS below. Door 1 is styled as the primary and
- * opens in a new tab because it is an external calendar.
+ * To retune a door, edit DOORS below. Door 1 is styled as the primary.
+ * Since October 2026 it goes to /contact, where the visitor picks the
+ * calendar, email, or phone, instead of straight to the calendar.
  */
-
-const CAL_URL = "https://cal.com/capizzi/30min";
 
 type Door = {
   key: string;
@@ -38,9 +37,8 @@ const DOORS: Door[] = [
     eyebrow: "Start here",
     title: "Share your business goals or roadblocks.",
     body: "A stuck flow, a message that isn't getting the action you want, or customer signals nobody tracks. I find the opportunities, drive product to market, and build feedback loops that turn customer data into actionable business intelligence.",
-    cta: "Book a Strategy Call",
-    href: CAL_URL,
-    external: true,
+    cta: "Tell me what you\u2019re working on",
+    href: "/contact",
     primary: true,
   },
   {

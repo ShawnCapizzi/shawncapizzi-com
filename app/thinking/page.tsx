@@ -20,7 +20,7 @@ import { BookAndCards } from "@/components/BookAndCards";
  * Order is the argument (reordered September 2026): the method, the loop,
  * the method as objects you can hold (book and cards), the method running
  * as software, then the ways to take some of it with you, published
- * writing and a talk as credibility, and the strategy call closes, once.
+ * writing and a talk as credibility, and one ask to talk closes, once.
  *
  * Photos: the book and cards figures come from components/BookAndCards.tsx,
  * shared with the homepage, which documents both images.
@@ -37,7 +37,6 @@ export const metadata = pageMetadata({
     "The Capizzi Process: listen first, make it visible, prove it worked. The method as an interactive loop, running as software, and in print and in hand.",
 });
 
-const CAL_URL = "https://cal.com/capizzi/30min";
 const GOV_APP_URL = "https://governance-deck-tau.vercel.app";
 
 const PUBLISHED = [
@@ -302,16 +301,15 @@ export default function Page() {
             Want to run this on something real?
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
-            30 minutes. Virtual. No pitch.
+            Bring me the problem, and we&apos;ll talk it through.
           </p>
-          <a
-            href={CAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
           >
-            Book a Strategy Call
-          </a>
+            Let&apos;s talk
+            <span aria-hidden="true" className="ml-2">&rarr;</span>
+          </Link>
         </div>
       </section>
     </article>

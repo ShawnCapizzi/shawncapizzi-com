@@ -5,7 +5,7 @@ export const metadata = pageMetadata({
   path: "/contact",
   title: "Contact",
   description:
-    "Three ways in: a 30-minute strategy call, email, or phone. First call to signed SOW in 2 to 3 weeks, or sooner.",
+    "Three ways in: calendar, email, or phone. From initial conversation to signed SOW in 2 to 3 weeks, or sooner.",
 });
 
 const CAL_URL = "https://cal.com/capizzi/30min";
@@ -25,9 +25,8 @@ export default function Page() {
             Three ways in.
           </h1>
           <p className="hero-lead max-w-3xl">
-            Most engagements start with a 30-minute call. If you&apos;d rather
-            share some context first, email works well. And if it&apos;s a
-            quick question, call me.
+            Have something you&apos;re working through? Pick whichever way
+            feels easiest: calendar, email, or phone.
           </p>
         </div>
       </section>
@@ -36,17 +35,17 @@ export default function Page() {
       <section className="py-12 md:py-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-            {/* Card 1: project scope (highest commercial value) */}
+            {/* Card 1: calendar. The only button on the site that opens Cal
+                directly (October 2026); every other general CTA lands here. */}
             <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
-              <p className="metadata-label mb-4">Path 01 · Recommended</p>
+              <p className="metadata-label mb-4">Path 01 · Calendar</p>
               <h2 className="card-title text-text-primary mb-4">
-                You have a project to scope.
+                Find a time that works.
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
-                30-minute strategy call. Virtual. No pitch. We talk through
-                what&apos;s stuck, what success looks like, and whether
-                there&apos;s a fit. If there isn&apos;t, I&apos;ll say so and
-                point you somewhere better.
+                Pick a time and we&apos;ll talk through what&apos;s happening,
+                what you&apos;re trying to accomplish, and whether I can help.
+                No pitch.
               </p>
               <a
                 href={CAL_URL}

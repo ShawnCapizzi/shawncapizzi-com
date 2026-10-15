@@ -8,7 +8,6 @@ import { CollapsibleSection } from "@/components/CollapsibleSection";
 import { JsonLd } from "@/components/JsonLd";
 import { KeepHyphens } from "@/components/KeepHyphens";
 
-const CAL_URL = "https://cal.com/capizzi/30min";
 
 interface MetadataItem {
   label: string;
@@ -529,14 +528,13 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
             {props.ctaHeadline}
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-center">
-            <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
             >
-              Book a Strategy Call
-            </a>
+              Talk through something similar
+              <span aria-hidden="true" className="ml-2">&rarr;</span>
+            </Link>
             <Link
               href="/engagements"
               className="inline-flex items-center justify-center text-base font-medium text-link hover:text-link-hover transition-colors"

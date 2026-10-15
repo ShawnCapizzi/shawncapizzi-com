@@ -75,7 +75,7 @@ export const FAQS: FaqItem[] = [
   {
     q: "How do engagements typically start?",
     a: [
-      "Every engagement starts with a free 30-minute Strategy Call. Virtual. We talk through what's stuck and what success looks like. No pitch. If there's not a fit, I'll tell you and try to point you to possible solutions or partners. If the strategy call goes well, we move into a longer scoping conversation with the relevant stakeholders to map scope, timing, and constraints. Then I write the ",
+      "Every engagement starts with an initial conversation, usually 30 minutes. We talk through what's stuck and what success looks like. No pitch. If there's not a fit, I'll tell you and try to point you to possible solutions or partners. If there is, we move into a longer scoping conversation with the relevant stakeholders to map scope, timing, and constraints. Then I write the ",
       { text: "Statement of Work", href: "/engagements#process" },
       ". Most engagements move from first call to signed SOW in 2–3 weeks.",
     ],
@@ -111,7 +111,7 @@ export const FAQS: FaqItem[] = [
       { text: "advisory", href: "/engagements#advisory" },
       ", and ",
       { text: "on-call support", href: "/engagements#oncall" },
-      " without renegotiating from scratch. The intensity flexes with what you need; the partnership stays in place. The 30-minute Strategy Call is the right starting point if you're trying to figure out which structure makes sense for your team.",
+      " without renegotiating from scratch. The intensity flexes with what you need; the partnership stays in place. An initial conversation is the right starting point if you're trying to figure out which structure makes sense for your team.",
     ],
   },
   {

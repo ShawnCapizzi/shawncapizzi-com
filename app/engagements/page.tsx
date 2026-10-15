@@ -9,7 +9,6 @@ export const metadata = pageMetadata({
     "Fractional or embedded design leadership, advisory on a defined problem, or on-call senior judgment for key decisions. Experience strategy for regulated teams.",
 });
 
-const CAL_URL = "https://cal.com/capizzi/30min";
 const EMAIL = "capizzi@shawncapizzi.com";
 
 /**
@@ -205,17 +204,17 @@ export default function Page() {
                 Not sure which fits?
               </p>
               <p className="mt-1 text-text-secondary">
-                Start with a free 30-minute call, no pitch.
+                Start with the problem. We can figure out the right shape
+                from there.
               </p>
             </div>
-            <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="shrink-0 inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
             >
-              Book a Strategy Call
-            </a>
+              Start a conversation
+              <span aria-hidden="true" className="ml-2">&rarr;</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -405,8 +404,8 @@ export default function Page() {
             {[
               {
                 step: "Step 1",
-                title: "Strategy Call",
-                body: "A 30-minute conversation about what\u2019s happening, what\u2019s stuck, and whether there\u2019s a fit.",
+                title: "Initial Conversation",
+                body: "We talk through what\u2019s happening, what\u2019s stuck, what opportunity you see, and whether I can help.",
               },
               {
                 step: "Step 2",
@@ -489,20 +488,18 @@ export default function Page() {
             another experienced point of view, let&apos;s talk through it.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
-            <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contact"
               className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
             >
-              Book a Strategy Call
+              Let&apos;s talk
               <span aria-hidden="true" className="ml-2">&rarr;</span>
-            </a>
+            </Link>
             <a
               href={`mailto:${EMAIL}`}
               className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
             >
-              Prefer email?
+              Email me
               <span aria-hidden="true" className="ml-2">&rarr;</span>
             </a>
           </div>

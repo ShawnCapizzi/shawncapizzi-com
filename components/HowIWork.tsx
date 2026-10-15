@@ -9,8 +9,8 @@ import Link from "next/link";
  * already covers all three tiers under #leadership, #advisory, and #oncall.
  *
  * It is now three statements, one line each, and a single link. No client
- * state, no accordion, no duplicated body copy, and no third ask for the
- * strategy call: the homepage asks at the top and at the bottom only.
+ * state, no accordion, no duplicated body copy, and no third ask to talk:
+ * the homepage asks at the top and at the bottom only.
  *
  * The titles stay first person and parallel, matching the doors in the
  * hero. "Embed me in the work" replaced "Bring me in", which collided with
