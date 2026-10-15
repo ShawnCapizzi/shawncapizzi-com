@@ -33,9 +33,25 @@ export const FAQS: FaqItem[] = [
     ],
   },
   {
-    q: "What does a strategic design partner do that an agency doesn't?",
+    q: "How do you design pharma digital experiences that get through MLR and RC review faster?",
     a: [
-      "An agency executes against a brief you wrote. A strategic design partner writes the brief with you: challenging the framing, mapping the system, and translating business outcomes into experience decisions. You get accountability for the outcome, not just the deliverable. Agencies are great when you know what you need. Strategic partners are necessary when you're trying to figure out what you need.",
+      "Build the HCP and DTC review rules in from the start, instead of retrofitting them after a review goes wrong. Early concept reviews show what reviewers will approve, from a new phrasing to a new interactive feature, before the work is built. I bring regulatory partners and medical strategists in as collaborators, not gatekeepers. For established brands, I use modular, pre-approved components and shared governance. For first-in-disease launches, where there's nothing to reuse, I work with the team to build visual examples and a pharma-first narrative, so the review path is set up for the best chance of approval. On a ",
+      { text: "multi-brand sales tools program", href: "/work/multi-brand-pharma-sales-tools" },
+      ", pre-approved components and a direction vetted in concept review helped save time to market and team hours across brands.",
+    ],
+  },
+  {
+    q: "When is it useful to bring you in?",
+    a: [
+      "I'm most useful when the problem or opportunity still needs definition, when senior UX judgment is needed across disciplines, or when a team needs experienced leadership without adding another full-time role. I can work directly with a brand, embed inside an agency engagement, or work alongside an internal product or technology team. The goal is to strengthen the team already there, not create another layer of process.",
+    ],
+  },
+  {
+    q: "Do you offer fractional or freelance UX leadership for pharma and healthcare teams?",
+    a: [
+      "Yes. I work as a fractional or freelance senior UX and design leader for pharma, healthcare, and other regulated teams: directly with brands, embedded inside agency engagements, or alongside internal product and technology teams. The work has included design governance across 70+ therapeutic brands, a patient navigation platform, and multi-brand sales tools. Engagements can be project-based, ongoing, or embedded, and I work remote-first, onsite when being in the room adds value. See the ",
+      { text: "three ways to bring me in", href: "/engagements" },
+      ".",
     ],
   },
   {
@@ -67,7 +83,23 @@ export const FAQS: FaqItem[] = [
   {
     q: "Do you work with agency partners or only direct clients?",
     a: [
-      "Both. I work directly with brands and embed as senior experience leadership inside agency engagements when the client is regulated, enterprise, or AI-heavy and the agency team needs a senior voice in the room. The structure depends on the work. What matters is the right level of accountability for the outcome.",
+      "Both. I work directly with brands and embed as senior UX and experience leadership inside agency engagements. I'm especially useful when the work is regulated, enterprise-scale, AI-heavy, or still needs clearer definition. I work inside the team's existing process and tools, with the level of involvement shaped around the work.",
+    ],
+  },
+  {
+    q: "Can you work inside our existing team, tools, and process?",
+    a: [
+      "Yes. I work inside your tools, training, and process, not beside them, whether that's an enterprise playbook or a start-up still writing its own. Where the process slows the work, I help refine it. I work alongside product, creative, strategy, account, regulatory, research, and development teams, and I've directed vendor teams onshore and offshore.",
+    ],
+  },
+  {
+    q: "Do you work with start-ups as well as enterprise teams?",
+    a: [
+      "Both. Most of my client work has been enterprise and regulated: pharma, healthcare, and financial services. I also design, build, and ship my own products, like ",
+      { text: "CourtVisual", href: "/work/courtvisual" },
+      " and ",
+      { text: "AI Patient Support", href: "/work/ai-native-product-design-lab" },
+      ", so I know the start-up side from the inside: small teams, fast decisions, and getting something usable in front of people.",
     ],
   },
   {

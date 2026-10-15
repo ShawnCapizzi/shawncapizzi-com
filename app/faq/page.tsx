@@ -15,7 +15,7 @@ export const metadata = pageMetadata({
   path: "/faq",
   title: "FAQ: AI UX, Regulated Design, and Engagements",
   description:
-    "Plain answers to the questions that come up most often about AI UX, regulated design, and how strategic experience design partners differ from agencies.",
+    "Plain answers to the questions that come up most often about AI UX, regulated design, senior UX leadership, and how I work with brands, agencies, and internal teams.",
 });
 
 export default function Page() {
@@ -31,18 +31,19 @@ export default function Page() {
           </h1>
           <p className="hero-lead max-w-3xl">
             Plain answers to the questions that come up most often about AI UX,
-            regulated design, and how strategic experience design partners
-            differ from agencies.
+            regulated design, senior UX leadership, and how I work with brands,
+            agencies, and internal teams.
           </p>
         </div>
       </section>
 
       <FaqAccordion items={FAQS} />
 
-      {/* CTA CARDS: work (proof) + contact (path forward) */}
+      {/* CTA CARDS: case studies (proof, the current site wording shared with
+          /contact as "workContact") + contact (path forward) */}
       <section className="py-16 md:py-24 mt-12 md:mt-16 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <CTACards cards={["work", "contact"]} />
+          <CTACards cards={["workContact", "contact"]} />
         </div>
       </section>
     </article>
