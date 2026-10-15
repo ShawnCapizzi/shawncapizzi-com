@@ -757,6 +757,26 @@ h3 {
   background-size: 6px 7px;
 }
 
+/* Inset variant for a single paragraph (the Contact intro): the hash marks
+   run from the cap height of the first line to the baseline of the last,
+   so the rule matches the text rather than the line boxes. */
+.hash-rule-inset {
+  position: relative;
+  background-image: none;
+}
+
+.hash-rule-inset::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+  bottom: 0.3em;
+  width: 6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='7'%3E%3Cpath d='M1 6L5 2' stroke='rgb(130,116,255)' stroke-opacity='0.55' stroke-width='1' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  background-repeat: repeat-y;
+  background-size: 6px 7px;
+}
+
 /* ============================================================
    PROCESS SKETCH (October 2026)
    The hand-drawn station sketch on /thinking, in
