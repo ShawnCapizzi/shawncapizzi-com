@@ -33,7 +33,7 @@ type Item = string | Stroke | Hatch | Shade;
 
 const ALT = [
   "Three loose squares: the raw inputs, gathered but not yet filtered.",
-  "Three stacked squares with lines converging to a single point.",
+  "Three stacked squares, nudged left and right, each with a pair of short lines beside it: questions going back and forth.",
   "Three stacked squares with lines leading into one light bulb.",
   "Two framed cards, each holding a light bulb: two options side by side.",
   "One framed bulb with lines out to three small bulbs: the signals to watch.",
@@ -148,6 +148,17 @@ function bulb(r: R, cx: number, cy: number, R0: number): Item[] {
   ];
 }
 
+/** A short, nearly level dash, for the paired lines beside the Questions
+ *  squares. Ends sit within about half a unit of their marks. */
+function dash(r: R, x1: number, x2: number, y: number) {
+  const a = x1 + (r() - 0.5) * 1.2;
+  const b = x2 + (r() - 0.5) * 1.2;
+  const y1 = y + (r() - 0.5) * 0.8;
+  const y2 = y + (r() - 0.5) * 0.8;
+  const bow = (r() - 0.5) * 0.8;
+  return `M${f(a)},${f(y1)}Q${f((a + b) / 2)},${f((y1 + y2) / 2 + bow)} ${f(b)},${f(y2)}`;
+}
+
 /** Three squares, stacked with room between them and nudged off line. */
 function stack(r: R, x: number): Item[] {
   return [...box(r, x + 2, 4, 30, 30), ...box(r, x + 8, 49, 30, 30), ...box(r, x, 93, 30, 30)];
@@ -158,8 +169,20 @@ const GLYPHS: ((r: R) => Item[])[] = [
   // Sizes vary on purpose: upper left 50, upper right 8% larger, lower 5%
   // smaller, each grown or shrunk around its own center.
   (r) => [...box(r, 26, 10, 50, 50), ...box(r, 106.1, 2.1, 51.8, 51.8), ...box(r, 69.2, 75.2, 45.6, 45.6)],
-  // 2 Questions: the inputs narrowed to one point
-  (r) => [...stack(r, 30), stroke(r, 74, 22, 118, 58), stroke(r, 80, 64, 120, 64), stroke(r, 72, 106, 118, 70)],
+  // 2 Questions: from Shawn's sketch. Three squares stepping left, right,
+  // left, each with a pair of short lines on its open side, like questions
+  // going back and forth. The whole group is centered on x = 100.
+  (r) => [
+    ...box(r, 74, 4, 30, 30),
+    dash(r, 113, 138, 15),
+    dash(r, 113, 129, 22),
+    ...box(r, 90, 49, 30, 30),
+    dash(r, 72, 86, 59),
+    dash(r, 62, 86, 66),
+    ...box(r, 76, 93, 30, 30),
+    dash(r, 114, 138, 104),
+    dash(r, 114, 124, 109),
+  ],
   // 3 Findings: the inputs become one idea
   (r) => [...stack(r, 10), stroke(r, 54, 22, 112, 52), stroke(r, 60, 64, 114, 64), stroke(r, 52, 106, 112, 76), ...bulb(r, 152, 48, 26)],
   // 4 Activation: two options, side by side
