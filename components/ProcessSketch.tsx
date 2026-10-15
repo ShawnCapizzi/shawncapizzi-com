@@ -155,13 +155,16 @@ function stack(r: R, x: number): Item[] {
 
 const GLYPHS: ((r: R) => Item[])[] = [
   // 1 Inputs: loose squares, gathered but not yet filtered
-  (r) => [...box(r, 26, 10, 50, 50), ...box(r, 108, 4, 48, 48), ...box(r, 68, 74, 48, 48)],
+  // Sizes vary on purpose: upper left 50, upper right 8% larger, lower 5%
+  // smaller, each grown or shrunk around its own center.
+  (r) => [...box(r, 26, 10, 50, 50), ...box(r, 106.1, 2.1, 51.8, 51.8), ...box(r, 69.2, 75.2, 45.6, 45.6)],
   // 2 Questions: the inputs narrowed to one point
   (r) => [...stack(r, 30), stroke(r, 74, 22, 118, 58), stroke(r, 80, 64, 120, 64), stroke(r, 72, 106, 118, 70)],
   // 3 Findings: the inputs become one idea
   (r) => [...stack(r, 10), stroke(r, 54, 22, 112, 52), stroke(r, 60, 64, 114, 64), stroke(r, 52, 106, 112, 76), ...bulb(r, 152, 48, 26)],
   // 4 Activation: two options, side by side
-  (r) => [...box(r, 22, 8, 72, 110), ...box(r, 106, 11, 72, 110), ...bulb(r, 58, 50, 18), ...bulb(r, 142, 53, 18)],
+  // The left frame is 5% shorter than the right, so the two never match.
+  (r) => [...box(r, 22, 8, 72, 104.5), ...box(r, 106, 11, 72, 110), ...bulb(r, 58, 50, 18), ...bulb(r, 142, 53, 18)],
   // 5 Measurement: one decision, a few signals to watch
   (r) => [
     ...box(r, 14, 30, 64, 64),
