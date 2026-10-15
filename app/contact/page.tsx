@@ -5,7 +5,7 @@ export const metadata = pageMetadata({
   path: "/contact",
   title: "Contact",
   description:
-    "Three ways in: calendar, email, or phone. From initial conversation to signed SOW in 2 to 3 weeks, or sooner.",
+    "Tell me what you're working on. You don't need a finished brief, scope, or RFP to start. Calendar, email, or phone, and I work remote-first.",
 });
 
 const CAL_URL = "https://cal.com/capizzi/30min";
@@ -17,21 +17,37 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/shawncapizzi";
 export default function Page() {
   return (
     <article>
-      {/* HERO: confident, action-oriented setup */}
+      {/* HERO (October 2026): the page picks up the conversation a "Let's
+          talk" or "Start a conversation" button started. No funnel language:
+          no strategy call, no call length, no "no pitch". */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Contact</p>
           <h1 className="headline-static hero-title max-w-4xl">
-            Three ways in.
+            Tell me what you&apos;re working on.
           </h1>
-          <p className="hero-lead max-w-3xl">
-            Have something you&apos;re working through? Pick whichever way
-            feels easiest: calendar, email, or phone.
-          </p>
+          <div className="max-w-3xl">
+            <p className="hero-lead">
+              <strong className="font-semibold text-text-primary">
+                You don&apos;t need a finished brief, scope, or RFP to start.
+              </strong>
+            </p>
+            <p className="hero-lead">
+              Bring me a problem you&apos;re trying to solve, something
+              you&apos;re trying to overcome, or an opportunity that still
+              needs defining.
+            </p>
+            <p className="hero-lead">
+              <strong className="font-semibold text-text-primary">
+                Calendar, email, or phone: whatever&apos;s easiest. I work
+                remote-first, so it doesn&apos;t matter where you are.
+              </strong>
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* THREE INTENT CARDS: Framing B with hybrid softening on Card 3 */}
+      {/* THREE WAYS TO REACH SHAWN: calendar, email, phone */}
       <section className="py-12 md:py-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
@@ -43,9 +59,8 @@ export default function Page() {
                 Find a time that works.
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
-                Pick a time and we&apos;ll talk through what&apos;s happening,
-                what you&apos;re trying to accomplish, and whether I can help.
-                No pitch.
+                We&apos;ll talk through what&apos;s happening, what you&apos;re
+                trying to accomplish, and whether I can help.
               </p>
               <a
                 href={CAL_URL}
@@ -65,8 +80,8 @@ export default function Page() {
                 Prefer to start in writing?
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
-                Send a brief, a question, some context, or an introduction.
-                All welcome. I reply within a business day.
+                Send a question, some context, an introduction, or whatever
+                you have so far. You don&apos;t need a finished brief.
               </p>
               <a
                 href={`mailto:${EMAIL}`}
@@ -84,8 +99,8 @@ export default function Page() {
                 Have a quick question?
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
-                Phone is fine. Voicemail is welcome. I return calls within a
-                business day. For a working session, the calendar is faster.
+                Call or leave a voicemail. I&apos;ll get back to you within a
+                business day.
               </p>
               <a
                 href={`tel:${PHONE_TEL}`}
@@ -99,26 +114,19 @@ export default function Page() {
         </div>
       </section>
 
-      {/* TRUST STRIP: three short proof points: how long, will he sell me,
-          is he qualified. The reply-window stat was removed in September 2026
-          (the cards already say it, and a stat read as salesy). */}
+      {/* WHAT TO EXPECT (October 2026): what the conversation is about, who
+          it is with, and how the work happens. Replaced "2 to 3 weeks", "No
+          pitch", and the diagnostic line, which read as process and sales. */}
       <section className="py-10 md:py-14 border-t border-b border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-10">
             <div>
-              <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
-                2 to 3 weeks
+              <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight text-balance">
+                Let&apos;s discuss what success looks like.
               </p>
               <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug text-pretty">
-                From first call to signed SOW, or sooner.
-              </p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
-                No pitch
-              </p>
-              <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug text-pretty">
-                First call is diagnostic, not a sales call.
+                Tell me what you&apos;re working on, what&apos;s getting in the
+                way, and what a better outcome would look like.
               </p>
             </div>
             <div>
@@ -127,6 +135,15 @@ export default function Page() {
               </p>
               <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug text-pretty">
                 Across pharma, healthcare, financial services, and enterprise.
+              </p>
+            </div>
+            <div>
+              <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
+                Remote-first
+              </p>
+              <p className="mt-2 text-sm md:text-base text-text-secondary leading-snug text-pretty">
+                I work with brands, agencies, start-ups, and technology leaders,
+                often alongside internal, offshore, and public-sector teams.
               </p>
             </div>
           </div>
@@ -140,25 +157,27 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SECONDARY: LinkedIn */}
+      {/* SECONDARY: LinkedIn, kept short. The Contact page does not need to
+          sell the writing; /thinking does that. */}
       <section className="py-12 md:py-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl">
-            <p className="metadata-label mb-4">Also</p>
+            <p className="metadata-label mb-4">Prefer LinkedIn?</p>
+            <h2 className="card-title text-text-primary mb-3">
+              We can connect there too.
+            </h2>
             <p className="text-base md:text-lg text-text-secondary leading-relaxed">
-              I&apos;m always active on{" "}
-              <a
-                href={LINKEDIN_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-link hover:text-link-hover transition-colors"
-              >
-                LinkedIn
-              </a>
-              . That is where I post essays and short pieces on AI adoption,
-              current design topics, and experience strategy. Connections
-              are always welcome; feel free to send a DM.
+              I&apos;m active on LinkedIn and DMs are always welcome.
             </p>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center text-base md:text-lg font-medium text-link hover:text-link-hover transition-colors"
+            >
+              Connect on LinkedIn
+              <span aria-hidden="true" className="ml-2">&rarr;</span>
+            </a>
           </div>
         </div>
       </section>
