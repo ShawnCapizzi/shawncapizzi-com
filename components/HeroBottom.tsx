@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 /**
@@ -12,8 +13,9 @@ import Link from "next/link";
  *   Door 2  The work behind the experience        /work
  *   Door 3  The thinking I bring, as a system     /thinking, the Process page
  *
- * The D&AD Pencil moved up into ProofStrip in October 2026, with its icon,
- * so the credential shows once, above the doors.
+ * The D&AD line sits underneath the doors as a credential, shown, not
+ * claimed, and links to the D&AD entry. It moved into a proof strip for a
+ * while in October 2026 and came back here when the strip was removed.
  *
  * To retune a door, edit DOORS below. Door 1 is styled as the primary.
  * Since October 2026 it goes to /contact, where the visitor picks the
@@ -112,6 +114,22 @@ export function HeroBottom() {
             );
           })}
         </div>
+
+        <a
+          href="https://www.dandad.org/annual/2022/entry/professional/235946"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 md:mt-10 inline-flex items-center gap-2 text-sm italic font-light text-text-tertiary hover:text-text-secondary transition-colors"
+        >
+          <Image
+            src="/images/awards/dandad-pencil-2022.webp"
+            alt="D&AD Pencil 2022 award"
+            width={300}
+            height={300}
+            className="h-10 w-10 shrink-0 rotate-90"
+          />
+          <span>D&amp;AD Pencil 2022, Future Impact, with The Chrysalis Initiative</span>
+        </a>
       </div>
     </section>
   );

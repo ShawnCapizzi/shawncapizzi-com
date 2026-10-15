@@ -1,7 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { HOME_DESCRIPTION, HOME_TITLE, pageMetadata } from "@/lib/seo";
 import { LogoStrip } from "@/components/LogoStrip";
-import { ProofStrip } from "@/components/ProofStrip";
 import { HeroBottom } from "@/components/HeroBottom";
 import { WhenToBringMeIn } from "@/components/WhenToBringMeIn";
 import { HowIWork } from "@/components/HowIWork";
@@ -18,7 +17,6 @@ import { FinalCTA } from "@/components/FinalCTA";
  *
  *   Hero                 the leadership claim, then idea to launch
  *   LogoStrip            the credential strip
- *   ProofStrip           one quiet line of evidence, each figure from a case study
  *   HeroBottom           three doors, named by what the visitor came to do
  *   WhenToBringMeIn      self-qualification: "You should talk to me if..."
  *   SelectedWork         three case studies, with the service layer in the copy
@@ -27,6 +25,10 @@ import { FinalCTA } from "@/components/FinalCTA";
  *   Building             live products, AI-native product design
  *   ProcessSection       the method, with the book and the cards as objects
  *   FinalCTA             one ask
+ *
+ * The proof strip (70+ brands, the two dollar figures, D&AD) was removed in
+ * October 2026 to calm the top of the page; the figures live in their case
+ * studies, where the context is.
  *
  * The homepage carries one primary ask (start a conversation) at the top and the
  * bottom. Every other link on the page goes deeper rather than asking again.
@@ -43,7 +45,6 @@ export default function HomePage() {
     <>
       <Hero />
       <LogoStrip />
-      <ProofStrip />
       <HeroBottom />
       <WhenToBringMeIn />
       <SelectedWork />
