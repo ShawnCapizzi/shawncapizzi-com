@@ -420,7 +420,7 @@ export default function Page() {
             ].map((step) => (
               <div
                 key={step.step}
-                className="border-l-2 border-border-default pl-6 md:pl-8"
+                className="hash-rule pl-6 md:pl-8"
               >
                 <p className="metadata-label mb-2">{step.step}</p>
                 <h3 className="card-title text-text-primary mb-3">

@@ -284,7 +284,7 @@ export default function Page() {
             A few things I&apos;m proud of
           </h2>
           <div className="space-y-10 max-w-3xl">
-            <div className="border-l-2 border-border-default pl-6 md:pl-8">
+            <div className="hash-rule pl-6 md:pl-8">
               <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
                 D&amp;AD Pencil &middot; Future Impact Initiative
               </h3>
@@ -310,7 +310,7 @@ export default function Page() {
                 </a>
               </div>
             </div>
-            <div className="border-l-2 border-border-default pl-6 md:pl-8">
+            <div className="hash-rule pl-6 md:pl-8">
               <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
                 Industry-first pharmaceutical mobile wallet integration
               </h3>
@@ -329,7 +329,7 @@ export default function Page() {
                 </Link>
               </div>
             </div>
-            <div className="border-l-2 border-border-default pl-6 md:pl-8">
+            <div className="hash-rule pl-6 md:pl-8">
               <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
                 Published thinking
               </h3>

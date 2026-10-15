@@ -435,7 +435,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
             {props.outcomes.map((outcome, i) => (
               <div
                 key={i}
-                className="border-l-2 border-border-default pl-6 md:pl-8"
+                className="hash-rule pl-6 md:pl-8"
               >
                 <p className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight">
                   {outcome.headline}

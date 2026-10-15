@@ -742,6 +742,22 @@ h3 {
 }
 
 /* ============================================================
+   HASH RULE (October 2026)
+   The vertical rule beside list items (homepage "sounds familiar",
+   About "A few things I'm proud of", Engagements "How we start", and
+   case study "Selected outcomes") is a column of short, static hash
+   marks in the same quiet purple as the Process sketch shading, instead
+   of a solid gray line. Purple quote bars keep their solid rule.
+   One tick per 7px; the tile is 6px wide, inside the item's left padding.
+   ============================================================ */
+.hash-rule {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='7'%3E%3Cpath d='M1 6L5 2' stroke='rgb(130,116,255)' stroke-opacity='0.55' stroke-width='1' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
+  background-repeat: repeat-y;
+  background-position: 0 0;
+  background-size: 6px 7px;
+}
+
+/* ============================================================
    PROCESS SKETCH (October 2026)
    The hand-drawn station sketch on /thinking, in
    components/ProcessSketch.tsx. Every stroke has pathLength 1, so the
