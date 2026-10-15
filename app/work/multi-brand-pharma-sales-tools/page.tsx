@@ -273,6 +273,11 @@ export default function Page() {
             "A modular framework that brand teams could compose into custom presentations while maintaining unified navigation and standardized taxonomy.",
         },
         {
+          headline: "Regulatory review cycles simplified",
+          description:
+            "Pre-approved components, and a direction vetted early in concept review, eliminated duplicate review conversations across brands. In that concept review, a few team members and I walked the brand and legal teams through the direction on a video call, with a PowerPoint. Speed-to-market efficiencies improved at the system level, and also at the checkpoints of legal review and product development. That experience is what I bring to every project, and it often adds value across meetings, timelines, deliverables, and now AI.",
+        },
+        {
           headline: "40% reduction in search time",
           description:
             "During sales rep conversations with healthcare providers. Reps could navigate the system instinctively instead of relearning each tool.",
@@ -291,11 +296,6 @@ export default function Page() {
           headline: "Tool adoption increased from 65% to 92%",
           description:
             "Within 12 months of system launch. Reps used the tools because the tools worked the way reps actually work.",
-        },
-        {
-          headline: "Regulatory review cycles simplified",
-          description:
-            "Pre-approved components, and a direction vetted early in concept review, eliminated duplicate review conversations across brands. In that concept review, a few team members and I walked the brand and legal teams through the direction on a video call, with a PowerPoint. Speed-to-market efficiencies improved at the system level, and also at the checkpoints of legal review and product development. That experience is what I bring to every project, and it often adds value across meetings, timelines, deliverables, and now AI.",
         },
         {
           headline: "Built once. Designed to scale.",
