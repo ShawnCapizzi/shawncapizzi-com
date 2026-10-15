@@ -333,6 +333,21 @@ body::before {
   color: #A798FF;
 }
 
+/* The homepage eyebrow stays on one line. On phones the type scales with
+   the screen (12px at most) and the tracking tightens slightly, so
+   "Senior UX · Product Design · Experience Strategy" fits from 320px up.
+   48px is the hero's side padding (24px each side) below 768px. */
+.hero-eyebrow {
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .hero-eyebrow {
+    letter-spacing: 0.06em;
+    font-size: min(12px, calc((100vw - 48px) / 30));
+  }
+}
+
 /* ============================================================
    EDITORIAL TYPOGRAPHY
    Instrument Sans for h2 subheads and lead-in moments.

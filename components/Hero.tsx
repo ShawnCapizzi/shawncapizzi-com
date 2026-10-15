@@ -37,7 +37,7 @@ export function Hero() {
           {/* Left: Headline + lead + wordmark (signature). Below lg this
               wrapper is display: contents; see the note above. */}
           <div className="contents lg:block relative z-10 lg:col-span-7 lg:order-1">
-            <p className="eyebrow mb-3 order-0">Senior UX &amp; Product Design Leadership</p>
+            <p className="eyebrow hero-eyebrow mb-3 order-0">Senior UX · Product Design · Experience Strategy</p>
             <h1 className="headline-gleam hero-title text-balance max-w-full lg:max-w-[90%] order-1">
               Design leadership that turns regulated complexity into trusted experiences that go to market faster.
             </h1>
