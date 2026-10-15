@@ -60,7 +60,7 @@ export default function Page() {
         </>,
         "The result was a modular enterprise design system. Thirty-three reusable components. Unified navigation structure. Standardized taxonomy. Flexible content architecture that supported both 45-second elevator pitches and six-minute deeper conversations. Salesforce-integrated interaction tracking. Embedded resource-sharing pathways for PDFs, video, and rep-to-HCP follow-ups. Built-in field notes for pre-call planning and post-call follow-up.",
         "Brand teams could still express campaign identity. But inside a governed design system. The result wasn't uniformity. It was structured flexibility.",
-        "The harder work was organizational. Brand managers had to give up some autonomy to gain shared infrastructure. Regulatory teams had to trust pre-approved components. Development teams had to commit to the framework instead of building bespoke solutions on every brief. None of that happens because the system is well-designed. It happens because the governance is.",
+        "The harder work was organizational. Brand managers had to give up some autonomy to gain shared infrastructure. Regulatory teams had to trust pre-approved components. That trust came from concept reviews: the design direction was vetted early with the brand and legal teams, before it was built, as a standard check and balance. Development teams had to commit to the framework instead of building bespoke solutions on every brief. None of that happens because the system is well-designed. It happens because the governance is.",
       ]}
       pullQuote={[
         "Designing for an audience that might have 45 seconds versus six minutes versus sit down for a cup of coffee, 12 minutes, you really have to be agile.",
@@ -80,6 +80,7 @@ export default function Page() {
             "Governance work determines whether the system survives",
             "Service design at the workflow level, not just UI",
             "Pre-approved components reduce regulatory cycles at the system level",
+            "Concept reviews vet the direction before it is built",
           ]}
           slides={[
             // ─── Slide 1: FOUNDATION ─────────────────────────────────
@@ -294,7 +295,7 @@ export default function Page() {
         {
           headline: "Regulatory review cycles simplified",
           description:
-            "Pre-approved components eliminated duplicate review conversations across brands. Speed-to-market improved at the system level, not just per launch.",
+            "Pre-approved components, and a direction vetted early in concept review, eliminated duplicate review conversations across brands. In that concept review, a few team members and I walked the brand and legal teams through the direction on a video call, with a PowerPoint. Speed-to-market efficiencies improved at the system level, and also at the checkpoints of legal review and product development. That experience is what I bring to every project, and it often adds value across meetings, timelines, deliverables, and now AI.",
         },
         {
           headline: "Built once. Designed to scale.",
