@@ -725,3 +725,98 @@ h3 {
     animation: none;
   }
 }
+
+/* ============================================================
+   PROCESS SKETCH (October 2026)
+   The hand-drawn station sketch on /thinking, in
+   components/ProcessSketch.tsx. Every stroke has pathLength 1, so the
+   draw animation runs its dash offset from 1 to 0; --k staggers the
+   strokes. Strokes wait, paused and hidden, until the sketch first
+   scrolls into view (.is-on); a new station remounts the strokes, which
+   replays the animation. Hatch strokes carry their own purple inline.
+   The shade ticks keep a slow sway and a traveling purple tint after
+   they draw (Shawn's call, October 2026, an exception to the
+   scroll/hover-only motion rule).
+   Stroke widths are in the sketch's own 200 by 130 units.
+   ============================================================ */
+@keyframes process-draw {
+  0% {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.process-sketch path {
+  fill: none;
+  stroke: var(--color-text-primary);
+  stroke-width: 1.15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  animation: process-draw 0.7s cubic-bezier(0.3, 0.6, 0.2, 1) calc(var(--k) * 80ms) both paused;
+}
+
+/* Shade ticks draw in, then sway on their base like grass in a light
+   breeze. --w is each tick's place along its box edge, so the sway moves
+   down the edge and around the corner as one slow wave. */
+@keyframes process-sway {
+  from {
+    transform: rotate(-7deg);
+  }
+  to {
+    transform: rotate(7deg);
+  }
+}
+
+/* The ticks also carry a slow purple tint: light purple fading to a deep,
+   faint purple and back. The tint travels along the edge, up and then
+   down, on its own rhythm so it never lines up with the sway. */
+@keyframes process-tint {
+  0% {
+    stroke: rgba(132, 118, 255, 0.6);
+  }
+  50% {
+    stroke: rgba(107, 92, 255, 0.5);
+  }
+  100% {
+    stroke: rgba(55, 46, 150, 0.18);
+  }
+}
+
+.process-sketch path.shade {
+  stroke: rgba(130, 116, 255, 0.5);
+  stroke-width: 0.65;
+  transform-box: fill-box;
+  transform-origin: 0% 100%;
+  animation:
+    process-draw 1.1s cubic-bezier(0.3, 0.6, 0.2, 1) calc(var(--k) * 80ms) both paused,
+    process-sway 19.2s ease-in-out calc(var(--w) * -1.28s) infinite alternate paused,
+    process-tint 13.6s ease-in-out calc(var(--w) * -0.8s) infinite alternate paused;
+}
+
+.process-sketch path.hatch {
+  stroke-width: 0.75;
+  animation-duration: 0.45s;
+}
+
+.process-sketch.is-on path,
+.process-sketch.is-on path.shade {
+  animation-play-state: running;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-sketch path,
+  .process-sketch path.shade,
+  .process-sketch path.hatch {
+    animation: none;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}

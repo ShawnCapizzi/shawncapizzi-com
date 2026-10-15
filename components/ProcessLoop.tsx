@@ -1,26 +1,24 @@
 "use client";
 
 import { useState } from "react";
+import { ProcessSketch } from "@/components/ProcessSketch";
 
 /**
- * ProcessLoop: the Capizzi Process as one interactive diagram.
- *
- * Three moves, six stations, one loop. Ported from the standalone Process
- * site (capizzi-process-site-v2) and rewired to this site's tokens. The
- * station copy is the Process Handbook's, unchanged.
+ * ProcessLoop: the Capizzi Process on /thinking. Three moves, six stations,
+ * one loop. The station copy is the Process Handbook's, unchanged.
  *
  * This is deliberately the condensed form. The full method (exit tests,
  * failure modes, the ten standards, the field version) is the printed
- * manual, which /thinking offers by email. The diagram gives a visitor the
- * shape of the system in ninety seconds and a reason to want the rest.
+ * manual, which /thinking offers by email.
  *
- * Geometry: stations sit on a circle at 60° increments starting at 12
- * o'clock. Each move owns two adjacent stations and an arc between them.
- * The arrowhead at the top marks the return from station 6 to station 1,
- * because the whole point is that it loops.
+ * Layout (October 2026): the left column shows the active move's name over
+ * a hand-drawn sketch of the selected station (components/ProcessSketch.tsx),
+ * which replaced the ring diagram. The right column is unchanged: the station
+ * chips and the station card. On phones the sketch sits above the chips.
  *
- * Motion is limited to the selected-state swap, which is user-initiated.
- * Reduced motion is respected via the motion-reduce utilities.
+ * Motion: the sketch draws itself on first view and redraws when a station
+ * is chosen; the move name and the card swap in. Arrow keys step through the
+ * chips. Reduced motion is respected throughout.
  */
 
 type Station = {
@@ -106,170 +104,32 @@ const STATIONS: Station[] = [
   },
 ];
 
-const CX = 280;
-const CY = 280;
-const R = 180;
-const LABEL_R = 234;
-
-function pos(i: number, radius: number): [number, number] {
-  const a = ((-90 + i * 60) * Math.PI) / 180;
-  return [CX + radius * Math.cos(a), CY + radius * Math.sin(a)];
-}
-
-// Arcs sit just outside the ring, one per move, spanning its two stations.
-const ARCS = [
-  "M 225.65 77.16 A 210 210 0 0 1 482.84 225.65",
-  "M 482.84 334.35 A 210 210 0 0 1 225.65 482.84",
-  "M 131.51 428.49 A 210 210 0 0 1 131.51 131.51",
-];
-
 export function ProcessLoop() {
   const [active, setActive] = useState(0);
   const s = STATIONS[active];
-  const activeMove = Math.floor(active / 2);
+  const move = Math.floor(active / 2);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
-      {/* The diagram */}
-      <svg
-        viewBox="-30 -15 620 600"
-        className="w-full max-w-[540px] mx-auto block"
-        role="group"
-        aria-label="The Capizzi Process loop: three moves, six stations. Select a station to read its job."
-      >
-        <circle
-          cx={CX}
-          cy={CY}
-          r={R}
-          fill="none"
-          stroke="var(--color-border-default)"
-          strokeWidth="2"
-        />
-
-        {ARCS.map((d, i) => (
-          <path
-            key={i}
-            d={d}
-            fill="none"
-            strokeWidth="2"
-            className="transition-colors duration-300 motion-reduce:transition-none"
-            stroke={
-              activeMove === i
-                ? "var(--color-brand-purple)"
-                : "var(--color-border-subtle)"
-            }
-          />
-        ))}
-
-        <text
-          x="400"
-          y="70"
-          className="font-mono uppercase"
-          fontSize="13"
-          letterSpacing="1"
-          fill="var(--color-text-secondary)"
+      {/* The sketch, under the active move's name */}
+      <div className="min-w-0">
+        <p
+          key={move}
+          className="font-mono text-[15px] lg:text-lg tracking-[0.2em] uppercase text-link mb-6 lg:mb-8 animate-[swapin_.4s_ease-out] motion-reduce:animate-none"
         >
-          {MOVES[0]}
-        </text>
-        <text
-          x="400"
-          y="500"
-          className="font-mono uppercase"
-          fontSize="13"
-          letterSpacing="1"
-          fill="var(--color-text-secondary)"
+          {s.move}
+        </p>
+        <ProcessSketch index={active} name={s.name} />
+        <p
+          aria-hidden="true"
+          className="mt-6 lg:mt-8 font-mono text-xs tracking-widest uppercase text-text-secondary/80 tabular-nums"
         >
-          {MOVES[1]}
-        </text>
-        <text
-          x="32"
-          y="280"
-          textAnchor="middle"
-          transform="rotate(-90 32 280)"
-          className="font-mono uppercase"
-          fontSize="13"
-          letterSpacing="1"
-          fill="var(--color-text-secondary)"
-        >
-          {MOVES[2]}
-        </text>
-
-        {/* Return arrow: station 6 back to station 1 */}
-        <path
-          d="M 203.9 116.1 L 178.6 120.3 L 187.6 135.9 Z"
-          fill="var(--color-brand-purple)"
-        />
-
-        <g className="font-mono uppercase" fontSize="11" letterSpacing="1.5">
-          <text x={CX} y="262" textAnchor="middle" fill="var(--color-text-tertiary)">
-            Three moves
-          </text>
-          <text x={CX} y="284" textAnchor="middle" fill="var(--color-text-tertiary)">
-            Six stations
-          </text>
-          <text x={CX} y="306" textAnchor="middle" fill="var(--color-text-tertiary)">
-            One loop
-          </text>
-        </g>
-
-        {STATIONS.map((st, i) => {
-          const [x, y] = pos(i, R);
-          const [lx, ly] = pos(i, LABEL_R);
-          const on = i === active;
-          const anchor = lx < CX - 10 ? "end" : lx > CX + 10 ? "start" : "middle";
-          return (
-            <g
-              key={st.n}
-              role="button"
-              tabIndex={0}
-              aria-pressed={on}
-              aria-label={`Station ${st.n}, ${st.name}`}
-              onClick={() => setActive(i)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  setActive(i);
-                }
-              }}
-              className="cursor-pointer outline-none focus-visible:[&>circle]:stroke-[var(--color-link)]"
-            >
-              <circle
-                cx={x}
-                cy={y}
-                r="22"
-                strokeWidth="2"
-                className="transition-colors duration-200 motion-reduce:transition-none"
-                fill={on ? "var(--color-brand-purple)" : "var(--color-bg-raised)"}
-                stroke={on ? "var(--color-brand-purple)" : "var(--color-text-secondary)"}
-              />
-              <text
-                x={x}
-                y={y + 5}
-                textAnchor="middle"
-                className="font-mono"
-                fontSize="15"
-                fill="var(--color-text-primary)"
-              >
-                {st.n}
-              </text>
-              <text
-                x={lx}
-                y={ly + 4}
-                textAnchor={anchor}
-                className="font-mono uppercase"
-                fontSize="12"
-                letterSpacing="1"
-                fill={on ? "var(--color-link)" : "var(--color-text-tertiary)"}
-              >
-                {st.name}
-              </text>
-            </g>
-          );
-        })}
-      </svg>
+          Station {s.n} of 6
+        </p>
+      </div>
 
       {/* The station panel */}
-      <div>
+      <div className="min-w-0">
         <div
           role="group"
           aria-label="Choose a station"
@@ -283,6 +143,15 @@ export function ProcessLoop() {
                 type="button"
                 aria-pressed={on}
                 onClick={() => setActive(i)}
+                onKeyDown={(e) => {
+                  const step = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+                  if (!step) return;
+                  e.preventDefault();
+                  const next = (i + step + STATIONS.length) % STATIONS.length;
+                  setActive(next);
+                  const group = e.currentTarget.parentElement;
+                  (group?.children[next] as HTMLButtonElement | undefined)?.focus();
+                }}
                 className={`font-mono text-[11px] tracking-widest uppercase px-3 py-2 rounded-lg border transition-colors ${
                   on
                     ? "bg-brand-purple border-brand-purple text-white"
@@ -294,7 +163,6 @@ export function ProcessLoop() {
             );
           })}
         </div>
-
         <div
           key={active}
           aria-live="polite"
