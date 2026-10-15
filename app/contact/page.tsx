@@ -5,7 +5,7 @@ export const metadata = pageMetadata({
   path: "/contact",
   title: "Contact",
   description:
-    "Tell me what you're working on. You don't need a finished brief, scope, or RFP to start. Calendar, email, or phone, and I work remote-first.",
+    "What are you working on? We don't need a finished brief, scope, or RFP to start. Napkin sketches welcome. Calendar, email, or phone.",
 });
 
 const CAL_URL = "https://cal.com/capizzi/30min";
@@ -24,14 +24,15 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Contact</p>
           <h1 className="headline-static hero-title max-w-4xl">
-            Tell me what you&apos;re working on.
+            What are you working on?
           </h1>
           {/* Same pattern as the homepage lead ("Idea to launch."): one
               semibold lead-in sentence, then the rest in the regular
               hero-lead style. */}
           <p className="hero-lead max-w-3xl text-pretty">
             <span className="font-semibold text-text-primary">
-              You don&apos;t need a finished brief, scope, or RFP to start.
+              We don&apos;t need a finished brief, scope, or RFP to start.
+              Napkin sketches welcome.
             </span>{" "}
             Bring me a problem you&apos;re trying to solve, something you&apos;re
             trying to overcome, or an opportunity that still needs defining.
