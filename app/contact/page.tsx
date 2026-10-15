@@ -26,24 +26,20 @@ export default function Page() {
           <h1 className="headline-static hero-title max-w-4xl">
             Tell me what you&apos;re working on.
           </h1>
-          <div className="max-w-3xl">
-            <p className="hero-lead">
-              <strong className="font-semibold text-text-primary">
-                You don&apos;t need a finished brief, scope, or RFP to start.
-              </strong>
-            </p>
-            <p className="hero-lead">
-              Bring me a problem you&apos;re trying to solve, something
-              you&apos;re trying to overcome, or an opportunity that still
-              needs defining.
-            </p>
-            <p className="hero-lead">
-              <strong className="font-semibold text-text-primary">
-                Calendar, email, or phone: whatever&apos;s easiest. I work
-                remote-first, so it doesn&apos;t matter where you are.
-              </strong>
-            </p>
-          </div>
+          {/* Same pattern as the homepage lead ("Idea to launch."): one
+              semibold lead-in sentence, then the rest in the regular
+              hero-lead style. */}
+          <p className="hero-lead max-w-3xl text-pretty">
+            <span className="font-semibold text-text-primary">
+              You don&apos;t need a finished brief, scope, or RFP to start.
+            </span>{" "}
+            Bring me a problem you&apos;re trying to solve, something you&apos;re
+            trying to overcome, or an opportunity that still needs defining.
+          </p>
+          <p className="hero-lead max-w-3xl text-pretty">
+            Calendar, email, or phone: whatever&apos;s easiest. I work
+            remote-first, so it doesn&apos;t matter where you are.
+          </p>
         </div>
       </section>
 
