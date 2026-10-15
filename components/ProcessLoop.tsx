@@ -7,6 +7,10 @@ import { ProcessSketch } from "@/components/ProcessSketch";
  * ProcessLoop: the Capizzi Process on /thinking. Three moves, six stations,
  * one loop. The station copy is the Process Handbook's, unchanged.
  *
+ * Titles (October 2026): each station has a one-word name for its chip and a
+ * verb-led title for the card heading. Each title's verb comes from that
+ * station's own job copy, so the two cannot drift apart.
+ *
  * This is deliberately the condensed form. The full method (exit tests,
  * failure modes, the ten standards, the field version) is the printed
  * manual, which /thinking offers by email.
@@ -24,6 +28,7 @@ import { ProcessSketch } from "@/components/ProcessSketch";
 type Station = {
   n: number;
   name: string;
+  title: string;
   move: string;
   job: string;
   line: string;
@@ -36,6 +41,7 @@ const STATIONS: Station[] = [
   {
     n: 1,
     name: "Inputs",
+    title: "Gather every input",
     move: MOVES[0],
     job: "Gather the reality of the problem before filtering or deciding. Briefs, analytics, stakeholder comments, constraints, and past decisions all count. Filtering is a decision; do not filter too early.",
     line: "Inputs that live in one person's head are not inputs. They are risks.",
@@ -47,6 +53,7 @@ const STATIONS: Station[] = [
   {
     n: 2,
     name: "Questions",
+    title: "Ask the three questions",
     move: MOVES[0],
     job: "Sharpen the problem with the three essential questions. Problem: what is actually stuck? State: where are we now, honestly? Timeline: what has to be true, by when?",
     line: "Memory is generous. Hard metrics are less forgiving.",
@@ -59,6 +66,7 @@ const STATIONS: Station[] = [
   {
     n: 3,
     name: "Findings",
+    title: "Name the findings",
     move: MOVES[1],
     job: "Turn inputs into named claims with evidence, then present them back to the people who gave the inputs before designing anything. This is where wrong listening gets caught cheaply.",
     line: "A finding is a claim plus its evidence, never a vibe.",
@@ -71,6 +79,7 @@ const STATIONS: Station[] = [
   {
     n: 4,
     name: "Activation",
+    title: "Choose a direction",
     move: MOVES[1],
     job: "Turn findings into directions. Bring two options, never one, at the cheapest fidelity that can be honestly judged. Name what each direction prioritizes and what it trades away.",
     line: "The goal is a decision, not a deliverable.",
@@ -83,6 +92,7 @@ const STATIONS: Station[] = [
   {
     n: 5,
     name: "Measurement",
+    title: "Define the proof",
     move: MOVES[2],
     job: "Define proof before the work ships. Write down the two or three signals that would show the actual problem got better, each with a baseline, a source, an owner, and a review date.",
     line: "Never invent numbers. Never grade your own homework alone.",
@@ -94,6 +104,7 @@ const STATIONS: Station[] = [
   {
     n: 6,
     name: "Summary",
+    title: "Report what moved",
     move: MOVES[2],
     job: "Report what moved, what did not, and what to try next, compared against the recorded baseline. Translate the result for each audience, date it, and feed it forward.",
     line: "Each summary is a position in time. Positions accumulate into a trajectory.",
@@ -172,7 +183,7 @@ export function ProcessLoop() {
             {s.move} · Station {s.n} of 6
           </p>
           <h3 className="card-title text-text-primary mb-3">
-            {s.name}
+            {s.title}
           </h3>
           <p className="text-base text-text-secondary leading-relaxed mb-5">
             {s.job}
