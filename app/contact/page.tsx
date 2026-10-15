@@ -26,14 +26,20 @@ export default function Page() {
           <h1 className="headline-static hero-title max-w-4xl">
             What are you working on?
           </h1>
-          {/* Same pattern as the homepage lead ("Idea to launch."): one
-              semibold lead-in sentence, then the rest in the regular
-              hero-lead style. */}
+          {/* Same type as every page's lead (hero-lead): the opening lines in
+              semibold (in a span, because .hero-lead is unlayered and would
+              override utilities on the p itself), the rest regular. */}
           <p className="hero-lead max-w-3xl text-pretty">
             <span className="font-semibold text-text-primary">
               We don&apos;t need a finished brief, scope, or RFP to start.
+              <br />
+              <span aria-hidden="true">&#9999;&#65039;</span>{" "}
               Napkin sketches welcome.
-            </span>{" "}
+            </span>
+          </p>
+          {/* The same static hash-mark rule as the list items sitewide
+              (.hash-rule in globals.css). */}
+          <p className="hero-lead hash-rule pl-5 md:pl-6 max-w-3xl text-pretty">
             Bring me a problem you&apos;re trying to solve, something you&apos;re
             trying to overcome, or an opportunity that still needs defining.
           </p>
