@@ -141,7 +141,7 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 - No drop shadows for elevation (use bg shifts)
 - No more than 3 colors visible on a page
 - No icons or illustrations beyond the single starburst symbol, with one
-  exception (Shawn's call, October 2026): the hand-drawn Process station
+  exception (Shawn's call, October 2026): the hand-drawn Process action
   sketches in `components/ProcessSketch.tsx`, his bulb language
 - No motion that isn't tied to scroll, hover, or page transition, with one
   exception (Shawn's call, October 2026): the slow breeze sway and

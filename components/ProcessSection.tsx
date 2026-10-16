@@ -33,8 +33,9 @@ export function ProcessSection() {
             The way I work, made tangible.
           </h2>
           <p className="mt-4 md:mt-6 text-base md:text-lg text-text-secondary leading-relaxed">
-            The Capizzi Process is how I work: listen first, make it visible,
-            prove it worked. The book and the cards are two expressions of it.
+            The Capizzi Process is how I work: three principles (listen first,
+            make it visible, prove it worked) and six flexible actions that
+            keep the work moving, with clarity. The book and the cards are two expressions of it.
             Seeing Past the Cage develops the ideas; the Clarity Cards help
             people apply them in discussions and decisions. Printed editions of
             both are coming.

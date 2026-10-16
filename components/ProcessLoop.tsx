@@ -120,7 +120,7 @@ const STATIONS: Station[] = [
     line: "Each summary is a position in time. Positions accumulate into a trajectory.",
     feeds: [
       "A dated summary that states misses as plainly as wins",
-      "The next cycle's starting question. The loop returns to Inputs.",
+      "The next insight, carried into whichever action the work needs next.",
     ],
   },
 ];

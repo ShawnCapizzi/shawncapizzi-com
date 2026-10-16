@@ -57,7 +57,7 @@ export const FAQS: FaqItem[] = [
   {
     q: "What is the Capizzi Process?",
     a: [
-      "Three steps and six operating principles. The steps are the Process: listen first, make it visible, prove it worked. That is the shape of every engagement, from the first conversation to the shipped experience. Inside those steps sit six operating principles that guide the judgment calls: clarity before creativity, highest-value action before CTA, hierarchy before decoration, trust before action, systems before scattered activity, and judgment over output. Not every engagement leans on all six; which ones apply depends on your team, where the initiative sits in its timeline, and the state it is in. The Process is the spine of the case studies, the book, the Clarity Cards, and the workshops on this site.",
+      "3 principles, 6 flexible actions, and clear momentum. The principles stay constant: listen first, make it visible, prove it worked. The six actions (Inputs, Questions, Findings, Activation, Measurement, and Summary) are used where the work needs them: in sequence, repeated, combined, or revisited when new information changes the problem. The outcome is clear momentum: the team knows what it's trying to accomplish, the work is visible enough to improve, and decisions move forward on evidence. The Process is the spine of the case studies, the book, the Clarity Cards, and the workshops on this site.",
     ],
   },
   {

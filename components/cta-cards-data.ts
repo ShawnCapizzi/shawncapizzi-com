@@ -84,7 +84,7 @@ export const CTA_CARDS: Record<string, CTACard> = {
     cta: "See the Process",
     href: "/thinking",
     image: "/images/clarity-cards-worktable.png",
-    imageAlt: "A Capizzi Clarity Card on a walnut worktable, surrounded by sticky notes for the three-step Capizzi Process: listen first, make it visible, prove it worked",
+    imageAlt: "A Capizzi Clarity Card on a walnut worktable, surrounded by sticky notes for the Capizzi Process's three principles: listen first, make it visible, prove it worked",
     imageAspect: "aspect-[4/3]",
   },
   work: {
