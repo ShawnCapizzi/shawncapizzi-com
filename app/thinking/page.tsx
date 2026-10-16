@@ -34,7 +34,7 @@ export const metadata = pageMetadata({
   path: "/thinking",
   title: "Thinking: The Capizzi Process",
   description:
-    "The Capizzi Process: listen first, make it visible, prove it worked. The method as an interactive loop, running as software, and in print and in hand.",
+    "The Capizzi Process: listen first, make it visible, prove it worked. 3 principles, 6 flexible actions, and clear momentum, in software, print, and hand.",
 });
 
 const GOV_APP_URL = "https://governance-deck-tau.vercel.app";
@@ -75,32 +75,51 @@ export default function Page() {
           <p className="mt-4 font-mono text-base md:text-lg text-link tracking-tight">
             Listen first. Make it visible. Prove it worked.
           </p>
-          <p className="hero-lead max-w-3xl">
-            A working method for people and teams who have to decide under
-            pressure: listen before deciding, make the thinking visible, and
-            prove what changed. Three moves, with six operating principles
-            inside them. Built over fifteen years of collaborating with
-            teams to ship products, communications, and digital tools, and
-            still in use every week.
+          <p className="hero-lead max-w-3xl text-pretty">
+            A working method for people and teams making decisions under
+            pressure. The three principles stay constant. Six flexible
+            actions help teams understand the problem, make the thinking
+            visible, move toward a decision, and prove what changed.
+          </p>
+          <p className="hero-lead max-w-3xl text-pretty">
+            Built from 15+ years of working across products, communications,
+            campaigns, systems, and digital experiences. It&apos;s not a rigid
+            sequence. It&apos;s a way to create clarity and keep the work
+            moving.
           </p>
         </div>
       </section>
 
-      {/* THE LOOP */}
+      {/* THE MODEL (October 2026): 3 principles, 6 flexible actions, clear
+          momentum. The principles hold; the actions flex, so nothing here
+          implies a fixed order. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-16">
             <p className="eyebrow mb-4">The model</p>
-            <h2 className="section-title">
-              Three moves. Six stations. One loop.
+            <h2 className="section-title text-balance">
+              3&nbsp;principles. 6&nbsp;flexible actions. Clear momentum.
             </h2>
-            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
-              The order is the method. Listening without visibility is
-              therapy. Visibility without proof is theater. Proof without
-              listening measures the wrong thing precisely. Select a station
-              to see its job.
+            {/* Same layout as the old model paragraph (secondary text,
+                lg/xl), now in three lines: the rule in bold, the three-part
+                thought, then how the actions are used. */}
+            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+              <strong className="font-semibold text-text-primary">
+                The principles hold. The actions flex.
+              </strong>
+              <br />
+              Listening without visibility is opinion. Visibility without
+              intent is just output. Proof without listening is data sans
+              context.
+              <br />
+              Use the actions where the work needs them. Repeat them, combine
+              them, or move back when new information changes the problem.
             </p>
           </div>
+          {/* Sits tight to the model below so it reads as its label. */}
+          <p className="mb-4 md:mb-5 text-lg md:text-xl font-semibold text-text-secondary">
+            Select an action to see what it does.
+          </p>
           <ProcessLoop />
         </div>
       </section>
@@ -202,9 +221,9 @@ export default function Page() {
                 The whole method, in something you can hold.
               </h2>
               <p className="text-base text-text-secondary leading-relaxed mb-8">
-                The full Process: three moves with their exit tests and
-                failure modes, the six stations, the ten standards of the
-                room, and the one-page field version. A small printed
+                The full Process: the three principles with their exit tests
+                and failure modes, the six flexible actions, the ten standards
+                of the room, and the one-page field version. A small printed
                 manual and a PDF. Leave your email and it arrives when it
                 ships.
               </p>

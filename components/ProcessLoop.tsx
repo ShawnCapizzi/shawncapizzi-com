@@ -4,8 +4,11 @@ import { useState } from "react";
 import { ProcessSketch } from "@/components/ProcessSketch";
 
 /**
- * ProcessLoop: the Capizzi Process on /thinking. Three moves, six stations,
- * one loop. The station copy is the Process Handbook's, unchanged.
+ * ProcessLoop: the Capizzi Process on /thinking. 3 principles, 6 flexible
+ * actions, clear momentum (October 2026; the page used to say "three moves,
+ * six stations, one loop"). In the code, MOVES are the three principles and
+ * STATIONS are the six actions; the names stayed so the history reads. The
+ * action copy is the Process Handbook's, unchanged.
  *
  * Titles (October 2026): each station has a one-word name for its chip and a
  * verb-led title for the card heading. Each title's verb comes from that
@@ -24,6 +27,13 @@ import { ProcessSketch } from "@/components/ProcessSketch";
  * is chosen; the move name and the card swap in. Arrow keys step through the
  * chips. Reduced motion is respected throughout.
  */
+
+/* One line per principle, shown under its name beside the sketch. */
+const PRINCIPLES = [
+  "Understand the people, problem, context, signals, and constraints before deciding what to make.",
+  "Turn the thinking into something people can react to, discuss, test, refine, and align around.",
+  "Look at what actually happened, what changed, what people did, and what the team learned.",
+];
 
 type Station = {
   n: number;
@@ -124,26 +134,28 @@ export function ProcessLoop() {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
       {/* The sketch, under the active move's name */}
       <div className="min-w-0">
-        <p
-          key={move}
-          className="font-mono text-[15px] lg:text-lg tracking-[0.2em] uppercase text-link mb-6 lg:mb-8 animate-[swapin_.4s_ease-out] motion-reduce:animate-none"
-        >
-          {s.move}
-        </p>
+        <div key={move} className="mb-6 lg:mb-8 animate-[swapin_.4s_ease-out] motion-reduce:animate-none">
+          <p className="font-mono text-[15px] lg:text-lg tracking-[0.2em] uppercase text-link">
+            {s.move}
+          </p>
+          <p className="mt-2 max-w-md text-sm md:text-base text-text-secondary leading-relaxed text-pretty">
+            {PRINCIPLES[move]}
+          </p>
+        </div>
         <ProcessSketch index={active} name={s.name} />
         <p
           aria-hidden="true"
           className="mt-6 lg:mt-8 font-mono text-xs tracking-widest uppercase text-text-secondary/80 tabular-nums"
         >
-          Station {s.n} of 6
+          Action {s.n} of 6
         </p>
       </div>
 
-      {/* The station panel */}
+      {/* The action panel */}
       <div className="min-w-0">
         <div
           role="group"
-          aria-label="Choose a station"
+          aria-label="Choose an action"
           className="flex flex-wrap gap-2 mb-6"
         >
           {STATIONS.map((st, i) => {
@@ -180,7 +192,7 @@ export function ProcessLoop() {
           className="card-surface border border-border-default rounded-2xl p-7 md:p-8 min-h-[360px] animate-[swapin_.35s_ease-out] motion-reduce:animate-none"
         >
           <p className="font-mono text-[11px] tracking-widest uppercase text-link mb-3">
-            {s.move} · Station {s.n} of 6
+            {s.move} · Action {s.n} of 6
           </p>
           <h3 className="card-title text-text-primary mb-3">
             {s.title}
