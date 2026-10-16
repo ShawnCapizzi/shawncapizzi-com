@@ -118,7 +118,7 @@ export default function Page() {
           </div>
           {/* Sits tight to the model below so it reads as its label. */}
           <p className="mb-4 md:mb-5 text-lg md:text-xl font-semibold text-text-secondary">
-            Select an action to see what it does.
+            Action moves work forward. Pick one.
           </p>
           <ProcessLoop />
         </div>
