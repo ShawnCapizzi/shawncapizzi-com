@@ -23,35 +23,23 @@ export default function Page() {
       <section className="relative pt-32 md:pt-40 pb-4 md:pb-6">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow mb-3">Contact</p>
-          <h1 className="headline-static hero-title max-w-4xl">
+          <h1 className="headline-static hero-title text-balance max-w-4xl">
             What are you working on?
           </h1>
 
-          {/* Hierarchy, top to bottom: headline; reassurance (hero-lead size,
-              semibold, in the headline's own cream so it does not outshine
-              it); the napkin line as a small lilac aside; the framing
-              paragraph with its hash rule. The practical line moved down to
-              sit with the cards.
-              Weight and color sit on spans or on elements without .hero-lead,
-              because .hero-lead is unlayered and overrides utilities. */}
-          <p className="hero-lead max-w-3xl text-pretty">
-            <span className="headline-static font-semibold">
-              We don&apos;t need a finished brief, scope, or RFP to start.
-            </span>
+          {/* The intro uses the same body style as the Engagements sections
+              (lead-text), and the napkin line borrows the mono tagline style
+              from the /thinking hero ("Listen first. Make it visible."). The
+              practical line sits lower, with the cards. */}
+          <p className="mt-4 md:mt-6 max-w-3xl lead-text text-lg md:text-xl leading-relaxed text-pretty">
+            We don&apos;t need a finished brief, scope, or RFP to start. Bring
+            me a problem you&apos;re trying to solve, something you&apos;re
+            trying to overcome, or an opportunity that still needs defining.
           </p>
-          <p className="mt-3 font-[family-name:var(--font-instrument-sans)] text-base md:text-lg font-medium tracking-tight text-link">
+          <p className="mt-8 font-mono text-base md:text-lg text-link tracking-tight">
             <span aria-hidden="true">&#9999;&#65039;</span>{" "}
             Napkin sketches welcome.
           </p>
-
-          <div className="mt-5 md:mt-6 max-w-3xl">
-            <p className="hero-lead hash-rule hash-rule-inset pl-6 md:pl-7 text-pretty">
-              Bring me a problem you&apos;re trying to solve, something
-              you&apos;re trying to overcome, or an opportunity that still
-              needs defining.
-            </p>
-          </div>
-
         </div>
       </section>
 
