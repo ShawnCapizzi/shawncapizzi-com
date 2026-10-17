@@ -539,19 +539,18 @@ export default function Page() {
             </figure>
 
             <p className="mt-6 text-sm text-text-tertiary">
-              The learning apps are free, with no sign-up:{" "}
+              {/* October 2026: one link to the learning app, which keeps
+                  growing, instead of the two quiz pages. The quiz files stay
+                  in public/apps/. */}
+              The learning app is free, with no sign-up:{" "}
               <a
-                href="/apps/fractions-quiz.html"
+                href="https://learning-platform-21i5oslt1-capizzi-gmailcoms-projects.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-link hover:text-link-hover transition-colors"
               >
-                Fractions Quiz
-              </a>{" "}
-              and{" "}
-              <a
-                href="/apps/area-perimeter-quiz.html"
-                className="text-link hover:text-link-hover transition-colors"
-              >
-                Area and Perimeter Quiz
+                a study tool built around my daughters&apos; classwork and
+                upcoming tests
               </a>
               .
             </p>
