@@ -420,8 +420,8 @@ export default function Page() {
 
           {/* PHOTOGRAPHS AND CLIPS (October 2026): Shawn's own photos and two
               phone clips. Venice leads; then Chinatown and One World Trade
-              Center; then a night out at Le Poisson Rouge, and the two clips,
-              Smalls and The Meadows, which play on tap. Files live in
+              Center; then the Smalls clip, a night out at Le Poisson Rouge,
+              and the Meadows clip. The clips play on tap. Files live in
               public/images/about/beyond/ and public/videos/about/ with
               location data stripped. Desktop: Venice full width, then a
               three-column grid. Phone: Venice, then one row the visitor
@@ -464,14 +464,6 @@ export default function Page() {
                 className={SWIPE_ITEM}
                 sizes="(max-width: 768px) 80vw, 360px"
               />
-              <BeyondPhoto
-                src="/images/about/beyond/dj-evil-d-le-poisson-rouge.jpg"
-                alt="Shawn, in a Mets jersey, with DJ Evil D under red stage lights."
-                caption="With DJ Evil D · Le Poisson Rouge, NYC"
-                aspect="aspect-[4/5]"
-                className={SWIPE_ITEM}
-                sizes="(max-width: 768px) 80vw, 360px"
-              />
               {/* The two clips from Shawn's phone, played on tap. Exported
                   as H.264 with the location data stripped; the Meadows clip
                   is cropped to the tile. Nothing plays on its own. */}
@@ -480,6 +472,14 @@ export default function Page() {
                 poster="/images/about/beyond/smalls-jazz-club.jpg"
                 label="A drummer and bassist on stage at Smalls Jazz Club, from a seat beside the drum kit"
                 caption="Smalls Jazz Club · NYC"
+              />
+              <BeyondPhoto
+                src="/images/about/beyond/dj-evil-d-le-poisson-rouge.jpg"
+                alt="Shawn, in a Mets jersey, with DJ Evil D under red stage lights."
+                caption="With DJ Evil D · Le Poisson Rouge, NYC"
+                aspect="aspect-[4/5]"
+                className={SWIPE_ITEM}
+                sizes="(max-width: 768px) 80vw, 360px"
               />
               <BeyondClip
                 src="/videos/about/the-meadows-fear-factory.mp4"
@@ -565,12 +565,11 @@ export default function Page() {
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
           <h2 className="section-title text-balance mb-6 md:mb-8 max-w-3xl mx-auto">
-            Let&apos;s see if there&apos;s a fit.
+            Bring me what you&apos;re working through.
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto text-pretty">
-            Bring me what you&apos;re working through. A defined problem, an
-            opportunity that still needs definition, or something that simply
-            isn&apos;t working the way it should.
+            A defined problem, an opportunity that still needs definition, or
+            something that simply isn&apos;t working the way&nbsp;it&nbsp;should.
           </p>
           <Link
             href="/contact"
