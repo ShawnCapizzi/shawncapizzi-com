@@ -4,6 +4,7 @@ import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMetadata, profilePage } from "@/lib/seo";
 import { KeepHyphens } from "@/components/KeepHyphens";
+import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
 
 /* The six kinds of work in "Hard to staff", once a single paragraph. */
 const HARD_TO_STAFF_WORK = [
@@ -173,7 +174,9 @@ export default function Page() {
                 ))}
               </ul>
             </div>
-            <blockquote className="lg:col-span-5 lg:pt-2 self-start lg:sticky lg:top-32 hash-rule pl-6 md:pl-8 text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-snug text-balance">
+            {/* Scan point 2 (October 2026): the secondary quote treatment,
+                a step below the main pull quote in "How I show up". */}
+            <blockquote className="lg:col-span-5 lg:pt-2 self-start lg:sticky lg:top-32 hash-rule pl-6 md:pl-8 text-xl md:text-2xl font-medium tracking-tight text-text-primary leading-snug text-balance">
               The goal isn&apos;t to add another opinion to the room. It&apos;s
               to create clarity early enough for the team to make a better
               decision and move the work forward.
@@ -286,10 +289,9 @@ export default function Page() {
           </h2>
           <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
             <p>
-              I don&apos;t need to own the room or replace the way a team
-              works to add value. I listen first, understand what&apos;s
-              already happening, and ask the questions that help people get
-              clear on the decision underneath the work.
+              I listen first, understand what&apos;s already happening, and
+              ask the questions that help people get clear on the decision
+              underneath the work.
             </p>
             <p>
               Sometimes that means challenging an assumption or offering the
@@ -307,10 +309,12 @@ export default function Page() {
             </p>
           </div>
 
-          {/* The pull quote, in the same treatment as the one beside
-              "Hard to staff". */}
+          {/* Scan point 3, the main pull quote: the strongest line between
+              the hero and the closing ask, one step above the section
+              titles and below the H1. */}
           <blockquote className="mt-12 md:mt-16 max-w-3xl hash-rule pl-6 md:pl-8 text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-snug text-balance">
-            I don&apos;t need to own the room to add value to it.
+            I help teams get to clear, well-considered thinking and quickly
+            move the work forward.
           </blockquote>
         </div>
       </section>
@@ -374,11 +378,12 @@ export default function Page() {
               Rider University and still perform with my longtime friend
               Taylor Keer, creating live visuals alongside poetry and music.
             </p>
-            <p>
-              That work asks something similar of design: see what&apos;s
-              actually there before deciding what it should be, and know when
-              to stop.
-            </p>
+            {/* Scan point 4 (October 2026): the creative worldview, in the
+                secondary quote treatment. It was the third paragraph. */}
+            <blockquote className="py-2 hash-rule pl-6 md:pl-8 text-xl md:text-2xl font-medium tracking-tight text-text-primary leading-snug text-balance">
+              See what&apos;s actually there before deciding what it should
+              be, and know the right place to stop.
+            </blockquote>
             <p>
               Born in Queens. Mets and Yankees fan, in that order. Competitive
               BBQ in the off-season.
@@ -413,14 +418,22 @@ export default function Page() {
             </p>
           </div>
 
-          {/* PHOTOGRAPHS (October 2026): four of Shawn's own photos, one for
-              each part of the creative life above: the city (Venice), the
-              New York film (One World Trade Center), music (Smalls), and a
-              night out (Le Poisson Rouge). The full set, Chinatown and The
-              Meadows included, stays in public/images/about/beyond/ with
-              location data stripped. Desktop: Venice full width, then three
-              across. Phone: Venice, then one row the visitor swipes. */}
-          <div className="mt-12 md:mt-14">
+          {/* PHOTOGRAPHS AND CLIPS (October 2026): Shawn's own photos and two
+              phone clips. Venice leads; then Chinatown and One World Trade
+              Center; then a night out at Le Poisson Rouge, and the two clips,
+              Smalls and The Meadows, which play on tap. Files live in
+              public/images/about/beyond/ and public/videos/about/ with
+              location data stripped. Desktop: Venice full width, then a
+              three-column grid. Phone: Venice, then one row the visitor
+              swipes. */}
+          <div className="mt-14 md:mt-20">
+            {/* A subtitle, so the photographs and clips read as a different
+                thing from the AI visuals in the performance above. */}
+            <h3 className="card-title text-text-primary mb-6 md:mb-8 max-w-3xl text-balance">
+              There has to be a life away from the computer. For me,
+              that&apos;s travel and getting out to see music. A few frames
+              from both.
+            </h3>
             <BeyondPhoto
               src="/images/about/beyond/venice-grand-canal.jpg"
               alt="A gondolier rowing on the Grand Canal in Venice, the Rialto Bridge in the distance, shot through a fisheye lens."
@@ -430,23 +443,24 @@ export default function Page() {
             />
             <div
               role="region"
-              aria-label="More photographs, New York"
+              aria-label="More photographs and clips"
               tabIndex={0}
               className="mt-6 md:mt-8 -mx-6 px-6 md:mx-0 md:px-0 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-8 md:overflow-visible"
             >
               <BeyondPhoto
+                src="/images/about/beyond/chinatown-fish-counter.jpg"
+                alt="A fishmonger working a long fish counter in Chinatown, priced in red on green tags."
+                caption="Chinatown · NYC"
+                aspect="aspect-[4/5] md:aspect-[4/3]"
+                position="object-[20%_50%]"
+                className={`${SWIPE_ITEM} md:col-span-2`}
+                sizes="(max-width: 768px) 80vw, 730px"
+              />
+              <BeyondPhoto
                 src="/images/about/beyond/one-world-trade-center.jpg"
                 alt="One World Trade Center rising over the 9/11 Memorial plaza in snow."
                 caption="One World Trade Center · NYC"
-                aspect="aspect-[4/5]"
-                className={SWIPE_ITEM}
-                sizes="(max-width: 768px) 80vw, 360px"
-              />
-              <BeyondPhoto
-                src="/images/about/beyond/smalls-jazz-club.jpg"
-                alt="A drummer's red kit and hi-hat from a seat beside the stage, a bassist behind."
-                caption="Smalls Jazz Club · NYC"
-                aspect="aspect-[4/5]"
+                aspect="aspect-[4/5] md:aspect-auto"
                 className={SWIPE_ITEM}
                 sizes="(max-width: 768px) 80vw, 360px"
               />
@@ -457,6 +471,21 @@ export default function Page() {
                 aspect="aspect-[4/5]"
                 className={SWIPE_ITEM}
                 sizes="(max-width: 768px) 80vw, 360px"
+              />
+              {/* The two clips from Shawn's phone, played on tap. Exported
+                  as H.264 with the location data stripped; the Meadows clip
+                  is cropped to the tile. Nothing plays on its own. */}
+              <BeyondClip
+                src="/videos/about/smalls-jazz-club.mp4"
+                poster="/images/about/beyond/smalls-jazz-club.jpg"
+                label="A drummer and bassist on stage at Smalls Jazz Club, from a seat beside the drum kit"
+                caption="Smalls Jazz Club · NYC"
+              />
+              <BeyondClip
+                src="/videos/about/the-meadows-fear-factory.mp4"
+                poster="/images/about/beyond/the-meadows-fear-factory-poster.jpg"
+                label="Fear Factory on stage at The Meadows in Brooklyn, the crowd's hands up in purple light"
+                caption="Fear Factory · The Meadows, Brooklyn"
               />
             </div>
           </div>
@@ -587,6 +616,36 @@ function BeyondPhoto({
       >
         <Image src={src} alt={alt} fill className={`object-cover ${position}`} sizes={sizes} />
       </div>
+      <figcaption className="mt-3 font-mono text-xs md:text-sm text-text-secondary tracking-tight">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
+/* One phone clip in "Beyond the work", in the same tile as the photos.
+   The site's tap-to-play video (components/VideoWithPlayOverlay.tsx) fills
+   the tile; the poster is the still that stood in for it before. */
+function BeyondClip({
+  src,
+  poster,
+  label,
+  caption,
+}: {
+  src: string;
+  poster: string;
+  label: string;
+  caption: string;
+}) {
+  return (
+    <figure className={`flex flex-col ${SWIPE_ITEM}`}>
+      <VideoWithPlayOverlay
+        src={src}
+        poster={poster}
+        ariaLabel={label}
+        wrapperClassName="aspect-[4/5] rounded-2xl overflow-hidden border border-border-default bg-bg-raised"
+        videoClassName="absolute inset-0 h-full w-full object-cover"
+      />
       <figcaption className="mt-3 font-mono text-xs md:text-sm text-text-secondary tracking-tight">
         {caption}
       </figcaption>
