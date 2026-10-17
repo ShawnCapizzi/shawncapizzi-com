@@ -61,11 +61,12 @@ All visual decisions follow `docs/design-system.md`. This is non-negotiable.
   `next/font/google` in `app/layout.tsx`. Nunito Sans was retired in September
   2026. Heading rules in `app/globals.css` are unlayered on purpose, so they
   win over Tailwind utilities on h1, h2, and h3.
-- Colophon at `/about#colophon` (`components/Colophon.tsx`) lists the fonts and
-  six core colors with nearest PANTONE Solid Coated matches (pantone-cli,
-  CIEDE2000, cross-checked against two other datasets). If a color token
-  changes, re-run the match and update that file; hex values there must equal
-  the tokens exactly.
+- `/design-info` (`app/design-info/page.tsx`, linked from the footer's palette
+  emoji) lists the fonts, the six core colors with nearest PANTONE Solid
+  Coated matches (pantone-cli, CIEDE2000, cross-checked against two other
+  datasets), and the stack. It replaced the `/about#colophon` section in
+  October 2026. If a color token changes, re-run the match and update that
+  file; hex values there must equal the tokens exactly.
 - MDX for case studies and essays (to be added)
 - Deployed on Vercel, auto-deploy on `git push` to `main`
 

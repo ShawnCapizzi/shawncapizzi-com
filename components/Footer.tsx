@@ -10,7 +10,6 @@ const NAV = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/faq", label: "FAQ" },
-  { href: "/about#colophon", label: "About this site" },
 ];
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/shawncapizzi";
@@ -35,12 +34,24 @@ export function Footer() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-          <nav className="flex flex-wrap gap-x-8 gap-y-3" aria-label="Footer">
+          <nav className="flex flex-wrap items-center gap-x-8 gap-y-3" aria-label="Footer">
             {NAV.map((link) => (
               <Link key={link.href} href={link.href} className="text-sm text-text-secondary hover:text-text-primary transition-colors">
                 {link.label}
               </Link>
             ))}
+            {/* Design info (October 2026): the palette alone, a small door
+                for the curious. It replaced the "About this site" text link
+                when the colophon moved from /about to /design-info. The
+                padding gives it a tap target; the emoji stays small. */}
+            <Link
+              href="/design-info"
+              aria-label="Design info"
+              title="Design info"
+              className="inline-flex items-center justify-center -m-2 p-2 min-w-10 min-h-10 text-sm leading-none rounded hover:opacity-80 transition-opacity"
+            >
+              <span aria-hidden="true">&#127912;</span>
+            </Link>
           </nav>
           <div className="flex flex-wrap gap-x-8 gap-y-3 md:justify-end">
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-text-secondary hover:text-text-primary transition-colors">

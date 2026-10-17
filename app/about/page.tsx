@@ -3,10 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { pageMetadata, profilePage } from "@/lib/seo";
-import { CTACards } from "@/components/CTACards";
-import { Colophon } from "@/components/Colophon";
 import { KeepHyphens } from "@/components/KeepHyphens";
-import { ProcessSketch } from "@/components/ProcessSketch";
 
 /* The six kinds of work in "Hard to staff", once a single paragraph. */
 const HARD_TO_STAFF_WORK = [
@@ -16,13 +13,6 @@ const HARD_TO_STAFF_WORK = [
   "Shaping a message.",
   "Building a design system.",
   "Bringing an experienced point of view into a difficult decision.",
-];
-
-/* The harder questions in "Clarity before execution". */
-const HARDER_QUESTIONS = [
-  "What problem are we actually solving? For whom?",
-  "What decision or action should the experience support?",
-  "What does someone need to understand or trust before we ask them to do anything?",
 ];
 
 /* Background, as facts. Each pair is a label and the text, unchanged from
@@ -158,7 +148,9 @@ export default function Page() {
 
       {/* HARD TO STAFF: why a client brings Shawn in. October 2026: the
           six kinds of work are a hash-rule list and the closing line is a
-          pull quote beside the body on desktop. Copy unchanged. */}
+          pull quote beside the body on desktop. The two paragraphs about
+          who Shawn works with and when he listens moved into "How I show
+          up", which says both. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
@@ -180,166 +172,12 @@ export default function Page() {
                   </li>
                 ))}
               </ul>
-              <p>
-                I work comfortably with executives, strategists, creatives,
-                product managers, researchers, stakeholders, and development
-                teams.
-              </p>
-              <p>
-                Experience has taught me when to listen, when to respect the
-                process already in place, and when a new possibility is worth
-                putting on the table.
-              </p>
             </div>
             <blockquote className="lg:col-span-5 lg:pt-2 self-start lg:sticky lg:top-32 hash-rule pl-6 md:pl-8 text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-snug text-balance">
               The goal isn&apos;t to add another opinion to the room. It&apos;s
               to create clarity early enough for the team to make a better
               decision and move the work forward.
             </blockquote>
-          </div>
-        </div>
-      </section>
-
-      {/* CLARITY BEFORE EXECUTION: the working principle. October 2026: the
-          four questions stand on their own, one per line, with the Questions
-          sketch from the Process page beside them. Copy unchanged. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
-            Clarity should come before execution.
-          </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
-            <p>
-              That principle shapes the judgment and guidance I bring to the
-              day-to-day work: knowing when to listen, when to question, and
-              when a team needs more clarity before moving forward.
-            </p>
-            <p>
-              Before the screen, campaign, platform, or product, there are
-              harder questions.
-            </p>
-          </div>
-          <div className="my-10 md:my-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            <ul className="lg:col-span-7 space-y-5 md:space-y-6">
-              {HARDER_QUESTIONS.map((q) => (
-                <li
-                  key={q}
-                  className="hash-rule pl-6 md:pl-8 text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-snug text-balance"
-                >
-                  {q}
-                </li>
-              ))}
-            </ul>
-            <div className="lg:col-span-5 hidden lg:block">
-              <ProcessSketch index={1} name="Questions" />
-            </div>
-          </div>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
-            <p>
-              That matters everywhere, but especially in pharma, healthcare,
-              financial services, and other regulated environments where
-              complexity, compliance, and human needs have to coexist.
-            </p>
-            <p>
-              AI makes those questions more important, not less. Teams can move
-              from idea to output faster than ever. Knowing what should be
-              made, why it matters, and how we&apos;ll know it worked becomes
-              even more valuable.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* NEW TOOLS: curiosity, used with judgment. October 2026: the two
-          objects the copy links to, the Clarity Cards and the book, sit
-          beside it, using the photos from /thinking. Copy unchanged. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
-            I&apos;ve always been interested in what new tools make possible.
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-            <div className="lg:col-span-7">
-              <div className="space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
-                <p>
-                  New technology and new ways of working have been a thread
-                  throughout my career.
-                </p>
-                <p>
-                  AI has expanded that dramatically. I can make ideas tangible
-                  earlier, test assumptions, explore new processes, and see
-                  opportunities that can be difficult to understand in a deck or
-                  flow alone.
-                </p>
-                <p>
-                  But I don&apos;t walk into an established team assuming the
-                  newest tool or process is the answer. I listen first, understand
-                  what&apos;s happening in the room, respect how the team works,
-                  and then introduce what might be useful in context.
-                </p>
-                <p>
-                  New thinking works better when people can see it, react to it,
-                  and shape it together.
-                </p>
-                <p>
-                  A lot of that thinking now feeds the{" "}
-                  <Link href="/thinking" className="text-link hover:text-link-hover transition-colors">
-                    Capizzi Process
-                  </Link>
-                  ,{" "}
-                  <Link href="/thinking#book" className="text-link hover:text-link-hover transition-colors">
-                    <em>Seeing Past the Cage</em>
-                  </Link>
-                  , and the{" "}
-                  <Link href="/thinking#cards" className="text-link hover:text-link-hover transition-colors">
-                    Clarity Cards
-                  </Link>
-                  : different ways of helping teams make problems visible, ask
-                  better questions, and move toward decisions.
-                </p>
-              </div>
-              <div className="mt-8">
-                <Link
-                  href="/thinking"
-                  className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
-                >
-                  Explore the thinking{" "}
-                  <span aria-hidden="true" className="ml-2">
-                    &rarr;
-                  </span>
-                </Link>
-              </div>
-            </div>
-            <div className="lg:col-span-5 grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-6 self-start">
-              <figure>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
-                  <Image
-                    src="/images/process/clarity-cards-desk.jpg"
-                    alt="The Clarity Cards deck spread on a desk."
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 50vw, 440px"
-                  />
-                </div>
-                <figcaption className="mt-3 font-mono text-xs md:text-sm text-text-secondary tracking-tight">
-                  Clarity Cards
-                </figcaption>
-              </figure>
-              <figure>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
-                  <Image
-                    src="/images/process/seeing-past-the-cage-book.jpg"
-                    alt="The book Seeing Past the Cage."
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 50vw, 440px"
-                  />
-                </div>
-                <figcaption className="mt-3 font-mono text-xs md:text-sm text-text-secondary tracking-tight">
-                  Seeing Past the Cage
-                </figcaption>
-              </figure>
-            </div>
           </div>
         </div>
       </section>
@@ -438,7 +276,47 @@ export default function Page() {
         </div>
       </section>
 
-      {/* IN THE WORK: industry presence, two photos. */}
+      {/* HOW I SHOW UP (October 2026): what Shawn is like to work with.
+          Replaces the "Clarity should come before execution" and "New
+          tools" sections; their useful ideas live here. Copy is Shawn's. */}
+      <section className="py-16 md:py-24 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
+            How I show up.
+          </h2>
+          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            <p>
+              I don&apos;t need to own the room or replace the way a team
+              works to add value. I listen first, understand what&apos;s
+              already happening, and ask the questions that help people get
+              clear on the decision underneath the work.
+            </p>
+            <p>
+              Sometimes that means challenging an assumption or offering the
+              counterpoint the room needs to hear. Sometimes it means making
+              an idea tangible enough for everyone to react to it. And
+              sometimes it means recognizing that the team already has the
+              answer and simply needs a clearer way forward.
+            </p>
+            <p>
+              I&apos;ve always been curious about new tools, especially AI,
+              because they let us test ideas and explore possibilities much
+              earlier. But the tool is never the point. If it doesn&apos;t
+              improve the work, the experience, or the decision, it&apos;s
+              just more output.
+            </p>
+          </div>
+
+          {/* The pull quote, in the same treatment as the one beside
+              "Hard to staff". */}
+          <blockquote className="mt-12 md:mt-16 max-w-3xl hash-rule pl-6 md:pl-8 text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-snug text-balance">
+            I don&apos;t need to own the room to add value to it.
+          </blockquote>
+        </div>
+      </section>
+
+      {/* IN THE WORK: industry presence, two photos. Kept because nothing
+          else on the page shows Shawn in the room with the industry. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance mb-10 md:mb-12 max-w-3xl">
@@ -476,21 +354,6 @@ export default function Page() {
               </figcaption>
             </figure>
           </div>
-
-          {/* Availability (October 2026): one quiet line, here and on
-              /contact only. Never an "open to work" banner. */}
-          <p className="mt-10 md:mt-12 max-w-3xl text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
-            Available for remote-first consulting, fractional or embedded
-            UX/design leadership, and select senior full-time opportunities.
-          </p>
-        </div>
-      </section>
-
-      {/* BOOK + WAYS TO WORK TOGETHER: About-specific card copy lives in
-          components/cta-cards-data.ts as bookAbout and engagementsAbout. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <CTACards cards={["bookAbout", "engagementsAbout"]} />
         </div>
       </section>
 
@@ -550,18 +413,13 @@ export default function Page() {
             </p>
           </div>
 
-          {/* PHOTOGRAPHS (October 2026): Shawn's own photos, shown as
-              evidence for the paragraphs above, after the LinkedIn
-              performance so the section ends on images. The eye first
-              (Venice, Chinatown, One World Trade Center), then the culture
-              he keeps around him, ending on jazz and rock. Files live in
-              public/images/about/beyond/ with location data stripped; the
-              Smalls and Brooklyn frames are stills from his phone videos.
-              Captions name the place, in the "In the work" format.
-              Desktop: Venice full width, then a 3-column grid (Chinatown
-              spans two). Phone: Venice full width, then one row the visitor
-              swipes, with the next photo peeking in; nothing moves on its
-              own. */}
+          {/* PHOTOGRAPHS (October 2026): four of Shawn's own photos, one for
+              each part of the creative life above: the city (Venice), the
+              New York film (One World Trade Center), music (Smalls), and a
+              night out (Le Poisson Rouge). The full set, Chinatown and The
+              Meadows included, stays in public/images/about/beyond/ with
+              location data stripped. Desktop: Venice full width, then three
+              across. Phone: Venice, then one row the visitor swipes. */}
           <div className="mt-12 md:mt-14">
             <BeyondPhoto
               src="/images/about/beyond/venice-grand-canal.jpg"
@@ -572,31 +430,14 @@ export default function Page() {
             />
             <div
               role="region"
-              aria-label="More photographs, New York and Brooklyn"
+              aria-label="More photographs, New York"
               tabIndex={0}
               className="mt-6 md:mt-8 -mx-6 px-6 md:mx-0 md:px-0 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-8 md:overflow-visible"
             >
               <BeyondPhoto
-                src="/images/about/beyond/chinatown-fish-counter.jpg"
-                alt="A fishmonger working a long fish counter in Chinatown, priced in red on green tags."
-                caption="Chinatown · NYC"
-                aspect="aspect-[4/5] md:aspect-[4/3]"
-                position="object-[20%_50%]"
-                className={`${SWIPE_ITEM} md:col-span-2`}
-                sizes="(max-width: 768px) 80vw, 730px"
-              />
-              <BeyondPhoto
                 src="/images/about/beyond/one-world-trade-center.jpg"
                 alt="One World Trade Center rising over the 9/11 Memorial plaza in snow."
                 caption="One World Trade Center · NYC"
-                aspect="aspect-[4/5] md:aspect-auto"
-                className={SWIPE_ITEM}
-                sizes="(max-width: 768px) 80vw, 360px"
-              />
-              <BeyondPhoto
-                src="/images/about/beyond/dj-evil-d-le-poisson-rouge.jpg"
-                alt="Shawn, in a Mets jersey, with DJ Evil D under red stage lights."
-                caption="With DJ Evil D · Le Poisson Rouge, NYC"
                 aspect="aspect-[4/5]"
                 className={SWIPE_ITEM}
                 sizes="(max-width: 768px) 80vw, 360px"
@@ -610,11 +451,10 @@ export default function Page() {
                 sizes="(max-width: 768px) 80vw, 360px"
               />
               <BeyondPhoto
-                src="/images/about/beyond/brooklyn-rock-show.jpg"
-                alt="A crowd with hands raised toward a stage washed in purple light, the band's name on the screen."
-                caption="Fear Factory · The Meadows, Brooklyn"
+                src="/images/about/beyond/dj-evil-d-le-poisson-rouge.jpg"
+                alt="Shawn, in a Mets jersey, with DJ Evil D under red stage lights."
+                caption="With DJ Evil D · Le Poisson Rouge, NYC"
                 aspect="aspect-[4/5]"
-                position="object-left"
                 className={SWIPE_ITEM}
                 sizes="(max-width: 768px) 80vw, 360px"
               />
@@ -680,14 +520,28 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* AVAILABILITY (October 2026): one quiet line, here and on /contact
+          only. Never an "open to work" banner. */}
+      <section className="py-10 md:py-14 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <p className="max-w-3xl text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+            Available for remote-first consulting, fractional or embedded
+            UX/design leadership, and select senior full-time opportunities.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA. The page ends here; the global footer follows. The type and
+          color colophon moved to /design-info in October 2026. */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
           <h2 className="section-title text-balance mb-6 md:mb-8 max-w-3xl mx-auto">
             Let&apos;s see if there&apos;s a fit.
           </h2>
-          <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
-            No pitch. Just a conversation about what you&apos;re working on.
+          <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto text-pretty">
+            Bring me what you&apos;re working through. A defined problem, an
+            opportunity that still needs definition, or something that simply
+            isn&apos;t working the way it should.
           </p>
           <Link
             href="/contact"
@@ -698,10 +552,6 @@ export default function Page() {
           </Link>
         </div>
       </section>
-
-      {/* ABOUT THIS SITE: type and color colophon, after the ask so it
-          never competes with it. Linked from the footer on every page. */}
-      <Colophon />
     </article>
   );
 }

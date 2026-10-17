@@ -20,8 +20,8 @@ import { DEFAULT_SHARE_IMAGE, HOME_DESCRIPTION, HOME_TITLE, SITE_URL, siteGraph 
    grotesk across all headings instead of a rounded humanist face
    next to a Swiss body face.
    Geist: body and interface. Geist Mono: eyebrows and labels.
-   All three are SIL Open Font License. The /about colophon lists
-   them; keep it in step if this changes.
+   All three are SIL Open Font License. /design-info lists them;
+   keep it in step if this changes.
    ============================================================ */
 
 const geistSans = Geist({
