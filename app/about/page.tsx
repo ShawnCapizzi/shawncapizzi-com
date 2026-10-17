@@ -623,29 +623,23 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CURIOSITY: what Shawn shares, and the family story, with the
-          cookie video kept directly under its paragraph. */}
+      {/* CURIOSITY: the family story, with the Sora cookie video and the
+          learning app links kept as the two proofs. Tightened to one
+          paragraph in October 2026; not a professional AI section. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
             Curiosity doesn&apos;t stop at work.
           </h2>
           <div className="max-w-3xl">
-            <div className="space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
-              <p>
-                I share what I learn about design, AI, and building with
-                colleagues, friends, and my daughters.
-              </p>
-              <p>
-                At home, questions often turn into small projects, from
-                learning apps to experiments with Sora using things we&apos;ve
-                made together.
-              </p>
-              <p>
-                It keeps the technology practical, playful, and connected to
-                real people.
-              </p>
-            </div>
+            <p className="text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+              I share a lot of what I&apos;m learning about design, AI,
+              building, and new creative tools with my daughters. Sometimes
+              that means making a Sora video together. Sometimes it means
+              building a small math or learning app to make an idea easier to
+              understand. It keeps the technology practical, playful, and
+              human.
+            </p>
 
             <figure className="mt-8 md:mt-10 rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
               <video
