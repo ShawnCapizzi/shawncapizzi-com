@@ -538,22 +538,25 @@ export default function Page() {
               </figcaption>
             </figure>
 
-            <p className="mt-6 text-sm text-text-tertiary">
+            <div className="mt-10 md:mt-12">
               {/* October 2026: one link to the learning app, which keeps
                   growing, instead of the two quiz pages. The quiz files stay
-                  in public/apps/. */}
-              The learning app is free, with no sign-up:{" "}
+                  in public/apps/. Body size, so it reads as its own example
+                  and not a note under the video. */}
+              <p className="text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+                The learning app is free, with no sign-up: a study tool built
+                around my daughters&apos; classwork and upcoming tests.
+              </p>
               <a
                 href="https://learning-platform-21i5oslt1-capizzi-gmailcoms-projects.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-link hover:text-link-hover transition-colors"
+                className="mt-4 inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
               >
-                a study tool built around my daughters&apos; classwork and
-                upcoming tests
+                Open the learning app
+                <span aria-hidden="true" className="ml-2">&rarr;</span>
               </a>
-              .
-            </p>
+            </div>
           </div>
         </div>
       </section>
