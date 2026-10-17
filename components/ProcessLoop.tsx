@@ -200,7 +200,7 @@ export function ProcessLoop() {
           <p className="text-base text-text-secondary leading-relaxed mb-5">
             {s.job}
           </p>
-          <p className="font-mono text-sm text-text-secondary border-l-2 border-brand-purple pl-4 mb-5">
+          <p className="font-mono text-sm text-text-secondary hash-rule pl-4 mb-5">
             {s.line}
           </p>
           <p className="font-mono text-[11px] tracking-widest uppercase text-text-tertiary mb-2">

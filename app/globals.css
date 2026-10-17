@@ -743,11 +743,13 @@ h3 {
 
 /* ============================================================
    HASH RULE (October 2026)
-   The vertical rule beside list items (homepage "sounds familiar",
-   About "A few things I'm proud of", Engagements "How we start", and
-   case study "Selected outcomes") is a column of short, static hash
-   marks in the same quiet purple as the Process sketch shading, instead
-   of a solid gray line. Purple quote bars keep their solid rule.
+   Every purple vertical rule on the site is a column of short, static
+   hash marks in the same quiet purple as the Process sketch shading,
+   instead of a solid line: homepage "sounds familiar", About "A few
+   things I'm proud of", Engagements "How we start", case study "Selected
+   outcomes" and pull quotes, the Process action card quote on /thinking,
+   and the foreword quotes on the book thumbnail. The book reader's pull
+   quote (components/Reader.tsx) repeats the same tile in its scoped CSS.
    One tick per 7px; the tile is 6px wide, inside the item's left padding.
    ============================================================ */
 .hash-rule {

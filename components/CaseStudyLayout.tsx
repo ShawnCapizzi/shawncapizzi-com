@@ -188,8 +188,8 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
 
           {/* Lead pull quote (epigraph), above the challenge */}
           {leadQuote && (
-            <blockquote className="mt-12 md:mt-16 max-w-3xl border-l-2 border-brand-purple pl-6 md:pl-10 py-2">
-              <p className="text-xl md:text-2xl text-text-primary leading-relaxed italic">
+            <blockquote className="mt-12 md:mt-16 max-w-3xl hash-rule pl-6 md:pl-10 py-2">
+              <p className="text-xl md:text-2xl text-text-primary leading-relaxed italic text-pretty">
                 {"\u201C"}
                 {leadQuote}
                 {"\u201D"}
@@ -221,11 +221,11 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           {restQuotes.length > 0 && (
-            <blockquote className="mb-12 md:mb-16 max-w-3xl border-l-2 border-brand-purple pl-6 md:pl-10 py-2">
+            <blockquote className="mb-12 md:mb-16 max-w-3xl hash-rule pl-6 md:pl-10 py-2">
               {restQuotes.map((line, i, arr) => (
                 <p
                   key={i}
-                  className={`text-xl md:text-2xl text-text-primary leading-relaxed italic${
+                  className={`text-xl md:text-2xl text-text-primary leading-relaxed italic text-pretty${
                     i > 0 ? " mt-4 md:mt-5" : ""
                   }`}
                 >

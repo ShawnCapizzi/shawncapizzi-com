@@ -67,11 +67,13 @@ export function BookReaderThumb({
             {quotes.map((q, idx) => (
               <p
                 key={idx}
-                className={`absolute inset-0 border-l-2 border-[#6b5cff]/55 pl-4 font-serif text-[29px] italic leading-snug text-[#d6dceb] transition-opacity duration-1000 ease-in-out md:text-[37px] ${
+                className={`absolute inset-0 font-serif text-[29px] italic leading-snug text-[#d6dceb] transition-opacity duration-1000 ease-in-out md:text-[37px] ${
                   idx === index ? "opacity-100" : "opacity-0"
                 }`}
               >
-                {q}
+                {/* The hash rule sits on an inner span so it runs only as
+                    tall as the quote, not the full fixed-height stage. */}
+                <span className="block hash-rule pl-4">{q}</span>
               </p>
             ))}
           </div>
