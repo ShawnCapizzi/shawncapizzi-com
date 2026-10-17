@@ -462,6 +462,77 @@ export default function Page() {
               alongside poetry and music. Posted July 2023.
             </p>
           </div>
+
+          {/* PHOTOGRAPHS (October 2026): Shawn's own photos, shown as
+              evidence for the paragraphs above, after the LinkedIn
+              performance so the section ends on images. The eye first
+              (Venice, Chinatown, One World Trade Center), then the culture
+              he keeps around him, ending on jazz and rock. Files live in
+              public/images/about/beyond/ with location data stripped; the
+              Smalls and Brooklyn frames are stills from his phone videos.
+              Captions name the place, in the "In the work" format.
+              Desktop: Venice full width, then a 3-column grid (Chinatown
+              spans two). Phone: Venice full width, then one row the visitor
+              swipes, with the next photo peeking in; nothing moves on its
+              own. */}
+          <div className="mt-12 md:mt-14">
+            <BeyondPhoto
+              src="/images/about/beyond/venice-grand-canal.jpg"
+              alt="A gondolier rowing on the Grand Canal in Venice, the Rialto Bridge in the distance, shot through a fisheye lens."
+              caption="Grand Canal · Venice"
+              aspect="aspect-[3/2]"
+              sizes="(max-width: 768px) 100vw, 1100px"
+            />
+            <div
+              role="region"
+              aria-label="More photographs, New York and Brooklyn"
+              tabIndex={0}
+              className="mt-6 md:mt-8 -mx-6 px-6 md:mx-0 md:px-0 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-8 md:overflow-visible"
+            >
+              <BeyondPhoto
+                src="/images/about/beyond/chinatown-fish-counter.jpg"
+                alt="A fishmonger working a long fish counter in Chinatown, priced in red on green tags."
+                caption="Chinatown · NYC"
+                aspect="aspect-[4/5] md:aspect-[4/3]"
+                position="object-[20%_50%]"
+                className={`${SWIPE_ITEM} md:col-span-2`}
+                sizes="(max-width: 768px) 80vw, 730px"
+              />
+              <BeyondPhoto
+                src="/images/about/beyond/one-world-trade-center.jpg"
+                alt="One World Trade Center rising over the 9/11 Memorial plaza in snow."
+                caption="One World Trade Center · NYC"
+                aspect="aspect-[4/5] md:aspect-auto"
+                className={SWIPE_ITEM}
+                sizes="(max-width: 768px) 80vw, 360px"
+              />
+              <BeyondPhoto
+                src="/images/about/beyond/dj-evil-d-le-poisson-rouge.jpg"
+                alt="Shawn, in a Mets jersey, with DJ Evil D under red stage lights."
+                caption="With DJ Evil D · Le Poisson Rouge, NYC"
+                aspect="aspect-[4/5]"
+                className={SWIPE_ITEM}
+                sizes="(max-width: 768px) 80vw, 360px"
+              />
+              <BeyondPhoto
+                src="/images/about/beyond/smalls-jazz-club.jpg"
+                alt="A drummer's red kit and hi-hat from a seat beside the stage, a bassist behind."
+                caption="Smalls Jazz Club · NYC"
+                aspect="aspect-[4/5]"
+                className={SWIPE_ITEM}
+                sizes="(max-width: 768px) 80vw, 360px"
+              />
+              <BeyondPhoto
+                src="/images/about/beyond/brooklyn-rock-show.jpg"
+                alt="A crowd with hands raised toward a stage washed in purple light, the band's name on the screen."
+                caption="Fear Factory · The Meadows, Brooklyn"
+                aspect="aspect-[4/5]"
+                position="object-left"
+                className={SWIPE_ITEM}
+                sizes="(max-width: 768px) 80vw, 360px"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -551,5 +622,43 @@ export default function Page() {
           never competes with it. Linked from the footer on every page. */}
       <Colophon />
     </article>
+  );
+}
+
+/* Phone: each photo after Venice is a swipe card, about four-fifths of the
+   screen wide so the next one peeks in. Desktop: a normal grid cell. */
+const SWIPE_ITEM = "shrink-0 w-[80%] snap-start md:w-auto";
+
+/* One photograph in "Beyond the work": rounded like the "In the work"
+   photos, with the place named in a quiet caption underneath. On desktop a
+   tile with "md:aspect-auto" takes the height of its row. */
+function BeyondPhoto({
+  src,
+  alt,
+  caption,
+  aspect,
+  sizes,
+  className = "",
+  position = "object-center",
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+  aspect: string;
+  sizes: string;
+  className?: string;
+  position?: string;
+}) {
+  return (
+    <figure className={`flex flex-col ${className}`}>
+      <div
+        className={`relative ${aspect} ${aspect.includes("aspect-auto") ? "md:flex-1" : ""} rounded-2xl overflow-hidden border border-border-default bg-bg-raised`}
+      >
+        <Image src={src} alt={alt} fill className={`object-cover ${position}`} sizes={sizes} />
+      </div>
+      <figcaption className="mt-3 font-mono text-xs md:text-sm text-text-secondary tracking-tight">
+        {caption}
+      </figcaption>
+    </figure>
   );
 }
