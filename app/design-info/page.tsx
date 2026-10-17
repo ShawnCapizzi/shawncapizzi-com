@@ -218,14 +218,29 @@ export default function Page() {
           <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
             Design system
           </h2>
-          <p className="max-w-3xl text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
-            The site is treated as a living system rather than a collection of
-            one-off pages. Typography, spacing, color, content patterns, cards,
-            and interactions are reused so the experience stays consistent as
-            the work evolves. Four type roles cover every heading on the site,
-            and the hash-mark rule beside lists and quotes is the same six-pixel
-            tile everywhere it appears.
-          </p>
+          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            <p>
+              The site is treated as a living system rather than a collection
+              of one-off pages. Typography, spacing, color, content patterns,
+              cards, and interactions are reused so the experience stays
+              consistent as the work evolves. Four type roles cover every
+              heading on the site, and the hash-mark rule beside lists and
+              quotes is the same six-pixel tile everywhere it appears.
+            </p>
+            {/* The habit behind it (October 2026): brand books and visual
+                design systems built with creative and strategy teams. Not a
+                sales line; part of who Shawn is. */}
+            <p>
+              The habit comes from the work. I&apos;ve spent years
+              collaborating with creative and strategy teams on brand books
+              and visual design systems: color, tone of voice, writing style,
+              and UX patterns, set down so a brand holds together everywhere
+              it shows up. Today that means a website, print, social,
+              sponsorships, and collaborations with other brands, often made
+              by different teams at the same time. The system is what keeps
+              all of it recognizably one brand.
+            </p>
+          </div>
         </div>
       </section>
 
