@@ -6,6 +6,45 @@ import { pageMetadata, profilePage } from "@/lib/seo";
 import { CTACards } from "@/components/CTACards";
 import { Colophon } from "@/components/Colophon";
 import { KeepHyphens } from "@/components/KeepHyphens";
+import { ProcessSketch } from "@/components/ProcessSketch";
+
+/* The six kinds of work in "Hard to staff", once a single paragraph. */
+const HARD_TO_STAFF_WORK = [
+  "Defining a product before development starts.",
+  "Untangling a customer journey.",
+  "Aligning a team around a roadmap.",
+  "Shaping a message.",
+  "Building a design system.",
+  "Bringing an experienced point of view into a difficult decision.",
+];
+
+/* The harder questions in "Clarity before execution". */
+const HARDER_QUESTIONS = [
+  "What problem are we actually solving? For whom?",
+  "What decision or action should the experience support?",
+  "What does someone need to understand or trust before we ask them to do anything?",
+];
+
+/* Background, as facts. Each pair is a label and the text, unchanged from
+   the paragraphs it replaced. */
+const BACKGROUND: [string, string][] = [
+  [
+    "Today",
+    "Senior consulting work at Publicis CoLab across the Pfizer portfolio, spanning multi-brand governance, regulated digital experiences, design systems, HCP and patient touchpoints, and emerging uses of AI.",
+  ],
+  [
+    "15+ years",
+    "Pharma, healthcare, financial services, enterprise technology, customer experience, and patient experience.",
+  ],
+  [
+    "Teaching",
+    "Design fundamentals, Photoshop, and InDesign at NYU.",
+  ],
+  [
+    "Education",
+    "BFA from Pratt Institute in Communications Design and Advertising/Marketing. Rutgers' AI Automation cohort, recently completed.",
+  ],
+];
 
 export const metadata = pageMetadata({
   path: "/about",
@@ -117,45 +156,53 @@ export default function Page() {
         </div>
       </section>
 
-      {/* HARD TO STAFF: why a client brings Shawn in. */}
+      {/* HARD TO STAFF: why a client brings Shawn in. October 2026: the
+          six kinds of work are a hash-rule list and the closing line is a
+          pull quote beside the body on desktop. Copy unchanged. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
             <KeepHyphens>The work that&apos;s hard to staff full-time, but too important to miss.</KeepHyphens>
           </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
-            <p>
-              Sometimes it&apos;s budget. Sometimes the opportunity isn&apos;t
-              clear yet, or the organization doesn&apos;t know what kind of
-              expertise it needs. Either way, important work can sit between
-              roles, teams, or priorities, and opportunities get missed.
-            </p>
-            <p>
-              That might mean defining a product before development starts,
-              untangling a customer journey, aligning a team around a roadmap,
-              shaping a message, building a design system, or bringing an
-              experienced point of view into a difficult decision.
-            </p>
-            <p>
-              I work comfortably with executives, strategists, creatives,
-              product managers, researchers, stakeholders, and development
-              teams.
-            </p>
-            <p>
-              Experience has taught me when to listen, when to respect the
-              process already in place, and when a new possibility is worth
-              putting on the table.
-            </p>
-            <p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+            <div className="lg:col-span-7 space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+              <p>
+                Sometimes it&apos;s budget. Sometimes the opportunity isn&apos;t
+                clear yet, or the organization doesn&apos;t know what kind of
+                expertise it needs. Either way, important work can sit between
+                roles, teams, or priorities, and opportunities get missed.
+              </p>
+              <p>That might mean:</p>
+              <ul className="space-y-3 text-text-primary">
+                {HARD_TO_STAFF_WORK.map((item) => (
+                  <li key={item} className="hash-rule pl-5 md:pl-6">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p>
+                I work comfortably with executives, strategists, creatives,
+                product managers, researchers, stakeholders, and development
+                teams.
+              </p>
+              <p>
+                Experience has taught me when to listen, when to respect the
+                process already in place, and when a new possibility is worth
+                putting on the table.
+              </p>
+            </div>
+            <blockquote className="lg:col-span-5 lg:pt-2 self-start lg:sticky lg:top-32 hash-rule pl-6 md:pl-8 text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-snug text-balance">
               The goal isn&apos;t to add another opinion to the room. It&apos;s
               to create clarity early enough for the team to make a better
               decision and move the work forward.
-            </p>
+            </blockquote>
           </div>
         </div>
       </section>
 
-      {/* CLARITY BEFORE EXECUTION: the working principle. */}
+      {/* CLARITY BEFORE EXECUTION: the working principle. October 2026: the
+          four questions stand on their own, one per line, with the Questions
+          sketch from the Process page beside them. Copy unchanged. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
@@ -171,11 +218,23 @@ export default function Page() {
               Before the screen, campaign, platform, or product, there are
               harder questions.
             </p>
-            <p>
-              What problem are we actually solving? For whom? What decision or
-              action should the experience support? What does someone need to
-              understand or trust before we ask them to do anything?
-            </p>
+          </div>
+          <div className="my-10 md:my-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <ul className="lg:col-span-7 space-y-5 md:space-y-6">
+              {HARDER_QUESTIONS.map((q) => (
+                <li
+                  key={q}
+                  className="hash-rule pl-6 md:pl-8 text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-snug text-balance"
+                >
+                  {q}
+                </li>
+              ))}
+            </ul>
+            <div className="lg:col-span-5 hidden lg:block">
+              <ProcessSketch index={1} name="Questions" />
+            </div>
+          </div>
+          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
             <p>
               That matters everywhere, but especially in pharma, healthcare,
               financial services, and other regulated environments where
@@ -191,89 +250,117 @@ export default function Page() {
         </div>
       </section>
 
-      {/* NEW TOOLS: curiosity, used with judgment. */}
+      {/* NEW TOOLS: curiosity, used with judgment. October 2026: the two
+          objects the copy links to, the Clarity Cards and the book, sit
+          beside it, using the photos from /thinking. Copy unchanged. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
             I&apos;ve always been interested in what new tools make possible.
           </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
-            <p>
-              New technology and new ways of working have been a thread
-              throughout my career.
-            </p>
-            <p>
-              AI has expanded that dramatically. I can make ideas tangible
-              earlier, test assumptions, explore new processes, and see
-              opportunities that can be difficult to understand in a deck or
-              flow alone.
-            </p>
-            <p>
-              But I don&apos;t walk into an established team assuming the
-              newest tool or process is the answer. I listen first, understand
-              what&apos;s happening in the room, respect how the team works,
-              and then introduce what might be useful in context.
-            </p>
-            <p>
-              New thinking works better when people can see it, react to it,
-              and shape it together.
-            </p>
-            <p>
-              A lot of that thinking now feeds the{" "}
-              <Link href="/thinking" className="text-link hover:text-link-hover transition-colors">
-                Capizzi Process
-              </Link>
-              ,{" "}
-              <Link href="/thinking#book" className="text-link hover:text-link-hover transition-colors">
-                <em>Seeing Past the Cage</em>
-              </Link>
-              , and the{" "}
-              <Link href="/thinking#cards" className="text-link hover:text-link-hover transition-colors">
-                Clarity Cards
-              </Link>
-              : different ways of helping teams make problems visible, ask
-              better questions, and move toward decisions.
-            </p>
-          </div>
-          <div className="mt-8">
-            <Link
-              href="/thinking"
-              className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
-            >
-              Explore the thinking{" "}
-              <span aria-hidden="true" className="ml-2">
-                &rarr;
-              </span>
-            </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+            <div className="lg:col-span-7">
+              <div className="space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+                <p>
+                  New technology and new ways of working have been a thread
+                  throughout my career.
+                </p>
+                <p>
+                  AI has expanded that dramatically. I can make ideas tangible
+                  earlier, test assumptions, explore new processes, and see
+                  opportunities that can be difficult to understand in a deck or
+                  flow alone.
+                </p>
+                <p>
+                  But I don&apos;t walk into an established team assuming the
+                  newest tool or process is the answer. I listen first, understand
+                  what&apos;s happening in the room, respect how the team works,
+                  and then introduce what might be useful in context.
+                </p>
+                <p>
+                  New thinking works better when people can see it, react to it,
+                  and shape it together.
+                </p>
+                <p>
+                  A lot of that thinking now feeds the{" "}
+                  <Link href="/thinking" className="text-link hover:text-link-hover transition-colors">
+                    Capizzi Process
+                  </Link>
+                  ,{" "}
+                  <Link href="/thinking#book" className="text-link hover:text-link-hover transition-colors">
+                    <em>Seeing Past the Cage</em>
+                  </Link>
+                  , and the{" "}
+                  <Link href="/thinking#cards" className="text-link hover:text-link-hover transition-colors">
+                    Clarity Cards
+                  </Link>
+                  : different ways of helping teams make problems visible, ask
+                  better questions, and move toward decisions.
+                </p>
+              </div>
+              <div className="mt-8">
+                <Link
+                  href="/thinking"
+                  className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
+                >
+                  Explore the thinking{" "}
+                  <span aria-hidden="true" className="ml-2">
+                    &rarr;
+                  </span>
+                </Link>
+              </div>
+            </div>
+            <div className="lg:col-span-5 grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-6 self-start">
+              <figure>
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
+                  <Image
+                    src="/images/process/clarity-cards-desk.jpg"
+                    alt="The Clarity Cards deck spread on a desk."
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 440px"
+                  />
+                </div>
+                <figcaption className="mt-3 font-mono text-xs md:text-sm text-text-secondary tracking-tight">
+                  Clarity Cards
+                </figcaption>
+              </figure>
+              <figure>
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
+                  <Image
+                    src="/images/process/seeing-past-the-cage-book.jpg"
+                    alt="The book Seeing Past the Cage."
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 440px"
+                  />
+                </div>
+                <figcaption className="mt-3 font-mono text-xs md:text-sm text-text-secondary tracking-tight">
+                  Seeing Past the Cage
+                </figcaption>
+              </figure>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* BACKGROUND */}
+      {/* BACKGROUND. October 2026: the three paragraphs are four facts on
+          the hash rule, two columns on desktop. Wording unchanged. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
             Background
           </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
-            <p>
-              Today I lead senior consulting work at Publicis CoLab across the
-              Pfizer portfolio, spanning multi-brand governance, regulated
-              digital experiences, design systems, HCP and patient touchpoints,
-              and emerging uses of AI.
-            </p>
-            <p>
-              Over the past 15+ years, my work has crossed pharma, healthcare,
-              financial services, enterprise technology, customer experience,
-              and patient experience.
-            </p>
-            <p>
-              I&apos;ve also taught design fundamentals, Photoshop, and
-              InDesign at NYU. My BFA is from Pratt Institute in Communications
-              Design and Advertising/Marketing, and I recently completed
-              Rutgers&apos; AI Automation cohort.
-            </p>
-          </div>
+          <dl className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 md:gap-y-10">
+            {BACKGROUND.map(([label, text]) => (
+              <div key={label} className="hash-rule pl-5 md:pl-6">
+                <dt className="metadata-label mb-2">{label}</dt>
+                <dd className="text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+                  {text}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
