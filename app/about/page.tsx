@@ -394,6 +394,17 @@ export default function Page() {
               visuals made live well before the tools went mainstream. The
               post's LinkedIn ID decodes to July 30, 2023. */}
           <div className="mt-12 md:mt-14 max-w-3xl">
+            {/* Set-up (October 2026): what the clip is, and when. Same
+                subtitle treatment as the photographs below it. */}
+            <h3 className="card-title text-text-primary mb-3 text-balance">
+              AI as a creative tool, since the summer of 2023.
+            </h3>
+            <p className="mb-6 md:mb-8 text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+              Images generated in Midjourney from the performers&apos; lyrics
+              and poems, dropped into Runway in real time, and projected
+              behind them as they played. A few highlights of that live
+              imagery.
+            </p>
             <div
               className="rounded-xl overflow-hidden"
               style={{ maxWidth: "720px", margin: "0 auto" }}
@@ -413,8 +424,7 @@ export default function Page() {
               className="mt-4 text-sm text-text-tertiary italic text-center"
               style={{ maxWidth: "720px", margin: "1rem auto 0" }}
             >
-              A live performance, with visuals generated in real time
-              alongside poetry and music. Posted July 2023.
+              Posted on LinkedIn, July 2023.
             </p>
           </div>
 
