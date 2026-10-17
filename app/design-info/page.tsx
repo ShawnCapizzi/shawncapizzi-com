@@ -216,7 +216,7 @@ export default function Page() {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
-            A living system
+            Design system
           </h2>
           <p className="max-w-3xl text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
             The site is treated as a living system rather than a collection of
