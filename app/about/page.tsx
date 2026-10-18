@@ -464,8 +464,8 @@ export default function Page() {
               be, and know the right place to stop.
             </blockquote>
             <p>
-              Born in Queens. Mets and Yankees fan, in that order. Competitive
-              BBQ in the off-season.
+              Born in Queens. Grew up in Jersey. Mets and Giants fan, in that
+              order. Competitive BBQ in the off-season. Music collector.
             </p>
           </div>
 
