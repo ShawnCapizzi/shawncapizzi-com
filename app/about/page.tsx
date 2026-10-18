@@ -147,6 +147,83 @@ export default function Page() {
         </div>
       </section>
 
+      {/* PHOTOGRAPHS AND CLIPS (October 2026): right after the hero, so a
+          visitor gets a feel for Shawn through pictures before the
+          professional detail. His own photos and two phone clips. Venice
+          leads; then One World Trade Center, the Smalls clip, and the Meadows
+          clip; then a night out at Le Poisson Rouge and Chinatown. The clips
+          play on tap. Files live in public/images/about/beyond/ and
+          public/videos/about/ with location data stripped. Desktop: Venice
+          full width, then a three-column grid. Phone: Venice, then one row
+          the visitor swipes. */}
+      <section className="py-16 md:py-24 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <h2 className="section-title text-balance mb-6 md:mb-8 max-w-3xl">
+            There has to be a life away from the computer.
+          </h2>
+          <p className="mb-10 md:mb-12 max-w-3xl text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            For me, that&apos;s travel and getting out to see music. A few
+            frames from both.
+          </p>
+          <div>
+            <BeyondPhoto
+              src="/images/about/beyond/venice-grand-canal.jpg"
+              alt="A gondolier rowing on the Grand Canal in Venice, the Rialto Bridge in the distance, shot through a fisheye lens."
+              caption="Grand Canal · Venice"
+              aspect="aspect-[3/2]"
+              sizes="(max-width: 768px) 100vw, 1100px"
+            />
+            <div
+              role="region"
+              aria-label="More photographs and clips"
+              tabIndex={0}
+              className="mt-6 md:mt-8 -mx-6 px-6 md:mx-0 md:px-0 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-8 md:overflow-visible"
+            >
+              <BeyondPhoto
+                src="/images/about/beyond/one-world-trade-center.jpg"
+                alt="One World Trade Center rising over the 9/11 Memorial plaza in snow."
+                caption="One World Trade Center · NYC"
+                aspect="aspect-[4/5]"
+                className={SWIPE_ITEM}
+                sizes="(max-width: 768px) 80vw, 360px"
+              />
+              {/* The two clips from Shawn's phone, played on tap. Exported
+                  as H.264 with the location data stripped; the Meadows clip
+                  is cropped to the tile. Nothing plays on its own. */}
+              <BeyondClip
+                src="/videos/about/smalls-jazz-club.mp4"
+                poster="/images/about/beyond/smalls-jazz-club.jpg"
+                label="A drummer and bassist on stage at Smalls Jazz Club, from a seat beside the drum kit"
+                caption="Smalls Jazz Club · NYC"
+              />
+              <BeyondClip
+                src="/videos/about/the-meadows-fear-factory.mp4"
+                poster="/images/about/beyond/the-meadows-fear-factory-poster.jpg"
+                label="Fear Factory on stage at The Meadows in Brooklyn, the crowd's hands up in purple light"
+                caption="Fear Factory · The Meadows, Brooklyn"
+              />
+              <BeyondPhoto
+                src="/images/about/beyond/dj-evil-d-le-poisson-rouge.jpg"
+                alt="Shawn, in a Mets jersey, with DJ Evil D under red stage lights."
+                caption="With DJ Evil D · Le Poisson Rouge, NYC"
+                aspect="aspect-[4/5] md:aspect-auto"
+                className={SWIPE_ITEM}
+                sizes="(max-width: 768px) 80vw, 360px"
+              />
+              <BeyondPhoto
+                src="/images/about/beyond/chinatown-fish-counter.jpg"
+                alt="A fishmonger working a long fish counter in Chinatown, priced in red on green tags."
+                caption="Chinatown · NYC"
+                aspect="aspect-[4/5] md:aspect-[4/3]"
+                position="object-[20%_50%]"
+                className={`${SWIPE_ITEM} md:col-span-2`}
+                sizes="(max-width: 768px) 80vw, 730px"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* HARD TO STAFF: why a client brings Shawn in. October 2026: the
           six kinds of work are a hash-rule list and the closing line is a
           pull quote beside the body on desktop. The two paragraphs about
@@ -154,6 +231,8 @@ export default function Page() {
           up", which says both. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          {/* A two-word turn from the photographs back to the work. */}
+          <p className="eyebrow mb-3">Back to work</p>
           <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
             <KeepHyphens>The work that&apos;s hard to staff full-time, but too important to miss.</KeepHyphens>
           </h2>
@@ -428,77 +507,6 @@ export default function Page() {
             </p>
           </div>
 
-          {/* PHOTOGRAPHS AND CLIPS (October 2026): Shawn's own photos and two
-              phone clips. Venice leads; then Chinatown and One World Trade
-              Center; then the Smalls clip, a night out at Le Poisson Rouge,
-              and the Meadows clip. The clips play on tap. Files live in
-              public/images/about/beyond/ and public/videos/about/ with
-              location data stripped. Desktop: Venice full width, then a
-              three-column grid. Phone: Venice, then one row the visitor
-              swipes. */}
-          <div className="mt-14 md:mt-20">
-            {/* A subtitle, so the photographs and clips read as a different
-                thing from the AI visuals in the performance above. */}
-            <h3 className="card-title text-text-primary mb-6 md:mb-8 max-w-3xl text-balance">
-              There has to be a life away from the computer. For me,
-              that&apos;s travel and getting out to see music. A few frames
-              from both.
-            </h3>
-            <BeyondPhoto
-              src="/images/about/beyond/venice-grand-canal.jpg"
-              alt="A gondolier rowing on the Grand Canal in Venice, the Rialto Bridge in the distance, shot through a fisheye lens."
-              caption="Grand Canal · Venice"
-              aspect="aspect-[3/2]"
-              sizes="(max-width: 768px) 100vw, 1100px"
-            />
-            <div
-              role="region"
-              aria-label="More photographs and clips"
-              tabIndex={0}
-              className="mt-6 md:mt-8 -mx-6 px-6 md:mx-0 md:px-0 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-8 md:overflow-visible"
-            >
-              <BeyondPhoto
-                src="/images/about/beyond/chinatown-fish-counter.jpg"
-                alt="A fishmonger working a long fish counter in Chinatown, priced in red on green tags."
-                caption="Chinatown · NYC"
-                aspect="aspect-[4/5] md:aspect-[4/3]"
-                position="object-[20%_50%]"
-                className={`${SWIPE_ITEM} md:col-span-2`}
-                sizes="(max-width: 768px) 80vw, 730px"
-              />
-              <BeyondPhoto
-                src="/images/about/beyond/one-world-trade-center.jpg"
-                alt="One World Trade Center rising over the 9/11 Memorial plaza in snow."
-                caption="One World Trade Center · NYC"
-                aspect="aspect-[4/5] md:aspect-auto"
-                className={SWIPE_ITEM}
-                sizes="(max-width: 768px) 80vw, 360px"
-              />
-              {/* The two clips from Shawn's phone, played on tap. Exported
-                  as H.264 with the location data stripped; the Meadows clip
-                  is cropped to the tile. Nothing plays on its own. */}
-              <BeyondClip
-                src="/videos/about/smalls-jazz-club.mp4"
-                poster="/images/about/beyond/smalls-jazz-club.jpg"
-                label="A drummer and bassist on stage at Smalls Jazz Club, from a seat beside the drum kit"
-                caption="Smalls Jazz Club · NYC"
-              />
-              <BeyondPhoto
-                src="/images/about/beyond/dj-evil-d-le-poisson-rouge.jpg"
-                alt="Shawn, in a Mets jersey, with DJ Evil D under red stage lights."
-                caption="With DJ Evil D · Le Poisson Rouge, NYC"
-                aspect="aspect-[4/5]"
-                className={SWIPE_ITEM}
-                sizes="(max-width: 768px) 80vw, 360px"
-              />
-              <BeyondClip
-                src="/videos/about/the-meadows-fear-factory.mp4"
-                poster="/images/about/beyond/the-meadows-fear-factory-poster.jpg"
-                label="Fear Factory on stage at The Meadows in Brooklyn, the crowd's hands up in purple light"
-                caption="Fear Factory · The Meadows, Brooklyn"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
