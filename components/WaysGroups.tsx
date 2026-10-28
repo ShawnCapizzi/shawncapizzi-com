@@ -67,13 +67,16 @@ export function WaysGroups({ groups }: { groups: WaysGroup[] }) {
       <div className="space-y-14 md:space-y-20">
         {groups.map((g) => (
           <div key={g.kind}>
-            {/* Principle header: drawing left, name and definition right.
-                Stacks on phones. The drawing lights as it scrolls in. */}
-            <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8 mb-6 md:mb-8">
-              <div className="h-20 md:h-24 shrink-0">
+            {/* Principle header (October 2026): the drawing on top, large,
+                then the name and definition beside a vertical hash rule, the
+                same mark /about uses for its pull quotes, so a principle
+                reads differently from the cards under it. The drawing lights
+                as it scrolls in. */}
+            <div className="mb-8 md:mb-10">
+              <div className="w-full max-w-[30rem] mb-6 md:mb-8">
                 <WaysSketch kind={g.kind} seed={g.seed} />
               </div>
-              <div>
+              <div className="hash-rule pl-5 md:pl-6">
                 <h3 className="card-title text-text-primary">{g.name}</h3>
                 <p className="mt-2 max-w-2xl text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
                   {g.line}

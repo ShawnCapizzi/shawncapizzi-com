@@ -884,11 +884,14 @@ h3 {
    language reused outside /thinking (Shawn's call, October 2026).
    ============================================================ */
 
-/* The wrapper sets the height; the drawing keeps its 200:96 ratio. */
+/* The wrapper sets the width; the drawing keeps its 200:96 ratio. On
+   /how-i-help it sits above each principle's name at up to 30rem wide
+   (Shawn's call, October 2026: about the size of the sketch on /thinking). */
 .ways-sketch {
   display: block;
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 200 / 96;
   overflow: visible;
 }
 
