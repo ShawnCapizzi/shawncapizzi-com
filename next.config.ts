@@ -25,6 +25,15 @@ const nextConfig: NextConfig = {
         destination: "/thinking",
         permanent: true,
       },
+      // /card is the URL printed in the QR code on the business card
+      // (October 2026). It lands on /how-i-help with ?src=card so scans are
+      // separable in analytics. Not permanent on purpose: a 307 is never
+      // cached by browsers, so the destination can change without a reprint.
+      {
+        source: "/card",
+        destination: "/how-i-help?src=card",
+        permanent: false,
+      },
     ];
   },
 };

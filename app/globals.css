@@ -873,3 +873,68 @@ h3 {
     opacity: 1;
   }
 }
+
+/* ============================================================
+   WAYS SKETCH
+   The small bulb mark at the top of each /how-i-help card
+   (components/WaysSketch.tsx). The box is always drawn; the
+   connector lines and the bulb draw themselves in when the card
+   scrolls into view (.is-lit), by running a dash offset from 1 to
+   0, staggered by --k. No hover. This is the Capizzi Process bulb
+   language reused outside /thinking (Shawn's call, October 2026).
+   ============================================================ */
+
+/* The wrapper sets the height; the drawing keeps its 200:96 ratio. */
+.ways-sketch {
+  display: block;
+  width: auto;
+  height: 100%;
+  overflow: visible;
+}
+
+.ways-sketch path {
+  fill: none;
+  stroke: var(--color-text-primary);
+  stroke-width: 1.15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Shade ticks: static here, no sway or tint (those stay on /thinking). */
+.ways-sketch path.tick {
+  stroke: rgba(130, 116, 255, 0.5);
+  stroke-width: 0.65;
+}
+
+/* A bulb that is lit from the start (the Prove drawing's framed bulb). */
+.ways-sketch path.hatchon {
+  stroke-width: 0.75;
+}
+
+.ways-sketch path.draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.3, 0.6, 0.2, 1);
+  transition-delay: calc(var(--k) * 70ms);
+}
+
+.ways-sketch path.hatch {
+  stroke-width: 0.75;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.45s ease;
+  transition-delay: calc((var(--k) + 8) * 45ms);
+}
+
+.ways-sketch.is-lit path.draw,
+.ways-sketch.is-lit path.hatch {
+  stroke-dashoffset: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ways-sketch path.draw,
+  .ways-sketch path.hatch {
+    transition: none;
+    stroke-dashoffset: 0;
+  }
+}
