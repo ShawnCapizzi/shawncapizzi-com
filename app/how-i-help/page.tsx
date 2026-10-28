@@ -45,8 +45,8 @@ const GROUPS: WaysGroup[] = [
       "Understand the people, problem, context, signals, and constraints before deciding what to make.",
     ways: [
       {
-        title: "Figure out what comes next",
-        tease: "Too many ideas, or no clear direction yet.",
+        title: "Figure out what comes next, and why",
+        tease: "Loose ideas, no clear focus yet, and your next business move waiting on one.",
         text:
           "A new product, an unclear opportunity, a customer journey that isn\u2019t working, or simply too many competing ideas. I help teams define the problem, see the opportunity, and get aligned on a direction they can act on.",
       },
