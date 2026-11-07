@@ -23,7 +23,7 @@ export const metadata = {
     path: "/how-i-help",
     title: "How I help",
     description:
-      "Good to meet you. One flexible system, the Capizzi Process, and six ways it turns business problems into work that ships.",
+      "Shawn Capizzi helps teams get clear on direction, sharpen the thinking, and move the work forward. Deep experience in healthcare, pharma, and regulated markets.",
   }),
   robots: { index: false, follow: true },
 };
@@ -45,23 +45,16 @@ const GROUPS: WaysGroup[] = [
       "Understand the people, problem, context, signals, and constraints before deciding what to make.",
     ways: [
       {
-        title: "Figure out what comes next, and why",
-        tease: "Loose ideas, no clear focus yet, and your next business move waiting on one.",
+        title: "Figure out what comes next",
+        tease: "A new product, an unclear opportunity, a customer journey that isn\u2019t working, or too many competing ideas.",
         text:
-          "A new product, an unclear opportunity, a customer journey that isn\u2019t working, or simply too many competing ideas. I help teams define the problem, see the opportunity, and get aligned on a direction they can act on.",
+          "I help teams define the problem, see the opportunity, and get aligned on a direction they can act on.",
       },
       {
-        title: "Bring experienced thinking into the room",
-        tease: "A big decision is coming, and you want it pressure-tested first.",
+        title: "Research it. Pressure-test it.",
+        tease: "You need to understand where you stand before deciding where to spend.",
         text:
-          "I can join a team, advise from the outside, lead a focused engagement, or help pressure-test an important decision before more time and money are committed.",
-      },
-      {
-        title: "Research it, then put it in a deck people can act on",
-        tease: "You need to know where you stand before you spend.",
-        text:
-          "Competitive reviews, website and app audits with the improvements and opportunities laid out, market opportunity scans, CRM feature recommendations, and sales rep tools. Thorough on the research, direct in the deck: what I found, what to do next, and why, so a team or a leadership room can decide in one sitting.",
-        wide: true,
+          "Competitive reviews, digital audits, market scans, customer signals, CRM and product recommendations: research distilled into what matters, what to do next, and why.",
       },
     ],
   },
@@ -128,26 +121,35 @@ export default function Page() {
             <div className="lg:col-span-7 order-2 lg:order-1">
               <p className="eyebrow mb-3">How I help</p>
               <h1 className="headline-static hero-title text-balance max-w-4xl">
-                Good to meet you.
+                Nice to meet you.
               </h1>
-              <p className="mt-4 md:mt-6 max-w-3xl hero-lead text-pretty">
-                Glad you took the time to scan the card. The next step is
-                simple: I want to hear how I can best help your company win in
-                this new digital world, whether you&apos;re starting something
-                or scaling something complex.
+              {/* The scan line (November 2026): one question the visitor can
+                  answer in their head before reading on. An h2 in the
+                  card-title role so it sits under the H1 without competing
+                  with it. */}
+              <h2 className="card-title mt-4 md:mt-6 max-w-3xl text-balance">
+                What are you trying to solve, improve, or make happen?
+              </h2>
+              {/* Locked positioning line (November 2026). Do not rewrite. */}
+              <p className="max-w-3xl hero-lead text-pretty">
+                I help teams get clear on direction, sharpen the thinking, and
+                move the work forward.
               </p>
               <div className="mt-6 md:mt-8 max-w-3xl space-y-5 text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
                 <p>
-                  Your customers want to keep buying from you, and new buyers
-                  are meeting your brand for the first time. Let&apos;s make
-                  sure both get the best customer experience and find the
-                  information they need quickly, so from the first look or
-                  engagement they see the value and become a customer and a
-                  brand advocate.
+                  Maybe it&apos;s something new. Maybe something already exists
+                  and isn&apos;t working as well as it should. Or maybe the
+                  opportunity is there, but the direction isn&apos;t clear yet.
+                  Start there.
                 </p>
                 <p>
-                  I design, build, and ship the work myself, so the thinking
-                  doesn&apos;t stop at the slide.
+                  My deepest experience is in healthcare, pharma, and other
+                  regulated markets: creating experiences that help people
+                  understand, trust, act, and stay engaged.
+                </p>
+                <p>
+                  I stay close enough to the work to make the thinking
+                  tangible: not just leave it in a deck.
                 </p>
               </div>
             </div>
@@ -183,12 +185,12 @@ export default function Page() {
               full method on /thinking, that has worked across problems, teams,
               business units, and geographies. */}
           <p className="mt-5 mb-10 md:mb-12 max-w-3xl text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
-            Not steps, and not a fixed menu. It&apos;s one flexible system, the{" "}
+            Not a fixed menu. The{" "}
             <Link href="/thinking" className="text-link hover:text-link-hover transition-colors">
               Capizzi Process
-            </Link>
-            , that has worked across many different business problems, over
-            teams, business units, and state lines, siloed or not.
+            </Link>{" "}
+            gives me three anchors: listen first, make it visible, and prove it
+            worked. The work itself flexes around the problem.
           </p>
           <WaysGroups groups={GROUPS} />
         </div>

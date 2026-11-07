@@ -107,7 +107,7 @@ export function siteGraph() {
         image: abs("/images/brand/headshot-2026-knockout.jpg"),
         jobTitle: "Strategic experience design leader",
         description:
-          "Strategic design leader for regulated products, platforms, and AI-enabled workflows, with fifteen years across pharma, healthcare, financial services, and enterprise. He also designs, builds, and ships products himself.",
+          "Strategic design leader for regulated products, platforms, and AI-enabled workflows, with fifteen years across pharma, healthcare, financial services, and enterprise. He helps teams get clear on direction, sharpen the thinking, and move the work forward, including CRM programs built around the high-value actions patients, doctors, and customers take. He also designs, builds, and ships products himself.",
         sameAs: [LINKEDIN_URL],
         alumniOf: { "@type": "CollegeOrUniversity", name: "Pratt Institute" },
         award: "D&AD Pencil 2022, Future Impact",
@@ -120,6 +120,8 @@ export function siteGraph() {
           "Conversational and voice interface design",
           "Pharmaceutical and healthcare digital experience",
           "Financial services CRM design",
+          "CRM program design",
+          "High-value action (HVA) design",
         ],
       },
     ],

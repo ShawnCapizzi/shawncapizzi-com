@@ -54,6 +54,7 @@ export default function Page() {
         </>,
         "The work happened in three layers. The first was strategic: direct partnership with CTOs and senior business strategists on multi-million dollar digital initiative planning, including ROI documentation that could be reported to the board.",
         "The second was architectural: defining the modular component logic, taxonomy, and content frameworks that would govern brand work across all 70+ brands. Each brand operates inside its own sandbox, working out particular content needs and creative expression within the governance framework. The system is intentionally restrained. Working with copywriters, medical strategists, and regulatory partners, I helped brand teams build information architecture that served both the system and the scientific story.",
+        "That architecture was measured against the high-value actions each site exists for. Sign-ups, getting HCPs and patients into the CRM stream. Video views and downloads. And a cross-linking strategy that gets an HCP the most relevant content for their current search, surfaces the related content that exists in the same session, gives them a way back to it, and lets them share it with peers or patients.",
         "The third was operational: a governance training program shared with copy, design, and media partners. The training teaches the correct way to leverage the system, the tolerance to which it can be modified, and best practices for initial setup. The goal isn't compliance enforcement. It's knowledge sharing.",
         "A specific innovation worth naming: I led the development of distribution channels for the Patient Design System, including a QR-based mobile wallet card for iOS and Android that gives patients fast access to co-pay information and medication support. It was an industry-first in pharma, made possible only because the design system was built to support new patterns instead of resisting them.",
       ]}
@@ -61,7 +62,7 @@ export default function Page() {
         "Knowledge sharing, and helping people alleviate their fears about a new design system.",
         "Not as a constraint, but as an opportunity to get to market faster and be creative within regulated design constraints.",
       ]}
-      midImages={[
+      firstLookImages={[
         {
           src: "/images/case-studies/01-pharma-design-systems/02-typographic-scale-documentation.png",
           alt: "Typographic scale documentation for the design system",
@@ -289,7 +290,7 @@ export default function Page() {
         {
           headline: "Industry-first mobile wallet integration",
           description:
-            "QR-based, FDA-compliant patient medication information deployed across iOS and Android for co-pay and patient support access.",
+            "QR-based, FDA-compliant patient medication information deployed across iOS and Android for co-pay and patient support access. The patient\u2019s highest-value action, co-pay enrollment and support, one scan away.",
         },
         {
           headline: "Accelerated speed-to-market",

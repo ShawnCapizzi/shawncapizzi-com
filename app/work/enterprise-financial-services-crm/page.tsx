@@ -52,25 +52,29 @@ export default function Page() {
           . I personally scheduled, scripted, and ran in-person interviews with
           the three salesperson types, bringing stimulus and prototypes into
           each conversation rather than asking abstract questions about workflow
-          preferences. I served as researcher, engagement strategist, and the
-          liaison between the R&amp;D team commissioning the work and the
-          development team that would implement it.
+          preferences. The inquiry ran across layers: regional and local
+          managers as well as front-line salespeople, mapping which screens
+          each used daily, finding the commonalities across role types, and
+          elevating those shared screens and actions to the front of the
+          dashboard instead of nesting them down paths that added clicks and
+          time. I served as researcher, engagement strategist, and the liaison
+          between the R&amp;D team commissioning the work and the development
+          team that would implement it.
         </>,
         "The final presentation went screen by screen, module by module: which screens should be moved, which modules should be recomposed, which interactions should be redesigned to be most efficient across all three salesperson types. The recommendations weren't speculative. They came directly from observed friction in real workflows.",
-        "The CRM facelift and design system refinement that followed enabled cleaner scanability, quicker decisions, and faster task completion across the rep experience. UI refinements were prioritized based on the cost of friction in actual rep workflows, not on aesthetic preference.",
+        "The CRM facelift and design system refinement that followed enabled cleaner scanability, quicker decisions, and faster task completion across the rep experience. UI refinements were prioritized based on the cost of friction in actual rep workflows, not on aesthetic preference, and every recommendation was ranked by its effect on the high-value actions the CRM exists for: selling seats, expanding relationships among existing seat-holders, and keeping them.",
         "The technical constraint that shaped everything: this is a command-line-driven terminal system. The entire company runs on it. Every interface decision had to work within those constraints. There was no option to redesign the underlying paradigm. The work was about making the existing system clearer, faster, and more aligned to how three different rep types actually do their jobs.",
       ]}
       pullQuote={[
         "What's distinct about this work is the platform itself. The whole company runs off this terminal, from the most junior role to senior leadership.",
         "Some of the biggest financial decisions made daily run through it.",
       ]}
-      midImages={[]}
-      processCarousel={
+      firstLook={
         <>
           {/* ─── Showcase 1: Field research process ─── */}
           <section
             aria-labelledby="crm-field-research"
-            className="mx-auto max-w-content px-6 pt-14 md:pt-20 pb-8 md:pb-10"
+            className="mx-auto max-w-content px-6 pt-6 md:pt-8 pb-8 md:pb-10"
           >
             <div className="mb-8 md:mb-10 max-w-2xl mx-auto text-center">
               <p className="eyebrow">(The work, in process)</p>
@@ -182,7 +186,7 @@ export default function Page() {
         {
           headline: "UI refinements prioritized by friction cost",
           description:
-            "Changes that reduced actual time-in-task rather than changes that looked good in isolation.",
+            "Changes that reduced actual time-in-task rather than changes that looked good in isolation. The measures: fewer redundant screens, a streamlined platform with less technical debt, fewer clicks to task completion, and faster discovery of information.",
         },
         {
           headline: "Cross-functional liaison work",

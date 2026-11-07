@@ -59,6 +59,7 @@ export default function Page() {
           portfolio and through future product indication expansion.
         </>,
         "The result was a modular enterprise design system. Thirty-three reusable components. Unified navigation structure. Standardized taxonomy. Flexible content architecture that supported both 45-second elevator pitches and six-minute deeper conversations. Salesforce-integrated interaction tracking. Embedded resource-sharing pathways for PDFs, video, and rep-to-HCP follow-ups. Built-in field notes for pre-call planning and post-call follow-up.",
+        "Every feature was built to drive a high-value action. For the HCP: awareness of in-office signage, practice education content, and copay and pay information. For the rep: quickly finding the resources to hand a patient, reading an HCP\u2019s interests, tapping a few buttons, and making sure the links to those pieces, videos, and downloads go out after the call. The post-call send is itself a high-value action. On the Salesforce side, the screens and data that drive the conversation were elevated, including new or extended data and additional indication information, with back-end note-taking for the personal details and questions a physician raised, and a custom discussion or slide list built for a specific call.",
         "Brand teams could still express campaign identity. But inside a governed design system. The result wasn't uniformity. It was structured flexibility.",
         "The harder work was organizational. Brand managers had to give up some autonomy to gain shared infrastructure. Regulatory teams had to trust pre-approved components. That trust came from concept reviews: the design direction was vetted early with the brand and legal teams, before it was built, as a standard check and balance. Development teams had to commit to the framework instead of building bespoke solutions on every brief. None of that happens because the system is well-designed. It happens because the governance is.",
       ]}
@@ -67,8 +68,9 @@ export default function Page() {
         "The consistency made their job easier.",
         "The field notes feature let them pick up where they left off and know what to send to the office post-call.",
       ]}
-      processCarousel={
+      firstLook={
         <CaseStudyCarousel
+          className="pt-6 md:pt-8 pb-16 md:pb-24"
           eyebrow="(Process)"
           heading="The walk-through"
           openingFrame={`"This is a story in four moves: the foundation we built before pixels (sitemap plus atomic design), the system in spec form (wireframe plus component library), the service design that connected the rep's workflow, and the polished product that shipped across brands."`}
@@ -295,7 +297,7 @@ export default function Page() {
         {
           headline: "Tool adoption increased from 65% to 92%",
           description:
-            "Within 12 months of system launch. Reps used the tools because the tools worked the way reps actually work.",
+            "Within 12 months of system launch. Reps used the tools because the tools worked the way reps actually work. And the high-value actions the tools were built for, the resource hand-off, the post-call send, the next-call plan, happened more often because the path to each was the same across every brand.",
         },
         {
           headline: "Built once. Designed to scale.",

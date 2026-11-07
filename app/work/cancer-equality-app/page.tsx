@@ -62,7 +62,7 @@ export default function Page() {
         "After, there was a live dashboard, real tracking, refinement based on coach usage data.",
         "It's not many times in your life you get to work with such a brilliant team on such an important topic.",
       ]}
-      midImages={[
+      firstLookImages={[
         {
           src: `${ASSET_BASE}/02-app-marketing-site-laptop.jpeg`,
           alt: "App marketing site rendered on laptop",

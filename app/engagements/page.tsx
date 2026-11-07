@@ -113,7 +113,10 @@ export default function Page() {
           </h1>
           <p className="hero-lead max-w-3xl">
             Embed me with the team. Bring me in for a defined problem. Or keep
-            me close for the decisions that need senior judgment.
+            me close for the decisions that need senior judgment. My deepest
+            experience is in healthcare, pharma, and other regulated markets:
+            experiences that help people understand, trust, act, and stay
+            engaged.
           </p>
         </div>
       </section>

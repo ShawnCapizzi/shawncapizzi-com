@@ -78,22 +78,13 @@ export default function Page() {
         "The score isn't the hard part. Making it honest, and making it yours, is the hard part.",
         "I didn't want a database of games. I wanted a living read on what's worth watching, refreshed from the same pipes the big platforms run on.",
       ]}
-      afterQuote={
-        <div>
+      firstLook={
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 pt-6 md:pt-8 pb-16 md:pb-24">
           <p className="eyebrow mb-4">The progression · From PRD to shipped</p>
           <h3 className="section-title mb-6 md:mb-8 max-w-3xl">
             Proving the idea was the easy part
           </h3>
-          <div className="max-w-3xl space-y-5 text-lg text-text-secondary leading-relaxed">
-            {[
-              "Left to right is the whole arc. v1 came straight out of a full PRD: raw sliders and an uncapped score past 14. It proved the idea but wasn't useful. The middle build capped it to a legible 0 to 10 and ranked the slate. The third is where it landed: each card carries the four factors a fan feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why.",
-              "I built it with Claude Code and ChatGPT as build partners and stayed the orchestrator. I defined the problem and the scoring model, described what I wanted in screenshots, copy, and micro-interaction notes, and directed the tools until the result matched the picture in my head.",
-              "The rest was judgment: capping the score at a legible 0 to 10, naming four factors a fan already feels, trimming anything that did not earn its place, and designing onboarding for someone with zero context. That editing is the product. It comes from years of working with developers, creative directors, and real users.",
-            ].map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
-          </div>
-          <div className="mt-10 md:mt-14">
+          <div>
             <PhoneFan
               phones={[
                 {
@@ -113,6 +104,15 @@ export default function Page() {
                 },
               ]}
             />
+          </div>
+          <div className="mt-10 md:mt-14 max-w-3xl space-y-5 text-lg text-text-secondary leading-relaxed">
+            {[
+              "Left to right is the whole arc. v1 came straight out of a full PRD: raw sliders and an uncapped score past 14. It proved the idea but wasn't useful. The middle build capped it to a legible 0 to 10 and ranked the slate. The third is where it landed: each card carries the four factors a fan feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why.",
+              "I built it with Claude Code and ChatGPT as build partners and stayed the orchestrator. I defined the problem and the scoring model, described what I wanted in screenshots, copy, and micro-interaction notes, and directed the tools until the result matched the picture in my head.",
+              "The rest was judgment: capping the score at a legible 0 to 10, naming four factors a fan already feels, trimming anything that did not earn its place, and designing onboarding for someone with zero context. That editing is the product. It comes from years of working with developers, creative directors, and real users.",
+            ].map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
           </div>
         </div>
       }

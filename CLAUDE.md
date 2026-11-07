@@ -152,6 +152,19 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   exception (Shawn's call, October 2026): the slow breeze sway and
   traveling purple tint on the Process sketches' shade ticks
 
+## Case studies
+
+- `components/CaseStudyLayout.tsx` renders every study. Since November 2026
+  the order is: hero, metadata, **first look** (`firstLook` or
+  `firstLookImages`), lead quote, the challenge, the approach (collapsed),
+  the remaining process sections, outcomes, closer. The first look is the
+  page's first work visual, placed before the prose so a reader sees the
+  work within about 1,300 to 1,700px on desktop (half the previous scroll,
+  measured with Playwright across all six studies). A new case study passes
+  its strongest visual block to `firstLook`; a carousel used there takes
+  `className="pt-6 md:pt-8 pb-16 md:pb-24"`. The Lab page keeps its
+  text-first showcases on purpose.
+
 ## Working principles
 
 - Read the design system and IA framework before writing any new page

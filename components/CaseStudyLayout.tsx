@@ -87,6 +87,15 @@ interface CaseStudyLayoutProps {
   /** Optional ReactNode rendered immediately below the pull quote, before the
    *  approach. Used to lift a key visual (e.g. a progression) high on the page. */
   afterQuote?: ReactNode;
+  /** First look (November 2026): the page's first work visual, rendered
+   *  directly under the metadata block and ahead of the challenge, so the
+   *  reader sees the work before the prose. Pass a block that brings its own
+   *  container (a CaseStudyCarousel, a showcase section). For a plain image
+   *  pair use firstLookImages instead. Measured across the six case studies,
+   *  this halves the scroll to the first work visual. */
+  firstLook?: ReactNode;
+  /** First look as an image or video pair, same grid as midImages. */
+  firstLookImages?: CaseStudyImage[];
   midImages?: CaseStudyImage[];
   /** Optional carousel slot rendered between the approach section and outcomes. */
   processCarousel?: ReactNode;
@@ -116,6 +125,49 @@ function isVideo(src: string): boolean {
   return src.endsWith(".mp4") || src.endsWith(".webm");
 }
 
+/** Image or video grid shared by firstLookImages and midImages. Supports
+ *  .mp4/.webm (auto-plays muted, loops). One item renders full-width 16:9;
+ *  two or more render 2-up. */
+function ImageGrid({ images }: { images: CaseStudyImage[] }) {
+  return (
+    <div
+      className={`grid gap-6 md:gap-8 ${
+        images.length === 1 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"
+      }`}
+    >
+      {images.map((img) => (
+        <div
+          key={img.src}
+          className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-border-default"
+        >
+          {isVideo(img.src) ? (
+            <video
+              src={img.src}
+              poster={img.poster}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              aria-label={img.alt}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          ) : (
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              className="object-cover"
+              unoptimized={isAnimated(img.src)}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
+            />
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function CaseStudyLayout(props: CaseStudyLayoutProps) {
   const quotes = props.pullQuote
     ? Array.isArray(props.pullQuote)
@@ -130,7 +182,8 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       {props.structuredData && <JsonLd data={props.structuredData} />}
       {/* ============================================================
           HERO
-          Eyebrow + title + subtitle + hero image + metadata block
+          Eyebrow + title + subtitle + hero image + metadata block.
+          The lead pull quote now opens the challenge section (see below).
           ============================================================ */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
@@ -185,10 +238,34 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Lead pull quote (epigraph), above the challenge */}
+      {/* ============================================================
+          FIRST LOOK (optional)
+          The first work visual, straight after the facts and before the
+          challenge. No top border: it reads as the end of the hero, not
+          a new chapter. firstLookImages brings the shared grid in the
+          page container; firstLook is a block with its own container.
+          ============================================================ */}
+      {props.firstLookImages && props.firstLookImages.length > 0 && (
+        <section>
+          <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 pb-16 md:pb-24">
+            <ImageGrid images={props.firstLookImages} />
+          </div>
+        </section>
+      )}
+      {props.firstLook}
+
+      {/* ============================================================
+          THE CHALLENGE, opened by the lead pull quote (epigraph).
+          The quote moved here from the hero in November 2026 so the
+          first look sits directly under the metadata.
+          ============================================================ */}
+      <section className="py-16 md:py-24 border-t border-border-subtle">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           {leadQuote && (
-            <blockquote className="mt-12 md:mt-16 max-w-3xl hash-rule pl-6 md:pl-10 py-2">
+            <blockquote className="mb-12 md:mb-16 max-w-3xl hash-rule pl-6 md:pl-10 py-2">
               <p className="text-xl md:text-2xl text-text-primary leading-relaxed italic text-pretty">
                 {"\u201C"}
                 {leadQuote}
@@ -196,14 +273,6 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
               </p>
             </blockquote>
           )}
-        </div>
-      </section>
-
-      {/* ============================================================
-          THE CHALLENGE
-          ============================================================ */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
-        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title mb-8 md:mb-10">
             The challenge
           </h2>
@@ -269,43 +338,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       {props.midImages && props.midImages.length > 0 && (
         <section className="border-t border-border-subtle">
           <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 py-16 md:py-24">
-            <div
-              className={`grid gap-6 md:gap-8 ${
-                props.midImages.length === 1
-                  ? "grid-cols-1"
-                  : "grid-cols-1 md:grid-cols-2"
-              }`}
-            >
-              {props.midImages.map((img) => (
-                <div
-                  key={img.src}
-                  className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-border-default"
-                >
-                  {isVideo(img.src) ? (
-                    <video
-                      src={img.src}
-                      poster={img.poster}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      preload="metadata"
-                      aria-label={img.alt}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  ) : (
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      className="object-cover"
-                      unoptimized={isAnimated(img.src)}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
-                    />
-                  )}
-                </div>
-              ))}
-            </div>
+            <ImageGrid images={props.midImages} />
           </div>
         </section>
       )}

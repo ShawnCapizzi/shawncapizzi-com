@@ -392,7 +392,7 @@ export default function Page() {
               the hero and the closing ask, one step above the section
               titles and below the H1. */}
           <blockquote className="mt-12 md:mt-16 max-w-3xl hash-rule pl-6 md:pl-8 text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-snug text-balance">
-            I help teams get to clear, well-considered thinking and quickly
+            I help teams get clear on direction, sharpen the thinking, and
             move the work forward.
           </blockquote>
         </div>

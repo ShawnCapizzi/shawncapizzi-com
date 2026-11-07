@@ -27,6 +27,11 @@ export interface CaseStudyCarouselProps {
   closingBridge?: string;
   keyPhrases?: string[];
   initialSpeakerMode?: boolean;
+  /** Section wrapper classes. The default carries the standard section
+   *  rhythm (top border, py-16 md:py-24). A page using the carousel as the
+   *  first look passes a tighter top so the first frame sits close to the
+   *  metadata block. */
+  className?: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -41,6 +46,7 @@ export function CaseStudyCarousel({
   closingBridge,
   keyPhrases,
   initialSpeakerMode = false,
+  className = "py-16 md:py-24 border-t border-border-subtle",
 }: CaseStudyCarouselProps) {
   const [slideIndex, setSlideIndex] = useState(0);
   const [speakerMode, setSpeakerMode] = useState(initialSpeakerMode);
@@ -103,10 +109,7 @@ export function CaseStudyCarousel({
   const showSpeaker = speakerMode && hasSpeakerContent;
 
   return (
-    <section
-      className="py-16 md:py-24 border-t border-border-subtle"
-      aria-label="Process walk-through"
-    >
+    <section className={className} aria-label="Process walk-through">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         {/* ── Section header: matches other sections in CaseStudyLayout ── */}
         <div className="flex items-start justify-between gap-8 flex-wrap mb-10 md:mb-14">

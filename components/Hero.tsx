@@ -43,7 +43,7 @@ export function Hero() {
             </h1>
             <p className="hero-lead text-balance max-w-full lg:max-w-[90%] order-3">
               <span className="font-semibold text-text-primary">Idea to launch.</span>{" "}
-              I help teams define the opportunity, solve the right problem, and bring useful experiences to market. 15+ years across pharma, healthcare, financial services, and enterprise.
+              I help teams get clear on direction, sharpen the thinking, and move the work forward. 15+ years across pharma, healthcare, financial services, and enterprise.
             </p>
 
             <Wordmark

@@ -66,8 +66,9 @@ export default function Page() {
         "The most important part of designing for VUI is understanding how people actually request something \u2014 their intent, and the many ways a single person can phrase it. Mapping that surface area is the work.",
         "If users can\u2019t understand how to use your app, they won\u2019t stay long enough to learn it. That\u2019s true everywhere, but voice makes it unforgivable.",
       ]}
-      processCarousel={
+      firstLook={
         <CaseStudyCarousel
+          className="pt-6 md:pt-8 pb-16 md:pb-24"
           eyebrow="(Process)"
           heading="The walk-through"
           slides={[
