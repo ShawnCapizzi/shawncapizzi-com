@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Wordmark } from "./Wordmark";
 
 /**
@@ -6,10 +7,10 @@ import { Wordmark } from "./Wordmark";
  *
  * Contains: headline + lead + wordmark (signature) + headshot.
  *
- * The headline names the role, the niche, and the outcome in one line
- * (September 2026). The lead adds the credential and the build claim, in
- * that order on purpose: buyers arriving from a cold email hire on
- * precedent first. Discipline keywords live further down the page and in
+ * Copy rewritten November 2026: the headline is the promise (usable for
+ * people, deliverable for teams), the lead carries the positioning line and
+ * the pharma and healthcare depth, then two asks (contact, work) and the
+ * credential line. Discipline keywords live further down the page and in
  * the metadata, not here. The three doors live in HeroBottom, which renders
  * AFTER LogoStrip on the homepage.
  *
@@ -37,13 +38,35 @@ export function Hero() {
           {/* Left: Headline + lead + wordmark (signature). Below lg this
               wrapper is display: contents; see the note above. */}
           <div className="contents lg:block relative z-10 lg:col-span-7 lg:order-1">
-            <p className="eyebrow hero-eyebrow mb-3 order-0">Senior UX · Product Design · Experience Strategy</p>
+            <p className="eyebrow hero-eyebrow mb-3 order-0">UX &amp; Product Design Leadership</p>
             <h1 className="headline-gleam hero-title text-balance max-w-full lg:max-w-[90%] order-1">
-              Design leadership that turns regulated complexity into trusted experiences that go to market faster.
+              I turn complex business challenges into digital experiences people can use, and teams can deliver.
             </h1>
-            <p className="hero-lead text-balance max-w-full lg:max-w-[90%] order-3">
-              <span className="font-semibold text-text-primary">Idea to launch.</span>{" "}
-              I help teams get clear on direction, sharpen the thinking, and move the work forward. 15+ years across pharma, healthcare, financial services, and enterprise.
+            <p className="hero-lead text-pretty max-w-full lg:max-w-[90%] order-3">
+              I help teams get clear on direction, sharpen the thinking, and move the work forward. With deep experience in pharma and healthcare, I lead across strategy, content, design, and delivery to connect business goals with what customers actually need.
+            </p>
+            {/* The two asks (November 2026): the primary goes to /contact,
+                the site's one ask; the secondary goes to the proof. The
+                credential line sits under them, shown once here and not
+                repeated in the lead. */}
+            <div className="order-3 mt-7 md:mt-8 flex flex-col sm:flex-row gap-4 sm:items-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
+              >
+                Tell me what you&apos;re working on
+                <span aria-hidden="true" className="ml-2">&rarr;</span>
+              </Link>
+              <Link
+                href="/work"
+                className="inline-flex items-center justify-center text-base font-medium text-link hover:text-link-hover transition-colors"
+              >
+                Explore the work
+                <span aria-hidden="true" className="ml-2">&rarr;</span>
+              </Link>
+            </div>
+            <p className="order-3 mt-6 md:mt-7 font-mono text-xs md:text-sm tracking-tight text-text-tertiary">
+              15+ years across pharma, healthcare, financial services, and enterprise.
             </p>
 
             <Wordmark
