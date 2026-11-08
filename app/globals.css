@@ -164,7 +164,7 @@ html {
 body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
-  line-height: 1.65;
+  line-height: 1.6;
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   min-height: 100vh;
@@ -387,6 +387,7 @@ body::before {
 .lead-text {
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-weight: 300;
+  line-height: 1.6;
   letter-spacing: -0.005em;
   color: rgba(218, 216, 201, 0.82);
 }
@@ -523,6 +524,16 @@ h3 {
 .small-text {
   font-size: var(--text-sm);
   line-height: 1.5;
+}
+
+/* A run of paragraphs (or list items) in one container: the container
+   carries the leading and the paragraph gap, so each child needs no
+   class of its own. Replaces "space-y-* leading-relaxed" wrappers. */
+.prose-block {
+  line-height: 1.6;
+}
+.prose-block > * + * {
+  margin-top: var(--space-paragraph);
 }
 
 /* ============================================================

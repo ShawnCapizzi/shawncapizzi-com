@@ -140,7 +140,7 @@ export default function Page() {
                 I help teams get clear on direction, sharpen the thinking, and
                 move the work forward.
               </p>
-              <div className="mt-6 md:mt-8 max-w-3xl space-y-5 text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+              <div className="mt-6 md:mt-8 max-w-3xl text-base md:text-lg text-text-secondary prose-block text-pretty">
                 <p>
                   Maybe it&apos;s something new. Maybe something already exists
                   and isn&apos;t working as well as it should. Or maybe the
@@ -189,7 +189,7 @@ export default function Page() {
               fixed menu. One flexible system, named here and linked to the
               full method on /thinking, that has worked across problems, teams,
               business units, and geographies. */}
-          <p className="mt-5 mb-10 md:mb-12 max-w-3xl text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+          <p className="body-text mt-5 mb-10 md:mb-12 max-w-3xl text-base md:text-lg text-text-secondary text-pretty">
             Not a fixed menu. The{" "}
             <Link href="/thinking" className="text-link hover:text-link-hover transition-colors">
               Capizzi Process
@@ -208,7 +208,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             Where this has worked
           </h2>
-          <p className="mt-6 max-w-3xl text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+          <p className="body-text mt-6 max-w-3xl text-base md:text-lg text-text-secondary text-pretty">
             15+ years across pharma, healthcare, financial services, and
             enterprise, with teams at Pfizer, Bloomberg, Samsung, Biogen,
             AbbVie, and others, including CRM programs built around the
@@ -224,7 +224,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl">
             <h2 className="section-title">Start wherever you are.</h2>
-            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            <p className="body-text mt-6 text-lg md:text-xl text-text-secondary text-pretty">
               You don&apos;t need a perfectly defined brief, a budget, or a
               plan. Bring me the problem, the opportunity, the idea, or the
               thing that just doesn&apos;t feel like it&apos;s working the way

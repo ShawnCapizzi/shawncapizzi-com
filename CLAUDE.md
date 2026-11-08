@@ -165,8 +165,12 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 - Leading is a property of the style, never the page (Apple HIG shape:
   tighter as size grows, loose for long passages). Titles 1.05 to 1.25,
   `.hero-lead` 1.4, `.body-text` 1.6 with 24px between paragraphs,
-  `.card-text` 1.6 with 16px, `.small-text` 14px at 1.5, labels 1.4. Use
-  these classes instead of `leading-*` utilities on paragraphs.
+  `.card-text` 1.6 with 16px, `.small-text` 14px at 1.5, labels 1.4,
+  `.lead-text` 1.6, and `.prose-block` for a container of several
+  paragraphs (it carries the leading and the 24px between children). The
+  body default is 1.6 too, so an unclassed paragraph still lands on the
+  system. `leading-*` utilities no longer appear on text anywhere in the
+  site; use the roles.
 - Measured with Playwright across ten pages after the change: eyebrow to
   heading 16 everywhere, section title to text 24, card title to text 12.
   Before, section titles ran 16 to 56 and card titles 8 to 28.

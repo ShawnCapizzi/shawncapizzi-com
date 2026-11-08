@@ -105,7 +105,7 @@ export default function Page() {
               ]}
             />
           </div>
-          <div className="mt-10 md:mt-14 max-w-3xl space-y-5 text-lg text-text-secondary leading-relaxed">
+          <div className="mt-10 md:mt-14 max-w-3xl text-lg text-text-secondary prose-block">
             {[
               "Left to right is the whole arc. v1 came straight out of a full PRD: raw sliders and an uncapped score past 14. It proved the idea but wasn't useful. The middle build capped it to a legible 0 to 10 and ranked the slate. The third is where it landed: each card carries the four factors a fan feels, Stakes, Rivalry, the race, and Matchup, with a plain-English read of why.",
               "I built it with Claude Code and ChatGPT as build partners and stayed the orchestrator. I defined the problem and the scoring model, described what I wanted in screenshots, copy, and micro-interaction notes, and directed the tools until the result matched the picture in my head.",

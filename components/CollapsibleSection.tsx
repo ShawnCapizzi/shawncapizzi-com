@@ -80,7 +80,9 @@ export function CollapsibleSection({
         {/* inert while collapsed: the text stays in the HTML for readers
             and crawlers, but hidden links are not keyboard tab stops. */}
         <div className="overflow-hidden" inert={!open}>
-          <div className="pr-10 md:pr-12">{children}</div>
+          {/* The heading's role gap can't reach here (the chevron is the
+              heading's sibling), so the content block carries it. */}
+          <div className="pr-10 md:pr-12" style={{ paddingTop: "var(--space-after-title)" }}>{children}</div>
         </div>
       </div>
     </div>

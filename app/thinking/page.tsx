@@ -103,7 +103,7 @@ export default function Page() {
             {/* Same layout as the old model paragraph (secondary text,
                 lg/xl), now in three lines: the rule in bold, the three-part
                 thought, then how the actions are used. */}
-            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            <p className="body-text mt-6 text-lg md:text-xl text-text-secondary text-pretty">
               <strong className="font-semibold text-text-primary">
                 The principles hold. The actions flex.
               </strong>
@@ -132,7 +132,7 @@ export default function Page() {
             <h2 className="section-title text-balance">
               The Capizzi Process, in print and in practice.
             </h2>
-            <div className="mt-6 space-y-4 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            <div className="mt-6 text-lg md:text-xl text-text-secondary prose-block text-pretty">
               {/* id="book" and id="cards" are jump targets from the About
                   page. scroll-mt clears the fixed header (80px, 88px from md). */}
               <p id="book" className="scroll-mt-32 md:scroll-mt-40">
@@ -168,7 +168,7 @@ export default function Page() {
             <h2 className="section-title">
               The Process, running as software
             </h2>
-            <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
+            <p className="body-text mt-6 text-lg md:text-xl text-text-secondary">
               <span className="text-text-primary">The Governance Deck</span> is the method built as a working product.
               A team answers questions privately, the app finds where the
               answers differ, a named decider settles each one with a reason
@@ -220,7 +220,7 @@ export default function Page() {
               <h2 className="card-title text-text-primary">
                 The whole method, in something you can hold.
               </h2>
-              <p className="text-base text-text-secondary leading-relaxed mb-8">
+              <p className="card-text text-base text-text-secondary mb-8">
                 The full Process: the three principles with their exit tests
                 and failure modes, the six flexible actions, the ten standards
                 of the room, and the one-page field version. A small printed
@@ -242,11 +242,11 @@ export default function Page() {
               <h2 className="card-title text-text-primary group-hover:text-link transition-colors">
                 The foreword, free.
               </h2>
-              <p className="text-sm md:text-base italic text-text-tertiary mb-4 leading-snug">
+              <p className="body-text text-sm md:text-base italic text-text-tertiary mb-4">
                 The Human Condition: why empathy is the foundation of digital
                 experience.
               </p>
-              <p className="text-base text-text-secondary leading-relaxed mb-6 flex-1">
+              <p className="body-text text-base text-text-secondary mb-6 flex-1">
                 Why clarity wins, how to cut through the noise, and what it
                 takes to do great work in the rooms where decisions get
                 made. Fifteen years of agency life, distilled.
@@ -271,7 +271,7 @@ export default function Page() {
               <h2 className="section-title text-balance">
                 Writing on design, AI, and healthcare.
               </h2>
-              <p className="mt-4 mb-8 text-lg text-text-secondary leading-relaxed">
+              <p className="body-text mt-4 mb-8 text-lg text-text-secondary">
                 Ideas from the work, shared with 5,000+ LinkedIn followers.
               </p>
               <ul className="divide-y divide-border-subtle border-y border-border-subtle">
@@ -286,7 +286,7 @@ export default function Page() {
                       <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
                         LinkedIn
                       </p>
-                      <p className="mt-2 text-base md:text-lg font-medium text-text-primary group-hover:text-link transition-colors leading-snug">
+                      <p className="body-text mt-2 text-base md:text-lg font-medium text-text-primary group-hover:text-link transition-colors">
                         {e.title}
                       </p>
                     </a>
@@ -299,7 +299,7 @@ export default function Page() {
               <h2 className="section-title text-balance">
                 Experience design, no-code, and the beginnings of AI.
               </h2>
-              <p className="mt-4 mb-8 text-lg text-text-secondary leading-relaxed">
+              <p className="body-text mt-4 mb-8 text-lg text-text-secondary">
                 A 2023 EVERSANA Intouch talk on how no-code tools and emerging
                 AI were changing the way we design experiences.
               </p>

@@ -81,7 +81,7 @@ export function BookToc() {
       <h2 id="book-toc-title" className="section-title text-balance">
         What&apos;s in Seeing Past the Cage.
       </h2>
-      <p className="mt-4 max-w-2xl text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+      <p className="body-text mt-4 max-w-2xl text-base md:text-lg text-text-secondary text-pretty">
         Four parts, each opened by a pillar. The foreword is
         free below. Select a part to see what&apos;s in it.
       </p>

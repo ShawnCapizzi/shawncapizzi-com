@@ -266,7 +266,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           {leadQuote && (
             <blockquote className="mb-12 md:mb-16 max-w-3xl hash-rule pl-6 md:pl-10 py-2">
-              <p className="text-xl md:text-2xl text-text-primary leading-relaxed italic text-pretty">
+              <p className="body-text text-xl md:text-2xl text-text-primary italic text-pretty">
                 {"\u201C"}
                 {leadQuote}
                 {"\u201D"}
@@ -276,7 +276,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           <h2 className="section-title">
             The business need
           </h2>
-          <div className="max-w-3xl space-y-6 text-lg text-text-secondary leading-relaxed">
+          <div className="max-w-3xl text-lg text-text-secondary prose-block">
             {props.challenge.map((para, i) => (
               <p key={i}>{para}</p>
             ))}
@@ -294,7 +294,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
               {restQuotes.map((line, i, arr) => (
                 <p
                   key={i}
-                  className={`text-xl md:text-2xl text-text-primary leading-relaxed italic text-pretty${
+                  className={`body-text text-xl md:text-2xl text-text-primary italic text-pretty${
                     i > 0 ? " mt-4 md:mt-5" : ""
                   }`}
                 >
@@ -311,7 +311,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           )}
 
           <CollapsibleSection id="approach-detail" heading="How I solved it">
-            <div className="max-w-3xl space-y-6 text-lg text-text-secondary leading-relaxed">
+            <div className="max-w-3xl text-lg text-text-secondary prose-block">
               {props.approach.map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
@@ -362,7 +362,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                   <h3 className="section-title">
                     {project.title}
                   </h3>
-                  <div className="space-y-5 text-lg text-text-secondary leading-relaxed">
+                  <div className="text-lg text-text-secondary prose-block">
                     {project.description.map((para, p) => (
                       <p key={p}>{para}</p>
                     ))}
@@ -473,7 +473,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                 <p className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight">
                   {outcome.headline}
                 </p>
-                <p className="text-base md:text-lg text-text-secondary leading-relaxed">
+                <p className="body-text text-base md:text-lg text-text-secondary">
                   {outcome.description}
                 </p>
               </div>
@@ -543,7 +543,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <CollapsibleSection id="closer-detail" heading="The impact">
-            <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-primary leading-relaxed">
+            <div className="max-w-3xl text-lg md:text-xl text-text-primary prose-block">
               {props.closer.map((para, i) => (
                 <p key={i}>{para}</p>
               ))}
@@ -613,7 +613,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                     <h3 className="card-title text-text-primary group-hover:text-link transition-colors">
                       {rel.title}
                     </h3>
-                    <p className="mt-3 text-text-secondary text-sm leading-relaxed">
+                    <p className="card-text mt-3 text-text-secondary text-sm">
                       {rel.description}
                     </p>
                   </div>

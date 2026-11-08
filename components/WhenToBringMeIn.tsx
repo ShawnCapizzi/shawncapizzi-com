@@ -88,7 +88,7 @@ export function WhenToBringMeIn() {
           {SITUATIONS.map((situation, i) => (
             <li
               key={i}
-              className={`hash-rule pl-5 md:pl-6 text-lg md:text-xl text-text-primary leading-relaxed transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:opacity-100 motion-reduce:translate-y-0 ${
+              className={`body-text hash-rule pl-5 md:pl-6 text-lg md:text-xl text-text-primary transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:opacity-100 motion-reduce:translate-y-0 ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
               }`}
               style={{ transitionDelay: visible ? `${i * 120}ms` : "0ms" }}

@@ -83,7 +83,7 @@ export function CTACards({ cards }: { cards: string[] }) {
                   ) : null}
                 </h3>
 
-                <p className="mt-4 text-base text-text-secondary leading-relaxed flex-1">
+                <p className="card-text mt-4 text-base text-text-secondary flex-1">
                   {item.description}
                 </p>
 

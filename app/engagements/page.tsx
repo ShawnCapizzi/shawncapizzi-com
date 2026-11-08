@@ -135,7 +135,7 @@ function WorkFigure({
           sizes="(max-width: 1024px) 100vw, 440px"
         />
       </div>
-      <figcaption className="mt-4 text-sm text-text-tertiary leading-relaxed">
+      <figcaption className="mt-4 text-sm text-text-tertiary prose-block">
         {caption}{" "}
         <Link
           href={href}
@@ -220,8 +220,8 @@ export default function Page() {
               >
                 <p className="eyebrow">{way.name}</p>
                 <h3 className="card-title text-text-primary">{way.title}</h3>
-                <p className="mt-2 text-base md:text-lg text-text-secondary leading-relaxed text-pretty flex-1">{way.tagline}</p>
-                <p className="mt-6 metadata-label leading-relaxed">{way.keywords}</p>
+                <p className="card-text mt-2 text-base md:text-lg text-text-secondary text-pretty flex-1">{way.tagline}</p>
+                <p className="card-text mt-6 metadata-label">{way.keywords}</p>
                 <a
                   href={`#${way.id}`}
                   className="mt-7 inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
@@ -235,7 +235,7 @@ export default function Page() {
             ))}
           </div>
 
-          <div className="mt-10 md:mt-12 max-w-3xl space-y-4 text-lg md:text-xl text-text-primary leading-relaxed text-pretty">
+          <div className="mt-10 md:mt-12 max-w-3xl text-lg md:text-xl text-text-primary prose-block text-pretty">
             <p>
               I work remote-first, directly with brands, embedded with agencies,
               or alongside internal product and technology teams. Engagements
@@ -302,23 +302,23 @@ export default function Page() {
             Embedded Leadership
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
-            <p className="lead-text text-lg md:text-xl leading-relaxed">
+            <p className="lead-text text-lg md:text-xl">
               I join the team and work inside the program, alongside product,
               creative, strategy, account, regulatory, research, and
               development.
             </p>
-            <p className="lead-text text-lg md:text-xl leading-relaxed">
+            <p className="lead-text text-lg md:text-xl">
               This works when you need experienced UX/design leadership on an
               important project or program without necessarily adding another
               full-time role.
             </p>
-            <p className="lead-text text-lg md:text-xl leading-relaxed">
+            <p className="lead-text text-lg md:text-xl">
               I work inside your tools, training, and process, not beside them,
               whether that&apos;s an enterprise playbook or a start-up still
               writing its own. Where the process slows the work, I help refine
               it.
             </p>
-            <p className="text-base md:text-lg text-text-secondary leading-relaxed">
+            <p className="body-text text-base md:text-lg text-text-secondary">
               <strong className="font-semibold text-text-primary">Typical work:</strong>{" "}
               product and experience strategy, UX/CX, service design,
               information architecture, workflow and process optimization,
@@ -350,7 +350,7 @@ export default function Page() {
               <h2 className="section-title max-w-3xl">
                 Advisory
               </h2>
-              <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl">
+              <p className="lead-text text-lg md:text-xl max-w-3xl">
                 Sometimes that&apos;s product and experience strategy. Sometimes
                 it&apos;s a pitch, blue-sky options, or a voice in the room. Three
                 common shapes:
@@ -374,10 +374,10 @@ export default function Page() {
                 <h3 className="card-title text-text-primary">
                   {shape.name}
                 </h3>
-                <p className="text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+                <p className="card-text text-base md:text-lg text-text-secondary text-pretty">
                   {shape.description}
                 </p>
-                <p className="mt-5 text-sm md:text-base text-text-secondary leading-relaxed text-pretty">
+                <p className="card-text mt-5 text-sm md:text-base text-text-secondary text-pretty">
                   <span className="metadata-label block">Scope</span>
                   {shape.scope}
                 </p>
@@ -397,12 +397,12 @@ export default function Page() {
             On Call
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
-            <p className="lead-text text-lg md:text-xl leading-relaxed">
+            <p className="lead-text text-lg md:text-xl">
               Keep me close when you don&apos;t need another full-time role,
               but you do need senior judgment available when important
               decisions come up.
             </p>
-            <p className="lead-text text-lg md:text-xl leading-relaxed">
+            <p className="lead-text text-lg md:text-xl">
               I can review work, pressure-test a direction, join a key meeting,
               help frame a problem, or work through a decision with the team
               before it becomes expensive to change.
@@ -432,12 +432,12 @@ export default function Page() {
             Who I work with
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
-            <p className="lead-text text-lg md:text-xl leading-relaxed">
+            <p className="lead-text text-lg md:text-xl">
               The most useful seat I take in any engagement is the one between
               the leaders who set direction and the practitioners building
               toward it. I do my best work when I&apos;m trusted by both.
             </p>
-            <p className="text-base md:text-lg text-text-secondary leading-relaxed">
+            <p className="body-text text-base md:text-lg text-text-secondary">
               I work across leadership, product, strategy, creative, research,
               regulatory, account, analytics, and development teams. Some days
               that means a conversation with a VP; others it means working
@@ -462,7 +462,7 @@ export default function Page() {
                 <h3 className="card-title text-text-primary">
                   {pillar.name}
                 </h3>
-                <p className="text-base md:text-lg text-text-secondary leading-relaxed">
+                <p className="body-text text-base md:text-lg text-text-secondary">
                   {pillar.body}
                 </p>
                 {pillar.crossLink && (
@@ -514,7 +514,7 @@ export default function Page() {
                 <h3 className="card-title text-text-primary">
                   {step.title}
                 </h3>
-                <p className="text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+                <p className="body-text text-base md:text-lg text-text-secondary text-pretty">
                   {step.body}
                 </p>
               </div>
@@ -537,7 +537,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <figure className="max-w-3xl p-7 md:p-8 rounded-2xl card-surface border border-border-default">
             <blockquote>
-              <p className="text-base md:text-lg text-text-primary leading-relaxed">
+              <p className="body-text text-base md:text-lg text-text-primary">
                 As a UX leader and subject matter expert, he provided essential
                 governance and content strategy for our brand&apos;s new design
                 system and platform migration across indications for both HCP

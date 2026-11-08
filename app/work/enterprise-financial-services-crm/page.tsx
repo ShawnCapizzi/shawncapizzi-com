@@ -84,7 +84,7 @@ export default function Page() {
               >
                 Architectural inquiry, in the field
               </h2>
-              <p className="mt-4 text-text-secondary text-base leading-relaxed">
+              <p className="body-text mt-4 text-text-secondary text-base">
                 In-person research with three salesperson types. Card sorts and
                 stimulus design preceded every interview. Whiteboard synthesis
                 followed every session.
@@ -127,7 +127,7 @@ export default function Page() {
               >
                 Wireframes to live terminal
               </h2>
-              <p className="mt-4 text-text-secondary text-base leading-relaxed">
+              <p className="body-text mt-4 text-text-secondary text-base">
                 Synthesis became wireframes. Wireframes became modules. Modules
                 shipped inside the terminal environment used company-wide.
               </p>

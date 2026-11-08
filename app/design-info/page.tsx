@@ -117,7 +117,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             Why it looks this way
           </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+          <div className="max-w-3xl text-lg md:text-xl text-text-secondary prose-block text-pretty">
             <p>
               The palette is dark and restrained, with strong contrast and one
               purple, so the case studies and the ideas carry the visual
@@ -144,7 +144,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             Typography
           </h2>
-          <p className="max-w-3xl mb-10 md:mb-12 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+          <p className="body-text max-w-3xl mb-10 md:mb-12 text-lg md:text-xl text-text-secondary text-pretty">
             Three open-source typefaces, each with one job.
           </p>
           <div className="border-t border-border-subtle">
@@ -158,7 +158,7 @@ export default function Page() {
                 </p>
                 <div>
                   <p className="metadata-label">{f.role}</p>
-                  <p className="mt-1.5 text-sm md:text-base text-text-secondary leading-relaxed">
+                  <p className="body-text mt-1.5 text-sm md:text-base text-text-secondary">
                     {f.credit}. SIL Open Font License.
                   </p>
                 </div>
@@ -174,7 +174,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             Color
           </h2>
-          <p className="max-w-3xl mb-10 md:mb-12 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+          <p className="body-text max-w-3xl mb-10 md:mb-12 text-lg md:text-xl text-text-secondary text-pretty">
             Six colors, each with its nearest PANTONE Solid Coated match.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
@@ -201,7 +201,7 @@ export default function Page() {
               </figure>
             ))}
           </div>
-          <p className="mt-10 md:mt-12 max-w-3xl text-sm text-text-tertiary leading-relaxed">
+          <p className="body-text mt-10 md:mt-12 max-w-3xl text-sm text-text-tertiary">
             Each swatch shows the screen color above and its nearest PANTONE®
             Solid Coated match below, found by CIEDE2000 against Pantone&apos;s
             published Lab values. A ΔE under 2 is hard to see; above that the
@@ -218,7 +218,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             Design system
           </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+          <div className="max-w-3xl text-lg md:text-xl text-text-secondary prose-block text-pretty">
             <p>
               The site is treated as a living system rather than a collection
               of one-off pages. Typography, spacing, color, content patterns,
@@ -250,20 +250,20 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             Built with
           </h2>
-          <p className="max-w-3xl mb-10 md:mb-12 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+          <p className="body-text max-w-3xl mb-10 md:mb-12 text-lg md:text-xl text-text-secondary text-pretty">
             Designed and built by me.
           </p>
           <dl className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 md:gap-y-10">
             {STACK.map(([name, note]) => (
               <div key={name} className="hash-rule pl-5 md:pl-6 min-w-0">
                 <dt className="text-lg md:text-xl font-semibold text-text-primary">{name}</dt>
-                <dd className="mt-1.5 text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+                <dd className="mt-1.5 text-base md:text-lg text-text-secondary prose-block text-pretty">
                   {note}
                 </dd>
               </div>
             ))}
           </dl>
-          <p className="mt-10 md:mt-12 max-w-3xl text-sm text-text-tertiary leading-relaxed">
+          <p className="body-text mt-10 md:mt-12 max-w-3xl text-sm text-text-tertiary">
             The typefaces are named and credited here under their licenses;
             no font files are distributed from this page.
           </p>

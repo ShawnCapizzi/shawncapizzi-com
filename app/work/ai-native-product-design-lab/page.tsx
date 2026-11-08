@@ -276,7 +276,7 @@ export default function Page() {
       ]}
       afterShowcases={
         <CollapsibleSection id="earlier-experiments" heading="Earlier experiments">
-          <p className="text-base md:text-lg text-text-secondary leading-relaxed">
+          <p className="body-text text-base md:text-lg text-text-secondary">
             Three Custom GPTs: earlier explorations in applying AI to
             research, product strategy, and content workflows. They still work
             in ChatGPT.

@@ -123,7 +123,7 @@ export default function Page() {
                   <h2 className="card-title text-text-primary group-hover:text-link transition-colors">
                     <KeepHyphens>{cs.title}</KeepHyphens>
                   </h2>
-                  <p className="mt-4 text-text-secondary leading-relaxed">
+                  <p className="card-text mt-4 text-text-secondary">
                     {cs.description}
                   </p>
                   <p className="mt-6 text-link group-hover:text-link-hover transition-colors text-base font-medium">

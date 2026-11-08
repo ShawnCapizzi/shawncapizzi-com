@@ -112,7 +112,7 @@ export default function Page() {
           {/* Body copy + portrait, side-by-side on desktop; stacks on mobile,
               portrait first. */}
           <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-center">
-            <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center text-lg md:text-xl text-text-secondary prose-block text-pretty">
               <p>
                 The more meetings, planning sessions, and project kickoffs I
                 was part of, the more I saw opportunities earlier in the
@@ -161,7 +161,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             There has to be a life away from the computer.
           </h2>
-          <p className="mb-10 md:mb-12 max-w-3xl text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+          <p className="body-text mb-10 md:mb-12 max-w-3xl text-lg md:text-xl text-text-secondary text-pretty">
             For me, that&apos;s travel and getting out to see music. A few
             frames from both.
           </p>
@@ -237,7 +237,7 @@ export default function Page() {
             <KeepHyphens>The work that&apos;s hard to staff full-time, but too important to miss.</KeepHyphens>
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-            <div className="lg:col-span-7 space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            <div className="lg:col-span-7 text-lg md:text-xl text-text-secondary prose-block text-pretty">
               <p>
                 Sometimes it&apos;s budget. Sometimes the opportunity isn&apos;t
                 clear yet, or the organization doesn&apos;t know what kind of
@@ -275,7 +275,7 @@ export default function Page() {
             {BACKGROUND.map(([label, text]) => (
               <div key={label} className="hash-rule pl-5 md:pl-6">
                 <dt className="metadata-label">{label}</dt>
-                <dd className="text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+                <dd className="text-lg md:text-xl text-text-secondary prose-block text-pretty">
                   {text}
                 </dd>
               </div>
@@ -295,7 +295,7 @@ export default function Page() {
               <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
                 D&amp;AD Pencil &middot; Future Impact Initiative
               </h3>
-              <p className="text-base md:text-lg text-text-secondary leading-relaxed">
+              <p className="body-text text-base md:text-lg text-text-secondary">
                 For the Cancer Equality App with The Chrysalis Initiative.
               </p>
               <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
@@ -321,7 +321,7 @@ export default function Page() {
               <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
                 Industry-first pharmaceutical mobile wallet integration
               </h3>
-              <p className="text-base md:text-lg text-text-secondary leading-relaxed">
+              <p className="body-text text-base md:text-lg text-text-secondary">
                 Patient medication information delivered through an
                 FDA-compliant, QR-based mobile wallet experience across a
                 multi-brand portfolio.
@@ -340,7 +340,7 @@ export default function Page() {
               <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
                 Published thinking
               </h3>
-              <p className="text-base md:text-lg text-text-secondary leading-relaxed">
+              <p className="body-text text-base md:text-lg text-text-secondary">
                 I write about design, AI, healthcare, regulation, and how the
                 work itself is changing.
               </p>
@@ -366,7 +366,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             How I show up.
           </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+          <div className="max-w-3xl text-lg md:text-xl text-text-secondary prose-block text-pretty">
             <p>
               I listen first, understand what&apos;s already happening, and
               ask the questions that help people get clear on the decision
@@ -462,7 +462,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             Beyond the work
           </h2>
-          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+          <div className="max-w-3xl text-lg md:text-xl text-text-secondary prose-block text-pretty">
             <p>
               I&apos;m also a photographer, painter, and documentary filmmaker.
               I&apos;ve photographed Venice and New York, and I&apos;m working
@@ -494,7 +494,7 @@ export default function Page() {
             <h3 className="card-title text-text-primary text-balance">
               AI as a creative tool, since the summer of 2023.
             </h3>
-            <p className="mb-6 md:mb-8 text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+            <p className="body-text mb-6 md:mb-8 text-base md:text-lg text-text-secondary text-pretty">
               Images generated in Midjourney from the performers&apos; lyrics
               and poems, dropped into Runway in real time, and projected
               behind them as they played. A few highlights of that live
@@ -535,7 +535,7 @@ export default function Page() {
             Curiosity doesn&apos;t stop at work.
           </h2>
           <div className="max-w-3xl">
-            <p className="text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+            <p className="body-text text-lg md:text-xl text-text-secondary text-pretty">
               I share a lot of what I&apos;m learning about design, AI,
               building, and new creative tools with my daughters. Sometimes
               that means making a Sora video together. Sometimes it means
@@ -567,7 +567,7 @@ export default function Page() {
                   growing, instead of the two quiz pages. The quiz files stay
                   in public/apps/. Body size, so it reads as its own example
                   and not a note under the video. */}
-              <p className="text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+              <p className="card-text text-lg md:text-xl text-text-secondary text-pretty">
                 The learning app is free, with no sign-up: a study tool built
                 around my daughters&apos; classwork and upcoming tests.
               </p>
@@ -589,7 +589,7 @@ export default function Page() {
           only. Never an "open to work" banner. */}
       <section className="py-10 md:py-14 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="max-w-3xl text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+          <p className="body-text max-w-3xl text-base md:text-lg text-text-secondary text-pretty">
             Available for remote-first consulting, fractional or embedded
             UX/design leadership, and select senior full-time opportunities.
           </p>
