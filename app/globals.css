@@ -39,6 +39,20 @@
   --color-warning: #F59E0B;
   --color-error: #EF4444;
 
+  /* ---- VERTICAL RHYTHM (November 2026) ----
+     Semantic spacing between type, on an 8px base. The type roles
+     below apply these as adjacent-sibling margins, so a heading
+     spaces whatever follows it and pages do not set margin
+     utilities on type. Apple's HIG: leading belongs to the style, not the page.
+     Brad Frost: these are tier-2 tokens, named for use, mapped to
+     the tier-1 scale. */
+  --space-after-eyebrow: 1rem;        /* 16px: eyebrow to its heading */
+  --space-after-hero-title: 1.5rem;   /* 24px: H1 to the hero lead */
+  --space-after-title: 1.5rem;        /* 24px: section H2 to its text */
+  --space-after-card-title: 0.75rem;  /* 12px: card H3 to its text */
+  --space-paragraph: 1.5rem;          /* 24px: between body paragraphs */
+  --space-paragraph-card: 1rem;       /* 16px: between paragraphs in a card */
+
   /* ---- TYPOGRAPHY: families ---- */
   --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: var(--font-geist-mono), 'SFMono-Regular', Menlo, monospace;
@@ -310,6 +324,7 @@ body::before {
 .metadata-label {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
+  line-height: 1.4;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-text-tertiary);
@@ -334,6 +349,7 @@ body::before {
 .eyebrow {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
+  line-height: 1.4;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -405,24 +421,31 @@ h3 {
 
 /* ============================================================
    TYPE ROLES: every heading size on the site comes from one of
-   these four classes. The homepage hero set the standard in
-   September 2026 and every page now matches it. Before this,
-   page heroes ran at 39, 56, and 72px with three different line
-   heights, and section titles at 24, 30, 36, 40, and 48px.
+   these classes, and since November 2026 every gap between type
+   does too. A role carries its size, its leading, and the space
+   to whatever follows it (adjacent-sibling margin from the
+   space tokens). Pages set no margin utilities on type.
+
+   Leading follows Apple's HIG shape: tighter as size grows, loose
+   for long passages. Titles 1.05 to 1.25, hero lead 1.4, body 1.6,
+   small 1.5, labels 1.4.
 
    - .hero-title     page H1. 30px, then 39px from 1024px up.
                      Pair with .headline-gleam (home) or
                      .headline-static (every other page).
    - .hero-lead      the paragraph directly under a page H1.
-                     Instrument Sans 20/28, cream at 82% (the same
-                     value as .lead-text), carries its own top margin.
+                     Instrument Sans 20/28, cream at 82%.
    - .section-title  every section H2, including the closing ask.
                      30px at all widths.
    - .card-title     titles inside cards and panels. 20px, then
                      24px from 768px up.
+   - .eyebrow / .metadata-label  mono labels above a heading.
+   - .body-text      long-form paragraphs, 1.6 leading, 24px apart.
+   - .card-text      paragraphs inside a card, 1.6, 16px apart.
+   - .small-text     14px supporting text, 1.5.
 
    Unlayered on purpose: these win over any size utility left on
-   the same element, so a size changed here changes everywhere.
+   the same element, so a value changed here changes everywhere.
    ============================================================ */
 
 .hero-title {
@@ -437,20 +460,17 @@ h3 {
   }
 }
 
+.hero-title + * {
+  margin-top: var(--space-after-hero-title);
+}
+
 .hero-lead {
   font-family: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-size: 1.25rem;
-  line-height: 1.75rem;
+  line-height: 1.4;
   font-weight: 400;
   letter-spacing: -0.025em;
   color: rgba(218, 216, 201, 0.82);
-  margin-top: 0.75rem;
-}
-
-@media (min-width: 768px) {
-  .hero-lead {
-    margin-top: 1rem;
-  }
 }
 
 .section-title {
@@ -458,6 +478,10 @@ h3 {
   line-height: 1.2;
   font-weight: 600;
   letter-spacing: -0.025em;
+}
+
+.section-title + * {
+  margin-top: var(--space-after-title);
 }
 
 .card-title {
@@ -471,6 +495,34 @@ h3 {
   .card-title {
     font-size: 1.5rem;
   }
+}
+
+.card-title + * {
+  margin-top: var(--space-after-card-title);
+}
+
+.eyebrow + *,
+.metadata-label + * {
+  margin-top: var(--space-after-eyebrow);
+}
+
+/* Body styles. One leading per size class; paragraphs space
+   themselves from the one before. */
+.body-text {
+  line-height: 1.6;
+}
+.body-text + .body-text {
+  margin-top: var(--space-paragraph);
+}
+.card-text {
+  line-height: 1.6;
+}
+.card-text + .card-text {
+  margin-top: var(--space-paragraph-card);
+}
+.small-text {
+  font-size: var(--text-sm);
+  line-height: 1.5;
 }
 
 /* ============================================================

@@ -153,6 +153,24 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   exception (Shawn's call, October 2026): the slow breeze sway and
   traveling purple tint on the Process sketches' shade ticks
 
+## Vertical rhythm (November 2026)
+
+- Type spaces itself. The roles in `app/globals.css` carry the gap to
+  whatever follows them, from six tier-2 tokens on an 8px base:
+  `--space-after-eyebrow` 16, `--space-after-hero-title` 24,
+  `--space-after-title` 24, `--space-after-card-title` 12,
+  `--space-paragraph` 24, `--space-paragraph-card` 16. Pages set no
+  margin utilities on an eyebrow, title, or lead, and no `mt-*` on the
+  element after one; both stack with the role and break the rhythm.
+- Leading is a property of the style, never the page (Apple HIG shape:
+  tighter as size grows, loose for long passages). Titles 1.05 to 1.25,
+  `.hero-lead` 1.4, `.body-text` 1.6 with 24px between paragraphs,
+  `.card-text` 1.6 with 16px, `.small-text` 14px at 1.5, labels 1.4. Use
+  these classes instead of `leading-*` utilities on paragraphs.
+- Measured with Playwright across ten pages after the change: eyebrow to
+  heading 16 everywhere, section title to text 24, card title to text 12.
+  Before, section titles ran 16 to 56 and card titles 8 to 28.
+
 ## Color meaning (November 2026)
 
 - Lavender (`--color-link`, `#A798FF`) means a thing can be acted on: links,

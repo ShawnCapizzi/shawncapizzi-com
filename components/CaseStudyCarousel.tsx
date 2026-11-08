@@ -114,7 +114,7 @@ export function CaseStudyCarousel({
         {/* ── Section header: matches other sections in CaseStudyLayout ── */}
         <div className="flex items-start justify-between gap-8 flex-wrap mb-10 md:mb-14">
           <div>
-            <p className="eyebrow mb-4">{eyebrow}</p>
+            <p className="eyebrow">{eyebrow}</p>
             <h2 className="section-title">
               {heading}
             </h2>
@@ -143,7 +143,7 @@ export function CaseStudyCarousel({
           onTouchEnd={onTouchEnd}
         >
           {/* Slide meta row */}
-          <div className="flex items-center gap-4 mb-5">
+          <div className="flex items-center gap-4">
             <span className="metadata-label">
               {String(slideIndex + 1).padStart(2, "0")} /{" "}
               {String(total).padStart(2, "0")}
@@ -179,7 +179,7 @@ export function CaseStudyCarousel({
 
             {/* Text column */}
             <div>
-              <h3 className="card-title mb-5">
+              <h3 className="card-title">
                 {slide.title}
               </h3>
               <div

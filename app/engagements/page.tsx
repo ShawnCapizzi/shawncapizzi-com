@@ -154,7 +154,7 @@ export default function Page() {
       {/* HERO: a brief introduction, then straight into Ways of working */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-3">Engagements</p>
+          <p className="eyebrow">Engagements</p>
           <h1 className="headline-static hero-title max-w-4xl">
             Three ways to bring me into the work.
           </h1>
@@ -207,8 +207,8 @@ export default function Page() {
       {/* WAYS OF WORKING: the three options, scannable, directly under the intro */}
       <section id="ways" className="py-16 md:py-24 scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-4">Ways of working</p>
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
+          <p className="eyebrow">Ways of working</p>
+          <h2 className="section-title max-w-3xl">
             Leadership, Advisory, or On Call
           </h2>
 
@@ -218,7 +218,7 @@ export default function Page() {
                 key={way.id}
                 className="flex flex-col p-7 md:p-8 rounded-2xl card-surface border border-border-default"
               >
-                <p className="eyebrow mb-3">{way.name}</p>
+                <p className="eyebrow">{way.name}</p>
                 <h3 className="card-title text-text-primary">{way.title}</h3>
                 <p className="mt-2 text-base md:text-lg text-text-secondary leading-relaxed text-pretty flex-1">{way.tagline}</p>
                 <p className="mt-6 metadata-label leading-relaxed">{way.keywords}</p>
@@ -297,8 +297,8 @@ export default function Page() {
       <section id="leadership" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           <div className="lg:col-span-7">
-          <p className="eyebrow mb-4">Engagement type 01</p>
-          <h2 className="section-title mb-4 md:mb-5 max-w-3xl">
+          <p className="eyebrow">Engagement type 01</p>
+          <h2 className="section-title max-w-3xl">
             Embedded Leadership
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
@@ -346,8 +346,8 @@ export default function Page() {
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 mb-10 md:mb-12">
             <div className="lg:col-span-7">
-              <p className="eyebrow mb-4">Engagement type 02</p>
-              <h2 className="section-title mb-4 md:mb-5 max-w-3xl">
+              <p className="eyebrow">Engagement type 02</p>
+              <h2 className="section-title max-w-3xl">
                 Advisory
               </h2>
               <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl">
@@ -371,14 +371,14 @@ export default function Page() {
                 key={shape.name}
                 className="relative flex flex-col p-7 md:p-8 rounded-2xl card-surface border border-border-default"
               >
-                <h3 className="card-title mb-3 text-text-primary">
+                <h3 className="card-title text-text-primary">
                   {shape.name}
                 </h3>
                 <p className="text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
                   {shape.description}
                 </p>
                 <p className="mt-5 text-sm md:text-base text-text-secondary leading-relaxed text-pretty">
-                  <span className="metadata-label block mb-1.5">Scope</span>
+                  <span className="metadata-label block">Scope</span>
                   {shape.scope}
                 </p>
               </article>
@@ -392,8 +392,8 @@ export default function Page() {
       <section id="oncall" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           <div className="lg:col-span-7">
-          <p className="eyebrow mb-4">Engagement type 03</p>
-          <h2 className="section-title mb-4 md:mb-5 max-w-3xl">
+          <p className="eyebrow">Engagement type 03</p>
+          <h2 className="section-title max-w-3xl">
             On Call
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
@@ -428,7 +428,7 @@ export default function Page() {
       {/* WHO I WORK WITH */}
       <section id="who" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title mb-4 md:mb-5 max-w-3xl">
+          <h2 className="section-title max-w-3xl">
             Who I work with
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
@@ -451,7 +451,7 @@ export default function Page() {
       {/* WHAT I BRING: three lenses, one line each, with the case-study links */}
       <section id="focus" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title max-w-3xl">
             What I bring to every engagement.
           </h2>
 
@@ -459,7 +459,7 @@ export default function Page() {
           <div className="space-y-10 md:space-y-12">
             {PILLARS.map((pillar) => (
               <div key={pillar.name} className="max-w-3xl">
-                <h3 className="card-title mb-3 text-text-primary">
+                <h3 className="card-title text-text-primary">
                   {pillar.name}
                 </h3>
                 <p className="text-base md:text-lg text-text-secondary leading-relaxed">
@@ -484,7 +484,7 @@ export default function Page() {
       {/* HOW IT STARTS */}
       <section id="process" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title max-w-3xl">
             How we start.
           </h2>
 
@@ -510,8 +510,8 @@ export default function Page() {
                 key={step.step}
                 className="hash-rule pl-6 md:pl-8"
               >
-                <p className="metadata-label mb-2">{step.step}</p>
-                <h3 className="card-title text-text-primary mb-3">
+                <p className="metadata-label">{step.step}</p>
+                <h3 className="card-title text-text-primary">
                   {step.title}
                 </h3>
                 <p className="text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
@@ -568,7 +568,7 @@ export default function Page() {
       {/* FINAL CTA */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="section-title mb-6 md:mb-8 max-w-3xl mx-auto">
+          <h2 className="section-title max-w-3xl mx-auto">
             Tell me what&apos;s stuck.
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">

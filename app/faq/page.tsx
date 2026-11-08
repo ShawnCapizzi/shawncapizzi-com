@@ -25,7 +25,7 @@ export default function Page() {
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-3">FAQ</p>
+          <p className="eyebrow">FAQ</p>
           <h1 className="headline-static hero-title max-w-4xl">
             Frequently asked.
           </h1>

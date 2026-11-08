@@ -56,11 +56,11 @@ export function SelectedWork() {
     <section className="py-24 md:py-32 border-t border-border-subtle">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
-          <p className="eyebrow mb-4">Case studies</p>
+          <p className="eyebrow">Case studies</p>
           <h2 className="section-title text-balance">
             My work, and how it&apos;s moved business forward.
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+          <p className="body-text text-lg md:text-xl text-text-secondary text-pretty">
             I&apos;ve helped solve digital business problems large and small,
             across different audiences, touchpoints, and markets. The work has
             ranged from design governance and patient navigation to enterprise
@@ -89,13 +89,13 @@ export function SelectedWork() {
                 />
               </div>
               <div className="p-6 md:p-7 flex flex-col flex-1">
-                <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
+                <p className="metadata-label">
                   {cs.eyebrow}
                 </p>
-                <h3 className="card-title mt-3 text-text-primary">
+                <h3 className="card-title text-text-primary">
                   {cs.headline}
                 </h3>
-                <p className="mt-3 text-sm md:text-[15px] text-text-secondary leading-relaxed flex-1">
+                <p className="card-text text-sm md:text-[15px] text-text-secondary flex-1">
                   {cs.outcome}
                 </p>
                 <p className="mt-6 inline-flex items-center text-sm font-medium text-link group-hover:text-link-hover transition-colors">

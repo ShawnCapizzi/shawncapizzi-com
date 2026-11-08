@@ -13,7 +13,7 @@ export default function PrivacyPage() {
     <section className="pt-32 md:pt-40 pb-24">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
-          <p className="eyebrow mb-3">Privacy</p>
+          <p className="eyebrow">Privacy</p>
           <h1 className="headline-static hero-title">
             Privacy policy
           </h1>
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
             Last updated: October 6, 2026
           </p>
 
-          <p className="hero-lead mt-8 md:mt-10">
+          <p className="hero-lead">
             Most of my work is done under NDA. The same discipline applies
             here. Information shared through this site is handled with the
             same care as client information.

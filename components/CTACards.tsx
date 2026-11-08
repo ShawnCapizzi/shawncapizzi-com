@@ -73,7 +73,7 @@ export function CTACards({ cards }: { cards: string[] }) {
               ) : null}
 
               <div className="flex flex-col flex-1 p-7 md:p-9">
-                <p className="eyebrow mb-3">{item.eyebrow}</p>
+                <p className="eyebrow">{item.eyebrow}</p>
                 <h3 className="card-title text-text-primary group-hover:text-link transition-colors">
                   {item.title}
                   {item.subtitle ? (

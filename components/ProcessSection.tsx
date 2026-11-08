@@ -28,11 +28,11 @@ export function ProcessSection() {
     >
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl mb-10 md:mb-12">
-          <p className="eyebrow mb-4">The Capizzi Process</p>
+          <p className="eyebrow">The Capizzi Process</p>
           <h2 className="section-title text-text-primary">
             The way I work, made tangible.
           </h2>
-          <p className="mt-4 md:mt-6 text-base md:text-lg text-text-secondary leading-relaxed">
+          <p className="body-text text-base md:text-lg text-text-secondary">
             The Capizzi Process is how I work: three principles (listen first,
             make it visible, prove it worked) and six flexible actions that
             keep the work moving, with clarity. The book and the cards are two expressions of it.
@@ -58,7 +58,7 @@ export function ProcessSection() {
         />
 
         <div id="clarity-cards" className="mt-12 md:mt-16 scroll-mt-24 md:scroll-mt-32">
-          <p className="eyebrow mb-6 text-center">Try the deck</p>
+          <p className="eyebrow text-center">Try the deck</p>
           <ClarityCardDeck />
         </div>
       </div>

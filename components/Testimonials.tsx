@@ -42,7 +42,7 @@ export function Testimonials() {
     <section className="py-24 md:py-32 border-t border-border-subtle">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
-          <p className="eyebrow mb-4">In their words</p>
+          <p className="eyebrow">In their words</p>
           <h2 className="section-title">
             What it&apos;s like to work together.
           </h2>
@@ -55,7 +55,7 @@ export function Testimonials() {
               className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default"
             >
               <blockquote>
-                <p className="text-base md:text-[15px] text-text-primary leading-relaxed">
+                <p className="card-text text-base md:text-[15px] text-text-primary">
                   {t.quote}
                 </p>
               </blockquote>

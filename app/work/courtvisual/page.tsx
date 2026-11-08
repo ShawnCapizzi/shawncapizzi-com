@@ -80,8 +80,8 @@ export default function Page() {
       ]}
       firstLook={
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 pt-6 md:pt-8 pb-16 md:pb-24">
-          <p className="eyebrow mb-4">The progression · From PRD to shipped</p>
-          <h3 className="section-title mb-6 md:mb-8 max-w-3xl">
+          <p className="eyebrow">The progression · From PRD to shipped</p>
+          <h3 className="section-title max-w-3xl">
             Proving the idea was the easy part
           </h3>
           <div>

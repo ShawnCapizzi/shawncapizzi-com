@@ -77,7 +77,7 @@ export function BookToc() {
 
   return (
     <section aria-labelledby="book-toc-title" className="mt-14 md:mt-20">
-      <p className="eyebrow mb-3">Inside the book</p>
+      <p className="eyebrow">Inside the book</p>
       <h2 id="book-toc-title" className="section-title text-balance">
         What&apos;s in Seeing Past the Cage.
       </h2>

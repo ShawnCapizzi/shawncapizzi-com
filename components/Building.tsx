@@ -67,12 +67,12 @@ export function Building() {
     <section className="py-24 md:py-32 border-t border-border-subtle">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
-          <p className="eyebrow mb-4">AI-native product design · Working products</p>
+          <p className="eyebrow">AI-native product design · Working products</p>
           <h2 className="section-title text-balance">
             I build to see what&apos;s possible, and bring the learning into
             the work.
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+          <p className="body-text text-lg md:text-xl text-text-secondary text-pretty">
             AI has expanded how far, and how quickly, we can take an idea. I
             use working prototypes and live products to get clients, teams,
             and collaborators looking at the same problem, testing
@@ -107,13 +107,13 @@ export function Building() {
                 )}
               </Link>
               <div className="p-7 md:p-8 flex flex-col flex-1">
-                <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
+                <p className="metadata-label">
                   {p.status}
                 </p>
-                <h3 className="card-title mt-3 text-text-primary">
+                <h3 className="card-title text-text-primary">
                   {p.name}
                 </h3>
-                <p className="mt-3 text-sm md:text-base text-text-secondary leading-relaxed flex-1">
+                <p className="card-text text-sm md:text-base text-text-secondary flex-1">
                   {p.body}
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">

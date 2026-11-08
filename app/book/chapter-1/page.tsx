@@ -178,7 +178,7 @@ export default function ChapterOnePage() {
       {/* ── BOOK INTRO / TITLE-PAGE ENTRANCE ───────────────────────────── */}
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 mb-14 md:mb-20">
         <div className="max-w-5xl">
-          <p className="eyebrow mb-3">The book</p>
+          <p className="eyebrow">The book</p>
 
           <h1 className="headline-static hero-title text-balance max-w-4xl">
             Seeing Past the Cage

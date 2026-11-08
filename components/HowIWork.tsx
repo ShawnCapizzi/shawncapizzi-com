@@ -52,17 +52,17 @@ export function HowIWork() {
     <section className="py-20 md:py-28 border-t border-border-subtle">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
-          <p className="eyebrow mb-4">Engagement model</p>
+          <p className="eyebrow">Engagement model</p>
           <h2 className="section-title">
             Three ways to bring me into the work.
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
+          <p className="body-text text-lg md:text-xl text-text-secondary">
             Start with a defined problem or an opportunity that still needs
             definition. I can embed with the team, advise on a focused
             challenge, or stay close when important decisions need another
             experienced point of view.
           </p>
-          <p className="mt-4 text-lg md:text-xl text-text-secondary leading-relaxed">
+          <p className="body-text text-lg md:text-xl text-text-secondary">
             AI runs through most of this work now. The way I solve problems
             hasn&apos;t changed in fifteen years: on the ground with users and
             stakeholders, turning what they say and what the data shows into
@@ -72,7 +72,7 @@ export function HowIWork() {
             days. I build systems, and I see workflows as they are and as
             they could be.
           </p>
-          <p className="mt-4 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+          <p className="body-text text-lg md:text-xl text-text-secondary text-pretty">
             Remote-first. Direct with brands, embedded with agencies, or
             alongside internal product and technology teams. Onsite when being
             in the room adds value.
@@ -85,13 +85,13 @@ export function HowIWork() {
               key={mode.key}
               className="flex flex-col p-6 md:p-7 rounded-2xl card-surface border border-border-default"
             >
-              <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
+              <p className="metadata-label">
                 {mode.eyebrow}
               </p>
-              <h3 className="card-title mt-2 text-text-primary">
+              <h3 className="card-title text-text-primary">
                 {mode.title}
               </h3>
-              <p className="mt-3 text-sm text-text-secondary leading-relaxed">
+              <p className="card-text text-sm text-text-secondary">
                 {mode.line}
               </p>
             </div>

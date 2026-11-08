@@ -22,7 +22,7 @@ export default function Page() {
           no strategy call, no call length, no "no pitch". */}
       <section className="relative pt-32 md:pt-40 pb-4 md:pb-6">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-3">Contact</p>
+          <p className="eyebrow">Contact</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
             What are you working on?
           </h1>
@@ -57,8 +57,8 @@ export default function Page() {
             {/* Card 1: calendar. The only button on the site that opens Cal
                 directly (October 2026); every other general CTA lands here. */}
             <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
-              <p className="metadata-label mb-4">Path 01 · Calendar</p>
-              <h2 className="card-title text-text-primary mb-4">
+              <p className="metadata-label">Path 01 · Calendar</p>
+              <h2 className="card-title text-text-primary">
                 Find a time that works.
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
@@ -78,8 +78,8 @@ export default function Page() {
 
             {/* Card 2: prefers to start in writing (email) */}
             <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
-              <p className="metadata-label mb-4">Path 02 · Email</p>
-              <h2 className="card-title text-text-primary mb-4">
+              <p className="metadata-label">Path 02 · Email</p>
+              <h2 className="card-title text-text-primary">
                 Prefer to start in writing?
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
@@ -97,8 +97,8 @@ export default function Page() {
 
             {/* Card 3: quick question (lower stakes, warmer framing) */}
             <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
-              <p className="metadata-label mb-4">Path 03 · Voice</p>
-              <h2 className="card-title text-text-primary mb-4">
+              <p className="metadata-label">Path 03 · Voice</p>
+              <h2 className="card-title text-text-primary">
                 Have a quick question?
               </h2>
               <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 flex-1">
@@ -165,8 +165,8 @@ export default function Page() {
       <section className="py-12 md:py-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl">
-            <p className="metadata-label mb-4">Prefer LinkedIn?</p>
-            <h2 className="card-title text-text-primary mb-3">
+            <p className="metadata-label">Prefer LinkedIn?</p>
+            <h2 className="card-title text-text-primary">
               We can connect there too.
             </h2>
             <p className="text-base md:text-lg text-text-secondary leading-relaxed">

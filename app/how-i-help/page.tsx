@@ -124,7 +124,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-7 order-2 lg:order-1">
-              <p className="eyebrow mb-3">How I help</p>
+              <p className="eyebrow">How I help</p>
               <h1 className="headline-static hero-title text-balance max-w-4xl">
                 Nice to meet you.
               </h1>
@@ -132,7 +132,7 @@ export default function Page() {
                   answer in their head before reading on. An h2 in the
                   card-title role so it sits under the H1 without competing
                   with it. */}
-              <h2 className="card-title mt-4 md:mt-6 max-w-3xl text-balance">
+              <h2 className="card-title max-w-3xl text-balance">
                 What are you trying to solve, improve, or make happen?
               </h2>
               {/* Locked positioning line (November 2026). Do not rewrite. */}
@@ -256,7 +256,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
             <div className="md:col-span-6">
-              <p className="metadata-label mb-4">Prefer to look around first?</p>
+              <p className="metadata-label">Prefer to look around first?</p>
               <ul className="space-y-4">
                 {[
                   { href: "/work", label: "See my work", external: false },

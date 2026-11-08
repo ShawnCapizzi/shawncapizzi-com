@@ -75,13 +75,13 @@ export function HeroBottom() {
               "group relative flex flex-col p-7 md:p-8 rounded-2xl card-surface border border-border-default transition-colors";
             const inner = (
               <>
-                <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
+                <p className="metadata-label">
                   {door.eyebrow}
                 </p>
-                <h2 className="card-title mt-3 text-text-primary text-balance">
+                <h2 className="card-title text-text-primary text-balance">
                   {door.title}
                 </h2>
-                <p className="mt-3 text-sm md:text-base text-text-secondary leading-relaxed text-pretty flex-1">
+                <p className="card-text text-sm md:text-base text-text-secondary text-pretty flex-1">
                   {door.body}
                 </p>
                 <p

@@ -60,11 +60,11 @@ export function BookAndCards({
             />
           </div>
           <figcaption className="p-6 md:p-7">
-            <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
+            <p className="metadata-label">
               {item.eyebrow}
             </p>
-            <h3 className="card-title mt-2 text-text-primary">{item.title}</h3>
-            <p className="mt-2 text-sm md:text-base text-text-secondary leading-relaxed">
+            <h3 className="card-title text-text-primary">{item.title}</h3>
+            <p className="card-text text-sm md:text-base text-text-secondary">
               {item.text}
               {item.link ? (
                 <>

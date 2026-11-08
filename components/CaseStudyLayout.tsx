@@ -194,7 +194,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
             <span aria-hidden="true" className="mr-2">←</span> All work
           </Link>
 
-          <p className="eyebrow mb-3">{props.eyebrow}</p>
+          <p className="eyebrow">{props.eyebrow}</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
             <KeepHyphens>{props.title}</KeepHyphens>
           </h1>
@@ -233,7 +233,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           <div className="mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 border-t border-border-subtle pt-10">
             {props.metadata.map((item) => (
               <div key={item.label}>
-                <p className="metadata-label mb-2">({item.label})</p>
+                <p className="metadata-label">({item.label})</p>
                 <p className="metadata-value">{item.value}</p>
               </div>
             ))}
@@ -273,7 +273,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
               </p>
             </blockquote>
           )}
-          <h2 className="section-title mb-8 md:mb-10">
+          <h2 className="section-title">
             The business need
           </h2>
           <div className="max-w-3xl space-y-6 text-lg text-text-secondary leading-relaxed">
@@ -358,8 +358,8 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                 className="border-b border-border-subtle last:border-b-0 pb-20 md:pb-28 last:pb-0 scroll-mt-24 md:scroll-mt-32"
               >
                 <div className="max-w-3xl">
-                  <p className="eyebrow mb-4">{project.eyebrow}</p>
-                  <h3 className="section-title mb-6 md:mb-8">
+                  <p className="eyebrow">{project.eyebrow}</p>
+                  <h3 className="section-title">
                     {project.title}
                   </h3>
                   <div className="space-y-5 text-lg text-text-secondary leading-relaxed">
@@ -461,7 +461,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           ============================================================ */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title mb-10 md:mb-14">
+          <h2 className="section-title">
             The results
           </h2>
           <div className="space-y-8 md:space-y-10 max-w-3xl">
@@ -557,7 +557,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           ============================================================ */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="section-title mb-10 md:mb-12 max-w-3xl mx-auto">
+          <h2 className="section-title max-w-3xl mx-auto">
             {props.ctaHeadline}
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-center">
@@ -587,8 +587,8 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       {props.related && props.related.length > 0 && (
         <section className="py-16 md:py-24 border-t border-border-subtle">
           <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-            <p className="eyebrow mb-4">Related work</p>
-            <h2 className="section-title mb-12 md:mb-14">
+            <p className="eyebrow">Related work</p>
+            <h2 className="section-title">
               Related projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -609,7 +609,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                     />
                   </div>
                   <div className="p-7 md:p-8">
-                    <p className="eyebrow mb-3">{rel.eyebrow}</p>
+                    <p className="eyebrow">{rel.eyebrow}</p>
                     <h3 className="card-title text-text-primary group-hover:text-link transition-colors">
                       {rel.title}
                     </h3>

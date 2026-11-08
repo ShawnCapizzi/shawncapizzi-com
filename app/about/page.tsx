@@ -96,7 +96,7 @@ export default function Page() {
           Shawn's words; the portrait and its rim shimmer are unchanged. */}
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-20">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-3">About</p>
+          <p className="eyebrow">About</p>
 
           <div className="max-w-4xl">
             <h1 className="headline-static hero-title text-balance">
@@ -158,7 +158,7 @@ export default function Page() {
           the visitor swipes. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title text-balance mb-6 md:mb-8 max-w-3xl">
+          <h2 className="section-title text-balance max-w-3xl">
             There has to be a life away from the computer.
           </h2>
           <p className="mb-10 md:mb-12 max-w-3xl text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
@@ -232,8 +232,8 @@ export default function Page() {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           {/* A two-word turn from the photographs back to the work. */}
-          <p className="eyebrow mb-3">Back to work</p>
-          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
+          <p className="eyebrow">Back to work</p>
+          <h2 className="section-title text-balance max-w-3xl">
             <KeepHyphens>The work that&apos;s hard to staff full-time, but too important to miss.</KeepHyphens>
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
@@ -268,13 +268,13 @@ export default function Page() {
           the hash rule, two columns on desktop. Wording unchanged. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title text-balance max-w-3xl">
             Background
           </h2>
           <dl className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 md:gap-y-10">
             {BACKGROUND.map(([label, text]) => (
               <div key={label} className="hash-rule pl-5 md:pl-6">
-                <dt className="metadata-label mb-2">{label}</dt>
+                <dt className="metadata-label">{label}</dt>
                 <dd className="text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
                   {text}
                 </dd>
@@ -287,7 +287,7 @@ export default function Page() {
       {/* PROUD OF */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title text-balance mb-10 md:mb-14 max-w-3xl">
+          <h2 className="section-title text-balance max-w-3xl">
             A few things I&apos;m proud of
           </h2>
           <div className="space-y-10 max-w-3xl">
@@ -363,7 +363,7 @@ export default function Page() {
           tools" sections; their useful ideas live here. Copy is Shawn's. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title text-balance max-w-3xl">
             How I show up.
           </h2>
           <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
@@ -418,7 +418,7 @@ export default function Page() {
           else on the page shows Shawn in the room with the industry. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title text-balance mb-10 md:mb-12 max-w-3xl">
+          <h2 className="section-title text-balance max-w-3xl">
             In the work
           </h2>
 
@@ -459,7 +459,7 @@ export default function Page() {
       {/* BEYOND THE WORK: the creative practice, briefly. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title text-balance max-w-3xl">
             Beyond the work
           </h2>
           <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
@@ -491,7 +491,7 @@ export default function Page() {
           <div className="mt-12 md:mt-14 max-w-3xl">
             {/* Set-up (October 2026): what the clip is, and when. Same
                 subtitle treatment as the photographs below it. */}
-            <h3 className="card-title text-text-primary mb-3 text-balance">
+            <h3 className="card-title text-text-primary text-balance">
               AI as a creative tool, since the summer of 2023.
             </h3>
             <p className="mb-6 md:mb-8 text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
@@ -531,7 +531,7 @@ export default function Page() {
           paragraph in October 2026; not a professional AI section. */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <h2 className="section-title text-balance mb-8 md:mb-10 max-w-3xl">
+          <h2 className="section-title text-balance max-w-3xl">
             Curiosity doesn&apos;t stop at work.
           </h2>
           <div className="max-w-3xl">
@@ -600,7 +600,7 @@ export default function Page() {
           color colophon moved to /design-info in October 2026. */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="section-title text-balance mb-6 md:mb-8 max-w-3xl mx-auto">
+          <h2 className="section-title text-balance max-w-3xl mx-auto">
             Bring me what you&apos;re working through.
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto text-pretty">

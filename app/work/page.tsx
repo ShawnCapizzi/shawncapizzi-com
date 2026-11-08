@@ -79,7 +79,7 @@ export default function Page() {
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-3">Case studies</p>
+          <p className="eyebrow">Case studies</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
             My work, and how it&apos;s moved business forward.
           </h1>
@@ -119,7 +119,7 @@ export default function Page() {
                   />
                 </div>
                 <div className="p-7 md:p-10">
-                  <p className="eyebrow mb-4">{cs.eyebrow}</p>
+                  <p className="eyebrow">{cs.eyebrow}</p>
                   <h2 className="card-title text-text-primary group-hover:text-link transition-colors">
                     <KeepHyphens>{cs.title}</KeepHyphens>
                   </h2>

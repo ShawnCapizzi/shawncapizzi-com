@@ -51,7 +51,7 @@ export function LogoStrip() {
   return (
     <section className="py-10 md:py-10 md:border-y border-border-subtle">
       <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
-        <p className="eyebrow mb-5 md:mb-6">Trusted by leaders across:</p>
+        <p className="eyebrow">Trusted by leaders across:</p>
       </div>
 
       <div className="marquee-mask overflow-hidden">

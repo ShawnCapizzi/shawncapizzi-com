@@ -80,7 +80,7 @@ export function CollapsibleSection({
         {/* inert while collapsed: the text stays in the HTML for readers
             and crawlers, but hidden links are not keyboard tab stops. */}
         <div className="overflow-hidden" inert={!open}>
-          <div className="pt-8 md:pt-10 pr-10 md:pr-12">{children}</div>
+          <div className="pr-10 md:pr-12">{children}</div>
         </div>
       </div>
     </div>

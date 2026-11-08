@@ -12,7 +12,7 @@ export function FinalCTA() {
           <h2 className="section-title">
             Bring me what you&apos;re working through.
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
+          <p className="body-text text-lg md:text-xl text-text-secondary text-pretty">
             A defined problem, an opportunity you&apos;re still trying to
             understand, or something that just isn&apos;t working the way it
             should.

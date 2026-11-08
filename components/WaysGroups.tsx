@@ -137,7 +137,7 @@ export function WaysGroups({ groups }: { groups: WaysGroup[] }) {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <p className="pb-7 md:pb-8 pr-10 md:pr-12 text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+                        <p className="body-text -mt-3 pb-7 md:pb-8 pr-10 md:pr-12 text-base md:text-lg text-text-secondary text-pretty">
                           {way.text}
                         </p>
                       </div>

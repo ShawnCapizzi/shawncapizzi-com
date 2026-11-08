@@ -71,11 +71,11 @@ export function WhenToBringMeIn() {
     <section className="py-24 md:py-32 border-t border-border-subtle">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
-          <p className="eyebrow mb-4">Common starting points</p>
+          <p className="eyebrow">Common starting points</p>
           <h2 className="section-title">
             You should talk to me if any of this sounds familiar.
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-text-secondary leading-relaxed">
+          <p className="body-text text-lg md:text-xl text-text-secondary">
             Sometimes the problem is clear. Sometimes you just know there&apos;s a
             better opportunity. Both are good places to start.
           </p>

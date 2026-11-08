@@ -194,7 +194,7 @@ export function ProcessLoop() {
           <p className="font-mono text-[11px] tracking-widest uppercase text-text-tertiary mb-3">
             {s.move} · Action {s.n} of 6
           </p>
-          <h3 className="card-title text-text-primary mb-3">
+          <h3 className="card-title text-text-primary">
             {s.title}
           </h3>
           <p className="text-base text-text-secondary leading-relaxed mb-5">

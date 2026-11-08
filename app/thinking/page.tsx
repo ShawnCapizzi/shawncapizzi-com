@@ -68,7 +68,7 @@ export default function Page() {
       {/* HERO */}
       <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-3">Thinking</p>
+          <p className="eyebrow">Thinking</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
             The Capizzi Process
           </h1>
@@ -96,7 +96,7 @@ export default function Page() {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-16">
-            <p className="eyebrow mb-4">The model</p>
+            <p className="eyebrow">The model</p>
             <h2 className="section-title text-balance">
               3&nbsp;principles. 6&nbsp;flexible actions. Clear momentum.
             </h2>
@@ -128,7 +128,7 @@ export default function Page() {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-14">
-            <p className="eyebrow mb-4">The Process, in two forms</p>
+            <p className="eyebrow">The Process, in two forms</p>
             <h2 className="section-title text-balance">
               The Capizzi Process, in print and in practice.
             </h2>
@@ -164,7 +164,7 @@ export default function Page() {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-14">
-            <p className="eyebrow mb-4">Working software</p>
+            <p className="eyebrow">Working software</p>
             <h2 className="section-title">
               The Process, running as software
             </h2>
@@ -216,8 +216,8 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             <article className="relative p-7 md:p-9 rounded-2xl card-surface border border-border-default">
-              <p className="eyebrow mb-4">The field manual</p>
-              <h2 className="card-title text-text-primary mb-4">
+              <p className="eyebrow">The field manual</p>
+              <h2 className="card-title text-text-primary">
                 The whole method, in something you can hold.
               </h2>
               <p className="text-base text-text-secondary leading-relaxed mb-8">
@@ -238,8 +238,8 @@ export default function Page() {
               href="/book/chapter-1"
               className="group relative p-7 md:p-9 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors flex flex-col"
             >
-              <p className="eyebrow mb-4">Read</p>
-              <h2 className="card-title text-text-primary mb-2 group-hover:text-link transition-colors">
+              <p className="eyebrow">Read</p>
+              <h2 className="card-title text-text-primary group-hover:text-link transition-colors">
                 The foreword, free.
               </h2>
               <p className="text-sm md:text-base italic text-text-tertiary mb-4 leading-snug">
@@ -267,7 +267,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
             <div>
-              <p className="eyebrow mb-4">Published</p>
+              <p className="eyebrow">Published</p>
               <h2 className="section-title text-balance">
                 Writing on design, AI, and healthcare.
               </h2>
@@ -295,7 +295,7 @@ export default function Page() {
               </ul>
             </div>
             <div>
-              <p className="eyebrow mb-4">Talks</p>
+              <p className="eyebrow">Talks</p>
               <h2 className="section-title text-balance">
                 Experience design, no-code, and the beginnings of AI.
               </h2>
@@ -316,7 +316,7 @@ export default function Page() {
       {/* CLOSE */}
       <section className="py-24 md:py-32 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
-          <h2 className="section-title mb-6 md:mb-8 max-w-3xl mx-auto">
+          <h2 className="section-title max-w-3xl mx-auto">
             Want to run this on something real?
           </h2>
           <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
