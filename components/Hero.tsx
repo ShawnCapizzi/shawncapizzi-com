@@ -32,7 +32,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative pt-24 md:pt-28 lg:pt-32 pb-4 md:pb-10 overflow-hidden">
+    <section className="relative pt-24 md:pt-28 lg:pt-32 pb-10 md:pb-10 overflow-hidden">
       <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12 items-center">
           {/* Left: Headline + lead + wordmark (signature). Below lg this

@@ -28,6 +28,11 @@ import Image from "next/image";
  * Hardware-accelerated via will-change: transform for smooth 60fps motion.
  *
  * Marquee pauses on hover and respects prefers-reduced-motion.
+ *
+ * The strip's top and bottom rules show from 768px up only (November
+ * 2026). On a phone they stacked with the hero's edge and the first
+ * door's border into three strokes in a short stretch, so below 768px the
+ * logos sit as a quiet band between hero and doors with no rules.
  */
 
 const LOGOS = [
@@ -44,7 +49,7 @@ const LOGOS = [
 
 export function LogoStrip() {
   return (
-    <section className="py-8 md:py-10 border-y border-border-subtle">
+    <section className="py-10 md:py-10 md:border-y border-border-subtle">
       <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
         <p className="eyebrow mb-5 md:mb-6">Trusted by leaders across:</p>
       </div>
