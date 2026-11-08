@@ -94,7 +94,7 @@ export default function Page() {
 
       {/* HERO: how the work moved upstream. Rewritten September 2026 in
           Shawn's words; the portrait and its rim shimmer are unchanged. */}
-      <section className="relative pt-32 md:pt-40 pb-16 md:pb-20">
+      <section className="relative section-hero">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">About</p>
 
@@ -156,7 +156,7 @@ export default function Page() {
           public/videos/about/ with location data stripped. Desktop: Venice
           full width, then a three-column grid. Phone: Venice, then one row
           the visitor swipes. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             There has to be a life away from the computer.
@@ -229,7 +229,7 @@ export default function Page() {
           pull quote beside the body on desktop. The two paragraphs about
           who Shawn works with and when he listens moved into "How I show
           up", which says both. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           {/* A two-word turn from the photographs back to the work. */}
           <p className="eyebrow">Back to work</p>
@@ -266,7 +266,7 @@ export default function Page() {
 
       {/* BACKGROUND. October 2026: the three paragraphs are four facts on
           the hash rule, two columns on desktop. Wording unchanged. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             Background
@@ -285,7 +285,7 @@ export default function Page() {
       </section>
 
       {/* PROUD OF */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             A few things I&apos;m proud of
@@ -361,7 +361,7 @@ export default function Page() {
       {/* HOW I SHOW UP (October 2026): what Shawn is like to work with.
           Replaces the "Clarity should come before execution" and "New
           tools" sections; their useful ideas live here. Copy is Shawn's. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             How I show up.
@@ -416,7 +416,7 @@ export default function Page() {
 
       {/* IN THE WORK: industry presence, two photos. Kept because nothing
           else on the page shows Shawn in the room with the industry. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             In the work
@@ -457,7 +457,7 @@ export default function Page() {
       </section>
 
       {/* BEYOND THE WORK: the creative practice, briefly. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             Beyond the work
@@ -529,7 +529,7 @@ export default function Page() {
       {/* CURIOSITY: the family story, with the Sora cookie video and the
           learning app links kept as the two proofs. Tightened to one
           paragraph in October 2026; not a professional AI section. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             Curiosity doesn&apos;t stop at work.
@@ -587,7 +587,7 @@ export default function Page() {
 
       {/* AVAILABILITY (October 2026): one quiet line, here and on /contact
           only. Never an "open to work" banner. */}
-      <section className="py-10 md:py-14 border-t border-border-subtle">
+      <section className="section-tight border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="body-text max-w-3xl text-base md:text-lg text-text-secondary text-pretty">
             Available for remote-first consulting, fractional or embedded
@@ -598,7 +598,7 @@ export default function Page() {
 
       {/* CTA. The page ends here; the global footer follows. The type and
           color colophon moved to /design-info in October 2026. */}
-      <section className="py-24 md:py-32 border-t border-border-subtle">
+      <section className="section-close border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
           <h2 className="section-title text-balance max-w-3xl mx-auto">
             Bring me what you&apos;re working through.

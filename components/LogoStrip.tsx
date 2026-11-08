@@ -49,7 +49,7 @@ const LOGOS = [
 
 export function LogoStrip() {
   return (
-    <section className="py-10 md:py-10 md:border-y border-border-subtle">
+    <section className="section-tight md:border-y border-border-subtle">
       <div className="max-w-wide mx-auto px-6 md:px-8 lg:px-12">
         <p className="eyebrow">Trusted by leaders across:</p>
       </div>

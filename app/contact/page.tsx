@@ -44,7 +44,7 @@ export default function Page() {
       </section>
 
       {/* THREE WAYS TO REACH SHAWN: calendar, email, phone */}
-      <section className="py-12 md:py-16">
+      <section className="section">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           {/* The practical line sits with the three cards it introduces, in
               the site's body text style (Geist, secondary gray), like the
@@ -120,7 +120,7 @@ export default function Page() {
       {/* WHAT TO EXPECT (October 2026): what the conversation is about, who
           it is with, and how the work happens. Replaced "2 to 3 weeks", "No
           pitch", and the diagnostic line, which read as process and sales. */}
-      <section className="py-10 md:py-14 border-t border-b border-border-subtle">
+      <section className="section-tight border-t border-b border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-10">
             <div>
@@ -162,7 +162,7 @@ export default function Page() {
 
       {/* SECONDARY: LinkedIn, kept short. The Contact page does not need to
           sell the writing; /thinking does that. */}
-      <section className="py-12 md:py-16">
+      <section className="section">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl">
             <p className="metadata-label">Prefer LinkedIn?</p>
@@ -189,7 +189,7 @@ export default function Page() {
           'workContact' answers "is he qualified"; 'engagementsContact' answers
           "how would this actually work". Contact-only copy (September 2026),
           so the shared 'work' and 'engagements' cards on other pages stay. */}
-      <section className="py-16 md:py-24 mt-8 md:mt-12 border-t border-border-subtle">
+      <section className="section mt-8 md:mt-12 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <CTACards cards={["workContact", "engagementsContact"]} />
         </div>

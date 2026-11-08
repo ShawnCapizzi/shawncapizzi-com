@@ -77,7 +77,7 @@ export default function Page() {
   return (
     <article>
       {/* HERO */}
-      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
+      <section className="relative section-hero">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">Case studies</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
@@ -99,7 +99,7 @@ export default function Page() {
       </section>
 
       {/* CASE STUDIES GRID */}
-      <section className="py-12 md:py-16">
+      <section className="section">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
             {CASE_STUDIES.map((cs) => (
@@ -140,7 +140,7 @@ export default function Page() {
       </section>
 
       {/* CTA CARDS: engagements (how we would work together) + contact (start the conversation) */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <CTACards cards={["engagements", "contact"]} />
         </div>

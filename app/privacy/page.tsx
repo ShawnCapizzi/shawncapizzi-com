@@ -10,7 +10,7 @@ export const metadata = pageMetadata({
 
 export default function PrivacyPage() {
   return (
-    <section className="pt-32 md:pt-40 pb-24">
+    <section className="section-hero">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <p className="eyebrow">Privacy</p>

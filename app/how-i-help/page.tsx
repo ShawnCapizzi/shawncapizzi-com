@@ -120,7 +120,7 @@ export default function Page() {
       {/* HERO: the greeting, the portrait, and the short version. The
           portrait is the same card as the /about hero so the visitor
           confirms "right person" in a glance. */}
-      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
+      <section className="relative section-hero">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-7 order-2 lg:order-1">
@@ -180,7 +180,7 @@ export default function Page() {
           Capizzi Process principle. Each group opens with the principle's
           drawing, name, and definition, then the two ways it guides. The
           drawing lights once as its header scrolls into view; no hover. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             A few ways I can help
@@ -203,7 +203,7 @@ export default function Page() {
 
       {/* THE KIND OF WORK I KNOW WELL: the client line, in the same style as
           the figures strip on /contact. */}
-      <section className="py-10 md:py-14 border-t border-b border-border-subtle">
+      <section className="section-tight border-t border-b border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             Where this has worked
@@ -220,7 +220,7 @@ export default function Page() {
 
       {/* THE ASK: one button, to /contact, in the purple send-off block the
           homepage closes with. */}
-      <section className="cta-purple-block py-20 md:py-28">
+      <section className="cta-purple-block section-close">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl">
             <h2 className="section-title">Start wherever you are.</h2>
@@ -252,7 +252,7 @@ export default function Page() {
 
       {/* LOOK AROUND FIRST: four links, each with its own job (proof, method,
           the ideas, the lowest-commitment option), beside the book. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
             <div className="md:col-span-6">

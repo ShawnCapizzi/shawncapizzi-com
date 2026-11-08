@@ -174,6 +174,16 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 - Measured with Playwright across ten pages after the change: eyebrow to
   heading 16 everywhere, section title to text 24, card title to text 12.
   Before, section titles ran 16 to 56 and card titles 8 to 28.
+- Sections breathe from four roles, never from `py-*` on the element:
+  `.section` (48 phone / 64 tablet / 80 desktop each side), `.section-close`
+  (64 / 80 / 96, the closing ask and testimonials only), `.section-tight`
+  (32 / 40 / 48, strips and bands that belong to the section above), and
+  `.section-hero` (128 / 160 top to clear the fixed header, a body
+  section's bottom). Two sections meeting at a border show double the
+  value. Before, 76 sections used 18 padding recipes; the homepage ran
+  its ordinary sections at the closing-ask size, which is why it breathed
+  differently from the other pages. The homepage hero, the contact hero,
+  and the FAQ list tail keep their own padding on purpose.
 
 ## Color meaning (November 2026)
 

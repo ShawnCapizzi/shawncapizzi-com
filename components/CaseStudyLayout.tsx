@@ -185,7 +185,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           Eyebrow + title + subtitle + hero image + metadata block.
           The lead pull quote now opens the challenge section (see below).
           ============================================================ */}
-      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
+      <section className="relative section-hero">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <Link
             href="/work"
@@ -262,7 +262,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           The quote moved here from the hero in November 2026 so the
           first look sits directly under the metadata.
           ============================================================ */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           {leadQuote && (
             <blockquote className="mb-12 md:mb-16 max-w-3xl hash-rule pl-6 md:pl-10 py-2">
@@ -287,7 +287,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       {/* ============================================================
           THE APPROACH + optional pull quote (section epigraph)
           ============================================================ */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           {restQuotes.length > 0 && (
             <blockquote className="mb-12 md:mb-16 max-w-3xl hash-rule pl-6 md:pl-10 py-2">
@@ -459,7 +459,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       {/* ============================================================
           SELECTED OUTCOMES + optional bottom images
           ============================================================ */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title">
             The results
@@ -520,7 +520,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           CLOSER HERO (optional full-width image before "The impact")
           ============================================================ */}
       {props.closerHero && (
-        <section className="border-t border-border-subtle py-16 md:py-24">
+        <section className="border-t border-border-subtle section">
           <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
             <div className="relative w-full overflow-hidden rounded-xl border border-border-subtle bg-bg-elevated shadow-2xl">
               <Image
@@ -540,7 +540,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       {/* ============================================================
           WHAT THIS MEANS (closer)
           ============================================================ */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <CollapsibleSection id="closer-detail" heading="The impact">
             <div className="max-w-3xl text-lg md:text-xl text-text-primary prose-block">
@@ -555,7 +555,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       {/* ============================================================
           CTA BLOCK
           ============================================================ */}
-      <section className="py-24 md:py-32 border-t border-border-subtle">
+      <section className="section-close border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
           <h2 className="section-title max-w-3xl mx-auto">
             {props.ctaHeadline}
@@ -585,7 +585,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           RELATED WORK
           ============================================================ */}
       {props.related && props.related.length > 0 && (
-        <section className="py-16 md:py-24 border-t border-border-subtle">
+        <section className="section border-t border-border-subtle">
           <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
             <p className="eyebrow">Related work</p>
             <h2 className="section-title">

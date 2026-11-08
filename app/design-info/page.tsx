@@ -98,7 +98,7 @@ export default function Page() {
   return (
     <article>
       {/* INTRO */}
-      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
+      <section className="relative section-hero">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">Design info</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
@@ -112,7 +112,7 @@ export default function Page() {
       </section>
 
       {/* WHY IT LOOKS THIS WAY */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             Why it looks this way
@@ -139,7 +139,7 @@ export default function Page() {
       </section>
 
       {/* TYPOGRAPHY */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             Typography
@@ -169,7 +169,7 @@ export default function Page() {
       </section>
 
       {/* COLOR */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             Color
@@ -213,7 +213,7 @@ export default function Page() {
       </section>
 
       {/* DESIGN SYSTEM */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             Design system
@@ -245,7 +245,7 @@ export default function Page() {
       </section>
 
       {/* BUILT WITH */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             Built with

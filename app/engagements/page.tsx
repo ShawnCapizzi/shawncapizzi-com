@@ -152,7 +152,7 @@ export default function Page() {
   return (
     <article>
       {/* HERO: a brief introduction, then straight into Ways of working */}
-      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
+      <section className="relative section-hero">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">Engagements</p>
           <h1 className="headline-static hero-title max-w-4xl">
@@ -205,7 +205,7 @@ export default function Page() {
       </div>
 
       {/* WAYS OF WORKING: the three options, scannable, directly under the intro */}
-      <section id="ways" className="py-16 md:py-24 scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
+      <section id="ways" className="section scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">Ways of working</p>
           <h2 className="section-title max-w-3xl">
@@ -294,7 +294,7 @@ export default function Page() {
       </section>
 
       {/* PATH 1 - EMBEDDED */}
-      <section id="leadership" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
+      <section id="leadership" className="section border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           <div className="lg:col-span-7">
           <p className="eyebrow">Engagement type 01</p>
@@ -342,7 +342,7 @@ export default function Page() {
       </section>
 
       {/* PATH 2 - ADVISORY */}
-      <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
+      <section id="advisory" className="section border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 mb-10 md:mb-12">
             <div className="lg:col-span-7">
@@ -389,7 +389,7 @@ export default function Page() {
       </section>
 
       {/* PATH 3 - ON CALL */}
-      <section id="oncall" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
+      <section id="oncall" className="section border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           <div className="lg:col-span-7">
           <p className="eyebrow">Engagement type 03</p>
@@ -426,7 +426,7 @@ export default function Page() {
       </section>
 
       {/* WHO I WORK WITH */}
-      <section id="who" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
+      <section id="who" className="section border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title max-w-3xl">
             Who I work with
@@ -449,7 +449,7 @@ export default function Page() {
       </section>
 
       {/* WHAT I BRING: three lenses, one line each, with the case-study links */}
-      <section id="focus" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
+      <section id="focus" className="section border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title max-w-3xl">
             What I bring to every engagement.
@@ -482,7 +482,7 @@ export default function Page() {
       </section>
 
       {/* HOW IT STARTS */}
-      <section id="process" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
+      <section id="process" className="section border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title max-w-3xl">
             How we start.
@@ -533,7 +533,7 @@ export default function Page() {
       </section>
 
       {/* TESTIMONIAL */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <figure className="max-w-3xl p-7 md:p-8 rounded-2xl card-surface border border-border-default">
             <blockquote>
@@ -566,7 +566,7 @@ export default function Page() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-24 md:py-32 border-t border-border-subtle">
+      <section className="section-close border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
           <h2 className="section-title max-w-3xl mx-auto">
             Tell me what&apos;s stuck.

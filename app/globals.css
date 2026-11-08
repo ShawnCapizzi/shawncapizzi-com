@@ -53,6 +53,16 @@
   --space-paragraph: 1.5rem;          /* 24px: between body paragraphs */
   --space-paragraph-card: 1rem;       /* 16px: between paragraphs in a card */
 
+  /* ---- SECTION RHYTHM (November 2026) ----
+     Vertical padding for page sections, scaled with the viewport. Two
+     sections meeting at a border show double the value. Three roles:
+     .section (the body of a page), .section-close (the closing ask and
+     the testimonials, one louder beat), .section-tight (strips, bands,
+     and figure rows that belong to the section above). */
+  --space-section: 3rem;              /* 48px phone, 64 tablet, 80 desktop */
+  --space-section-close: 4rem;        /* 64 phone, 80 tablet, 96 desktop */
+  --space-section-tight: 2rem;        /* 32 phone, 40 tablet, 48 desktop */
+
   /* ---- TYPOGRAPHY: families ---- */
   --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: var(--font-geist-mono), 'SFMono-Regular', Menlo, monospace;
@@ -505,6 +515,45 @@ h3 {
 .eyebrow + *,
 .metadata-label + * {
   margin-top: var(--space-after-eyebrow);
+}
+
+/* Section roles. A section's vertical padding comes from here, never
+   from py-* on the element, so every page breathes at the same rate. */
+.section {
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+}
+.section-close {
+  padding-top: var(--space-section-close);
+  padding-bottom: var(--space-section-close);
+}
+.section-tight {
+  padding-top: var(--space-section-tight);
+  padding-bottom: var(--space-section-tight);
+}
+/* Page hero: clears the fixed header on top, closes like a body section. */
+.section-hero {
+  padding-top: 8rem;
+  padding-bottom: var(--space-section);
+}
+@media (min-width: 768px) {
+  .section-hero {
+    padding-top: 10rem;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --space-section: 4rem;
+    --space-section-close: 5rem;
+    --space-section-tight: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --space-section: 5rem;
+    --space-section-close: 6rem;
+    --space-section-tight: 3rem;
+  }
 }
 
 /* Body styles. One leading per size class; paragraphs space

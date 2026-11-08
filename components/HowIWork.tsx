@@ -49,7 +49,7 @@ const MODES: Mode[] = [
 
 export function HowIWork() {
   return (
-    <section className="py-20 md:py-28 border-t border-border-subtle">
+    <section className="section border-t border-border-subtle">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <p className="eyebrow">Engagement model</p>

@@ -24,7 +24,7 @@ export function ProcessSection() {
   return (
     <section
       id="capizzi-process"
-      className="py-16 md:py-24 border-t border-border-subtle scroll-mt-24 md:scroll-mt-32"
+      className="section border-t border-border-subtle scroll-mt-24 md:scroll-mt-32"
     >
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl mb-10 md:mb-12">

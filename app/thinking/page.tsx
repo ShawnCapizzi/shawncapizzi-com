@@ -66,7 +66,7 @@ export default function Page() {
   return (
     <article>
       {/* HERO */}
-      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
+      <section className="relative section-hero">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">Thinking</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
@@ -93,7 +93,7 @@ export default function Page() {
       {/* THE MODEL (October 2026): 3 principles, 6 flexible actions, clear
           momentum. The principles hold; the actions flex, so nothing here
           implies a fixed order. */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-16">
             <p className="eyebrow">The model</p>
@@ -125,7 +125,7 @@ export default function Page() {
       </section>
 
       {/* IN PRINT AND IN HAND */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-14">
             <p className="eyebrow">The Process, in two forms</p>
@@ -161,7 +161,7 @@ export default function Page() {
       </section>
 
       {/* RUNNING AS SOFTWARE */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl mb-12 md:mb-14">
             <p className="eyebrow">Working software</p>
@@ -212,7 +212,7 @@ export default function Page() {
       </section>
 
       {/* THE MANUAL + THE FOREWORD */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             <article className="relative p-7 md:p-9 rounded-2xl card-surface border border-border-default">
@@ -263,7 +263,7 @@ export default function Page() {
       </section>
 
       {/* PUBLISHED + TALK */}
-      <section className="py-16 md:py-24 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
             <div>
@@ -314,7 +314,7 @@ export default function Page() {
       </section>
 
       {/* CLOSE */}
-      <section className="py-24 md:py-32 border-t border-border-subtle">
+      <section className="section-close border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
           <h2 className="section-title max-w-3xl mx-auto">
             Want to run this on something real?

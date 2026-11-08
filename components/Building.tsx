@@ -64,7 +64,7 @@ const PRODUCTS: Product[] = [
 
 export function Building() {
   return (
-    <section className="py-24 md:py-32 border-t border-border-subtle">
+    <section className="section border-t border-border-subtle">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <p className="eyebrow">AI-native product design · Working products</p>

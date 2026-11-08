@@ -23,7 +23,7 @@ export default function Page() {
     <article>
       <JsonLd data={faqPage(FAQS.map((item) => ({ q: item.q, a: faqText(item) })))} />
       {/* HERO */}
-      <section className="relative pt-32 md:pt-40 pb-12 md:pb-16">
+      <section className="relative section-hero">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">FAQ</p>
           <h1 className="headline-static hero-title max-w-4xl">
@@ -41,7 +41,7 @@ export default function Page() {
 
       {/* CTA CARDS: case studies (proof, the current site wording shared with
           /contact as "workContact") + contact (path forward) */}
-      <section className="py-16 md:py-24 mt-12 md:mt-16 border-t border-border-subtle">
+      <section className="section mt-12 md:mt-16 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <CTACards cards={["workContact", "contact"]} />
         </div>
