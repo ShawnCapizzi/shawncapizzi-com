@@ -752,6 +752,23 @@ h3 {
    quote (components/Reader.tsx) repeats the same tile in its scoped CSS.
    One tick per 7px; the tile is 6px wide, inside the item's left padding.
    ============================================================ */
+/* ============================================================
+   DISCLOSURE LIST (November 2026)
+   The one accordion pattern on the site: a hairline above the first
+   item and below each, nothing filled, nothing outlined. Used by the
+   ways on /how-i-help (WaysGroups), the FAQ (FaqAccordion), and the
+   collapsed prose on case studies (CollapsibleSection). Title in the
+   card-title role, chevron at the right, the detail at the same measure
+   as the title. Items carry their own vertical padding (py-6 md:py-7)
+   so the list reads as one column of text, not a stack of tiles.
+   ============================================================ */
+.disclosure-list {
+  border-top: 1px solid var(--color-border-subtle);
+}
+.disclosure-item {
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
 .hash-rule {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='7'%3E%3Cpath d='M1 6L5 2' stroke='rgb(130,116,255)' stroke-opacity='0.55' stroke-width='1' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
   background-repeat: repeat-y;

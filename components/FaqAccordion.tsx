@@ -64,27 +64,29 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
       {/* ACCORDIONS */}
       <section className="pb-12 md:pb-16">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="max-w-3xl space-y-3 md:space-y-4">
+          <div className="max-w-3xl disclosure-list">
             {items.map((item, i) => (
               <details
                 key={item.q}
                 ref={(el) => {
                   detailsRefs.current[i] = el;
                 }}
-                className="group rounded-xl card-surface border border-border-default overflow-hidden"
+                className="group disclosure-item"
               >
-                <summary className="cursor-pointer list-none p-5 md:p-6 flex items-start justify-between gap-6 hover:bg-white/[0.02] transition-colors">
-                  <h2 className="text-base md:text-lg font-semibold text-text-primary leading-tight">
+                <summary className="cursor-pointer list-none py-6 md:py-7 flex items-start justify-between gap-6">
+                  <h2 className="card-title text-text-primary text-balance">
                     {item.q}
                   </h2>
                   <span
                     aria-hidden="true"
-                    className="flex-shrink-0 text-text-tertiary text-xl leading-none mt-0.5 transition-transform duration-200 group-open:rotate-45"
+                    className="mt-1 shrink-0 text-text-tertiary transition-transform duration-300 motion-reduce:transition-none group-open:rotate-180"
                   >
-                    +
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                   </span>
                 </summary>
-                <div className="px-5 md:px-6 pb-5 md:pb-6 -mt-1">
+                <div className="pb-7 md:pb-8 pr-10 md:pr-12">
                   <p className="text-base md:text-lg text-text-secondary leading-relaxed">
                     {item.a.map((seg, j) =>
                       typeof seg === "string" ? (

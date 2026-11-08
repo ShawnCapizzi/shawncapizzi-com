@@ -16,8 +16,9 @@ import { WaysSketch, type WaysKind } from "@/components/WaysSketch";
  * November 2026: the ways were cards (filled surface, border, two-up on
  * desktop). Filled, they competed with the page; unfilled, they read as a
  * stack of dark boxes on a phone. They are now a divider list, the pattern
- * /faq uses: one column at the page's reading measure, a hairline above
- * the first item and below each, nothing filled or outlined. The principle
+ * the whole site now uses (.disclosure-list in globals.css): one column at
+ * the page's reading measure, a hairline above the first item and below
+ * each, nothing filled or outlined. The principle
  * header keeps its sketch and hash rule, so each principle still has its
  * mark and the ways under it read as a list rather than a row of tiles.
  *
@@ -96,12 +97,12 @@ export function WaysGroups({ groups }: { groups: WaysGroup[] }) {
             {/* The divider list. One column at max-w-3xl, the measure the
                 rest of the page reads at, so an open paragraph sits at the
                 same width as the principle's definition above it. */}
-            <div className="max-w-3xl border-t border-border-subtle">
+            <div className="max-w-3xl disclosure-list">
               {g.ways.map((way) => {
                 const id = slug(way.title);
                 const isOpen = !!open[id];
                 return (
-                  <article key={id} className="border-b border-border-subtle">
+                  <article key={id} className="disclosure-item">
                     <button
                       type="button"
                       onClick={() => toggle(id)}

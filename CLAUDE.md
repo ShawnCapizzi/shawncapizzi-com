@@ -153,6 +153,19 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   exception (Shawn's call, October 2026): the slow breeze sway and
   traveling purple tint on the Process sketches' shade ticks
 
+## Accordions (November 2026)
+
+- One pattern, `.disclosure-list` and `.disclosure-item` in
+  `app/globals.css`: a hairline above the first item and below each, no
+  fill, no outline, title in the `.card-title` role, chevron at the right,
+  items padded `py-6 md:py-7`, detail `pb-7 md:pb-8`. Used by
+  `components/WaysGroups.tsx` (/how-i-help), `components/FaqAccordion.tsx`
+  (/faq), and `components/CollapsibleSection.tsx` (case study Approach and
+  What this means, the Lab's Earlier experiments). Cards and filled
+  accordions were retired (Shawn's call): filled, they competed with the
+  page; unfilled, they read as a stack of dark boxes on a phone.
+  `components/AccordionDetail.tsx` is unused and kept only until removed.
+
 ## Contrast (November 2026)
 
 - `text-tertiary` is `#8C8C8C`, lifted from `#737373`, which failed AA for

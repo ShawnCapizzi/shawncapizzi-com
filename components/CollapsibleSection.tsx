@@ -14,8 +14,9 @@ import { useState } from "react";
  *   - Smooth grid-rows height animation; respects prefers-reduced-motion.
  *
  * The heading is rendered as the toggle, so the section title doubles as the
- * expand control (with a rotating chevron affordance). Styled to match the
- * lighter, quieter AccordionDetail family used elsewhere on the site.
+ * expand control (with a rotating chevron affordance). Since November 2026
+ * it is a one-item disclosure list (.disclosure-list in globals.css), the
+ * same pattern as the FAQ and the ways on /how-i-help: hairlines, no card.
  */
 export function CollapsibleSection({
   id,
@@ -31,20 +32,21 @@ export function CollapsibleSection({
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="rounded-xl card-surface border border-border-subtle hover:border-border-default transition-colors p-5 md:p-6">
+    <div className="max-w-3xl disclosure-list">
+      <div className="disclosure-item">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls={id}
-        className="group flex w-full items-center justify-between gap-4 text-left"
+        className="flex w-full items-start justify-between gap-6 py-6 md:py-7 text-left"
       >
-        <h2 className="text-lg md:text-xl font-medium tracking-tight text-text-primary">
+        <h2 className="card-title text-text-primary text-balance">
           {heading}
         </h2>
         <span
           aria-hidden="true"
-          className={`shrink-0 text-text-tertiary transition-transform duration-300 group-hover:text-text-secondary ${
+          className={`mt-1 shrink-0 text-text-tertiary transition-transform duration-300 motion-reduce:transition-none ${
             open ? "rotate-180" : "rotate-0"
           }`}
         >
@@ -69,14 +71,15 @@ export function CollapsibleSection({
       <div
         id={id}
         className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
-          open ? "grid-rows-[1fr] mt-6 md:mt-8" : "grid-rows-[0fr]"
+          open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}
       >
         {/* inert while collapsed: the text stays in the HTML for readers
             and crawlers, but hidden links are not keyboard tab stops. */}
         <div className="overflow-hidden" inert={!open}>
-          {children}
+          <div className="pb-7 md:pb-8 pr-10 md:pr-12">{children}</div>
         </div>
+      </div>
       </div>
     </div>
   );
