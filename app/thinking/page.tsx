@@ -72,7 +72,7 @@ export default function Page() {
           <h1 className="headline-static hero-title text-balance max-w-4xl">
             The Capizzi Process
           </h1>
-          <p className="mt-4 font-mono text-base md:text-lg text-link tracking-tight">
+          <p className="mt-4 font-mono text-base md:text-lg text-text-primary tracking-tight">
             Listen first. Make it visible. Prove it worked.
           </p>
           <p className="hero-lead max-w-3xl text-pretty">

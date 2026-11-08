@@ -54,7 +54,7 @@ const SWATCHES: Swatch[] = [
   { role: "Text", hex: "#F5F5F4", pantone: "663 C", ink: "#E5E1E6", deltaE: "5.9" },
   { role: "Secondary text", hex: "#A3A3A3", pantone: "422 C", ink: "#9EA2A2", deltaE: "1.5" },
   { role: "Brand", hex: "#6B5CFF", pantone: "2725 C", ink: "#685BC7", deltaE: "7.1" },
-  { role: "Links and labels", hex: "#A798FF", pantone: "2705 C", ink: "#A7A4E0", deltaE: "6.6" },
+  { role: "Links and actions", hex: "#A798FF", pantone: "2705 C", ink: "#A7A4E0", deltaE: "6.6" },
 ];
 
 type Face = {

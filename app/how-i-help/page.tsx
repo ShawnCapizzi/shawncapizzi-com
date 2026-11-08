@@ -233,7 +233,7 @@ export default function Page() {
             </p>
             {/* The napkin line from /contact, same mono style and pencil. It
                 pays off the napkin-to-product card above. */}
-            <p className="mt-8 font-mono text-base md:text-lg text-link tracking-tight">
+            <p className="mt-8 font-mono text-base md:text-lg text-text-primary tracking-tight">
               <span aria-hidden="true">&#9999;&#65039;</span>{" "}
               Napkin sketches welcome.
             </p>

@@ -191,7 +191,7 @@ export function ProcessLoop() {
           aria-live="polite"
           className="card-surface border border-border-default rounded-2xl p-7 md:p-8 min-h-[360px] animate-[swapin_.35s_ease-out] motion-reduce:animate-none"
         >
-          <p className="font-mono text-[11px] tracking-widest uppercase text-link mb-3">
+          <p className="font-mono text-[11px] tracking-widest uppercase text-text-tertiary mb-3">
             {s.move} · Action {s.n} of 6
           </p>
           <h3 className="card-title text-text-primary mb-3">

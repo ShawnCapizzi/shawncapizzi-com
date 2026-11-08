@@ -153,6 +153,14 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   exception (Shawn's call, October 2026): the slow breeze sway and
   traveling purple tint on the Process sketches' shade ticks
 
+## Color meaning (November 2026)
+
+- Lavender (`--color-link`, `#A798FF`) means a thing can be acted on: links,
+  button text, and the active item in a loop or list (the current Process
+  move, the current chapter). Nothing else is lavender. Labels, eyebrows,
+  captions, and metadata are `text-tertiary` gray in mono. Shawn's rule:
+  color has meaning, and a label in link color reads as a link on a phone.
+
 ## Type voices (November 2026)
 
 - Three faces, three jobs: Instrument Sans for headings and the hero lead,

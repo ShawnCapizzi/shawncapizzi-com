@@ -122,7 +122,7 @@ export function BookToc() {
             href="#foreword"
             className="group flex items-center gap-4 rounded-2xl border border-[#6B5CFF]/60 hover:border-[#8F84FF] card-surface px-5 md:px-6 py-4 transition-colors"
           >
-            <span className="font-mono text-xs tracking-widest uppercase text-link">Foreword</span>
+            <span className="font-mono text-xs tracking-widest uppercase text-text-tertiary">Foreword</span>
             <span className="flex-1 font-[family-name:var(--font-instrument-sans)] text-base md:text-lg font-medium text-text-primary">
               The Human Condition
             </span>
@@ -167,7 +167,7 @@ export function BookToc() {
             className="mt-3 rounded-2xl card-surface border border-border-default px-5 md:px-7 py-5 md:py-6"
           >
             <div className="flex items-baseline gap-4 pb-4 border-b border-dashed border-[#A798FF]/35">
-              <span className="font-mono text-xs tracking-widest uppercase text-link whitespace-nowrap">
+              <span className="font-mono text-xs tracking-widest uppercase text-text-tertiary whitespace-nowrap">
                 {part.breaker.tag} ))
               </span>
               <div>

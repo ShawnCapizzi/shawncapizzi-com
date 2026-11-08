@@ -36,7 +36,7 @@ export default function Page() {
             me a problem you&apos;re trying to solve, something you&apos;re
             trying to overcome, or an opportunity that still needs defining.
           </p>
-          <p className="mt-8 font-mono text-base md:text-lg text-link tracking-tight">
+          <p className="mt-8 font-mono text-base md:text-lg text-text-primary tracking-tight">
             <span aria-hidden="true">&#9999;&#65039;</span>{" "}
             Napkin sketches welcome.
           </p>

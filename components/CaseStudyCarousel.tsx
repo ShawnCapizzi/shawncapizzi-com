@@ -275,7 +275,7 @@ export function CaseStudyCarousel({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 {openingFrame && (
                   <div className="card-surface border border-border-default rounded-xl p-6">
-                    <p className="font-mono text-xs uppercase tracking-widest text-link mb-3">
+                    <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary mb-3">
                       Opening frame
                     </p>
                     <p className="text-sm md:text-base text-text-secondary italic leading-relaxed">
@@ -285,7 +285,7 @@ export function CaseStudyCarousel({
                 )}
                 {closingBridge && (
                   <div className="card-surface border border-border-default rounded-xl p-6">
-                    <p className="font-mono text-xs uppercase tracking-widest text-link mb-3">
+                    <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary mb-3">
                       Closing bridge
                     </p>
                     <p className="text-sm md:text-base text-text-secondary italic leading-relaxed">
@@ -299,7 +299,7 @@ export function CaseStudyCarousel({
             {/* JD-aligned phrases */}
             {keyPhrases && keyPhrases.length > 0 && (
               <div className="card-surface border border-border-default rounded-xl p-6 mb-8">
-                <p className="font-mono text-xs uppercase tracking-widest text-link mb-4">
+                <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary mb-4">
                   Mirror these phrases (JD-aligned)
                 </p>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0">
@@ -308,7 +308,7 @@ export function CaseStudyCarousel({
                       key={i}
                       className="flex gap-2.5 text-sm text-text-primary leading-snug"
                     >
-                      <span className="font-mono text-xs text-link mt-0.5">
+                      <span className="font-mono text-xs text-text-tertiary mt-0.5">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <span>{p}</span>
@@ -321,7 +321,7 @@ export function CaseStudyCarousel({
             {/* Per-slide signal + anticipate */}
             {(slide.signal || slide.anticipate) && (
               <>
-                <p className="font-mono text-xs uppercase tracking-widest text-link mb-4">
+                <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary mb-4">
                   Current slide: talking points
                 </p>
                 <div className="card-surface border border-border-default rounded-xl p-6">

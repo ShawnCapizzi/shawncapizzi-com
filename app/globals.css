@@ -327,13 +327,17 @@ body::before {
    Used above section headers.
    ============================================================ */
 
+/* Eyebrows are labels, so they take the label gray, not the link
+   lavender (November 2026). Lavender (--color-link) means a thing can be
+   acted on: links, button text, the active item in a loop or list. A
+   label in lavender read as a link on the phone, next to real links. */
 .eyebrow {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #A798FF;
+  color: var(--color-text-tertiary);
 }
 
 /* The homepage eyebrow stays on one line. On phones the type scales with
