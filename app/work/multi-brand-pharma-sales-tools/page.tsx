@@ -37,6 +37,7 @@ export default function Page() {
         { label: "YEAR", value: "2020–2021" },
         { label: "TIMELINE", value: "18 months" },
         { label: "PLATFORM", value: "Veeva + Salesforce" },
+        { label: "FOCUS", value: "Workflow optimization · rep enablement" },
       ]}
       challenge={[
         "Pharmaceutical sales reps were juggling 12 different sales tools across a major neurological brand portfolio. Each tool had its own navigation, its own taxonomy, its own visual structure. All of them ran on Veeva with Salesforce integration, but they weren't operating as a system.",
@@ -58,7 +59,7 @@ export default function Page() {
           templates and design system rules would scale across the current
           portfolio and through future product indication expansion.
         </>,
-        "The result was a modular enterprise design system. Thirty-three reusable components. Unified navigation structure. Standardized taxonomy. Flexible content architecture that supported both 45-second elevator pitches and six-minute deeper conversations. Salesforce-integrated interaction tracking. Embedded resource-sharing pathways for PDFs, video, and rep-to-HCP follow-ups. Built-in field notes for pre-call planning and post-call follow-up.",
+        "The result was a modular enterprise design system, built around the rep\u2019s actual call workflow, from pre-call plan to post-call send, so the tools removed steps instead of adding them. Thirty-three reusable components. Unified navigation structure. Standardized taxonomy. Flexible content architecture that supported both 45-second elevator pitches and six-minute deeper conversations. Salesforce-integrated interaction tracking. Embedded resource-sharing pathways for PDFs, video, and rep-to-HCP follow-ups. Built-in field notes for pre-call planning and post-call follow-up.",
         "Every feature was built to drive a high-value action. For the HCP: awareness of in-office signage, practice education content, and copay and pay information. For the rep: quickly finding the resources to hand a patient, reading an HCP\u2019s interests, tapping a few buttons, and making sure the links to those pieces, videos, and downloads go out after the call. The post-call send is itself a high-value action. On the Salesforce side, the screens and data that drive the conversation were elevated, including new or extended data and additional indication information, with back-end note-taking for the personal details and questions a physician raised, and a custom discussion or slide list built for a specific call.",
         "Brand teams could still express campaign identity. But inside a governed design system. The result wasn't uniformity. It was structured flexibility.",
         "The harder work was organizational. Brand managers had to give up some autonomy to gain shared infrastructure. Regulatory teams had to trust pre-approved components. That trust came from concept reviews: the design direction was vetted early with the brand and legal teams, before it was built, as a standard check and balance. Development teams had to commit to the framework instead of building bespoke solutions on every brief. None of that happens because the system is well-designed. It happens because the governance is.",

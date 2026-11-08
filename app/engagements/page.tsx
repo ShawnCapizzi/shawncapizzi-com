@@ -62,7 +62,7 @@ const ADVISORY_SHAPES = [
   {
     name: "Engagement Sprint",
     description:
-      "A deeper look at a defined challenge using stakeholder conversations, existing evidence, and the work already in motion. The outcome is clarity around what matters, what to do next, and what the team can act on.",
+      "A deeper look at a defined challenge using stakeholder conversations, existing evidence, and the work already in motion, including a cross-functional workflow mapped step by step when the challenge is a process rather than a product. The outcome is clarity around what matters, what to do next, and what the team can act on.",
     scope:
       "Up to 10 interviews with real stakeholders, plus AI-assisted simulations where they help, reported separately. A prioritized roadmap, an executive presentation, and one to two follow-up reviews.",
   },
@@ -321,8 +321,9 @@ export default function Page() {
             <p className="text-base md:text-lg text-text-secondary leading-relaxed">
               <strong className="font-semibold text-text-primary">Typical work:</strong>{" "}
               product and experience strategy, UX/CX, service design,
-              information architecture, design systems, prototypes, workshops,
-              and direction for internal or external development teams.
+              information architecture, workflow and process optimization,
+              design systems, prototypes, workshops, and direction for
+              internal or external development teams.
             </p>
           </div>
 

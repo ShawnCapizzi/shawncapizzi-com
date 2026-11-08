@@ -47,6 +47,16 @@ export const FAQS: FaqItem[] = [
     ],
   },
   {
+    q: "Do you do workflow and process optimization, including agentic optimization?",
+    a: [
+      "Yes, and it starts with contextual inquiry rather than a tool. I sit with the people who do the work, at every level, and map which screens and steps each role actually touches. Then the information architecture does the heavy lifting: the steps everyone shares come forward, the ones that only add clicks are retired, and each role gets a dashboard that reads at a glance. For an enterprise financial services CRM that meant three salesperson types on one system, fewer redundant screens, less technical debt, and faster task completion; for a pharma sales organization it meant twelve tools rebuilt around the rep's real call workflow. Agentic optimization follows the same map: once the workflow is visible step by step, it is clear which steps an AI agent should carry, which still need a person, and how to prove the gain. See ",
+      { text: "the CRM case study", href: "/work/enterprise-financial-services-crm" },
+      " and ",
+      { text: "the sales tools case study", href: "/work/multi-brand-pharma-sales-tools" },
+      ".",
+    ],
+  },
+  {
     q: "Do you offer fractional or freelance UX leadership for pharma and healthcare teams?",
     a: [
       "Yes. I work as a fractional or freelance senior UX and design leader for pharma, healthcare, and other regulated teams: directly with brands, embedded inside agency engagements, or alongside internal product and technology teams. The work has included design governance across 70+ therapeutic brands, a patient navigation platform, and multi-brand sales tools. Engagements can be project-based, ongoing, or embedded, and I work remote-first, onsite when being in the room adds value. See the ",

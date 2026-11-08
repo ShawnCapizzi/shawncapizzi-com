@@ -82,7 +82,12 @@ const GROUPS: WaysGroup[] = [
         tease: "An idea that needs a deck, a prototype, or a proof to get funded.",
         text:
           "An idea on a napkin, a blue-sky business pitch, or a product your organization can’t picture yet. I turn it into the pitch deck, the product visualization, or the working proof of concept that wins funding, budget, or the attention of the right people, whether you’re raising from investors or making the case inside the building.",
-        wide: true,
+      },
+      {
+        title: "Untangle the workflow. Then automate what should be.",
+        tease: "A process that runs across teams and business units, with more steps than anyone can see end to end.",
+        text:
+          "Workflow and process optimization starts with contextual inquiry: sitting with the people who do the work, at every level, and watching what they actually touch. From there the information architecture does the heavy lifting. I find the screens and steps that everyone shares and bring them forward, retire the ones that only add clicks, and give each role a dashboard that makes sense at a glance. The result is less technical debt, faster task completion, and a process the business can finally see whole. Then the agentic layer: with the map in hand, we know which steps an AI agent should carry, which still need a person, and how to prove the gain.",
       },
     ],
   },
@@ -103,7 +108,7 @@ const GROUPS: WaysGroup[] = [
         title: "Put AI to work, without losing the plot",
         tease: "You know AI should help, and you\u2019re not sure where.",
         text:
-          "AI is the newest tool in modern communications, and a good one when it\u2019s in experienced hands. I use it every day to research faster, test ideas sooner, build working prototypes, and ship real products. I can help your team see where it fits, where it doesn\u2019t, and how to use it as an ally rather than a gamble.",
+          "AI is the newest tool in modern communications, and a good one when it\u2019s in experienced hands. I use it every day to research faster, test ideas sooner, build working prototypes, and ship real products. I can help your team see where it fits, where it doesn\u2019t, and how to use it as an ally rather than a gamble. Agentic optimization starts the same way: a workflow mapped step by step, so the agents land where they help and not where they break things.",
       },
     ],
   },

@@ -34,12 +34,12 @@ export default function Page() {
         { label: "ENGAGEMENT", value: "Researcher + Engagement Strategist Lead" },
         { label: "YEAR", value: "2019" },
         { label: "SCOPE", value: "Three salesperson types · command-line CRM" },
-        { label: "METHODOLOGY", value: "Architectural inquiry · in-person research" },
+        { label: "METHODOLOGY", value: "Contextual inquiry · workflow optimization" },
       ]}
       challenge={[
         "A major enterprise financial services platform, the kind whose terminal runs throughout the company, from the most junior operations role to the executive suite, needed to refine its CRM experience for sales teams. Some of the biggest financial decisions made daily are made via content distributed through that terminal. The CRM's ability to sell seats, expand relationships among existing seat-holders, and retain those seat-holders was directly connected to the success of this initiative.",
         "The existing system was functional but aging. Information was dense. Decisions were slow. Scanability was inconsistent across modules. Three distinct salesperson types, each with different daily workflows and different mental models, were using the same system, but only one of them was really designed for.",
-        "The challenge wasn't replacing the system. It was understanding what the actual users were doing in it, identifying the friction points that cost real time, and proposing changes that could be implemented quickly within a development environment defined by command-line constraints unique to the platform.",
+        "The challenge wasn't replacing the system. It was understanding what the actual users were doing in it, identifying the friction points that cost real time, and proposing changes that could be implemented quickly within a development environment defined by command-line constraints unique to the platform. What looked like a UI problem was a workflow problem: three roles sharing one system, each wading through steps built for someone else.",
       ]}
       approach={[
         <>
