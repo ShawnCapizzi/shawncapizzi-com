@@ -152,6 +152,17 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   exception (Shawn's call, October 2026): the slow breeze sway and
   traveling purple tint on the Process sketches' shade ticks
 
+## Contrast (November 2026)
+
+- `text-tertiary` is `#8C8C8C`, lifted from `#737373`, which failed AA for
+  small text on every surface (4.07:1 on the page, 3.65:1 on cards). The
+  new value measures 5.74:1 on `bg-primary`, 5.14:1 on `bg-raised`, and
+  4.89:1 on `bg-elevated`. `bg-elevated` moved from `#021626` to `#08203A`
+  (1.17:1 against the page, from 1.05:1) so the header, carousel frames,
+  and video posters read as a step. `bg-raised` and `.card-surface` are
+  unchanged on purpose (Shawn's call). Any component that needs these
+  values in JS reads the CSS variable, never a hex copy.
+
 ## Case studies
 
 - `components/CaseStudyLayout.tsx` renders every study. Since November 2026

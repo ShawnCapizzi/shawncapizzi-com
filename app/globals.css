@@ -10,14 +10,14 @@
 @theme {
   /* ---- BACKGROUNDS ---- */
   --color-bg-primary: #000F1F;
-  --color-bg-elevated: #021626;
+  --color-bg-elevated: #08203A;
   --color-bg-raised: #061C2F;
   --color-bg-inverse: #F5F5F4;
 
   /* ---- TEXT ---- */
   --color-text-primary: #F5F5F4;
   --color-text-secondary: #A3A3A3;
-  --color-text-tertiary: #737373;
+  --color-text-tertiary: #8C8C8C;
   --color-text-inverse: #0A0A0A;
 
   /* ---- BORDERS ---- */

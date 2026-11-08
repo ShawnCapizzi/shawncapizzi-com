@@ -79,7 +79,7 @@ The palette is disciplined: black-and-white as 90% of the surface, color used as
 ```
 --color-text-primary:    #F5F5F4   /* warm off-white, all body and display */
 --color-text-secondary:  #A3A3A3   /* mid gray, supporting text */
---color-text-tertiary:   #737373   /* metadata, captions, eyebrow labels */
+--color-text-tertiary:   #8C8C8C   /* metadata, captions, eyebrow labels; 4.89:1 on bg-elevated, AA */
 --color-text-inverse:    #0A0A0A   /* type on color-block sections */
 ```
 
@@ -597,7 +597,7 @@ module.exports = {
         text: {
           primary: '#F5F5F4',
           secondary: '#A3A3A3',
-          tertiary: '#737373',
+          tertiary: '#8C8C8C',
           inverse: '#0A0A0A',
         },
         border: {
