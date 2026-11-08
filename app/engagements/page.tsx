@@ -101,6 +101,53 @@ const PILLARS = [
   },
 ];
 
+/**
+ * WorkFigure (November 2026): a still from a case study, captioned and
+ * linked, placed beside each engagement type so the page has a visual
+ * beat every screen or so instead of one image 4,500px down. The three
+ * type sections use a 12-column grid: prose keeps its max-w-3xl measure
+ * in seven columns, the figure takes five, and on phone the figure stacks
+ * under the text. Images are chosen to show no client or brand names.
+ */
+function WorkFigure({
+  src,
+  alt,
+  caption,
+  href,
+  study,
+  position = "object-center",
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+  href: string;
+  study: string;
+  position?: string;
+}) {
+  return (
+    <figure className="lg:col-span-5 lg:pt-14">
+      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border-default bg-bg-elevated">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className={`object-cover ${position}`}
+          sizes="(max-width: 1024px) 100vw, 440px"
+        />
+      </div>
+      <figcaption className="mt-4 text-sm text-text-tertiary leading-relaxed">
+        {caption}{" "}
+        <Link
+          href={href}
+          className="text-link hover:text-link-hover transition-colors whitespace-nowrap"
+        >
+          {study} &rarr;
+        </Link>
+      </figcaption>
+    </figure>
+  );
+}
+
 export default function Page() {
   return (
     <article>
@@ -222,9 +269,34 @@ export default function Page() {
         </div>
       </section>
 
+      {/* WHERE EVERY ENGAGEMENT BEGINS
+          The needs-framework sketch, moved up from "What I bring" in
+          November 2026 so the page's first image sits under the three
+          ways instead of 4,500px down. No top border: it closes the
+          ways block rather than opening a new one. */}
+      <section className="pb-16 md:pb-24">
+        <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
+          <figure>
+            <div className="relative aspect-video rounded-2xl overflow-hidden border border-border-default">
+              <Image
+                src="/images/engagements/needs-framework-sketch.jpg"
+                alt="Hand-drawn framework: user need and want flowing down through company to users, business, and resources"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
+              />
+            </div>
+            <figcaption className="mt-5 text-sm md:text-base text-text-tertiary text-center italic">
+              Where every engagement begins.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* PATH 1 - EMBEDDED */}
       <section id="leadership" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
-        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+          <div className="lg:col-span-7">
           <p className="eyebrow mb-4">Engagement type 01</p>
           <h2 className="section-title mb-4 md:mb-5 max-w-3xl">
             Embedded Leadership
@@ -257,21 +329,40 @@ export default function Page() {
           <p className="mt-10 md:mt-12 max-w-3xl text-base text-text-secondary italic">
             Engagements can be structured by project, week, or program duration.
           </p>
+          </div>
+          <WorkFigure
+            src="/images/case-studies/01-pharma-design-systems/carousel-05-handbook.png"
+            alt="Spiral-bound design system handbook on a desk, titled How to use and leverage components across your brand story"
+            caption="The playbook from an embedded governance program: written so the teams could run it without me."
+            href="/work/pharma-design-systems"
+            study="Design systems"
+          />
         </div>
       </section>
 
       {/* PATH 2 - ADVISORY */}
       <section id="advisory" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="eyebrow mb-4">Engagement type 02</p>
-          <h2 className="section-title mb-4 md:mb-5 max-w-3xl">
-            Advisory
-          </h2>
-          <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl mb-8 md:mb-10">
-            Sometimes that&apos;s product and experience strategy. Sometimes
-            it&apos;s a pitch, blue-sky options, or a voice in the room. Three
-            common shapes:
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 mb-10 md:mb-12">
+            <div className="lg:col-span-7">
+              <p className="eyebrow mb-4">Engagement type 02</p>
+              <h2 className="section-title mb-4 md:mb-5 max-w-3xl">
+                Advisory
+              </h2>
+              <p className="lead-text text-lg md:text-xl leading-relaxed max-w-3xl">
+                Sometimes that&apos;s product and experience strategy. Sometimes
+                it&apos;s a pitch, blue-sky options, or a voice in the room. Three
+                common shapes:
+              </p>
+            </div>
+            <WorkFigure
+              src="/images/case-studies/03-enterprise-financial-services-crm/field-research-whiteboard-synthesis.png"
+              alt="Two people synthesizing field research notes on a whiteboard"
+              caption="Field research synthesized into a recommendation the room could act on."
+              href="/work/enterprise-financial-services-crm"
+              study="Financial services CRM"
+            />
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             {ADVISORY_SHAPES.map((shape) => (
@@ -298,7 +389,8 @@ export default function Page() {
 
       {/* PATH 3 - ON CALL */}
       <section id="oncall" className="py-16 md:py-24 border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
-        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+          <div className="lg:col-span-7">
           <p className="eyebrow mb-4">Engagement type 03</p>
           <h2 className="section-title mb-4 md:mb-5 max-w-3xl">
             On Call
@@ -321,6 +413,14 @@ export default function Page() {
               Retainers are monthly and scope to the cadence of access you need.
             </p>
           </div>
+          </div>
+          <WorkFigure
+            src="/images/case-studies/02-multi-brand-pharma-sales-tools/carousel-02-wireframe-template.png"
+            alt="Annotated wireframe template for a pharma sales tool, with placeholder drug name and tabs"
+            caption="A wireframe reviewed before it became expensive to change."
+            href="/work/multi-brand-pharma-sales-tools"
+            study="Pharma sales tools"
+          />
         </div>
       </section>
 
@@ -354,22 +454,6 @@ export default function Page() {
             What I bring to every engagement.
           </h2>
 
-          <div className="mb-14 md:mb-16">
-            <figure>
-              <div className="relative aspect-video rounded-2xl overflow-hidden border border-border-default">
-                <Image
-                  src="/images/engagements/needs-framework-sketch.jpg"
-                  alt="Hand-drawn framework: user need and want flowing down through company to users, business, and resources"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
-                />
-              </div>
-              <figcaption className="mt-5 text-sm md:text-base text-text-tertiary text-center italic">
-                Where every engagement begins.
-              </figcaption>
-            </figure>
-          </div>
 
           <div className="space-y-10 md:space-y-12">
             {PILLARS.map((pillar) => (
