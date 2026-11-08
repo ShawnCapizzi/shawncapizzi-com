@@ -274,7 +274,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
             </blockquote>
           )}
           <h2 className="section-title mb-8 md:mb-10">
-            The challenge
+            The business need
           </h2>
           <div className="max-w-3xl space-y-6 text-lg text-text-secondary leading-relaxed">
             {props.challenge.map((para, i) => (
@@ -310,7 +310,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
             <div className="mb-12 md:mb-16">{props.afterQuote}</div>
           )}
 
-          <CollapsibleSection id="approach-detail" heading="The approach">
+          <CollapsibleSection id="approach-detail" heading="How I solved it">
             <div className="max-w-3xl space-y-6 text-lg text-text-secondary leading-relaxed">
               {props.approach.map((para, i) => (
                 <p key={i}>{para}</p>
@@ -346,7 +346,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       {/* ============================================================
           PROJECT SHOWCASES (optional)
           Each project: eyebrow, title, description paragraphs, optional images.
-          Rendered after processCarousel, before Selected outcomes.
+          Rendered after processCarousel, before The results.
           ============================================================ */}
       {props.projectShowcases && props.projectShowcases.length > 0 && (
         <section className="border-t border-border-subtle">
@@ -462,7 +462,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title mb-10 md:mb-14">
-            Selected outcomes
+            The results
           </h2>
           <div className="space-y-8 md:space-y-10 max-w-3xl">
             {props.outcomes.map((outcome, i) => (
@@ -517,7 +517,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       </section>
 
       {/* ============================================================
-          CLOSER HERO (optional full-width image before "What this means")
+          CLOSER HERO (optional full-width image before "The impact")
           ============================================================ */}
       {props.closerHero && (
         <section className="border-t border-border-subtle py-16 md:py-24">
@@ -542,7 +542,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           ============================================================ */}
       <section className="py-16 md:py-24 border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <CollapsibleSection id="closer-detail" heading="What this means">
+          <CollapsibleSection id="closer-detail" heading="The impact">
             <div className="max-w-3xl space-y-6 text-lg md:text-xl text-text-primary leading-relaxed">
               {props.closer.map((para, i) => (
                 <p key={i}>{para}</p>
@@ -589,7 +589,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
             <p className="eyebrow mb-4">Related work</p>
             <h2 className="section-title mb-12 md:mb-14">
-              Continue reading
+              Related projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {props.related.map((rel) => (

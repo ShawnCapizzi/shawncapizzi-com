@@ -159,9 +159,12 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   `app/globals.css`: a hairline above the first item and below each, no
   fill, no outline, title in the `.card-title` role, chevron at the right,
   items padded `py-6 md:py-7`, detail `pb-7 md:pb-8`. Used by
-  `components/WaysGroups.tsx` (/how-i-help), `components/FaqAccordion.tsx`
-  (/faq), and `components/CollapsibleSection.tsx` (case study Approach and
-  What this means, the Lab's Earlier experiments). Cards and filled
+  `components/WaysGroups.tsx` (/how-i-help) and `components/FaqAccordion.tsx`
+  (/faq). A single collapsed section (`components/CollapsibleSection.tsx`:
+  case study How I solved it and The impact, the Lab's Earlier experiments)
+  carries no hairlines of its own, since its section already has one; it is
+  an H2 in the `.section-title` role with the chevron at the right, and the
+  prose opens beneath. Cards and filled
   accordions were retired (Shawn's call): filled, they competed with the
   page; unfilled, they read as a stack of dark boxes on a phone.
   `components/AccordionDetail.tsx` is unused and kept only until removed.
@@ -181,8 +184,13 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 
 - `components/CaseStudyLayout.tsx` renders every study. Since November 2026
   the order is: hero, metadata, **first look** (`firstLook` or
-  `firstLookImages`), lead quote, the challenge, the approach (collapsed),
-  the remaining process sections, outcomes, closer. The first look is the
+  `firstLookImages`), lead quote, The business need, How I solved it
+  (collapsed), the remaining process sections, The results, The impact
+  (collapsed), the ask, Related projects. Those five headings are the
+  layout's and are chosen for a decision maker or a recruiter skimming:
+  each answers a plain question (what was needed, what Shawn did, what
+  happened, what it makes possible, what else). The page props keep their
+  old names (`challenge`, `approach`, `outcomes`, `closer`). The first look is the
   page's first work visual, placed before the prose so a reader sees the
   work within about 1,300 to 1,700px on desktop (half the previous scroll,
   measured with Playwright across all six studies). A new case study passes
