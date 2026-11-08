@@ -17,7 +17,8 @@ import Link from "next/link";
  * claimed, and links to the D&AD entry. It moved into a proof strip for a
  * while in October 2026 and came back here when the strip was removed.
  *
- * To retune a door, edit DOORS below. Door 1 is styled as the primary.
+ * To retune a door, edit DOORS below. Door 1 keeps `primary` for its copy
+ * and link order only; the three borders match.
  * Since October 2026 it goes to /contact, where the visitor picks the
  * calendar, email, or phone, instead of straight to the calendar.
  */
@@ -67,11 +68,11 @@ export function HeroBottom() {
       <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
           {DOORS.map((door) => {
-            const cardClass = `group relative flex flex-col p-7 md:p-8 rounded-2xl card-surface border transition-colors ${
-              door.primary
-                ? "border-[#6B5CFF]/60 hover:border-[#8F84FF]"
-                : "border-border-default hover:border-border-strong"
-            }`;
+            /* All three doors share one border (November 2026). The first
+               door used to carry a purple edge as the primary ask; it read
+               as a mismatch, and its button already says "start here". */
+            const cardClass =
+              "group relative flex flex-col p-7 md:p-8 rounded-2xl card-surface border border-border-default transition-colors";
             const inner = (
               <>
                 <p className="font-mono text-xs tracking-widest uppercase text-text-tertiary">
@@ -84,11 +85,7 @@ export function HeroBottom() {
                   {door.body}
                 </p>
                 <p
-                  className={`mt-6 inline-flex items-center text-sm font-medium transition-colors ${
-                    door.primary
-                      ? "text-[#A798FF] group-hover:text-white"
-                      : "text-link group-hover:text-link-hover"
-                  }`}
+                  className="mt-6 inline-flex items-center text-sm font-medium transition-colors text-link group-hover:text-link-hover"
                 >
                   {door.cta}
                   <span aria-hidden="true" className="ml-2">

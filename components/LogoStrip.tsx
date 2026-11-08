@@ -15,12 +15,17 @@ import Image from "next/image";
  * monochrome white treatment.
  *
  * Animation is CSS-only (defined in globals.css). The logo list is rendered
- * twice for seamless looping; the duplicate set is aria-hidden so screen
- * readers don't announce twice.
+ * four times as four .marquee-set units, each carrying its own gap and the
+ * same gap as trailing padding, and the track slides by one unit (25%), so
+ * the loop lands exactly on itself and the strip never runs out of logos
+ * on a wide screen (November 2026; the old two-copy track slid by 50% of a
+ * row with nine shared gaps, which stuttered half a gap on every loop and
+ * left the right side empty on wide screens). Sets after the first are
+ * aria-hidden so screen readers hear the list once.
  *
- * The .marquee-track class owns ALL layout (display, gap, width) so there's
- * no conflict with Tailwind utility classes. Hardware-accelerated via
- * will-change: transform for smooth 60fps motion.
+ * The .marquee-track and .marquee-set classes own ALL layout (display,
+ * gap, width) so there's no conflict with Tailwind utility classes.
+ * Hardware-accelerated via will-change: transform for smooth 60fps motion.
  *
  * Marquee pauses on hover and respects prefers-reduced-motion.
  */
@@ -45,30 +50,27 @@ export function LogoStrip() {
       </div>
 
       <div className="marquee-mask overflow-hidden">
-        <ul className="marquee-track">
-          {LOGOS.map((logo) => (
-            <li key={`a-${logo.alt}`}>
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={logo.width}
-                height={40}
-                className="h-7 md:h-8 w-auto object-contain"
-              />
-            </li>
+        <div className="marquee-track">
+          {[0, 1, 2, 3].map((set) => (
+            <ul
+              key={set}
+              className="marquee-set"
+              aria-hidden={set > 0 ? "true" : undefined}
+            >
+              {LOGOS.map((logo) => (
+                <li key={`${set}-${logo.alt}`}>
+                  <Image
+                    src={logo.src}
+                    alt={set === 0 ? logo.alt : ""}
+                    width={logo.width}
+                    height={40}
+                    className="h-7 md:h-8 w-auto object-contain"
+                  />
+                </li>
+              ))}
+            </ul>
           ))}
-          {LOGOS.map((logo) => (
-            <li key={`b-${logo.alt}`} aria-hidden="true">
-              <Image
-                src={logo.src}
-                alt=""
-                width={logo.width}
-                height={40}
-                className="h-7 md:h-8 w-auto object-contain"
-              />
-            </li>
-          ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

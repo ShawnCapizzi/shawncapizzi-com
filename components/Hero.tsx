@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Wordmark } from "./Wordmark";
 
 /**
  * Hero: homepage hero.
@@ -26,8 +25,9 @@ import { Wordmark } from "./Wordmark";
  * floats clean on the dark page. Top padding generous on mobile so
  * the image has breathing room from the transparent header bar.
  *
- * The wordmark plays a 36° diagonal clip-path reveal with fade-in
- * on first mount of the session (handled inside the Wordmark component).
+ * November 2026: the wordmark that sat under the lead is gone (the header
+ * carries it) and the 15+ years credential lives in the lead, so the hero
+ * ends at the two asks.
  */
 
 export function Hero() {
@@ -43,12 +43,11 @@ export function Hero() {
               I turn complex business challenges into digital experiences people can use, and teams can deliver.
             </h1>
             <p className="hero-lead text-pretty max-w-full lg:max-w-[90%] order-3">
-              I help teams get clear on direction, sharpen the thinking, and move the work forward. With deep experience in pharma and healthcare, I lead across strategy, content, design, and delivery to connect business goals with what customers actually need.
+              I help teams get clear on direction, sharpen the thinking, and move the work forward. 15+ years in pharma, healthcare, financial services, and enterprise, leading strategy, content, design, and delivery.
             </p>
             {/* The two asks (November 2026): the primary goes to /contact,
                 the site's one ask; the secondary goes to the proof. The
-                credential line sits under them, shown once here and not
-                repeated in the lead. */}
+                credential (15+ years, four markets) lives in the lead. */}
             <div className="order-3 mt-7 md:mt-8 flex flex-col sm:flex-row gap-4 sm:items-center">
               <Link
                 href="/contact"
@@ -65,17 +64,9 @@ export function Hero() {
                 <span aria-hidden="true" className="ml-2">&rarr;</span>
               </Link>
             </div>
-            <p className="order-3 mt-6 md:mt-7 font-mono text-xs md:text-sm tracking-tight text-text-tertiary">
-              15+ years across pharma, healthcare, financial services, and enterprise.
-            </p>
 
-            <Wordmark
-              size="large"
-              animate
-              href={null}
-              priority
-              className="order-4 mt-6 md:mt-5 mx-auto -translate-x-[7px] md:-translate-x-[110px] md:translate-y-[3px] w-full max-w-[200px] sm:max-w-[220px] lg:max-w-[240px] h-auto"
-            />
+            {/* The wordmark that sat here moved out in November 2026: the
+                header already carries it, and the hero reads shorter. */}
           </div>
 
           {/* Right: headshot, knockout subject on navy plus brand glow, soft edge dissolve */}

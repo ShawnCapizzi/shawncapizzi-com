@@ -153,6 +153,15 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   exception (Shawn's call, October 2026): the slow breeze sway and
   traveling purple tint on the Process sketches' shade ticks
 
+## Type voices (November 2026)
+
+- Three faces, three jobs: Instrument Sans for headings and the hero lead,
+  Geist for body and buttons, Geist Mono for labels only. `.eyebrow` and
+  `.metadata-label` are both mono, so every small uppercase label on the
+  site is one voice; mono never sets a sentence. The homepage hero carries
+  no credential line and no second wordmark: the 15+ years sits in the
+  lead, and the header already shows the mark.
+
 ## Accordions (November 2026)
 
 - One pattern, `.disclosure-list` and `.disclosure-item` in
