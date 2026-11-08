@@ -146,8 +146,9 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   sketches in `components/ProcessSketch.tsx`, his bulb language, and the same
   bulb language reused on `/how-i-help` in `components/WaysSketch.tsx`: three
   drawings, one per Process principle (Listen first, Make it visible, Prove it
-  worked), each shown once as the header above that principle's pair of
-  "ways" cards, lighting in on scroll, no hover
+  worked), each shown once as the header above that principle's list of
+  "ways" (a divider list since November 2026, no cards), lighting in on
+  scroll, no hover
 - No motion that isn't tied to scroll, hover, or page transition, with one
   exception (Shawn's call, October 2026): the slow breeze sway and
   traveling purple tint on the Process sketches' shade ticks

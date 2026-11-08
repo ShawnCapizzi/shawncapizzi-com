@@ -6,24 +6,33 @@ import { WaysSketch, type WaysKind } from "@/components/WaysSketch";
 /**
  * WaysGroups: the "A few ways I can help" groups on /how-i-help (October
  * 2026). Three Capizzi Process principles, each with its drawing, name, and
- * definition, then the ways it guides as collapsible cards.
+ * definition, then the ways it guides as a collapsible list.
  *
- * Every card starts closed and shows only its title and a one-line tease
+ * Every way starts closed and shows only its title and a one-line tease
  * written in the visitor's own situation, so a scan of the page reads like
  * a checklist of "is this me?" and they open only what fits. Tap opens the
  * full text. No hover (Shawn does not want hover triggers).
  *
- * The card follows components/AccordionDetail.tsx: an accessible toggle
+ * November 2026: the ways were cards (filled surface, border, two-up on
+ * desktop). Filled, they competed with the page; unfilled, they read as a
+ * stack of dark boxes on a phone. They are now a divider list, the pattern
+ * /faq uses: one column at the page's reading measure, a hairline above
+ * the first item and below each, nothing filled or outlined. The principle
+ * header keeps its sketch and hash rule, so each principle still has its
+ * mark and the ways under it read as a list rather than a row of tiles.
+ *
+ * Each item follows components/AccordionDetail.tsx: an accessible toggle
  * button (aria-expanded, aria-controls), a chevron that turns, and a
  * grid-rows height animation that respects reduced motion. The full text is
  * in the HTML whether open or closed, so crawlers still read it.
  *
  * "Open all details" / "Close all details" sits above the first group, the
  * way the FAQ offers Expand all, for the reader who wants everything. It
- * reflects the cards' real state: it reads "Close" only when every card is
+ * reflects the items' real state: it reads "Close" only when every item is
  * open.
  */
 
+/** `wide` is accepted for older data and ignored: the list is one column. */
 export type Way = { title: string; tease: string; text: string; wide?: boolean };
 
 export type WaysGroup = {
@@ -70,7 +79,7 @@ export function WaysGroups({ groups }: { groups: WaysGroup[] }) {
             {/* Principle header (October 2026): the drawing on top, large,
                 then the name and definition beside a vertical hash rule, the
                 same mark /about uses for its pull quotes, so a principle
-                reads differently from the cards under it. The drawing lights
+                reads differently from the list under it. The drawing lights
                 as it scrolls in. */}
             <div className="mb-8 md:mb-10">
               <div className="w-full max-w-[30rem] mb-6 md:mb-8">
@@ -84,25 +93,21 @@ export function WaysGroups({ groups }: { groups: WaysGroup[] }) {
               </div>
             </div>
 
-            {/* items-start: an open card grows on its own; its closed
-                neighbor keeps its height instead of stretching to match. */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+            {/* The divider list. One column at max-w-3xl, the measure the
+                rest of the page reads at, so an open paragraph sits at the
+                same width as the principle's definition above it. */}
+            <div className="max-w-3xl border-t border-border-subtle">
               {g.ways.map((way) => {
                 const id = slug(way.title);
                 const isOpen = !!open[id];
                 return (
-                  <article
-                    key={id}
-                    className={`relative rounded-2xl card-surface border border-border-default flex flex-col${
-                      way.wide ? " md:col-span-2" : ""
-                    }`}
-                  >
+                  <article key={id} className="border-b border-border-subtle">
                     <button
                       type="button"
                       onClick={() => toggle(id)}
                       aria-expanded={isOpen}
                       aria-controls={`${id}-detail`}
-                      className="flex w-full items-start justify-between gap-6 p-8 md:p-10 text-left"
+                      className="flex w-full items-start justify-between gap-6 py-6 md:py-7 text-left"
                     >
                       <span className="min-w-0">
                         <span className="block card-title text-text-primary text-balance">
@@ -131,7 +136,7 @@ export function WaysGroups({ groups }: { groups: WaysGroup[] }) {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <p className="px-8 md:px-10 pb-8 md:pb-10 text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
+                        <p className="pb-7 md:pb-8 pr-10 md:pr-12 text-base md:text-lg text-text-secondary leading-relaxed text-pretty">
                           {way.text}
                         </p>
                       </div>
