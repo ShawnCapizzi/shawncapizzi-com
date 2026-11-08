@@ -72,12 +72,6 @@ const GROUPS: WaysGroup[] = [
           "UX, product design, service design, customer journeys, content, design systems, and the connective tissue between them. Sometimes it\u2019s a new experience. Sometimes it\u2019s making what you already have work much better.",
       },
       {
-        title: "Build the brand, not just the pieces",
-        tease: "You need an identity that holds together everywhere people meet you.",
-        text:
-          "Logo, letterhead, brochures, website, social, and the tangible, in-person pieces people actually hold. The card you just scanned is one of them. I came up in the print and identity business, and I build the full identity, and the playbook that keeps it consistent everywhere, so a new or growing business looks like itself at every touchpoint.",
-      },
-      {
         title: "Take it from napkin sketch to working product",
         tease: "An idea that needs a deck, a prototype, or a proof to get funded.",
         text:
@@ -88,6 +82,12 @@ const GROUPS: WaysGroup[] = [
         tease: "A process that runs across teams and business units, with more steps than anyone can see end to end.",
         text:
           "Every business, a local shop or a global enterprise, is trying to see its own workflow: which tasks people handle, which software and services do the rest, and where the two have tangled. I map it, with contextual inquiry at every level and the information architecture to make it legible, then reevaluate it with the team: where current workers can get real efficiencies, where staff can be relieved of burden, where several services can be consolidated or replaced by a custom agent, and where revenue is leaking. The result is a business that runs simpler, a staff whose work got easier, and AI used as a business partner rather than a gamble, as every business enters a new definition of how it operates.",
+      },
+      {
+        title: "Build the brand, not just the pieces",
+        tease: "You need a design system and a modern identity that hold together across all of your digital touchpoints, with a consistency users and customers can trust.",
+        text:
+          "Logo, letterhead, brochures, website, social, and the tangible, in-person pieces people actually hold. The card you just scanned is one of them. I came up in the print and identity business, and I build the full identity, and the playbook that keeps it consistent everywhere, so a new or growing business looks like itself at every touchpoint.",
       },
     ],
   },
