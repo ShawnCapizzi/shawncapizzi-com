@@ -35,7 +35,7 @@ const SITUATIONS: [string, string, string][] = [
   ["Your message makes sense inside the building, but ", "customers aren\u2019t taking the high-value actions", " your brand is measured on, and the signals are there if someone connects them."],
   ["Your ", "AI initiative is stuck", " somewhere between strategy, workflow, and trust."],
   ["Your ", "design system or internal tools aren\u2019t scaling", ". Governance is breaking down, and too much of the work still lives in spreadsheets."],
-  ["Your operation runs on ", "a workflow nobody can see whole", ": too many steps, several business units, every handoff costing time, and a question of which of those steps an AI agent should carry."],
+  ["Your ", "workflow has grown more complex than it needs to be", ": people, software, and services tangled together, and nobody has mapped where AI could carry part of the load."],
 ];
 
 export function WhenToBringMeIn() {

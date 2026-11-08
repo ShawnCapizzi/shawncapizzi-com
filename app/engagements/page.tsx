@@ -69,7 +69,7 @@ const ADVISORY_SHAPES = [
   {
     name: "AI Opportunity Diagnostic",
     description:
-      "A practical look at where AI can improve the way your team works, and where it probably shouldn\u2019t go yet. Vendor-agnostic, grounded in your current workflows, data, and readiness.",
+      "A practical look at where AI can improve the way your team works, and where it probably shouldn\u2019t go yet. We map the workflow as it is: which tasks people handle, which software and services do the rest, where they tangle, and where revenue leaks. Then where to relieve staff, where to consolidate services or replace them with a custom agent, and what to leave alone. Vendor-agnostic, grounded in your current workflows, data, and readiness.",
     scope: "A few weeks. The output is a prioritized roadmap, not a vendor list.",
   },
 ];

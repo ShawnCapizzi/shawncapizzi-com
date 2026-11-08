@@ -380,6 +380,22 @@ export default function Page() {
               answer and simply needs a clearer way forward.
             </p>
             <p>
+              For fifteen years the way I&apos;ve solved problems hasn&apos;t
+              changed: on the ground with users and business stakeholders,
+              taking what they say, what the data shows, and what the business
+              needs, and turning it into flows and experiences that make life
+              easier for customers and for the people inside the company. What
+              has changed, as much in the past few months as in the past few
+              years, is what that work can be enriched with. Data arrives
+              faster. Prototypes that took weeks take days, in ways nobody
+              expected even a year ago. I&apos;ve watched it reshape
+              communications, software design, and advertising firsthand. One
+              of my passions is building systems and seeing workflows as they
+              are and as they could be, and I intend to stay at the front of
+              defining what communications design and software development
+              look like two years from now, and five.
+            </p>
+            <p>
               I&apos;ve always been curious about new tools, especially AI,
               because they let us test ideas and explore possibilities much
               earlier. But the tool is never the point. If it doesn&apos;t

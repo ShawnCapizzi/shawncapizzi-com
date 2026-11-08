@@ -63,9 +63,14 @@ export function HowIWork() {
             experienced point of view.
           </p>
           <p className="mt-4 text-lg md:text-xl text-text-secondary leading-relaxed">
-            AI runs through most of this work now, as a speed-and-rigor
-            partner: more options explored, more drafts pressure-tested,
-            faster paths from idea to a working prototype you can test.
+            AI runs through most of this work now. The way I solve problems
+            hasn&apos;t changed in fifteen years: on the ground with users and
+            stakeholders, turning what they say and what the data shows into
+            flows that make life easier for customers and the people inside
+            the company. What has changed is what that work can be enriched
+            with: data arrives faster, and prototypes that took weeks take
+            days. I build systems, and I see workflows as they are and as
+            they could be.
           </p>
           <p className="mt-4 text-lg md:text-xl text-text-secondary leading-relaxed text-pretty">
             Remote-first. Direct with brands, embedded with agencies, or

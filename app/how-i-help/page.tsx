@@ -87,7 +87,7 @@ const GROUPS: WaysGroup[] = [
         title: "Untangle the workflow. Then automate what should be.",
         tease: "A process that runs across teams and business units, with more steps than anyone can see end to end.",
         text:
-          "Workflow and process optimization starts with contextual inquiry: sitting with the people who do the work, at every level, and watching what they actually touch. From there the information architecture does the heavy lifting. I find the screens and steps that everyone shares and bring them forward, retire the ones that only add clicks, and give each role a dashboard that makes sense at a glance. The result is less technical debt, faster task completion, and a process the business can finally see whole. Then the agentic layer: with the map in hand, we know which steps an AI agent should carry, which still need a person, and how to prove the gain.",
+          "Every business, a local shop or a global enterprise, is trying to see its own workflow: which tasks people handle, which software and services do the rest, and where the two have tangled. I map it, with contextual inquiry at every level and the information architecture to make it legible, then reevaluate it with the team: where current workers can get real efficiencies, where staff can be relieved of burden, where several services can be consolidated or replaced by a custom agent, and where revenue is leaking. The result is a business that runs simpler, a staff whose work got easier, and AI used as a business partner rather than a gamble, as every business enters a new definition of how it operates.",
       },
     ],
   },
