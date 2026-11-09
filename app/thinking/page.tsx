@@ -215,7 +215,7 @@ export default function Page() {
       <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            <article className="relative p-7 md:p-9 rounded-2xl card-surface border border-border-default">
+            <article className="relative card">
               <p className="eyebrow">The field manual</p>
               <h2 className="card-title text-text-primary">
                 The whole method, in something you can hold.
@@ -236,7 +236,7 @@ export default function Page() {
 
             <Link
               href="/book/chapter-1"
-              className="group relative p-7 md:p-9 rounded-2xl card-surface border border-border-default hover:border-border-strong transition-colors flex flex-col"
+              className="group relative card hover:border-border-strong transition-colors flex flex-col"
             >
               <p className="eyebrow">Read</p>
               <h2 className="card-title text-text-primary group-hover:text-link transition-colors">

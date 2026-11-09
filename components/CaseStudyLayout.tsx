@@ -596,7 +596,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                 <Link
                   key={rel.slug}
                   href={`/work/${rel.slug}`}
-                  className="group relative block rounded-2xl card-surface border border-border-default hover:border-border-strong overflow-hidden transition-colors"
+                  className="group relative block card hover:border-border-strong transition-colors"
                 >
                   <div className="relative aspect-[16/10]">
                     <Image
@@ -608,7 +608,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
-                  <div className="p-7 md:p-8">
+                  <div className="card-body">
                     <p className="eyebrow">{rel.eyebrow}</p>
                     <h3 className="card-title text-text-primary group-hover:text-link transition-colors">
                       {rel.title}

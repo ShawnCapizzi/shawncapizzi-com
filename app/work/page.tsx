@@ -106,7 +106,7 @@ export default function Page() {
               <Link
                 key={cs.slug}
                 href={`/work/${cs.slug}`}
-                className="group relative block rounded-2xl card-surface border border-border-default hover:border-border-strong overflow-hidden transition-colors"
+                className="group relative block card hover:border-border-strong transition-colors"
               >
                 <div className="relative aspect-[4/3]">
                   <Image
@@ -118,7 +118,7 @@ export default function Page() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                <div className="p-7 md:p-10">
+                <div className="card-body">
                   <p className="eyebrow">{cs.eyebrow}</p>
                   <h2 className="card-title text-text-primary group-hover:text-link transition-colors">
                     <KeepHyphens>{cs.title}</KeepHyphens>

@@ -76,7 +76,7 @@ export function SelectedWork() {
             <Link
               key={cs.slug}
               href={`/work/${cs.slug}`}
-              className="group relative flex flex-col rounded-2xl card-surface border border-border-default hover:border-border-strong overflow-hidden transition-colors"
+              className="group relative flex flex-col card hover:border-border-strong transition-colors"
             >
               <div className="relative aspect-[4/3] bg-bg-raised overflow-hidden">
                 <Image
@@ -88,7 +88,7 @@ export function SelectedWork() {
                   className="object-cover group-hover:scale-[1.02] transition-transform duration-500 ease-out"
                 />
               </div>
-              <div className="p-6 md:p-7 flex flex-col flex-1">
+              <div className="card-body flex flex-col flex-1">
                 <p className="metadata-label">
                   {cs.eyebrow}
                 </p>

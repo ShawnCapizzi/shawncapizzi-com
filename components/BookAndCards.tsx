@@ -48,7 +48,7 @@ export function BookAndCards({
       {items.map((item) => (
         <figure
           key={item.title}
-          className="rounded-2xl card-surface border border-border-default overflow-hidden"
+          className="card"
         >
           <div className="relative aspect-[4/3] bg-bg-raised">
             <Image
@@ -59,7 +59,7 @@ export function BookAndCards({
               className="object-cover"
             />
           </div>
-          <figcaption className="p-6 md:p-7">
+          <figcaption className="card-body">
             <p className="metadata-label">
               {item.eyebrow}
             </p>

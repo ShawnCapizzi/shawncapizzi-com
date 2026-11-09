@@ -274,7 +274,7 @@ export function CaseStudyCarousel({
             {(openingFrame || closingBridge) && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 {openingFrame && (
-                  <div className="card-surface border border-border-default rounded-xl p-6">
+                  <div className="card-compact">
                     <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary mb-3">
                       Opening frame
                     </p>
@@ -284,7 +284,7 @@ export function CaseStudyCarousel({
                   </div>
                 )}
                 {closingBridge && (
-                  <div className="card-surface border border-border-default rounded-xl p-6">
+                  <div className="card-compact">
                     <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary mb-3">
                       Closing bridge
                     </p>
@@ -298,7 +298,7 @@ export function CaseStudyCarousel({
 
             {/* JD-aligned phrases */}
             {keyPhrases && keyPhrases.length > 0 && (
-              <div className="card-surface border border-border-default rounded-xl p-6 mb-8">
+              <div className="card-compact mb-8">
                 <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary mb-4">
                   Mirror these phrases (JD-aligned)
                 </p>
@@ -324,7 +324,7 @@ export function CaseStudyCarousel({
                 <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary mb-4">
                   Current slide: talking points
                 </p>
-                <div className="card-surface border border-border-default rounded-xl p-6">
+                <div className="card-compact">
                   <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary mb-2">
                     Slide {String(slideIndex + 1).padStart(2, "0")} ·{" "}
                     {slide.tag}

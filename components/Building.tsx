@@ -87,7 +87,7 @@ export function Building() {
           {PRODUCTS.map((p) => (
             <article
               key={p.key}
-              className="relative flex flex-col rounded-2xl card-surface border border-border-default overflow-hidden"
+              className="relative flex flex-col card"
             >
               <Link
                 href={p.caseStudyHref}
@@ -106,7 +106,7 @@ export function Building() {
                   />
                 )}
               </Link>
-              <div className="p-7 md:p-8 flex flex-col flex-1">
+              <div className="card-body flex flex-col flex-1">
                 <p className="metadata-label">
                   {p.status}
                 </p>

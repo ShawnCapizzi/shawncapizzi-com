@@ -184,6 +184,15 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   its ordinary sections at the closing-ask size, which is why it breathed
   differently from the other pages. The homepage hero, the contact hero,
   and the FAQ list tail keep their own padding on purpose.
+- Cards are one role: `.card` is the whole recipe (surface, 1px default
+  border, 16px radius, inset 24 phone / 28 tablet / 32 desktop from
+  `--space-card`). A card with an image above its text puts the inset on a
+  `.card-body` child so the image runs to the edge. `.card-compact` (16 /
+  20 / 24) is for dense rows only: the carousel panels, the fragmentation
+  grid, the book contents. Pages set no `p-*`, `rounded-*`, or `border`
+  on a card. Before, 27 cards used 11 insets (16 to 40px) and two radii;
+  measured after, every card on nine pages reads 24 / 32 at 16px radius.
+  `.card-surface` remains as the shared surface paint only.
 
 ## Color meaning (November 2026)
 

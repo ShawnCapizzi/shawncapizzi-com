@@ -120,7 +120,7 @@ export function BookToc() {
         <div>
           <a
             href="#foreword"
-            className="group flex items-center gap-4 rounded-2xl border border-[#6B5CFF]/60 hover:border-[#8F84FF] card-surface px-5 md:px-6 py-4 transition-colors"
+            className="group flex items-center gap-4 border-[#6B5CFF]/60 hover:border-[#8F84FF] card-compact transition-colors"
           >
             <span className="font-mono text-xs tracking-widest uppercase text-text-tertiary">Foreword</span>
             <span className="flex-1 font-[family-name:var(--font-instrument-sans)] text-base md:text-lg font-medium text-text-primary">
@@ -164,7 +164,7 @@ export function BookToc() {
             id="toc-panel"
             role="tabpanel"
             aria-labelledby={`toc-tab-${sel}`}
-            className="mt-3 rounded-2xl card-surface border border-border-default px-5 md:px-7 py-5 md:py-6"
+            className="mt-3 card-compact"
           >
             <div className="flex items-baseline gap-4 pb-4 border-b border-dashed border-[#A798FF]/35">
               <span className="font-mono text-xs tracking-widest uppercase text-text-tertiary whitespace-nowrap">

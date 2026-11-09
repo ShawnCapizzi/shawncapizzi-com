@@ -216,7 +216,7 @@ export default function Page() {
             {WAYS.map((way) => (
               <article
                 key={way.id}
-                className="flex flex-col p-7 md:p-8 rounded-2xl card-surface border border-border-default"
+                className="flex flex-col card"
               >
                 <p className="eyebrow">{way.name}</p>
                 <h3 className="card-title text-text-primary">{way.title}</h3>
@@ -248,7 +248,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="mt-10 md:mt-12 rounded-2xl card-surface border border-border-subtle px-6 md:px-10 py-7 md:py-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-10 md:mt-12 card flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-lg md:text-xl font-medium text-text-primary">
                 Not sure which fits?
@@ -369,7 +369,7 @@ export default function Page() {
             {ADVISORY_SHAPES.map((shape) => (
               <article
                 key={shape.name}
-                className="relative flex flex-col p-7 md:p-8 rounded-2xl card-surface border border-border-default"
+                className="relative flex flex-col card"
               >
                 <h3 className="card-title text-text-primary">
                   {shape.name}
@@ -535,7 +535,7 @@ export default function Page() {
       {/* TESTIMONIAL */}
       <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <figure className="max-w-3xl p-7 md:p-8 rounded-2xl card-surface border border-border-default">
+          <figure className="max-w-3xl card">
             <blockquote>
               <p className="body-text text-base md:text-lg text-text-primary">
                 As a UX leader and subject matter expert, he provided essential

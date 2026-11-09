@@ -50,7 +50,7 @@ export function FragmentationGrid({
 }: FragmentationGridProps) {
   return (
     <div
-      className="w-full flex flex-col gap-5 p-6 card-surface border border-border-default rounded-xl"
+      className="w-full flex flex-col gap-5 card-compact"
       role="img"
       aria-label="Visualization of 15+ fragmented pharma brand systems"
     >

@@ -56,7 +56,7 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Card 1: calendar. The only button on the site that opens Cal
                 directly (October 2026); every other general CTA lands here. */}
-            <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
+            <article className="relative card flex flex-col">
               <p className="metadata-label">Path 01 · Calendar</p>
               <h2 className="card-title text-text-primary">
                 Find a time that works.
@@ -77,7 +77,7 @@ export default function Page() {
             </article>
 
             {/* Card 2: prefers to start in writing (email) */}
-            <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
+            <article className="relative card flex flex-col">
               <p className="metadata-label">Path 02 · Email</p>
               <h2 className="card-title text-text-primary">
                 Prefer to start in writing?
@@ -96,7 +96,7 @@ export default function Page() {
             </article>
 
             {/* Card 3: quick question (lower stakes, warmer framing) */}
-            <article className="relative p-8 md:p-10 rounded-2xl card-surface border border-border-default flex flex-col">
+            <article className="relative card flex flex-col">
               <p className="metadata-label">Path 03 · Voice</p>
               <h2 className="card-title text-text-primary">
                 Have a quick question?

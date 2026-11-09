@@ -63,6 +63,13 @@
   --space-section-close: 4rem;        /* 64 phone, 80 tablet, 96 desktop */
   --space-section-tight: 2rem;        /* 32 phone, 40 tablet, 48 desktop */
 
+  /* ---- CARD INSET (November 2026) ----
+     One inset for the card family, one for dense rows. Applied by the
+     .card and .card-compact roles below, on the card or on its
+     .card-body when an image sits above the text. */
+  --space-card: 1.5rem;               /* 24 phone, 28 tablet, 32 desktop */
+  --space-card-compact: 1rem;         /* 16 phone, 20 tablet, 24 desktop */
+
   /* ---- TYPOGRAPHY: families ---- */
   --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: var(--font-geist-mono), 'SFMono-Regular', Menlo, monospace;
@@ -546,6 +553,8 @@ h3 {
     --space-section: 4rem;
     --space-section-close: 5rem;
     --space-section-tight: 2.5rem;
+    --space-card: 1.75rem;
+    --space-card-compact: 1.25rem;
   }
 }
 @media (min-width: 1024px) {
@@ -553,7 +562,31 @@ h3 {
     --space-section: 5rem;
     --space-section-close: 6rem;
     --space-section-tight: 3rem;
+    --space-card: 2rem;
+    --space-card-compact: 1.5rem;
   }
+}
+
+/* Card roles. .card is the whole recipe: surface, border, radius, and
+   inset. A card whose image sits above its text puts the inset on a
+   .card-body child instead (the image runs to the card's edge). */
+.card,
+.card-compact {
+  border-radius: 1rem;
+  border: 1px solid var(--color-border-default);
+  overflow: hidden;
+}
+.card:not(:has(> .card-body)) {
+  padding: var(--space-card);
+}
+.card > .card-body {
+  padding: var(--space-card);
+}
+.card-compact:not(:has(> .card-body)) {
+  padding: var(--space-card-compact);
+}
+.card-compact > .card-body {
+  padding: var(--space-card-compact);
 }
 
 /* Body styles. One leading per size class; paragraphs space
@@ -767,7 +800,9 @@ h3 {
    Use this class on actual cards (not surfaces like mobile menu).
    ============================================================ */
 
-.card-surface {
+.card-surface,
+.card,
+.card-compact {
   background-color: #04192B;
   background-image:
     radial-gradient(

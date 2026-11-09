@@ -72,7 +72,7 @@ export function HeroBottom() {
                door used to carry a purple edge as the primary ask; it read
                as a mismatch, and its button already says "start here". */
             const cardClass =
-              "group relative flex flex-col p-7 md:p-8 rounded-2xl card-surface border border-border-default transition-colors";
+              "group relative flex flex-col card transition-colors";
             const inner = (
               <>
                 <p className="metadata-label">

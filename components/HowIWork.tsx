@@ -83,7 +83,7 @@ export function HowIWork() {
           {MODES.map((mode) => (
             <div
               key={mode.key}
-              className="flex flex-col p-6 md:p-7 rounded-2xl card-surface border border-border-default"
+              className="flex flex-col card"
             >
               <p className="metadata-label">
                 {mode.eyebrow}

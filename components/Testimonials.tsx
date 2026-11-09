@@ -52,7 +52,7 @@ export function Testimonials() {
           {TESTIMONIALS.map((t) => (
             <figure
               key={t.name}
-              className="relative p-7 md:p-8 rounded-2xl card-surface border border-border-default"
+              className="relative card"
             >
               <blockquote>
                 <p className="card-text text-base md:text-[15px] text-text-primary">

@@ -50,7 +50,7 @@ export function CTACards({ cards }: { cards: string[] }) {
         return (
           <div
             key={item.href}
-            className="group relative flex flex-col rounded-2xl card-surface border border-border-default hover:border-border-strong overflow-hidden transition-colors"
+            className="group relative flex flex-col card hover:border-border-strong transition-colors"
           >
             <Link href={item.href} className="flex flex-col flex-1">
               {item.image || item.thumb ? (
@@ -72,7 +72,7 @@ export function CTACards({ cards }: { cards: string[] }) {
                 </div>
               ) : null}
 
-              <div className="flex flex-col flex-1 p-7 md:p-9">
+              <div className="card-body flex flex-col flex-1">
                 <p className="eyebrow">{item.eyebrow}</p>
                 <h3 className="card-title text-text-primary group-hover:text-link transition-colors">
                   {item.title}
