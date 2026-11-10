@@ -60,7 +60,7 @@ export function SelectedWork() {
           <h2 className="section-title text-balance">
             My work, and how it&apos;s moved business forward.
           </h2>
-          <p className="body-text text-lg md:text-xl text-text-secondary text-pretty">
+          <p className="lead-text text-text-secondary text-pretty">
             I&apos;ve helped solve digital business problems large and small,
             across different audiences, touchpoints, and markets. The work has
             ranged from design governance and patient navigation to enterprise
@@ -95,11 +95,11 @@ export function SelectedWork() {
                 <h3 className="card-title text-text-primary">
                   {cs.headline}
                 </h3>
-                <p className="card-text text-sm md:text-[15px] text-text-secondary flex-1">
+                <p className="card-text text-text-secondary">
                   {cs.outcome}
                 </p>
-                <p className="card-foot inline-flex items-center text-sm font-medium text-link group-hover:text-link-hover transition-colors">
-                  Read the case study{" "}
+                <p className="card-foot inline-flex items-center font-medium text-link group-hover:text-link-hover transition-colors">
+                  View the case study{" "}
                   <span aria-hidden="true" className="ml-2">
                     &rarr;
                   </span>

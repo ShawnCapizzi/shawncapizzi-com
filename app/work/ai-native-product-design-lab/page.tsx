@@ -125,7 +125,7 @@ export default function Page() {
                 loop
                 autoPlay
               />
-              <figcaption className="mt-4 text-center text-sm text-text-tertiary">
+              <figcaption className="small-text mt-4 text-center text-text-tertiary">
                 A 30-second walkthrough: search by condition, open a drug, read
                 the source document, find the path to paying for treatment.
               </figcaption>
@@ -164,7 +164,7 @@ export default function Page() {
                   poster="/videos/courtvisual-ranking-poster.jpg"
                   ariaLabel="CourtVisual ranking demo: the nightly slate scored and ranked, with reasoning on each card"
                 />
-                <figcaption className="mt-4 text-center text-sm text-text-tertiary">
+                <figcaption className="small-text mt-4 text-center text-text-tertiary">
                   CourtVisual: the nightly slate, scored and ranked, with the
                   reasoning on the card.
                 </figcaption>
@@ -182,7 +182,7 @@ export default function Page() {
                   loop
                   autoPlay
                 />
-                <figcaption className="mt-4 text-center text-sm text-text-tertiary">
+                <figcaption className="small-text mt-4 text-center text-text-tertiary">
                   ClinicalTrialsForMe, in preview: search by condition, see how
                   readable each study is, compare two side by side, and get the
                   words to call or email the study team.
@@ -266,7 +266,7 @@ export default function Page() {
                 poster="/images/case-studies/06-vui-voice-pill-tracker/01-vui-demo-poster.jpg"
                 ariaLabel="Demo walkthrough of the VUI Pill Tracker Alexa Skill prototype: setting a daily medication reminder, querying status, and confirming a dose entirely by voice."
               />
-              <figcaption className="mt-4 text-center text-sm text-text-tertiary">
+              <figcaption className="small-text mt-4 text-center text-text-tertiary">
                 The 2018 Alexa Skill prototype in motion: setting a reminder,
                 checking status, and confirming a dose, entirely by voice.
               </figcaption>
@@ -276,7 +276,7 @@ export default function Page() {
       ]}
       afterShowcases={
         <CollapsibleSection id="earlier-experiments" heading="Earlier experiments">
-          <p className="body-text text-base md:text-lg text-text-secondary">
+          <p className="body-text text-text-secondary">
             Three Custom GPTs: earlier explorations in applying AI to
             research, product strategy, and content workflows. They still work
             in ChatGPT.
@@ -293,7 +293,7 @@ export default function Page() {
                   {gpt.name}{" "}
                   <span aria-hidden="true">&rarr;</span>
                 </a>
-                <p className="mt-1 text-sm text-text-tertiary">{gpt.what}</p>
+                <p className="small-text mt-1 text-text-tertiary">{gpt.what}</p>
               </li>
             ))}
           </ul>

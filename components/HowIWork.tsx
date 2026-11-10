@@ -56,13 +56,13 @@ export function HowIWork() {
           <h2 className="section-title">
             Three ways to bring me into the work.
           </h2>
-          <p className="body-text text-lg md:text-xl text-text-secondary">
+          <p className="lead-text text-text-secondary">
             Start with a defined problem or an opportunity that still needs
             definition. I can embed with the team, advise on a focused
             challenge, or stay close when important decisions need another
             experienced point of view.
           </p>
-          <p className="body-text text-lg md:text-xl text-text-secondary">
+          <p className="lead-text text-text-secondary">
             AI runs through most of this work now. The way I solve problems
             hasn&apos;t changed in fifteen years: on the ground with users and
             stakeholders, turning what they say and what the data shows into
@@ -72,7 +72,7 @@ export function HowIWork() {
             days. I build systems, and I see workflows as they are and as
             they could be.
           </p>
-          <p className="body-text text-lg md:text-xl text-text-secondary text-pretty">
+          <p className="lead-text text-text-secondary text-pretty">
             Remote-first. Direct with brands, embedded with agencies, or
             alongside internal product and technology teams. Onsite when being
             in the room adds value.
@@ -91,7 +91,7 @@ export function HowIWork() {
               <h3 className="card-title text-text-primary">
                 {mode.title}
               </h3>
-              <p className="card-text text-sm text-text-secondary">
+              <p className="card-text text-text-secondary">
                 {mode.line}
               </p>
             </div>

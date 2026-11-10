@@ -188,7 +188,7 @@ export default function ChapterOnePage() {
             Better communication design in the age of AI
           </p>
 
-          <div className="mt-8 max-w-2xl text-base md:text-lg text-text-secondary prose-block">
+          <div className="mt-8 max-w-2xl text-text-secondary prose-block">
             <p>
               I wrote this because I got tired of watching design leadership become a thing people
               talk about instead of do. Fifteen years in the trenches of New York agency life taught

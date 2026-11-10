@@ -135,7 +135,7 @@ function WorkFigure({
           sizes="(max-width: 1024px) 100vw, 440px"
         />
       </div>
-      <figcaption className="mt-4 text-sm text-text-tertiary prose-block">
+      <figcaption className="small-text mt-4 text-text-tertiary prose-block">
         {caption}{" "}
         <Link
           href={href}
@@ -220,11 +220,11 @@ export default function Page() {
               >
                 <p className="eyebrow">{way.name}</p>
                 <h3 className="card-title text-text-primary">{way.title}</h3>
-                <p className="card-text text-base md:text-lg text-text-secondary text-pretty">{way.tagline}</p>
+                <p className="card-text text-text-secondary text-pretty">{way.tagline}</p>
                 <p className="card-text metadata-label">{way.keywords}</p>
                 <a
                   href={`#${way.id}`}
-                  className="card-foot inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
+                  className="card-foot inline-flex items-center font-medium text-link hover:text-link-hover transition-colors"
                 >
                   {way.name} in detail{" "}
                   <span aria-hidden="true" className="ml-2">
@@ -235,7 +235,7 @@ export default function Page() {
             ))}
           </div>
 
-          <div className="mt-10 md:mt-12 max-w-3xl text-lg md:text-xl text-text-primary prose-block text-pretty">
+          <div className="mt-10 md:mt-12 max-w-3xl text-text-primary prose-block text-pretty">
             <p>
               I work remote-first, directly with brands, embedded with agencies,
               or alongside internal product and technology teams. Engagements
@@ -286,7 +286,7 @@ export default function Page() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1100px"
               />
             </div>
-            <figcaption className="mt-5 text-sm md:text-base text-text-tertiary text-center italic">
+            <figcaption className="small-text mt-5 text-text-tertiary text-center italic">
               Where every engagement begins.
             </figcaption>
           </figure>
@@ -302,23 +302,23 @@ export default function Page() {
             Embedded Leadership
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
-            <p className="lead-text text-lg md:text-xl">
+            <p className="lead-text text-text-secondary">
               I join the team and work inside the program, alongside product,
               creative, strategy, account, regulatory, research, and
               development.
             </p>
-            <p className="lead-text text-lg md:text-xl">
+            <p className="lead-text text-text-secondary">
               This works when you need experienced UX/design leadership on an
               important project or program without necessarily adding another
               full-time role.
             </p>
-            <p className="lead-text text-lg md:text-xl">
+            <p className="lead-text text-text-secondary">
               I work inside your tools, training, and process, not beside them,
               whether that&apos;s an enterprise playbook or a start-up still
               writing its own. Where the process slows the work, I help refine
               it.
             </p>
-            <p className="body-text text-base md:text-lg text-text-secondary">
+            <p className="body-text text-text-secondary">
               <strong className="font-semibold text-text-primary">Typical work:</strong>{" "}
               product and experience strategy, UX/CX, service design,
               information architecture, workflow and process optimization,
@@ -327,7 +327,7 @@ export default function Page() {
             </p>
           </div>
 
-          <p className="mt-10 md:mt-12 max-w-3xl text-base text-text-secondary italic">
+          <p className="small-text mt-10 md:mt-12 max-w-3xl text-text-secondary italic">
             Engagements can be structured by project, week, or program duration.
           </p>
           </div>
@@ -350,7 +350,7 @@ export default function Page() {
               <h2 className="section-title max-w-3xl">
                 Advisory
               </h2>
-              <p className="lead-text text-lg md:text-xl max-w-3xl">
+              <p className="lead-text max-w-3xl text-text-secondary">
                 Sometimes that&apos;s product and experience strategy. Sometimes
                 it&apos;s a pitch, blue-sky options, or a voice in the room. Three
                 common shapes:
@@ -374,11 +374,11 @@ export default function Page() {
                 <h3 className="card-title text-text-primary">
                   {shape.name}
                 </h3>
-                <p className="card-text text-sm md:text-base text-text-secondary text-pretty">
+                <p className="small-text card-text text-text-secondary text-pretty">
                   <span className="metadata-label block">Typical shape</span>
                   {shape.scope}
                 </p>
-                <p className="card-text text-base md:text-lg text-text-secondary text-pretty">
+                <p className="card-text text-text-secondary text-pretty">
                   {shape.description}
                 </p>
               </article>
@@ -397,12 +397,12 @@ export default function Page() {
             On Call
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
-            <p className="lead-text text-lg md:text-xl">
+            <p className="lead-text text-text-secondary">
               Keep me close when you don&apos;t need another full-time role,
               but you do need senior judgment available when important
               decisions come up.
             </p>
-            <p className="lead-text text-lg md:text-xl">
+            <p className="lead-text text-text-secondary">
               I can review work, pressure-test a direction, join a key meeting,
               help frame a problem, or work through a decision with the team
               before it becomes expensive to change.
@@ -410,7 +410,7 @@ export default function Page() {
           </div>
 
           <div className="mt-10 md:mt-12 max-w-3xl">
-            <p className="text-base text-text-secondary italic">
+            <p className="small-text text-text-secondary italic">
               Retainers are monthly and scope to the cadence of access you need.
             </p>
           </div>
@@ -432,12 +432,12 @@ export default function Page() {
             Who I work with
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
-            <p className="lead-text text-lg md:text-xl">
+            <p className="lead-text text-text-secondary">
               The most useful seat I take in any engagement is the one between
               the leaders who set direction and the practitioners building
               toward it. I do my best work when I&apos;m trusted by both.
             </p>
-            <p className="body-text text-base md:text-lg text-text-secondary">
+            <p className="body-text text-text-secondary">
               I work across leadership, product, strategy, creative, research,
               regulatory, account, analytics, and development teams. Some days
               that means a conversation with a VP; others it means working
@@ -462,7 +462,7 @@ export default function Page() {
                 <h3 className="card-title text-text-primary">
                   {pillar.name}
                 </h3>
-                <p className="body-text text-base md:text-lg text-text-secondary">
+                <p className="body-text text-text-secondary">
                   {pillar.body}
                 </p>
                 {pillar.crossLink && (
@@ -514,14 +514,14 @@ export default function Page() {
                 <h3 className="card-title text-text-primary">
                   {step.title}
                 </h3>
-                <p className="body-text text-base md:text-lg text-text-secondary text-pretty">
+                <p className="body-text text-text-secondary text-pretty">
                   {step.body}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 md:mt-14 max-w-3xl space-y-4 text-lg text-text-secondary text-pretty">
+          <div className="prose-block mt-12 md:mt-14 max-w-3xl text-text-secondary text-pretty">
             <p>
               For longer engagements, we step back periodically to review
               what&apos;s working, what&apos;s changed, and where the focus
@@ -537,7 +537,7 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <figure className="max-w-3xl card">
             <blockquote>
-              <p className="body-text text-base md:text-lg text-text-primary">
+              <p className="card-text text-text-primary">
                 As a UX leader and subject matter expert, he provided essential
                 governance and content strategy for our brand&apos;s new design
                 system and platform migration across indications for both HCP
@@ -556,7 +556,7 @@ export default function Page() {
                 <p className="text-sm font-semibold text-text-primary">
                   Courtney McKnight
                 </p>
-                <p className="text-xs text-text-tertiary mt-0.5">
+                <p className="small-text text-text-tertiary mt-0.5">
                   Brand Account Manager
                 </p>
               </div>
@@ -571,7 +571,7 @@ export default function Page() {
           <h2 className="section-title max-w-3xl mx-auto">
             Tell me what&apos;s stuck.
           </h2>
-          <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
+          <p className="lead-text text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto">
             If you have a product, experience, team, or decision that needs
             another experienced point of view, let&apos;s talk through it.
           </p>

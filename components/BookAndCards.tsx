@@ -64,7 +64,7 @@ export function BookAndCards({
               {item.eyebrow}
             </p>
             <h3 className="card-title text-text-primary">{item.title}</h3>
-            <p className="card-text text-sm md:text-base text-text-secondary">
+            <p className="card-text text-text-secondary">
               {item.text}
               {item.link ? (
                 <>

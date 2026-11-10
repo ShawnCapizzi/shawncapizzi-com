@@ -72,7 +72,7 @@ export function Building() {
             I build to see what&apos;s possible, and bring the learning into
             the work.
           </h2>
-          <p className="body-text text-lg md:text-xl text-text-secondary text-pretty">
+          <p className="lead-text text-text-secondary text-pretty">
             AI has expanded how far, and how quickly, we can take an idea. I
             use working prototypes and live products to get clients, teams,
             and collaborators looking at the same problem, testing
@@ -113,7 +113,7 @@ export function Building() {
                 <h3 className="card-title text-text-primary">
                   {p.name}
                 </h3>
-                <p className="card-text text-sm md:text-base text-text-secondary flex-1">
+                <p className="card-text text-text-secondary">
                   {p.body}
                 </p>
                 <div className="card-foot flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -129,7 +129,7 @@ export function Building() {
                     href={p.caseStudyHref}
                     className="inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
                   >
-                    Read the case study{" "}
+                    View the case study{" "}
                     <span aria-hidden="true" className="ml-2">
                       &rarr;
                     </span>

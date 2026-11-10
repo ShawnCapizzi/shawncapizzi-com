@@ -186,7 +186,7 @@ export function CaseStudyCarousel({
                 className="w-10 h-px bg-text-primary opacity-70 mb-5"
                 aria-hidden="true"
               />
-              <p className="card-text text-base md:text-lg text-text-secondary">
+              <p className="card-text text-text-secondary">
                 {slide.body}
               </p>
             </div>
@@ -278,7 +278,7 @@ export function CaseStudyCarousel({
                     <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary mb-3">
                       Opening frame
                     </p>
-                    <p className="card-text text-sm md:text-base text-text-secondary italic">
+                    <p className="card-text text-text-secondary italic">
                       {openingFrame}
                     </p>
                   </div>
@@ -288,7 +288,7 @@ export function CaseStudyCarousel({
                     <p className="font-mono text-xs uppercase tracking-widest text-text-tertiary mb-3">
                       Closing bridge
                     </p>
-                    <p className="card-text text-sm md:text-base text-text-secondary italic">
+                    <p className="card-text text-text-secondary italic">
                       {closingBridge}
                     </p>
                   </div>
@@ -338,7 +338,7 @@ export function CaseStudyCarousel({
                         <p className="font-mono text-xs uppercase tracking-widest text-text-primary mb-2">
                           Signal this sends
                         </p>
-                        <p className="card-text text-sm text-text-secondary">
+                        <p className="card-text text-text-secondary">
                           {slide.signal}
                         </p>
                       </div>
@@ -348,7 +348,7 @@ export function CaseStudyCarousel({
                         <p className="font-mono text-xs uppercase tracking-widest text-text-primary mb-2">
                           Anticipate
                         </p>
-                        <p className="card-text text-sm text-text-secondary">
+                        <p className="card-text text-text-secondary">
                           {slide.anticipate}
                         </p>
                       </div>

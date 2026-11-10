@@ -171,7 +171,7 @@ function TiltedPhone({
       </div>
 
       {video.caption ? (
-        <figcaption className="mt-6 text-center text-sm font-medium text-text-tertiary sm:mt-8">
+        <figcaption className="small-text mt-6 text-center font-medium text-text-tertiary sm:mt-8">
           {video.caption}
         </figcaption>
       ) : null}

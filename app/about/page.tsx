@@ -112,7 +112,7 @@ export default function Page() {
           {/* Body copy + portrait, side-by-side on desktop; stacks on mobile,
               portrait first. */}
           <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-center">
-            <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center text-lg md:text-xl text-text-secondary prose-block text-pretty">
+            <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center text-text-secondary prose-block text-pretty">
               <p>
                 The more meetings, planning sessions, and project kickoffs I
                 was part of, the more I saw opportunities earlier in the
@@ -161,7 +161,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             There has to be a life away from the computer.
           </h2>
-          <p className="body-text mb-10 md:mb-12 max-w-3xl text-lg md:text-xl text-text-secondary text-pretty">
+          <p className="lead-text mb-10 md:mb-12 max-w-3xl text-text-secondary text-pretty">
             For me, that&apos;s travel and getting out to see music. A few
             frames from both.
           </p>
@@ -237,7 +237,7 @@ export default function Page() {
             <KeepHyphens>The work that&apos;s hard to staff full-time, but too important to miss.</KeepHyphens>
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-            <div className="lg:col-span-7 text-lg md:text-xl text-text-secondary prose-block text-pretty">
+            <div className="lg:col-span-7 text-text-secondary prose-block text-pretty">
               <p>
                 Sometimes it&apos;s budget. Sometimes the opportunity isn&apos;t
                 clear yet, or the organization doesn&apos;t know what kind of
@@ -255,7 +255,7 @@ export default function Page() {
             </div>
             {/* Scan point 2 (October 2026): the secondary quote treatment,
                 a step below the main pull quote in "How I show up". */}
-            <blockquote className="lg:col-span-5 lg:pt-2 self-start lg:sticky lg:top-32 hash-rule pl-6 md:pl-8 text-xl md:text-2xl font-medium tracking-tight text-text-primary leading-snug text-balance">
+            <blockquote className="quote-text lg:col-span-5 lg:pt-2 self-start lg:sticky lg:top-32 hash-rule pl-6 md:pl-8 font-medium tracking-tight text-text-primary leading-snug text-balance">
               The goal isn&apos;t to add another opinion to the room. It&apos;s
               to create clarity early enough for the team to make a better
               decision and move the work forward.
@@ -275,7 +275,7 @@ export default function Page() {
             {BACKGROUND.map(([label, text]) => (
               <div key={label} className="hash-rule pl-5 md:pl-6">
                 <dt className="metadata-label">{label}</dt>
-                <dd className="text-lg md:text-xl text-text-secondary prose-block text-pretty">
+                <dd className="text-text-secondary prose-block text-pretty">
                   {text}
                 </dd>
               </div>
@@ -295,7 +295,7 @@ export default function Page() {
               <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
                 D&amp;AD Pencil &middot; Future Impact Initiative
               </h3>
-              <p className="body-text text-base md:text-lg text-text-secondary">
+              <p className="body-text text-text-secondary">
                 For the Cancer Equality App with The Chrysalis Initiative.
               </p>
               <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
@@ -321,7 +321,7 @@ export default function Page() {
               <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
                 Industry-first pharmaceutical mobile wallet integration
               </h3>
-              <p className="body-text text-base md:text-lg text-text-secondary">
+              <p className="body-text text-text-secondary">
                 Patient medication information delivered through an
                 FDA-compliant, QR-based mobile wallet experience across a
                 multi-brand portfolio.
@@ -340,7 +340,7 @@ export default function Page() {
               <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
                 Published thinking
               </h3>
-              <p className="body-text text-base md:text-lg text-text-secondary">
+              <p className="body-text text-text-secondary">
                 I write about design, AI, healthcare, regulation, and how the
                 work itself is changing.
               </p>
@@ -366,7 +366,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             How I show up.
           </h2>
-          <div className="max-w-3xl text-lg md:text-xl text-text-secondary prose-block text-pretty">
+          <div className="max-w-3xl text-text-secondary prose-block text-pretty">
             <p>
               I listen first, understand what&apos;s already happening, and
               ask the questions that help people get clear on the decision
@@ -407,7 +407,7 @@ export default function Page() {
           {/* Scan point 3, the main pull quote: the strongest line between
               the hero and the closing ask, one step above the section
               titles and below the H1. */}
-          <blockquote className="mt-12 md:mt-16 max-w-3xl hash-rule pl-6 md:pl-8 text-2xl md:text-3xl font-semibold tracking-tight text-text-primary leading-snug text-balance">
+          <blockquote className="quote-display mt-12 md:mt-16 max-w-3xl hash-rule pl-6 md:pl-8 font-semibold tracking-tight text-text-primary leading-snug text-balance">
             I help teams get clear on direction, sharpen the thinking, and
             move the work forward.
           </blockquote>
@@ -433,7 +433,7 @@ export default function Page() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <figcaption className="px-5 py-4 text-sm font-semibold text-text-primary border-t border-border-subtle">
+              <figcaption className="small-text px-5 py-4 font-semibold text-text-primary border-t border-border-subtle">
                 Manny Awards &middot; NYC
               </figcaption>
             </figure>
@@ -448,7 +448,7 @@ export default function Page() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <figcaption className="px-5 py-4 text-sm font-semibold text-text-primary border-t border-border-subtle">
+              <figcaption className="small-text px-5 py-4 font-semibold text-text-primary border-t border-border-subtle">
                 With Ash Ashutosh, CEO, Pinecone &middot; CxO Institute
               </figcaption>
             </figure>
@@ -462,7 +462,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             Beyond the work
           </h2>
-          <div className="max-w-3xl text-lg md:text-xl text-text-secondary prose-block text-pretty">
+          <div className="max-w-3xl text-text-secondary prose-block text-pretty">
             <p>
               I&apos;m also a photographer, painter, and documentary filmmaker.
               I&apos;ve photographed Venice and New York, and I&apos;m working
@@ -475,7 +475,7 @@ export default function Page() {
             </p>
             {/* Scan point 4 (October 2026): the creative worldview, in the
                 secondary quote treatment. It was the third paragraph. */}
-            <blockquote className="py-2 hash-rule pl-6 md:pl-8 text-xl md:text-2xl font-medium tracking-tight text-text-primary leading-snug text-balance">
+            <blockquote className="quote-text py-2 hash-rule pl-6 md:pl-8 font-medium tracking-tight text-text-primary leading-snug text-balance">
               See what&apos;s actually there before deciding what it should
               be, and know the right place to stop.
             </blockquote>
@@ -494,7 +494,7 @@ export default function Page() {
             <h3 className="card-title text-text-primary text-balance">
               AI as a creative tool, since the summer of 2023.
             </h3>
-            <p className="body-text mb-6 md:mb-8 text-base md:text-lg text-text-secondary text-pretty">
+            <p className="body-text mb-6 md:mb-8 text-text-secondary text-pretty">
               Images generated in Midjourney from the performers&apos; lyrics
               and poems, dropped into Runway in real time, and projected
               behind them as they played. A few highlights of that live
@@ -516,7 +516,7 @@ export default function Page() {
               />
             </div>
             <p
-              className="mt-4 text-sm text-text-tertiary italic text-center"
+              className="small-text mt-4 text-text-tertiary italic text-center"
               style={{ maxWidth: "720px", margin: "1rem auto 0" }}
             >
               Posted on LinkedIn, July 2023.
@@ -535,7 +535,7 @@ export default function Page() {
             Curiosity doesn&apos;t stop at work.
           </h2>
           <div className="max-w-3xl">
-            <p className="body-text text-lg md:text-xl text-text-secondary text-pretty">
+            <p className="lead-text text-text-secondary text-pretty">
               I share a lot of what I&apos;m learning about design, AI,
               building, and new creative tools with my daughters. Sometimes
               that means making a Sora video together. Sometimes it means
@@ -556,7 +556,7 @@ export default function Page() {
                 shows a Sora-generated stack of patriotic-sprinkled holiday
                 cookies on a gold plate.
               </video>
-              <figcaption className="px-5 py-4 text-sm font-semibold text-text-primary border-t border-border-subtle">
+              <figcaption className="small-text px-5 py-4 font-semibold text-text-primary border-t border-border-subtle">
                 An experiment with my daughters: turning a photo of our
                 homemade cookies into a Sora video.
               </figcaption>
@@ -567,7 +567,7 @@ export default function Page() {
                   growing, instead of the two quiz pages. The quiz files stay
                   in public/apps/. Body size, so it reads as its own example
                   and not a note under the video. */}
-              <p className="card-text text-lg md:text-xl text-text-secondary text-pretty">
+              <p className="body-text text-text-secondary text-pretty">
                 The learning app is free, with no sign-up: a study tool built
                 around my daughters&apos; classwork and upcoming tests.
               </p>
@@ -589,7 +589,7 @@ export default function Page() {
           only. Never an "open to work" banner. */}
       <section className="section-tight border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <p className="body-text max-w-3xl text-base md:text-lg text-text-secondary text-pretty">
+          <p className="body-text max-w-3xl text-text-secondary text-pretty">
             Available for remote-first consulting, fractional or embedded
             UX/design leadership, and select senior full-time opportunities.
           </p>
@@ -603,7 +603,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl mx-auto">
             Bring me what you&apos;re working through.
           </h2>
-          <p className="text-lg md:text-xl text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto text-pretty">
+          <p className="lead-text text-text-secondary mb-10 md:mb-12 max-w-2xl mx-auto text-pretty">
             A defined problem, an opportunity that still needs definition, or
             something that simply isn&apos;t working the way&nbsp;it&nbsp;should.
           </p>

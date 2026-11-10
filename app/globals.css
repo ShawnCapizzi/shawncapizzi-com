@@ -401,13 +401,6 @@ body::before {
   color: #DAD8C9;
 }
 
-.lead-text {
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  font-weight: 300;
-  line-height: 1.6;
-  letter-spacing: -0.005em;
-  color: rgba(218, 216, 201, 0.82);
-}
 
 /* ============================================================
    GLOBAL HEADINGS: Instrument Sans across h1, h2, and h3, so
@@ -458,9 +451,18 @@ h3 {
    - .card-title     titles inside cards and panels. 20px, then
                      24px from 768px up.
    - .eyebrow / .metadata-label  mono labels above a heading.
-   - .body-text      long-form paragraphs, 1.6 leading, 24px apart.
-   - .card-text      paragraphs inside a card, 1.6, 16px apart.
-   - .small-text     14px supporting text, 1.5.
+   Body text: five size roles (phone / from 768px), sized here and
+   never per element.
+   - .lead-text      18 / 20. The paragraph under a section title when
+                     the section's content is something else (cards, a
+                     list, media), and every closing ask. 1.6, 24 apart.
+   - .body-text      16 / 18. All running prose. 1.6, 24 apart.
+                     .prose-block containers carry the same size.
+   - .card-text      16 at every width. Paragraphs in a card, 1.6,
+                     16 apart. A card's .card-foot action is 16 too.
+   - .small-text     14 at every width. Captions, credits, fine print.
+   - .quote-text     20 / 24. Pull quotes. .quote-display (24 / 30) is
+                     the one larger quote on /about.
 
    Unlayered on purpose: these win over any size utility left on
    the same element, so a value changed here changes everywhere.
@@ -614,6 +616,7 @@ h3 {
 .card-foot {
   margin-top: auto;
   padding-top: var(--space-paragraph);
+  font-size: var(--text-base);
 }
 
 /* Gutter between cards (and image tiles) in a row equals the card inset:
@@ -624,34 +627,83 @@ h3 {
   gap: var(--space-card);
 }
 
-/* Body styles. One leading per size class; paragraphs space
-   themselves from the one before. */
-.body-text {
-  line-height: 1.6;
-}
-.body-text + .body-text {
-  margin-top: var(--space-paragraph);
-}
-.card-text {
-  line-height: 1.6;
-}
-.card-text + .card-text {
-  margin-top: var(--space-paragraph-card);
-}
-.small-text {
-  font-size: var(--text-sm);
-  line-height: 1.5;
-}
-
 /* A run of paragraphs (or list items) in one container: the container
    carries the leading and the paragraph gap, so each child needs no
    class of its own. Replaces "space-y-* leading-relaxed" wrappers. */
+/* A run of paragraphs (or list items) in one container: the container
+   carries the body size, the leading, and the paragraph gap, so each
+   child needs no class of its own. Add .lead-text or .small-text to the
+   container to run it at that size instead. */
 .prose-block {
+  font-size: var(--text-base);
   line-height: 1.6;
 }
 .prose-block > * + * {
   margin-top: var(--space-paragraph);
 }
+
+/* Body styles. Five size roles; each carries its size, its leading,
+   and the gap from the paragraph before. Order matters: a role listed
+   later wins when two share an element (.card-text.small-text is a
+   small line with card spacing; .prose-block.lead-text runs a block at
+   lead size). */
+.body-text {
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+.lead-text {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+}
+.card-text {
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+.small-text {
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+.quote-text {
+  font-size: var(--text-xl);
+  line-height: 1.4;
+}
+.quote-display {
+  font-size: var(--text-2xl);
+  line-height: 1.25;
+}
+@media (min-width: 768px) {
+  .prose-block {
+    font-size: var(--text-lg);
+  }
+  .body-text {
+    font-size: var(--text-lg);
+  }
+  .lead-text {
+    font-size: var(--text-xl);
+  }
+  .card-text {
+    font-size: var(--text-base);
+  }
+  .small-text {
+    font-size: var(--text-sm);
+  }
+  .quote-text {
+    font-size: var(--text-2xl);
+  }
+  .quote-display {
+    font-size: 1.875rem;
+  }
+}
+.body-text + .body-text,
+.lead-text + .lead-text,
+.lead-text + .body-text,
+.body-text + .lead-text {
+  margin-top: var(--space-paragraph);
+}
+.card-text + .card-text {
+  margin-top: var(--space-paragraph-card);
+}
+
 
 /* ============================================================
    CTA PURPLE BLOCK

@@ -31,7 +31,7 @@ export default function Page() {
               (lead-text), and the napkin line borrows the mono tagline style
               from the /thinking hero ("Listen first. Make it visible."). The
               practical line sits lower, with the cards. */}
-          <p className="mt-4 md:mt-6 max-w-3xl lead-text text-lg md:text-xl text-pretty">
+          <p className="lead-text mt-4 md:mt-6 max-w-3xl text-pretty text-text-secondary">
             We don&apos;t need a finished brief, scope, or RFP to start. Bring
             me a problem you&apos;re trying to solve, something you&apos;re
             trying to overcome, or an opportunity that still needs defining.
@@ -49,7 +49,7 @@ export default function Page() {
           {/* The practical line sits with the three cards it introduces, in
               the site's body text style (Geist, secondary gray), like the
               notes on /engagements. */}
-          <p className="body-text mb-6 md:mb-8 max-w-3xl lg:max-w-none text-base md:text-lg text-text-secondary text-pretty">
+          <p className="body-text mb-6 md:mb-8 max-w-3xl lg:max-w-none text-text-secondary text-pretty">
             Calendar, email, or phone: whatever&apos;s easiest. I work
             remote-first, so it doesn&apos;t matter where&nbsp;you&nbsp;are.
           </p>
@@ -61,7 +61,7 @@ export default function Page() {
               <h2 className="card-title text-text-primary">
                 Find a time that works.
               </h2>
-              <p className="card-text text-base md:text-lg text-text-secondary">
+              <p className="card-text text-text-secondary">
                 We&apos;ll talk through what&apos;s happening, what you&apos;re
                 trying to accomplish, and whether I can help.
               </p>
@@ -82,13 +82,13 @@ export default function Page() {
               <h2 className="card-title text-text-primary">
                 Prefer to start in writing?
               </h2>
-              <p className="card-text text-base md:text-lg text-text-secondary">
+              <p className="card-text text-text-secondary">
                 Send a question, some context, an introduction, or whatever
                 you have so far. You don&apos;t need a finished brief.
               </p>
               <a
                 href={`mailto:${EMAIL}`}
-                className="card-foot self-start inline-flex items-center text-base md:text-lg font-medium text-link hover:text-link-hover transition-colors"
+                className="card-foot self-start inline-flex items-center font-medium text-link hover:text-link-hover transition-colors"
               >
                 {EMAIL}
                 <span aria-hidden="true" className="ml-2">&rarr;</span>
@@ -101,13 +101,13 @@ export default function Page() {
               <h2 className="card-title text-text-primary">
                 Have a quick question?
               </h2>
-              <p className="body-text text-base md:text-lg text-text-secondary mb-8 flex-1">
+              <p className="card-text text-text-secondary">
                 Call or leave a voicemail with what you&apos;re working on. I&apos;ll
                 get back to you within a business day, sooner if it&apos;s urgent.
               </p>
               <a
                 href={`tel:${PHONE_TEL}`}
-                className="card-foot self-start inline-flex items-center text-base md:text-lg font-medium text-link hover:text-link-hover transition-colors"
+                className="card-foot self-start inline-flex items-center font-medium text-link hover:text-link-hover transition-colors"
               >
                 {PHONE_DISPLAY}
                 <span aria-hidden="true" className="ml-2">&rarr;</span>
@@ -127,7 +127,7 @@ export default function Page() {
               <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight text-balance">
                 Let&apos;s discuss what success looks like.
               </p>
-              <p className="body-text mt-2 text-sm md:text-base text-text-secondary text-pretty">
+              <p className="body-text mt-2 text-text-secondary text-pretty">
                 Tell me what you&apos;re working on, what&apos;s getting in the
                 way, and what a better outcome would look like.
               </p>
@@ -136,7 +136,7 @@ export default function Page() {
               <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
                 15+ years
               </p>
-              <p className="card-text mt-2 text-sm md:text-base text-text-secondary text-pretty">
+              <p className="body-text mt-2 text-text-secondary text-pretty">
                 Across pharma, healthcare, financial services, and enterprise.
               </p>
             </div>
@@ -144,7 +144,7 @@ export default function Page() {
               <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
                 Remote-first
               </p>
-              <p className="body-text mt-2 text-sm md:text-base text-text-secondary text-pretty">
+              <p className="body-text mt-2 text-text-secondary text-pretty">
                 I work with brands, agencies, start-ups, and technology leaders,
                 often alongside internal, offshore, and public-sector teams.
               </p>
@@ -153,7 +153,7 @@ export default function Page() {
 
           {/* Availability (October 2026): one quiet line, here and on /about
               only. Never an "open to work" banner. */}
-          <p className="body-text mt-8 md:mt-10 max-w-3xl text-base md:text-lg text-text-secondary text-pretty">
+          <p className="body-text mt-8 md:mt-10 max-w-3xl text-text-secondary text-pretty">
             Available for remote-first consulting, fractional or embedded
             UX/design leadership, and select senior full-time opportunities.
           </p>
@@ -169,14 +169,14 @@ export default function Page() {
             <h2 className="card-title text-text-primary">
               We can connect there too.
             </h2>
-            <p className="body-text text-base md:text-lg text-text-secondary">
+            <p className="body-text text-text-secondary">
               I&apos;m active on LinkedIn and DMs are always welcome.
             </p>
             <a
               href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="card-foot inline-flex items-center text-base md:text-lg font-medium text-link hover:text-link-hover transition-colors"
+              className="card-foot inline-flex items-center font-medium text-link hover:text-link-hover transition-colors"
             >
               Connect on LinkedIn
               <span aria-hidden="true" className="ml-2">&rarr;</span>

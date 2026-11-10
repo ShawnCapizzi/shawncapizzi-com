@@ -89,7 +89,7 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
                 {/* The answer sits one card gap (12px) under the question:
                     the summary's bottom padding is 24, so pull up by 12. */}
                 <div className="-mt-3 pb-7 md:pb-8 pr-10 md:pr-12">
-                  <p className="body-text text-base md:text-lg text-text-secondary">
+                  <p className="body-text text-text-secondary">
                     {item.a.map((seg, j) =>
                       typeof seg === "string" ? (
                         seg

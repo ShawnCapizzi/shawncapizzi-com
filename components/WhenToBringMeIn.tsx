@@ -75,7 +75,7 @@ export function WhenToBringMeIn() {
           <h2 className="section-title">
             You should talk to me if any of this sounds familiar.
           </h2>
-          <p className="body-text text-lg md:text-xl text-text-secondary">
+          <p className="lead-text text-text-secondary">
             Sometimes the problem is clear. Sometimes you just know there&apos;s a
             better opportunity. Both are good places to start.
           </p>
@@ -88,7 +88,7 @@ export function WhenToBringMeIn() {
           {SITUATIONS.map((situation, i) => (
             <li
               key={i}
-              className={`body-text hash-rule pl-5 md:pl-6 text-lg md:text-xl text-text-primary transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:opacity-100 motion-reduce:translate-y-0 ${
+              className={`lead-text hash-rule pl-5 md:pl-6 text-text-primary transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:opacity-100 motion-reduce:translate-y-0 ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
               }`}
               style={{ transitionDelay: visible ? `${i * 120}ms` : "0ms" }}

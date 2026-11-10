@@ -85,7 +85,7 @@ export default function Page() {
             >
               What replaced the email and Excel
             </h2>
-            <p className="body-text mt-4 text-text-secondary text-base">
+            <p className="body-text mt-4 text-text-secondary">
               A 44-second walkthrough of the live platform: the public marketing
               site, the personal coach pairing, the patient-facing dashboard, and
               the breast cancer education modules.

@@ -55,7 +55,7 @@ export function Testimonials() {
               className="relative card"
             >
               <blockquote>
-                <p className="card-text text-base md:text-[15px] text-text-primary">
+                <p className="card-text text-text-primary">
                   {t.quote}
                 </p>
               </blockquote>
@@ -71,7 +71,7 @@ export function Testimonials() {
                   <p className="text-sm font-semibold text-text-primary">
                     {t.name}
                   </p>
-                  <p className="text-xs text-text-tertiary mt-0.5">
+                  <p className="small-text text-text-tertiary mt-0.5">
                     {t.title}
                   </p>
                 </div>

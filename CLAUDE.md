@@ -173,6 +173,22 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   body default is 1.6 too, so an unclassed paragraph still lands on the
   system. `leading-*` utilities no longer appear on text anywhere in the
   site; use the roles.
+- Body text sizes come from five roles, never from per-element size
+  utilities (November 2026). Phone / from 768px: `.lead-text` 18 / 20
+  (the paragraph under a section title when the section's content is
+  something else, such as cards, a list, or media, and every closing ask),
+  `.body-text` 16 / 18 (all running prose; `.prose-block` containers carry
+  the same size), `.card-text` 16 (card and panel text, and a card's
+  `.card-foot` action), `.small-text` 14 (captions, credits, fine print),
+  `.quote-text` 20 / 24 (pull quotes), plus `.quote-display` 24 / 30 for
+  the one large quote on /about. Roles are unlayered, so they win over any
+  size utility; a role listed later in globals.css wins when two share an
+  element (`.card-text.small-text`, `.prose-block.lead-text`). Before, 11
+  size ladders ran across 18 pages (body prose was 16 on the homepage, 18
+  on case studies, 20 on /about); measured after, every page reads the five.
+  Deliberate exceptions keep their own sizes and carry no role class: the
+  Process loop (`components/ProcessLoop.tsx`), the Clarity Card prompts,
+  the book contents, buttons, the header, the footer, and mono labels.
 - Measured with Playwright across ten pages after the change: eyebrow to
   heading 16 everywhere, section title to text 24, card title to text 12.
   Before, section titles ran 16 to 56 and card titles 8 to 28.

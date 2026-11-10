@@ -83,11 +83,11 @@ export function CTACards({ cards }: { cards: string[] }) {
                   ) : null}
                 </h3>
 
-                <p className="card-text text-base text-text-secondary">
+                <p className="card-text text-text-secondary">
                   {item.description}
                 </p>
 
-                <p className="card-foot text-link group-hover:text-link-hover transition-colors text-base font-medium">
+                <p className="card-foot text-link group-hover:text-link-hover transition-colors font-medium">
                   {item.cta}{" "}
                   <span aria-hidden="true" className="ml-1">
                     &rarr;

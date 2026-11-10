@@ -81,11 +81,11 @@ export function HeroBottom() {
                 <h2 className="card-title text-text-primary text-balance">
                   {door.title}
                 </h2>
-                <p className="card-text text-sm md:text-base text-text-secondary text-pretty flex-1">
+                <p className="card-text text-text-secondary text-pretty">
                   {door.body}
                 </p>
                 <p
-                  className="card-foot inline-flex items-center text-sm font-medium transition-colors text-link group-hover:text-link-hover"
+                  className="card-foot inline-flex items-center font-medium transition-colors text-link group-hover:text-link-hover"
                 >
                   {door.cta}
                   <span aria-hidden="true" className="ml-2">

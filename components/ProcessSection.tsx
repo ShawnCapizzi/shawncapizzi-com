@@ -32,7 +32,7 @@ export function ProcessSection() {
           <h2 className="section-title text-text-primary">
             The way I work, made tangible.
           </h2>
-          <p className="body-text text-base md:text-lg text-text-secondary">
+          <p className="lead-text text-text-secondary">
             The Capizzi Process is how I work: three principles (listen first,
             make it visible, prove it worked) and six flexible actions that
             keep the work moving, with clarity. The book and the cards are two expressions of it.

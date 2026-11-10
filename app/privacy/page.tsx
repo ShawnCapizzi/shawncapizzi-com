@@ -31,7 +31,7 @@ export default function PrivacyPage() {
             <h2 className="section-title">
               What the site collects
             </h2>
-            <ul className="mt-6 text-lg md:text-xl text-text-secondary prose-block list-disc pl-6">
+            <ul className="mt-6 text-text-secondary prose-block list-disc pl-6">
               <li>
                 <strong className="text-text-primary">Contact form:</strong>{" "}
                 name, email, message.
@@ -51,7 +51,7 @@ export default function PrivacyPage() {
                 through Google Analytics 4. No advertising identifiers.
               </li>
             </ul>
-            <p className="body-text mt-6 text-lg md:text-xl text-text-secondary">
+            <p className="body-text mt-6 text-text-secondary">
               I do not sell, trade, or share contact data for marketing.
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
             <h2 className="section-title">
               Services used
             </h2>
-            <p className="body-text mt-6 text-lg md:text-xl text-text-secondary">
+            <p className="body-text mt-6 text-text-secondary">
               Vercel (hosting), Cal.com (scheduling), Google Sheets and Gmail (mailing list),
               Google Analytics 4 (analytics).
               Each only sees the data needed to do its job.
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
             <h2 className="section-title">
               Cookies
             </h2>
-            <p className="body-text mt-6 text-lg md:text-xl text-text-secondary">
+            <p className="body-text mt-6 text-text-secondary">
               There is no cookie banner. Necessary cookies keep the site
               working, and analytics cookies run unless your browser sends
               the Global Privacy Control signal, which is honored
@@ -83,7 +83,7 @@ export default function PrivacyPage() {
             <h2 className="section-title">
               Your rights
             </h2>
-            <p className="body-text mt-6 text-lg md:text-xl text-text-secondary">
+            <p className="body-text mt-6 text-text-secondary">
               Email me to see, correct, or delete any information I have
               about you. Honored within 30 days. CCPA and GDPR rights apply.
             </p>
@@ -93,7 +93,7 @@ export default function PrivacyPage() {
             <h2 className="section-title">
               Contact
             </h2>
-            <p className="body-text mt-6 text-lg md:text-xl text-text-secondary">
+            <p className="body-text mt-6 text-text-secondary">
               <a
                 href="mailto:capizzi@shawncapizzi.com"
                 className="text-link hover:text-link-hover transition-colors"
@@ -108,7 +108,7 @@ export default function PrivacyPage() {
                 212-380-3900
               </a>
             </p>
-            <p className="body-text mt-6 text-lg md:text-xl text-text-secondary">
+            <p className="body-text mt-6 text-text-secondary">
               Or the{" "}
               <Link
                 href="/contact"

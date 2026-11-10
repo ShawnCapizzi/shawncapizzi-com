@@ -126,8 +126,8 @@ export default function Page() {
                   <p className="card-text text-text-secondary">
                     {cs.description}
                   </p>
-                  <p className="card-foot text-link group-hover:text-link-hover transition-colors text-base font-medium">
-                    Read the case study{" "}
+                  <p className="card-foot text-link group-hover:text-link-hover transition-colors font-medium">
+                    View the case study{" "}
                     <span aria-hidden="true" className="ml-1">
                       →
                     </span>

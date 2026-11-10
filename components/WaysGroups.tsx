@@ -88,7 +88,7 @@ export function WaysGroups({ groups }: { groups: WaysGroup[] }) {
               </div>
               <div className="hash-rule pl-5 md:pl-6">
                 <h3 className="card-title text-text-primary">{g.name}</h3>
-                <p className="body-text mt-2 max-w-2xl text-base md:text-lg text-text-secondary text-pretty">
+                <p className="body-text mt-2 max-w-2xl text-text-secondary text-pretty">
                   {g.line}
                 </p>
               </div>
@@ -114,7 +114,7 @@ export function WaysGroups({ groups }: { groups: WaysGroup[] }) {
                         <span className="block card-title text-text-primary text-balance">
                           {way.title}
                         </span>
-                        <span className="card-text mt-2 block text-base md:text-lg text-text-secondary text-pretty">
+                        <span className="card-text mt-2 block text-text-secondary text-pretty">
                           {way.tease}
                         </span>
                       </span>
@@ -137,7 +137,7 @@ export function WaysGroups({ groups }: { groups: WaysGroup[] }) {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <p className="body-text -mt-3 pb-7 md:pb-8 pr-10 md:pr-12 text-base md:text-lg text-text-secondary text-pretty">
+                        <p className="body-text -mt-3 pb-7 md:pb-8 pr-10 md:pr-12 text-text-secondary text-pretty">
                           {way.text}
                         </p>
                       </div>

@@ -138,7 +138,7 @@ export function ProcessLoop() {
           <p className="font-mono text-[15px] lg:text-lg tracking-[0.2em] uppercase text-link">
             {s.move}
           </p>
-          <p className="body-text mt-2 max-w-md text-sm md:text-base text-text-secondary text-pretty">
+          <p className="mt-2 max-w-md text-sm md:text-base text-text-secondary text-pretty">
             {PRINCIPLES[move]}
           </p>
         </div>
@@ -197,7 +197,7 @@ export function ProcessLoop() {
           <h3 className="card-title text-text-primary">
             {s.title}
           </h3>
-          <p className="body-text text-base text-text-secondary mb-5">
+          <p className="card-text text-text-secondary mb-5">
             {s.job}
           </p>
           <p className="font-mono text-sm text-text-secondary hash-rule pl-4 mb-5">
@@ -210,7 +210,7 @@ export function ProcessLoop() {
             {s.feeds.map((f) => (
               <li
                 key={f}
-                className="card-text text-[15px] text-text-secondary pl-5 relative before:content-['→'] before:absolute before:left-0 before:text-link before:font-mono before:text-xs"
+                className="text-[15px] text-text-secondary pl-5 relative before:content-['→'] before:absolute before:left-0 before:text-link before:font-mono before:text-xs"
               >
                 {f}
               </li>
