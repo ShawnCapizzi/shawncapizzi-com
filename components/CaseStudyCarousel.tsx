@@ -154,7 +154,7 @@ export function CaseStudyCarousel({
           </div>
 
           {/* Two-column slide layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="split-grid grid-cols-1 lg:grid-cols-2 items-start">
             {/* Media column */}
             <div
               className={

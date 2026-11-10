@@ -295,7 +295,7 @@ export default function Page() {
 
       {/* PATH 1 - EMBEDDED */}
       <section id="leadership" className="section border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
-        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12 split-grid grid-cols-1 lg:grid-cols-12">
           <div className="lg:col-span-7">
           <p className="eyebrow">Engagement type 01</p>
           <h2 className="section-title max-w-3xl">
@@ -344,7 +344,7 @@ export default function Page() {
       {/* PATH 2 - ADVISORY */}
       <section id="advisory" className="section border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 mb-10 md:mb-12">
+          <div className="split-grid grid-cols-1 lg:grid-cols-12 mb-10 md:mb-12">
             <div className="lg:col-span-7">
               <p className="eyebrow">Engagement type 02</p>
               <h2 className="section-title max-w-3xl">
@@ -390,7 +390,7 @@ export default function Page() {
 
       {/* PATH 3 - ON CALL */}
       <section id="oncall" className="section border-t border-border-subtle scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
-        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+        <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12 split-grid grid-cols-1 lg:grid-cols-12">
           <div className="lg:col-span-7">
           <p className="eyebrow">Engagement type 03</p>
           <h2 className="section-title max-w-3xl">

@@ -69,6 +69,7 @@
      .card-body when an image sits above the text. */
   --space-card: 1.5rem;               /* 24 phone, 28 tablet, 32 desktop */
   --space-card-compact: 1rem;         /* 16 phone, 20 tablet, 24 desktop */
+  --space-split: 2.5rem;              /* 40 phone, 48 tablet, 64 desktop */
 
   /* ---- TYPOGRAPHY: families ---- */
   --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -562,6 +563,7 @@ h3 {
     --space-section-tight: 2.5rem;
     --space-card: 1.75rem;
     --space-card-compact: 1.25rem;
+    --space-split: 3rem;
   }
 }
 @media (min-width: 1024px) {
@@ -571,6 +573,7 @@ h3 {
     --space-section-tight: 3rem;
     --space-card: 2rem;
     --space-card-compact: 1.5rem;
+    --space-split: 4rem;
   }
 }
 
@@ -625,6 +628,15 @@ h3 {
 .card-grid {
   display: grid;
   gap: var(--space-card);
+}
+
+/* Gutter between text and the image, quote, or text column beside it:
+   40 phone (stacked, still one section), 48 tablet, 64 desktop (twice
+   the card gutter). Pages set the columns with grid-cols utilities and
+   never a gap-* on a split. */
+.split-grid {
+  display: grid;
+  gap: var(--space-split);
 }
 
 /* A run of paragraphs (or list items) in one container: the container

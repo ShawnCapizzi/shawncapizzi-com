@@ -177,7 +177,7 @@ export default function Page() {
           <p className="lead-text max-w-3xl mb-10 md:mb-12 text-text-secondary text-pretty">
             Six colors, each with its nearest PANTONE Solid Coated match.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
+          <div className="card-grid grid-cols-2 md:grid-cols-3">
             {SWATCHES.map((s) => (
               <figure key={s.hex} className="min-w-0">
                 <div className="rounded-xl overflow-hidden border border-border-default">

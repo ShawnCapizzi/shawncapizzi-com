@@ -122,7 +122,7 @@ export default function Page() {
           confirms "right person" in a glance. */}
       <section className="relative section-hero">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="split-grid grid-cols-1 lg:grid-cols-12 items-start">
             <div className="lg:col-span-7 order-2 lg:order-1">
               <p className="eyebrow">How I help</p>
               <h1 className="headline-static hero-title text-balance max-w-4xl">
@@ -254,7 +254,7 @@ export default function Page() {
           the ideas, the lowest-commitment option), beside the book. */}
       <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center">
+          <div className="split-grid grid-cols-1 md:grid-cols-12 items-center">
             <div className="md:col-span-6">
               <p className="metadata-label">Prefer to look around first?</p>
               <ul className="space-y-4">
@@ -293,7 +293,7 @@ export default function Page() {
             {/* The book and the Clarity Cards, the IP Shawn mails to senior
                 contacts with the card. For someone who received both, seeing
                 them here closes the loop the identity card opens. */}
-            <div className="md:col-span-6 grid grid-cols-2 gap-5 md:gap-6">
+            <div className="md:col-span-6 card-grid grid-cols-2">
               <figure>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
                   <Image

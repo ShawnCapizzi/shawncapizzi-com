@@ -270,7 +270,7 @@ export default function Page() {
       {/* PUBLISHED + TALK */}
       <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+          <div className="split-grid grid-cols-1 lg:grid-cols-2 items-start">
             <div>
               <p className="eyebrow">Published</p>
               <h2 className="section-title text-balance">

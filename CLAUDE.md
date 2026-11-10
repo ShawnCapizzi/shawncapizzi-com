@@ -223,6 +223,14 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   from `--space-card`, so gutter equals inset (24 / 28 / 32). Pages add
   only `grid-cols-*`; never a `gap-*` on a card grid. Before, 16 card
   grids used five gap recipes (20 to 40px).
+- Text beside an image, a quote, or another text column is `.split-grid`:
+  gap from `--space-split`, 40 phone (stacked, still one section), 48
+  tablet, 64 desktop (twice the card gutter). Image pairs and swatch tiles
+  use `.card-grid`. Pages add only `grid-cols-*`. Before, 13 splits used
+  desktop gutters of 40, 48, 56, and 64. Left on purpose: the homepage
+  hero, the data grids (case study metadata strip, the /about and
+  /design-info definition lists, the /contact strip, book contents rows),
+  and the CourtVisual tilted phone pair.
 
 ## Color meaning (November 2026)
 

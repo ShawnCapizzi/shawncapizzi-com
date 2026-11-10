@@ -131,7 +131,7 @@ function isVideo(src: string): boolean {
 function ImageGrid({ images }: { images: CaseStudyImage[] }) {
   return (
     <div
-      className={`grid gap-6 md:gap-8 ${
+      className={`card-grid ${
         images.length === 1 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"
       }`}
     >
@@ -394,7 +394,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
 
                 {project.images && project.images.length > 0 && (
                   <div
-                    className={`mt-10 md:mt-14 grid gap-6 md:gap-8 ${
+                    className={`mt-10 md:mt-14 card-grid ${
                       project.images.length > 1
                         ? "grid-cols-1 md:grid-cols-2"
                         : "grid-cols-1"

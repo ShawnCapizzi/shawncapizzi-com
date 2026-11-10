@@ -111,7 +111,7 @@ export default function Page() {
 
           {/* Body copy + portrait, side-by-side on desktop; stacks on mobile,
               portrait first. */}
-          <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 lg:items-center">
+          <div className="mt-10 md:mt-14 split-grid grid-cols-1 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col justify-center text-text-secondary prose-block text-pretty">
               <p>
                 The more meetings, planning sessions, and project kickoffs I
@@ -236,7 +236,7 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             <KeepHyphens>The work that&apos;s hard to staff full-time, but too important to miss.</KeepHyphens>
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+          <div className="split-grid grid-cols-1 lg:grid-cols-12">
             <div className="lg:col-span-7 text-text-secondary prose-block text-pretty">
               <p>
                 Sometimes it&apos;s budget. Sometimes the opportunity isn&apos;t

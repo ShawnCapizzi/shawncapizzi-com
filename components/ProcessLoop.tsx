@@ -131,7 +131,7 @@ export function ProcessLoop() {
   const move = Math.floor(active / 2);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+    <div className="split-grid grid-cols-1 lg:grid-cols-2 items-start">
       {/* The sketch, under the active move's name */}
       <div className="min-w-0">
         <div key={move} className="mb-6 lg:mb-8 animate-[swapin_.4s_ease-out] motion-reduce:animate-none">

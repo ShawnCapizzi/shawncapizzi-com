@@ -91,7 +91,7 @@ export function BookToc() {
         <span><span className="text-text-primary">{PARTS.length}</span> pillars</span>
       </p>
 
-      <div className="mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8 lg:gap-10 items-start">
+      <div className="mt-8 md:mt-10 split-grid grid-cols-1 lg:grid-cols-[300px_1fr] items-start">
         <div>
           <div className="relative aspect-[16/9] lg:aspect-[4/3] rounded-2xl overflow-hidden border border-border-default">
             <Image
