@@ -481,7 +481,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
           </div>
 
           {props.bottomImages && props.bottomImages.length > 0 && (
-            <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="mt-16 md:mt-20 card-grid grid-cols-1 md:grid-cols-2">
               {props.bottomImages.map((img) => (
                 <div
                   key={img.src}
@@ -591,7 +591,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
             <h2 className="section-title">
               Related projects
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="card-grid grid-cols-1 md:grid-cols-2">
               {props.related.map((rel) => (
                 <Link
                   key={rel.slug}

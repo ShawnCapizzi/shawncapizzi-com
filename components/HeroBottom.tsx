@@ -66,7 +66,7 @@ export function HeroBottom() {
   return (
     <section className="pt-12 md:pt-12 pb-14 md:pb-20">
       <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+        <div className="card-grid grid-cols-1 md:grid-cols-3">
           {DOORS.map((door) => {
             /* All three doors share one border (November 2026). The first
                door used to carry a purple edge as the primary ask; it read
@@ -85,7 +85,7 @@ export function HeroBottom() {
                   {door.body}
                 </p>
                 <p
-                  className="mt-6 inline-flex items-center text-sm font-medium transition-colors text-link group-hover:text-link-hover"
+                  className="card-foot inline-flex items-center text-sm font-medium transition-colors text-link group-hover:text-link-hover"
                 >
                   {door.cta}
                   <span aria-hidden="true" className="ml-2">

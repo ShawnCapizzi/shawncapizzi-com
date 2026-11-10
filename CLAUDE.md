@@ -138,7 +138,9 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 
 - No bullet-point overuse — prose first, lists only when essential
 - No agency-speak: "crafted", "elevated", "transformed", "delighted", "journey"
-- No "we" — Shawn is one person
+- No "we" — Shawn is one person. One exception (Shawn's call, November
+  2026): the Advisory shape cards on /engagements say "we" because there it
+  means Shawn and the client working the problem together.
 - No drop shadows for elevation (use bg shifts)
 - No more than 3 colors visible on a page
 - No icons or illustrations beyond the single starburst symbol, with two
@@ -193,6 +195,18 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   on a card. Before, 27 cards used 11 insets (16 to 40px) and two radii;
   measured after, every card on nine pages reads 24 / 32 at 16px radius.
   `.card-surface` remains as the shared surface paint only.
+- Cards in a row share the row's height. Content stacks from the top on
+  the 24px rhythm; the last action carries `.card-foot`, which puts every
+  link or button in the row on one baseline with 24px above it. The copy
+  in a row is balanced to within a line of the tallest card, so the air
+  above the foot never reads as a hole; when a row looks uneven, fix the
+  copy, not the rule. Pages set no `mt-*`, `mt-auto`, or `flex-1` on
+  card children. Text-only rows (Three ways, testimonials) have no foot
+  and simply stack.
+- The gutter between cards or image tiles in a row is `.card-grid`: gap
+  from `--space-card`, so gutter equals inset (24 / 28 / 32). Pages add
+  only `grid-cols-*`; never a `gap-*` on a card grid. Before, 16 card
+  grids used five gap recipes (20 to 40px).
 
 ## Color meaning (November 2026)
 

@@ -71,7 +71,7 @@ export function SelectedWork() {
           </p>
         </div>
 
-        <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="mt-16 md:mt-20 card-grid grid-cols-1 md:grid-cols-3">
           {CASE_STUDIES.map((cs) => (
             <Link
               key={cs.slug}
@@ -98,7 +98,7 @@ export function SelectedWork() {
                 <p className="card-text text-sm md:text-[15px] text-text-secondary flex-1">
                   {cs.outcome}
                 </p>
-                <p className="mt-6 inline-flex items-center text-sm font-medium text-link group-hover:text-link-hover transition-colors">
+                <p className="card-foot inline-flex items-center text-sm font-medium text-link group-hover:text-link-hover transition-colors">
                   Read the case study{" "}
                   <span aria-hidden="true" className="ml-2">
                     &rarr;

@@ -523,6 +523,11 @@ h3 {
 .metadata-label + * {
   margin-top: var(--space-after-eyebrow);
 }
+/* A label that sits in a row (the jump nav's "Jump to") spaces nothing
+   below it; the row's gap does that. */
+.label-inline + * {
+  margin-top: 0;
+}
 
 /* Section roles. A section's vertical padding comes from here, never
    from py-* on the element, so every page breathes at the same rate. */
@@ -587,6 +592,36 @@ h3 {
 }
 .card-compact > .card-body {
   padding: var(--space-card-compact);
+}
+
+/* Cards in a row share the row's height. Inside, content stacks from the
+   top on the 24px rhythm and the last action (.card-foot) sits on one
+   baseline across the row. The copy in a row is balanced to within a
+   line, so the air above the foot never reads as a hole; when it does,
+   fix the copy, not the rule. */
+.card:has(> .card-foot),
+.card:has(> .card-body),
+.card > .card-body,
+.card-compact:has(> .card-foot),
+.card-compact > .card-body {
+  display: flex;
+  flex-direction: column;
+}
+.card > .card-body,
+.card-compact > .card-body {
+  flex: 1 1 auto;
+}
+.card-foot {
+  margin-top: auto;
+  padding-top: var(--space-paragraph);
+}
+
+/* Gutter between cards (and image tiles) in a row equals the card inset:
+   24 phone, 28 tablet, 32 desktop, one token. Pages set the columns with
+   grid-cols utilities and never a gap-* on a card grid. */
+.card-grid {
+  display: grid;
+  gap: var(--space-card);
 }
 
 /* Body styles. One leading per size class; paragraphs space

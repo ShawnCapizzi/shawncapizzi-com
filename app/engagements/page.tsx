@@ -39,7 +39,7 @@ const WAYS = [
     id: "advisory",
     name: "Advisory",
     title: "Hire me to advise.",
-    tagline: "Focused guidance around a defined opportunity, challenge, or decision.",
+    tagline: "Focused guidance around a defined opportunity, challenge, or decision, with a clear recommendation.",
     keywords: "Advisory · Product strategy · Experience strategy · Service design · Design systems",
   },
   {
@@ -56,21 +56,21 @@ const ADVISORY_SHAPES = [
   {
     name: "Strategic Snapshot",
     description:
-      "A focused read on one well-defined problem, followed by clear options and a recommended path forward. Useful when a program is stuck, a decision is approaching, or leadership needs an outside perspective.",
-    scope: "Stakeholder interviews, a review of the work so far, and one deliverable.",
+      "We tackle a defined problem, present options, and a clear list of recommendations. Every insight earns its slide in the deck: a tight story with meat, nothing to skip past. Useful when a program is stuck, a decision is approaching, or leadership needs an outside perspective before committing budget or a team.",
+    scope: "One defined deliverable with insights and recommendations. Built from data, your need, interviews, or a review of the current product or experience.",
   },
   {
     name: "Engagement Sprint",
     description:
-      "A deeper look at a defined challenge using stakeholder conversations, existing evidence, and the work already in motion, including a cross-functional workflow mapped step by step when the challenge is a process rather than a product. The outcome is clarity around what matters, what to do next, and what the team can act on.",
+      "A deeper look at a defined challenge, whether a customer insight, a new brand message, or a new digital tactic integration, using stakeholder conversations and the work already in motion. The outcome is clarity on what matters, what to do next, and what the team can act on.",
     scope:
-      "Up to 10 interviews with real stakeholders, plus AI-assisted simulations where they help, reported separately. A prioritized roadmap, an executive presentation, and one to two follow-up reviews.",
+      "A clear roadmap, an actionable presentation, and follow-ups. Built from 6+ stakeholder interviews and user needs, with AI simulations when needed.",
   },
   {
     name: "AI Opportunity Diagnostic",
     description:
-      "A practical look at where AI can improve the way your team works, and where it probably shouldn\u2019t go yet. We map the workflow as it is: which tasks people handle, which software and services do the rest, where they tangle, and where revenue leaks. Then where to relieve staff, where to consolidate services or replace them with a custom agent, and what to leave alone. Vendor-agnostic, grounded in your current workflows, data, and readiness.",
-    scope: "A few weeks. The output is a prioritized roadmap, not a vendor list.",
+      "A practical look at where AI can improve the way your team works, and where it shouldn\u2019t go yet. We map the workflow as it is, find where it gets unnecessarily complex, then decide what to refine, which staff and layers to relieve, what to hand to custom agents, what to leave alone, and which vendors and SaaS bills to cut.",
+    scope: "A prioritized roadmap, not a fluff vendor list, in a few weeks.",
   },
 ];
 
@@ -186,7 +186,7 @@ export default function Page() {
             aria-label="On this page"
             className="flex items-center gap-x-3 overflow-x-auto whitespace-nowrap py-3 lg:py-4 text-sm lg:text-base text-text-tertiary [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
-            <span className="metadata-label shrink-0 mr-1">Jump to</span>
+            <span className="metadata-label label-inline shrink-0 mr-1">Jump to</span>
             <a href="#ways" className="shrink-0 text-link hover:text-link-hover transition-colors">Ways of working</a>
             <span aria-hidden="true">·</span>
             <a href="#leadership" className="shrink-0 text-link hover:text-link-hover transition-colors">Embedded</a>
@@ -212,7 +212,7 @@ export default function Page() {
             Leadership, Advisory, or On Call
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="card-grid grid-cols-1 lg:grid-cols-3">
             {WAYS.map((way) => (
               <article
                 key={way.id}
@@ -220,11 +220,11 @@ export default function Page() {
               >
                 <p className="eyebrow">{way.name}</p>
                 <h3 className="card-title text-text-primary">{way.title}</h3>
-                <p className="card-text mt-2 text-base md:text-lg text-text-secondary text-pretty flex-1">{way.tagline}</p>
-                <p className="card-text mt-6 metadata-label">{way.keywords}</p>
+                <p className="card-text text-base md:text-lg text-text-secondary text-pretty">{way.tagline}</p>
+                <p className="card-text metadata-label">{way.keywords}</p>
                 <a
                   href={`#${way.id}`}
-                  className="mt-7 inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
+                  className="card-foot inline-flex items-center text-sm font-medium text-link hover:text-link-hover transition-colors"
                 >
                   {way.name} in detail{" "}
                   <span aria-hidden="true" className="ml-2">
@@ -365,7 +365,7 @@ export default function Page() {
             />
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="card-grid grid-cols-1 lg:grid-cols-3">
             {ADVISORY_SHAPES.map((shape) => (
               <article
                 key={shape.name}
@@ -374,12 +374,12 @@ export default function Page() {
                 <h3 className="card-title text-text-primary">
                   {shape.name}
                 </h3>
+                <p className="card-text text-sm md:text-base text-text-secondary text-pretty">
+                  <span className="metadata-label block">Typical shape</span>
+                  {shape.scope}
+                </p>
                 <p className="card-text text-base md:text-lg text-text-secondary text-pretty">
                   {shape.description}
-                </p>
-                <p className="card-text mt-5 text-sm md:text-base text-text-secondary text-pretty">
-                  <span className="metadata-label block">Scope</span>
-                  {shape.scope}
                 </p>
               </article>
             ))}

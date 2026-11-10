@@ -63,7 +63,7 @@ const CASE_STUDIES = [
     eyebrow: "Independent product work · AI-native product design",
     title: "How I use AI to get from idea to in-market software faster",
     description:
-      "Working products and prototypes that let me test assumptions, explore new processes, and make emerging ideas tangible. The learning feeds directly back into my product, experience, and client work.",
+      "Working products and prototypes that let me test assumptions and make blue sky, emerging ideas something teams can see. The learning feeds straight back into my client work.",
     image:
       "/images/case-studies/05-ai-native-product-design-lab/01-hero-ai-native-design-lab.png",
   },
@@ -101,7 +101,7 @@ export default function Page() {
       {/* CASE STUDIES GRID */}
       <section className="section">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
+          <div className="card-grid grid-cols-1 md:grid-cols-2">
             {CASE_STUDIES.map((cs) => (
               <Link
                 key={cs.slug}
@@ -123,10 +123,10 @@ export default function Page() {
                   <h2 className="card-title text-text-primary group-hover:text-link transition-colors">
                     <KeepHyphens>{cs.title}</KeepHyphens>
                   </h2>
-                  <p className="card-text mt-4 text-text-secondary">
+                  <p className="card-text text-text-secondary">
                     {cs.description}
                   </p>
-                  <p className="mt-6 text-link group-hover:text-link-hover transition-colors text-base font-medium">
+                  <p className="card-foot text-link group-hover:text-link-hover transition-colors text-base font-medium">
                     Read the case study{" "}
                     <span aria-hidden="true" className="ml-1">
                       →

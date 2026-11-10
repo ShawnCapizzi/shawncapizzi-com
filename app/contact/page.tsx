@@ -53,7 +53,7 @@ export default function Page() {
             Calendar, email, or phone: whatever&apos;s easiest. I work
             remote-first, so it doesn&apos;t matter where&nbsp;you&nbsp;are.
           </p>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="card-grid grid-cols-1 lg:grid-cols-3">
             {/* Card 1: calendar. The only button on the site that opens Cal
                 directly (October 2026); every other general CTA lands here. */}
             <article className="relative card flex flex-col">
@@ -61,7 +61,7 @@ export default function Page() {
               <h2 className="card-title text-text-primary">
                 Find a time that works.
               </h2>
-              <p className="card-text text-base md:text-lg text-text-secondary mb-8 flex-1">
+              <p className="card-text text-base md:text-lg text-text-secondary">
                 We&apos;ll talk through what&apos;s happening, what you&apos;re
                 trying to accomplish, and whether I can help.
               </p>
@@ -69,7 +69,7 @@ export default function Page() {
                 href={CAL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform self-start"
+                className="card-foot self-start inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
               >
                 Open the calendar
                 <span aria-hidden="true" className="ml-2">&rarr;</span>
@@ -82,13 +82,13 @@ export default function Page() {
               <h2 className="card-title text-text-primary">
                 Prefer to start in writing?
               </h2>
-              <p className="card-text text-base md:text-lg text-text-secondary mb-8 flex-1">
+              <p className="card-text text-base md:text-lg text-text-secondary">
                 Send a question, some context, an introduction, or whatever
                 you have so far. You don&apos;t need a finished brief.
               </p>
               <a
                 href={`mailto:${EMAIL}`}
-                className="inline-flex items-center text-base md:text-lg font-medium text-link hover:text-link-hover transition-colors self-start"
+                className="card-foot self-start inline-flex items-center text-base md:text-lg font-medium text-link hover:text-link-hover transition-colors"
               >
                 {EMAIL}
                 <span aria-hidden="true" className="ml-2">&rarr;</span>
@@ -102,12 +102,12 @@ export default function Page() {
                 Have a quick question?
               </h2>
               <p className="body-text text-base md:text-lg text-text-secondary mb-8 flex-1">
-                Call or leave a voicemail. I&apos;ll get back to you within a
-                business day.
+                Call or leave a voicemail with what you&apos;re working on. I&apos;ll
+                get back to you within a business day, sooner if it&apos;s urgent.
               </p>
               <a
                 href={`tel:${PHONE_TEL}`}
-                className="inline-flex items-center text-base md:text-lg font-medium text-link hover:text-link-hover transition-colors self-start"
+                className="card-foot self-start inline-flex items-center text-base md:text-lg font-medium text-link hover:text-link-hover transition-colors"
               >
                 {PHONE_DISPLAY}
                 <span aria-hidden="true" className="ml-2">&rarr;</span>
@@ -176,7 +176,7 @@ export default function Page() {
               href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center text-base md:text-lg font-medium text-link hover:text-link-hover transition-colors"
+              className="card-foot inline-flex items-center text-base md:text-lg font-medium text-link hover:text-link-hover transition-colors"
             >
               Connect on LinkedIn
               <span aria-hidden="true" className="ml-2">&rarr;</span>

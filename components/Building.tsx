@@ -83,7 +83,7 @@ export function Building() {
           </p>
         </div>
 
-        <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="mt-16 md:mt-20 card-grid grid-cols-1 md:grid-cols-2">
           {PRODUCTS.map((p) => (
             <article
               key={p.key}
@@ -116,7 +116,7 @@ export function Building() {
                 <p className="card-text text-sm md:text-base text-text-secondary flex-1">
                   {p.body}
                 </p>
-                <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <div className="card-foot flex flex-wrap items-center gap-x-6 gap-y-3">
                   <a
                     href={p.liveUrl}
                     target="_blank"

@@ -38,7 +38,7 @@ export function CTACards({ cards }: { cards: string[] }) {
   if (items.length === 0) return null;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+    <div className="card-grid grid-cols-1 md:grid-cols-2">
       {items.map((item, i) => {
         // Normalize "212-380-3900" → "tel:+12123803900"
         // Note: assumes US numbers. If international support is ever needed,
@@ -83,11 +83,11 @@ export function CTACards({ cards }: { cards: string[] }) {
                   ) : null}
                 </h3>
 
-                <p className="card-text mt-4 text-base text-text-secondary flex-1">
+                <p className="card-text text-base text-text-secondary">
                   {item.description}
                 </p>
 
-                <p className="mt-6 text-link group-hover:text-link-hover transition-colors text-base font-medium">
+                <p className="card-foot text-link group-hover:text-link-hover transition-colors text-base font-medium">
                   {item.cta}{" "}
                   <span aria-hidden="true" className="ml-1">
                     &rarr;

@@ -214,24 +214,25 @@ export default function Page() {
       {/* THE MANUAL + THE FOREWORD */}
       <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <div className="card-grid grid-cols-1 md:grid-cols-2">
             <article className="relative card">
               <p className="eyebrow">The field manual</p>
               <h2 className="card-title text-text-primary">
                 The whole method, in something you can hold.
               </h2>
-              <p className="card-text text-base text-text-secondary mb-8">
+              <p className="card-text text-base text-text-secondary">
                 The full Process: the three principles with their exit tests
                 and failure modes, the six flexible actions, the ten standards
                 of the room, and the one-page field version. A small printed
-                manual and a PDF. Leave your email and it arrives when it
-                ships.
+                manual and a PDF.
               </p>
+              <div className="card-foot">
               <SignupCard
                 buttonLabel="Send me the manual"
                 source="manual"
                 successText="You're on the list, and a short note is on its way. The manual arrives when it ships, plus the occasional note from the work, nothing else."
               />
+              </div>
             </article>
 
             <Link
@@ -242,16 +243,20 @@ export default function Page() {
               <h2 className="card-title text-text-primary group-hover:text-link transition-colors">
                 The foreword, free.
               </h2>
-              <p className="body-text text-sm md:text-base italic text-text-tertiary mb-4">
+              <p className="card-text text-sm md:text-base italic text-text-tertiary">
                 The Human Condition: why empathy is the foundation of digital
                 experience.
               </p>
-              <p className="body-text text-base text-text-secondary mb-6 flex-1">
+              <p className="card-text text-base text-text-secondary">
                 Why clarity wins, how to cut through the noise, and what it
                 takes to do great work in the rooms where decisions get
                 made. Fifteen years of agency life, distilled.
               </p>
-              <p className="text-link group-hover:text-link-hover transition-colors text-base font-medium">
+              <p className="card-text text-base text-text-secondary">
+                Start here if you want the pros and cons before the process. It sets
+                up everything the manual turns into practice.
+              </p>
+              <p className="card-foot text-link group-hover:text-link-hover transition-colors text-base font-medium">
                 Read the foreword{" "}
                 <span aria-hidden="true" className="ml-1">
                   &rarr;

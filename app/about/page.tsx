@@ -177,7 +177,7 @@ export default function Page() {
               role="region"
               aria-label="More photographs and clips"
               tabIndex={0}
-              className="mt-6 md:mt-8 -mx-6 px-6 md:mx-0 md:px-0 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-8 md:overflow-visible"
+              className="mt-6 md:mt-8 -mx-6 px-6 md:mx-0 md:px-0 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-(--space-card) md:overflow-visible"
             >
               <BeyondPhoto
                 src="/images/about/beyond/one-world-trade-center.jpg"
@@ -422,7 +422,7 @@ export default function Page() {
             In the work
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="card-grid grid-cols-1 md:grid-cols-2">
             <figure className="rounded-2xl overflow-hidden border border-border-default bg-bg-raised">
               <div className="relative aspect-[4/5]">
                 <Image

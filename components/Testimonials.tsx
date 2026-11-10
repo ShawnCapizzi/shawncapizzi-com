@@ -48,7 +48,7 @@ export function Testimonials() {
           </h2>
         </div>
 
-        <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="mt-16 md:mt-20 card-grid grid-cols-1 md:grid-cols-2">
           {TESTIMONIALS.map((t) => (
             <figure
               key={t.name}
@@ -59,7 +59,7 @@ export function Testimonials() {
                   {t.quote}
                 </p>
               </blockquote>
-              <figcaption className="mt-7 flex items-center gap-4">
+              <figcaption className="card-foot flex items-center gap-4">
                 <Image
                   src={t.image}
                   alt={t.name}

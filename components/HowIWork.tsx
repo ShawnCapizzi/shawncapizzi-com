@@ -79,7 +79,7 @@ export function HowIWork() {
           </p>
         </div>
 
-        <div className="mt-12 md:mt-14 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+        <div className="mt-12 md:mt-14 card-grid grid-cols-1 md:grid-cols-3">
           {MODES.map((mode) => (
             <div
               key={mode.key}
