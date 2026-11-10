@@ -27,9 +27,25 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <Wordmark size="small" href="/" />
           </div>
-          <div className="flex items-center gap-3 text-text-secondary">
-            <SymbolMark size={16} interactive={false} />
-            <span className="text-sm font-medium tracking-tight">Clarity is the advantage.</span>
+          {/* The stranger-facing statement (November 2026). The footer is the
+              one element on every page, so it has to work for someone meeting
+              the site cold: the question a visitor can answer in their head,
+              then the locked positioning line as its answer. It replaced the
+              brand line "Clarity is the advantage." Do not rewrite either
+              line; both are Shawn's, and the second is locked. */}
+          <div className="flex items-start gap-3 md:max-w-2xl">
+            <span className="mt-1 shrink-0 text-text-secondary">
+              <SymbolMark size={16} interactive={false} />
+            </span>
+            <div>
+              <p className="text-base font-medium tracking-tight text-text-primary text-pretty">
+                What are you trying to solve, improve, or make happen?
+              </p>
+              <p className="mt-2 text-sm text-text-secondary text-pretty">
+                I help teams get clear on direction, sharpen the thinking, and
+                move the work forward.
+              </p>
+            </div>
           </div>
         </div>
 

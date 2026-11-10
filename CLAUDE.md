@@ -2,8 +2,9 @@
 
 Personal brand site for Shawn Capizzi — Director of UX, AI experience architect, 
 and author of "Seeing Past the Cage: Better Communication Design in the Age of AI."
-The site called the book "Clarity Is the Advantage" until September 2026; that
-phrase now appears only as the brand line in the footer.
+The site called the book "Clarity Is the Advantage" until September 2026. The
+phrase was also the footer's brand line until November 2026; it no longer
+appears on the site.
 
 The thesis: **AI adoption is not a technology problem. It is an experience 
 architecture problem.** Every page, every word, every visual decision reinforces this.
@@ -20,7 +21,8 @@ Full site map and per-page specs in `docs/ia-framework-v1-1.md`.
 
 ## Design system
 
-All visual decisions follow `docs/design-system.md`. This is non-negotiable.
+All visual decisions follow `docs/design-system.md` (v2.0, November 2026,
+which matches the live tokens and roles). This is non-negotiable.
 
 - Do not introduce new color tokens, type scale, spacing values, or components 
   without referencing this file
@@ -42,6 +44,20 @@ All visual decisions follow `docs/design-system.md`. This is non-negotiable.
 - Page copy lives in `docs/manuscript-v2-2.md` — use these exact words, do not 
   paraphrase or invent voice
 - Voice principles in design system §1: senior, direct, editorial, restrained
+- Three brand lines, each placed by how much context the reader has
+  (November 2026, Shawn's call). No context: the pair "What are you trying
+  to solve, improve, or make happen?" then "I help teams get clear on
+  direction, sharpen the thinking, and move the work forward." It is the
+  footer on every page and the top of /how-i-help; each case study's
+  closing ask pairs its own question with the positioning line. Some
+  context: "Listen first. Make it visible. Prove it worked." stays beside
+  the Process. Full context: "workflows as they are, and as they could be"
+  stays in first-person prose, the essay, and the book. Both lines of the
+  pair are locked; never rewrite them. Every page keeps its own closing
+  question (they are tailored on purpose), and the homepage hero takes no
+  added line. The homepage description (`HOME_DESCRIPTION` in `lib/seo.ts`,
+  also the default share text) opens with the positioning line, in Shawn's
+  wording: what a stranger reads before arriving.
 - Anti-voice list is enforced: no "we", no "crafted/elevated/journey", no 
   motivational copy, no SaaS marketing tone
 - No criticism of other consultants, agencies, or AI builders (September
@@ -263,7 +279,6 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   prose opens beneath. Cards and filled
   accordions were retired (Shawn's call): filled, they competed with the
   page; unfilled, they read as a stack of dark boxes on a phone.
-  `components/AccordionDetail.tsx` is unused and kept only until removed.
 - Hover (November 2026, Shawn's call: hover belongs on desktop, used with
   restraint). Three moves, each answering "can I click this?", and no
   others: text links go lavender to white; pill buttons grow 2% (purple

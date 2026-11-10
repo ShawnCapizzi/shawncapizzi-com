@@ -24,11 +24,13 @@ export const WEBSITE_ID = `${SITE_URL}/#website`;
 export const LINKEDIN_URL = "https://www.linkedin.com/in/shawncapizzi";
 
 /** Homepage title and description. Title under 60 characters so results
- *  do not truncate it. The description carries the hero H1 and lead in about
- *  160 characters: leadership first, then the build practice. */
+ *  do not truncate it. The description is what a stranger reads in search
+ *  results and link previews before arriving (November 2026, Shawn's
+ *  wording): the locked positioning line first, then the disciplines and
+ *  who they serve, in about 160 characters. */
 export const HOME_TITLE = "Shawn Capizzi | Design Leadership, Service Design, and UX";
 export const HOME_DESCRIPTION =
-  "Service design, experience architecture, UX, CX, and AI-native product design for regulated and enterprise teams. 15 years in pharma, healthcare, and finance.";
+  "I help teams get clear on direction, sharpen the thinking, and move the work forward. UX, CX, and AI-native product design for regulated and enterprise teams.";
 
 export type ShareImage = { url: string; width: number; height: number; alt: string };
 

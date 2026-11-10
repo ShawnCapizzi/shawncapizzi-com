@@ -1,20 +1,22 @@
 # Capizzi Design System
 
-**Version 1.0** · May 2026
+**Version 2.0** · November 2026 (v1.0 May 2026)
 Maintained by Shawn Capizzi
 
 ---
 
 ## How to use this document
 
-This is the single source of truth for the visual and verbal identity of shawncapizzi.com and any extension of the Capizzi brand (decks, lead magnets, social, future product). It is a working document, not a frozen spec — every decision in here is editable. When we make a change, we change it here first, then in the code.
+This is the reference for the visual and verbal identity of shawncapizzi.com and any extension of the Capizzi brand (decks, lead magnets, social, future product). Every decision in here is editable.
 
-When implementing, this file maps to two companion artifacts in the codebase:
+Values live in the code, and this document describes them:
 
-- `tailwind.config.js` — design tokens exposed to the framework
-- `globals.css` — CSS custom properties and base styles
+- `app/globals.css` holds every token (Tailwind v4 `@theme` block; there is no `tailwind.config.js` in v4) and every type, spacing, card, and layout role.
+- `CLAUDE.md` records each system decision with its date and the before-and-after measurements.
 
-The values in this doc are the source. The code mirrors it.
+When a value changes, it changes in `globals.css` first, then here.
+
+v2.0 (November 2026) brings sections 2 through 5 and 9 in line with the live site: the deep navy palette, lavender for actions, Instrument Sans headings, role-based type and spacing, and Tailwind v4. Section 1 gains the brand-line decision of November 2026; the rest of sections 1, 6, 7, and 8 is unchanged from v1.0.
 
 ---
 
@@ -32,11 +34,22 @@ The brand is not designed for the design community, for portfolio peers, or for 
 
 Every page of the site, every piece of content, every visual decision should reinforce this. It is the line that differentiates Shawn from every other consultant in his target buyer's inbox.
 
-### The recurring brand line
+### The lines, and the context each one needs
 
-> **Clarity is the advantage.**
+Three lines carry the brand. Each lives where a reader has enough context to take it in (decided November 2026).
 
-This phrase appears in three places: hero supporting line, lead magnet identity, footer. It is the short-form expression of what Shawn sells.
+**No context: the stranger-facing statement.** A question the visitor can answer in their head, then the locked positioning line as its answer.
+
+> **What are you trying to solve, improve, or make happen?**
+> **I help teams get clear on direction, sharpen the thinking, and move the work forward.**
+
+This pair works for someone meeting the brand cold. It sits in the site footer (the one element on every page) and opens /how-i-help. Off the site it is the statement for an email signature or a deck cover. Case studies end on their own question with the positioning line as the answer. Neither line is rewritten.
+
+**Some context: the Process.** "Listen first. Make it visible. Prove it worked." is plain, but it is a method with no subject, so it stays beside the Process that explains it (/thinking, the homepage Process section).
+
+**Full context: the point of view.** "Workflows as they are, and as they could be" is how Shawn sees the work. It is romantic language, so it lives in his own first-person prose (the homepage and /about), in the essay of that name, and in the book.
+
+"Clarity is the advantage." was the brand line through v1.0 and the book's first title. It left the footer in November 2026. "Clarity" remains the name of the cards.
 
 ### Voice principles
 
@@ -63,43 +76,47 @@ The Capizzi brand never sounds like:
 
 ## 2. Color System
 
-The palette is disciplined: black-and-white as 90% of the surface, color used as punctuation. Three color families do specific jobs.
+The palette is disciplined: deep navy and off-white carry nearly every surface, and color is punctuation. Lavender means "this can be acted on." Nothing else is lavender.
 
 ### Foundation
 
 ```
---color-bg-primary:      #0A0A0A   /* near-black, true background */
---color-bg-elevated:     #141414   /* cards, subtle elevation */
---color-bg-raised:       #1F1F1F   /* hover states, deeper layers */
---color-bg-inverse:      #F5F5F4   /* rare; used for color-block sections */
+--color-bg-primary:      #000F1F   /* deep navy, the page */
+--color-bg-elevated:     #08203A   /* header, carousel frames, video posters (1.17:1 against the page) */
+--color-bg-raised:       #061C2F   /* raised panels */
+--color-bg-inverse:      #F5F5F4   /* rare; color-block sections */
 ```
+
+Cards paint `#04192B` through the `.card` role (see section 5).
 
 ### Type colors
 
 ```
---color-text-primary:    #F5F5F4   /* warm off-white, all body and display */
---color-text-secondary:  #A3A3A3   /* mid gray, supporting text */
---color-text-tertiary:   #8C8C8C   /* metadata, captions, eyebrow labels; 4.89:1 on bg-elevated, AA */
---color-text-inverse:    #0A0A0A   /* type on color-block sections */
+--color-text-primary:    #F5F5F4   /* warm off-white, headings and emphasis */
+--color-text-secondary:  #A3A3A3   /* mid gray, body and supporting text */
+--color-text-tertiary:   #8C8C8C   /* labels, captions, metadata; 5.74:1 on the page, 5.14:1 on raised, 4.89:1 on elevated, AA */
+--color-text-inverse:    #0A0A0A   /* type on light pills and color blocks */
 ```
+
+Page H1s and the hero lead use a warm cream (`#DAD8C9`, the lead at 82%) set in their roles.
 
 ### Borders & dividers
 
 ```
---color-border-subtle:   #262626   /* default borders, dividers */
---color-border-default:  #404040   /* inputs, cards */
---color-border-strong:   #737373   /* focused inputs, emphasis */
+--color-border-subtle:   #262626   /* dividers, hairlines */
+--color-border-default:  #404040   /* cards */
+--color-border-strong:   #737373   /* card hover, emphasis */
 ```
 
-### Brand color family — the gradient palette
+### Brand color family: the gradient palette
 
-These three colors form the atmospheric brand gradient (blue → purple → pink) and are also used solo as accents and color blocks.
+These colors form the atmospheric brand gradient (blue to purple to pink) and are used solo as accents.
 
 ```
 --color-brand-blue:      #4F46E5   /* deep electric indigo */
---color-brand-purple:    #6B5CFF   /* periwinkle — the "Clarity is the advantage" color */
+--color-brand-purple:    #6B5CFF   /* periwinkle; the primary action pill and the focus ring */
 --color-brand-pink:      #E879F9   /* hot pink/magenta */
---color-brand-orange:    #FF5722   /* the action accent — links, CTAs, "Live ↗" indicators */
+--color-brand-orange:    #FF5722   /* retired as the link color in v2.0; kept for rare indicators */
 ```
 
 ### Brand gradient
@@ -116,12 +133,10 @@ background: radial-gradient(
 );
 ```
 
-For full saturation color blocks (lead magnet headers, statement panels), use `--color-brand-purple` as solid background with `--color-text-inverse` type.
-
 ### Semantic colors (functional)
 
 ```
---color-link:            #FF5722   /* orange — link default */
+--color-link:            #A798FF   /* lavender: links, button text, the active item in a loop or list */
 --color-link-hover:      #FFFFFF   /* white on hover */
 --color-focus-ring:      #6B5CFF   /* periwinkle focus ring */
 --color-success:         #10B981   /* used sparingly */
@@ -131,7 +146,7 @@ For full saturation color blocks (lead magnet headers, statement panels), use `-
 
 ### Color usage rules
 
-The orange accent is the *only* color used for actions and links. It does not appear decoratively. The periwinkle purple is reserved for **moments** — the Clarity Advantage lead magnet, single statement panels, the focus ring. The full gradient is reserved for **atmosphere** — hero backdrop, occasional section transitions. If a color appears more than three times on a page, it is no longer doing punctuation work.
+Lavender is the only color for things that can be acted on: links, button text, the current Process move, the current chapter, and an accordion title on hover. Labels, eyebrows, captions, and metadata are tertiary gray in mono, never lavender, because a label in link color reads as a link on a phone. Periwinkle is reserved for the primary action pill and the focus ring. The full gradient is reserved for atmosphere. If a color appears more than three times on a page, it is no longer doing punctuation work.
 
 ---
 
@@ -139,150 +154,98 @@ The orange accent is the *only* color used for actions and links. It does not ap
 
 ### Type families
 
-**Display & Body — Geist Sans**
-Free, modern, designed for screens, ships natively with Next.js via `next/font`. Tight tracking at large sizes, excellent at body sizes. The choice that lets the design system feel current without being trend-chasing.
+Three faces, three jobs:
 
-**Monospace — Geist Mono**
-Used for metadata blocks, code references, and the editorial structured labels: `(YEAR) 2023 / (TIMELINE) 3 Months / (SERVICES) Website · Branding`.
+- **Instrument Sans** for every heading (h1, h2, h3) and the hero lead.
+- **Geist** for body text, buttons, and UI.
+- **Geist Mono** for labels only: eyebrows and metadata. Mono never sets a sentence.
 
-**Wordmark — custom asset**
-The handwritten "Capizzi" signature is a vector SVG asset, not a font. It is the only "handwriting" on the site.
+All three load through `next/font/google` in `app/layout.tsx`.
 
-**Fallback stack:** `'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`
+**Wordmark:** the handwritten "Capizzi" signature is a vector SVG asset, not a font. It is the only handwriting on the site.
 
-### Type scale
+### Heading roles
 
-A modular scale weighted toward large display sizes. Body sizes use a perfect-fourth ratio; display sizes scale more aggressively.
-
-```
-text-xs:        0.75rem   (12px)   — micro labels, footnotes
-text-sm:        0.875rem  (14px)   — captions, metadata values
-text-base:      1rem      (16px)   — body default
-text-lg:        1.125rem  (18px)   — body large, hero secondary
-text-xl:        1.25rem   (20px)   — section intros
-text-2xl:       1.5rem    (24px)   — small headings
-text-3xl:       1.875rem  (30px)   — H3
-text-4xl:       2.5rem    (40px)   — H2
-text-5xl:       3.5rem    (56px)   — H1 (sub-hero)
-text-6xl:       4.5rem    (72px)   — large headlines
-text-7xl:       6rem      (96px)   — display headlines
-text-8xl:       8rem      (128px)  — hero display
-text-display:   12rem     (192px)  — wordmark hero treatment (desktop only)
-```
-
-On mobile, display sizes step down proportionally: `text-display` becomes `text-7xl` at <768px viewport.
-
-### Type weights
-
-Geist Sans ships with the full weight range. Used:
-
-- `font-light` (300) — body italic-substitute, soft emphasis
-- `font-normal` (400) — body default
-- `font-medium` (500) — UI labels, buttons
-- `font-semibold` (600) — H3, eyebrow labels
-- `font-bold` (700) — H1, H2, CTAs
-- `font-black` (900) — hero display only, when the moment calls for it
-
-### Tracking (letter-spacing)
+Heading sizes come from four roles in `globals.css`, never from per-element size utilities.
 
 ```
-tracking-tighter:  -0.05em   /* display headlines 5xl+ */
-tracking-tight:    -0.025em  /* large headings */
-tracking-normal:   0          /* body */
-tracking-wide:     0.025em   /* small caps eyebrow labels */
-tracking-widest:   0.1em     /* metadata labels: (YEAR), (SERVICES) */
+.hero-title     page H1        30px, 39px from 1024px   600, tracking -0.03em, leading 1.12 then 1.05
+.hero-lead      under the H1   Instrument Sans 20px     400, leading 1.4, cream at 82%
+.section-title  every H2       30px                     600, tracking -0.025em, leading 1.2
+.card-title     card titles    20px, 24px from 768px    600, tracking -0.02em, leading 1.25
 ```
 
-### Line height
+Page heroes pair `.hero-title` with `.headline-static` (cream). Only the homepage uses `.headline-gleam`.
+
+### Body roles
+
+Five roles carry the size, the leading, and the gap from the paragraph before (phone / from 768px):
 
 ```
-leading-none:    1       /* display headlines */
-leading-tight:   1.1     /* large headings */
-leading-snug:    1.3     /* small headings */
-leading-normal:  1.5     /* body default */
-leading-relaxed: 1.65    /* long-form reading */
+.lead-text      18 / 20   leading 1.6   the paragraph under a section title, and every closing ask
+.body-text      16 / 18   leading 1.6   all running prose; .prose-block containers carry the same size
+.card-text      16        leading 1.6   card and panel text
+.small-text     14        leading 1.5   captions, credits, fine print
+.quote-text     20 / 24   leading 1.4   pull quotes (.quote-display 24 / 30 for the one large quote on /about)
 ```
 
-### Type pairings — actual usage
+### Labels
 
-**Hero display:**
-`text-display font-bold tracking-tighter leading-none`
-
-**H1 (page titles):**
-`text-6xl font-bold tracking-tight leading-tight`
-
-**H2 (section heads):**
-`text-4xl font-semibold tracking-tight leading-tight`
-
-**H3 (subsections):**
-`text-2xl font-semibold leading-snug`
-
-**Body default:**
-`text-base font-normal leading-relaxed text-secondary`
-
-**Body large (hero supporting copy):**
-`text-lg font-normal leading-relaxed text-secondary`
-
-**Eyebrow labels (above section heads):**
-`text-xs font-medium tracking-widest uppercase text-tertiary`
-
-**Metadata blocks (case studies):**
-`font-mono text-sm tracking-wide uppercase text-tertiary`
-Format: `(LABEL) value` — parens around the label, value follows.
+```
+.eyebrow / .metadata-label   Geist Mono 12px, 500, tracking 0.1em, uppercase, tertiary gray, leading 1.4
+```
 
 ---
 
 ## 4. Spacing & Layout
 
-### Spacing scale
+Everything sits on an 8px base, and each gap belongs to a role rather than a page.
 
-Built on a 4px base. Used for padding, margin, and gap.
+### Type spacing
+
+Type spaces itself: each role carries the gap to whatever follows it.
 
 ```
-space-0.5:  2px
-space-1:    4px
-space-2:    8px
-space-3:    12px
-space-4:    16px
-space-6:    24px
-space-8:    32px
-space-12:   48px
-space-16:   64px
-space-20:   80px
-space-24:   96px
-space-32:   128px
-space-40:   160px
-space-48:   192px
+--space-after-eyebrow:      16px   eyebrow or label to its heading
+--space-after-hero-title:   24px   H1 to the hero lead
+--space-after-title:        24px   section title to its text
+--space-after-card-title:   12px   card title to its text
+--space-paragraph:          24px   between paragraphs
+--space-paragraph-card:     16px   between paragraphs in a card
 ```
 
 ### Section rhythm
 
-Vertical padding between major sections is generous and consistent. The site breathes.
-
-- **Hero section:** `py-32` desktop, `py-20` mobile
-- **Standard content section:** `py-24` desktop, `py-16` mobile
-- **Tight section (e.g. logo strip):** `py-12` desktop, `py-8` mobile
-- **Section-to-section divider:** `mt-32` between major sections
-
-### Container & grid
-
-The site uses a constrained content container with a wider hero region.
+Four section roles (phone / tablet / desktop, each side):
 
 ```
-max-w-content:   72rem (1152px)   /* default content width */
-max-w-wide:      88rem (1408px)   /* hero, full case study layouts */
-max-w-narrow:    48rem (768px)    /* long-form reading, lead magnet */
+.section          48 / 64 / 80    ordinary sections
+.section-close    64 / 80 / 96    the closing ask and testimonials
+.section-tight    32 / 40 / 48    strips and bands that belong to the section above
+.section-hero     128 / 160 top   clears the fixed header
 ```
 
-12-column grid with 24px gutters. Mobile collapses to single column at <768px.
+### Gutters
+
+```
+--space-card     24 / 28 / 32    card inset, and the gutter between cards or image tiles (.card-grid)
+--space-split    40 / 48 / 64    between text and the image, quote, or column beside it (.split-grid)
+```
+
+### Containers
+
+```
+max-w-content:   72rem (1152px)   page content
+max-w-wide:      88rem (1408px)   header, footer, and logo strip only
+max-w-narrow:    48rem (768px)    long-form reading
+```
 
 ### Edge padding
 
 ```
-px-6   (24px)   /* mobile */
-px-8   (32px)   /* tablet */
-px-12  (48px)   /* desktop */
-px-16  (64px)   /* wide desktop */
+px-6   (24px)   phone
+px-8   (32px)   tablet
+px-12  (48px)   desktop
 ```
 
 ---
@@ -313,57 +276,57 @@ A signature mark of the brand. Used between phrases ("Clarity. Alignment. >> Mom
 
 ### Buttons
 
-Two variants, both pill-shaped.
+Two pill buttons, both Geist medium.
 
-**Primary CTA (Book a Strategy Call, Get the Guide, etc.):**
+**Primary (the main ask on a page):**
+```
+Background: --color-brand-purple (#6B5CFF), lightens to #7B6CFF on hover
+Text: white
+Border-radius: 9999px
+Padding: 14px 28px (px-7 py-3.5)
+Hover: lighten, and grow 2%
+```
+
+**Secondary (Open the calendar, Let's talk):**
 ```
 Background: --color-text-primary (off-white)
-Text: --color-bg-primary (near-black)
-Border-radius: 9999px (full pill)
-Padding: 16px 32px (desktop), 14px 24px (mobile)
-Font: text-base font-medium tracking-tight
-Hover: subtle scale 1.02, no color change
-```
-
-**Secondary CTA (See how I work, View case study):**
-```
-Background: transparent
-Text: --color-text-primary
-Border: 1px solid --color-border-default
+Text: --color-text-inverse
 Border-radius: 9999px
-Same padding as primary
-Hover: border becomes --color-text-primary (full white)
+Padding: 14px 28px
+Hover: grow 2%, no color change
 ```
 
-**Tertiary text link:**
-Inline arrow notation: `View case study →` or `Live website ↗`
-Color: `--color-link` (orange)
+**Text link:**
+Arrow notation: `View the case study →` or `Open courtvisual.com →`
+Color: `--color-link` (lavender)
 Hover: `--color-link-hover` (white)
-Underline: never default, only on hover with `text-decoration-thickness: 1px`
+
+Hover appears only on devices that can hover. The site uses three hover moves and no others: text links turn white, pills grow 2%, clickable cards brighten (below). Accordion titles and chevrons turn lavender.
 
 ### Cards
 
-Used for case study previews, engagement offers, article links.
+One role, `.card`, is the whole recipe:
 
 ```
-Background: --color-bg-elevated
-Border: 1px solid --color-border-subtle
-Border-radius: 16px (rounded but not pill)
-Padding: 32px desktop, 24px mobile
-Hover: border becomes --color-border-strong, subtle bg lift to --color-bg-raised
-Transition: 200ms ease-out
+Background: #04192B
+Border: 1px solid --color-border-default
+Border-radius: 16px
+Inset: --space-card (24 / 28 / 32)
+Hover (clickable cards): border to --color-border-strong, title to lavender, any image or video inside zooms 2%
 ```
 
-Cards do not have shadows. Elevation is communicated through subtle background shifts.
+`.card-compact` (16 / 20 / 24) is for dense rows only. A card with an image on top moves the inset to a `.card-body` child so the image runs to the edge. Cards in a row share the row's height; the last action carries `.card-foot` so every action in the row sits on one baseline. Uneven rows are fixed by balancing the copy, never by pinning a footer over a gap.
+
+Cards do not have shadows. Elevation is a surface shift.
 
 ### Metadata block (case study labels)
 
 The editorial label/value pattern that appears on case studies.
 
 ```
-Layout: two-column on desktop (label left, value right), stacked on mobile
-Label: font-mono text-xs tracking-widest uppercase text-tertiary
-Value: text-base font-medium text-primary
+Layout: a strip of label and value pairs, 2 columns on a phone, 4 from 768px
+Label: .metadata-label (Geist Mono 12px, uppercase, tertiary gray)
+Value: .metadata-value (16px, 500, off-white)
 Format: (YEAR) 2023
         (TIMELINE) 3 Months
         (SERVICES) Design System · Branding
@@ -373,21 +336,18 @@ Format: (YEAR) 2023
 ### Navigation
 
 **Header:**
-- Wordmark left, primary nav center-right, CTA button far right
-- Background: `--color-bg-primary` with `backdrop-blur-md` and `border-b border-border-subtle` when scrolled
-- Height: 72px desktop, 64px mobile
-- Mobile: hamburger replaces center nav, opens full-screen overlay menu in `--color-bg-elevated`
+- Wordmark left, primary nav right, secondary pill far right
+- Transparent at the top; once scrolled, `--color-bg-primary` at 85% with a background blur and a hairline below
+- Mobile: a menu button opens a full-screen overlay in `--color-bg-elevated`
 
 **Primary nav links:**
-- `text-sm font-medium tracking-tight text-secondary`
-- Hover: `text-primary`
-- Active page: `text-primary` with thin orange underline 2px below
+- `text-sm tracking-tight`, secondary gray
+- Hover: off-white
+- Active page: off-white, medium weight
 
 **Footer:**
-- Single row on desktop, stacked on mobile
-- Wordmark, brand line ("Clarity is the advantage."), nav links, social icons, contact info
-- Border-top: `1px solid --color-border-subtle`
-- Padding: `py-16`
+- Wordmark, the stranger-facing statement (the question, then the positioning line; see section 1), nav links, contact, and the palette emoji that opens /design-info
+- Hairline above
 
 ### Hero atmospheric backdrop
 
@@ -432,23 +392,17 @@ Width: full-bleed (breaks out of content container)
 
 ### Forms
 
-Used on the lead magnet signup and contact page.
+Used on the field manual signup (`components/SignupCard.tsx`).
 
 ```
 Input:
-  Background: --color-bg-elevated
-  Border: 1px solid --color-border-default
+  Border: 1px solid rgba(255,255,255,0.12)
   Border-radius: 12px
-  Padding: 16px 20px
-  Text: text-base text-primary
-  Placeholder: --color-text-tertiary
-  Focus: border --color-focus-ring (periwinkle), ring 3px rgba(periwinkle, 0.2)
+  Padding: 13px 16px
+  Text: 15px
+  Focus: border periwinkle (#6B5CFF)
 
-Label:
-  text-sm font-medium text-secondary
-  Margin-bottom: 8px
-
-Submit button: Primary CTA spec
+Submit button: periwinkle, 12px radius, 13px 20px padding
 ```
 
 ---
@@ -545,110 +499,33 @@ The Capizzi brand never:
 
 ## 9. Implementation notes
 
-### File structure (when scaffolded)
+### Stack
+
+- Next.js 16 (App Router) with Turbopack, TypeScript
+- Tailwind CSS v4: tokens in the `@theme` block of `app/globals.css`; there is no `tailwind.config.js`
+- Fonts through `next/font/google` in `app/layout.tsx`
+- Deployed on Vercel from `main`
+
+### Where things live
 
 ```
-/
-├── app/                          # Next.js app router
-│   ├── page.tsx                  # Home
-│   ├── about/page.tsx
-│   ├── engagements/page.tsx
-│   ├── work/page.tsx             # Case study index
-│   ├── work/[slug]/page.tsx      # Individual case study (MDX)
-│   ├── thinking/page.tsx
-│   └── clarity-advantage/page.tsx # Lead magnet
-├── content/
-│   └── case-studies/
-│       ├── onc-coach.mdx
-│       ├── sales-tool-system.mdx
-│       └── saas-research.mdx
-├── components/
-│   ├── Wordmark.tsx
-│   ├── SymbolMark.tsx
-│   ├── Hero.tsx
-│   ├── EngagementCard.tsx
-│   ├── MetadataBlock.tsx
-│   └── ... etc
-├── public/
-│   ├── images/
-│   ├── wordmark.svg
-│   └── symbol.svg
-├── styles/
-│   └── globals.css
-├── tailwind.config.js
-├── CLAUDE.md                     # Project context for Claude Code
-└── capizzi-design-system.md     # This document
+app/globals.css        tokens, type roles, spacing roles, card and layout roles
+app/[route]/page.tsx   pages
+components/            one file per component, PascalCase
+public/images/         brand, hero, case-studies, logos, practice-grid
+CLAUDE.md              project context and the dated record of system decisions
+docs/design-system.md  this document
 ```
 
-### Tailwind config (key extensions)
+### Rules the code follows
 
-```js
-// tailwind.config.js — partial
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        bg: {
-          primary: '#0A0A0A',
-          elevated: '#141414',
-          raised: '#1F1F1F',
-          inverse: '#F5F5F4',
-        },
-        text: {
-          primary: '#F5F5F4',
-          secondary: '#A3A3A3',
-          tertiary: '#8C8C8C',
-          inverse: '#0A0A0A',
-        },
-        border: {
-          subtle: '#262626',
-          default: '#404040',
-          strong: '#737373',
-        },
-        brand: {
-          blue: '#4F46E5',
-          purple: '#6B5CFF',
-          pink: '#E879F9',
-          orange: '#FF5722',
-        },
-      },
-      fontFamily: {
-        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-geist-mono)', 'monospace'],
-      },
-      fontSize: {
-        'display': ['12rem', { lineHeight: '1', letterSpacing: '-0.05em' }],
-      },
-      maxWidth: {
-        'content': '72rem',
-        'wide': '88rem',
-        'narrow': '48rem',
-      },
-    },
-  },
-};
-```
+- Roles in `globals.css` are unlayered, so they win over any Tailwind utility on the same element. Pages never set their own size, leading, padding, gap, or radius where a role exists.
+- Any component that needs a color in JavaScript reads the CSS variable, never a hex copy.
+- `/design-info` lists the fonts and the six core colors with their nearest PANTONE matches. Its hex values must equal the tokens.
 
-### Global CSS root
+### Reduced motion
 
 ```css
-/* globals.css — partial */
-:root {
-  --color-bg-primary: #0A0A0A;
-  /* ... all tokens from sections above ... */
-}
-
-html {
-  background: var(--color-bg-primary);
-  color: var(--color-text-primary);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-body {
-  font-family: var(--font-geist-sans);
-}
-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -657,23 +534,11 @@ body {
 }
 ```
 
-### Required assets to create or finalize before build
-
-The following assets are needed before scaffolding the Next.js project:
-
-1. `wordmark.svg` — the handwritten "Capizzi" signature, vectorized, 1-color (white)
-2. `symbol.svg` — the 16-point hand-drawn starburst mark, 1-color (white)
-3. `wordmark-favicon.svg` — simplified symbol for favicon use
-4. Hero portrait at 1920×1280 minimum, optimized PNG with transparency
-5. About portrait at 1200×1500, optimized JPG
-6. Case study hero images — three images, 1600×1000 each
-7. Trusted-by logos — SVG files of: Pfizer, Bloomberg, Samsung, Biogen, AbbVie, IPG Health (others as needed), all converted to monochrome white
-
 ---
 
 ## 10. Versioning & changes
 
-This is v1.0. Changes get a new version number and a brief note at the top.
+This is v2.0. Changes get a new version number and a brief note at the top.
 
 Major version (2.0): rebrand, palette change, type system change.
 Minor version (1.1): new component, refined token, new pattern.
@@ -683,6 +548,6 @@ When a change ships, the corresponding code change references the version: `// p
 
 ---
 
-## End of v1.0
+## End of v2.0
 
 Open questions, open decisions, and ideas waiting for v1.1 are tracked in a separate `design-system-backlog.md` file. This document represents what is locked.

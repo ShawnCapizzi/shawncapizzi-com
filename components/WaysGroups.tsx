@@ -22,7 +22,7 @@ import { WaysSketch, type WaysKind } from "@/components/WaysSketch";
  * header keeps its sketch and hash rule, so each principle still has its
  * mark and the ways under it read as a list rather than a row of tiles.
  *
- * Each item follows components/AccordionDetail.tsx: an accessible toggle
+ * Each item is an accessible toggle
  * button (aria-expanded, aria-controls), a chevron that turns, and a
  * grid-rows height animation that respects reduced motion. The full text is
  * in the HTML whether open or closed, so crawlers still read it.
