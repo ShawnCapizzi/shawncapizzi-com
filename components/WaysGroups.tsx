@@ -108,7 +108,7 @@ export function WaysGroups({ groups }: { groups: WaysGroup[] }) {
                       onClick={() => toggle(id)}
                       aria-expanded={isOpen}
                       aria-controls={`${id}-detail`}
-                      className="flex w-full items-start justify-between gap-6 py-6 md:py-7 text-left"
+                      className="disclosure-trigger flex w-full items-start justify-between gap-6 py-6 md:py-7 text-left"
                     >
                       <span className="min-w-0">
                         <span className="block card-title text-text-primary text-balance">

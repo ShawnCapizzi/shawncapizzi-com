@@ -264,6 +264,17 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   accordions were retired (Shawn's call): filled, they competed with the
   page; unfilled, they read as a stack of dark boxes on a phone.
   `components/AccordionDetail.tsx` is unused and kept only until removed.
+- Hover (November 2026, Shawn's call: hover belongs on desktop, used with
+  restraint). Three moves, each answering "can I click this?", and no
+  others: text links go lavender to white; pill buttons grow 2% (purple
+  ones also lighten); clickable cards brighten their border and turn the
+  title lavender, and an image or video inside zooms 2%. Accordion
+  triggers carry `.disclosure-trigger`, which turns the title and chevron
+  lavender. Tailwind v4's `hover:` and the CSS rule both apply only on
+  devices that can hover, so phones never see any of it. The footer's
+  palette emoji fades instead, since an emoji cannot change color.
+  Carousel controls, the Bloomberg thumbnails, the book reader, the
+  signup widget, and the logo stay still on purpose.
 
 ## Contrast (November 2026)
 

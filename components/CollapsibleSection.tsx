@@ -42,7 +42,7 @@ export function CollapsibleSection({
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls={id}
-        className="flex w-full items-center justify-between gap-6 text-left"
+        className="disclosure-trigger flex w-full items-center justify-between gap-6 text-left"
       >
         <h2 className="section-title text-text-primary text-balance">
           {heading}

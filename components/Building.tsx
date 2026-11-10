@@ -95,7 +95,11 @@ export function Building() {
                 aria-label={`${p.name} case study`}
               >
                 {p.video ? (
-                  <InViewVideo src={p.video} poster={p.image} />
+                  <InViewVideo
+                    src={p.video}
+                    poster={p.image}
+                    className="group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+                  />
                 ) : (
                   <Image
                     src={p.image}

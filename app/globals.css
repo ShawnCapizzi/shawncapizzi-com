@@ -1028,6 +1028,25 @@ h3 {
    as the title. Items carry their own vertical padding (py-6 md:py-7)
    so the list reads as one column of text, not a stack of tiles.
    ============================================================ */
+/* Accordion triggers (the /how-i-help ways, the FAQ, and the case study
+   collapsible sections): on a device that can hover, the title and the
+   chevron turn lavender, the site's one color for "this can be acted
+   on". Phones and tablets never see it. */
+.disclosure-trigger .card-title,
+.disclosure-trigger .section-title {
+  transition: color 200ms ease;
+}
+.disclosure-trigger > [aria-hidden="true"] {
+  transition-property: transform, rotate, color;
+}
+@media (hover: hover) {
+  .disclosure-trigger:hover .card-title,
+  .disclosure-trigger:hover .section-title,
+  .disclosure-trigger:hover > [aria-hidden="true"] {
+    color: var(--color-link);
+  }
+}
+
 .disclosure-list {
   border-top: 1px solid var(--color-border-subtle);
 }

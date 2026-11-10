@@ -73,7 +73,7 @@ export function FaqAccordion({ items }: { items: FaqItem[] }) {
                 }}
                 className="group disclosure-item"
               >
-                <summary className="cursor-pointer list-none py-6 md:py-7 flex items-start justify-between gap-6">
+                <summary className="disclosure-trigger cursor-pointer list-none py-6 md:py-7 flex items-start justify-between gap-6">
                   <h2 className="card-title text-text-primary text-balance">
                     {item.q}
                   </h2>
