@@ -375,7 +375,6 @@ export default function Page() {
                   {shape.name}
                 </h3>
                 <p className="small-text card-text text-text-secondary text-pretty">
-                  <span className="metadata-label block">Typical shape</span>
                   {shape.scope}
                 </p>
                 <p className="card-text text-text-secondary text-pretty">
