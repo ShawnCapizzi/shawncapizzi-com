@@ -30,24 +30,24 @@ const WAYS = [
   {
     id: "leadership",
     name: "Leadership",
-    title: "Embed me in the work.",
+    title: "Senior design direction, inside your team.",
     tagline:
-      "Fractional or embedded design and experience leadership inside an active program.",
+      "I join your team inside the program, in your tools and process, without you adding another full-time role.",
     keywords: "Fractional leadership · Design leadership · Experience strategy · Product design · UX/CX",
   },
   {
     id: "advisory",
     name: "Advisory",
-    title: "Hire me to advise.",
-    tagline: "Focused guidance around a defined opportunity, challenge, or decision, with a clear recommendation.",
+    title: "A defined problem and plan before you commit.",
+    tagline: "Shaped as a Strategic Snapshot, an Engagement Sprint, or an AI Opportunity Diagnostic, so the scope fits the decision in front of you.",
     keywords: "Advisory · Product strategy · Experience strategy · Service design · Design systems",
   },
   {
     id: "oncall",
     name: "On Call",
-    title: "Keep me on call.",
+    title: "Experienced digital perspective, when clarity is needed.",
     tagline:
-      "Ongoing access when important decisions need another experienced point of view.",
+      "A monthly retainer to review work, pressure-test a direction, or join a key meeting before a decision gets expensive to change.",
     keywords: "On-call advisory · Leadership support · Design review · Strategic guidance",
   },
 ];
@@ -219,7 +219,7 @@ export default function Page() {
                 className="flex flex-col card card-value"
               >
                 <p className="eyebrow">{way.name}</p>
-                <h3 className="card-title text-text-primary">{way.title}</h3>
+                <h3 className="card-title text-text-primary text-balance">{way.title}</h3>
                 <p className="card-text text-text-secondary text-pretty">{way.tagline}</p>
                 <p className="card-text metadata-label">{way.keywords}</p>
                 <a
