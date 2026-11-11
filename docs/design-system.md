@@ -170,7 +170,7 @@ Heading sizes come from four roles in `globals.css`, never from per-element size
 
 ```
 .hero-title     page H1        30px, 39px from 1024px   600, tracking -0.03em, leading 1.12 then 1.05
-.hero-lead      under the H1   Instrument Sans 20px     400, leading 1.4, cream at 82%
+.hero-lead      under the H1   Instrument Sans 20px     400, leading 1.5, no tracking, cream at 82%
 .section-title  every H2       30px                     600, tracking -0.025em, leading 1.2
 .card-title     card titles    20px, 24px from 768px    600, tracking -0.02em, leading 1.25
 ```

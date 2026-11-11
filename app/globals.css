@@ -439,14 +439,14 @@ h3 {
    space tokens). Pages set no margin utilities on type.
 
    Leading follows Apple's HIG shape: tighter as size grows, loose
-   for long passages. Titles 1.05 to 1.25, hero lead 1.4, body 1.6,
+   for long passages. Titles 1.05 to 1.25, hero lead 1.5, body 1.6,
    small 1.5, labels 1.4.
 
    - .hero-title     page H1. 30px, then 39px from 1024px up.
                      Pair with .headline-gleam (home) or
                      .headline-static (every other page).
    - .hero-lead      the paragraph directly under a page H1.
-                     Instrument Sans 20/28, cream at 82%.
+                     Instrument Sans 20/30, no tracking, cream at 82%.
    - .section-title  every section H2, including the closing ask.
                      30px at all widths.
    - .card-title     titles inside cards and panels. 20px, then
@@ -485,13 +485,23 @@ h3 {
   margin-top: var(--space-after-hero-title);
 }
 
+/* November 11, 2026: the lead ran at the headings' -0.025em tracking and
+   1.4 leading, which read tight across lines of up to 79 characters
+   (Shawn, in Edge). It is running text, so it takes the face's own
+   spacing (0) and 1.5 leading. A lead that follows another paragraph
+   (a second lead, the /thinking tagline, the /privacy date) keeps the
+   paragraph gap instead of touching it. */
 .hero-lead {
   font-family: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-size: 1.25rem;
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: 400;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
   color: rgba(218, 216, 201, 0.82);
+}
+
+p + .hero-lead {
+  margin-top: var(--space-paragraph);
 }
 
 .section-title {

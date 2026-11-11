@@ -32,7 +32,8 @@ which matches the live tokens and roles). This is non-negotiable.
   introducing any new pattern
 - Heading sizes come from four type roles in `app/globals.css`, never from
   per-element size utilities: `.hero-title` (page H1, 30px then 39px from
-  1024px), `.hero-lead` (paragraph under the H1, Instrument Sans 20/28),
+  1024px), `.hero-lead` (paragraph under the H1, Instrument Sans 20/30, no
+  tracking: it is running text, not a heading),
   `.section-title` (every section H2 and closing ask, 30px), and `.card-title`
   (card and panel titles, 20px then 24px from 768px). Page heroes pair
   `.hero-title` with `.headline-static`; only the homepage uses
@@ -184,7 +185,10 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   element after one; both stack with the role and break the rhythm.
 - Leading is a property of the style, never the page (Apple HIG shape:
   tighter as size grows, loose for long passages). Titles 1.05 to 1.25,
-  `.hero-lead` 1.4, `.body-text` 1.6 with 24px between paragraphs,
+  `.hero-lead` 1.5 with 24px after any paragraph before it (November 11,
+  2026: it was 1.4 at the headings' -0.025em tracking and read tight in
+  Edge; stacked leads on /thinking and /work touched at 0px),
+  `.body-text` 1.6 with 24px between paragraphs,
   `.card-text` 1.6 with 16px, `.small-text` 14px at 1.5, labels 1.4,
   `.lead-text` 1.6, and `.prose-block` for a container of several
   paragraphs (it carries the leading and the 24px between children). The
