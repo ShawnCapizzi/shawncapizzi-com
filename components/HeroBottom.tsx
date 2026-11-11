@@ -64,7 +64,7 @@ const DOORS: Door[] = [
 
 export function HeroBottom() {
   return (
-    <section className="pt-12 md:pt-12 pb-14 md:pb-20">
+    <section className="section section-joined">
       <div className="relative max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="card-grid grid-cols-1 md:grid-cols-3">
           {DOORS.map((door) => {

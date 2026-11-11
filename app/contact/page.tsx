@@ -20,7 +20,7 @@ export default function Page() {
       {/* HERO (October 2026): the page picks up the conversation a "Let's
           talk" or "Start a conversation" button started. No funnel language:
           no strategy call, no call length, no "no pitch". */}
-      <section className="relative pt-32 md:pt-40 pb-4 md:pb-6">
+      <section className="relative pt-32 md:pt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">Contact</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
@@ -36,15 +36,17 @@ export default function Page() {
             me a problem you&apos;re trying to solve, something you&apos;re
             trying to overcome, or an opportunity that still needs defining.
           </p>
-          <p className="mt-8 font-mono text-base md:text-lg text-text-primary tracking-tight">
+          <p className="mt-6 font-mono text-base md:text-lg text-text-primary tracking-tight">
             <span aria-hidden="true">&#9999;&#65039;</span>{" "}
             Napkin sketches welcome.
           </p>
         </div>
       </section>
 
-      {/* THREE WAYS TO REACH SHAWN: calendar, email, phone */}
-      <section className="section">
+      {/* THREE WAYS TO REACH SHAWN: calendar, email, phone. It answers the
+          hero's question, so it joins the hero: no bottom padding above,
+          and a tight top (48 desktop, 32 phone) under the napkin line. */}
+      <section className="section section-joined">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           {/* The practical line sits with the three cards it introduces, in
               the site's body text style (Geist, secondary gray), like the
@@ -195,7 +197,7 @@ export default function Page() {
           'workContact' answers "is he qualified"; 'engagementsContact' answers
           "how would this actually work". Contact-only copy (September 2026),
           so the shared 'work' and 'engagements' cards on other pages stay. */}
-      <section className="section mt-8 md:mt-12 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <CTACards cards={["workContact", "engagementsContact"]} />
         </div>

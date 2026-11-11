@@ -546,6 +546,12 @@ h3 {
   padding-top: var(--space-section-tight);
   padding-bottom: var(--space-section-tight);
 }
+/* A section that continues the one above it with no rule between them
+   (the /contact ways to reach Shawn answer its hero's question): it
+   opens at the tight value, 32 / 40 / 48, and closes like any section. */
+.section-joined {
+  padding-top: var(--space-section-tight);
+}
 /* Page hero: clears the fixed header on top, closes like a body section. */
 .section-hero {
   padding-top: 8rem;

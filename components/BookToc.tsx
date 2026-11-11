@@ -76,7 +76,7 @@ export function BookToc() {
   const part = PARTS[sel];
 
   return (
-    <section aria-labelledby="book-toc-title" className="mt-14 md:mt-20">
+    <section aria-labelledby="book-toc-title" className="mt-(--space-section)">
       <p className="eyebrow">Inside the book</p>
       <h2 id="book-toc-title" className="section-title text-balance">
         What&apos;s in Seeing Past the Cage.

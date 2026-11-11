@@ -41,7 +41,7 @@ export default function Page() {
 
       {/* CTA CARDS: case studies (proof, the current site wording shared with
           /contact as "workContact") + contact (path forward) */}
-      <section className="section mt-12 md:mt-16 border-t border-border-subtle">
+      <section className="section border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <CTACards cards={["workContact", "contact"]} />
         </div>

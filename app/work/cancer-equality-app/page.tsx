@@ -75,7 +75,7 @@ export default function Page() {
       processCarousel={
         <section
           aria-labelledby="bc-navi-platform-walkthrough"
-          className="mx-auto max-w-content px-6 py-14 md:py-20"
+          className="section mx-auto max-w-content px-6"
         >
           <div className="mb-8 md:mb-10 max-w-2xl mx-auto text-center">
             <p className="eyebrow">(The platform in motion)</p>

@@ -46,6 +46,12 @@ export type CTACard = {
    */
   imageFit?: "cover" | "contain";
   /**
+   * Tailwind object-position class for the image. Defaults to
+   * "object-center". A portrait cropped to the card's 16:10 frame anchors
+   * near the top so the head is not cut off.
+   */
+  imagePosition?: string;
+  /**
    * Optional interactive thumbnail in place of the static image.
    *   "book-reader" — renders the living reader panel (BookReaderThumb),
    *                   cross-fading Chapter 1 lines. When set, the image
@@ -173,6 +179,11 @@ export const CTA_CARDS: Record<string, CTACard> = {
     cta: "Start a conversation",
     href: "/contact",
     phone: "212-380-3900",
-    // Image intentionally omitted for now — add during the contact page revamp.
+    // The navy knockout headshot (also the homepage hero and /about), so a
+    // visitor sees who they would be talking to, and the card carries an
+    // image like the card beside it instead of a hole (November 2026).
+    image: "/images/brand/headshot-2026-knockout.jpg",
+    imageAlt: "Shawn Capizzi",
+    imagePosition: "object-[50%_8%]",
   },
 };

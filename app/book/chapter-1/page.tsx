@@ -242,7 +242,7 @@ export default function ChapterOnePage() {
       </div>
 
       {/* CTA CARDS — cards (close cousin to what they just read) + work (proof of thinking applied) */}
-      <section className="mt-24 md:mt-32 pt-16 md:pt-24 border-t border-border-subtle">
+      <section className="section mt-(--space-section) border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <CTACards cards={["cards", "work"]} />
         </div>

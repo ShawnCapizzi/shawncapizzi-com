@@ -216,8 +216,18 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   section's bottom). Two sections meeting at a border show double the
   value. Before, 76 sections used 18 padding recipes; the homepage ran
   its ordinary sections at the closing-ask size, which is why it breathed
-  differently from the other pages. The homepage hero, the contact hero,
-  and the FAQ list tail keep their own padding on purpose.
+  differently from the other pages. The homepage hero, the contact hero's
+  top, the FAQ list tail, and the case study first-look slot keep their own
+  padding on purpose. `.section-joined` (November 2026) opens a section at
+  the tight value with no rule above it, for a section that continues the
+  one before: the /contact ways to reach Shawn (they answer the hero's
+  question, so the hero closes at 0 and they open at 48 desktop, 32 phone)
+  and the homepage doors under the logo strip. Pages put no `mt-*` on a
+  section; a section that needs space above a border takes
+  `mt-(--space-section)`. Measured after the November 2026 pass on all 18
+  pages at desktop and phone: every section boundary is a system value or
+  one of those named exceptions, and all 189 label, title, and card-title
+  gaps read 16, 24, and 12.
 - Cards are one role: `.card` is the whole recipe (surface, 1px default
   border, 16px radius, inset 24 phone / 28 tablet / 32 desktop from
   `--space-card`). A card with an image above its text puts the inset on a
@@ -234,7 +244,14 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   above the foot never reads as a hole; when a row looks uneven, fix the
   copy, not the rule. Pages set no `mt-*`, `mt-auto`, or `flex-1` on
   card children. Text-only rows (Three ways, testimonials) have no foot
-  and simply stack.
+  and simply stack. A card that is one click target but holds a second
+  link (the CTA cards' phone number) uses a stretched link: the title's
+  link carries `after:absolute after:inset-0`, the second link sits above
+  it with `relative z-10`, and both share the `.card-foot` row, so the card
+  ends at the same height as its neighbor. Every CTA card carries an image
+  (November 2026): "Get in touch" uses the navy knockout headshot, anchored
+  near the top, because a text-only card beside an image card left a
+  250px hole.
 - The gutter between cards or image tiles in a row is `.card-grid`: gap
   from `--space-card`, so gutter equals inset (24 / 28 / 32). Pages add
   only `grid-cols-*`; never a `gap-*` on a card grid. Before, 16 card
@@ -289,7 +306,9 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   devices that can hover, so phones never see any of it. The footer's
   palette emoji fades instead, since an emoji cannot change color.
   Carousel controls, the Bloomberg thumbnails, the book reader, the
-  signup widget, and the logo stay still on purpose.
+  signup widget, and the logo stay still on purpose. The orbiting
+  "laser" border glint (`LaserFrame`) was retired in November 2026 and
+  deleted; no card border animates.
 
 ## Contrast (November 2026)
 

@@ -74,7 +74,7 @@ export default function Page() {
           {/* ─── Showcase 1: Field research process ─── */}
           <section
             aria-labelledby="crm-field-research"
-            className="mx-auto max-w-content px-6 pt-6 md:pt-8 pb-8 md:pb-10"
+            className="mx-auto max-w-content px-6 pt-6 md:pt-8 pb-(--space-section)"
           >
             <div className="mb-8 md:mb-10 max-w-2xl mx-auto text-center">
               <p className="eyebrow">(The work, in process)</p>
@@ -117,7 +117,7 @@ export default function Page() {
           {/* ─── Showcase 2: Spec to terminal ─── */}
           <section
             aria-labelledby="crm-wireframes-to-terminal"
-            className="mx-auto max-w-content px-6 pt-10 md:pt-14 pb-14 md:pb-20"
+            className="mx-auto max-w-content px-6 pt-(--space-section) pb-16 md:pb-24"
           >
             <div className="mb-8 md:mb-10 max-w-2xl mx-auto text-center">
               <p className="eyebrow">(From spec to terminal)</p>
