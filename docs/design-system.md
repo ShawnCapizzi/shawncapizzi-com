@@ -93,8 +93,8 @@ Cards paint `#04192B` through the `.card` role; the value card (`.card-value`) p
 
 ```
 --color-text-primary:    #F5F5F4   /* warm off-white, headings and emphasis */
---color-text-secondary:  #A3A3A3   /* mid gray, body and supporting text */
---color-text-tertiary:   #8C8C8C   /* labels, captions, metadata; 5.74:1 on the page, 5.14:1 on raised, 4.89:1 on elevated, AA */
+--color-text-secondary:  #B3B3B3   /* mid gray, body and supporting text; lifted 10% from #A3A3A3, November 11, 2026; 9.20:1 on the page */
+--color-text-tertiary:   #9A9A9A   /* labels, captions, metadata; lifted 10% from #8C8C8C, November 11, 2026; 6.86:1 on the page, 6.14:1 on raised, 5.84:1 on elevated, AA */
 --color-text-inverse:    #0A0A0A   /* type on light pills and color blocks */
 ```
 

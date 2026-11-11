@@ -16,8 +16,8 @@
 
   /* ---- TEXT ---- */
   --color-text-primary: #F5F5F4;
-  --color-text-secondary: #A3A3A3;
-  --color-text-tertiary: #8C8C8C;
+  --color-text-secondary: #B3B3B3;
+  --color-text-tertiary: #9A9A9A;
   --color-text-inverse: #0A0A0A;
 
   /* ---- BORDERS ---- */
@@ -967,8 +967,8 @@ p + .hero-lead {
    warm purple fills. Against the navy card (CIEDE2000): 8.9 typical
    vision, 5.2 red-green color-blind, the best of every fill tested
    for those viewers; the edge and rule add about 13 for everyone.
-   Gray labels 4.62:1 or better (desktop and phone), lavender links
-   7.0:1.
+   Gray labels 5.52:1 or better (desktop and phone, after the
+   November 11 gray lift), lavender links 7.0:1.
    ============================================================ */
 
 :root {

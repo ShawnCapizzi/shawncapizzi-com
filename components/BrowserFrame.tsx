@@ -94,7 +94,7 @@ export function BrowserFrame({
   const chromeBg = isDark ? "#061C2F" : "#F4F2EC"; // matches bg-raised / light
   const chromeBorder = isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)";
   const addressBg = isDark ? "var(--color-bg-elevated)" : "#FFFFFF"; // bg-elevated / white
-  const addressInk = isDark ? "#A3A3A3" : "#6B6B6B"; // text-secondary / muted
+  const addressInk = isDark ? "var(--color-text-secondary)" : "#6B6B6B"; // text-secondary token / muted
   const addressBorder = isDark ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.06)";
 
   return (

@@ -265,7 +265,8 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   8.9 typical vision, 5.2 red-green color-blind (the best of every fill
   tested for those viewers); the edge and rule add about 13 for every
   viewer, so keep them. A row never mixes the two types. Gray labels
-  4.62:1 or better at desktop and phone, lavender links 7.0:1.
+  5.52:1 or better at desktop and phone (after the gray lift), lavender
+  links 7.0:1.
 - Cards in a row share the row's height. Content stacks from the top on
   the 24px rhythm; the last action carries `.card-foot`, which puts every
   link or button in the row on one baseline with 24px above it. The copy
@@ -353,10 +354,18 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 
 ## Contrast (November 2026)
 
-- `text-tertiary` is `#8C8C8C`, lifted from `#737373`, which failed AA for
-  small text on every surface (4.07:1 on the page, 3.65:1 on cards). The
-  new value measures 5.74:1 on `bg-primary`, 5.14:1 on `bg-raised`, and
-  4.89:1 on `bg-elevated`. `bg-elevated` moved from `#021626` to `#08203A`
+- Both grays were lifted 10% on November 11, 2026 (Shawn's call: they read
+  dim): `text-secondary` `#A3A3A3` to `#B3B3B3`, `text-tertiary` `#8C8C8C`
+  to `#9A9A9A`. `text-tertiary` had already been lifted from `#737373`,
+  which failed AA for small text on every surface (4.07:1 on the page,
+  3.65:1 on cards). Now `text-tertiary` measures 6.86:1 on `bg-primary`,
+  6.14:1 on `bg-raised`, and 5.84:1 on `bg-elevated`; `text-secondary`
+  9.20, 8.24, and 7.84. Measured on all 18 pages at 1440 and 390 (1,720
+  gray text samples), the lowest is 5.31:1 (the homepage eyebrow on a
+  phone, over the hero glow). /design-info's Secondary text swatch was
+  re-matched with pantone-cli: Cool Gray 5 C, ΔE 0.6.
+  `BrowserFrame` reads `var(--color-text-secondary)` instead of a hex
+  copy. `bg-elevated` moved from `#021626` to `#08203A`
   (1.17:1 against the page, from 1.05:1) so the header, carousel frames,
   and video posters read as a step. `bg-raised` and `.card-surface` are
   unchanged on purpose (Shawn's call); the violet value card is a second

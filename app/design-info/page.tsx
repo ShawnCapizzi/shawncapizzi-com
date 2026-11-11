@@ -21,6 +21,11 @@ import { pageMetadata } from "@/lib/seo";
  *     three agree on Black 6 C, 422 C, and 2725 C. For #A798FF the top three
  *     candidates sit within 0.05 ΔE of each other, so 2705 C is the nearest
  *     of a near tie.
+ *   - November 11, 2026: Secondary text lifted 10% to #B3B3B3 (Shawn's
+ *     call). Re-matched with pantone-cli on the same index: Cool Gray 5 C
+ *     at ΔE 0.6, runners-up 421 C (1.11) and 4281 C (1.19). The same run
+ *     reproduced the old entry exactly (#A3A3A3, 422 C, ΔE 1.5). The two
+ *     cross-check datasets were not re-run for this swatch.
  *   - The two purples land at ΔE 6.6 and 7.1, a visible difference. That is
  *     not a matching error: saturated screen violets sit outside what spot
  *     ink on coated stock can reach. The note under the swatches says so.
@@ -52,7 +57,7 @@ const SWATCHES: Swatch[] = [
   { role: "Background", hex: "#000F1F", pantone: "Black 6 C", ink: "#101820", deltaE: "4.4" },
   { role: "Surface", hex: "#061C2F", pantone: "296 C", ink: "#051C2C", deltaE: "2.0" },
   { role: "Text", hex: "#F5F5F4", pantone: "663 C", ink: "#E5E1E6", deltaE: "5.9" },
-  { role: "Secondary text", hex: "#A3A3A3", pantone: "422 C", ink: "#9EA2A2", deltaE: "1.5" },
+  { role: "Secondary text", hex: "#B3B3B3", pantone: "Cool Gray 5 C", ink: "#B1B3B3", deltaE: "0.6" },
   { role: "Brand", hex: "#6B5CFF", pantone: "2725 C", ink: "#685BC7", deltaE: "7.1" },
   { role: "Links and actions", hex: "#A798FF", pantone: "2705 C", ink: "#A7A4E0", deltaE: "6.6" },
 ];
