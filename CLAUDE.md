@@ -284,8 +284,12 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   (Shawn's call, November 2026): "Napkin sketches welcome." with its pencil
   on /contact and /how-i-help stays in mono on purpose, a handwritten-note
   aside. The homepage hero carries
-  no credential line and no second wordmark: the 15+ years sits in the
-  lead, and the header already shows the mark.
+  no credential line and no second wordmark; the header already shows
+  the mark. Since November 11, 2026 the hero is Shawn's two-sentence
+  headline, one sentence per line ("Help people understand what
+  matters." / "And take their next step with confidence."), over a lead
+  that names his healthcare and pharma roots. The 15+ years is no longer
+  in the hero.
 
 ## Accordions (November 2026)
 

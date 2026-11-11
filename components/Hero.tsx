@@ -6,11 +6,11 @@ import Link from "next/link";
  *
  * Contains: headline + lead + wordmark (signature) + headshot.
  *
- * Copy rewritten November 2026: the headline is the promise (usable for
- * people, deliverable for teams), the lead carries the positioning line and
- * the pharma and healthcare depth, then two asks (contact, work) and the
- * credential line. Discipline keywords live further down the page and in
- * the metadata, not here. The three doors live in HeroBottom, which renders
+ * Copy rewritten November 11, 2026 (Shawn's words): the headline is two
+ * sentences, one per line, each its own block so the break holds at every
+ * width; the lead says what Shawn turns into what, and the healthcare and
+ * pharma roots. Then two asks (contact, work). Discipline keywords live
+ * further down the page and in the metadata, not here. The three doors live in HeroBottom, which renders
  * AFTER LogoStrip on the homepage.
  *
  * Desktop (lg and up): two columns, text left, headshot right.
@@ -26,8 +26,7 @@ import Link from "next/link";
  * the image has breathing room from the transparent header bar.
  *
  * November 2026: the wordmark that sat under the lead is gone (the header
- * carries it) and the 15+ years credential lives in the lead, so the hero
- * ends at the two asks.
+ * carries it), so the hero ends at the two asks.
  */
 
 export function Hero() {
@@ -40,14 +39,14 @@ export function Hero() {
           <div className="contents lg:block relative z-10 lg:col-span-7 lg:order-1">
             <p className="eyebrow hero-eyebrow order-0">UX &amp; Product Design Leadership</p>
             <h1 className="headline-gleam hero-title text-balance max-w-full lg:max-w-[90%] order-1">
-              I turn complex business challenges into digital experiences people can use, and teams can deliver.
+              <span className="block">Help people understand what matters.</span>{" "}
+              <span className="block">And take their next step with confidence.</span>
             </h1>
             <p className="hero-lead text-pretty max-w-full lg:max-w-[90%] order-3">
-              I help teams get clear on direction, sharpen the thinking, and move the work forward. 15+ years in pharma, healthcare, financial services, and enterprise, leading strategy, content, design, and delivery.
+              I turn complex offerings, information, and workflows into clear marketing and useful digital experiences. With deep roots in healthcare and pharma, I connect the needs of your customers and users with what your business needs to achieve.
             </p>
             {/* The two asks (November 2026): the primary goes to /contact,
-                the site's one ask; the secondary goes to the proof. The
-                credential (15+ years, four markets) lives in the lead. */}
+                the site's one ask; the secondary goes to the proof. */}
             <div className="order-3 mt-7 md:mt-8 flex flex-col sm:flex-row gap-4 sm:items-center">
               <Link
                 href="/contact"
