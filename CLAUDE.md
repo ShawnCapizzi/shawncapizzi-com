@@ -49,7 +49,8 @@ which matches the live tokens and roles). This is non-negotiable.
   (November 2026, Shawn's call). No context: the pair "What are you trying
   to solve, improve, or make happen?" then "I help teams get clear on
   direction, sharpen the thinking, and move the work forward." It is the
-  footer on every page and the top of /how-i-help; each case study's
+  footer on every page (it was also the top of /how-i-help until
+  November 11, 2026, when Shawn replaced it there with his own intro); each case study's
   closing ask pairs its own question with the positioning line. Some
   context: "Listen first. Make it visible. Prove it worked." stays beside
   the Process. Full context: "workflows as they are, and as they could be"
@@ -155,13 +156,22 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 
 - No bullet-point overuse — prose first, lists only when essential
 - No agency-speak: "crafted", "elevated", "transformed", "delighted", "journey"
-- No "we": Shawn is one person. Four exceptions (Shawn's call, November
+- No "we": Shawn is one person. Five exceptions (Shawn's call, November
   2026), all where "we" means Shawn and the visitor or client together:
   the Advisory shape cards on /engagements, the /contact hero ("We
   don't need a finished brief, scope, or RFP to start.", also the page's
   search description), the homepage Advisory card ("Get clear on the
-  opportunity. Together, we map a plan."), and the first homepage door's
-  label ("We start here").
+  opportunity. Together, we map a plan."), the first homepage door's
+  label ("We start here"), and the line under the /how-i-help first ask
+  ("We'll talk through what you need and whether I'm the right person to
+  help.").
+- One easter egg (Shawn's call, November 11, 2026): "tackling" in the
+  /how-i-help scan line links to the NFL standings
+  (https://www.nfl.com/standings/, no year in the address, so it never
+  goes stale) in a new tab, for Giants fans and sports lovers. It keeps
+  the heading color with a faint dotted underline, turns lavender on
+  hover, and carries screen-reader text ("New York Giants standings, opens
+  in a new tab"). Don't add others without Shawn's call.
 - No drop shadows for elevation (use bg shifts)
 - No more than 3 colors visible on a page
 - No icons or illustrations beyond the single starburst symbol, with two

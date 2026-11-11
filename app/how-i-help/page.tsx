@@ -128,33 +128,57 @@ export default function Page() {
               <h1 className="headline-static hero-title text-balance max-w-4xl">
                 Nice to meet you.
               </h1>
-              {/* The scan line (November 2026): one question the visitor can
-                  answer in their head before reading on. An h2 in the
-                  card-title role so it sits under the H1 without competing
-                  with it. */}
+              {/* The scan line (November 11, 2026, Shawn's words): two
+                  questions the visitor can answer in their head before
+                  reading on, 8px apart so they read as two questions while
+                  staying closer to each other than to the lead (12px). An h2 in the card-title role so it sits under
+                  the H1 without competing with it. "tackling" is an easter
+                  egg for sports fans: it opens the NFL standings (Shawn is a
+                  Giants fan) in a new tab, marked by a faint dotted
+                  underline so keyboard and screen-reader users still meet
+                  it as a link. */}
               <h2 className="card-title max-w-3xl text-balance">
-                What are you trying to solve, improve, or make happen?
+                <span className="block">
+                  What business challenge are you{" "}
+                  <a
+                    href="https://www.nfl.com/standings/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-dotted decoration-1 underline-offset-4 decoration-text-primary/40 hover:text-link hover:decoration-link transition-colors"
+                  >
+                    tackling
+                    <span className="sr-only"> (New York Giants standings, opens in a new tab)</span>
+                  </a>
+                  , or transformation are you leading?
+                </span>{" "}
+                <span className="block mt-2">
+                  What goal are you working toward, and how will you measure
+                  success?
+                </span>
               </h2>
-              {/* Locked positioning line (November 2026). Do not rewrite. */}
+              {/* November 11, 2026 (Shawn's call): this lead replaced the
+                  footer pair at the top of /how-i-help. */}
               <p className="max-w-3xl hero-lead text-pretty">
-                I help teams get clear on direction, sharpen the thinking, and
-                move the work forward.
+                I help teams define and build digital experiences that
+                customers and users understand, trust, and act on.
               </p>
               <div className="mt-6 md:mt-8 max-w-3xl text-text-secondary prose-block text-pretty">
                 <p>
-                  Maybe it&apos;s something new. Maybe something already exists
-                  and isn&apos;t working as well as it should. Or maybe the
-                  opportunity is there, but the direction isn&apos;t clear yet.
-                  Start there.
+                  My deepest experience is in healthcare, pharma, and regulated
+                  markets. I bring clear direction and hands-on design
+                  leadership, from defining the opportunity through delivery.
                 </p>
-                <p>
-                  My deepest experience is in healthcare, pharma, and other
-                  regulated markets: creating experiences that help people
-                  understand, trust, act, and stay engaged.
-                </p>
-                <p>
-                  I stay close enough to the work to make the thinking
-                  tangible: not just leave it in a deck.
+              </div>
+              {/* The page's first ask (November 11, 2026). */}
+              <div className="mt-8 max-w-3xl">
+                <Link href="/contact" className="btn-next">
+                  Let&rsquo;s discuss your goals
+                  <span aria-hidden="true" className="ml-2">&rarr;</span>
+                </Link>
+                <p className="mt-4 body-text text-text-secondary text-pretty">
+                  Bring a question, a rough idea, or an existing project.
+                  We&rsquo;ll talk through what you need and whether I&rsquo;m
+                  the right person to help.
                 </p>
               </div>
             </div>
