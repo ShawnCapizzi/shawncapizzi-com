@@ -230,8 +230,9 @@ export default function Page() {
       </section>
 
       {/* THE KIND OF WORK I KNOW WELL: the client line, in the same style as
-          the figures strip on /contact. */}
-      <section className="section-tight border-t border-b border-border-subtle">
+          the figures strip on /contact. Its bottom edge is the ask rule on
+          the section below, so it carries only a top border. */}
+      <section className="section-tight border-t border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <h2 className="section-title text-balance max-w-3xl">
             Where this has worked
@@ -248,7 +249,7 @@ export default function Page() {
 
       {/* THE ASK: one button, to /contact, in the purple send-off block the
           homepage closes with. */}
-      <section className="cta-purple-block section-close">
+      <section className="cta-purple-block section-close ask-rule">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="max-w-3xl">
             <h2 className="section-title">Start wherever you are.</h2>

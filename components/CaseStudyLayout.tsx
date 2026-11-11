@@ -555,7 +555,7 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
       {/* ============================================================
           CTA BLOCK
           ============================================================ */}
-      <section className="section-close border-t border-border-subtle">
+      <section className="section-close ask-rule">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
           <h2 className="section-title max-w-3xl mx-auto">
             {props.ctaHeadline}

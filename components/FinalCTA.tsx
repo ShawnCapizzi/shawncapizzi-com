@@ -6,7 +6,7 @@ import Link from "next/link";
  */
 export function FinalCTA() {
   return (
-    <section className="cta-purple-block section-close">
+    <section className="cta-purple-block section-close ask-rule">
       <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-3xl">
           <h2 className="section-title">

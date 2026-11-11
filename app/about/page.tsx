@@ -598,7 +598,7 @@ export default function Page() {
 
       {/* CTA. The page ends here; the global footer follows. The type and
           color colophon moved to /design-info in October 2026. */}
-      <section className="section-close border-t border-border-subtle">
+      <section className="section-close ask-rule">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12 text-center">
           <h2 className="section-title text-balance max-w-3xl mx-auto">
             Bring me what you&apos;re working through.

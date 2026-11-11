@@ -386,6 +386,25 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   was removed November 11, 2026, matching the hover rule). The book
   reader keeps its own printed-page controls.
 
+## The ask rule (November 11, 2026)
+
+- Shawn's call: the thin blue to violet to pink rule from his original
+  site returns in one role. `.ask-rule` in `app/globals.css` draws a 2px
+  `linear-gradient(90deg, #536BF4 0%, #9968D7 50%, #EA67BA 100%)` on the
+  top edge of every closing ask and replaces that section's 1px border
+  (`.cta-purple-block` no longer carries its own purple top border). The
+  stops are the old site's colors, sampled from its rule. It sits on six
+  closing asks, once per page, beside the purple `.btn-next`: the
+  homepage (`FinalCTA`), /about, /thinking, /engagements, /how-i-help,
+  and every case study (`CaseStudyLayout`). /how-i-help's "Where this has
+  worked" strip dropped its bottom border so two lines never stack. It was
+  also shown on the footer edge, as a stub under page titles, and on every
+  divider; Shawn chose the closing ask only (on the footer it doubled the
+  ask's line within one screen; on every divider it became wallpaper).
+  Don't add it anywhere else without his call. Measured on all six at 1440
+  and 390: 2px, stops render at their hex values. It is decorative, so it
+  carries no contrast requirement.
+
 ## Contrast (November 2026)
 
 - Both grays were lifted 10% on November 11, 2026 (Shawn's call: they read

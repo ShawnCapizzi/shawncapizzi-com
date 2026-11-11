@@ -749,9 +749,10 @@ p + .hero-lead {
 /* ============================================================
    CTA PURPLE BLOCK
    Subtle purple wash for closing-moment sections (final CTA).
-   Reads as a deliberate "warm send-off" — flat 3% tint + soft
-   radial accent + thin top border for definition. Not a loud
-   purple section, just a tonal shift.
+   Reads as a deliberate "warm send-off": flat 3% tint and a soft
+   radial accent. Not a loud purple section, just a tonal shift.
+   Its top edge is the ask rule below (November 11, 2026), which
+   replaced the thin purple border it had.
    ============================================================ */
 
 .cta-purple-block {
@@ -761,7 +762,33 @@ p + .hero-lead {
     rgba(107, 92, 255, 0.045) 0%,
     transparent 70%
   );
-  border-top: 1px solid rgba(107, 92, 255, 0.14);
+}
+
+/* ============================================================
+   ASK RULE (November 11, 2026, Shawn's call)
+   The brand gradient as one 2px line, blue to violet to pink,
+   carried over from Shawn's original site. It sits on the top
+   edge of every closing ask and nowhere else, so it marks the
+   next step once per page, beside the purple .btn-next. It
+   replaces the section's 1px top border. Stops are the original
+   site's colors, sampled from its rule. Decorative, so it carries
+   no contrast requirement; an empty pseudo-element is not read by
+   screen readers.
+   ============================================================ */
+
+.ask-rule {
+  position: relative;
+  border-top: 0;
+}
+.ask-rule::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #536BF4 0%, #9968D7 50%, #EA67BA 100%);
+  pointer-events: none;
 }
 
 /* ============================================================
