@@ -352,6 +352,30 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   "laser" border glint (`LaserFrame`) was retired in November 2026 and
   deleted; no card border animates.
 
+## Buttons (November 11, 2026)
+
+- Color says what happens next (Shawn's call: guide the visitor to the
+  next best action). Two roles in `app/globals.css`. `.btn-next` (brand
+  purple, white text) is the next step Shawn wants: every ask that goes
+  to /contact, the calendar, or the email list, so each page's closing
+  ask, the homepage hero, the /engagements strip, the /contact calendar,
+  and the signup buttons (SignupCard keeps its own CSS with the same
+  values). `.btn-see` (off-white, ink text) is go see real work: live
+  products, case studies, Figma, the Clarity Cards deck. `.btn-sm` is the
+  compact size inside cards. Lavender text links move around the site.
+  Pages set no color, padding, radius, or type utilities on a pill; use
+  the roles. Before, "Start a conversation" was purple on two pages and
+  white on two, and white meant both "talk to me" and "go see a product".
+- The header "Let's talk" (desktop and mobile menu) and the mobile
+  back-to-top stay off-white pills on purpose: page chrome, not guidance.
+- Purple fills are only `.btn-next`. Selected states (the /thinking
+  Process tabs, the book contents) are lavender: edge, text, and a 10%
+  tint (tab text 6.91:1). FREE BELOW on the book's foreword row is
+  lavender link text, not a filled tag.
+- The case study carousel arrows stay still on hover (their hover invert
+  was removed November 11, 2026, matching the hover rule). The book
+  reader keeps its own printed-page controls.
+
 ## Contrast (November 2026)
 
 - Both grays were lifted 10% on November 11, 2026 (Shawn's call: they read

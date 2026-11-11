@@ -203,8 +203,8 @@ const signupStyles = `
 @media (min-width: 480px) { .sc-signup__form { flex-direction: row; } }
 .sc-signup__input {
   flex: 1;
-  padding: 13px 16px;
-  border-radius: 12px;
+  padding: 13px 20px;
+  border-radius: 9999px;
   border: 1px solid var(--sc-line, rgba(255,255,255,0.12));
   font-size: 15px;
   color: var(--sc-ink, #ECEAE3);
@@ -218,18 +218,22 @@ const signupStyles = `
   box-shadow: 0 0 0 3px rgba(107,92,255,0.15);
 }
 .sc-signup__btn {
-  padding: 13px 20px;
-  border-radius: 12px;
+  padding: 13px 24px;
+  border-radius: 9999px;
   border: none;
   cursor: pointer;
   background: var(--sc-accent, #6B5CFF);
   color: #fff;
-  font-size: 15px;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
   white-space: nowrap;
-  transition: filter .2s;
+  transition: scale 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.sc-signup__btn:hover:not(:disabled) { filter: brightness(1.08); }
+@media (hover: hover) {
+  .sc-signup__btn:hover:not(:disabled) { scale: 1.02; }
+}
 .sc-signup__btn:disabled { opacity: 0.7; cursor: default; }
 .sc-signup__err { color: #C0392B; font-size: 13px; margin: 12px 0 0; }
 .sc-signup__fine { color: var(--sc-ink-soft, #9A9AA4); font-size: 12px; margin: 16px 0 0; opacity: 0.8; }

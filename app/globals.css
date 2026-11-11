@@ -918,6 +918,63 @@ p + .hero-lead {
 }
 
 /* ============================================================
+   BUTTONS (November 11, 2026, Shawn's call): color says what
+   happens next, so a visitor can tell the next best step at a
+   glance.
+   - .btn-next (brand purple, white text): the next step Shawn wants
+     the visitor to take. Every ask that goes to /contact, the
+     calendar, or the email list: the homepage hero and closing ask,
+     each page's closing ask, the /engagements strip, the /contact
+     calendar, and the signup buttons (SignupCard, its own CSS).
+   - .btn-see (off-white, ink text): go see real work. Live products,
+     case studies, Figma, the Clarity Cards deck.
+   - Lavender text links move around the site.
+   The header "Let's talk" stays an off-white pill on purpose: it is
+   page chrome on every page, not the page's guidance. Pills grow 2%
+   on hover and never change color (white on #6B5CFF is 4.57:1; a
+   lighter purple fails AA). .btn-sm is the compact size for pills
+   inside cards.
+   ============================================================ */
+
+.btn-next,
+.btn-see {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  border-radius: 9999px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  transition: scale 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-next {
+  background-color: var(--color-brand-purple);
+  color: #ffffff;
+}
+
+.btn-see {
+  background-color: var(--color-text-primary);
+  color: var(--color-text-inverse);
+}
+
+.btn-sm {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.4286;
+}
+
+@media (hover: hover) {
+  .btn-next:hover,
+  .btn-see:hover {
+    scale: 1.02;
+  }
+}
+
+/* ============================================================
    CARD SURFACE
    Elevated card surface with subtle gradient + brand-color glow.
    Per design direction: "subtle but modern."

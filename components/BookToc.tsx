@@ -126,7 +126,7 @@ export function BookToc() {
             <span className="flex-1 font-[family-name:var(--font-instrument-sans)] text-base md:text-lg font-medium text-text-primary">
               The Human Condition
             </span>
-            <span className="shrink-0 rounded-full bg-[#A798FF] px-3 py-1 font-mono text-[11px] tracking-wider uppercase text-[#0B0B12]">
+            <span className="shrink-0 font-mono text-xs tracking-widest uppercase text-link group-hover:text-link-hover transition-colors">
               Free below <span aria-hidden="true">&darr;</span>
             </span>
           </a>
@@ -145,7 +145,7 @@ export function BookToc() {
                   onClick={() => setSel(i)}
                   className={`text-left rounded-xl border px-3.5 py-3 transition-colors ${
                     on
-                      ? "border-[#6B5CFF] bg-[#6B5CFF]/10"
+                      ? "border-link bg-link/10"
                       : "border-border-default hover:border-border-strong bg-white/[0.02]"
                   }`}
                 >

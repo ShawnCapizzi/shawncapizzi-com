@@ -260,7 +260,7 @@ export default function Page() {
             </div>
             <Link
               href="/contact"
-              className="shrink-0 inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
+              className="shrink-0 btn-next"
             >
               Start a conversation
               <span aria-hidden="true" className="ml-2">&rarr;</span>
@@ -578,7 +578,7 @@ export default function Page() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-8">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight hover:scale-[1.02] transition-transform"
+              className="btn-next"
             >
               Let&apos;s talk
               <span aria-hidden="true" className="ml-2">&rarr;</span>

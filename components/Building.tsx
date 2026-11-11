@@ -125,7 +125,7 @@ export function Building() {
                     href={p.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-text-primary text-text-inverse text-sm font-medium tracking-tight hover:scale-[1.02] transition-transform"
+                    className="btn-see btn-sm"
                   >
                     {p.liveLabel}
                   </a>

@@ -177,7 +177,7 @@ export function ProcessLoop() {
                 }}
                 className={`font-mono text-[11px] tracking-widest uppercase px-3 py-2 rounded-lg border transition-colors ${
                   on
-                    ? "bg-brand-purple border-brand-purple text-white"
+                    ? "bg-link/10 border-link text-link"
                     : "bg-bg-raised border-border-default text-text-secondary hover:border-border-strong hover:text-text-primary"
                 }`}
               >

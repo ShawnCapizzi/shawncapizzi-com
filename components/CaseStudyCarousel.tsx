@@ -225,7 +225,7 @@ export function CaseStudyCarousel({
               disabled={slideIndex === 0}
               type="button"
               aria-label="Previous slide"
-              className="inline-flex items-center gap-2 px-4 md:px-3.5 py-3 md:py-2 border border-border-default text-text-primary font-mono text-sm md:text-xs uppercase tracking-widest rounded hover:bg-text-primary hover:text-text-inverse hover:border-text-primary disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-text-primary disabled:hover:border-border-default transition-colors"
+              className="inline-flex items-center gap-2 px-4 md:px-3.5 py-3 md:py-2 border border-border-default text-text-primary font-mono text-sm md:text-xs uppercase tracking-widest rounded disabled:opacity-30 disabled:cursor-not-allowed"
             >
               <ChevronLeft size={14} aria-hidden="true" />
               Prev
@@ -235,7 +235,7 @@ export function CaseStudyCarousel({
               disabled={slideIndex === total - 1}
               type="button"
               aria-label="Next slide"
-              className="inline-flex items-center gap-2 px-4 md:px-3.5 py-3 md:py-2 border border-border-default text-text-primary font-mono text-sm md:text-xs uppercase tracking-widest rounded hover:bg-text-primary hover:text-text-inverse hover:border-text-primary disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-text-primary disabled:hover:border-border-default transition-colors"
+              className="inline-flex items-center gap-2 px-4 md:px-3.5 py-3 md:py-2 border border-border-default text-text-primary font-mono text-sm md:text-xs uppercase tracking-widest rounded disabled:opacity-30 disabled:cursor-not-allowed"
             >
               Next
               <ChevronRight size={14} aria-hidden="true" />

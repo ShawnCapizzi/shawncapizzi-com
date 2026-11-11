@@ -276,30 +276,32 @@ A signature mark of the brand. Used between phrases ("Clarity. Alignment. >> Mom
 
 ### Buttons
 
-Two pill buttons, both Geist medium.
+Color says what happens next (November 11, 2026), so a visitor can tell the next best step at a glance. Two pill roles in `app/globals.css`, both Geist 16px medium, 14px 28px inset, full radius:
 
-**Primary (the main ask on a page):**
 ```
-Background: --color-brand-purple (#6B5CFF)
-Text: white
-Border-radius: 9999px
-Padding: 14px 28px (px-7 py-3.5)
-Hover: grow 2%, no color change (a lighter purple drops white text to 3.87:1, below AA)
+.btn-next   Background --color-brand-purple (#6B5CFF), white text (4.57:1)
+            The next step: every ask that goes to /contact, the calendar,
+            or the email list. Homepage hero and closing ask, each page's
+            closing ask (case studies, /about, /engagements, /thinking,
+            /how-i-help), the /engagements strip, the /contact calendar,
+            and the signup buttons.
+.btn-see    Background --color-text-primary (off-white), ink text
+            Go see real work: live products, case studies, Figma, the
+            Clarity Cards deck.
+.btn-sm     Compact size for pills inside cards (10px 20px, 14px type).
+Hover       Grow 2%, never a color change.
 ```
 
-**Secondary (Open the calendar, Let's talk):**
-```
-Background: --color-text-primary (off-white)
-Text: --color-text-inverse
-Border-radius: 9999px
-Padding: 14px 28px
-Hover: grow 2%, no color change
-```
+The header "Let's talk" is an off-white pill on purpose: it is page chrome on every page, not the page's guidance.
 
 **Text link:**
 Arrow notation: `View the case study →` or `Open courtvisual.com →`
 Color: `--color-link` (lavender)
 Hover: `--color-link-hover` (white)
+
+**Selected states** (Process step tabs, the book contents) use lavender: a lavender edge, lavender text, and a 10% lavender tint. Purple fills are reserved for `.btn-next`.
+
+**Exceptions:** the case study carousel arrows are mono outline buttons that stay still on hover; the book reader keeps its own printed-page controls.
 
 Hover appears only on devices that can hover. The site uses three hover moves and no others: text links turn white, pills grow 2%, clickable cards brighten (below). Accordion titles and chevrons turn lavender.
 

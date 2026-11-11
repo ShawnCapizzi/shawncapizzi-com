@@ -218,7 +218,7 @@ export function ClarityCardDeck() {
           <button
             type="button"
             onClick={drawNext}
-            className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-[#6355BB] hover:bg-[#7165C9] text-white text-sm md:text-base font-medium tracking-tight transition-all hover:scale-[1.02]"
+            className="btn-see"
           >
             {drawn.length === 0 ? "Draw a card" : "Draw next"}
           </button>
@@ -226,7 +226,7 @@ export function ClarityCardDeck() {
         <button
           type="button"
           onClick={reshuffle}
-          className="inline-flex items-center justify-center px-7 py-3 rounded-full border border-border-default text-text-primary hover:bg-text-primary/[0.06] text-sm md:text-base font-medium tracking-tight transition-all"
+          className="inline-flex items-center px-2 text-base font-medium text-link hover:text-link-hover transition-colors"
         >
           Shuffle deck
         </button>

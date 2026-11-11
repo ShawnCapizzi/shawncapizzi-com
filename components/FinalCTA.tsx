@@ -20,7 +20,7 @@ export function FinalCTA() {
           <div className="mt-10 flex flex-col sm:flex-row gap-5 sm:gap-8 sm:items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
+              className="btn-next"
             >
               Start a conversation
               <span aria-hidden="true" className="ml-2">&rarr;</span>
