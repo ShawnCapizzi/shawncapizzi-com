@@ -441,6 +441,10 @@ The home hero portrait is the photograph with Shawn arms-crossed against the rad
 
 Mobile: same image, scaled down. No replacement.
 
+### Headshots (November 11, 2026)
+
+On the open page the headshot has no frame: a transparent cutout (`headshot-2026-cutout.webp`) over a translucent blue glow that repeats the photo's own and spreads wider, so the page's atmosphere shows through around him and no edge shows (`components/Portrait.tsx`, `.portrait`). It is the one portrait for the homepage hero, /about, and /how-i-help. A frame belongs only where the photo sits inside a card, and there the card is the frame (the Get in touch card, `.cta-portrait`). No borders, drop shadows, or rim effects on a headshot.
+
 ### About page photography
 
 The Ethyca arms-crossed shot (`Shawn_181.jpg`). Crop to remove the partial red car at lower-left. This is documentary, not theatrical — the right energy for "this is who's behind the work."

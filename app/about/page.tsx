@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { pageMetadata, profilePage } from "@/lib/seo";
 import { KeepHyphens } from "@/components/KeepHyphens";
 import { VideoWithPlayOverlay } from "@/components/VideoWithPlayOverlay";
+import { Portrait } from "@/components/Portrait";
 
 /* The six kinds of work in "Hard to staff", once a single paragraph. */
 const HARD_TO_STAFF_WORK = [
@@ -49,51 +50,10 @@ export default function Page() {
   return (
     <article>
       <JsonLd data={profilePage()} />
-      {/* Rim-shimmer CSS, scoped to .capizzi-rim-card class.
-          Color matches nav shimmer (brand-blue #4F46E5). Opacity dims
-          across three passes (0.95 → 0.55 → 0.25 → 0) mirroring the
-          nav shimmer's three-pass falloff. */}
-      <style>{`
-        @keyframes capizzi-rim-shimmer {
-          0%   { transform: rotate(0deg);    opacity: 0.95; }
-          33%  { transform: rotate(360deg);  opacity: 0.55; }
-          66%  { transform: rotate(720deg);  opacity: 0.25; }
-          95%  { transform: rotate(1080deg); opacity: 0.08; }
-          100% { transform: rotate(1080deg); opacity: 0; }
-        }
-        .capizzi-rim-card { position: relative; }
-        .capizzi-rim-card::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          border-radius: inherit;
-          padding: 2px;
-          background: conic-gradient(
-            from 0deg,
-            transparent 0deg,
-            transparent 270deg,
-            rgba(79, 70, 229, 0.55) 300deg,
-            rgba(79, 70, 229, 1) 335deg,
-            rgba(79, 70, 229, 0.55) 355deg,
-            transparent 360deg
-          );
-          -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-                  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-          -webkit-mask-composite: xor;
-                  mask-composite: exclude;
-          animation: capizzi-rim-shimmer 9s linear 1 forwards;
-          pointer-events: none;
-          z-index: 2;
-        }
-        .capizzi-rim-card.delay-1::before { animation-delay: 0.5s; }
-        .capizzi-rim-card.delay-2::before { animation-delay: 1.0s; }
-        @media (prefers-reduced-motion: reduce) {
-          .capizzi-rim-card::before { animation: none; opacity: 0; }
-        }
-      `}</style>
-
       {/* HERO: how the work moved upstream. Rewritten September 2026 in
-          Shawn's words; the portrait and its rim shimmer are unchanged. */}
+          Shawn's words. The portrait lost its frame and the frame's rim
+          shimmer on November 11, 2026 (Shawn's call): it sits in its own
+          extended glow, like the homepage and /how-i-help. */}
       <section className="relative section-hero">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">About</p>
@@ -130,18 +90,14 @@ export default function Page() {
               </p>
             </div>
 
+            {/* The headshot in its own extended glow, no frame (November 11,
+                2026; components/Portrait.tsx). */}
             <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-start">
-              <div className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl capizzi-rim-card w-full max-w-[220px] lg:max-w-[250px] aspect-[340/430]">
-                <Image
-                  src="/images/brand/headshot-2026-knockout.webp"
-                  alt="Shawn Capizzi"
-                  fill
-                  priority
-                  quality={100}
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 220px, 250px"
-                />
-              </div>
+              <Portrait
+                className="w-[240px] lg:w-[300px]"
+                priority
+                sizes="(max-width: 1024px) 240px, 300px"
+              />
             </div>
           </div>
         </div>

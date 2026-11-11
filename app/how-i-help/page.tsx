@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { pageMetadata, LINKEDIN_URL } from "@/lib/seo";
 import { WaysGroups, type WaysGroup } from "@/components/WaysGroups";
+import { Portrait } from "@/components/Portrait";
 
 /**
  * /how-i-help (October 2026): the page behind the QR code on Shawn's
@@ -187,18 +188,14 @@ export default function Page() {
               </div>
             </div>
 
+            {/* The headshot in its own extended glow, no frame (November 11,
+                2026; components/Portrait.tsx). */}
             <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-start lg:pt-12">
-              <div className="relative rounded-2xl overflow-hidden border border-border-default shadow-xl capizzi-rim-card w-full max-w-[200px] lg:max-w-[250px] aspect-[340/430]">
-                <Image
-                  src="/images/brand/headshot-2026-knockout.webp"
-                  alt="Shawn Capizzi"
-                  fill
-                  priority
-                  quality={100}
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 200px, 250px"
-                />
-              </div>
+              <Portrait
+                className="w-[220px] lg:w-[300px]"
+                priority
+                sizes="(max-width: 1024px) 220px, 300px"
+              />
             </div>
           </div>
         </div>

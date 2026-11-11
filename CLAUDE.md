@@ -131,6 +131,35 @@ structured data use it.
 - `public/images/brand/signature-logo.svg` — the handwritten Capizzi wordmark
 - `public/images/brand/wordmark-full.svg` — composed wordmark with portrait (unused, kept for reference)
 - `public/images/brand/headshot-2026.png` — hero portrait (B&W, soft gray bg)
+- `public/images/brand/headshot-2026-knockout.jpg`: the headshot on the
+  navy and blue-glow backdrop, used by the Get in touch card and the
+  Person structured data
+- `public/images/brand/headshot-2026-cutout.webp`: the same headshot as a
+  transparent cutout (November 11, 2026), used by every portrait on the
+  open page (`components/Portrait.tsx`)
+
+## Headshots (November 11, 2026)
+
+- Shawn's call: no frame around the headshot on the open page; a frame
+  only where the photo sits inside a card, and there the card is the
+  frame. `components/Portrait.tsx` is the one portrait for the homepage
+  hero, /about, and /how-i-help (it replaced a bordered tile with a drop
+  shadow and a one-time blue rim sweep on /about and /how-i-help, and the
+  hero's masked square, whose edge still showed).
+- The portrait is a transparent cutout over a translucent glow
+  (`.portrait` in `app/globals.css`), so the page's own atmosphere, the
+  starfield and the top-bar glow, shows through around him and no edge or
+  box ever shows. The glow repeats the photo's own (sampled: centered 50%
+  across and 32% down, radius 48% of the photo) and spreads 1.6 times
+  wider. It is translucent on purpose: an opaque navy glow read as a dark
+  oval wherever the portrait passed under the top-bar glow. The jacket's
+  outer 12% and the bottom 28% fade out.
+- The cutout was made from the knockout photo by separating him from its
+  navy and blue-glow backdrop by color, then feathering and cleaning the
+  edge; checked at 2x and over gray, purple, and white. A new headshot
+  needs a new transparent cutout.
+- Inside a card (the Get in touch card on /work and /faq) the knockout
+  photo keeps its own backdrop: `.cta-portrait`, above.
 - `public/images/logos/` — 6 client logos, monochrome white, numbered 01–06 in display order
 - `public/images/case-studies/` — case study hero images
 - `public/images/hero/` — hero supporting imagery

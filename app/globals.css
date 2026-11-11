@@ -906,6 +906,67 @@ html[data-menu-open] [data-back-to-top] {
 }
 
 /* ============================================================
+   PORTRAIT ON THE OPEN PAGE (November 11, 2026, Shawn's call)
+   Shawn's headshot with no frame (components/Portrait.tsx: the
+   homepage hero, /about, /how-i-help). The photo is a transparent
+   cutout, so it carries no backdrop; ::before draws the blue glow
+   behind him, translucent and spread wider than the photo, so the
+   page's own atmosphere (the starfield, the top-bar glow) shows
+   through everywhere around him and no edge or box ever shows.
+   The jacket's outer edges and bottom fade out.
+   Same glow as the Get in touch card (.cta-portrait below),
+   sampled from headshot-2026-knockout.jpg: centered 50% across and
+   32% down the photo, its radius 48% of the photo's side, page
+   navy by 44%. ::before is sized so its box is that ellipse,
+   spread across by --portrait-spread: left and right sit at
+   50% - spread x 48%, the top at 32% - 48% = -16%, the bottom at
+   32% + 48% = 80% (an inset of 20%).
+   ============================================================ */
+
+.portrait {
+  --portrait-spread: 1.6;
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+.portrait::before {
+  content: "";
+  position: absolute;
+  top: -16%;
+  bottom: 20%;
+  left: calc(50% - var(--portrait-spread) * 48%);
+  right: calc(50% - var(--portrait-spread) * 48%);
+  /* Translucent, so it only ever adds light: one bright blue at falling
+     alpha that lands on the sampled stops over the page navy (12.5% of
+     rgb(96, 87, 247) over #000F1F is #0C183A), and still lightens, never
+     darkens, wherever the page behind is brighter, such as the top-bar
+     atmosphere at the top of the screen. An opaque navy here read as a
+     dark oval there. */
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(96, 87, 247, 0.125) 0%,
+    rgba(96, 87, 247, 0.116) 41.7%,
+    rgba(96, 87, 247, 0.088) 50%,
+    rgba(96, 87, 247, 0.065) 58.3%,
+    rgba(96, 87, 247, 0.042) 66.7%,
+    rgba(96, 87, 247, 0.023) 75%,
+    rgba(96, 87, 247, 0) 91.7%
+  );
+  pointer-events: none;
+}
+.portrait__photo {
+  position: absolute;
+  inset: 0;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%),
+    linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%),
+    linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
+  mask-composite: intersect;
+}
+
+/* ============================================================
    PORTRAIT CARD IMAGE (November 11, 2026, Shawn's call)
    The Get in touch card's headshot (CTACards, imageFit
    "portrait"; /work and /faq). It read loud and tight filling the

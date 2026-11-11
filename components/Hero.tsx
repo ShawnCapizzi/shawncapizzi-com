@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { Portrait } from "./Portrait";
 
 /**
  * Hero: homepage hero.
@@ -21,9 +21,10 @@ import Link from "next/link";
  * is still exactly one H1; nothing is duplicated for mobile.
  *   headline, image, lead, wordmark, logos, three doors
  *
- * No backdrop or gradient frame around the image; the rounded photo
- * floats clean on the dark page. Top padding generous on mobile so
- * the image has breathing room from the transparent header bar.
+ * No frame around the image: since November 11, 2026 the photo sits in its
+ * own extended glow and fades into the page (components/Portrait.tsx), so
+ * its square edge never shows. Top padding generous on mobile so the image
+ * has breathing room from the transparent header bar.
  *
  * November 2026: the wordmark that sat under the lead is gone (the header
  * carries it), so the hero ends at the two asks.
@@ -68,27 +69,15 @@ export function Hero() {
                 header already carries it, and the hero reads shorter. */}
           </div>
 
-          {/* Right: headshot, knockout subject on navy plus brand glow, soft edge dissolve */}
+          {/* Right: the headshot in its own extended glow, no frame
+              (November 11, 2026; components/Portrait.tsx). Widths keep the
+              photo the size it was: 80% of the old square column. */}
           <div className="relative lg:col-span-5 order-2 lg:order-2 mt-6 mb-3 lg:my-0">
-            <div
-              className="relative aspect-square max-w-[82%] sm:max-w-[72%] md:max-w-[80%] lg:max-w-[100%] mx-auto"
-              style={{
-                maskImage:
-                  "radial-gradient(ellipse 95% 95% at 50% 45%, #000 82%, rgba(0,0,0,0.5) 95%, transparent 100%)",
-                WebkitMaskImage:
-                  "radial-gradient(ellipse 95% 95% at 50% 45%, #000 82%, rgba(0,0,0,0.5) 95%, transparent 100%)",
-              }}
-            >
-              <Image
-                src="/images/brand/headshot-2026-knockout.jpg"
-                alt="Shawn Capizzi"
-                fill
-                priority
-                sizes="(max-width: 640px) 70vw, (max-width: 1024px) 60vw, 36vw"
-                className="object-cover object-center rounded-3xl"
-                style={{ transform: "scale(0.8)", transformOrigin: "center" }}
-              />
-            </div>
+            <Portrait
+              className="w-[66%] sm:w-[58%] md:w-[64%] lg:w-[80%] mx-auto"
+              priority
+              sizes="(max-width: 640px) 66vw, (max-width: 1024px) 60vw, 30vw"
+            />
           </div>
         </div>
       </div>
