@@ -159,11 +159,11 @@ export default function Page() {
             Three ways to bring me into the work.
           </h1>
           <p className="hero-lead max-w-3xl">
-            Embed me with the team. Bring me in for a defined problem. Or keep
-            me close for the decisions that need senior judgment. My deepest
-            experience is in healthcare, pharma, and other regulated markets:
-            experiences that help people understand, trust, act, and stay
-            engaged.
+            Whether the work is moving, a new focus or message is coming, or
+            you want an experienced read close at hand, there&apos;s a way of
+            working together that fits. My deepest experience is in
+            healthcare, pharma, and other regulated markets: experiences that
+            help people understand, trust, act, and stay engaged.
           </p>
         </div>
       </section>
