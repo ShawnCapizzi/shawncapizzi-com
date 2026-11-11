@@ -249,23 +249,23 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   content apart at a glance, even loosely. `.card` (navy, unchanged) is
   proof and thinking: case studies, products he built, the Process, the
   book and Clarity Cards, quotes, About, and the homepage doors.
-  `.card.card-value` (teal) is value and services, what a client gets and
-  how the work is shaped: the homepage engagement cards
+  `.card.card-value` (violet) is value and services, what a client gets
+  and how the work is shaped: the homepage engagement cards
   (`components/HowIWork.tsx`), the /engagements ways of working, and the
   /engagements Advisory shapes. Nothing else takes it without Shawn's
   call; /contact's ways to reach him stay navy (an action, not an offer).
-  Shawn picked the teal shift from eight measured variants (green
-  backed off 60%, 35%, and 17%, full green, stronger green, teal, olive):
-  `--card-value-base` `#061D24`, a teal glow (0.065) from the bottom left,
-  the purple glow top right softened to 0.10, a paper (`#ECEFE6`) edge at
-  26% (46% on hover), and the banknote rule: a second hairline 7px inside
-  the edge, paper at 13%, drawn by `::after` on text cards only, so it
-  never crosses a photo. Measured against the navy card (CIEDE2000): 7.9
-  typical vision, 4.7 red-green color-blind; the edge and rule carry
-  about 9.5 for every viewer, so keep them. A row never mixes the two
-  types. Teal lives only in this surface: never text, never icons, never
-  other borders; it is a tint, not a fourth page color. Gray labels
-  4.78:1, card text 6.89:1.
+  The value card uses only the page navy and the brand purple, no new
+  hue: a deeper navy base (`--card-value-base` `#010F1C`) under a
+  brand-purple wash (0.15), the purple glow top right at 0.16, a paper
+  (`#ECEFE6`) edge at 26% (46% on hover), and the banknote rule: a second
+  hairline 7px inside the edge, paper at 13%, drawn by `::after` on text
+  cards only, so it never crosses a photo. Shawn picked it (P5++) after
+  measured rounds of green, teal, and warm purple fills; green and teal
+  were set aside as a fourth color. Against the navy card (CIEDE2000):
+  8.9 typical vision, 5.2 red-green color-blind (the best of every fill
+  tested for those viewers); the edge and rule add about 13 for every
+  viewer, so keep them. A row never mixes the two types. Gray labels
+  4.62:1 or better at desktop and phone, lavender links 7.0:1.
 - Cards in a row share the row's height. Content stacks from the top on
   the 24px rhythm; the last action carries `.card-foot`, which puts every
   link or button in the row on one baseline with 24px above it. The copy
@@ -359,7 +359,7 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   4.89:1 on `bg-elevated`. `bg-elevated` moved from `#021626` to `#08203A`
   (1.17:1 against the page, from 1.05:1) so the header, carousel frames,
   and video posters read as a step. `bg-raised` and `.card-surface` are
-  unchanged on purpose (Shawn's call); the teal value card is a second
+  unchanged on purpose (Shawn's call); the violet value card is a second
   type, not a change to the default (see Vertical rhythm, two card types). Any component that needs these
   values in JS reads the CSS variable, never a hex copy.
 

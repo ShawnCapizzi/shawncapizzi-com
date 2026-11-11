@@ -954,24 +954,25 @@ p + .hero-lead {
      - .card (navy): proof and thinking. Case studies, products,
        the Process, the book and Clarity Cards, quotes, About, and
        the homepage doors.
-     - .card.card-value (teal): value and services. What a client
+     - .card.card-value (violet): value and services. What a client
        gets and how the work is shaped: the homepage engagement
        cards, the /engagements ways of working, and the Advisory
        shapes.
-   Shawn picked the teal shift from eight measured variants: navy
-   moved toward a deep teal (#061D24), a teal glow (0.065) from the
-   bottom left, the purple glow top right softened to 0.10, a paper
-   (#ECEFE6) edge at 26%, and the banknote rule: a second hairline
-   7px inside the edge, paper at 13%, on text cards only.
-   Measured against the navy card (CIEDE2000): 7.9 for typical
-   vision, 4.7 red-green color-blind. The edge and the rule carry
-   about 9.5 for every viewer, so they do most of the telling apart.
-   Gray labels 4.78:1, card text 6.89:1. Teal lives only in this
-   surface, never in text or icons.
+   On brand by construction: only the page navy and the brand
+   purple (#6B5CFF), no new hue. A deeper navy base (#010F1C) under
+   a brand-purple wash (0.15), the purple glow top right at 0.16, a
+   paper (#ECEFE6) edge at 26%, and the banknote rule: a second
+   hairline 7px inside the edge, paper at 13%, on text cards only.
+   Shawn picked it (P5++) after measured rounds of green, teal, and
+   warm purple fills. Against the navy card (CIEDE2000): 8.9 typical
+   vision, 5.2 red-green color-blind, the best of every fill tested
+   for those viewers; the edge and rule add about 13 for everyone.
+   Gray labels 4.62:1 or better (desktop and phone), lavender links
+   7.0:1.
    ============================================================ */
 
 :root {
-  --card-value-base: #061D24;
+  --card-value-base: #010F1C;
   --card-value-edge: rgba(236, 239, 230, 0.26);
   --card-value-edge-hover: rgba(236, 239, 230, 0.46);
   --card-value-rule: rgba(236, 239, 230, 0.13);
@@ -984,16 +985,11 @@ p + .hero-lead {
   background-image:
     radial-gradient(
       ellipse 100% 80% at 100% 0%,
-      rgba(107, 92, 255, 0.10) 0%,
-      rgba(107, 92, 255, 0.03) 35%,
+      rgba(107, 92, 255, 0.16) 0%,
+      rgba(107, 92, 255, 0.048) 35%,
       transparent 70%
     ),
-    radial-gradient(
-      ellipse 90% 75% at 0% 100%,
-      rgba(110, 190, 180, 0.065) 0%,
-      rgba(110, 190, 180, 0.0195) 40%,
-      transparent 72%
-    ),
+    linear-gradient(rgba(107, 92, 255, 0.15), rgba(107, 92, 255, 0.15)),
     linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.04) 0%,
