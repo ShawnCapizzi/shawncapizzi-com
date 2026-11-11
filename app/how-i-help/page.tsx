@@ -139,7 +139,8 @@ export default function Page() {
                   it as a link. */}
               <h2 className="card-title max-w-3xl text-balance">
                 <span className="block">
-                  What business challenge are you{" "}
+                  What digital transformation are you leading or business
+                  challenge are you{" "}
                   <a
                     href="https://www.nfl.com/standings/"
                     target="_blank"
@@ -149,7 +150,7 @@ export default function Page() {
                     tackling
                     <span className="sr-only"> (New York Giants standings, opens in a new tab)</span>
                   </a>
-                  , or transformation are you leading?
+                  ?
                 </span>{" "}
                 <span className="block mt-2">
                   What goal are you working toward, and how will you measure
