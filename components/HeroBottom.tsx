@@ -83,7 +83,7 @@ export function HeroBottom() {
                 <p className="metadata-label">
                   {door.eyebrow}
                 </p>
-                <h2 className="card-title text-text-primary text-balance">
+                <h2 className="card-title text-text-primary text-balance group-hover:text-link transition-colors">
                   {door.title}
                 </h2>
                 <p className="card-text text-text-secondary text-pretty">

@@ -92,7 +92,7 @@ export function SelectedWork() {
                 <p className="metadata-label">
                   {cs.eyebrow}
                 </p>
-                <h3 className="card-title text-text-primary">
+                <h3 className="card-title text-text-primary group-hover:text-link transition-colors">
                   {cs.headline}
                 </h3>
                 <p className="card-text text-text-secondary">
