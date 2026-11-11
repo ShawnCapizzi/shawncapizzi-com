@@ -87,7 +87,7 @@ The palette is disciplined: deep navy and off-white carry nearly every surface, 
 --color-bg-inverse:      #F5F5F4   /* rare; color-block sections */
 ```
 
-Cards paint `#04192B` through the `.card` role (see section 5).
+Cards paint `#04192B` through the `.card` role; the value card (`.card-value`) paints `#061D24`, navy with a teal cast (see section 5).
 
 ### Type colors
 
@@ -313,6 +313,15 @@ Border: 1px solid --color-border-default
 Border-radius: 16px
 Inset: --space-card (24 / 28 / 32)
 Hover (clickable cards): border to --color-border-strong, title to lavender, any image or video inside zooms 2%
+```
+
+Two card types, so content reads at a glance. `.card` (navy) is proof and thinking: case studies, products, the Process, the book and Clarity Cards, quotes, About, the homepage doors. `.card.card-value` (teal) is value and services: the homepage engagement cards, the /engagements ways of working, and the Advisory shapes. A row never mixes the two.
+
+```
+Value card (.card.card-value)
+Background: #061D24, purple glow top right (0.10), teal glow bottom left (0.065, rgb 110 190 180)
+Border: 1px paper #ECEFE6 at 26%; hover 46%
+Inner rule (text cards only): 1px paper at 13%, 7px inside the border
 ```
 
 `.card-compact` (16 / 20 / 24) is for dense rows only. A card with an image on top moves the inset to a `.card-body` child so the image runs to the edge. Cards in a row share the row's height; the last action carries `.card-foot` so every action in the row sits on one baseline. Uneven rows are fixed by balancing the copy, never by pinning a footer over a gap.

@@ -155,12 +155,13 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 
 - No bullet-point overuse — prose first, lists only when essential
 - No agency-speak: "crafted", "elevated", "transformed", "delighted", "journey"
-- No "we": Shawn is one person. Three exceptions (Shawn's call, November
+- No "we": Shawn is one person. Four exceptions (Shawn's call, November
   2026), all where "we" means Shawn and the visitor or client together:
   the Advisory shape cards on /engagements, the /contact hero ("We
   don't need a finished brief, scope, or RFP to start.", also the page's
-  search description), and the homepage Advisory card ("Get clear on the
-  opportunity. Together, we map a plan.").
+  search description), the homepage Advisory card ("Get clear on the
+  opportunity. Together, we map a plan."), and the first homepage door's
+  label ("We start here").
 - No drop shadows for elevation (use bg shifts)
 - No more than 3 colors visible on a page
 - No icons or illustrations beyond the single starburst symbol, with two
@@ -244,6 +245,27 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   on a card. Before, 27 cards used 11 insets (16 to 40px) and two radii;
   measured after, every card on nine pages reads 24 / 32 at 16px radius.
   `.card-surface` remains as the shared surface paint only.
+- Two card types (November 11, 2026, Shawn's call), so a visitor can tell
+  content apart at a glance, even loosely. `.card` (navy, unchanged) is
+  proof and thinking: case studies, products he built, the Process, the
+  book and Clarity Cards, quotes, About, and the homepage doors.
+  `.card.card-value` (teal) is value and services, what a client gets and
+  how the work is shaped: the homepage engagement cards
+  (`components/HowIWork.tsx`), the /engagements ways of working, and the
+  /engagements Advisory shapes. Nothing else takes it without Shawn's
+  call; /contact's ways to reach him stay navy (an action, not an offer).
+  Shawn picked the teal shift from eight measured variants (green
+  backed off 60%, 35%, and 17%, full green, stronger green, teal, olive):
+  `--card-value-base` `#061D24`, a teal glow (0.065) from the bottom left,
+  the purple glow top right softened to 0.10, a paper (`#ECEFE6`) edge at
+  26% (46% on hover), and the banknote rule: a second hairline 7px inside
+  the edge, paper at 13%, drawn by `::after` on text cards only, so it
+  never crosses a photo. Measured against the navy card (CIEDE2000): 7.9
+  typical vision, 4.7 red-green color-blind; the edge and rule carry
+  about 9.5 for every viewer, so keep them. A row never mixes the two
+  types. Teal lives only in this surface: never text, never icons, never
+  other borders; it is a tint, not a fourth page color. Gray labels
+  4.78:1, card text 6.89:1.
 - Cards in a row share the row's height. Content stacks from the top on
   the 24px rhythm; the last action carries `.card-foot`, which puts every
   link or button in the row on one baseline with 24px above it. The copy
@@ -315,7 +337,11 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   others: text links go lavender to white; pill buttons grow 2%, purple
   and white alike, with no color change (a lighter purple put white text
   at 3.87:1, below AA); clickable cards brighten their border and turn the
-  title lavender, and an image or video inside zooms 2%. Accordion
+  title lavender, and an image or video inside zooms 2%. The border move
+  lives in `app/globals.css` (`a.card:hover, .card.group:hover`, to
+  `--color-border-strong`), not in a `hover:border-*` utility: the card's border rule is unlayered, so until
+  November 11, 2026 no card edge changed on hover (measured #404040 at
+  rest and under the pointer). Accordion
   triggers carry `.disclosure-trigger`, which turns the title and chevron
   lavender. Tailwind v4's `hover:` and the CSS rule both apply only on
   devices that can hover, so phones never see any of it. The footer's
@@ -333,7 +359,8 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   4.89:1 on `bg-elevated`. `bg-elevated` moved from `#021626` to `#08203A`
   (1.17:1 against the page, from 1.05:1) so the header, carousel frames,
   and video posters read as a step. `bg-raised` and `.card-surface` are
-  unchanged on purpose (Shawn's call). Any component that needs these
+  unchanged on purpose (Shawn's call); the teal value card is a second
+  type, not a change to the default (see Vertical rhythm, two card types). Any component that needs these
   values in JS reads the CSS variable, never a hex copy.
 
 ## Case studies

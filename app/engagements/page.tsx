@@ -216,7 +216,7 @@ export default function Page() {
             {WAYS.map((way) => (
               <article
                 key={way.id}
-                className="flex flex-col card"
+                className="flex flex-col card card-value"
               >
                 <p className="eyebrow">{way.name}</p>
                 <h3 className="card-title text-text-primary">{way.title}</h3>
@@ -369,7 +369,7 @@ export default function Page() {
             {ADVISORY_SHAPES.map((shape) => (
               <article
                 key={shape.name}
-                className="relative flex flex-col card"
+                className="relative flex flex-col card card-value"
               >
                 <h3 className="card-title text-text-primary">
                   {shape.name}

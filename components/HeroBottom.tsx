@@ -9,9 +9,14 @@ import Link from "next/link";
  * intent-named entry points, because a visitor does not know which audience
  * they are on arrival, but they do know what they came to do.
  *
- *   Door 1  Share your business goals             /contact (the page's one ask)
- *   Door 2  The work behind the experience        /work
- *   Door 3  The thinking I bring, as a system     /thinking, the Process page
+ *   Door 1  We start here: the challenge         /contact (the page's one ask)
+ *   Door 2  The proof: see the work              /work
+ *   Door 3  The how: the Capizzi Process         /thinking, the Process page
+ *
+ * Copy rewritten November 11, 2026 in Shawn's words. Two of his choices
+ * balance the row: the Proof body keeps "Each shows the business need,
+ * how I solved it, and the results.", and The how reads "Supported by
+ * practical tools" without "Grounded in common sense and".
  *
  * The D&AD line sits underneath the doors as a credential, shown, not
  * claimed, and links to the D&AD entry. It moved into a proof strip for a
@@ -37,27 +42,27 @@ type Door = {
 const DOORS: Door[] = [
   {
     key: "problem",
-    eyebrow: "Start here",
-    title: "Share your business goals or roadblocks.",
-    body: "A stuck flow, a message that isn't getting the action you want, or customer signals nobody tracks. I find the opportunities, drive product to market, and build feedback loops that turn customer data into actionable business intelligence.",
-    cta: "Tell me what you\u2019re working on",
+    eyebrow: "We start here",
+    title: "What challenge are you trying to solve, or transformation do you want to lead?",
+    body: "A new market opportunity, a better experience, a brand message that reaches further, or a team that needs direction. Tell me where you want to go and what\u2019s getting in the way.",
+    cta: "Discuss your goals",
     href: "/contact",
     primary: true,
   },
   {
     key: "work",
-    eyebrow: "Proof",
-    title: "The work behind the experience.",
-    body: "Six case studies across pharma, healthcare, financial services, and enterprise, from design governance and patient navigation to CRM, CX, and independent products. Each shows the business need, how I solved it, and the results.",
-    cta: "See the case studies",
+    eyebrow: "The proof",
+    title: "See the work. Understand the impact.",
+    body: "Explore work across healthcare, financial services, AI-powered products, and enterprise systems: the challenges, the decisions that shaped the work, and what changed. Each shows the business need, how I solved it, and the results.",
+    cta: "Explore the case studies",
     href: "/work",
   },
   {
     key: "thinking",
-    eyebrow: "Method",
-    title: "The thinking I bring to every discussion, built into a flexible system.",
-    body: "I brought the way I think, collaborate, and make decisions into a system teams can use, from seasoned strategy and product teams to those new to the process. Digital, printed, and in your pocket.",
-    cta: "See the Process",
+    eyebrow: "The how",
+    title: "A clear, flexible approach to complex challenges.",
+    body: "The Capizzi Process helps teams define what matters, stay focused, make ideas tangible and testable, and measure what changes. Supported by practical tools, including my book and Clarity Cards.",
+    cta: "Explore the Process",
     href: "/thinking",
   },
 ];

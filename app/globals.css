@@ -602,6 +602,19 @@ p + .hero-lead {
   border: 1px solid var(--color-border-default);
   overflow: hidden;
 }
+
+/* Clickable cards brighten their edge on hover. The border above is
+   unlayered, so a Tailwind hover:border-* utility on the element could
+   never win; until November 11, 2026 no card edge changed on hover
+   (measured: #404040 before and under the pointer). This rule is
+   unlayered too, and applies only where hover exists. The value card's
+   own hover edge is in the VALUE CARD block. */
+@media (hover: hover) {
+  a.card:hover,
+  .card.group:hover {
+    border-color: var(--color-border-strong);
+  }
+}
 .card:not(:has(> .card-body)) {
   padding: var(--space-card);
 }
@@ -932,6 +945,77 @@ p + .hero-lead {
       rgba(255, 255, 255, 0) 40%,
       rgba(0, 0, 0, 0.18) 100%
     );
+}
+
+/* ============================================================
+   VALUE CARD (November 11, 2026, Shawn's call)
+   The second card type. Two types, so a visitor can tell content
+   apart at a glance:
+     - .card (navy): proof and thinking. Case studies, products,
+       the Process, the book and Clarity Cards, quotes, About, and
+       the homepage doors.
+     - .card.card-value (teal): value and services. What a client
+       gets and how the work is shaped: the homepage engagement
+       cards, the /engagements ways of working, and the Advisory
+       shapes.
+   Shawn picked the teal shift from eight measured variants: navy
+   moved toward a deep teal (#061D24), a teal glow (0.065) from the
+   bottom left, the purple glow top right softened to 0.10, a paper
+   (#ECEFE6) edge at 26%, and the banknote rule: a second hairline
+   7px inside the edge, paper at 13%, on text cards only.
+   Measured against the navy card (CIEDE2000): 7.9 for typical
+   vision, 4.7 red-green color-blind. The edge and the rule carry
+   about 9.5 for every viewer, so they do most of the telling apart.
+   Gray labels 4.78:1, card text 6.89:1. Teal lives only in this
+   surface, never in text or icons.
+   ============================================================ */
+
+:root {
+  --card-value-base: #061D24;
+  --card-value-edge: rgba(236, 239, 230, 0.26);
+  --card-value-edge-hover: rgba(236, 239, 230, 0.46);
+  --card-value-rule: rgba(236, 239, 230, 0.13);
+}
+
+.card-value {
+  position: relative;
+  border-color: var(--card-value-edge);
+  background-color: var(--card-value-base);
+  background-image:
+    radial-gradient(
+      ellipse 100% 80% at 100% 0%,
+      rgba(107, 92, 255, 0.10) 0%,
+      rgba(107, 92, 255, 0.03) 35%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 90% 75% at 0% 100%,
+      rgba(110, 190, 180, 0.065) 0%,
+      rgba(110, 190, 180, 0.0195) 40%,
+      transparent 72%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(0, 0, 0, 0.18) 100%
+    );
+}
+
+.card-value:not(:has(> .card-body))::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid var(--card-value-rule);
+  border-radius: calc(1rem - 7px);
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  a.card-value:hover,
+  .card-value.group:hover {
+    border-color: var(--card-value-edge-hover);
+  }
 }
 
 /* ============================================================

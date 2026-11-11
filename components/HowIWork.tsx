@@ -83,7 +83,7 @@ export function HowIWork() {
           {MODES.map((mode) => (
             <div
               key={mode.key}
-              className="flex flex-col card"
+              className="flex flex-col card card-value"
             >
               <p className="metadata-label">
                 {mode.eyebrow}
