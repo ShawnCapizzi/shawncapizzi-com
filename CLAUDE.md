@@ -155,11 +155,12 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 
 - No bullet-point overuse — prose first, lists only when essential
 - No agency-speak: "crafted", "elevated", "transformed", "delighted", "journey"
-- No "we": Shawn is one person. Two exceptions (Shawn's call, November
-  2026), both where "we" means Shawn and the visitor or client together:
-  the Advisory shape cards on /engagements, and the /contact hero ("We
+- No "we": Shawn is one person. Three exceptions (Shawn's call, November
+  2026), all where "we" means Shawn and the visitor or client together:
+  the Advisory shape cards on /engagements, the /contact hero ("We
   don't need a finished brief, scope, or RFP to start.", also the page's
-  search description).
+  search description), and the homepage Advisory card ("Get clear on the
+  opportunity. Together, we map a plan.").
 - No drop shadows for elevation (use bg shifts)
 - No more than 3 colors visible on a page
 - No icons or illustrations beyond the single starburst symbol, with two

@@ -12,9 +12,9 @@ import Link from "next/link";
  * state, no accordion, no duplicated body copy, and no third ask to talk:
  * the homepage asks at the top and at the bottom only.
  *
- * The titles stay first person and parallel, matching the doors in the
- * hero. "Embed me in the work" replaced "Bring me in", which collided with
- * the first door's old title, "Bring me into a problem."
+ * November 11, 2026: card copy and the link label are Shawn's words, in
+ * the order Advisory, Leadership, On Call. The titles are longer and wrap
+ * at the card-title size; nothing shrinks to fit.
  *
  * To retune copy or add a tier, edit MODES below.
  */
@@ -28,22 +28,22 @@ type Mode = {
 
 const MODES: Mode[] = [
   {
-    key: "leadership",
-    eyebrow: "Leadership",
-    title: "Embed me in the work.",
-    line: "Fractional or embedded senior UX and design leadership inside active work, from opportunity definition through delivery.",
-  },
-  {
     key: "advisory",
     eyebrow: "Advisory",
-    title: "Hire me to advise.",
-    line: "Focused guidance around product, UX/CX, experience strategy, AI adoption, design systems, or a decision that needs another experienced point of view.",
+    title: "Get clear on the opportunity. Together, we map a plan.",
+    line: "Focused advisory to understand what’s getting in the way, assess the evidence and data, and establish clear priorities and direction.",
+  },
+  {
+    key: "leadership",
+    eyebrow: "Leadership",
+    title: "Add deep marketing experience and design leadership to your team.",
+    line: "Hands-on UX, creative, and customer experience leadership to align your team and carry the work through strategy, execution, and refinement.",
   },
   {
     key: "oncall",
     eyebrow: "On Call",
-    title: "Keep me on call.",
-    line: "Ongoing access for leaders who want an experienced UX/design thinking partner available between the big decisions.",
+    title: "Knowledge and an experienced POV, in your pocket, when you need it.",
+    line: "Ongoing support to work through decisions, review what’s working, and prioritize improvements as business goals, customer and user needs, and AI technologies evolve.",
   },
 ];
 
@@ -103,7 +103,7 @@ export function HowIWork() {
             href="/engagements"
             className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
           >
-            See what each one looks like{" "}
+            Explore ways to work together{" "}
             <span aria-hidden="true" className="ml-2">
               &rarr;
             </span>
