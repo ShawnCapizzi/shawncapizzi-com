@@ -32,7 +32,7 @@ which matches the live tokens and roles). This is non-negotiable.
   introducing any new pattern
 - Heading sizes come from four type roles in `app/globals.css`, never from
   per-element size utilities: `.hero-title` (page H1, 30px then 39px from
-  1024px), `.hero-lead` (paragraph under the H1, Instrument Sans 20/30, no
+  1024px, with the brand-rule stub under it), `.hero-lead` (paragraph under the H1, Instrument Sans 20/30, no
   tracking: it is running text, not a heading),
   `.section-title` (every section H2 and closing ask, 30px), and `.card-title`
   (card and panel titles, 20px then 24px from 768px). Page heroes pair
@@ -386,24 +386,34 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   was removed November 11, 2026, matching the hover rule). The book
   reader keeps its own printed-page controls.
 
-## The ask rule (November 11, 2026)
+## The brand rule (November 11, 2026)
 
 - Shawn's call: the thin blue to violet to pink rule from his original
-  site returns in one role. `.ask-rule` in `app/globals.css` draws a 2px
-  `linear-gradient(90deg, #536BF4 0%, #9968D7 50%, #EA67BA 100%)` on the
-  top edge of every closing ask and replaces that section's 1px border
-  (`.cta-purple-block` no longer carries its own purple top border). The
-  stops are the old site's colors, sampled from its rule. It sits on six
-  closing asks, once per page, beside the purple `.btn-next`: the
-  homepage (`FinalCTA`), /about, /thinking, /engagements, /how-i-help,
-  and every case study (`CaseStudyLayout`). /how-i-help's "Where this has
-  worked" strip dropped its bottom border so two lines never stack. It was
-  also shown on the footer edge, as a stub under page titles, and on every
-  divider; Shawn chose the closing ask only (on the footer it doubled the
+  site returns in two roles, each once per page. One gradient,
+  `--brand-rule` in `app/globals.css`:
+  `linear-gradient(90deg, #536BF4 0%, #9968D7 50%, #EA67BA 100%)`. The
+  stops are the old site's colors, sampled from its rule.
+- The title stub opens every page: `.hero-title::after` draws a 64 x 3px
+  mark (2px radius) 20px under every page H1, so every page gets it from
+  the role and no page adds markup. Whatever follows the H1 keeps its
+  24px from `.hero-title + *`. Measured on all 18 pages at 1440 and 390:
+  one stub per page, 64 x 3, 24px to the next element (the homepage phone
+  layout puts the headshot between the H1 and the lead, on purpose). It
+  paints under the homepage's gleam headline too.
+- The ask rule closes every page that has an ask: `.ask-rule` draws a 2px
+  line on the top edge of the closing ask and replaces that section's 1px
+  border (`.cta-purple-block` no longer carries its own purple top
+  border). It sits on six closing asks, beside the purple `.btn-next`:
+  the homepage (`FinalCTA`), /about, /thinking, /engagements,
+  /how-i-help, and every case study (`CaseStudyLayout`). /how-i-help's
+  "Where this has worked" strip dropped its bottom border so two lines
+  never stack. Measured on all six at 1440 and 390: 2px, stops render at
+  their hex values.
+- It was also shown on the footer edge and on every divider; Shawn chose
+  the title stub and the closing ask only (on the footer it doubled the
   ask's line within one screen; on every divider it became wallpaper).
-  Don't add it anywhere else without his call. Measured on all six at 1440
-  and 390: 2px, stops render at their hex values. It is decorative, so it
-  carries no contrast requirement.
+  Don't add it anywhere else without his call. Both are decorative, so
+  they carry no contrast requirement.
 
 ## Contrast (November 2026)
 

@@ -133,15 +133,20 @@ background: radial-gradient(
 );
 ```
 
-### The ask rule (November 11, 2026)
+### The brand rule (November 11, 2026)
 
-The one place the gradient appears as a line: a 2px rule on the top edge of every closing ask, carried over from Shawn's original site. `.ask-rule` in `app/globals.css` draws it with `::before` and removes the section's 1px top border.
+The gradient as a line, carried over from Shawn's original site. One value, `--brand-rule` in `app/globals.css`:
 
 ```css
-background: linear-gradient(90deg, #536BF4 0%, #9968D7 50%, #EA67BA 100%);  /* 2px tall */
+--brand-rule: linear-gradient(90deg, #536BF4 0%, #9968D7 50%, #EA67BA 100%);
 ```
 
-The stops are the original site's colors, sampled from its rule, so they sit near the brand tokens rather than on them. The rule marks the next step, beside the purple `.btn-next`, so it appears once per page: the homepage, /about, /thinking, /engagements, /how-i-help, and every case study. It is not a divider: never on a section break, the footer, or under a title. Decorative, so it carries no contrast requirement.
+The stops are the original site's colors, sampled from its rule, so they sit near the brand tokens rather than on them. Two roles, each once per page:
+
+- **Title stub.** A 64 x 3px mark (2px radius) 20px under every page H1, drawn by `.hero-title::after`. It opens every page; whatever follows the H1 keeps its 24px.
+- **Ask rule.** A 2px line on the top edge of every closing ask (`.ask-rule`, drawn with `::before`), replacing the section's 1px top border. It marks the next step, beside the purple `.btn-next`: the homepage, /about, /thinking, /engagements, /how-i-help, and every case study.
+
+It is not a divider: never on a section break or the footer. Decorative, so it carries no contrast requirement.
 
 ### Semantic colors (functional)
 
@@ -156,7 +161,7 @@ The stops are the original site's colors, sampled from its rule, so they sit nea
 
 ### Color usage rules
 
-Lavender is the only color for things that can be acted on: links, button text, the current Process move, the current chapter, and an accordion title on hover. Labels, eyebrows, captions, and metadata are tertiary gray in mono, never lavender, because a label in link color reads as a link on a phone. Periwinkle is reserved for the primary action pill and the focus ring. The full gradient is reserved for atmosphere, plus one line: the ask rule above. If a color appears more than three times on a page, it is no longer doing punctuation work.
+Lavender is the only color for things that can be acted on: links, button text, the current Process move, the current chapter, and an accordion title on hover. Labels, eyebrows, captions, and metadata are tertiary gray in mono, never lavender, because a label in link color reads as a link on a phone. Periwinkle is reserved for the primary action pill and the focus ring. The full gradient is reserved for atmosphere, plus the brand rule above (the title stub and the ask rule). If a color appears more than three times on a page, it is no longer doing punctuation work.
 
 ---
 

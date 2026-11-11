@@ -444,7 +444,9 @@ h3 {
 
    - .hero-title     page H1. 30px, then 39px from 1024px up.
                      Pair with .headline-gleam (home) or
-                     .headline-static (every other page).
+                     .headline-static (every other page). Draws
+                     the brand-rule stub under itself (see BRAND
+                     RULE).
    - .hero-lead      the paragraph directly under a page H1.
                      Instrument Sans 20/30, no tracking, cream at 82%.
    - .section-title  every section H2, including the closing ask.
@@ -765,16 +767,35 @@ p + .hero-lead {
 }
 
 /* ============================================================
-   ASK RULE (November 11, 2026, Shawn's call)
-   The brand gradient as one 2px line, blue to violet to pink,
-   carried over from Shawn's original site. It sits on the top
-   edge of every closing ask and nowhere else, so it marks the
-   next step once per page, beside the purple .btn-next. It
-   replaces the section's 1px top border. Stops are the original
-   site's colors, sampled from its rule. Decorative, so it carries
-   no contrast requirement; an empty pseudo-element is not read by
-   screen readers.
+   BRAND RULE (November 11, 2026, Shawn's call)
+   The brand gradient as a line, blue to violet to pink, carried
+   over from Shawn's original site. Stops are the original site's
+   colors, sampled from its rule. Two roles, each once per page,
+   and nowhere else:
+   - Title stub: a 64 x 3px mark under every page H1, 20px below
+     the title; the element after the H1 keeps its 24px. Drawn by
+     .hero-title::after, so every page gets it from the role and
+     no page adds markup.
+   - Ask rule: a 2px line on the top edge of every closing ask
+     (.ask-rule), beside the purple .btn-next. It replaces the
+     section's 1px top border.
+   Decorative, so neither carries a contrast requirement; an empty
+   pseudo-element is not read by screen readers.
    ============================================================ */
+
+:root {
+  --brand-rule: linear-gradient(90deg, #536BF4 0%, #9968D7 50%, #EA67BA 100%);
+}
+
+.hero-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin-top: 20px;
+  border-radius: 2px;
+  background: var(--brand-rule);
+}
 
 .ask-rule {
   position: relative;
@@ -787,7 +808,7 @@ p + .hero-lead {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #536BF4 0%, #9968D7 50%, #EA67BA 100%);
+  background: var(--brand-rule);
   pointer-events: none;
 }
 
