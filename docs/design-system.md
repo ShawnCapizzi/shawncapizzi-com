@@ -144,7 +144,7 @@ The gradient as a line, carried over from Shawn's original site. One value, `--b
 The stops are the original site's colors, sampled from its rule, so they sit near the brand tokens rather than on them. Two roles, each once per page:
 
 - **Title stub.** A 64 x 3px mark (2px radius) 20px under every page H1, drawn by `.hero-title::after`. It opens every page; whatever follows the H1 keeps its 24px.
-- **Ask rule.** A 2px line on the top edge of every closing ask (`.ask-rule`, drawn with `::before`), replacing the section's 1px top border. It marks the next step, beside the purple `.btn-next`: the homepage, /about, /thinking, /engagements, /how-i-help, and every case study.
+- **Ask rule.** A 2px line on the top edge of every closing ask (`.ask-rule`, drawn with `::before`), replacing the section's 1px top border. It marks the next step, beside the purple `.btn-next`: the homepage, /about, /thinking, /engagements, /how-i-help, and every case study. The mobile menu's ask carries it too, edge to edge above "Let's talk" (November 11, 2026, Shawn's call).
 
 It is not a divider: never on a section break or the footer. Decorative, so it carries no contrast requirement.
 
@@ -307,7 +307,7 @@ Color says what happens next (November 11, 2026), so a visitor can tell the next
 Hover       Grow 2%, never a color change.
 ```
 
-The header "Let's talk" is an off-white pill on purpose: it is page chrome on every page, not the page's guidance.
+The desktop header "Let's talk" is an off-white pill on purpose: it is page chrome on every page, not the page's guidance. The mobile menu's "Let's talk" is a `.btn-next` (November 11, 2026, Shawn's call): there it is the menu's one ask, under the ask rule.
 
 **Text link:**
 Arrow notation: `View the case study →` or `Open courtvisual.com →`
@@ -364,7 +364,7 @@ Format: (YEAR) 2023
 **Header:**
 - Wordmark left, primary nav right, secondary pill far right
 - Transparent at the top; once scrolled, `--color-bg-primary` at 85% with a background blur and a hairline below
-- Mobile: a menu button opens a full-screen overlay in `--color-bg-elevated`
+- Mobile: a menu button opens a full-screen menu (`.mobile-menu`, November 11, 2026) on `--color-bg-primary` with the closing ask's soft purple wash low. Page names are a hairline list (Instrument Sans 24px semibold, cream, a lavender arrow on each, 70px rows); the current page is lavender with no arrow. FAQ sits under the list as a quieter link. The ask is pinned to the bottom for the thumb: the ask rule edge to edge, 32px of air, a full-width `.btn-next` "Let's talk", and "Call 212-380-3900" as a small gray line. While it is open, the header drops its scrolled hairline, the page behind is inert (Tab and screen readers stay in the header and menu), and Escape closes it and returns focus to the menu button.
 
 **Primary nav links:**
 - `text-sm tracking-tight`, secondary gray
@@ -509,7 +509,7 @@ The Capizzi brand never:
 - Uses icons or illustrations beyond the single symbol mark
 - Uses stock photography
 - Uses more than three colors on a page
-- Uses pill-shaped CTAs in any color other than off-white or transparent
+- Uses pill-shaped CTAs in any color other than the brand purple (`.btn-next`, the next step), off-white (`.btn-see` and page chrome), or transparent
 - Uses ALL CAPS for body copy (only metadata labels and eyebrow text)
 - Uses italics for emphasis (use weight or color instead)
 - Uses drop shadows for elevation (use background shifts)

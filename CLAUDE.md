@@ -385,8 +385,27 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   Pages set no color, padding, radius, or type utilities on a pill; use
   the roles. Before, "Start a conversation" was purple on two pages and
   white on two, and white meant both "talk to me" and "go see a product".
-- The header "Let's talk" (desktop and mobile menu) and the mobile
-  back-to-top stay off-white pills on purpose: page chrome, not guidance.
+- The desktop header "Let's talk" and the mobile back-to-top stay
+  off-white pills on purpose: page chrome, not guidance. The mobile
+  menu's "Let's talk" is a `.btn-next` since November 11, 2026 (Shawn's
+  call): there it is the menu's one ask, under the ask rule.
+- The mobile menu (November 11, 2026, Shawn's call; `components/Header.tsx`
+  and `.mobile-menu` in `app/globals.css`) speaks the site's language
+  instead of a lighter blue panel. It sits on the page navy with the
+  closing ask's soft purple wash low. Page names are a hairline list in
+  Instrument Sans 24px semibold, cream, a lavender arrow on each, 70px
+  rows; the current page is lavender with no arrow (the active item in a
+  list). FAQ is a quieter link under the list. The ask is pinned to the
+  bottom for the thumb: the ask rule edge to edge, 32px of air, a
+  full-width `.btn-next` "Let's talk", and "Call 212-380-3900" as a small
+  gray line (the phone used to lead the menu at 24px lavender). While it
+  is open the header drops its scrolled hairline, `main` and the footer
+  are inert (Tab and screen readers stay in the header and menu), the
+  back-to-top button hides (`data-back-to-top`), Escape closes it and
+  returns focus to the menu button, and widening past 768px closes it.
+  Measured: no scrolling at 390 x 664 (iPhone 13 in Safari, where the old
+  menu ran 37px past the screen), 390 x 844, and 430 x 739; an iPhone SE
+  in Safari (375 x 548) scrolls it.
 - Purple fills are only `.btn-next`. Selected states (the /thinking
   Process tabs, the book contents) are lavender: edge, text, and a 10%
   tint (tab text 6.91:1). FREE BELOW on the book's foreword row is
@@ -417,12 +436,13 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   /how-i-help, and every case study (`CaseStudyLayout`). /how-i-help's
   "Where this has worked" strip dropped its bottom border so two lines
   never stack. Measured on all six at 1440 and 390: 2px, stops render at
-  their hex values.
+  their hex values. The mobile menu's ask carries it too, edge to edge
+  above "Let's talk" (Shawn's call, November 11, 2026).
 - It was also shown on the footer edge and on every divider; Shawn chose
-  the title stub and the closing ask only (on the footer it doubled the
-  ask's line within one screen; on every divider it became wallpaper).
-  Don't add it anywhere else without his call. Both are decorative, so
-  they carry no contrast requirement.
+  the title stub and the asks only (on the footer it doubled the ask's
+  line within one screen; on every divider it became wallpaper). Don't
+  add it anywhere else without his call. It is decorative, so it carries
+  no contrast requirement.
 
 ## Contrast (November 2026)
 

@@ -35,6 +35,7 @@ export function BackToTop() {
       type="button"
       onClick={handleClick}
       aria-label="Back to top"
+      data-back-to-top=""
       className={`md:hidden fixed z-50 w-12 h-12 rounded-full bg-text-primary text-text-inverse flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 ${
         visible
           ? "opacity-100 translate-y-0 pointer-events-auto"

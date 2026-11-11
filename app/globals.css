@@ -813,6 +813,99 @@ p + .hero-lead {
 }
 
 /* ============================================================
+   MOBILE MENU (November 11, 2026, Shawn's call)
+   The phone menu (Header.tsx, below 768px) in the site's own
+   language, replacing a lighter blue panel with the phone number
+   leading at 24px lavender and the page names in 30px Geist:
+   - the page navy, with the closing ask's soft purple wash low
+   - page names as a hairline list, the pattern of the FAQ and the
+     /how-i-help lists: Instrument Sans 24px semibold in cream, a
+     lavender arrow on each, the current page in lavender with no
+     arrow (the site's rule for the active item in a list). Rows
+     are 70px tall for the thumb.
+   - FAQ as a quieter link under the list
+   - the ask at the bottom, in thumb reach: the brand rule edge to
+     edge (.ask-rule), 32px of air, the purple .btn-next "Let's
+     talk", and the phone as a small gray line under it, like the
+     Get in touch card.
+   The page behind is inert while the menu is open (Header.tsx), and
+   the back-to-top button hides, since it sits above this layer.
+   ============================================================ */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background:
+    radial-gradient(ellipse 140% 55% at 50% 100%, rgba(107, 92, 255, 0.10) 0%, transparent 70%),
+    var(--color-bg-primary);
+}
+.mobile-menu__inner {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5.5rem 1.5rem max(1.5rem, env(safe-area-inset-bottom));
+}
+.mobile-menu__nav {
+  padding-bottom: 1.5rem;
+}
+.mobile-menu__list {
+  border-top: 1px solid var(--color-border-subtle);
+}
+.mobile-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+  font-family: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+.mobile-menu__link[aria-current="page"],
+.mobile-menu__secondary[aria-current="page"] {
+  color: var(--color-link);
+}
+.mobile-menu__arrow {
+  color: var(--color-link);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.mobile-menu__secondary {
+  display: inline-flex;
+  margin-top: 1rem;
+  font-size: var(--text-base);
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+.mobile-menu__ask {
+  margin: auto -1.5rem 0;
+  padding: 2rem 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mobile-menu__phone {
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-base);
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+html[data-menu-open] [data-back-to-top] {
+  display: none;
+}
+
+/* ============================================================
    PORTRAIT CARD IMAGE (November 11, 2026, Shawn's call)
    The Get in touch card's headshot (CTACards, imageFit
    "portrait"; /work and /faq). It read loud and tight filling the

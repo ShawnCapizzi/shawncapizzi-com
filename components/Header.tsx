@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Wordmark } from "./Wordmark";
@@ -17,7 +17,7 @@ const NAV_LINKS: NavLink[] = [
 
 const SECONDARY_LINKS = [{ href: "/faq", label: "FAQ" }] as const;
 
-// Phone shown in the header on lg+ desktop and at the top of the mobile drawer.
+// Phone shown in the header on lg+ desktop and under Let's talk in the mobile menu.
 // Single source of truth: edit PHONE_DISPLAY for the visible label and PHONE_TEL
 // for the dial URI (E.164 with country code).
 const PHONE_DISPLAY = "212-380-3900";
@@ -41,6 +41,7 @@ function PhoneIcon({ size = 14 }: { size?: number }) {
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -50,24 +51,61 @@ export function Header() {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
+  // Escape closes the menu and puts focus back on the button that opened it.
+  const openRef = useRef(false);
+  useEffect(() => {
+    openRef.current = mobileOpen;
+  }, [mobileOpen]);
   useEffect(() => {
     const escHandler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setMobileOpen(false);
+      if (e.key !== "Escape" || !openRef.current) return;
+      setMobileOpen(false);
+      toggleRef.current?.focus();
     };
     window.addEventListener("keydown", escHandler);
     return () => window.removeEventListener("keydown", escHandler);
   }, []);
 
+  // The menu is phone-only: if the window grows past 768px while it is
+  // open (a tablet rotating), close it so the page is never left locked.
   useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const onChange = () => {
+      if (mq.matches) setMobileOpen(false);
+    };
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
+  // While the menu is open (November 2026): the page behind stops
+  // scrolling and goes inert, so Tab and screen readers stay in the header
+  // and the menu, and the back-to-top button hides (it sits above the
+  // menu's layer). The main element and the footer after it are the page.
+  useEffect(() => {
+    const root = document.documentElement;
+    const main = document.querySelector("main");
+    const behind = [main, main?.nextElementSibling ?? null];
     document.body.style.overflow = mobileOpen ? "hidden" : "";
+    if (mobileOpen) root.setAttribute("data-menu-open", "");
+    else root.removeAttribute("data-menu-open");
+    behind.forEach((el) => {
+      if (!el) return;
+      if (mobileOpen) el.setAttribute("inert", "");
+      else el.removeAttribute("inert");
+    });
     return () => {
       document.body.style.overflow = "";
+      root.removeAttribute("data-menu-open");
+      behind.forEach((el) => el?.removeAttribute("inert"));
     };
   }, [mobileOpen]);
 
-  const headerClasses = scrolled
-    ? "bg-bg-primary/85 backdrop-blur-md border-b border-border-subtle"
-    : "bg-transparent";
+  // While the mobile menu is open the header sits on the menu's own navy,
+  // so it drops the scrolled border (it would double the menu's top line).
+  const headerClasses =
+    scrolled && !mobileOpen
+      ? "bg-bg-primary/85 backdrop-blur-md border-b border-border-subtle"
+      : "bg-transparent";
 
   return (
     <>
@@ -118,11 +156,13 @@ export function Header() {
           </div>
 
           <button
+            ref={toggleRef}
             type="button"
             onClick={() => setMobileOpen((v) => !v)}
             className="md:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 text-text-primary"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               {mobileOpen ? (
@@ -138,51 +178,67 @@ export function Header() {
         </div>
       </header>
 
+      {/* MOBILE MENU (November 11, 2026, Shawn's call): the site's own
+          language instead of a separate blue panel. Page names as a
+          hairline list, the current page in lavender; FAQ under it; the
+          ask at the bottom: the brand rule, the purple Let's talk, and the
+          phone as a small line. Styles: .mobile-menu in app/globals.css. */}
       {mobileOpen ? (
-        <div className="fixed inset-0 z-40 bg-bg-elevated md:hidden pt-20 overflow-y-auto">
-          <nav className="px-6 py-12 flex flex-col gap-6">
-            <a
-              href={`tel:${PHONE_TEL}`}
-              onClick={() => setMobileOpen(false)}
-              className="inline-flex items-center gap-3 text-2xl font-semibold text-link"
-              aria-label={`Call ${PHONE_DISPLAY}`}
-            >
-              <PhoneIcon size={20} />
-              {PHONE_DISPLAY}
-            </a>
-            <div className="border-b border-border-subtle -mt-1" />
-            {NAV_LINKS.map((link) => {
-              const isActive =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname === link.href || pathname.startsWith(`${link.href}/`);
-              return (
+        <div id="mobile-menu" className="mobile-menu md:hidden">
+          <div className="mobile-menu__inner">
+            <nav aria-label="Main" className="mobile-menu__nav">
+              <ul className="mobile-menu__list">
+                {NAV_LINKS.map((link) => {
+                  const isActive =
+                    link.href === "/"
+                      ? pathname === "/"
+                      : pathname === link.href || pathname.startsWith(`${link.href}/`);
+                  return (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        onClick={() => setMobileOpen(false)}
+                        aria-current={isActive ? "page" : undefined}
+                        className="mobile-menu__link"
+                      >
+                        {link.label}
+                        {isActive ? null : (
+                          <span aria-hidden="true" className="mobile-menu__arrow">
+                            &rarr;
+                          </span>
+                        )}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+              {SECONDARY_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`inline-flex items-center text-3xl tracking-tight ${
-                    isActive
-                      ? "text-text-primary font-semibold"
-                      : "text-text-secondary font-medium"
-                  }`}
+                  aria-current={pathname === link.href ? "page" : undefined}
+                  className="mobile-menu__secondary"
                 >
                   {link.label}
                 </Link>
-              );
-            })}
-            <div className="border-t border-border-subtle pt-6 flex flex-col gap-4">
-              {SECONDARY_LINKS.map((link) => (
-                <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="text-lg text-text-secondary">
-                  {link.label}
-                </Link>
               ))}
+            </nav>
+            <div className="mobile-menu__ask ask-rule">
+              <Link href="/contact" onClick={() => setMobileOpen(false)} className="btn-next">
+                Let&apos;s talk
+                <span aria-hidden="true" className="ml-2">&rarr;</span>
+              </Link>
+              <a
+                href={`tel:${PHONE_TEL}`}
+                onClick={() => setMobileOpen(false)}
+                className="mobile-menu__phone"
+              >
+                <PhoneIcon size={16} />
+                Call {PHONE_DISPLAY}
+              </a>
             </div>
-            <Link href="/contact" onClick={() => setMobileOpen(false)} className="mt-4 inline-flex items-center justify-center px-8 py-4 rounded-full bg-text-primary text-text-inverse text-base font-medium tracking-tight w-full">
-              Let&apos;s talk
-            </Link>
-          </nav>
+          </div>
         </div>
       ) : null}
     </>
