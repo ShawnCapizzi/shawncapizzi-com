@@ -152,7 +152,10 @@ export default function Page() {
                   </a>
                   ?
                 </span>{" "}
-                <span className="block mt-2">
+                {/* Second question set quieter (Shawn's call, November 11,
+                    2026): 22px medium in the H1's cream (18px on phones),
+                    so the first question leads. */}
+                <span className="block mt-2 headline-static text-[18px] md:text-[22px] font-medium leading-[1.3]">
                   What goal are you working toward, and how will you measure
                   success?
                 </span>
