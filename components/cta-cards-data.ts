@@ -37,14 +37,19 @@ export type CTACard = {
   imageAspect?: string;
   /**
    * How the image fills its container.
-   *   "cover" (default) — fills the container, cropping if needed.
-   *   "contain" — fits the entire image inside the container,
+   *   "cover" (default): fills the container, cropping if needed.
+   *   "contain": fits the entire image inside the container,
    *               letterboxing with black bars when the source image
    *               doesn't match the container's aspect ratio. Use for
    *               portrait headshots or compositions you don't want
    *               cropped.
+   *   "portrait": the navy knockout headshot, smaller in the frame:
+   *               a square at 86% of the frame's height, bottom-centered,
+   *               its sides and top fading into the photo's own glow,
+   *               which the frame extends across the card (.cta-portrait
+   *               in app/globals.css). Only for headshot-2026-knockout.
    */
-  imageFit?: "cover" | "contain";
+  imageFit?: "cover" | "contain" | "portrait";
   /**
    * Tailwind object-position class for the image. Defaults to
    * "object-center". A portrait cropped to the card's 16:10 frame anchors
@@ -175,15 +180,18 @@ export const CTA_CARDS: Record<string, CTACard> = {
     eyebrow: "Contact",
     title: "Get in touch",
     description:
-      "A call, a project brief, or a direct note. Pick the way in that fits where you are.",
+      "A call, a project brief, an RFP, a simple note, or a napkin sketch. Wherever you are in bringing your idea or message to market, let’s see what we can make happen together.",
     cta: "Start a conversation",
     href: "/contact",
     phone: "212-380-3900",
     // The navy knockout headshot (also the homepage hero and /about), so a
     // visitor sees who they would be talking to, and the card carries an
     // image like the card beside it instead of a hole (November 2026).
+    // November 11, 2026 (Shawn's call): it read loud and tight when the
+    // face filled the frame, so it sits smaller with air above, in an
+    // extended version of its own background glow.
     image: "/images/brand/headshot-2026-knockout.jpg",
     imageAlt: "Shawn Capizzi",
-    imagePosition: "object-[50%_8%]",
+    imageFit: "portrait",
   },
 };

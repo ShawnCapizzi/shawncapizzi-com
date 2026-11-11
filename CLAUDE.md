@@ -156,15 +156,17 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 
 - No bullet-point overuse — prose first, lists only when essential
 - No agency-speak: "crafted", "elevated", "transformed", "delighted", "journey"
-- No "we": Shawn is one person. Five exceptions (Shawn's call, November
+- No "we": Shawn is one person. Six exceptions (Shawn's call, November
   2026), all where "we" means Shawn and the visitor or client together:
   the Advisory shape cards on /engagements, the /contact hero ("We
   don't need a finished brief, scope, or RFP to start.", also the page's
   search description), the homepage Advisory card ("Get clear on the
   opportunity. Together, we map a plan."), the first homepage door's
-  label ("We start here"), and the line under the /how-i-help first ask
+  label ("We start here"), the line under the /how-i-help first ask
   ("We'll talk through what you need and whether I'm the right person to
-  help.").
+  help."), and the Get in touch card on /work and /faq ("let's see what
+  we can make happen together.", the `contact` card in
+  `components/cta-cards-data.ts`).
 - One easter egg (Shawn's call, November 11, 2026): "tackling" in the
   /how-i-help scan line links to the NFL standings
   (https://www.nfl.com/standings/, no year in the address, so it never
@@ -289,9 +291,16 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   link carries `after:absolute after:inset-0`, the second link sits above
   it with `relative z-10`, and both share the `.card-foot` row, so the card
   ends at the same height as its neighbor. Every CTA card carries an image
-  (November 2026): "Get in touch" uses the navy knockout headshot, anchored
-  near the top, because a text-only card beside an image card left a
-  250px hole.
+  (November 2026): "Get in touch" uses the navy knockout headshot, because
+  a text-only card beside an image card left a 250px hole. Since November
+  11, 2026 (Shawn's call: filling the frame, the face read loud and
+  tight) it sits smaller, `imageFit: "portrait"` in
+  `components/cta-cards-data.ts`: a square at 86% of the frame's height,
+  bottom-centered, with air above. `.cta-portrait` in `app/globals.css`
+  rebuilds the photo's own blue glow as the frame's background, sampled
+  from the photo and spread 1.9x wider so the atmosphere fills the card,
+  and fades the photo's sides and top into it. Measured at 1440 and 390
+  on /work and /faq: centered, no square edge at 4x brightness.
 - The gutter between cards or image tiles in a row is `.card-grid`: gap
   from `--space-card`, so gutter equals inset (24 / 28 / 32). Pages add
   only `grid-cols-*`; never a `gap-*` on a card grid. Before, 16 card

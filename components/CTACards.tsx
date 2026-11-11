@@ -54,10 +54,23 @@ export function CTACards({ cards }: { cards: string[] }) {
           >
             {item.image || item.thumb ? (
               <div
-                className={`relative ${item.imageAspect ?? "aspect-[16/10]"} overflow-hidden border-b border-border-subtle ${item.imageFit === "contain" ? "bg-black" : ""}`}
+                className={`relative ${item.imageAspect ?? "aspect-[16/10]"} overflow-hidden border-b border-border-subtle ${item.imageFit === "contain" ? "bg-black" : ""} ${item.imageFit === "portrait" ? "cta-portrait" : ""}`}
               >
                 {item.thumb === "book-reader" ? (
                   <BookReaderThumb />
+                ) : item.image && item.imageFit === "portrait" ? (
+                  // The headshot as a square at 86% of the frame's height,
+                  // bottom-centered; .cta-portrait paints the glow behind it
+                  // and fades its edges (app/globals.css).
+                  <div className="cta-portrait__photo">
+                    <Image
+                      src={item.image}
+                      alt={item.imageAlt ?? ""}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                      sizes="(max-width: 768px) 55vw, 28vw"
+                    />
+                  </div>
                 ) : item.image ? (
                   <Image
                     src={item.image}

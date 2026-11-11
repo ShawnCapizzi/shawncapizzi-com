@@ -813,6 +813,58 @@ p + .hero-lead {
 }
 
 /* ============================================================
+   PORTRAIT CARD IMAGE (November 11, 2026, Shawn's call)
+   The Get in touch card's headshot (CTACards, imageFit
+   "portrait"; /work and /faq). It read loud and tight filling the
+   frame, so the photo sits smaller: a square at 86% of the frame's
+   height, bottom-centered so the shoulders rest on the frame's
+   edge, with air above. The photo's own blue glow is rebuilt as
+   the frame's background and spread 1.9x wider, so the atmosphere
+   fills the card, and the photo's sides and top fade into it, so
+   its square edge never shows.
+   The stops were sampled from headshot-2026-knockout.jpg: its glow
+   is centered 50% across and 32% down and reaches the page navy
+   44% of its width out. The frame's glow sits on the same center
+   (14% + 32% x 86% = 41.5% down) at the same vertical scale
+   (0.48 x 86% = 41.3% of the height); across, 1.9 x that in pixels
+   on a 16:10 frame is 49% of the width.
+   ============================================================ */
+
+.cta-portrait {
+  background:
+    radial-gradient(
+      ellipse 49% 41.3% at 50% 41.5%,
+      #0C183A 0%,
+      #0B1738 41.7%,
+      #091532 50%,
+      #06132D 58.3%,
+      #031228 66.7%,
+      #011024 75%,
+      #010F21 83.3%,
+      var(--color-bg-primary) 91.7%
+    ),
+    var(--color-bg-primary);
+}
+.cta-portrait__photo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  height: 86%;
+  aspect-ratio: 1 / 1;
+}
+.cta-portrait__photo img {
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 6%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000 22%, #000 78%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 6%);
+  mask-composite: intersect;
+}
+
+/* ============================================================
    UTILITY: brand gradient backdrop
    Used behind the hero portrait. The atmospheric glow.
    Section §2 of design system.
