@@ -48,7 +48,7 @@ const DOORS: Door[] = [
     key: "work",
     eyebrow: "Proof",
     title: "The work behind the experience.",
-    body: "Six case studies across pharma, healthcare, financial services, and enterprise, from design governance and patient navigation to CRM, CX, and independent products.",
+    body: "Six case studies across pharma, healthcare, financial services, and enterprise, from design governance and patient navigation to CRM, CX, and independent products. Each shows the business need, how I solved it, and the results.",
     cta: "See the case studies",
     href: "/work",
   },
