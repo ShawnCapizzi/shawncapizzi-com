@@ -154,9 +154,11 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 
 - No bullet-point overuse — prose first, lists only when essential
 - No agency-speak: "crafted", "elevated", "transformed", "delighted", "journey"
-- No "we" — Shawn is one person. One exception (Shawn's call, November
-  2026): the Advisory shape cards on /engagements say "we" because there it
-  means Shawn and the client working the problem together.
+- No "we": Shawn is one person. Two exceptions (Shawn's call, November
+  2026), both where "we" means Shawn and the visitor or client together:
+  the Advisory shape cards on /engagements, and the /contact hero ("We
+  don't need a finished brief, scope, or RFP to start.", also the page's
+  search description).
 - No drop shadows for elevation (use bg shifts)
 - No more than 3 colors visible on a page
 - No icons or illustrations beyond the single starburst symbol, with two
@@ -278,7 +280,10 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 - Three faces, three jobs: Instrument Sans for headings and the hero lead,
   Geist for body and buttons, Geist Mono for labels only. `.eyebrow` and
   `.metadata-label` are both mono, so every small uppercase label on the
-  site is one voice; mono never sets a sentence. The homepage hero carries
+  site is one voice; mono never sets a sentence, with one exception
+  (Shawn's call, November 2026): "Napkin sketches welcome." with its pencil
+  on /contact and /how-i-help stays in mono on purpose, a handwritten-note
+  aside. The homepage hero carries
   no credential line and no second wordmark: the 15+ years sits in the
   lead, and the header already shows the mark.
 
@@ -298,8 +303,9 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   page; unfilled, they read as a stack of dark boxes on a phone.
 - Hover (November 2026, Shawn's call: hover belongs on desktop, used with
   restraint). Three moves, each answering "can I click this?", and no
-  others: text links go lavender to white; pill buttons grow 2% (purple
-  ones also lighten); clickable cards brighten their border and turn the
+  others: text links go lavender to white; pill buttons grow 2%, purple
+  and white alike, with no color change (a lighter purple put white text
+  at 3.87:1, below AA); clickable cards brighten their border and turn the
   title lavender, and an image or video inside zooms 2%. Accordion
   triggers carry `.disclosure-trigger`, which turns the title and chevron
   lavender. Tailwind v4's `hover:` and the CSS rule both apply only on

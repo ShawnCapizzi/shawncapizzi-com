@@ -51,7 +51,7 @@ export function Hero() {
             <div className="order-3 mt-7 md:mt-8 flex flex-col sm:flex-row gap-4 sm:items-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
               >
                 Tell me what you&apos;re working on
                 <span aria-hidden="true" className="ml-2">&rarr;</span>

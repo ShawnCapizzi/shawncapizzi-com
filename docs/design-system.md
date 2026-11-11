@@ -280,11 +280,11 @@ Two pill buttons, both Geist medium.
 
 **Primary (the main ask on a page):**
 ```
-Background: --color-brand-purple (#6B5CFF), lightens to #7B6CFF on hover
+Background: --color-brand-purple (#6B5CFF)
 Text: white
 Border-radius: 9999px
 Padding: 14px 28px (px-7 py-3.5)
-Hover: lighten, and grow 2%
+Hover: grow 2%, no color change (a lighter purple drops white text to 3.87:1, below AA)
 ```
 
 **Secondary (Open the calendar, Let's talk):**

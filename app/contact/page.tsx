@@ -76,7 +76,7 @@ export default function Page() {
                   href={CAL_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] hover:bg-[#7B6CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
+                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#6B5CFF] text-white text-base font-medium tracking-tight hover:scale-[1.02] transition-all"
                 >
                   Open the calendar
                   <span aria-hidden="true" className="ml-2">&rarr;</span>
@@ -88,11 +88,11 @@ export default function Page() {
             <article className="relative card flex flex-col">
               <p className="metadata-label">Path 02 · Email</p>
               <h2 className="card-title text-text-primary">
-                Prefer to start in writing?
+                Prefer to write first?
               </h2>
               <p className="card-text text-text-secondary">
                 Send a question, some context, an introduction, or whatever
-                you have so far. You don&apos;t need a finished brief.
+                you have so far. A few lines is plenty to get started.
               </p>
               <a
                 href={`mailto:${EMAIL}`}
