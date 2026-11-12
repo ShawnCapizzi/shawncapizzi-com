@@ -131,36 +131,30 @@ export default function Page() {
               </h1>
               {/* The scan line (November 11, 2026, Shawn's words): two
                   questions the visitor can answer in their head before
-                  reading on, 8px apart so they read as two questions while
-                  staying closer to each other than to the lead (12px). An h2 in the card-title role so it sits under
-                  the H1 without competing with it. "tackling" is an easter
-                  egg for sports fans: it opens the NFL standings (Shawn is a
+                  reading on. Set like every other page's hero (Shawn's
+                  call, November 11, 2026): the questions and the lead are
+                  two .hero-lead paragraphs, 24px apart, as on /work and
+                  /contact. A bold heading with a quieter second line read
+                  unlike the rest of the site. "tackling" is an easter egg
+                  for sports fans: it opens the NFL standings (Shawn is a
                   Giants fan) in a new tab, marked by a faint dotted
                   underline so keyboard and screen-reader users still meet
                   it as a link. */}
-              <h2 className="card-title max-w-3xl text-balance">
-                <span className="block">
-                  What digital transformation are you leading or business
-                  challenge are you{" "}
-                  <a
-                    href="https://www.nfl.com/standings/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline decoration-dotted decoration-1 underline-offset-4 decoration-text-primary/40 hover:text-link hover:decoration-link transition-colors"
-                  >
-                    tackling
-                    <span className="sr-only"> (New York Giants standings, opens in a new tab)</span>
-                  </a>
-                  ?
-                </span>{" "}
-                {/* Second question set quieter (Shawn's call, November 11,
-                    2026): 22px medium in the H1's cream (18px on phones),
-                    so the first question leads. */}
-                <span className="block mt-2 headline-static text-[18px] md:text-[22px] font-medium leading-[1.3]">
-                  What goal are you working toward, and how will you measure
-                  success?
-                </span>
-              </h2>
+              <p className="hero-lead max-w-3xl text-pretty">
+                What digital transformation are you leading or business
+                challenge are you{" "}
+                <a
+                  href="https://www.nfl.com/standings/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-dotted decoration-1 underline-offset-4 decoration-text-primary/40 hover:text-link hover:decoration-link transition-colors"
+                >
+                  tackling
+                  <span className="sr-only"> (New York Giants standings, opens in a new tab)</span>
+                </a>
+                ? What goal are you working toward, and how will you measure
+                success?
+              </p>
               {/* November 11, 2026 (Shawn's call): this lead replaced the
                   footer pair at the top of /how-i-help. */}
               <p className="max-w-3xl hero-lead text-pretty">

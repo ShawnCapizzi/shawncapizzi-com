@@ -202,15 +202,15 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   only), so its two scan questions, its lead, its calendar line, and its
   client line appear on /contact word for word, where every ask on the
   site lands. /contact's H1 is "Let's talk.", the button that brings most
-  visitors there. The words match; the setting follows each page: on
-  /contact the questions and the lead are two `.hero-lead` paragraphs, like
-  every other page's hero (set as /how-i-help's heading, they read unlike
-  the rest of the site). When either page's copy changes, check the other.
+  visitors there. On both pages the questions and the lead are two
+  `.hero-lead` paragraphs, like every other page's hero (set as a bold
+  heading with a quieter second line, they read unlike the rest of the
+  site). When either page's copy changes, check the other.
 - One easter egg (Shawn's call, November 11, 2026): "tackling" in the
   /how-i-help scan line links to the NFL standings
   (https://www.nfl.com/standings/, no year in the address, so it never
   goes stale) in a new tab, for Giants fans and sports lovers. It keeps
-  the heading color with a faint dotted underline, turns lavender on
+  the lead's color with a faint dotted underline, turns lavender on
   hover, and carries screen-reader text ("New York Giants standings, opens
   in a new tab"). Don't add others without Shawn's call.
 - No drop shadows for elevation (use bg shifts)
