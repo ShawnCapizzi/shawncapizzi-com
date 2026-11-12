@@ -184,7 +184,7 @@ export const CTA_CARDS: Record<string, CTACard> = {
     title: "Get in touch",
     description:
       "A call, a project brief, an RFP, a simple note, or a napkin sketch. Wherever you are in bringing your idea or message to market, let’s see what we can make happen together.",
-    cta: "Start a conversation",
+    cta: "Discuss your goals",
     href: "/contact",
     phone: "212-380-3900",
     // The navy knockout headshot (also the homepage hero and /about), so a

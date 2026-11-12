@@ -87,6 +87,15 @@ export default function Page() {
             sequence. It&apos;s a way to create clarity and keep the work
             moving.
           </p>
+          {/* The method in client work (Shawn's copy brief, November 11,
+              2026), in the hero's own paragraph style. */}
+          <p className="hero-lead max-w-3xl text-pretty">
+            In a client engagement, the Process helps connect the business
+            goal, customer or user needs, key decisions, and measures of
+            success. Depending on the challenge, the output may be a
+            prioritized plan, a journey map, a prototype, or recommendations
+            your team can act on.
+          </p>
         </div>
       </section>
 
@@ -331,7 +340,7 @@ export default function Page() {
             href="/contact"
             className="btn-next"
           >
-            Let&apos;s talk
+            Discuss your goals
             <span aria-hidden="true" className="ml-2">&rarr;</span>
           </Link>
         </div>

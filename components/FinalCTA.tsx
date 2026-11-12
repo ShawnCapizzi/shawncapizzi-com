@@ -22,7 +22,7 @@ export function FinalCTA() {
               href="/contact"
               className="btn-next"
             >
-              Start a conversation
+              Discuss your goals
               <span aria-hidden="true" className="ml-2">&rarr;</span>
             </Link>
             <a

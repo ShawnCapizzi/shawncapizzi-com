@@ -5,7 +5,7 @@ export const metadata = pageMetadata({
   path: "/contact",
   title: "Contact",
   description:
-    "You don't need a perfectly defined brief, a budget, or a plan. Bring the problem, the opportunity, or the idea. Calendar, email, or phone.",
+    "You don't need a finished brief to start. Bring a business challenge, an opportunity, or an experience you want to improve. Calendar, email, or phone.",
 });
 
 const CAL_URL = "https://cal.com/capizzi/30min";
@@ -18,8 +18,10 @@ export default function Page() {
   return (
     <article>
       {/* HERO (October 2026): the page picks up the conversation a "Let's
-          talk" or "Start a conversation" button started. No funnel language:
-          no strategy call, no call length, no "no pitch".
+          talk" or "Discuss your goals" button started. No funnel language:
+          no strategy call, no "no pitch". The call's length is stated once,
+          on the calendar card (Shawn's copy brief, November 11, 2026; the
+          Cal.com event is 30 minutes, checked that day).
           November 11, 2026 (Shawn's call): /how-i-help is a hidden side door
           (noindex, business card only), so its final language lives here
           too, where every ask on the site lands. The two questions and the
@@ -31,24 +33,24 @@ export default function Page() {
           <h1 className="headline-static hero-title text-balance max-w-4xl">
             Let&rsquo;s talk.
           </h1>
-          {/* The two questions and the lead sit like every other page's
-              hero (Shawn's call, November 11, 2026): two .hero-lead
-              paragraphs, 24px apart, as on /work. On /how-i-help the
-              questions are a heading beside the portrait; here, set that way,
-              three type styles stacked 8 to 12px apart and the page read
-              unlike the rest of the site. The NFL easter egg stays on
-              /how-i-help only. The napkin line borrows the mono tagline style
-              from the /thinking hero ("Listen first. Make it visible."). */}
+          {/* The questions and the lead sit like every other page's hero
+              (Shawn's call, November 11, 2026): .hero-lead paragraphs, 24px
+              apart. They follow /how-i-help's wording from Shawn's copy
+              brief: the main question, the supporting question on its own,
+              and the closing line from /how-i-help as the lead. The napkin
+              line borrows the mono tagline style from the /thinking hero
+              ("Listen first. Make it visible."). */}
           <p className="hero-lead max-w-3xl text-pretty">
-            What digital transformation are you leading or business challenge
-            are you tackling? What goal are you working toward, and how will
-            you measure success?
+            What business challenge are you tackling, or transformation are
+            you leading?
           </p>
           <p className="hero-lead max-w-3xl text-pretty">
-            You don&apos;t need a perfectly defined brief, a budget, or a
-            plan. Bring me the problem, the opportunity, the idea, or the
-            thing that just doesn&apos;t feel like it&apos;s working the way
-            it should.
+            What goal are you working toward, and how will you measure
+            success?
+          </p>
+          <p className="hero-lead max-w-3xl text-pretty">
+            You don&rsquo;t need a finished brief to start. Bring a business
+            challenge, an opportunity, or an experience you want to improve.
           </p>
           <p className="mt-6 font-mono text-base md:text-lg text-text-primary tracking-tight">
             <span aria-hidden="true">&#9999;&#65039;</span>{" "}
@@ -70,17 +72,24 @@ export default function Page() {
             remote-first, so it doesn&rsquo;t matter where you are. If
             someone sent you my way, please share&nbsp;who.
           </p>
-          <div className="card-grid grid-cols-1 lg:grid-cols-3">
+          {/* The calendar card spans the row (November 11, 2026): with the
+              brief's call description it ran far taller than email and
+              phone, which then held 106 to 132px of empty space. As the
+              page's main ask, it leads; email and phone share the row below. */}
+          <div className="card-grid grid-cols-1 lg:grid-cols-2">
             {/* Card 1: calendar. The only button on the site that opens Cal
                 directly (October 2026); every other general CTA lands here. */}
-            <article className="relative card flex flex-col">
+            <article className="relative card flex flex-col lg:col-span-2">
               <p className="metadata-label">Path 01 · Calendar</p>
               <h2 className="card-title text-text-primary">
-                Book a time to discuss.
+                Let&rsquo;s discuss your goals.
               </h2>
-              <p className="card-text text-text-secondary">
-                We&rsquo;ll talk through what you need and whether I&rsquo;m
-                the right person to help.
+              {/* What the call is (Shawn's copy brief, November 11, 2026):
+                  no free audit, strategy, or deliverable implied. */}
+              <p className="card-text max-w-3xl text-text-secondary">
+                A 30-minute conversation about your goals, what&rsquo;s getting
+                in the way, and whether I can help. If there&rsquo;s a fit,
+                we&rsquo;ll identify a sensible starting point.
               </p>
               {/* The page's primary ask, so it takes the purple pill. The
                   .card-foot spacing sits on a wrapper: on the pill itself
@@ -93,7 +102,7 @@ export default function Page() {
                   rel="noopener noreferrer"
                   className="btn-next"
                 >
-                  Open the calendar
+                  Choose a time to talk
                   <span aria-hidden="true" className="ml-2">&rarr;</span>
                 </a>
               </div>
