@@ -56,7 +56,7 @@ export function HowIWork() {
           <h2 className="section-title">
             Three ways to bring me into the work.
           </h2>
-          <p className="lead-text text-text-secondary">
+          <p className="lead-text thesis-line text-text-secondary">
             Start with focused advice, bring me into an active project, or keep
             an experienced partner close as your needs evolve.
           </p>

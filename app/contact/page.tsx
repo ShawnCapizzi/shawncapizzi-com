@@ -48,7 +48,7 @@ export default function Page() {
             What goal are you working toward, and how will you measure
             success?
           </p>
-          <p className="hero-lead max-w-3xl text-pretty">
+          <p className="hero-lead thesis-line max-w-3xl text-pretty">
             You don&rsquo;t need a finished brief to start. Bring a business
             challenge, an opportunity, or an experience you want to improve.
           </p>

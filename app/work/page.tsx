@@ -91,7 +91,7 @@ export default function Page() {
             service design, UI, design systems, enterprise UX, and plenty in
             between.
           </p>
-          <p className="hero-lead max-w-3xl text-pretty">
+          <p className="hero-lead thesis-line max-w-3xl text-pretty">
             Different problems, different teams, same question: did it make a
             difference?
           </p>

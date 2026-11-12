@@ -75,7 +75,7 @@ export default function Page() {
           <p className="font-mono text-base md:text-lg text-text-primary">
             Listen first. Make it visible. Prove it worked.
           </p>
-          <p className="hero-lead max-w-3xl text-pretty">
+          <p className="hero-lead thesis-line max-w-3xl text-pretty">
             A working method for people and teams making decisions under
             pressure. The three principles stay constant. Six flexible
             actions help teams understand the problem, make the thinking

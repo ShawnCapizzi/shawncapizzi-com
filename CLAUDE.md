@@ -396,6 +396,33 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   (new copy). Splitting a sentence into points is a copy change: show
   Shawn each one.
 
+## The hash rule (November 12, 2026)
+
+- Shawn's call: the hatched purple rule marks a line worth remembering:
+  a quote, a principle, or the line that carries a page or a section
+  (`.thesis-line` in `app/globals.css`). Read only those lines and you
+  get the story. One per section at most; never on a paragraph that
+  only continues; never in a closing ask (the ask rule is its mark);
+  never as a bullet for a list (lists take `.point-list`). Indented
+  20 / 24px like every hash rule on the site (Shawn chose indented over
+  hung in the margin, which crowded the page's left-edge ticks on a
+  phone).
+- Thesis lines: the /thinking hero ("A working method..."), the /work
+  hero ("Different problems, different teams, same question..."), the
+  /engagements hero ("Get focused advice..."; Shawn split its lead in two,
+  same words, so the rule marks the thesis and not the experience line
+  under it), the /contact hero ("You
+  don't need a finished brief to start..."; not on /how-i-help, where the
+  same line sits in the closing ask), and the homepage engagement intro
+  ("Start with focused advice..."). Quotes and principles already carry
+  it: case study lead quotes, /about pull quotes, the /how-i-help
+  principle headers, the Process card's `.principle`.
+- Still used as a list or entry marker, against the rule, pending
+  Shawn's call: /about (the "That might mean" list, Background, the
+  awards), /engagements "How we start", case study results, the
+  homepage "You should talk to me if..." list, and /design-info's
+  swatches.
+
 ## Type voices (November 2026)
 
 - Three faces, three jobs: Instrument Sans for headings and the hero lead,
