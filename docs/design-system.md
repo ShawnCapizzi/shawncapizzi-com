@@ -161,7 +161,7 @@ It is not a divider: never on a section break or the footer. Decorative, so it c
 
 ### Color usage rules
 
-Lavender is the only color for things that can be acted on: links, button text, the current Process move, the current chapter, and an accordion title on hover. Labels, eyebrows, captions, and metadata are tertiary gray in mono, never lavender, because a label in link color reads as a link on a phone. Periwinkle is reserved for the primary action pill and the focus ring. The full gradient is reserved for atmosphere, plus the brand rule above (the title stub and the ask rule). If a color appears more than three times on a page, it is no longer doing punctuation work.
+Lavender is the only color for things that can be acted on: links, button text, the current Process move, the current chapter, and an accordion title on hover. One exception (November 12, 2026): the drawn arrow on each point of a `.point-list` (see Scan pattern, section 5). Labels, eyebrows, captions, and metadata are tertiary gray in mono, never lavender, because a label in link color reads as a link on a phone. Periwinkle is reserved for the primary action pill and the focus ring. The full gradient is reserved for atmosphere, plus the brand rule above (the title stub and the ask rule). If a color appears more than three times on a page, it is no longer doing punctuation work.
 
 ---
 
@@ -173,7 +173,7 @@ Three faces, three jobs:
 
 - **Instrument Sans** for every heading (h1, h2, h3) and the hero lead.
 - **Geist** for body text, buttons, and UI.
-- **Geist Mono** for labels only: eyebrows and metadata. Mono never sets a sentence.
+- **Geist Mono** for labels only: eyebrows and metadata. Mono never sets a sentence, except "Napkin sketches welcome." on /contact and /how-i-help and the scan pattern's `.principle` line (one per card at most).
 
 All three load through `next/font/google` in `app/layout.tsx`.
 
@@ -332,7 +332,7 @@ Inset: --space-card (24 / 28 / 32)
 Hover (clickable cards): border to --color-border-strong, title to lavender, any image or video inside zooms 2%
 ```
 
-Two card types, so content reads at a glance. `.card` (navy) is proof and thinking: case studies, products, the Process, the book and Clarity Cards, quotes, About, the homepage doors. `.card.card-value` (violet) is value and services: the homepage engagement cards, the /engagements ways of working, and the Advisory shapes. A row never mixes the two.
+Two card types, so content reads at a glance. `.card` (navy) is proof and thinking: case studies, products, the Process, the book and Clarity Cards, quotes, About, the homepage doors. `.card.card-value` (violet) is value and services: the homepage engagement cards, the /engagements ways of working, and the Advisory options. A row never mixes the two.
 
 ```
 Value card (.card.card-value)
@@ -344,6 +344,21 @@ Inner rule (text cards only): 1px paper at 13%, 7px inside the border
 `.card-compact` (16 / 20 / 24) is for dense rows only. A card with an image on top moves the inset to a `.card-body` child so the image runs to the edge. Cards in a row share the row's height; the last action carries `.card-foot` so every action in the row sits on one baseline. Uneven rows are fixed by balancing the copy, never by pinning a footer over a gap.
 
 Cards do not have shadows. Elevation is a surface shift.
+
+### Scan pattern (November 12, 2026)
+
+From the Process action card on /thinking: every layer of a card in its own voice, so a reader can skip straight to the layer they want and a page starts faster.
+
+```
+.metadata-label   where you are ("Advisory · 1 of 3"), or what the next layer holds ("What you receive")
+.card-title       what it is
+.card-text        how it works
+.principle        the rule of thumb: Geist Mono 14px, leading 1.6, secondary gray, on the hash rule; one per card at most
+.point-list       what you walk away with: card-text size, points 8px apart, no end punctuation, a drawn 14 x 8px lavender arrow
+.details          label and value pairs stacked in a dl, 24px between pairs
+```
+
+Layers sit 24px apart (`--space-paragraph`); a label sits 16px over what it labels. A card split into two columns stacks at 24px on a phone (`.card.split-grid`). The arrow is a mask, not a character, because none of the three fonts has an arrow. Used on the Process action card, the /engagements ways-of-working cards, and the /engagements Advisory options.
 
 ### Metadata block (case study labels)
 

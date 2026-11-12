@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { pageMetadata } from "@/lib/seo";
@@ -33,14 +34,14 @@ const WAYS = [
     title: "Senior design direction, inside your team.",
     tagline:
       "I join your team inside the program, in your tools and process, without you adding another full-time role.",
-    keywords: "Fractional leadership · Design leadership · Experience strategy · Product design · UX/CX",
+    work: ["Fractional leadership", "Design leadership", "Experience strategy", "Product design", "UX/CX"],
   },
   {
     id: "advisory",
     name: "Advisory",
     title: "A defined problem and plan before you commit.",
     tagline: "Shaped as a Strategic Snapshot, an Engagement Sprint, or an AI Opportunity Diagnostic, so the scope fits the decision in front of you.",
-    keywords: "Advisory · Product strategy · Experience strategy · Service design · Design systems",
+    work: ["Advisory", "Product strategy", "Experience strategy", "Service design", "Design systems"],
   },
   {
     id: "oncall",
@@ -48,22 +49,25 @@ const WAYS = [
     title: "Experienced digital perspective, when clarity is needed.",
     tagline:
       "A monthly retainer to review work, pressure-test a direction, or join a key meeting before a decision gets expensive to change.",
-    keywords: "On-call advisory · Leadership support · Design review · Strategic guidance",
+    work: ["On-call advisory", "Leadership support", "Design review", "Strategic guidance"],
   },
 ];
 
-/* Advisory shapes (Shawn's copy brief, November 11, 2026). Each card shows,
-   in order: the summary (small text), the description, then, where present,
-   scannable details (a mono label over a line) and a note. No fixed price,
+/* Advisory shapes (Shawn's copy brief, November 11, 2026). No fixed price,
    delivery window, interview count, or promised outcome: scope is agreed in
-   advance. The Strategic Snapshot's details replace its old summary line,
-   which promised interviews. AI-assisted simulations stay labeled and
-   separate from research with real people (see the note on the Sprint). */
+   advance. AI-assisted simulations stay labeled and separate from research
+   with real people (see the note on the Sprint).
+   November 12, 2026 (Shawn's call, the scan pattern): all three share one
+   layout. Left: where you are, the name, the description, and an
+   optional lead detail. Right: labeled details, with lists as points.
+   The Sprint's and the Diagnostic's old summary lines, and the
+   Diagnostic's second sentence, became details in the same words. */
+type AdvisoryDetail = { label: string; text?: string; points?: string[] };
 type AdvisoryShape = {
   name: string;
-  scope?: string;
   description: string;
-  details?: { label: string; text: string }[];
+  lead?: AdvisoryDetail;
+  details: AdvisoryDetail[];
   note?: string;
 };
 
@@ -72,18 +76,22 @@ const ADVISORY_SHAPES: AdvisoryShape[] = [
     name: "Strategic Snapshot",
     description:
       "A focused assessment of one business, customer, or user-experience challenge before you commit significant budget or delivery effort.",
+    lead: {
+      label: "Best for",
+      text: "An upcoming launch, redesign, or decision that needs an experienced outside perspective.",
+    },
     details: [
-      {
-        label: "Best for",
-        text: "An upcoming launch, redesign, or decision that needs an experienced outside perspective.",
-      },
       {
         label: "What we review",
         text: "The current work, available evidence, and relevant stakeholder input, with the scope agreed in advance.",
       },
       {
         label: "What you receive",
-        text: "A concise assessment, prioritized recommendations, and a working session to discuss the findings and next steps.",
+        points: [
+          "A concise assessment",
+          "Prioritized recommendations",
+          "A working session to discuss the findings and next steps",
+        ],
       },
       {
         label: "What happens next",
@@ -93,20 +101,72 @@ const ADVISORY_SHAPES: AdvisoryShape[] = [
   },
   {
     name: "Engagement Sprint",
-    scope:
-      "A prioritized roadmap, a clear presentation of the findings, and follow-up reviews. The work draws on stakeholder conversations, available user research, and existing project evidence, with scope agreed in advance.",
     description:
       "A deeper assessment of a defined challenge, such as a customer journey, brand message, or digital experience. We identify what matters, evaluate the options, and give the team a practical direction.",
+    details: [
+      {
+        label: "What it draws on",
+        text: "Stakeholder conversations, available user research, and existing project evidence, with scope agreed in advance.",
+      },
+      {
+        label: "What you receive",
+        points: [
+          "A prioritized roadmap",
+          "A clear presentation of the findings",
+          "Follow-up reviews",
+        ],
+      },
+    ],
     note: "AI-assisted simulations may support exploration. They are identified separately and do not replace research with real customers or users.",
   },
   {
     name: "AI Opportunity Diagnostic",
-    scope:
-      "A practical assessment of where AI could improve a defined workflow, supported by a prioritized roadmap.",
     description:
-      "We map how the work happens, identify unnecessary complexity, and assess where process changes, existing tools, or AI could help. Recommendations explain the potential value, dependencies, and validation needed before implementation.",
+      "We map how the work happens, identify unnecessary complexity, and assess where process changes, existing tools, or AI could help.",
+    details: [
+      {
+        label: "What you receive",
+        points: [
+          "A practical assessment of where AI could improve a defined workflow",
+          "A prioritized roadmap",
+        ],
+      },
+      {
+        label: "Recommendations explain",
+        points: [
+          "The potential value",
+          "Dependencies",
+          "Validation needed before implementation",
+        ],
+      },
+    ],
   },
 ];
+
+/* An Advisory shape's details as dt and dd pairs, for a dl.details: a
+   label over a line of text, or over points. */
+function AdvisoryDetails({ details }: { details: AdvisoryDetail[] }) {
+  return (
+    <>
+      {details.map((d) => (
+        <Fragment key={d.label}>
+          <dt className="metadata-label">{d.label}</dt>
+          <dd className="card-text text-text-secondary text-pretty">
+            {d.points ? (
+              <ul className="point-list">
+                {d.points.map((p) => (
+                  <li key={p}>{p}</li>
+                ))}
+              </ul>
+            ) : (
+              d.text
+            )}
+          </dd>
+        </Fragment>
+      ))}
+    </>
+  );
+}
 
 const PILLARS = [
   {
@@ -258,7 +318,16 @@ export default function Page() {
                 <p className="eyebrow">{way.name}</p>
                 <h3 className="card-title text-text-primary text-balance">{way.title}</h3>
                 <p className="card-text text-text-secondary text-pretty">{way.tagline}</p>
-                <p className="card-text metadata-label">{way.keywords}</p>
+                {/* The scan pattern (November 12, 2026): the keywords were
+                    one run of mono capitals at body size (.card-text set
+                    the label's size), four heavy lines on a phone. Now a
+                    label over points, the same words. */}
+                <p className="metadata-label">Typical work</p>
+                <ul className="point-list card-text text-text-secondary">
+                  {way.work.map((w) => (
+                    <li key={w}>{w}</li>
+                  ))}
+                </ul>
                 <a
                   href={`#${way.id}`}
                   className="card-foot inline-flex items-center font-medium text-link hover:text-link-hover transition-colors"
@@ -402,59 +471,41 @@ export default function Page() {
             />
           </div>
 
-          {/* The Strategic Snapshot is the first paid step (Shawn's copy
-              brief), so it spans the row: description left, its four
-              details right. Sprint and Diagnostic share the row below, so
-              each row's cards stay balanced (November 11, 2026). */}
-          <div className="card-grid grid-cols-1 lg:grid-cols-2">
-            {ADVISORY_SHAPES.map((shape) =>
-              shape.details ? (
-                <article
-                  key={shape.name}
-                  className="relative card card-value lg:col-span-2 split-grid grid-cols-1 lg:grid-cols-12"
-                >
-                  <div className="lg:col-span-5">
-                    <h3 className="card-title text-text-primary">
-                      {shape.name}
-                    </h3>
-                    <p className="card-text text-text-secondary text-pretty">
-                      {shape.description}
-                    </p>
-                  </div>
-                  <dl className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
-                    {shape.details.map((d) => (
-                      <div key={d.label}>
-                        <dt className="metadata-label">{d.label}</dt>
-                        <dd className="small-text text-text-secondary text-pretty">
-                          {d.text}
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
-                </article>
-              ) : (
-                <article
-                  key={shape.name}
-                  className="relative flex flex-col card card-value"
-                >
+          {/* One layout for all three (November 12, 2026, the scan
+              pattern): each card spans the row, so no row has to balance
+              two cards of different length. Where you are, the name, and
+              the description on the left; the details on the right. */}
+          <div className="card-grid grid-cols-1">
+            {ADVISORY_SHAPES.map((shape, i) => (
+              <article
+                key={shape.name}
+                className="relative card card-value split-grid grid-cols-1 lg:grid-cols-12"
+              >
+                <div className="lg:col-span-5">
+                  <p className="metadata-label">
+                    Advisory · {i + 1} of {ADVISORY_SHAPES.length}
+                  </p>
                   <h3 className="card-title text-text-primary">
                     {shape.name}
                   </h3>
-                  {shape.scope ? (
-                    <p className="small-text card-text text-text-secondary text-pretty">
-                      {shape.scope}
-                    </p>
-                  ) : null}
                   <p className="card-text text-text-secondary text-pretty">
                     {shape.description}
                   </p>
-                </article>
-              )
-            )}
+                  {shape.lead ? (
+                    <dl className="details">
+                      <AdvisoryDetails details={[shape.lead]} />
+                    </dl>
+                  ) : null}
+                </div>
+                <dl className="details lg:col-span-7">
+                  <AdvisoryDetails details={shape.details} />
+                </dl>
+              </article>
+            ))}
           </div>
           {/* A shape's note (the Sprint's line on AI-assisted simulations)
-              sits under the row, not in its card: inside, it left the
-              Diagnostic beside it with about 96px of empty space. */}
+              sits under the cards, where it has sat since November 11,
+              2026. */}
           {ADVISORY_SHAPES.filter((shape) => shape.note).map((shape) => (
             <p
               key={`${shape.name}-note`}

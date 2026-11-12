@@ -261,7 +261,9 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   size ladders ran across 18 pages (body prose was 16 on the homepage, 18
   on case studies, 20 on /about); measured after, every page reads the five.
   Deliberate exceptions keep their own sizes and carry no role class: the
-  Process loop (`components/ProcessLoop.tsx`), the Clarity Card prompts,
+  Process loop (`components/ProcessLoop.tsx`; since November 12, 2026 its
+  action card uses the roles and the scan pattern, and only the loop's
+  own labels and tabs keep their sizes), the Clarity Card prompts,
   the book contents, buttons, the header, the footer, and mono labels.
 - Measured with Playwright across ten pages after the change: eyebrow to
   heading 16 everywhere, section title to text 24, card title to text 12.
@@ -356,19 +358,54 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 
 - Lavender (`--color-link`, `#A798FF`) means a thing can be acted on: links,
   button text, and the active item in a loop or list (the current Process
-  move, the current chapter). Nothing else is lavender. Labels, eyebrows,
-  captions, and metadata are `text-tertiary` gray in mono. Shawn's rule:
-  color has meaning, and a label in link color reads as a link on a phone.
+  move, the current chapter). Nothing else is lavender, with one exception
+  (Shawn's call, November 12, 2026, chosen over the hash rule's purple and
+  gray): the arrow on each point of a `.point-list` (see Scan pattern).
+  Labels, eyebrows, captions, and metadata are `text-tertiary` gray in
+  mono. Shawn's rule: color has meaning, and a label in link color reads
+  as a link on a phone.
+
+## Scan pattern (November 12, 2026)
+
+- Shawn's call: the Process action card on /thinking is the model for
+  showing information so a page starts fast and scans well. Every layer
+  of a card has its own voice, so a reader can skip to the one they want:
+  `.metadata-label` for where you are ("Advisory · 1 of 3") or what the
+  next layer holds ("What you receive"); `.card-title` for what it is;
+  `.card-text` for how it works; `.principle` for the rule of thumb, one
+  mono line on the hash rule, at most one per card; `.point-list` for
+  what you walk away with, short points with no end punctuation, each
+  after a drawn lavender arrow; `.details` for label and value pairs
+  stacked in a dl. All in `app/globals.css` (SCAN PATTERN).
+- Layers sit 24px apart (`--space-paragraph`), a step more than the 16px
+  between paragraphs in a card; a label sits 16px over what it labels;
+  points are 8px apart. A card split into two columns stacks on a phone
+  at 24px (`.card.split-grid`), not the 40px page split.
+- The arrow is drawn (a 14 x 8px mask, 1px stroke), not typed: none of
+  the site's three fonts has the arrow character, so as text it came
+  from whatever system font a device had (Arial's wide arrow on an
+  iPhone, a tiny one elsewhere). Measured the same on every device now.
+- Where it is used: the Process action card (its source, now on the
+  shared roles), the /engagements ways-of-working cards ("Typical work"
+  over points, replacing a run of mono capitals at body size), and the
+  /engagements Advisory options (one layout for all three: label, name,
+  description, and an optional lead detail left; labeled details right).
+  Candidates Shawn has discussed, not yet built: the Embedded Leadership
+  and On Call sections' inline lists, a summary card near the top of each
+  case study, and a "What you leave with" list on /how-i-help offerings
+  (new copy). Splitting a sentence into points is a copy change: show
+  Shawn each one.
 
 ## Type voices (November 2026)
 
 - Three faces, three jobs: Instrument Sans for headings and the hero lead,
   Geist for body and buttons, Geist Mono for labels only. `.eyebrow` and
   `.metadata-label` are both mono, so every small uppercase label on the
-  site is one voice; mono never sets a sentence, with one exception
-  (Shawn's call, November 2026): "Napkin sketches welcome." with its pencil
+  site is one voice; mono never sets a sentence, with two exceptions
+  (Shawn's calls, November 2026): "Napkin sketches welcome." with its pencil
   on /contact and /how-i-help stays in mono on purpose, a handwritten-note
-  aside. The homepage hero carries
+  aside; and the scan pattern's `.principle`, one rule-of-thumb line per
+  card at most. The homepage hero carries
   no credential line and no second wordmark; the header already shows
   the mark. Since November 11, 2026 the hero is Shawn's two-sentence
   headline, one sentence per line ("Help people understand what

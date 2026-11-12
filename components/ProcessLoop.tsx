@@ -191,29 +191,27 @@ export function ProcessLoop() {
           aria-live="polite"
           className="card min-h-[360px] animate-[swapin_.35s_ease-out] motion-reduce:animate-none"
         >
-          <p className="font-mono text-[11px] tracking-widest uppercase text-text-tertiary mb-3">
+          {/* The scan pattern's source (November 12, 2026): the card now
+              reads from the shared roles in app/globals.css (.principle,
+              .point-list) so every card built on it matches this one. */}
+          <p className="metadata-label">
             {s.move} · Action {s.n} of 6
           </p>
           <h3 className="card-title text-text-primary">
             {s.title}
           </h3>
-          <p className="card-text text-text-secondary mb-5">
+          <p className="card-text text-text-secondary">
             {s.job}
           </p>
-          <p className="font-mono text-sm text-text-secondary hash-rule pl-4 mb-5">
+          <p className="principle">
             {s.line}
           </p>
-          <p className="font-mono text-[11px] tracking-widest uppercase text-text-tertiary mb-2">
+          <p className="metadata-label">
             What it feeds forward
           </p>
-          <ul className="space-y-1.5">
+          <ul className="point-list card-text text-text-secondary">
             {s.feeds.map((f) => (
-              <li
-                key={f}
-                className="text-[15px] text-text-secondary pl-5 relative before:content-['→'] before:absolute before:left-0 before:text-link before:font-mono before:text-xs"
-              >
-                {f}
-              </li>
+              <li key={f}>{f}</li>
             ))}
           </ul>
         </div>

@@ -1465,7 +1465,8 @@ html[data-menu-open] [data-back-to-top] {
   border-bottom: 1px solid var(--color-border-subtle);
 }
 
-.hash-rule {
+.hash-rule,
+.principle {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='7'%3E%3Cpath d='M1 6L5 2' stroke='rgb(130,116,255)' stroke-opacity='0.55' stroke-width='1' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
   background-repeat: repeat-y;
   background-position: 0 0;
@@ -1490,6 +1491,90 @@ html[data-menu-open] [data-back-to-top] {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='7'%3E%3Cpath d='M1 6L5 2' stroke='rgb(130,116,255)' stroke-opacity='0.55' stroke-width='1' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
   background-repeat: repeat-y;
   background-size: 6px 7px;
+}
+
+/* ============================================================
+   SCAN PATTERN (November 12, 2026, Shawn's call)
+   Lifted from the Process action card on /thinking: every layer of
+   a card in its own voice, so a reader can skip straight to the
+   layer they want and a page starts faster.
+     .metadata-label  where you are ("Advisory · 1 of 3"), or what
+                      the next layer holds ("What you receive")
+     .card-title      what it is
+     .card-text       how it works
+     .principle       the rule of thumb: one mono line on the hash
+                      rule. At most one per card; mono sets a
+                      sentence only here, in the napkin line, and in
+                      the Process loop
+     .point-list      what you walk away with: short points, no end
+                      punctuation, each after an arrow
+     .details         label and value pairs, stacked, in a dl
+   Layers sit 24px apart (--space-paragraph), a step more than the
+   16px between paragraphs in a card, so each reads as its own group.
+   A label sits 16px over what it labels (.metadata-label + *).
+   ============================================================ */
+
+:root {
+  /* The arrow is link lavender, as on the Process card where the
+     pattern began (Shawn's call, November 12, 2026, over the hash
+     rule's purple and gray): the one lavender mark that is not a link,
+     and the only exception to the color rule in CLAUDE.md. */
+  --point-mark: var(--color-link);
+}
+
+.principle {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  padding-left: 1rem;
+}
+
+* + .principle,
+.principle + :not(.card-foot),
+.card-text + .metadata-label,
+.card-text + .details,
+.point-list + .metadata-label {
+  margin-top: var(--space-paragraph);
+}
+
+.point-list {
+  list-style: none;
+}
+.point-list > li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+.point-list > li + li {
+  margin-top: 0.5rem;
+}
+/* The arrow is drawn, not typed: none of the site's three fonts has
+   the arrow character, so as text it came from whatever system font a
+   device had (Arial's wide arrow on an iPhone, a tiny one elsewhere).
+   As a mask it is the same 14 x 8px mark everywhere, a 1px stroke like
+   the hash rule's, centered on the first line's lowercase letters. It
+   is empty content, so screen readers say nothing. */
+.point-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(0.85em - 4px);
+  width: 14px;
+  height: 8px;
+  background-color: var(--point-mark);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8'%3E%3Cpath d='M.5 4h12.5M9.5.75 13 4 9.5 7.25' stroke='black' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") no-repeat 0 0 / 14px 8px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8'%3E%3Cpath d='M.5 4h12.5M9.5.75 13 4 9.5 7.25' stroke='black' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") no-repeat 0 0 / 14px 8px;
+}
+
+.details > dd + dt {
+  margin-top: var(--space-paragraph);
+}
+
+/* A card split into two columns (the /engagements Advisory options)
+   stacks on a phone at the layer gap, not the 40px page split, so its
+   two halves read as one card. Side by side, the split gap holds. */
+.card.split-grid {
+  row-gap: var(--space-paragraph);
 }
 
 /* ============================================================
