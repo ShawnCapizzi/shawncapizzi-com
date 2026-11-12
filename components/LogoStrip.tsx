@@ -33,7 +33,15 @@ import Image from "next/image";
  * 2026). On a phone they stacked with the hero's edge and the first
  * door's border into three strokes in a short stretch, so below 768px the
  * logos sit as a quiet band between hero and doors with no rules.
+ *
+ * Omnicom renders smaller than the rest (November 12, 2026, Shawn's call:
+ * it read huge beside the others). Its file is heavy capitals filling 86%
+ * of the image's height, against 52% for Samsung's wordmark of the same
+ * shape, so at the shared 28 / 32px it drew 1.7 times Samsung's size. At
+ * 18 / 20px its letters match Samsung's and Bloomberg's.
  */
+
+const LOGO_HEIGHT = "h-7 md:h-8";
 
 const LOGOS = [
   { src: "/images/logos/01-pfizer.avif", alt: "Pfizer", width: 120 },
@@ -44,7 +52,12 @@ const LOGOS = [
     alt: "Columbia Business School",
     width: 200,
   },
-  { src: "/images/logos/06-omnicom.png", alt: "Omnicom", width: 150 },
+  {
+    src: "/images/logos/06-omnicom.png",
+    alt: "Omnicom",
+    width: 150,
+    height: "h-[18px] md:h-5",
+  },
 ];
 
 export function LogoStrip() {
@@ -69,7 +82,7 @@ export function LogoStrip() {
                     alt={set === 0 ? logo.alt : ""}
                     width={logo.width}
                     height={40}
-                    className="h-7 md:h-8 w-auto object-contain"
+                    className={`${logo.height ?? LOGO_HEIGHT} w-auto object-contain`}
                   />
                 </li>
               ))}

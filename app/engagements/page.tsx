@@ -242,8 +242,11 @@ export default function Page() {
       <section id="ways" className="section scroll-mt-[126px] md:scroll-mt-[134px] lg:scroll-mt-[146px]">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">Ways of working</p>
+          {/* "On Call" is a name, so it never splits across lines
+              (November 12, 2026, Shawn's call: "Call" sat alone on the
+              second line on his phone). */}
           <h2 className="section-title max-w-3xl">
-            Leadership, Advisory, or On Call
+            Leadership, Advisory, or On&nbsp;Call
           </h2>
 
           <div className="card-grid grid-cols-1 lg:grid-cols-3">

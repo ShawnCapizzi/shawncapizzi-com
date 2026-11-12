@@ -1042,6 +1042,10 @@ html[data-menu-open] [data-back-to-top] {
    ============================================================ */
 
 .marquee-mask {
+  /* The label's 16px. "Trusted by leaders across:" sits in its own
+     container, so .eyebrow + * never reached the logos and they sat 0px
+     under it (measured November 12, 2026). */
+  margin-top: var(--space-after-eyebrow);
   /* Subtle fade at left and right edges so logos don't clip abruptly */
   -webkit-mask-image: linear-gradient(
     to right,
