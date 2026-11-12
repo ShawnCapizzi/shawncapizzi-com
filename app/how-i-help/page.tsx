@@ -47,15 +47,15 @@ const GROUPS: WaysGroup[] = [
     ways: [
       {
         title: "Figure out what comes next",
-        tease: "A new product, an unclear opportunity, a customer journey that isn\u2019t working, or too many competing ideas.",
+        tease: "A new opportunity, an unclear direction, or too many competing ideas.",
         text:
-          "I help teams define the problem, see the opportunity, and get aligned on a direction they can act on.",
+          "I bring together stakeholder input, customer needs, and available evidence to define the challenge and recommend a direction. Your team gets clear priorities and practical next steps.",
       },
       {
         title: "Research it. Pressure-test it.",
-        tease: "You need to understand where you stand before deciding where to spend.",
+        tease: "You need evidence before deciding where to invest.",
         text:
-          "Competitive reviews, digital audits, market scans, customer signals, CRM and product recommendations: research distilled into what matters, what to do next, and why.",
+          "Competitive reviews, digital audits, and customer signals help reveal what is working and what needs attention. I turn the findings into prioritized recommendations, with the reasoning behind each one.",
       },
     ],
   },
@@ -68,27 +68,27 @@ const GROUPS: WaysGroup[] = [
     ways: [
       {
         title: "Make the experience better",
-        tease: "Something you already have isn\u2019t working as well as it should.",
+        tease: "Customers or users are struggling to understand, navigate, or complete something.",
         text:
-          "UX, product design, service design, customer journeys, content, design systems, and the connective tissue between them. Sometimes it\u2019s a new experience. Sometimes it\u2019s making what you already have work much better.",
+          "I examine the journey, content, and interactions to identify friction and shape improvements. Depending on the challenge, the work can include revised flows, content recommendations, wireframes, or prototypes.",
       },
       {
         title: "Take it from napkin sketch to working product",
-        tease: "An idea that needs a deck, a prototype, or a proof to get funded.",
+        tease: "An idea needs to become tangible enough to evaluate, test, or support a funding decision.",
         text:
-          "An idea on a napkin, a blue-sky business pitch, or a product your organization can’t picture yet. I turn it into the pitch deck, the product visualization, or the working proof of concept that wins funding, budget, or the attention of the right people, whether you’re raising from investors or making the case inside the building.",
+          "I turn early thinking into a pitch deck, product visualization, or working proof of concept. The result helps stakeholders assess the opportunity, test assumptions, and decide what to fund or build next.",
       },
       {
         title: "Untangle the workflow. Then automate what should be.",
-        tease: "A process that runs across teams and business units, with more steps than anyone can see end to end.",
+        tease: "Work crosses teams, tools, and services, with too many handoffs or repeated tasks.",
         text:
-          "Every business, a local shop or a global enterprise, is trying to see its own workflow: which tasks people handle, which software and services do the rest, and where the two have tangled. I map it, with contextual inquiry at every level and the information architecture to make it legible, then reevaluate it with the team: where current workers can get real efficiencies, where staff can be relieved of burden, where several services can be consolidated or replaced by a custom agent, and where revenue is leaking. The result is a business that runs simpler, a staff whose work got easier, and AI used as a business partner rather than a gamble, as every business enters a new definition of how it operates.",
+          "I map how the work happens, identify friction, and assess where simpler processes or automation could help. You get prioritized recommendations for what to refine, automate, or leave in human hands.",
       },
       {
         title: "Build the brand, not just the pieces",
-        tease: "You need a design system and a modern identity that hold together across all of your digital touchpoints, with a consistency users and customers can trust.",
+        tease: "Your identity and communications need to hold together across digital and physical touchpoints.",
         text:
-          "Logo, letterhead, brochures, website, social, and the tangible, in-person pieces people actually hold. The card you just scanned is one of them. I came up in the print and identity business, and I build the full identity, and the playbook that keeps it consistent everywhere, so a new or growing business looks like itself at every touchpoint.",
+          "I develop visual identities, design systems, and practical guidelines that keep websites, marketing materials, and printed pieces consistent. Your team gets a foundation it can apply as the business grows.",
       },
     ],
   },
@@ -101,15 +101,15 @@ const GROUPS: WaysGroup[] = [
     ways: [
       {
         title: "Get the message out, and make it land",
-        tease: "People aren\u2019t noticing, understanding, or acting.",
+        tease: "People aren\u2019t noticing, understanding, or taking the next step.",
         text:
-          "Campaigns, launch communications, content, CRM, and the creative work that gets attention and holds it. A thing nobody understands or notices doesn\u2019t get used, so the message has to be as clear as the product behind it, and it has to move people, patients, and doctors to the high-value actions that matter.",
+          "I shape campaigns, launch communications, content, and CRM around what the audience needs and the action the business wants to support. The work connects the message, the experience, and how success will be measured.",
       },
       {
         title: "Put AI to work, without losing the plot",
-        tease: "You know AI should help, and you\u2019re not sure where.",
+        tease: "You see potential in AI but need a useful place to start.",
         text:
-          "AI is the newest tool in modern communications, and a good one when it\u2019s in experienced hands. I use it every day to research faster, test ideas sooner, build working prototypes, and ship real products. I can help your team see where it fits, where it doesn\u2019t, and how to use it as an ally rather than a gamble. Agentic optimization starts the same way: a workflow mapped step by step, so the agents land where they help and not where they break things.",
+          "I help teams assess use cases, explore tools, and test ideas through practical prototypes. You get a clearer view of where AI can help, what needs validation, and where human judgment remains essential.",
       },
     ],
   },
@@ -129,30 +129,17 @@ export default function Page() {
               <h1 className="headline-static hero-title text-balance max-w-4xl">
                 Nice to meet you.
               </h1>
-              {/* The scan line (November 11, 2026, Shawn's words): two
-                  questions the visitor can answer in their head before
-                  reading on. Set like every other page's hero (Shawn's
-                  call, November 11, 2026): the questions and the lead are
-                  two .hero-lead paragraphs, 24px apart, as on /work and
-                  /contact. A bold heading with a quieter second line read
-                  unlike the rest of the site. "tackling" is an easter egg
-                  for sports fans: it opens the NFL standings (Shawn is a
-                  Giants fan) in a new tab, marked by a faint dotted
-                  underline so keyboard and screen-reader users still meet
-                  it as a link. */}
+              {/* The scan questions (Shawn's copy brief, November 11, 2026):
+                  the main question, then the supporting one as its own
+                  paragraph, set like every other page's hero (.hero-lead,
+                  24px apart). The NFL standings easter egg on "tackling" was
+                  removed in the same brief. */}
               <p className="hero-lead max-w-3xl text-pretty">
-                What digital transformation are you leading or business
-                challenge are you{" "}
-                <a
-                  href="https://www.nfl.com/standings/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline decoration-dotted decoration-1 underline-offset-4 decoration-text-primary/40 hover:text-link hover:decoration-link transition-colors"
-                >
-                  tackling
-                  <span className="sr-only"> (New York Giants standings, opens in a new tab)</span>
-                </a>
-                ? What goal are you working toward, and how will you measure
+                What business challenge are you tackling, or transformation
+                are you leading?
+              </p>
+              <p className="hero-lead max-w-3xl text-pretty">
+                What goal are you working toward, and how will you measure
                 success?
               </p>
               {/* November 11, 2026 (Shawn's call): this lead replaced the
@@ -176,8 +163,8 @@ export default function Page() {
                 </Link>
                 <p className="mt-4 body-text text-text-secondary text-pretty">
                   Bring a question, a rough idea, or an existing project.
-                  We&rsquo;ll talk through what you need and whether I&rsquo;m
-                  the right person to help.
+                  We&rsquo;ll talk through your goals, what&rsquo;s getting in
+                  the way, and whether I&rsquo;m the right person to help.
                 </p>
               </div>
             </div>
@@ -204,17 +191,16 @@ export default function Page() {
           <h2 className="section-title text-balance max-w-3xl">
             A few ways I can help
           </h2>
-          {/* System framing (October 2026): these are not steps and not a
-              fixed menu. One flexible system, named here and linked to the
-              full method on /thinking, that has worked across problems, teams,
-              business units, and geographies. */}
+          {/* System framing (Shawn's copy brief, November 11, 2026): the
+              work flexes; the Process is the constant. "Capizzi Process"
+              keeps its link to the full method on /thinking. */}
           <p className="lead-text mt-5 mb-10 md:mb-12 max-w-3xl text-text-secondary text-pretty">
-            Not a fixed menu. The{" "}
+            The work flexes around your goals. The{" "}
             <Link href="/thinking" className="text-link hover:text-link-hover transition-colors">
               Capizzi Process
             </Link>{" "}
-            gives me three anchors: listen first, make it visible, and prove it
-            worked. The work itself flexes around the problem.
+            provides a consistent foundation: listen first, make it visible,
+            prove it worked.
           </p>
           <WaysGroups groups={GROUPS} />
         </div>
@@ -245,11 +231,8 @@ export default function Page() {
           <div className="max-w-3xl">
             <h2 className="section-title">Start wherever you are.</h2>
             <p className="lead-text mt-6 text-text-secondary text-pretty">
-              You don&apos;t need a perfectly defined brief, a budget, or a
-              plan. Bring me the problem, the opportunity, the idea, or the
-              thing that just doesn&apos;t feel like it&apos;s working the way
-              it should. A 30-minute conversation is usually enough to know
-              whether I can help.
+              You don&rsquo;t need a finished brief to start. Bring a business
+              challenge, an opportunity, or an experience you want to improve.
             </p>
             {/* The napkin line from /contact, same mono style and pencil. It
                 pays off the napkin-to-product card above. */}
@@ -262,9 +245,16 @@ export default function Page() {
                 href="/contact"
                 className="btn-next"
               >
-                Start a conversation
+                Let&rsquo;s discuss your goals
                 <span aria-hidden="true" className="ml-2">&rarr;</span>
               </Link>
+              {/* What the call is (Shawn's copy brief, November 11, 2026). The
+                  booking is 30 minutes, checked on the Cal.com event page. */}
+              <p className="mt-4 body-text text-text-secondary text-pretty">
+                A 30-minute conversation about your goals, what&rsquo;s getting
+                in the way, and whether I can help. If there&rsquo;s a fit,
+                we&rsquo;ll identify a sensible starting point.
+              </p>
             </div>
           </div>
         </div>

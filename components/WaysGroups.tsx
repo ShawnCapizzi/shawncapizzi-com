@@ -130,14 +130,18 @@ export function WaysGroups({ groups }: { groups: WaysGroup[] }) {
                       </span>
                     </button>
 
+                    {/* The 12px pull-up that tucks the detail under the tease
+                        sits on this grid, open only (November 11, 2026). On
+                        the paragraph, inside overflow-hidden, it cut off the
+                        top of the first line. */}
                     <div
                       id={`${id}-detail`}
-                      className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
-                        isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                      className={`grid transition-[grid-template-rows,margin-top] duration-300 ease-out motion-reduce:transition-none ${
+                        isOpen ? "grid-rows-[1fr] -mt-3" : "grid-rows-[0fr] mt-0"
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <p className="body-text -mt-3 pb-7 md:pb-8 pr-10 md:pr-12 text-text-secondary text-pretty">
+                        <p className="body-text pb-7 md:pb-8 pr-10 md:pr-12 text-text-secondary text-pretty">
                           {way.text}
                         </p>
                       </div>

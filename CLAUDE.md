@@ -185,34 +185,25 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 
 - No bullet-point overuse — prose first, lists only when essential
 - No agency-speak: "crafted", "elevated", "transformed", "delighted", "journey"
-- No "we": Shawn is one person. Six exceptions (Shawn's call, November
-  2026), all where "we" means Shawn and the visitor or client together:
-  the Advisory shape cards on /engagements, the homepage Advisory card
-  ("Get clear on the opportunity. Together, we map a plan."), the first
-  homepage door's label ("We start here"), the line under the /how-i-help
-  first ask ("We'll talk through what you need and whether I'm the right
-  person to help.", also the /contact calendar card, word for word), and
-  the Get in touch card on /work and /faq ("let's see what we can make
-  happen together.", the `contact` card in
-  `components/cta-cards-data.ts`). The /contact hero was one until
-  November 11, 2026, when it took /how-i-help's lead ("You don't need a
-  perfectly defined brief, a budget, or a plan."), which has no "we".
+- "We" means Shawn and the client or visitor together, and only that
+  (Shawn's call, November 11, 2026, broadened from a list of six
+  exceptions when his copy brief added more). It is right where the two
+  of them do something jointly: "We start here", "Together, we map a
+  plan", "We'll talk through your goals", "we'll identify a sensible
+  starting point", "What we review", "We agree on scope, timing, and cost
+  before work begins". Never the royal or agency "we" for Shawn alone
+  ("we design", "our team"): Shawn is one person.
 - /contact carries /how-i-help's final language (Shawn's call, November
   11, 2026): /how-i-help is a hidden side door (noindex, business card
-  only), so its two scan questions, its lead, its calendar line, and its
-  client line appear on /contact word for word, where every ask on the
-  site lands. /contact's H1 is "Let's talk.", the button that brings most
-  visitors there. On both pages the questions and the lead are two
+  only), so its lines appear on /contact too, where every ask on the site
+  lands. /contact's H1 is "Let's talk.", the button that brings most
+  visitors there. On both pages the questions and the leads are
   `.hero-lead` paragraphs, like every other page's hero (set as a bold
   heading with a quieter second line, they read unlike the rest of the
   site). When either page's copy changes, check the other.
-- One easter egg (Shawn's call, November 11, 2026): "tackling" in the
-  /how-i-help scan line links to the NFL standings
-  (https://www.nfl.com/standings/, no year in the address, so it never
-  goes stale) in a new tab, for Giants fans and sports lovers. It keeps
-  the lead's color with a faint dotted underline, turns lavender on
-  hover, and carries screen-reader text ("New York Giants standings, opens
-  in a new tab"). Don't add others without Shawn's call.
+- No easter eggs. "tackling" on /how-i-help linked to the NFL standings
+  for a few hours on November 11, 2026; Shawn's copy brief removed it,
+  link and screen-reader text both.
 - No drop shadows for elevation (use bg shifts)
 - No more than 3 colors visible on a page
 - No icons or illustrations beyond the single starburst symbol, with two
