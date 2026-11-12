@@ -52,25 +52,59 @@ const WAYS = [
   },
 ];
 
-const ADVISORY_SHAPES = [
+/* Advisory shapes (Shawn's copy brief, November 11, 2026). Each card shows,
+   in order: the summary (small text), the description, then, where present,
+   scannable details (a mono label over a line) and a note. No fixed price,
+   delivery window, interview count, or promised outcome: scope is agreed in
+   advance. The Strategic Snapshot's details replace its old summary line,
+   which promised interviews. AI-assisted simulations stay labeled and
+   separate from research with real people (see the note on the Sprint). */
+type AdvisoryShape = {
+  name: string;
+  scope?: string;
+  description: string;
+  details?: { label: string; text: string }[];
+  note?: string;
+};
+
+const ADVISORY_SHAPES: AdvisoryShape[] = [
   {
     name: "Strategic Snapshot",
     description:
-      "We tackle a defined problem, present options, and a clear list of recommendations. Every insight earns its slide in the deck: a tight story with meat, nothing to skip past. Useful when a program is stuck, a decision is approaching, or leadership needs an outside perspective before committing budget or a team.",
-    scope: "One defined deliverable with insights and recommendations. Built from data, your need, interviews, or a review of the current product or experience.",
+      "A focused assessment of one business, customer, or user-experience challenge before you commit significant budget or delivery effort.",
+    details: [
+      {
+        label: "Best for",
+        text: "An upcoming launch, redesign, or decision that needs an experienced outside perspective.",
+      },
+      {
+        label: "What we review",
+        text: "The current work, available evidence, and relevant stakeholder input, with the scope agreed in advance.",
+      },
+      {
+        label: "What you receive",
+        text: "A concise assessment, prioritized recommendations, and a working session to discuss the findings and next steps.",
+      },
+      {
+        label: "What happens next",
+        text: "Your team can act on the recommendations, or we can discuss support through design, delivery, and refinement.",
+      },
+    ],
   },
   {
     name: "Engagement Sprint",
-    description:
-      "A deeper look at a defined challenge, whether a customer insight, a new brand message, or a new digital tactic integration, using stakeholder conversations and the work already in motion. The outcome is clarity on what matters, what to do next, and what the team can act on.",
     scope:
-      "A clear roadmap, an actionable presentation, and follow-ups. Built from 6+ stakeholder interviews and user needs, with AI simulations when needed.",
+      "A prioritized roadmap, a clear presentation of the findings, and follow-up reviews. The work draws on stakeholder conversations, available user research, and existing project evidence, with scope agreed in advance.",
+    description:
+      "A deeper assessment of a defined challenge, such as a customer journey, brand message, or digital experience. We identify what matters, evaluate the options, and give the team a practical direction.",
+    note: "AI-assisted simulations may support exploration. They are identified separately and do not replace research with real customers or users.",
   },
   {
     name: "AI Opportunity Diagnostic",
+    scope:
+      "A practical assessment of where AI could improve a defined workflow, supported by a prioritized roadmap.",
     description:
-      "A practical look at where AI can improve the way your team works, and where it shouldn\u2019t go yet. We map the workflow as it is, find where it gets unnecessarily complex, then decide what to refine, which staff and layers to relieve, what to hand to custom agents, what to leave alone, and which vendors and SaaS bills to cut.",
-    scope: "A prioritized roadmap, not a fluff vendor list, in a few weeks.",
+      "We map how the work happens, identify unnecessary complexity, and assess where process changes, existing tools, or AI could help. Recommendations explain the potential value, dependencies, and validation needed before implementation.",
   },
 ];
 
@@ -159,11 +193,11 @@ export default function Page() {
             Three ways to bring me into the work.
           </h1>
           <p className="hero-lead max-w-3xl">
-            Whether the work is moving, a new focus or message is coming, or
-            you want an experienced read close at hand, there&apos;s a way of
-            working together that fits. My deepest experience is in
-            healthcare, pharma, and other regulated markets: experiences that
-            help people understand, trust, act, and stay engaged.
+            Get focused advice before committing resources, bring experienced
+            leadership into an active project, or keep a trusted partner close
+            for ongoing decisions. My deepest experience is in healthcare,
+            pharma, and regulated markets, with work across digital products,
+            marketing, and enterprise systems.
           </p>
         </div>
       </section>
@@ -262,7 +296,7 @@ export default function Page() {
               href="/contact"
               className="shrink-0 btn-next"
             >
-              Start a conversation
+              Discuss your goals
               <span aria-hidden="true" className="ml-2">&rarr;</span>
             </Link>
           </div>
@@ -351,9 +385,9 @@ export default function Page() {
                 Advisory
               </h2>
               <p className="lead-text max-w-3xl text-text-secondary">
-                Sometimes that&apos;s product and experience strategy. Sometimes
-                it&apos;s a pitch, blue-sky options, or a voice in the room. Three
-                common shapes:
+                Focused engagements help you understand a challenge, evaluate
+                the options, and decide what to do next. The scope depends on
+                the decision you need to make.
               </p>
             </div>
             <WorkFigure
@@ -365,24 +399,67 @@ export default function Page() {
             />
           </div>
 
-          <div className="card-grid grid-cols-1 lg:grid-cols-3">
-            {ADVISORY_SHAPES.map((shape) => (
-              <article
-                key={shape.name}
-                className="relative flex flex-col card card-value"
-              >
-                <h3 className="card-title text-text-primary">
-                  {shape.name}
-                </h3>
-                <p className="small-text card-text text-text-secondary text-pretty">
-                  {shape.scope}
-                </p>
-                <p className="card-text text-text-secondary text-pretty">
-                  {shape.description}
-                </p>
-              </article>
-            ))}
+          {/* The Strategic Snapshot is the first paid step (Shawn's copy
+              brief), so it spans the row: description left, its four
+              details right. Sprint and Diagnostic share the row below, so
+              each row's cards stay balanced (November 11, 2026). */}
+          <div className="card-grid grid-cols-1 lg:grid-cols-2">
+            {ADVISORY_SHAPES.map((shape) =>
+              shape.details ? (
+                <article
+                  key={shape.name}
+                  className="relative card card-value lg:col-span-2 split-grid grid-cols-1 lg:grid-cols-12"
+                >
+                  <div className="lg:col-span-5">
+                    <h3 className="card-title text-text-primary">
+                      {shape.name}
+                    </h3>
+                    <p className="card-text text-text-secondary text-pretty">
+                      {shape.description}
+                    </p>
+                  </div>
+                  <dl className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
+                    {shape.details.map((d) => (
+                      <div key={d.label}>
+                        <dt className="metadata-label">{d.label}</dt>
+                        <dd className="small-text text-text-secondary text-pretty">
+                          {d.text}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                </article>
+              ) : (
+                <article
+                  key={shape.name}
+                  className="relative flex flex-col card card-value"
+                >
+                  <h3 className="card-title text-text-primary">
+                    {shape.name}
+                  </h3>
+                  {shape.scope ? (
+                    <p className="small-text card-text text-text-secondary text-pretty">
+                      {shape.scope}
+                    </p>
+                  ) : null}
+                  <p className="card-text text-text-secondary text-pretty">
+                    {shape.description}
+                  </p>
+                </article>
+              )
+            )}
           </div>
+          {/* A shape's note (the Sprint's line on AI-assisted simulations)
+              sits under the row, not in its card: inside, it left the
+              Diagnostic beside it with about 96px of empty space. */}
+          {ADVISORY_SHAPES.filter((shape) => shape.note).map((shape) => (
+            <p
+              key={`${shape.name}-note`}
+              className="mt-6 max-w-3xl small-text text-text-secondary text-pretty"
+            >
+              {shape.note}
+            </p>
+          ))}
 
         </div>
       </section>
@@ -526,7 +603,7 @@ export default function Page() {
               what&apos;s working, what&apos;s changed, and where the focus
               should move next.
             </p>
-            <p>First call to signed SOW in 2 to 3 weeks, or sooner.</p>
+            <p>We agree on scope, timing, and cost before work begins.</p>
           </div>
         </div>
       </section>
@@ -579,7 +656,7 @@ export default function Page() {
               href="/contact"
               className="btn-next"
             >
-              Let&apos;s talk
+              Discuss your goals
               <span aria-hidden="true" className="ml-2">&rarr;</span>
             </Link>
             <a
