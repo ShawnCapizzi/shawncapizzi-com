@@ -159,9 +159,12 @@ export const CTA_CARDS: Record<string, CTACard> = {
   engagementsContact: {
     eyebrow: "Engagements",
     title: "Three ways to bring me into the work.",
+    // November 11, 2026 (Shawn's call): the three headlines from
+    // /engagements, word for word, in place of the older "Embed me with the
+    // team..." line; the link dropped its "we".
     description:
-      "Embed me with the team. Bring me in for a defined problem. Or keep me close for the decisions that need experienced judgment.",
-    cta: "See how we can work together",
+      "Senior design direction, inside your team. A defined problem and plan before you commit. Or experienced digital perspective, when clarity is needed.",
+    cta: "See the three ways",
     href: "/engagements",
     image: "/images/engagements/needs-framework-sketch.jpg",
     imageAlt: "Hand-drawn framework: user need and want flowing down through company to users, business, and resources",

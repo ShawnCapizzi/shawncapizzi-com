@@ -187,15 +187,22 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
 - No agency-speak: "crafted", "elevated", "transformed", "delighted", "journey"
 - No "we": Shawn is one person. Six exceptions (Shawn's call, November
   2026), all where "we" means Shawn and the visitor or client together:
-  the Advisory shape cards on /engagements, the /contact hero ("We
-  don't need a finished brief, scope, or RFP to start.", also the page's
-  search description), the homepage Advisory card ("Get clear on the
-  opportunity. Together, we map a plan."), the first homepage door's
-  label ("We start here"), the line under the /how-i-help first ask
-  ("We'll talk through what you need and whether I'm the right person to
-  help."), and the Get in touch card on /work and /faq ("let's see what
-  we can make happen together.", the `contact` card in
-  `components/cta-cards-data.ts`).
+  the Advisory shape cards on /engagements, the homepage Advisory card
+  ("Get clear on the opportunity. Together, we map a plan."), the first
+  homepage door's label ("We start here"), the line under the /how-i-help
+  first ask ("We'll talk through what you need and whether I'm the right
+  person to help.", also the /contact calendar card, word for word), and
+  the Get in touch card on /work and /faq ("let's see what we can make
+  happen together.", the `contact` card in
+  `components/cta-cards-data.ts`). The /contact hero was one until
+  November 11, 2026, when it took /how-i-help's lead ("You don't need a
+  perfectly defined brief, a budget, or a plan."), which has no "we".
+- /contact carries /how-i-help's final language (Shawn's call, November
+  11, 2026): /how-i-help is a hidden side door (noindex, business card
+  only), so its two scan questions, its lead, its calendar line, and its
+  client line appear on /contact word for word, where every ask on the
+  site lands. /contact's H1 is "Let's talk.", the button that brings most
+  visitors there. When either page's copy changes, check the other.
 - One easter egg (Shawn's call, November 11, 2026): "tackling" in the
   /how-i-help scan line links to the NFL standings
   (https://www.nfl.com/standings/, no year in the address, so it never

@@ -5,7 +5,7 @@ export const metadata = pageMetadata({
   path: "/contact",
   title: "Contact",
   description:
-    "What are you working on? We don't need a finished brief, scope, or RFP to start. Napkin sketches welcome. Calendar, email, or phone.",
+    "You don't need a perfectly defined brief, a budget, or a plan. Bring the problem, the opportunity, or the idea. Calendar, email, or phone.",
 });
 
 const CAL_URL = "https://cal.com/capizzi/30min";
@@ -19,22 +19,40 @@ export default function Page() {
     <article>
       {/* HERO (October 2026): the page picks up the conversation a "Let's
           talk" or "Start a conversation" button started. No funnel language:
-          no strategy call, no call length, no "no pitch". */}
+          no strategy call, no call length, no "no pitch".
+          November 11, 2026 (Shawn's call): /how-i-help is a hidden side door
+          (noindex, business card only), so its final language lives here
+          too, where every ask on the site lands. The two questions and the
+          lead are its lines word for word; the H1 answers the button that
+          brought the visitor here. */}
       <section className="relative pt-32 md:pt-40">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">Contact</p>
           <h1 className="headline-static hero-title text-balance max-w-4xl">
-            What are you working on?
+            Let&rsquo;s talk.
           </h1>
-
-          {/* The intro uses the same body style as the Engagements sections
-              (lead-text), and the napkin line borrows the mono tagline style
-              from the /thinking hero ("Listen first. Make it visible."). The
-              practical line sits lower, with the cards. */}
-          <p className="lead-text mt-4 md:mt-6 max-w-3xl text-pretty text-text-secondary">
-            We don&apos;t need a finished brief, scope, or RFP to start. Bring
-            me a problem you&apos;re trying to solve, something you&apos;re
-            trying to overcome, or an opportunity that still needs defining.
+          {/* The two questions, set as on /how-i-help: an h2 in the
+              card-title role, the second quieter (22px medium in the H1's
+              cream, 18px on phones). The NFL easter egg stays on
+              /how-i-help only. */}
+          <h2 className="card-title max-w-3xl text-balance">
+            <span className="block">
+              What digital transformation are you leading or business
+              challenge are you tackling?
+            </span>{" "}
+            <span className="block mt-2 headline-static text-[18px] md:text-[22px] font-medium leading-[1.3]">
+              What goal are you working toward, and how will you measure
+              success?
+            </span>
+          </h2>
+          {/* The napkin line borrows the mono tagline style from the
+              /thinking hero ("Listen first. Make it visible."). The practical
+              line sits lower, with the cards. */}
+          <p className="max-w-3xl hero-lead text-pretty">
+            You don&apos;t need a perfectly defined brief, a budget, or a
+            plan. Bring me the problem, the opportunity, the idea, or the
+            thing that just doesn&apos;t feel like it&apos;s working the way
+            it should.
           </p>
           <p className="mt-6 font-mono text-base md:text-lg text-text-primary tracking-tight">
             <span aria-hidden="true">&#9999;&#65039;</span>{" "}
@@ -52,8 +70,9 @@ export default function Page() {
               the site's body text style (Geist, secondary gray), like the
               notes on /engagements. */}
           <p className="body-text mb-6 md:mb-8 max-w-3xl lg:max-w-none text-text-secondary text-pretty">
-            Calendar, email, or phone: whatever&apos;s easiest. I work
-            remote-first, so it doesn&apos;t matter where&nbsp;you&nbsp;are.
+            Calendar, email, or phone: whatever&rsquo;s easiest. I work
+            remote-first, so it doesn&rsquo;t matter where you are. If
+            someone sent you my way, please share&nbsp;who.
           </p>
           <div className="card-grid grid-cols-1 lg:grid-cols-3">
             {/* Card 1: calendar. The only button on the site that opens Cal
@@ -61,11 +80,11 @@ export default function Page() {
             <article className="relative card flex flex-col">
               <p className="metadata-label">Path 01 · Calendar</p>
               <h2 className="card-title text-text-primary">
-                Find a time that works.
+                Book a time to discuss.
               </h2>
               <p className="card-text text-text-secondary">
-                We&apos;ll talk through what&apos;s happening, what you&apos;re
-                trying to accomplish, and whether I can help.
+                We&rsquo;ll talk through what you need and whether I&rsquo;m
+                the right person to help.
               </p>
               {/* The page's primary ask, so it takes the purple pill. The
                   .card-foot spacing sits on a wrapper: on the pill itself
@@ -84,15 +103,19 @@ export default function Page() {
               </div>
             </article>
 
-            {/* Card 2: prefers to start in writing (email) */}
+            {/* Card 2: email. Titles since November 11, 2026 (Shawn's call):
+                direct statements, not the old questions ("Prefer to write
+                first?", "Have a quick question?"), which read too meek. One
+                "me", on email, where a referred visitor most needs to know
+                they reach Shawn himself; three in a row read self-focused. */}
             <article className="relative card flex flex-col">
               <p className="metadata-label">Path 02 · Email</p>
               <h2 className="card-title text-text-primary">
-                Prefer to write first?
+                Email me directly.
               </h2>
               <p className="card-text text-text-secondary">
-                Send a question, some context, an introduction, or whatever
-                you have so far. A few lines is plenty to get started.
+                Send a question, a brief, an RFP, or whatever you have so
+                far. A few lines is plenty to get started.
               </p>
               <a
                 href={`mailto:${EMAIL}`}
@@ -103,11 +126,11 @@ export default function Page() {
               </a>
             </article>
 
-            {/* Card 3: quick question (lower stakes, warmer framing) */}
+            {/* Card 3: phone */}
             <article className="relative card flex flex-col">
               <p className="metadata-label">Path 03 · Voice</p>
               <h2 className="card-title text-text-primary">
-                Have a quick question?
+                Pick up the phone.
               </h2>
               <p className="card-text text-text-secondary">
                 Call or leave a voicemail with what you&apos;re working on. I&apos;ll
@@ -125,36 +148,42 @@ export default function Page() {
         </div>
       </section>
 
-      {/* WHAT TO EXPECT (October 2026): what the conversation is about, who
-          it is with, and how the work happens. Replaced "2 to 3 weeks", "No
-          pitch", and the diagnostic line, which read as process and sales. */}
+      {/* WHAT TO EXPECT (October 2026): who Shawn has done this with and
+          where. Replaced "2 to 3 weeks", "No pitch", and the diagnostic line,
+          which read as process and sales. November 11, 2026 (Shawn's call):
+          the first item ("Let's discuss what success looks like.") repeated
+          the hero and left; the client line and "Much of it regulated..."
+          are /how-i-help's words; "Remote-first" became "In-house or agency",
+          since the line above the cards already says remote-first. */}
       <section className="section-tight border-t border-b border-border-subtle">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-10">
-            <div>
-              <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight text-balance">
-                Let&apos;s discuss what success looks like.
-              </p>
-              <p className="body-text mt-2 text-text-secondary text-pretty">
-                Tell me what you&apos;re working on, what&apos;s getting in the
-                way, and what a better outcome would look like.
-              </p>
-            </div>
             <div>
               <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
                 15+ years
               </p>
               <p className="body-text mt-2 text-text-secondary text-pretty">
-                Across pharma, healthcare, financial services, and enterprise.
+                Across pharma, healthcare, financial services, and enterprise,
+                with teams at Pfizer, Bloomberg, Samsung, Biogen, AbbVie, and
+                others.
               </p>
             </div>
             <div>
               <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
-                Remote-first
+                Real-world constraints
               </p>
               <p className="body-text mt-2 text-text-secondary text-pretty">
-                I work with brands, agencies, start-ups, and technology leaders,
-                often alongside internal, offshore, and public-sector teams.
+                Much of it regulated, most of it complex, all of it meant to
+                ship.
+              </p>
+            </div>
+            <div>
+              <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
+                In-house or agency
+              </p>
+              <p className="body-text mt-2 text-text-secondary text-pretty">
+                Brands, agencies, start-ups, and technology leaders, often
+                alongside internal, offshore, and public-sector teams.
               </p>
             </div>
           </div>
@@ -175,10 +204,10 @@ export default function Page() {
           <div className="max-w-3xl">
             <p className="metadata-label">Prefer LinkedIn?</p>
             <h2 className="card-title text-text-primary">
-              We can connect there too.
+              Connect there too.
             </h2>
             <p className="body-text text-text-secondary">
-              I&apos;m active on LinkedIn and DMs are always welcome.
+              I&apos;m active on LinkedIn, and DMs are always welcome.
             </p>
             <a
               href={LINKEDIN_URL}
