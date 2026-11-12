@@ -31,24 +31,20 @@ export default function Page() {
           <h1 className="headline-static hero-title text-balance max-w-4xl">
             Let&rsquo;s talk.
           </h1>
-          {/* The two questions, set as on /how-i-help: an h2 in the
-              card-title role, the second quieter (22px medium in the H1's
-              cream, 18px on phones). The NFL easter egg stays on
-              /how-i-help only. */}
-          <h2 className="card-title max-w-3xl text-balance">
-            <span className="block">
-              What digital transformation are you leading or business
-              challenge are you tackling?
-            </span>{" "}
-            <span className="block mt-2 headline-static text-[18px] md:text-[22px] font-medium leading-[1.3]">
-              What goal are you working toward, and how will you measure
-              success?
-            </span>
-          </h2>
-          {/* The napkin line borrows the mono tagline style from the
-              /thinking hero ("Listen first. Make it visible."). The practical
-              line sits lower, with the cards. */}
-          <p className="max-w-3xl hero-lead text-pretty">
+          {/* The two questions and the lead sit like every other page's
+              hero (Shawn's call, November 11, 2026): two .hero-lead
+              paragraphs, 24px apart, as on /work. On /how-i-help the
+              questions are a heading beside the portrait; here, set that way,
+              three type styles stacked 8 to 12px apart and the page read
+              unlike the rest of the site. The NFL easter egg stays on
+              /how-i-help only. The napkin line borrows the mono tagline style
+              from the /thinking hero ("Listen first. Make it visible."). */}
+          <p className="hero-lead max-w-3xl text-pretty">
+            What digital transformation are you leading or business challenge
+            are you tackling? What goal are you working toward, and how will
+            you measure success?
+          </p>
+          <p className="hero-lead max-w-3xl text-pretty">
             You don&apos;t need a perfectly defined brief, a budget, or a
             plan. Bring me the problem, the opportunity, the idea, or the
             thing that just doesn&apos;t feel like it&apos;s working the way

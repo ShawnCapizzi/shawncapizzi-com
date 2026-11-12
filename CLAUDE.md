@@ -202,7 +202,10 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   only), so its two scan questions, its lead, its calendar line, and its
   client line appear on /contact word for word, where every ask on the
   site lands. /contact's H1 is "Let's talk.", the button that brings most
-  visitors there. When either page's copy changes, check the other.
+  visitors there. The words match; the setting follows each page: on
+  /contact the questions and the lead are two `.hero-lead` paragraphs, like
+  every other page's hero (set as /how-i-help's heading, they read unlike
+  the rest of the site). When either page's copy changes, check the other.
 - One easter egg (Shawn's call, November 11, 2026): "tackling" in the
   /how-i-help scan line links to the NFL standings
   (https://www.nfl.com/standings/, no year in the address, so it never
