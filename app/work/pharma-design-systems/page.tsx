@@ -9,7 +9,7 @@ const META = {
   path: "/work/pharma-design-systems",
   title: "Pharma Design Systems for 70+ Brands",
   description:
-    "Governing 70+ product brands with 3 design systems. $3.5M+ in digital transformation, three enterprise design systems serving HCP, DTC, and patient audiences, and an industry-first mobile wallet integration.",
+    "Governing 70+ product brands with 3 design systems. $3.5M+ in digital transformation investment, three enterprise design systems serving HCP, DTC, and patient audiences, and an industry-first mobile wallet integration.",
   image: {
     url: "/images/og/pharma-design-systems.jpg",
     width: 1200,
@@ -26,13 +26,13 @@ export default function Page() {
       structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
       title="Bringing 70+ pharma brands under one governance model"
-      subtitle="Three design systems for HCP, DTC, and patient audiences, and $3.5M+ in digital transformation."
+      subtitle="Three design systems for HCP, DTC, and patient audiences, and $3.5M+ in digital transformation investment."
       heroImage="/images/hero/consumer-care-hub-hero-balanced.gif"
       heroImageAlt="Consumer care hub homepage. A new offer to help Americans save."
       metadata={[
         { label: "ENGAGEMENT", value: "Enterprise design system leadership" },
         { label: "YEAR", value: "2024–present" },
-        { label: "SCALE", value: "$3.5M+ digital transformation" },
+        { label: "SCALE", value: "$3.5M+ in digital transformation investment" },
         { label: "SCOPE", value: "70+ brands · 3 systems · HCP · DTC · patient" },
       ]}
       challenge={[

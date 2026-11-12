@@ -53,7 +53,7 @@ export function Hero() {
                 href="/contact"
                 className="btn-next"
               >
-                Tell me what you&apos;re working on
+                Discuss your goals
                 <span aria-hidden="true" className="ml-2">&rarr;</span>
               </Link>
               <Link

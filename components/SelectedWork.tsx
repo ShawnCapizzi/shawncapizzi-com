@@ -28,7 +28,7 @@ const CASE_STUDIES = [
     eyebrow: "Enterprise pharma · Governance · 70+ brands",
     headline: "Building digital governance across 70+ therapeutic brands",
     outcome:
-      "Three design systems, one operating model. Governance training for copy, design, and media partners, vendor direction onshore and offshore, and a mobile wallet first for patient medication information. $3.5M+ in documented digital transformation.",
+      "Three design systems, one operating model. Governance training for copy, design, and media partners, vendor direction onshore and offshore, and a mobile wallet first for patient medication information. $3.5M+ in digital transformation investment.",
     image: "/images/hero/consumer-care-hub-hero-balanced.gif",
   },
   {
@@ -61,13 +61,10 @@ export function SelectedWork() {
             My work, and how it&apos;s moved business forward.
           </h2>
           <p className="lead-text text-text-secondary text-pretty">
-            I&apos;ve helped solve digital business problems large and small,
-            across different audiences, touchpoints, and markets. The work has
-            ranged from design governance and patient navigation to enterprise
-            platforms and customer-facing products: campaigns, websites, CX,
-            service design, UI, design systems, enterprise UX, and plenty in
-            between. Different problems, different teams, same question: did
-            it make a difference?
+            From patient navigation and enterprise workflows to design systems
+            and digital products, this work connects business goals with
+            customer and user needs. Explore the challenges, my contribution,
+            and the outcomes.
           </p>
         </div>
 

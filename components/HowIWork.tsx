@@ -57,20 +57,14 @@ export function HowIWork() {
             Three ways to bring me into the work.
           </h2>
           <p className="lead-text text-text-secondary">
-            Start with a defined problem or an opportunity that still needs
-            definition. I can embed with the team, advise on a focused
-            challenge, or stay close when important decisions need another
-            experienced point of view.
+            Start with focused advice, bring me into an active project, or keep
+            an experienced partner close as your needs evolve.
           </p>
           <p className="lead-text text-text-secondary">
-            AI runs through most of this work now. The way I solve problems
-            hasn&apos;t changed in fifteen years: on the ground with users and
-            stakeholders, turning what they say and what the data shows into
-            flows that make life easier for customers and the people inside
-            the company. What has changed is what that work can be enriched
-            with: data arrives faster, and prototypes that took weeks take
-            days. I build systems, and I see workflows as they are and as
-            they could be.
+            I combine research, stakeholder input, and data with hands-on
+            strategy and design. AI helps me explore options and build
+            prototypes sooner, while evidence and judgment guide what moves
+            forward.
           </p>
           <p className="lead-text text-text-secondary text-pretty">
             Remote-first. Direct with brands, embedded with agencies, or

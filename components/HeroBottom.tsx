@@ -13,10 +13,14 @@ import Link from "next/link";
  *   Door 2  The proof: see the work              /work
  *   Door 3  The how: the Capizzi Process         /thinking, the Process page
  *
- * Copy rewritten November 11, 2026 in Shawn's words. Two of his choices
- * balance the row: the Proof body keeps "Each shows the business need,
- * how I solved it, and the results.", and The how reads "Supported by
- * practical tools" without "Grounded in common sense and".
+ * Copy rewritten November 11, 2026 in Shawn's words. The how reads
+ * "Supported by practical tools" without "Grounded in common sense and".
+ * Later that day (Shawn's copy brief) the Proof body dropped "Each shows
+ * the business need, how I solved it, and the results.", which repeated
+ * its first sentence, and took a proof line in its place (Shawn's pick),
+ * built only from documented case-study results: 70+ brands under one
+ * governance model (pharma-design-systems) and $1.5M+ in annual ROI
+ * (enterprise-financial-services-crm). It also balances the row.
  *
  * The D&AD line sits underneath the doors as a credential, shown, not
  * claimed, and links to the D&AD entry. It moved into a proof strip for a
@@ -53,7 +57,7 @@ const DOORS: Door[] = [
     key: "work",
     eyebrow: "The proof",
     title: "See the work. Understand the impact.",
-    body: "Explore work across healthcare, financial services, AI-powered products, and enterprise systems: the challenges, the decisions that shaped the work, and what changed. Each shows the business need, how I solved it, and the results.",
+    body: "Explore work across healthcare, financial services, AI-powered products, and enterprise systems: the challenges, the decisions that shaped the work, and what changed. Including governance across 70+ pharma brands and $1.5M+ in annual CRM ROI.",
     cta: "Explore the case studies",
     href: "/work",
   },

@@ -30,22 +30,28 @@ export function ProcessSection() {
         <div className="max-w-3xl mb-10 md:mb-12">
           <p className="eyebrow">The Capizzi Process</p>
           <h2 className="section-title text-text-primary">
-            The way I work, made tangible.
+            A clear path from business goals to customer action.
           </h2>
+          {/* Copy from Shawn's brief (November 11, 2026). The publication
+              status ("Printed editions of both are coming.") is kept as it
+              was; it changes only when the editions are verified available. */}
           <p className="lead-text text-text-secondary">
-            The Capizzi Process is how I work: three principles (listen first,
-            make it visible, prove it worked) and six flexible actions that
-            keep the work moving, with clarity. The book and the cards are two expressions of it.
-            Seeing Past the Cage develops the ideas; the Clarity Cards help
-            people apply them in discussions and decisions. Printed editions of
-            both are coming.
+            The Capizzi Process helps teams define what matters, turn ideas
+            into something they can discuss and test, and agree on how success
+            will be measured. Three principles guide the work: listen first,
+            make it visible, prove it worked.
+          </p>
+          <p className="lead-text text-text-secondary">
+            Seeing Past the Cage explores the thinking behind the Process. The
+            Clarity Cards help teams apply it in discussions and decisions.
+            Printed editions of both are coming.
           </p>
           <div className="mt-6">
             <Link
               href="/thinking"
               className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
             >
-              See the whole Process{" "}
+              Explore the Process{" "}
               <span aria-hidden="true" className="ml-2">
                 &rarr;
               </span>
