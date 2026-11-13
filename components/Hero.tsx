@@ -44,11 +44,12 @@ export function Hero() {
               <span className="block">And take their next step with confidence.</span>
             </h1>
             <p className="hero-lead text-pretty max-w-full lg:max-w-[90%] order-3">
-              {/* November 12, 2026 (Shawn's copy): the roots now span
-                  agencies to enterprise, and the goals are ones that move
-                  the needle and can be tracked. "I connect" never splits on
-                  a phone. */}
-              I turn complex offerings, information, and workflows into clear marketing and useful digital experiences. With deep roots in healthcare and pharma, from agencies to enterprise, I&nbsp;connect customer and user needs to business goals that move the needle and can be tracked for continuous improvement.
+              {/* November 12, 2026 (Shawn's copy): his experience spans
+                  agencies and enterprise teams, and the goals are
+                  measurable, designed for continuous improvement. "I
+                  connect" and "continuous improvement" never split on a
+                  phone. */}
+              I turn complex offerings, information, and workflows into clear marketing and useful digital experiences. With deep experience in healthcare and pharma, across agencies and enterprise teams, I&nbsp;connect customer and user needs with measurable business goals and design for continuous&nbsp;improvement.
             </p>
             {/* The two asks (November 2026): the primary goes to /contact,
                 the site's one ask; the secondary goes to the proof. */}

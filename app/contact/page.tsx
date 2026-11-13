@@ -185,7 +185,7 @@ export default function Page() {
             <div>
               {/* November 12, 2026 (Shawn's copy): names where most of the
                   work happens, pharma agencies and their brand teams. The
-                  title echoes the homepage's "from agencies to enterprise"
+                  title echoes the homepage's agencies and enterprise teams
                   and fits one line from 1280px, like the other two
                   ("Agency, enterprise, and brand" took two). */}
               <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">

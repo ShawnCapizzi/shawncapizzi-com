@@ -445,9 +445,9 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   still reaching past pharma. Pharma was everywhere; the agency side was
   nearly absent. One mention per page, phrased for that page's job, never
   the same line pasted around:
-  - Homepage hero lead: "With deep roots in healthcare and pharma, from
-    agencies to enterprise, I connect customer and user needs to business
-    goals that move the needle and can be tracked for continuous
+  - Homepage hero lead: "With deep experience in healthcare and pharma,
+    across agencies and enterprise teams, I connect customer and user
+    needs with measurable business goals and design for continuous
     improvement." ("I connect" is kept together on a phone.)
   - Homepage starting points: "You staff agency teams…" (second, beside
     its regulated pair), and the workflow point now covers "an
@@ -486,8 +486,9 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   the mark. Since November 11, 2026 the hero is Shawn's two-sentence
   headline, one sentence per line ("Help people understand what
   matters." / "And take their next step with confidence."), over a lead
-  that names his healthcare and pharma roots, from agencies to enterprise
-  (since November 12, 2026). The 15+ years is no longer in the hero.
+  that names his healthcare and pharma experience, across agencies and
+  enterprise teams (since November 12, 2026). The 15+ years is no longer
+  in the hero.
 
 ## Accordions (November 2026)
 
