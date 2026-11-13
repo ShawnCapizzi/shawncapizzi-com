@@ -12,13 +12,14 @@ import { useEffect, useRef, useState } from "react";
  * studies, so a buyer answers "can he help with my problem?" first. The eyebrow reads "Common starting points" because "When to bring
  * me in" collided with the first door's old title, "Bring me into a problem."
  *
- * Five bullets since October 2026, cut from eight so the section reads as a
- * quick recognition moment rather than a service list. Each one is a theme,
- * in this order: regulated complexity; ambiguity and team alignment (it
- * absorbed the old merged-teams bullet); messaging and customer signals (the
- * old message-not-landing and nobody-tracking-the-pattern bullets); AI; and
- * design systems with internal tools (the old governance and spreadsheet
- * bullets).
+ * Seven bullets since November 12, 2026 (cut to five in October 2026, then
+ * the workflow bullet, then Shawn's agency bullet). Each one is a theme, in
+ * this order: regulated complexity; agency teams staffing a pharma account
+ * (Shawn's main buyer, beside its regulated pair); ambiguity and team
+ * alignment; messaging and customer signals; AI; design systems with
+ * internal tools; and workflow, which since November 12, 2026 also speaks
+ * to an acquisition that handed a company two of everything (Shawn spent
+ * two years merging Intouch Group into private-equity-backed EVERSANA).
  *
  * This section carries no link of its own. The homepage asks for the call
  * once at the top and once at the bottom, and HowIWork sits directly below
@@ -31,11 +32,12 @@ import { useEffect, useRef, useState } from "react";
    (500), one per item, so a visitor skimming on a phone reads five hooks. */
 const SITUATIONS: [string, string, string][] = [
   ["You work in a ", "regulated category", " where the product and brand experience has to survive medical, legal, and regulatory review and still work for a human."],
+  ["You staff ", "agency teams", " and need a senior product design, UX, and engagement strategy lead who knows how creative, medical, and account teams succeed together."],
   ["You need to turn ", "ambiguity across teams", " into one scoped plan, shared language, and a story that wins the room."],
   ["Your message makes sense inside the building, but ", "customers aren\u2019t taking the high-value actions", " your brand is measured on, and the signals are there if someone connects them."],
   ["Your ", "AI initiative is stuck", " somewhere between strategy, workflow, and trust."],
   ["Your ", "design system or internal tools aren\u2019t scaling", ". Governance is breaking down, and too much of the work still lives in spreadsheets."],
-  ["Your ", "workflow has grown more complex than it needs to be", ": people, software, and services tangled together, and nobody has mapped where AI could carry part of the load."],
+  ["Your ", "workflow has grown more complex than it needs to be", ", or an acquisition handed you two of everything: people, software, and services tangled together, and nobody has mapped where AI could carry part of the load."],
 ];
 
 export function WhenToBringMeIn() {

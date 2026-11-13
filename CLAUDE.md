@@ -438,6 +438,40 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   homepage "You should talk to me if..." list, and /design-info's
   swatches.
 
+## Agency and pharma credential (November 12, 2026)
+
+- Shawn's call: most of his revenue for years has come from pharma
+  advertising, inside agencies, and the site must say so quickly, while
+  still reaching past pharma. Pharma was everywhere; the agency side was
+  nearly absent. One mention per page, phrased for that page's job, never
+  the same line pasted around:
+  - Homepage hero lead: "With deep roots in healthcare and pharma, from
+    agencies to enterprise, I connect customer and user needs to business
+    goals that move the needle and can be tracked for continuous
+    improvement." ("I connect" is kept together on a phone.)
+  - Homepage starting points: "You staff agency teams…" (second, beside
+    its regulated pair), and the workflow point now covers "an
+    acquisition handed you two of everything".
+  - /engagements Who I work with: the thesis line and the people list.
+  - /about Background: a "Before" row (five years at Intouch Group, now
+    EVERSANA Intouch, including two years merging the two companies'
+    departments and workflows after its acquisition by private-equity-
+    backed EVERSANA; EVERSANA is backed by Water
+    Street and JLL Partners, and the deal closed in 2021, checked
+    November 12, 2026) and "Much of it agency-side, on enterprise pharma
+    brands." on the 15+ years.
+  - /contact strip: "Agency to enterprise" (Shawn chose it over "Agency,
+    enterprise, and brand", which took two lines beside one-line titles).
+  - FAQ: the agency-partners answer names the agency roles and the review;
+    the existing-process answer carries /engagements' new wording.
+  - Person structured data (`lib/seo.ts`): the description and
+    `knowsAbout` (pharmaceutical advertising, MLR review, design system
+    governance, GEO, post-acquisition integration).
+- Not on /how-i-help: the people Shawn hands a card to are rarely agency
+  buyers (his call). Private equity stays out of the hero: "private
+  equity work" would read as advising PE firms; the acquisition story is
+  told where it is proof.
+
 ## Type voices (November 2026)
 
 - Three faces, three jobs: Instrument Sans for headings and the hero lead,
@@ -452,8 +486,8 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   the mark. Since November 11, 2026 the hero is Shawn's two-sentence
   headline, one sentence per line ("Help people understand what
   matters." / "And take their next step with confidence."), over a lead
-  that names his healthcare and pharma roots. The 15+ years is no longer
-  in the hero.
+  that names his healthcare and pharma roots, from agencies to enterprise
+  (since November 12, 2026). The 15+ years is no longer in the hero.
 
 ## Accordions (November 2026)
 

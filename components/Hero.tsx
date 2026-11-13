@@ -44,7 +44,11 @@ export function Hero() {
               <span className="block">And take their next step with confidence.</span>
             </h1>
             <p className="hero-lead text-pretty max-w-full lg:max-w-[90%] order-3">
-              I turn complex offerings, information, and workflows into clear marketing and useful digital experiences. With deep roots in healthcare and pharma, I connect the needs of your customers and users with what your business needs to achieve.
+              {/* November 12, 2026 (Shawn's copy): the roots now span
+                  agencies to enterprise, and the goals are ones that move
+                  the needle and can be tracked. "I connect" never splits on
+                  a phone. */}
+              I turn complex offerings, information, and workflows into clear marketing and useful digital experiences. With deep roots in healthcare and pharma, from agencies to enterprise, I&nbsp;connect customer and user needs to business goals that move the needle and can be tracked for continuous improvement.
             </p>
             {/* The two asks (November 2026): the primary goes to /contact,
                 the site's one ask; the secondary goes to the proof. */}

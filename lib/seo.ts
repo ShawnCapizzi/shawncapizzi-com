@@ -109,7 +109,7 @@ export function siteGraph() {
         image: abs("/images/brand/headshot-2026-knockout.jpg"),
         jobTitle: "Strategic experience design leader",
         description:
-          "Strategic design leader for regulated products, platforms, and AI-enabled workflows, with fifteen years across pharma, healthcare, financial services, and enterprise. He helps teams get clear on direction, sharpen the thinking, and move the work forward, including CRM programs built around the high-value actions patients, doctors, and customers take. He also designs, builds, and ships products himself.",
+          "Strategic design leader for regulated products, platforms, and AI-enabled workflows, with fifteen years across pharma, healthcare, financial services, and enterprise, much of it inside pharmaceutical advertising agencies. He helps teams get clear on direction, sharpen the thinking, and move the work forward, including CRM programs built around the high-value actions patients, doctors, and customers take. He also designs, builds, and ships products himself.",
         sameAs: [LINKEDIN_URL],
         alumniOf: { "@type": "CollegeOrUniversity", name: "Pratt Institute" },
         award: "D&AD Pencil 2022, Future Impact",
@@ -127,6 +127,14 @@ export function siteGraph() {
           "Workflow and process optimization",
           "Agentic optimization",
           "Contextual inquiry",
+          // November 12, 2026 (Shawn's call): what the agency side of the
+          // work adds, so search engines and AI tools read the same story
+          // the pages tell.
+          "Pharmaceutical advertising",
+          "Medical, legal, and regulatory (MLR) review",
+          "Design system governance",
+          "Generative engine optimization (GEO)",
+          "Post-acquisition integration",
         ],
       },
     ],

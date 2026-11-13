@@ -183,12 +183,18 @@ export default function Page() {
               </p>
             </div>
             <div>
+              {/* November 12, 2026 (Shawn's copy): names where most of the
+                  work happens, pharma agencies and their brand teams. The
+                  title echoes the homepage's "from agencies to enterprise"
+                  and fits one line from 1280px, like the other two
+                  ("Agency, enterprise, and brand" took two). */}
               <p className="text-2xl md:text-3xl font-semibold text-text-primary tracking-tight leading-tight">
-                In-house or agency
+                Agency to enterprise
               </p>
               <p className="body-text mt-2 text-text-secondary text-pretty">
-                Brands, agencies, start-ups, and technology leaders, often
-                alongside internal, offshore, and public-sector teams.
+                Pharma agencies and the brand teams they serve, enterprise and
+                technology leaders, and start-ups, often alongside internal,
+                offshore, and public-sector teams.
               </p>
             </div>
           </div>

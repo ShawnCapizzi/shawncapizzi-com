@@ -85,7 +85,7 @@ export const FAQS: FaqItem[] = [
   {
     q: "How do engagements typically start?",
     a: [
-      "Every engagement starts with an initial conversation, usually 30 minutes. Bring whatever you have: a project brief, an RFP, a simple note, or a napkin sketch. We talk through what's stuck and what success looks like. No pitch. If there's not a fit, I'll tell you and try to point you to possible solutions or partners. If there is, we move into a longer scoping conversation with the relevant stakeholders to map scope, timing, and constraints. Then I write the ",
+      "Every engagement starts with an initial conversation, usually 30 minutes. Bring whatever you have: a project brief, an RFP, a simple note, or a napkin sketch. We talk through what's stuck and what success looks like. If there's not a fit, I'll tell you and try to point you to possible solutions or partners. If there is, we move into a longer scoping conversation with the relevant stakeholders to map scope, timing, and constraints. Then I write the ",
       { text: "Statement of Work", href: "/engagements#process" },
       ". Most engagements move from first call to signed SOW in 2–3 weeks.",
     ],
@@ -93,13 +93,13 @@ export const FAQS: FaqItem[] = [
   {
     q: "Do you work with agency partners or only direct clients?",
     a: [
-      "Both. I work directly with brands and embed as senior UX and experience leadership inside agency engagements. I'm especially useful when the work is regulated, enterprise-scale, AI-heavy, or still needs clearer definition. I work inside the team's existing process and tools, with the level of involvement shaped around the work.",
+      "Both. I work directly with brands and embed as senior UX and experience leadership inside agency engagements. Most of my work has been agency-side in pharmaceutical advertising: alongside creative directors, copywriters, medical and engagement strategists, media, account, and development teams, and presenting the work to client brand managers and medical, legal, and regulatory reviewers. I'm especially useful when the work is regulated, enterprise-scale, AI-heavy, or still needs clearer definition. I work inside the team's existing process and tools, with the level of involvement shaped around the work.",
     ],
   },
   {
     q: "Can you work inside our existing team, tools, and process?",
     a: [
-      "Yes. I work inside your tools, training, and process, not beside them, whether that's an enterprise playbook or a start-up still writing its own. Where the process slows the work, I help refine it. I work alongside product, creative, strategy, account, regulatory, research, and development teams, and I've directed vendor teams onshore and offshore.",
+      "Yes. I join the workflow, meet the stakeholders, and work inside your tools and training, not beside them. Whether it's an enterprise playbook or a start-up still writing its own, I map to the process or help define it. I've directed vendor teams onshore and offshore.",
     ],
   },
   {

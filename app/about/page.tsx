@@ -18,23 +18,35 @@ const HARD_TO_STAFF_WORK = [
 ];
 
 /* Background, as facts. Each pair is a label and the text, unchanged from
-   the paragraphs it replaced. */
+   the paragraphs it replaced. November 12, 2026 (Shawn's copy): "Before"
+   is his last full-time role: five years at Intouch Group, now EVERSANA
+   Intouch (the site's spelling, as on /thinking). EVERSANA, backed by the
+   private equity firms Water Street and JLL Partners, acquired Intouch
+   Group in 2021 (checked that day), and Shawn spent two of those years
+   merging the two. The 15+
+   years now say where most of it happened. Education sits before Teaching
+   so the grid's odd fifth fact, alone on the last desktop row, is the
+   one-line Teaching. */
 const BACKGROUND: [string, string][] = [
   [
     "Today",
     "Senior consulting work at Publicis CoLab across the Pfizer portfolio, spanning multi-brand governance, regulated digital experiences, design systems, HCP and patient touchpoints, and emerging uses of AI.",
   ],
   [
-    "15+ years",
-    "Pharma, healthcare, financial services, enterprise technology, customer experience, and patient experience.",
+    "Before",
+    "Five years at Intouch Group, now EVERSANA Intouch, including two years merging the two companies’ departments and workflows after its acquisition by private-equity-backed EVERSANA.",
   ],
   [
-    "Teaching",
-    "Design fundamentals, Photoshop, and InDesign at NYU.",
+    "15+ years",
+    "Pharma, healthcare, financial services, enterprise technology, customer experience, and patient experience. Much of it agency-side, on enterprise pharma brands.",
   ],
   [
     "Education",
     "BFA from Pratt Institute in Communications Design and Advertising/Marketing. Rutgers' AI Automation cohort, recently completed.",
+  ],
+  [
+    "Teaching",
+    "Design fundamentals, Photoshop, and InDesign at NYU.",
   ],
 ];
 
