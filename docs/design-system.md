@@ -362,7 +362,7 @@ Layers sit 24px apart (`--space-paragraph`); a label sits 16px over what it labe
 
 ### The hash rule (November 12, 2026)
 
-The hatched purple rule marks a line worth remembering: a quote, a principle, or the line that carries a page or a section (`.thesis-line`: the hash rule with the text indented 20 / 24px). One per section at most, never on a paragraph that only continues, never in a closing ask, never as a list bullet (lists take `.point-list`). Thesis lines today: the /thinking, /work, /engagements, and /contact heroes, and the homepage engagement intro.
+The hatched purple rule marks a line worth remembering: a quote, a principle, or the line that carries a page or a section (`.thesis-line`: the hash rule with the text indented 20 / 24px). One per section at most, never on a paragraph that only continues, never in a closing ask, never as a list bullet (lists take `.point-list`). Thesis lines today: the /thinking, /work, /engagements, and /contact heroes, the homepage engagement intro, and the opening of /engagements Who I work with.
 
 ### Metadata block (case study labels)
 

@@ -198,8 +198,9 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   exceptions when his copy brief added more). It is right where the two
   of them do something jointly: "We start here", "Together, we map a
   plan", "We'll talk through your goals", "we'll identify a sensible
-  starting point", "What we review", "We agree on scope, timing, and cost
-  before work begins". Never the royal or agency "we" for Shawn alone
+  starting point", "What we review", "We do our best work together when
+  I'm trusted by both" (/engagements, Who I work with: Shawn, the leaders,
+  and the practitioners). Never the royal or agency "we" for Shawn alone
   ("we design", "our team"): Shawn is one person.
 - /contact carries /how-i-help's final language (Shawn's call, November
   11, 2026): /how-i-help is a hidden side door (noindex, business card
@@ -390,11 +391,21 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   over points, replacing a run of mono capitals at body size), and the
   /engagements Advisory options (one layout for all three: label, name,
   description, and an optional lead detail left; labeled details right).
-  Candidates Shawn has discussed, not yet built: the Embedded Leadership
-  and On Call sections' inline lists, a summary card near the top of each
-  case study, and a "What you leave with" list on /how-i-help offerings
-  (new copy). Splitting a sentence into points is a copy change: show
-  Shawn each one.
+  It also works in section text, not only cards: a paragraph, a label
+  24px below it, then points (/engagements Embedded Leadership, "What the
+  work includes", and Who I work with, "Who that can include").
+  Candidates Shawn has discussed, not yet built: a summary card near the
+  top of each case study, and a "What you leave with" list on /how-i-help
+  offerings (new copy). Splitting a sentence into points is a copy
+  change: show Shawn each one.
+- Say it once (Shawn's call, November 12, 2026: "let's not repeat
+  ourselves and be sharp"). Each idea lives in one place on a page: a
+  card says what an option is, its detail section adds only what the
+  card did not say, and ideas that span every option (the people
+  involved, the scope) are said once, in their own section. On
+  /engagements: no full-time-role line outside Leadership, "expensive to
+  change" on the On Call card and caption only, the people list only
+  under Who I work with, and scope only in How we start (Step 3).
 
 ## The hash rule (November 12, 2026)
 
@@ -413,8 +424,12 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   same words, so the rule marks the thesis and not the experience line
   under it), the /contact hero ("You
   don't need a finished brief to start..."; not on /how-i-help, where the
-  same line sits in the closing ask), and the homepage engagement intro
-  ("Start with focused advice..."). Quotes and principles already carry
+  same line sits in the closing ask), the homepage engagement intro
+  ("Start with focused advice..."), and /engagements Who I work with
+  ("Most of my work happens inside pharmaceutical product design and
+  communications...", Shawn's line, November 12, 2026: the credential the
+  people list stands on; the hero's "My deepest experience..." line stays
+  too, his call). Quotes and principles already carry
   it: case study lead quotes, /about pull quotes, the /how-i-help
   principle headers, the Process card's `.principle`.
 - Still used as a list or entry marker, against the rule, pending

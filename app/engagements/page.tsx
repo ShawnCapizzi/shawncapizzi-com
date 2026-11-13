@@ -83,7 +83,7 @@ const ADVISORY_SHAPES: AdvisoryShape[] = [
     details: [
       {
         label: "What we review",
-        text: "The current work, available evidence, and relevant stakeholder input, with the scope agreed in advance.",
+        text: "The current work, available evidence, and relevant stakeholder input.",
       },
       {
         label: "What you receive",
@@ -106,7 +106,7 @@ const ADVISORY_SHAPES: AdvisoryShape[] = [
     details: [
       {
         label: "What it draws on",
-        text: "Stakeholder conversations, available user research, and existing project evidence, with scope agreed in advance.",
+        text: "Stakeholder conversations, available user research, and existing project evidence.",
       },
       {
         label: "What you receive",
@@ -350,8 +350,7 @@ export default function Page() {
           <div className="mt-10 md:mt-12 max-w-3xl text-text-primary prose-block text-pretty">
             <p>
               I work remote-first, directly with brands, embedded with agencies,
-              or alongside internal product and technology teams. Engagements
-              can be project-based, ongoing, fractional, or embedded.
+              or alongside internal product and technology teams.
             </p>
             <p>
               When the work calls for it, I can also bring in a team of trusted
@@ -413,30 +412,41 @@ export default function Page() {
           <h2 className="section-title max-w-3xl">
             Embedded Leadership
           </h2>
-          <div className="max-w-3xl space-y-6 text-pretty">
+          {/* November 12, 2026 (Shawn's copy, "let's not repeat
+              ourselves"): one paragraph on how he joins, then the work as
+              points. Cut: "This works when..." (the Leadership card says
+              it), the process sentence (merged here), the people list
+              (now in Who I work with, since it spans all three ways), and
+              product and experience strategy and UX/CX (on the card). */}
+          <div className="max-w-3xl text-pretty">
             <p className="lead-text text-text-secondary">
-              I join the team and work inside the program, alongside product,
-              creative, strategy, account, regulatory, research, and
-              development.
+              I join the workflow, meet the stakeholders, and work inside your
+              tools and training, not beside them. Whether it&apos;s an
+              enterprise playbook or a start-up still writing its own, I map
+              to the process or help define it.
             </p>
-            <p className="lead-text text-text-secondary">
-              This works when you need experienced UX/design leadership on an
-              important project or program without necessarily adding another
-              full-time role.
-            </p>
-            <p className="lead-text text-text-secondary">
-              I work inside your tools, training, and process, not beside them,
-              whether that&apos;s an enterprise playbook or a start-up still
-              writing its own. Where the process slows the work, I help refine
-              it.
-            </p>
-            <p className="body-text text-text-secondary">
-              <strong className="font-semibold text-text-primary">Typical work:</strong>{" "}
-              product and experience strategy, UX/CX, service design,
-              information architecture, workflow and process optimization,
-              design systems, prototypes, workshops, and direction for
-              internal or external development teams.
-            </p>
+            {/* The work points (November 12, 2026, Shawn's account of what
+                he shapes with agency and brand teams): creative and design
+                systems, their governance, the channels, the journeys and
+                high-value actions, and GEO, merged with the earlier points. */}
+            <p className="metadata-label">What the work includes</p>
+            <ul className="point-list body-text text-text-secondary">
+              <li>Creative direction, and the design systems that carry it</li>
+              <li>
+                Governance, from documentation to implementation, across
+                websites, mobile apps, and CRM programs
+              </li>
+              <li>Customer journey maps, user flows, and high-value actions</li>
+              <li>
+                Information architecture and GEO updates, so brands are found
+                in AI answers
+              </li>
+              <li>Service design and workflow optimization</li>
+              <li>
+                Prototypes, workshops, and direction for internal or external
+                development teams
+              </li>
+            </ul>
           </div>
 
           <p className="small-text mt-10 md:mt-12 max-w-3xl text-text-secondary italic">
@@ -464,8 +474,7 @@ export default function Page() {
               </h2>
               <p className="lead-text max-w-3xl text-text-secondary">
                 Focused engagements help you understand a challenge, evaluate
-                the options, and decide what to do next. The scope depends on
-                the decision you need to make.
+                the options, and decide what to do next.
               </p>
             </div>
             <WorkFigure
@@ -533,15 +542,15 @@ export default function Page() {
             On Call
           </h2>
           <div className="max-w-3xl space-y-6 text-pretty">
+            {/* November 12, 2026 (Shawn's call): the full-time-role idea
+                belongs to Leadership, and "expensive to change" stays on
+                the card and the caption, not a third time here. */}
             <p className="lead-text text-text-secondary">
-              Keep me close when you don&apos;t need another full-time role,
-              but you do need senior judgment available when important
-              decisions come up.
+              Keep senior judgment close for when important decisions come up.
             </p>
             <p className="lead-text text-text-secondary">
               I can review work, pressure-test a direction, join a key meeting,
-              help frame a problem, or work through a decision with the team
-              before it becomes expensive to change.
+              help frame a problem, or work through a decision with the team.
             </p>
           </div>
 
@@ -567,19 +576,54 @@ export default function Page() {
           <h2 className="section-title max-w-3xl">
             Who I work with
           </h2>
-          <div className="max-w-3xl space-y-6 text-pretty">
+          {/* November 12, 2026 (Shawn's copy): the section opens on where
+              the trust was earned, pharma product design and communications
+              taken through review to launch, as its thesis line (hash rule).
+              The people list lives here, once, since it spans all three ways
+              of working: the agency structure, both sides of leadership,
+              review, partners, start-up work, and who the work is for. "We"
+              is Shawn and the client's people together. */}
+          <div className="max-w-3xl text-pretty">
+            <p className="lead-text thesis-line text-text-secondary">
+              Most of my work happens inside pharmaceutical product design and
+              communications, and other regulated industries. I often take
+              digital work the whole way: setting the strategy, defining the
+              opportunity, writing the brief, building the roadmap, and walking
+              it through medical, legal, and regulatory review to launch,
+              alongside the brand teams who own it.
+            </p>
             <p className="lead-text text-text-secondary">
-              The most useful seat I take in any engagement is the one between
-              the leaders who set direction and the practitioners building
-              toward it. I do my best work when I&apos;m trusted by both.
+              The most useful seat I take is usually between the leaders and
+              owners who set direction and the teams building toward it, across
+              business units and stakeholders. We do our best work together
+              when I&apos;m trusted by both. I earn that by listening first.
             </p>
-            <p className="body-text text-text-secondary">
-              I work across leadership, product, strategy, creative, research,
-              regulatory, account, analytics, and development teams. Some days
-              that means a conversation with a VP; others it means working
-              directly through a flow, prototype, deck, or build with the people
-              making it.
-            </p>
+            <p className="metadata-label">Who that can include</p>
+            <ul className="point-list body-text text-text-secondary">
+              <li>
+                Creative and strategy: creative directors at every level,
+                copywriters, branding, research, and medical and engagement
+                strategists
+              </li>
+              <li>
+                Delivery: product, account, project management, media buyers,
+                analytics, GEO, and development teams
+              </li>
+              <li>
+                Leadership on both sides: SVPs, VPs, directors, and client
+                brand managers
+              </li>
+              <li>
+                Medical, legal, and regulatory reviewers, where I present the
+                work
+              </li>
+              <li>Onshore and offshore partners and vendors</li>
+              <li>On start-up work: presidents and VCs</li>
+              <li>
+                The people the work is for: patients, HCPs, sales reps, and
+                customers
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -663,7 +707,6 @@ export default function Page() {
               what&apos;s working, what&apos;s changed, and where the focus
               should move next.
             </p>
-            <p>We agree on scope, timing, and cost before work begins.</p>
           </div>
         </div>
       </section>

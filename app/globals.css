@@ -1534,6 +1534,8 @@ html[data-menu-open] [data-back-to-top] {
 * + .principle,
 .principle + :not(.card-foot),
 .card-text + .metadata-label,
+.body-text + .metadata-label,
+.lead-text + .metadata-label,
 .card-text + .details,
 .point-list + .metadata-label {
   margin-top: var(--space-paragraph);
