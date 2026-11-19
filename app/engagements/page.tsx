@@ -620,8 +620,8 @@ export default function Page() {
               <li>Onshore and offshore partners and vendors</li>
               <li>On start-up work: presidents and VCs</li>
               <li>
-                The people the work is for: patients, HCPs, sales reps, and
-                customers
+                The people the work is for: patients, caregivers, HCPs, sales
+                reps, and customers
               </li>
             </ul>
           </div>

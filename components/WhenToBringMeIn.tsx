@@ -34,7 +34,7 @@ const SITUATIONS: [string, string, string][] = [
   ["You work in a ", "regulated category", " where the product and brand experience has to survive medical, legal, and regulatory review and still work for a human."],
   ["You staff ", "agency teams", " and need a senior product design, UX, and engagement strategy lead who knows how creative, medical, and account teams succeed together."],
   ["You need to turn ", "ambiguity across teams", " into one scoped plan, shared language, and a story that wins the room."],
-  ["Your message makes sense inside the building, but ", "customers aren\u2019t taking the high-value actions", " your brand is measured on, and the signals are there if someone connects them."],
+  ["Your message makes sense inside the building, but ", "patients, HCPs, and customers aren\u2019t taking the high-value actions", " your brand is measured on, and the signals are there if someone connects them."],
   ["Your ", "AI initiative is stuck", " somewhere between strategy, workflow, and trust."],
   ["Your ", "design system or internal tools aren\u2019t scaling", ". Governance is breaking down, and too much of the work still lives in spreadsheets."],
   ["Your ", "workflow has grown more complex than it needs to be", ", or an acquisition handed you two of everything: people, software, and services tangled together, and nobody has mapped where AI could carry part of the load."],

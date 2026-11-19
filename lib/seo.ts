@@ -30,7 +30,7 @@ export const LINKEDIN_URL = "https://www.linkedin.com/in/shawncapizzi";
  *  who they serve, in about 160 characters. */
 export const HOME_TITLE = "Shawn Capizzi | Design Leadership, Service Design, and UX";
 export const HOME_DESCRIPTION =
-  "I help teams get clear on direction, sharpen the thinking, and move the work forward. UX, CX, and AI-native product design for regulated and enterprise teams.";
+  "I help teams get clear on direction, sharpen the thinking, and move the work forward. UX, CX, marketing, and AI product design for regulated and enterprise teams.";
 
 export type ShareImage = { url: string; width: number; height: number; alt: string };
 
@@ -109,7 +109,7 @@ export function siteGraph() {
         image: abs("/images/brand/headshot-2026-knockout.jpg"),
         jobTitle: "Strategic experience design leader",
         description:
-          "Strategic design leader for regulated products, platforms, and AI-enabled workflows, with fifteen years across pharma, healthcare, financial services, and enterprise, much of it inside pharmaceutical advertising agencies. He helps teams get clear on direction, sharpen the thinking, and move the work forward, including CRM programs built around the high-value actions patients, doctors, and customers take. He also designs, builds, and ships products himself.",
+          "Strategic design leader for regulated products, platforms, and AI-enabled workflows, with fifteen years across pharma, healthcare, financial services, and enterprise, much of it inside pharmaceutical advertising agencies. He helps teams get clear on direction, sharpen the thinking, and move the work forward, including marketing and CRM programs built around the high-value actions patients, caregivers, HCPs, sales reps, and customers take. He also designs, builds, and ships products himself.",
         sameAs: [LINKEDIN_URL],
         alumniOf: { "@type": "CollegeOrUniversity", name: "Pratt Institute" },
         award: "D&AD Pencil 2022, Future Impact",
@@ -135,6 +135,10 @@ export function siteGraph() {
           "Design system governance",
           "Generative engine optimization (GEO)",
           "Post-acquisition integration",
+          // November 19, 2026 (Shawn's call): the market he works in names
+          // marketing and the audiences the work serves.
+          "Healthcare and pharmaceutical marketing",
+          "HCP, patient, caregiver, and sales rep experiences",
         ],
       },
     ],
