@@ -549,11 +549,14 @@ export default function Page() {
                 belongs to Leadership, and "expensive to change" stays on
                 the card and the caption, not a third time here. */}
             <p className="lead-text text-text-secondary">
-              Keep senior judgment close for when important decisions come up.
+              Professional point of view when you need it ASAP. I provide
+              senior judgment in your pocket for when important product and
+              communication decisions need to be made and our options
+              considered.
             </p>
             <p className="lead-text text-text-secondary">
-              I can review work, pressure-test a direction, join a key meeting,
-              help frame a problem, or work through a decision with the team.
+              I can review work, test a direction, join a key meeting, help
+              frame a problem, talk to engineering, or work through a decision.
             </p>
           </div>
 
