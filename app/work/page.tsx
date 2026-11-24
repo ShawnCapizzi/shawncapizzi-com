@@ -80,24 +80,26 @@ export default function Page() {
       <section className="relative section-hero">
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">Case studies</p>
+          {/* November 24, 2026 (Shawn's copy): the headline names the
+              decisions, the question under it asks whether they mattered,
+              and the cards answer. Replaces "My work, and how it's moved
+              business forward." */}
           <h1 className="headline-static hero-title text-balance max-w-4xl">
-            My work, and how it&apos;s moved business forward.
+            Six problems, and the design strategies that solved them.
           </h1>
           {/* November 24, 2026 (Shawn's call): the question leads, so every
               card below reads as an answer to it, and "our work" keeps him
-              inside the team. The range paragraph follows it; whether it
-              stays, becomes a short line, or goes is still his call. */}
+              inside the team. */}
           <p className="hero-lead max-w-3xl text-pretty">
             Different problems, different teams, same question: did our work
             make a&nbsp;difference?
           </p>
+          {/* November 24, 2026 (Shawn's call): only the first sentence of
+              the old range paragraph stays. The inventory of formats that
+              followed it is gone; the cards carry the range. */}
           <p className="hero-lead max-w-3xl text-pretty">
             I&apos;ve helped solve digital business problems large and small,
-            across different audiences, touchpoints, and markets. The work has
-            ranged from design governance and patient navigation to enterprise
-            platforms and customer-facing products: campaigns, websites,
-            congress touchscreens, CX, service design, UI, design systems, enterprise UX, and plenty in
-            between.
+            across different audiences, touchpoints, and&nbsp;markets.
           </p>
         </div>
       </section>
