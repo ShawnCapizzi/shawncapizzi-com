@@ -422,9 +422,10 @@ export default function Page() {
           <div className="max-w-3xl text-pretty">
             <p className="lead-text text-text-secondary">
               I join the workflow, meet the stakeholders, and work inside your
-              tools and training, not beside them. Whether it&apos;s an
-              enterprise playbook or a start-up still writing its own, I map
-              to the process or help define it.
+              tools and training, not beside them. Enterprise transformation,
+              a new app, a more efficient operation, or a start-up still
+              writing its own rules: I map to the process, or help define it
+              and the roadmap.
             </p>
             {/* The work points (November 12, 2026, Shawn's account of what
                 he shapes with agency and brand teams): creative and design

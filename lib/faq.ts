@@ -99,7 +99,7 @@ export const FAQS: FaqItem[] = [
   {
     q: "Can you work inside our existing team, tools, and process?",
     a: [
-      "Yes. I join the workflow, meet the stakeholders, and work inside your tools and training, not beside them. Whether it's an enterprise playbook or a start-up still writing its own, I map to the process or help define it. I've directed vendor teams onshore and offshore.",
+      "Yes. I join the workflow, meet the stakeholders, and work inside your tools and training, not beside them. Enterprise transformation, a new app, a more efficient operation, or a start-up still writing its own rules: I map to the process, or help define it and the roadmap. I've directed vendor teams onshore and offshore.",
     ],
   },
   {
