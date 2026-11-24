@@ -24,7 +24,7 @@ export const metadata = {
     path: "/how-i-help",
     title: "How I help",
     description:
-      "Shawn Capizzi helps teams get clear on direction, sharpen the thinking, and move the work forward. Deep experience in healthcare, pharma, and regulated markets.",
+      "Shawn Capizzi helps teams see what's in the way, sharpen the thinking, and move forward with clear evidence. Deep experience in healthcare, pharma, and regulated markets.",
   }),
   robots: { index: false, follow: true },
 };

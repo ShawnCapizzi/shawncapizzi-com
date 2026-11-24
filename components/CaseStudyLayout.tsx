@@ -561,12 +561,13 @@ export function CaseStudyLayout(props: CaseStudyLayoutProps) {
             {props.ctaHeadline}
           </h2>
           {/* Question, then answer (November 2026): each study asks its own
-              question above; the locked positioning line answers it, so a
-              reader who arrived straight on a case study learns what Shawn
-              does for teams before the button. Do not rewrite. */}
+              question above; the positioning line answers it, so a reader who
+              arrived straight on a case study learns what Shawn does for
+              teams before the button. Line edited November 23, 2026 (Shawn's
+              call); do not rewrite without him. */}
           <p className="lead-text text-text-secondary max-w-2xl mx-auto text-balance">
-            I help teams get clear on direction, sharpen the thinking, and
-            move the work forward.
+            I help teams see what's in the way, sharpen the thinking, and
+            move forward with clear evidence.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-center">
             <Link

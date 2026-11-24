@@ -41,7 +41,7 @@ Three lines carry the brand. Each lives where a reader has enough context to tak
 **No context: the stranger-facing statement.** A question the visitor can answer in their head, then the locked positioning line as its answer.
 
 > **What are you trying to solve, improve, or make happen?**
-> **I help teams get clear on direction, sharpen the thinking, and move the work forward.**
+> **I help teams see what's in the way, sharpen the thinking, and move forward with clear evidence.**
 
 This pair works for someone meeting the brand cold. It sits in the site footer (the one element on every page) and opens /how-i-help. Off the site it is the statement for an email signature or a deck cover. Case studies end on their own question with the positioning line as the answer. Neither line is rewritten.
 

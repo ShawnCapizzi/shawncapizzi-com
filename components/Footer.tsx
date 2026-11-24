@@ -42,8 +42,8 @@ export function Footer() {
                 What are you trying to solve, improve, or make happen?
               </p>
               <p className="mt-2 text-sm text-text-secondary text-pretty">
-                I help teams get clear on direction, sharpen the thinking, and
-                move the work forward.
+                I help teams see what's in the way, sharpen the thinking, and
+                move forward with clear evidence.
               </p>
             </div>
           </div>

@@ -47,8 +47,11 @@ which matches the live tokens and roles). This is non-negotiable.
 - Voice principles in design system §1: senior, direct, editorial, restrained
 - Three brand lines, each placed by how much context the reader has
   (November 2026, Shawn's call). No context: the pair "What are you trying
-  to solve, improve, or make happen?" then "I help teams get clear on
-  direction, sharpen the thinking, and move the work forward." It is the
+  to solve, improve, or make happen?" then "I help teams see what's in
+  the way, sharpen the thinking, and move forward with clear evidence."
+  (Edited November 23, 2026, Shawn's call, from "get clear on direction,
+  sharpen the thinking, and move the work forward": the three beats now
+  map to Listen first, Make it visible, Prove it worked.) It is the
   footer on every page (it was also the top of /how-i-help until
   November 11, 2026, when Shawn replaced it there with his own intro); each case study's
   closing ask pairs its own question with the positioning line. Some

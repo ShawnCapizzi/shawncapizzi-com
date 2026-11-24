@@ -397,8 +397,8 @@ export default function Page() {
               the hero and the closing ask, one step above the section
               titles and below the H1. */}
           <blockquote className="quote-display mt-12 md:mt-16 max-w-3xl hash-rule pl-6 md:pl-8 font-semibold tracking-tight text-text-primary leading-snug text-balance">
-            I help teams get clear on direction, sharpen the thinking, and
-            move the work forward.
+            I help teams see what's in the way, sharpen the thinking, and
+            move forward with clear evidence.
           </blockquote>
         </div>
       </section>
