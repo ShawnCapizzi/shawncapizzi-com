@@ -61,7 +61,7 @@ const CASE_STUDIES = [
   {
     slug: "ai-native-product-design-lab",
     eyebrow: "Independent product work · AI-native product design",
-    title: "How I use AI to get from idea to in-market software faster",
+    title: "Together, let's use AI to create a vision we can refine and learn from, and get from idea to in-market faster",
     description:
       "Working products and prototypes that let me test assumptions and make blue sky, emerging ideas something teams can see. The learning feeds straight back into my client work.",
     image:

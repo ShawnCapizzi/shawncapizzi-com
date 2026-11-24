@@ -67,8 +67,8 @@ export default function Page() {
     <CaseStudyLayout
       structuredData={caseStudyGraph(META)}
       eyebrow="(Case Study)"
-      title="How I use AI to get from idea to in-market software faster"
-      subtitle="AI-native product design in practice: production software shipped solo, working prototypes in days, and a Figma plugin in the Community."
+      title="Together, let's use AI to create a vision we can refine and learn from, and get from idea to in-market faster"
+      subtitle="AI-native product design isn't new to me: for the past four years I've shipped production software solo, built working prototypes in days, and used AI to expand on what we thought was possible in time and budget."
       heroImage={`${ASSET_BASE}/01-hero-ai-native-design-lab.png`}
       heroImageAlt="AI-Native Design Lab, disease-first patient support hero"
       metadata={[
