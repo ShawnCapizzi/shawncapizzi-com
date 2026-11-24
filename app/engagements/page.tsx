@@ -475,8 +475,9 @@ export default function Page() {
                 Advisory
               </h2>
               <p className="lead-text max-w-3xl text-text-secondary">
-                Focused engagements help you understand a challenge, evaluate
-                the options, and decide what to do next.
+                UX consultation, engagement strategy, and research. Focused
+                engagements to help understand a challenge, evaluate options,
+                and define a plan that helps us get to what&rsquo;s next.
               </p>
             </div>
             <WorkFigure
