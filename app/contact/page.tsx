@@ -8,7 +8,7 @@ export const metadata = pageMetadata({
     "You don't need a finished brief to start. Bring a business challenge, an opportunity, or an experience you want to improve. Calendar, email, or phone.",
 });
 
-const CAL_URL = "https://cal.com/capizzi/30min";
+const CAL_URL = "https://cal.com/capizzi/15min";
 const EMAIL = "capizzi@shawncapizzi.com";
 const PHONE_DISPLAY = "212-380-3900";
 const PHONE_TEL = "+12123803900";
@@ -20,8 +20,9 @@ export default function Page() {
       {/* HERO (October 2026): the page picks up the conversation a "Let's
           talk" or "Discuss your goals" button started. No funnel language:
           no strategy call, no "no pitch". The call's length is stated once,
-          on the calendar card (Shawn's copy brief, November 11, 2026; the
-          Cal.com event is 30 minutes, checked that day).
+          on the calendar card (Shawn's copy brief, November 11, 2026). The
+          call is 15 minutes since November 23, 2026 (Shawn's call, matching
+          LinkedIn), on the cal.com/capizzi/15min event.
           November 11, 2026 (Shawn's call): /how-i-help is a hidden side door
           (noindex, business card only), so its final language lives here
           too, where every ask on the site lands. The two questions and the
@@ -87,7 +88,7 @@ export default function Page() {
               {/* What the call is (Shawn's copy brief, November 11, 2026):
                   no free audit, strategy, or deliverable implied. */}
               <p className="card-text max-w-3xl text-text-secondary">
-                A 30-minute conversation about your goals, what&rsquo;s getting
+                A 15-minute conversation about your goals, what&rsquo;s getting
                 in the way, and whether I can help. If there&rsquo;s a fit,
                 we&rsquo;ll identify a sensible starting point.
               </p>

@@ -82,7 +82,7 @@ const GROUPS: WaysGroup[] = [
         title: "Untangle the workflow. Then automate what should be.",
         tease: "Work crosses teams, tools, and services, with too many handoffs or repeated tasks.",
         text:
-          "I map how the work happens, identify friction, and assess where simpler processes or automation could help. You get prioritized recommendations for what to refine, automate, or leave in human hands.",
+          "I map how the work happens, identify friction, and assess where simpler processes, automation, or agentic optimization could help. You get prioritized recommendations for what to refine, automate, or leave in human hands.",
       },
       {
         title: "Build the brand, not just the pieces",
@@ -217,7 +217,8 @@ export default function Page() {
           <p className="body-text mt-6 max-w-3xl text-text-secondary text-pretty">
             15+ years across pharma, healthcare, financial services, and
             enterprise, with teams at Pfizer, Bloomberg, Samsung, Biogen,
-            AbbVie, and others, including CRM programs built around the
+            AbbVie, and others, including CRM programs, from DTC savings
+            sign-ups to MyChart and Epic integrations, built around the
             high-value actions patients and doctors take. Much of it
             regulated, most of it complex, all of it meant to ship.
           </p>
@@ -249,9 +250,11 @@ export default function Page() {
                 <span aria-hidden="true" className="ml-2">&rarr;</span>
               </Link>
               {/* What the call is (Shawn's copy brief, November 11, 2026). The
-                  booking is 30 minutes, checked on the Cal.com event page. */}
+                  booking is 15 minutes since November 23, 2026 (Shawn's call,
+                  matching LinkedIn); the Cal.com event is
+                  cal.com/capizzi/15min. */}
               <p className="mt-4 body-text text-text-secondary text-pretty">
-                A 30-minute conversation about your goals, what&rsquo;s getting
+                A 15-minute conversation about your goals, what&rsquo;s getting
                 in the way, and whether I can help. If there&rsquo;s a fit,
                 we&rsquo;ll identify a sensible starting point.
               </p>

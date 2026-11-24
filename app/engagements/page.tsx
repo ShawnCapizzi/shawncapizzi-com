@@ -34,7 +34,7 @@ const WAYS = [
     title: "Senior design direction, inside your team.",
     tagline:
       "I join your team inside the program, in your tools and process, without you adding another full-time role.",
-    work: ["Fractional leadership", "Design leadership", "Experience strategy", "Product design", "UX/CX"],
+    work: ["Fractional leadership", "Marketing and CRM", "Experience strategy", "Product design", "UX/CX"],
   },
   {
     id: "advisory",
@@ -441,7 +441,7 @@ export default function Page() {
                 Information architecture and GEO updates, so brands are found
                 in AI answers
               </li>
-              <li>Service design and workflow optimization</li>
+              <li>Service design and workflow, process, and agentic optimization</li>
               <li>
                 Prototypes, workshops, and direction for internal or external
                 development teams

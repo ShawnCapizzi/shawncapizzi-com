@@ -38,7 +38,7 @@ const BACKGROUND: [string, string][] = [
   ],
   [
     "15+ years",
-    "Pharma, healthcare, financial services, enterprise technology, customer experience, and patient experience. Much of it agency-side, on enterprise pharma brands.",
+    "Pharma, healthcare, financial services, enterprise technology, customer experience, and HCP, patient, caregiver, and sales rep experience. Much of it agency-side, in marketing and CRM for enterprise pharma brands.",
   ],
   [
     "Education",
@@ -94,8 +94,8 @@ export default function Page() {
                 opportunity, and set a clearer direction from the start.
               </p>
               <p>
-                That interest pulled me deeper into UX, CX, service design,
-                experience architecture, product strategy, design systems, and
+                That interest pulled me deeper into UX, CX, CRM and engagement
+                strategy, service design, experience architecture, product strategy, design systems, and
                 design leadership. Today, much of my work sits where business
                 goals, customer needs, technology, and the realities of getting
                 something into market meet.
@@ -300,6 +300,27 @@ export default function Page() {
                   className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
                 >
                   View the work{" "}
+                  <span aria-hidden="true" className="ml-2">&rarr;</span>
+                </Link>
+              </div>
+            </div>
+            {/* The book (Shawn's call, November 23, 2026): /about is who he
+                is, and it never said he wrote one. The line is the site's
+                own, from the Get in touch book card. */}
+            <div className="hash-rule pl-6 md:pl-8">
+              <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-2 leading-tight text-balance">
+                Seeing Past the Cage
+              </h3>
+              <p className="body-text text-text-secondary">
+                My upcoming book on communication design, problem-solving, and
+                the lessons behind the Capizzi Process.
+              </p>
+              <div className="mt-3">
+                <Link
+                  href="/book/chapter-1"
+                  className="inline-flex items-center text-base font-medium text-link hover:text-link-hover transition-colors"
+                >
+                  Read the first chapter{" "}
                   <span aria-hidden="true" className="ml-2">&rarr;</span>
                 </Link>
               </div>

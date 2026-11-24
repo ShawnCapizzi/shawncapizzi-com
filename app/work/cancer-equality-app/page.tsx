@@ -115,7 +115,7 @@ export default function Page() {
             "Future Impact Initiative, 2022. Top 1% of design awards globally, peer-recognized signal that the work mattered.",
         },
         {
-          headline: "50% rise in clinical trial enrollment among program users",
+          headline: "Clinical trial participation doubled among program users",
           description:
             "Patients who used the platform were significantly more likely to participate in trials that could improve their care.",
         },
@@ -127,7 +127,7 @@ export default function Page() {
         {
           headline: "100% of users reported improved standard of care",
           description:
-            "And 30% reported increased confidence in their treatment. Outcomes that mean something in oncology specifically.",
+            "And patient trust rose 28%. Outcomes that mean something in oncology specifically.",
         },
         {
           headline: "National reach for the initiative",

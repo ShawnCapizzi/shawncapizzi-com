@@ -73,7 +73,7 @@ export const FAQS: FaqItem[] = [
   {
     q: "What industries and clients have you worked with?",
     a: [
-      "Pharmaceutical and healthcare (oncology, cardiovascular, vaccines, multiple sclerosis, hemophilia, immunology, rare disease, HIV/AIDS, women's health), financial services and enterprise data, and consumer technology, with deep specialization in AI integration for regulated environments. The throughline is high-stakes, compliance-bound work where bad UX has real legal, clinical, or financial consequences.",
+      "Pharmaceutical and healthcare (oncology, cardiovascular, vaccines, multiple sclerosis, hemophilia, immunology, rare disease, HIV/AIDS, women's health), financial services and enterprise data, consumer technology, CPG, education, and travel, with deep specialization in AI integration for regulated environments. The throughline is high-stakes, compliance-bound work where bad UX has real legal, clinical, or financial consequences.",
     ],
   },
   {
@@ -85,7 +85,7 @@ export const FAQS: FaqItem[] = [
   {
     q: "How do engagements typically start?",
     a: [
-      "Every engagement starts with an initial conversation, usually 30 minutes. Bring whatever you have: a project brief, an RFP, a simple note, or a napkin sketch. We talk through what's stuck and what success looks like. If there's not a fit, I'll tell you and try to point you to possible solutions or partners. If there is, we move into a longer scoping conversation with the relevant stakeholders to map scope, timing, and constraints. Then I write the ",
+      "Every engagement starts with an initial conversation, usually 15 minutes. Bring whatever you have: a project brief, an RFP, a simple note, or a napkin sketch. We talk through what's stuck and what success looks like. If there's not a fit, I'll tell you and try to point you to possible solutions or partners. If there is, we move into a longer scoping conversation with the relevant stakeholders to map scope, timing, and constraints. Then I write the ",
       { text: "Statement of Work", href: "/engagements#process" },
       ". Most engagements move from first call to signed SOW in 2–3 weeks.",
     ],

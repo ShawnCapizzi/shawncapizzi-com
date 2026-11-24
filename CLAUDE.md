@@ -170,8 +170,9 @@ placeholder in components that reference it until the asset is finalized.
 
 ## Conversion infrastructure
 
-- Booking URL: `https://cal.com/capizzi/30min` (a 30-minute event, checked
-  on the Cal.com page November 11, 2026), opened only from the Contact
+- Booking URL: `https://cal.com/capizzi/15min` (a 15-minute event since
+  November 23, 2026, Shawn's call, to match his LinkedIn banner and About;
+  it was `30min` before), opened only from the Contact
   page's "Choose a time to talk" button. Every general CTA goes to /contact.
   CTA labels (Shawn's copy brief, November 11, 2026): "Discuss your goals"
   for general links to /contact; "Let's discuss your goals" on /how-i-help;
@@ -180,7 +181,8 @@ placeholder in components that reference it until the asset is finalized.
   their purpose: "Talk through something similar" on case studies, and
   links to case studies, products, the Process, and reading. /about and
   legal pages keep their own wording. The calendar card says what the call
-  is ("A 30-minute conversation about your goals...") and implies no free
+  is ("A 15-minute conversation about your goals...", also on /how-i-help
+  and in the FAQ) and implies no free
   audit, strategy, or deliverable. "Strategy Call" is retired; the first
   step is the "Initial Conversation".
 - Email service: TBD (ConvertKit vs Mailchimp — see open questions in IA doc §13)

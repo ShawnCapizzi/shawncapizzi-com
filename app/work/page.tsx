@@ -87,8 +87,8 @@ export default function Page() {
             I&apos;ve helped solve digital business problems large and small,
             across different audiences, touchpoints, and markets. The work has
             ranged from design governance and patient navigation to enterprise
-            platforms and customer-facing products: campaigns, websites, CX,
-            service design, UI, design systems, enterprise UX, and plenty in
+            platforms and customer-facing products: campaigns, websites,
+            congress touchscreens, CX, service design, UI, design systems, enterprise UX, and plenty in
             between.
           </p>
           <p className="hero-lead thesis-line max-w-3xl text-pretty">
