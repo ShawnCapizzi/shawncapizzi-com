@@ -83,6 +83,14 @@ export default function Page() {
           <h1 className="headline-static hero-title text-balance max-w-4xl">
             My work, and how it&apos;s moved business forward.
           </h1>
+          {/* November 24, 2026 (Shawn's call): the question leads, so every
+              card below reads as an answer to it, and "our work" keeps him
+              inside the team. The range paragraph follows it; whether it
+              stays, becomes a short line, or goes is still his call. */}
+          <p className="hero-lead max-w-3xl text-pretty">
+            Different problems, different teams, same question: did our work
+            make a&nbsp;difference?
+          </p>
           <p className="hero-lead max-w-3xl text-pretty">
             I&apos;ve helped solve digital business problems large and small,
             across different audiences, touchpoints, and markets. The work has
@@ -90,10 +98,6 @@ export default function Page() {
             platforms and customer-facing products: campaigns, websites,
             congress touchscreens, CX, service design, UI, design systems, enterprise UX, and plenty in
             between.
-          </p>
-          <p className="hero-lead thesis-line max-w-3xl text-pretty">
-            Different problems, different teams, same question: did it make a
-            difference?
           </p>
         </div>
       </section>
