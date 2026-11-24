@@ -30,9 +30,9 @@ export default function Page() {
       subtitle="A faster, clearer workflow built around the way three distinct salesperson types actually worked."
       heroImage={`${ASSET_BASE}/01-hero-final-person-view-terminal.png`}
       heroImageAlt="Final Person View in terminal CRM environment"
+      // No YEAR item (Shawn's call, November 23, 2026).
       metadata={[
         { label: "ENGAGEMENT", value: "Researcher + Engagement Strategist Lead" },
-        { label: "YEAR", value: "2019" },
         { label: "SCOPE", value: "Three salesperson types · command-line CRM" },
         { label: "METHODOLOGY", value: "Contextual inquiry · workflow optimization" },
       ]}

@@ -250,15 +250,16 @@ export default function Page() {
         <div className="max-w-content mx-auto px-6 md:px-8 lg:px-12">
           <p className="eyebrow">Engagements</p>
           <h1 className="headline-static hero-title max-w-4xl">
-            Three ways to bring me into the work.
+            Three easy ways to work together.
           </h1>
           {/* The thesis line takes the hash rule (November 12, 2026,
               Shawn's call). He split the lead in two, same words, so the
               rule marks only the thesis and not the experience line. */}
           <p className="hero-lead thesis-line max-w-3xl text-pretty">
-            Get focused advice before committing resources, bring experienced
-            leadership into an active project, or keep a trusted partner close
-            for ongoing decisions.
+            Get focused advice quickly that helps set the view before
+            committing resources and budget to a project or initiative, bring
+            me into active projects, transformation, POC, or as a trusted
+            partner for ongoing decisions.
           </p>
           <p className="hero-lead max-w-3xl text-pretty">
             My deepest experience is in healthcare, pharma, and regulated
