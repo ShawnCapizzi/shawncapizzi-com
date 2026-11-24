@@ -15,7 +15,8 @@ import { Portrait } from "./Portrait";
  *
  * Desktop (lg and up): two columns, text left, headshot right.
  * Stacked (below lg, phones and portrait tablets): the headline leads, then
- * the headshot, then the lead and the wordmark (September 2026). The text
+ * the first lead paragraph (November 24, 2026), then the headshot, then the
+ * rest of the lead and the asks. The text
  * column is display: contents below lg, so its four children join the grid
  * directly and the order-* classes interleave the photo after the H1. There
  * is still exactly one H1; nothing is duplicated for mobile.
@@ -43,13 +44,19 @@ export function Hero() {
               <span className="block">Help people understand what matters.</span>{" "}
               <span className="block">And take their next step with confidence.</span>
             </h1>
+            {/* November 24, 2026 (Shawn's copy): the lead is two paragraphs.
+                The first, role and market, sits directly under the H1 at
+                every width (order-1, after the H1 in DOM order), so on a
+                phone it reads before the photo. The second, tenure and the
+                capability, follows the photo on a phone (order-3) and the
+                first paragraph on desktop. Replaces the November 12 lead
+                about offerings, measurable goals, and continuous
+                improvement. "act on" never splits on a phone. */}
+            <p className="hero-lead text-pretty max-w-full lg:max-w-[90%] order-1">
+              I lead design strategy for regulated products and experiences.
+            </p>
             <p className="hero-lead text-pretty max-w-full lg:max-w-[90%] order-3">
-              {/* November 24, 2026 (Shawn's copy): role and market first,
-                  then tenure and where, then the capability. Replaces the
-                  November 12 lead about offerings, measurable goals, and
-                  continuous improvement. "act on" never splits on a
-                  phone. */}
-              I lead design strategy for regulated products and experiences. Fifteen years in pharma and healthcare, on agency and in-house teams, helping make complex content experiences clear enough to act&nbsp;on.
+              Fifteen years in pharma and healthcare, on agency and in-house teams, helping make complex content experiences clear enough to act&nbsp;on.
             </p>
             {/* The two asks (November 2026): the primary goes to /contact,
                 the site's one ask; the secondary goes to the proof. */}
