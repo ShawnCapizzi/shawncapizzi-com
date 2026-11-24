@@ -428,10 +428,11 @@ The design system §8 anti-patterns are enforced. Most-violated to watch for:
   don't need a finished brief to start..."; not on /how-i-help, where the
   same line sits in the closing ask), the homepage engagement intro
   ("Start with focused advice..."), and /engagements Who I work with
-  ("Most of my work happens inside pharmaceutical product design and
-  communications...", Shawn's line, November 12, 2026: the credential the
-  people list stands on; the hero's "My deepest experience..." line stays
-  too, his call). Quotes and principles already carry
+  ("Most of my work has been in pharmaceutical product design and
+  communications.", Shawn's line, November 12, 2026, rewritten and split
+  from the paragraph after it November 23, 2026 so the rule marks one
+  line: the credential the people list stands on; the hero's "My deepest
+  experience..." line stays too, his call). Quotes and principles already carry
   it: case study lead quotes, /about pull quotes, the /how-i-help
   principle headers, the Process card's `.principle`.
 - Still used as a list or entry marker, against the rule, pending

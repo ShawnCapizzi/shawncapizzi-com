@@ -590,19 +590,26 @@ export default function Page() {
               review, partners, start-up work, and who the work is for. "We"
               is Shawn and the client's people together. */}
           <div className="max-w-3xl text-pretty">
+            {/* November 23, 2026 (Shawn's copy): the thesis line is split
+                from what the work usually is, so the hash rule marks one
+                line, and the seat is said in one sentence. */}
             <p className="lead-text thesis-line text-text-secondary">
-              Most of my work happens inside pharmaceutical product design and
-              communications, and other regulated industries. I often take
-              digital work the whole way: setting the strategy, defining the
-              opportunity, writing the brief, building the roadmap, and walking
-              it through medical, legal, and regulatory review to launch,
-              alongside the brand teams who own it.
+              Most of my work has been in pharmaceutical product design and
+              communications.
             </p>
             <p className="lead-text text-text-secondary">
-              The most useful seat I take is usually between the leaders and
-              owners who set direction and the teams building toward it, across
-              business units and stakeholders. We do our best work together
-              when I&apos;m trusted by both. I earn that by listening first.
+              Often that means defining the story, the interactions, and the
+              tracking plan (CTAs, HVAs, sign-ups), optimizing for GEO, or
+              making sure the UX is the best it can be. Sometimes I take the digital work the
+              whole way: setting the strategy, defining the opportunity,
+              writing the brief, building the roadmap, and walking it through
+              medical, legal, and regulatory review to launch, alongside the
+              brand teams who own it.
+            </p>
+            <p className="lead-text text-text-secondary">
+              I work between the brand leaders, PMs, and business owners who
+              set direction and the teams building toward it, and I do my best
+              work when both trust me.
             </p>
             <p className="metadata-label">Who that can include</p>
             <ul className="point-list body-text text-text-secondary">
