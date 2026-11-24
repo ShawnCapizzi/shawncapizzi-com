@@ -44,12 +44,12 @@ export function Hero() {
               <span className="block">And take their next step with confidence.</span>
             </h1>
             <p className="hero-lead text-pretty max-w-full lg:max-w-[90%] order-3">
-              {/* November 12, 2026 (Shawn's copy): his experience spans
-                  agencies and enterprise teams, and the goals are
-                  measurable, designed for continuous improvement. "I
-                  connect" and "continuous improvement" never split on a
+              {/* November 24, 2026 (Shawn's copy): role and market first,
+                  then tenure and where, then the capability. Replaces the
+                  November 12 lead about offerings, measurable goals, and
+                  continuous improvement. "act on" never splits on a
                   phone. */}
-              I turn complex offerings, information, and workflows into clear marketing and useful digital experiences. With deep experience in healthcare and pharma, across agencies and enterprise teams, I&nbsp;connect customer and user needs with measurable business goals and design for continuous&nbsp;improvement.
+              I lead design strategy for regulated products and experiences. Fifteen years in pharma and healthcare, on agency and in-house teams, helping make complex content experiences clear enough to act&nbsp;on.
             </p>
             {/* The two asks (November 2026): the primary goes to /contact,
                 the site's one ask; the secondary goes to the proof. */}
